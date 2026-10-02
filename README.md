@@ -75,7 +75,8 @@ Live re-execution requires a reviewer-supplied OpenAI-compatible endpoint config
 - `results/main/` — aggregate simulation tables, figures, hashes, and source snapshot; event ledgers are excluded.
 - `real_llm_pilot/` — provider-neutral harness, case bundles, validators, frozen metadata, aggregate results, and figures; raw call directories are excluded.
 - `ConveyorFlow_diagrams_en_working.drawio` — editable architecture and belt diagrams.
-- `ConveyorFlow_IEEE_Manuscript.docx` — current manuscript draft.
+- `ConveyorFlow_IEEE_Manuscript.docx` — current English manuscript draft.
+- `ConveyorFlow_IEEE_Manuscript_TH.docx` — Thai manuscript for advisor review; results, tables, and figures match the English draft.
 - `presentation/` — advisor deck, talk script, and Q&A material.
 
 ## Reproducibility boundary

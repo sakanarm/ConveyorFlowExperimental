@@ -1,0 +1,493 @@
+{
+  "schema_version": "2.0",
+  "derivation": "Deterministic 16-stratum descriptors from each downloaded public corpus.",
+  "source_manifest_sha256": "e40c931a3da294a9c90cb4ccc11b8c679ab63c2e2280de23e21c415e2de6a11a",
+  "variants": {
+    "adult_ml": [
+      {
+        "variant": 0,
+        "stratum": "age_q1_hours_q1",
+        "records": 10965,
+        "age_band": 1,
+        "hours_per_week_band": 1,
+        "missing_fraction": 0.014549,
+        "positive_fraction": 0.025718,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 1,
+        "stratum": "age_q1_hours_q2",
+        "records": 0,
+        "age_band": 1,
+        "hours_per_week_band": 2,
+        "missing_fraction": 0.0,
+        "positive_fraction": 0.0,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 2,
+        "stratum": "age_q1_hours_q3",
+        "records": 672,
+        "age_band": 1,
+        "hours_per_week_band": 3,
+        "missing_fraction": 0.008829,
+        "positive_fraction": 0.110119,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 3,
+        "stratum": "age_q1_hours_q4",
+        "records": 1655,
+        "age_band": 1,
+        "hours_per_week_band": 4,
+        "missing_fraction": 0.006445,
+        "positive_fraction": 0.116012,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 4,
+        "stratum": "age_q2_hours_q1",
+        "records": 7619,
+        "age_band": 2,
+        "hours_per_week_band": 1,
+        "missing_fraction": 0.006011,
+        "positive_fraction": 0.171414,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 5,
+        "stratum": "age_q2_hours_q2",
+        "records": 0,
+        "age_band": 2,
+        "hours_per_week_band": 2,
+        "missing_fraction": 0.0,
+        "positive_fraction": 0.0,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 6,
+        "stratum": "age_q2_hours_q3",
+        "records": 1041,
+        "age_band": 2,
+        "hours_per_week_band": 3,
+        "missing_fraction": 0.002818,
+        "positive_fraction": 0.332373,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 7,
+        "stratum": "age_q2_hours_q4",
+        "records": 3022,
+        "age_band": 2,
+        "hours_per_week_band": 4,
+        "missing_fraction": 0.002956,
+        "positive_fraction": 0.387161,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 8,
+        "stratum": "age_q3_hours_q1",
+        "records": 7687,
+        "age_band": 3,
+        "hours_per_week_band": 1,
+        "missing_fraction": 0.004865,
+        "positive_fraction": 0.288019,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 9,
+        "stratum": "age_q3_hours_q2",
+        "records": 0,
+        "age_band": 3,
+        "hours_per_week_band": 2,
+        "missing_fraction": 0.0,
+        "positive_fraction": 0.0,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 10,
+        "stratum": "age_q3_hours_q3",
+        "records": 1173,
+        "age_band": 3,
+        "hours_per_week_band": 3,
+        "missing_fraction": 0.002217,
+        "positive_fraction": 0.434783,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 11,
+        "stratum": "age_q3_hours_q4",
+        "records": 3487,
+        "age_band": 3,
+        "hours_per_week_band": 4,
+        "missing_fraction": 0.00239,
+        "positive_fraction": 0.512475,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 12,
+        "stratum": "age_q4_hours_q1",
+        "records": 8219,
+        "age_band": 4,
+        "hours_per_week_band": 1,
+        "missing_fraction": 0.015525,
+        "positive_fraction": 0.260737,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 13,
+        "stratum": "age_q4_hours_q2",
+        "records": 0,
+        "age_band": 4,
+        "hours_per_week_band": 2,
+        "missing_fraction": 0.0,
+        "positive_fraction": 0.0,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 14,
+        "stratum": "age_q4_hours_q3",
+        "records": 765,
+        "age_band": 4,
+        "hours_per_week_band": 3,
+        "missing_fraction": 0.005839,
+        "positive_fraction": 0.470588,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      },
+      {
+        "variant": 15,
+        "stratum": "age_q4_hours_q4",
+        "records": 2537,
+        "age_band": 4,
+        "hours_per_week_band": 4,
+        "missing_fraction": 0.006622,
+        "positive_fraction": 0.513599,
+        "description": "Adult classification subgroup defined by empirical age and weekly-hours quartiles."
+      }
+    ],
+    "beijing_ml": [
+      {
+        "variant": 0,
+        "stratum": "station_Aotizhongxin",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.033729,
+        "pm25_median": 58.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 1,
+        "stratum": "station_Changping",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.022701,
+        "pm25_median": 46.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 2,
+        "stratum": "station_Dingling",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.03149,
+        "pm25_median": 41.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 3,
+        "stratum": "station_Dongsi",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.035307,
+        "pm25_median": 61.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 4,
+        "stratum": "station_Guanyuan",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.02426,
+        "pm25_median": 59.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 5,
+        "stratum": "station_Gucheng",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.020591,
+        "pm25_median": 60.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 6,
+        "stratum": "station_Huairou",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.032902,
+        "pm25_median": 47.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 7,
+        "stratum": "station_Nongzhanguan",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.018623,
+        "pm25_median": 59.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 8,
+        "stratum": "station_Shunyi",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.037023,
+        "pm25_median": 55.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 9,
+        "stratum": "station_Tiantan",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.024265,
+        "pm25_median": 59.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 10,
+        "stratum": "station_Wanliu",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.029613,
+        "pm25_median": 59.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 11,
+        "stratum": "station_Wanshouxigong",
+        "scope": "single_station",
+        "records": 35064,
+        "stations": 1,
+        "missing_pollutant_fraction": 0.023661,
+        "pm25_median": 60.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 12,
+        "stratum": "all_stations_months_01_03",
+        "scope": "multi_station_season",
+        "records": 103968,
+        "stations": 12,
+        "missing_pollutant_fraction": 0.021274,
+        "pm25_median": 61.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 13,
+        "stratum": "all_stations_months_04_06",
+        "scope": "multi_station_season",
+        "records": 104832,
+        "stations": 12,
+        "missing_pollutant_fraction": 0.030124,
+        "pm25_median": 54.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 14,
+        "stratum": "all_stations_months_07_09",
+        "scope": "multi_station_season",
+        "records": 105984,
+        "stations": 12,
+        "missing_pollutant_fraction": 0.026987,
+        "pm25_median": 49.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      },
+      {
+        "variant": 15,
+        "stratum": "all_stations_months_10_12",
+        "scope": "multi_station_season",
+        "records": 105984,
+        "stations": 12,
+        "missing_pollutant_fraction": 0.032903,
+        "pm25_median": 61.0,
+        "description": "Beijing air-quality regression/time-series stratum with chronological validation required."
+      }
+    ],
+    "bugs2fix": [
+      {
+        "variant": 0,
+        "stratum": "source_length_q1_patch_delta_q1",
+        "records": 3536,
+        "source_length_band": 1,
+        "patch_delta_band": 1,
+        "median_source_characters": 80.0,
+        "median_absolute_length_delta": 1.0,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 1,
+        "stratum": "source_length_q1_patch_delta_q2",
+        "records": 3459,
+        "source_length_band": 1,
+        "patch_delta_band": 2,
+        "median_source_characters": 80,
+        "median_absolute_length_delta": 10,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 2,
+        "stratum": "source_length_q1_patch_delta_q3",
+        "records": 3397,
+        "source_length_band": 1,
+        "patch_delta_band": 3,
+        "median_source_characters": 85,
+        "median_absolute_length_delta": 25,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 3,
+        "stratum": "source_length_q1_patch_delta_q4",
+        "records": 1580,
+        "source_length_band": 1,
+        "patch_delta_band": 4,
+        "median_source_characters": 89.0,
+        "median_absolute_length_delta": 45.0,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 4,
+        "stratum": "source_length_q2_patch_delta_q1",
+        "records": 2736,
+        "source_length_band": 2,
+        "patch_delta_band": 1,
+        "median_source_characters": 120.0,
+        "median_absolute_length_delta": 1.0,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 5,
+        "stratum": "source_length_q2_patch_delta_q2",
+        "records": 2735,
+        "source_length_band": 2,
+        "patch_delta_band": 2,
+        "median_source_characters": 120,
+        "median_absolute_length_delta": 10,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 6,
+        "stratum": "source_length_q2_patch_delta_q3",
+        "records": 3224,
+        "source_length_band": 2,
+        "patch_delta_band": 3,
+        "median_source_characters": 121.0,
+        "median_absolute_length_delta": 26.0,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 7,
+        "stratum": "source_length_q2_patch_delta_q4",
+        "records": 2793,
+        "source_length_band": 2,
+        "patch_delta_band": 4,
+        "median_source_characters": 122,
+        "median_absolute_length_delta": 50,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 8,
+        "stratum": "source_length_q3_patch_delta_q1",
+        "records": 3012,
+        "source_length_band": 3,
+        "patch_delta_band": 1,
+        "median_source_characters": 155.0,
+        "median_absolute_length_delta": 1.0,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 9,
+        "stratum": "source_length_q3_patch_delta_q2",
+        "records": 2549,
+        "source_length_band": 3,
+        "patch_delta_band": 2,
+        "median_source_characters": 155,
+        "median_absolute_length_delta": 10,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 10,
+        "stratum": "source_length_q3_patch_delta_q3",
+        "records": 2968,
+        "source_length_band": 3,
+        "patch_delta_band": 3,
+        "median_source_characters": 155.0,
+        "median_absolute_length_delta": 25.0,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 11,
+        "stratum": "source_length_q3_patch_delta_q4",
+        "records": 3242,
+        "source_length_band": 3,
+        "patch_delta_band": 4,
+        "median_source_characters": 155.0,
+        "median_absolute_length_delta": 57.0,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 12,
+        "stratum": "source_length_q4_patch_delta_q1",
+        "records": 2853,
+        "source_length_band": 4,
+        "patch_delta_band": 1,
+        "median_source_characters": 194,
+        "median_absolute_length_delta": 1,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 13,
+        "stratum": "source_length_q4_patch_delta_q2",
+        "records": 2506,
+        "source_length_band": 4,
+        "patch_delta_band": 2,
+        "median_source_characters": 195.0,
+        "median_absolute_length_delta": 10.0,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 14,
+        "stratum": "source_length_q4_patch_delta_q3",
+        "records": 2457,
+        "source_length_band": 4,
+        "patch_delta_band": 3,
+        "median_source_characters": 193,
+        "median_absolute_length_delta": 25,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      },
+      {
+        "variant": 15,
+        "stratum": "source_length_q4_patch_delta_q4",
+        "records": 3633,
+        "source_length_band": 4,
+        "patch_delta_band": 4,
+        "median_source_characters": 196,
+        "median_absolute_length_delta": 66,
+        "description": "Normalized Java before/after function-pair stratum; no executable repository tests are available."
+      }
+    ]
+  }
+}

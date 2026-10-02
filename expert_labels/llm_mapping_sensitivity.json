@@ -1,0 +1,13 @@
+{
+  "purpose": "Bound annotation uncertainty; not alternative primary analyses.",
+  "lower": {
+    "file": "llm_difficulty_labels_lower.csv",
+    "changed_from_adjudicated": 47,
+    "sha256": "92a15a89f5779213d97dfd472e399572eadbd703ea36450b5d5ec409c6f04e27"
+  },
+  "upper": {
+    "file": "llm_difficulty_labels_upper.csv",
+    "changed_from_adjudicated": 47,
+    "sha256": "7519b662625614a8a87de4e05a9c4f6f6442443f82d0e37d9b9af997aeb02a86"
+  }
+}

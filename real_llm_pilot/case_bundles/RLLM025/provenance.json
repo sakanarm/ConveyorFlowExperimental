@@ -1,0 +1,20 @@
+{
+  "construction": "deterministic_public_row_microtask",
+  "dataset": "beijing",
+  "dataset_sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+  "source_indices": [
+    318089,
+    321220,
+    324407,
+    327630,
+    330830,
+    334104,
+    337293,
+    340482,
+    343659,
+    346845,
+    350001,
+    350002
+  ],
+  "stratum": "station_Tiantan"
+}

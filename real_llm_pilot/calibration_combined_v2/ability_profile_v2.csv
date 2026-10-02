@@ -1,0 +1,4 @@
+model_id,ml_build_rank,fix_bug_rank,ml_d1,ml_d2,ml_d3,bug_d1,bug_d2,bug_d3
+gemini-3-flash,3,3,5,5,4,5,5,4
+gemini-3.5-flash,3,3,5,5,4,5,5,5
+gemini-3.8-flash,3,3,5,5,4,5,5,5

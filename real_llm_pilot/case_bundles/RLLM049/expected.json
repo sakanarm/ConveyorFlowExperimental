@@ -1,0 +1,23 @@
+{
+  "answer": {
+    "repair_action": "clamp_lower"
+  },
+  "hidden_tests": [
+    {
+      "expected": -4,
+      "x": -4,
+      "y": -4
+    },
+    {
+      "expected": 8,
+      "x": 8,
+      "y": 2
+    },
+    {
+      "expected": 4,
+      "x": 4,
+      "y": 2
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

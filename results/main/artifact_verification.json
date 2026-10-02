@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "design_rows": 22500,
+  "metric_rows": 22500,
+  "event_files": 22500,
+  "unique_design_ids": 22500,
+  "unique_metric_ids": 22500,
+  "design_metric_id_sets_equal": true,
+  "event_hashes_checked": 22500,
+  "event_hash_mismatches": [],
+  "metadata_source_sha256": "c859dd80883c6ff6179e87d548e44bb622f28b99e26196039916d30300fb3514",
+  "current_source_sha256": "c859dd80883c6ff6179e87d548e44bb622f28b99e26196039916d30300fb3514",
+  "source_hash_matches": true
+}

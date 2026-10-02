@@ -1,0 +1,43 @@
+{
+  "status": "downloaded_and_hashed",
+  "downloaded_at_utc": "2026-09-21T10:37:43.176103+00:00",
+  "redistribution_note": "Raw files are gitignored. CodeXGLUE data remains subject to C-UDA.",
+  "datasets": [
+    {
+      "id": "adult",
+      "canonical_url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+      "local_path": "data/raw/adult.zip",
+      "license": "CC BY 4.0",
+      "expected_records": 48842,
+      "bytes": 620237,
+      "sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb"
+    },
+    {
+      "id": "beijing",
+      "canonical_url": "https://archive.ics.uci.edu/static/public/501/beijing%2Bmulti%2Bsite%2Bair%2Bquality%2Bdata.zip",
+      "local_path": "data/raw/beijing.zip",
+      "license": "CC BY 4.0",
+      "expected_records": 420768,
+      "bytes": 8192212,
+      "sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4"
+    },
+    {
+      "id": "bugs2fix-small-buggy",
+      "canonical_url": "https://raw.githubusercontent.com/microsoft/CodeXGLUE/main/Code-Code/code-refinement/data/small/train.buggy-fixed.buggy",
+      "local_path": "data/raw/bugs2fix/train.buggy.txt",
+      "license": "C-UDA",
+      "expected_records": 46680,
+      "bytes": 6509949,
+      "sha256": "dfb4366dedb73dd40f78c3af870ccb0a1aeff2d9ceb45585df26c99897740748"
+    },
+    {
+      "id": "bugs2fix-small-fixed",
+      "canonical_url": "https://raw.githubusercontent.com/microsoft/CodeXGLUE/main/Code-Code/code-refinement/data/small/train.buggy-fixed.fixed",
+      "local_path": "data/raw/bugs2fix/train.fixed.txt",
+      "license": "C-UDA",
+      "expected_records": 46680,
+      "bytes": 5936570,
+      "sha256": "c98b1139265d33e787a9dd742a464e7eb5bd137ebb3fcb54f0416ee7672739f3"
+    }
+  ]
+}

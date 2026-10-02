@@ -1,0 +1,23 @@
+{
+  "answer": {
+    "repair_action": "modulo_safe"
+  },
+  "hidden_tests": [
+    {
+      "expected": -1,
+      "x": 11,
+      "y": -2
+    },
+    {
+      "expected": 3,
+      "x": -2,
+      "y": 5
+    },
+    {
+      "expected": 1,
+      "x": 10,
+      "y": 3
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

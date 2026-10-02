@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "research_results": false,
+  "provider_calls": 0,
+  "mock_calls": 9,
+  "mock_peak_active": 3,
+  "execution_mode": "concurrent_non_barrier",
+  "selected_case_ids": [
+    "RLLM001",
+    "RLLM007",
+    "RLLM014"
+  ],
+  "runner_sha256": "46a60fb7a0359a4af9ec74cc36b47a54cf33d8f434a8ef656fa2095ea2e7a95c",
+  "checks": {
+    "three_policies_completed": true,
+    "all_tasks_verified": true,
+    "provider_overlap_observed": true,
+    "ledger_overlap_observed": true,
+    "utilization_bounded": true
+  },
+  "runs": [
+    {
+      "policy": "CF_FIT",
+      "tasks_verified": 3,
+      "maximum_concurrent_executions": 3,
+      "resource_utilization": 0.8178931462140752,
+      "verified_throughput_per_second": 3.70528920152902,
+      "p95_terminal_flow_time_seconds": 0.8092432000048575
+    },
+    {
+      "policy": "S3",
+      "tasks_verified": 3,
+      "maximum_concurrent_executions": 3,
+      "resource_utilization": 0.876460137550214,
+      "verified_throughput_per_second": 3.3953835911826573,
+      "p95_terminal_flow_time_seconds": 0.8831599000041024
+    },
+    {
+      "policy": "CENTRAL_FIT",
+      "tasks_verified": 3,
+      "maximum_concurrent_executions": 3,
+      "resource_utilization": 0.8079490032450272,
+      "verified_throughput_per_second": 4.6665755128841795,
+      "p95_terminal_flow_time_seconds": 0.6425076999948942
+    }
+  ],
+  "interpretation": "Offline sleeping-oracle infrastructure audit only; values must not be reported as Real-LLM policy outcomes."
+}

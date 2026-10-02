@@ -1,0 +1,28 @@
+{
+  "construction": "deterministic_public_row_microtask",
+  "dataset": "beijing",
+  "dataset_sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+  "source_indices": [
+    386587,
+    388421,
+    388422,
+    390235,
+    392052,
+    393887,
+    395734,
+    397580,
+    399411,
+    401277,
+    403116,
+    404963,
+    406831,
+    408704,
+    410562,
+    412388,
+    414248,
+    416142,
+    417991,
+    419812
+  ],
+  "stratum": "station_Wanshouxigong"
+}

@@ -1,0 +1,9 @@
+{
+  "answer": {
+    "missing_workclass_count": 2,
+    "positive_count": 0,
+    "records": 12
+  },
+  "tolerance": 0.011,
+  "validator_type": "numeric_json"
+}

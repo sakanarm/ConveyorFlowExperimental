@@ -1,0 +1,24 @@
+{
+  "construction": "deterministic_public_row_microtask",
+  "dataset": "beijing",
+  "dataset_sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+  "source_indices": [
+    11631,
+    44934,
+    71752,
+    98456,
+    125105,
+    151859,
+    185189,
+    211885,
+    238924,
+    265601,
+    298805,
+    325534,
+    325535,
+    352286,
+    378936,
+    405624
+  ],
+  "stratum": "all_stations_months_04_06"
+}

@@ -1,0 +1,18 @@
+{
+  "answer": {
+    "repair_action": "subtract"
+  },
+  "hidden_tests": [
+    {
+      "expected": -3,
+      "x": -1,
+      "y": 2
+    },
+    {
+      "expected": 6,
+      "x": 10,
+      "y": 4
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

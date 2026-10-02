@@ -1,0 +1,23 @@
+{
+  "answer": {
+    "repair_action": "absolute_difference"
+  },
+  "hidden_tests": [
+    {
+      "expected": 5,
+      "x": -5,
+      "y": 0
+    },
+    {
+      "expected": 4,
+      "x": -7,
+      "y": -3
+    },
+    {
+      "expected": 1,
+      "x": 1,
+      "y": 2
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

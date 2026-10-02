@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "items": 304,
+  "checks": {
+    "row_and_id_integrity": true,
+    "all_items_adjudicated": true,
+    "unanimous_items_preserved": true,
+    "disagreement_reasons_complete": true,
+    "minimum_pairwise_kappa_at_least_0_70": true,
+    "each_class_at_least_10_percent": true
+  },
+  "adjudicated_distribution": {
+    "1": 52,
+    "2": 113,
+    "3": 139
+  },
+  "adjudicated_class_share": {
+    "1": 0.17105263157894737,
+    "2": 0.3717105263157895,
+    "3": 0.45723684210526316
+  },
+  "diagnostics": {
+    "minimum_workload_pairwise_kappa": 0.6276595744680851,
+    "subgroup_review_required": true,
+    "interpretation": "Overall gate is primary; subgroup review is reported and bounded by alternate mappings."
+  },
+  "frozen_sha256": "56207cd87a28ab221911c2bf07ee0cf6f8ec6547bab7880fc5ef268ad24b2add"
+}

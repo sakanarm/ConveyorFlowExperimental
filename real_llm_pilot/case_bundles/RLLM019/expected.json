@@ -1,0 +1,24 @@
+{
+  "answer": {
+    "mean_age": 55.7,
+    "mean_hours_per_week": 44.6,
+    "median_age": 53.5,
+    "median_education_num": 10.5,
+    "median_hours_per_week": 45.0,
+    "missing_workclass_count": 2,
+    "model_a_f1": 0.2667,
+    "model_b_f1": 0.5714,
+    "positive_count": 10,
+    "positive_rate": 0.5,
+    "records": 20,
+    "selected_confusion": {
+      "fn": 2,
+      "fp": 10,
+      "tn": 0,
+      "tp": 8
+    },
+    "selected_model": "B"
+  },
+  "tolerance": 0.011,
+  "validator_type": "numeric_json"
+}

@@ -1,0 +1,45 @@
+{
+  "adult_ml": {
+    "records": 48842,
+    "missing_fraction": 0.008824372466319971,
+    "positive_fraction": 0.23928176569346055,
+    "difficulty_weights": {
+      "1": 0.45,
+      "2": 0.4,
+      "3": 0.15
+    }
+  },
+  "beijing_ml": {
+    "records": 420768,
+    "stations": 12,
+    "missing_fraction": 0.009774058652538005,
+    "difficulty_weights": {
+      "1": 0.3,
+      "2": 0.45,
+      "3": 0.25
+    }
+  },
+  "bugs2fix": {
+    "records": 46680,
+    "unequal_fraction": 1.0,
+    "source_length": {
+      "p25": 103.0,
+      "p50": 137.0,
+      "p75": 173.0,
+      "p95": 215.0
+    },
+    "absolute_length_delta": {
+      "p25": 6.0,
+      "p50": 16.0,
+      "p75": 36.0,
+      "p95": 80.0
+    },
+    "mean_source_length": 138.4590616966581,
+    "difficulty_weights": {
+      "1": 0.35,
+      "2": 0.45,
+      "3": 0.2
+    },
+    "execution_note": "Normalized function pairs; not executable repository tests."
+  }
+}

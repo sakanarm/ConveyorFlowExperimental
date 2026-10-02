@@ -1,0 +1,44 @@
+﻿{
+    "test_type":  "infrastructure_smoke_not_research_result",
+    "retrieved_at_utc":  "2026-09-23T11:20:17.4835160Z",
+    "endpoint":  "https://gpt.mfec.co.th/litellm/v1/chat/completions",
+    "generation":  {
+                       "temperature":  0,
+                       "max_tokens":  8
+                   },
+    "results":  [
+                    {
+                        "requested_model":  "gemini-3-flash",
+                        "status":  "success",
+                        "returned_model":  "gemini-3-flash",
+                        "latency_ms":  1428,
+                        "prompt_tokens":  9,
+                        "completion_tokens":  5,
+                        "total_tokens":  14,
+                        "exact_ok":  false,
+                        "error_type":  null
+                    },
+                    {
+                        "requested_model":  "gemini-3.5-flash",
+                        "status":  "success",
+                        "returned_model":  "gemini-3.5-flash",
+                        "latency_ms":  1009,
+                        "prompt_tokens":  9,
+                        "completion_tokens":  5,
+                        "total_tokens":  14,
+                        "exact_ok":  false,
+                        "error_type":  null
+                    },
+                    {
+                        "requested_model":  "gemini-3.8-flash",
+                        "status":  "success",
+                        "returned_model":  "gemini-3.8-flash",
+                        "latency_ms":  1396,
+                        "prompt_tokens":  9,
+                        "completion_tokens":  5,
+                        "total_tokens":  14,
+                        "exact_ok":  false,
+                        "error_type":  null
+                    }
+                ]
+}

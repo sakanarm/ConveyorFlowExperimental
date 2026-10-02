@@ -1,0 +1,28 @@
+{
+  "answer": {
+    "repair_action": "distance_plus_one"
+  },
+  "hidden_tests": [
+    {
+      "expected": 6,
+      "x": 2,
+      "y": -3
+    },
+    {
+      "expected": 5,
+      "x": -2,
+      "y": 2
+    },
+    {
+      "expected": 12,
+      "x": 7,
+      "y": -4
+    },
+    {
+      "expected": 7,
+      "x": 2,
+      "y": -4
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

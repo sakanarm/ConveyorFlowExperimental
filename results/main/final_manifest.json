@@ -1,0 +1,261 @@
+{
+  "created_at_utc": "2026-09-24T15:11:26.828372+00:00",
+  "scope": "Main confirmatory outputs and publication documents; per-run event files are covered by artifact_verification.json",
+  "files": [
+    {
+      "path": "config/main_lock.json",
+      "bytes": 862,
+      "sha256": "5a504998803ebc9bfa78e953a7d0460c52ce20a5964bc521e813a5d7d0578f8b"
+    },
+    {
+      "path": "config/main_draft.json",
+      "bytes": 972,
+      "sha256": "a5998721b3f2c166e281cd6c5e77c1bfa85addcd62f3c663dde69268d7cbd3a3"
+    },
+    {
+      "path": "results/main/source_snapshot.zip",
+      "bytes": 308784,
+      "sha256": "91e2cec400769fce8cea53682ebfe0b67c93bdc2756b365ad0bf56a1c8995c25"
+    },
+    {
+      "path": "results/main/design.csv",
+      "bytes": 3590023,
+      "sha256": "35f86c442aad768bf36fe35c51dacc81074410106ac42a6cc6afc2c35f03e9e5"
+    },
+    {
+      "path": "results/main/metrics.csv",
+      "bytes": 13616489,
+      "sha256": "4421181569344e5f772788f29b91f13078921bd9f72e22a6f61d6ecd4e58defd"
+    },
+    {
+      "path": "results/main/execution_summary.json",
+      "bytes": 256,
+      "sha256": "f1bbb7b63ef17e6199107fd95205ba9941a3f9ba6b73c1898ad40867eed7bab1"
+    },
+    {
+      "path": "results/main/analysis_integrity.json",
+      "bytes": 414,
+      "sha256": "5c83a34e8e94874215561cd7b440e2d6aed0f1587e64d404532b96486f30f482"
+    },
+    {
+      "path": "results/main/artifact_verification.json",
+      "bytes": 492,
+      "sha256": "d90e186673b0d102c0438a77e093243707a6579bab741c2a85506cf94e7e3c1e"
+    },
+    {
+      "path": "results/main/confirmatory_effects.csv",
+      "bytes": 127430,
+      "sha256": "4fb81f8b2c10ada5d146bd2f37d90aa5f73ae5e8c71c864c77cf8e93f58f0281"
+    },
+    {
+      "path": "results/main/annotation_policy_sensitivity.csv",
+      "bytes": 11634,
+      "sha256": "e4d39aaa1bbc4a7632132fe3b613114bb17bc939d34224014d6e417d96200833"
+    },
+    {
+      "path": "results/main/descriptive_summary.csv",
+      "bytes": 5674,
+      "sha256": "77a0ce21f74e13eed11cb3aefcfa355e2d74861db5d4de7714d207582f9b9755"
+    },
+    {
+      "path": "results/main/pareto_frontier_summary.csv",
+      "bytes": 2505,
+      "sha256": "684ff583e392823cad2b55a05f429994e3a13f8dbafedfd6473d41c80b4b4f21"
+    },
+    {
+      "path": "results/main/competing_risk_summary.csv",
+      "bytes": 8607,
+      "sha256": "0c0a638c2c8067c78f5f2d76aa638dc63bdec03dde7ec90f555b098857ddafcb"
+    },
+    {
+      "path": "results/main/secondary_analysis_integrity.json",
+      "bytes": 895,
+      "sha256": "546b78c295b24028c6d6fb4ed88ea3fc6c74b9095e4d16f4d1d1ced619327bba"
+    },
+    {
+      "path": "results/main/MAIN_RESULTS_INTERPRETATION.md",
+      "bytes": 4838,
+      "sha256": "fcec9381c8934640edcafb7f48b8e662f6aab986b9f07df15e470e8a784b4af7"
+    },
+    {
+      "path": "results/main/PROTOCOL_DEVIATION_LOG.md",
+      "bytes": 3812,
+      "sha256": "a23f377906c8195dfdc341c42d46c823b5dcd0c687fe77eb0f1a2e78d5322dd1"
+    },
+    {
+      "path": "docs/SUBMISSION_READINESS_CHECKLIST.md",
+      "bytes": 2047,
+      "sha256": "8c9e3c712f5769ca65845bbadbbb75ce54484c45c55fa50bdbf299995869d65e"
+    },
+    {
+      "path": "real_llm_pilot/README.md",
+      "bytes": 4954,
+      "sha256": "940718adf09667044e373828aebb51432b01264a27ca16af12011074db733be2"
+    },
+    {
+      "path": "real_llm_pilot/PROTOCOL_TH.md",
+      "bytes": 8596,
+      "sha256": "2e78d7c2f4ebfc67c735dcc74632dd8865c83c18dd0ae004f6d15d1c9ff3db08"
+    },
+    {
+      "path": "real_llm_pilot/config.template.json",
+      "bytes": 1507,
+      "sha256": "54b8afb71f0230dff08b38a3d109f6613cf61122167048bd455ebbeafa531f89"
+    },
+    {
+      "path": "real_llm_pilot/case_manifest.csv",
+      "bytes": 48445,
+      "sha256": "2eea7b1397a878f967d2d2047611576147a71bb261b26fc7ead8f2febb155012"
+    },
+    {
+      "path": "real_llm_pilot/adapter_contract.py",
+      "bytes": 1162,
+      "sha256": "ffb461b65e093159698cf9254f14d015bdbbe63abfed58a00e44b60e612b4786"
+    },
+    {
+      "path": "real_llm_pilot/build_cases.py",
+      "bytes": 2317,
+      "sha256": "96e464b8ad79c824da026c95b3402c489dd820f7a969301a8f05c8abbad5d780"
+    },
+    {
+      "path": "real_llm_pilot/run_pilot.py",
+      "bytes": 29245,
+      "sha256": "56d891c835a8a2da777701aee57355b1d814c6b6dec7c9f05dc5984094f53376"
+    },
+    {
+      "path": "real_llm_pilot/allocation_engine.py",
+      "bytes": 19745,
+      "sha256": "9da7973ce609fa01b6e4a31af14bafa533d13cdab05d02d555e6a9b5ef8b59c3"
+    },
+    {
+      "path": "real_llm_pilot/allocation_engine_lock.json",
+      "bytes": 806,
+      "sha256": "ff4655b745d52b5c6095204564269d12a09ac70911efc5ef55ddfe761319bacc"
+    },
+    {
+      "path": "real_llm_pilot/case_bundle_lock.json",
+      "bytes": 30766,
+      "sha256": "82b25fa5ba9e97848d8a1476f247c897030f0b15c83cd413c3c266c33097dfa0"
+    },
+    {
+      "path": "real_llm_pilot/case_bundle_audit.json",
+      "bytes": 16466,
+      "sha256": "79536e52caf653c1130f271c9fe618d08a5407a1f06a0c384f98d1fd31b6d97b"
+    },
+    {
+      "path": "real_llm_pilot/audit_concurrent_runner.py",
+      "bytes": 5580,
+      "sha256": "97be30d045b288c49b92cb8ed441dacc4bbb4828782ed1ee1933fd01339873ff"
+    },
+    {
+      "path": "real_llm_pilot/concurrent_runner_audit.json",
+      "bytes": 1546,
+      "sha256": "028501a1bfec0bb87b0a14371036a06758f604be753d1cc3a96c36f6de032885"
+    },
+    {
+      "path": "real_llm_pilot/pilot_output/dry_run_manifest.json",
+      "bytes": 905,
+      "sha256": "ea21b8796b73468b8c0b26d8096375f5e51672266138522d3689d56998bb1cbc"
+    },
+    {
+      "path": "real_llm_pilot/CALIBRATION_PROTOCOL.md",
+      "bytes": 2225,
+      "sha256": "acd9ca078433deaa084857bb62588f8ad52ee8e17c9431c5b85734a639febad2"
+    },
+    {
+      "path": "real_llm_pilot/CALIBRATION_DEVIATION_LOG.md",
+      "bytes": 3455,
+      "sha256": "96321c8117646abf637549be9b0f20808213e8175b34ef8cb66f9adb33332fcf"
+    },
+    {
+      "path": "real_llm_pilot/CANDIDATE_SELECTION_PROTOCOL.md",
+      "bytes": 1216,
+      "sha256": "802a3de2b57a4665b2fd1c7194e784a2c1cb252400d0afdde5984370960d68cf"
+    },
+    {
+      "path": "real_llm_pilot/ABILITY_CALIBRATION_RESULTS_TH.md",
+      "bytes": 6683,
+      "sha256": "860a3be0e2bb63aa8e532a89cf1a380336f1796425707a8c40ebf577058851a7"
+    },
+    {
+      "path": "real_llm_pilot/FINAL_TEAM_DECISION.md",
+      "bytes": 2548,
+      "sha256": "99bdefe7b2d42ae38cc24512ab788e89e5a3307a72c03b6e6a413de5c940b564"
+    },
+    {
+      "path": "real_llm_pilot/config.mfec_final_team.json",
+      "bytes": 3672,
+      "sha256": "8539ae67b7169b9b46e87e62f258691fd0e24015936eabd7c8f50d2524c6728c"
+    },
+    {
+      "path": "real_llm_pilot/final_team_evidence.json",
+      "bytes": 3198,
+      "sha256": "d1a118e3003094d74345536545c32d9b49b5c73d616dc5b917344de1250fd2be"
+    },
+    {
+      "path": "real_llm_pilot/final_team_ability.csv",
+      "bytes": 332,
+      "sha256": "1fc6eeab3beaec24bcf6b93d959a1fa2874d29d9c3ab117060ed4afe54d7141d"
+    },
+    {
+      "path": "real_llm_pilot/figures/fig_ability_profile_radar.png",
+      "bytes": 496183,
+      "sha256": "23dc800eb677580e9bff04eebe24c1409964e8d86c8ea8d0cef41cbbfbf7b2cc"
+    },
+    {
+      "path": "real_llm_pilot/figures/fig_ability_profile_radar.pdf",
+      "bytes": 35008,
+      "sha256": "38b35f5c2404a1e26a2560ffc36b10a47ea32e5f58eb704bdd42f7ddb0199e8f"
+    },
+    {
+      "path": "ConveyorFlow_IEEE_Manuscript.docx",
+      "bytes": 2069134,
+      "sha256": "6046f6dad87d1d16dae99fd983c3ea47fcc24f1115e627fe273a73d83e79e502"
+    },
+    {
+      "path": "ConveyorFlow_Advisor_Explanation_TH.docx",
+      "bytes": 1910526,
+      "sha256": "acbe334a6eb8347f33be7904a13d063bc4c599d60097136b8436abec21ae883b"
+    },
+    {
+      "path": "results/main/figures/fig1_architecture.png",
+      "bytes": 164734,
+      "sha256": "4bcb6d6a8f30344d6863980b043c69dafa24d26d2186e7dc8db0bc027b2e75ac"
+    },
+    {
+      "path": "results/main/figures/fig2_rq1_cost.png",
+      "bytes": 80575,
+      "sha256": "cef40132a9542ba4a5d80a4dbcc49964191dbae7587ec9def318f0af87d516c3"
+    },
+    {
+      "path": "results/main/figures/fig3_rq2_throughput.png",
+      "bytes": 59539,
+      "sha256": "c37754fcb4dcfeb16969afa38824e21e46cc0509b6b4d46c80b588937ba0ddc5"
+    },
+    {
+      "path": "results/main/figures/fig4_rq3_cost.png",
+      "bytes": 76193,
+      "sha256": "fc6314d4498474f6d318f5eb592109986689421fa82e989f31ac543ccb7604f0"
+    },
+    {
+      "path": "results/main/figures/fig5_e4_deadletter.png",
+      "bytes": 60682,
+      "sha256": "d43d22c416ad0146d5dd6655ea83be8d70d56fa5f0a1886f926e0e54b7b59cdc"
+    },
+    {
+      "path": "results/main/figures/fig6_rq1_tradeoff_radar.png",
+      "bytes": 635458,
+      "sha256": "4baf69cc237166d485ffb69025f71109c3c4a752c34b16f6d1c2d5134e3ce7e5"
+    },
+    {
+      "path": "results/main/figures/fig7_rq1_pareto_frontiers.png",
+      "bytes": 309676,
+      "sha256": "60029072ad66d4275ae76880f5b3fd0235ed4375c41137033516a77845931461"
+    },
+    {
+      "path": "results/main/figures/fig8_rq1_competing_risks.png",
+      "bytes": 309206,
+      "sha256": "c233c6d60f87ddd873a8a7d47aff6e7326897024034b2cc1717999793cbc1853"
+    }
+  ]
+}

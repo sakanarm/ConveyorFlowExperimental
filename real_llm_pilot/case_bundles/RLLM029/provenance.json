@@ -1,0 +1,24 @@
+{
+  "construction": "deterministic_public_row_microtask",
+  "dataset": "beijing",
+  "dataset_sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+  "source_indices": [
+    176884,
+    179277,
+    181579,
+    183903,
+    186288,
+    188600,
+    190905,
+    193254,
+    195598,
+    197918,
+    200284,
+    202600,
+    204930,
+    204931,
+    207293,
+    209611
+  ],
+  "stratum": "station_Gucheng"
+}

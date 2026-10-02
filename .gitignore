@@ -1,0 +1,68 @@
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+.venv/
+venv/
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node/build caches
+node_modules/
+.tools/
+.presentation_build/
+
+# Office and editor temporary files
+~$*
+*.tmp
+*.bak
+.vscode/
+.idea/
+
+# Render and QA workspaces
+.docx_qa*/
+.docx_render*/
+.docx_testpdf/
+.drawio_cli_profile*/
+
+# Upstream raw datasets are downloaded by scripts/download_data.py
+data/raw/
+
+# Large simulation ledgers and resumable checkpoints
+results/*/events/
+results/**/metrics.partial.jsonl
+results/pilot/
+results/pilot_extensions/
+results/pilot_extensions_smoke/
+results/pilot_round1_precalibration/
+results/pilot_slow_checkpoint/
+results/smoke/
+results/smoke_round1_precalibration/
+
+# Raw provider call artifacts and transient execution state
+real_llm_pilot/*_output/
+real_llm_pilot/preflight_*/
+real_llm_pilot/**/attempts/
+real_llm_pilot/**/calls.jsonl
+real_llm_pilot/**/events.jsonl
+real_llm_pilot/**/candidate_output.txt
+real_llm_pilot/**/progress.json
+real_llm_pilot/**/correction_progress.json
+
+# Local launchers that may contain machine-specific state
+real_llm_pilot/START_*.cmd
+real_llm_pilot/RESUME_*.cmd
+
+# Logs
+*.log
+debug.log

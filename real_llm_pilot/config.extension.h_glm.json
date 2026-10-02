@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "study_status": "FROZEN_FOR_EXECUTION",
+  "evidence_phase": "supplementary_real_llm_extension",
+  "condition_id": "HOM_GLM_GENERALIST",
+  "team_design": "homogeneous_single_deployment_replicated_slots_glm",
+  "design_rationale": "Homogeneous high-capability generalist boundary condition for RQ2; not a mean-ability-matched causal control.",
+  "base_url": "https://gpt.mfec.co.th/litellm",
+  "models": [
+    {"slot":"agent_1","provider":"mfec_litellm","model_id":"glm-5.3-flash","exact_version":"85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15","ability_profile":{"ml_build":3,"fix_bug":3},"role":"homogeneous advanced generalist replica 1","input_price_per_million_tokens":null,"output_price_per_million_tokens":null,"api_key_env":"MFEC_LITELLM_API_KEY","cost_accounting_mode":"provider_response_header","session_id":"conveyorflow-v2-ext-hglm-agent_1"},
+    {"slot":"agent_2","provider":"mfec_litellm","model_id":"glm-5.3-flash","exact_version":"85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15","ability_profile":{"ml_build":3,"fix_bug":3},"role":"homogeneous advanced generalist replica 2","input_price_per_million_tokens":null,"output_price_per_million_tokens":null,"api_key_env":"MFEC_LITELLM_API_KEY","cost_accounting_mode":"provider_response_header","session_id":"conveyorflow-v2-ext-hglm-agent_2"},
+    {"slot":"agent_3","provider":"mfec_litellm","model_id":"glm-5.3-flash","exact_version":"85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15","ability_profile":{"ml_build":3,"fix_bug":3},"role":"homogeneous advanced generalist replica 3","input_price_per_million_tokens":null,"output_price_per_million_tokens":null,"api_key_env":"MFEC_LITELLM_API_KEY","cost_accounting_mode":"provider_response_header","session_id":"conveyorflow-v2-ext-hglm-agent_3"}
+  ],
+  "policies": ["CF_FIT"],
+  "allocation_engine": {"status":"FROZEN_FOR_EXECUTION","module":"allocation_engine_extension.py","sha256":"69fe4e2c3a99e27631c01bb02f4f006e5942858225ee45766c66d9fd1145f9f8","decision_before_execution":true,"execution_scope":"selected_atomic_claim_winner_only","parameters":{"k_scan":8,"w1":2,"w2":4,"max_no_volunteer_rounds":6,"max_attempts":3}},
+  "case_bundles": {"status":"FROZEN_FOR_EXECUTION","lock_file":"case_bundle_lock.json","sha256":"82b25fa5ba9e97848d8a1476f247c897030f0b15c83cd413c3c266c33097dfa0","case_count":60,"manifest_sha256":"2eea7b1397a878f967d2d2047611576147a71bb261b26fc7ead8f2febb155012"},
+  "generation": {"temperature":0,"max_output_tokens":4096,"timeout_seconds":180,"max_api_retries":2,"silent_model_fallback_allowed":false},
+  "paired_seeds": [3000,3001,3002,3003,3004,3005,3006,3007,3008,3009],
+  "validator_timeout_seconds":120,
+  "ability_gate":{"rank_rule":"workload_specific_wilson_lower_95_bound","price_is_not_ability":true,"ability_profile_frozen":true},
+  "blocking_fields":[],
+  "runner_evidence":{"path":"run_extension.py","sha256":"9e00a4376fc792cc59fe35e49697d03572a03712742d12460558087babcdb685"}
+}

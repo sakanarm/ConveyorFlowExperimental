@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "study_status": "FROZEN_TEAM_AND_INFRASTRUCTURE_BLOCKED_ON_ALIAS_MAPPING_AND_PRICES",
+  "team_design": "workload_specific_capability_profile_heterogeneity",
+  "base_url": "https://gpt.mfec.co.th/litellm",
+  "models": [
+    {
+      "slot": "agent_1",
+      "provider": "mfec_litellm",
+      "model_id": "tencent-hy3",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "ability_profile": {
+        "ml_build": 3,
+        "fix_bug": 1
+      },
+      "role": "ML-advanced / Fix-Bug-basic specialist",
+      "screen_mean_latency_seconds": 11.060728453332802,
+      "screen_total_input_tokens": 3591,
+      "screen_total_output_tokens": 34914,
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null,
+      "api_key_env": "MFEC_LITELLM_API_KEY"
+    },
+    {
+      "slot": "agent_2",
+      "provider": "mfec_litellm",
+      "model_id": "gpt-5-mini",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "ability_profile": {
+        "ml_build": 2,
+        "fix_bug": 3
+      },
+      "role": "ML-intermediate / Fix-Bug-advanced specialist",
+      "screen_mean_latency_seconds": 2.01235096666666,
+      "screen_total_input_tokens": 3495,
+      "screen_total_output_tokens": 1157,
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null,
+      "api_key_env": "MFEC_LITELLM_API_KEY"
+    },
+    {
+      "slot": "agent_3",
+      "provider": "mfec_litellm",
+      "model_id": "glm-5.3-flash",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "ability_profile": {
+        "ml_build": 3,
+        "fix_bug": 3
+      },
+      "role": "advanced generalist",
+      "screen_mean_latency_seconds": 8.987742030000664,
+      "screen_total_input_tokens": 3588,
+      "screen_total_output_tokens": 9742,
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null,
+      "api_key_env": "MFEC_LITELLM_API_KEY"
+    }
+  ],
+  "policies": [
+    "CF_FIT",
+    "S3",
+    "CENTRAL_FIT"
+  ],
+  "allocation_engine": {
+    "status": "FROZEN_FOR_EXECUTION",
+    "module": "allocation_engine.py",
+    "sha256": "9da7973ce609fa01b6e4a31af14bafa533d13cdab05d02d555e6a9b5ef8b59c3",
+    "decision_before_execution": true,
+    "execution_scope": "selected_atomic_claim_winner_only",
+    "parameters": {
+      "k_scan": 8,
+      "w1": 2,
+      "w2": 4,
+      "max_no_volunteer_rounds": 6,
+      "max_attempts": 3
+    }
+  },
+  "case_bundles": {
+    "status": "FROZEN_FOR_EXECUTION",
+    "lock_file": "case_bundle_lock.json",
+    "sha256": "82b25fa5ba9e97848d8a1476f247c897030f0b15c83cd413c3c266c33097dfa0",
+    "case_count": 60,
+    "manifest_sha256": "2eea7b1397a878f967d2d2047611576147a71bb261b26fc7ead8f2febb155012"
+  },
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 4096,
+    "timeout_seconds": 180,
+    "max_api_retries": 2,
+    "silent_model_fallback_allowed": false
+  },
+  "paired_seeds": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009
+  ],
+  "validator_timeout_seconds": 120,
+  "homogeneous_controls": {
+    "H_L3_GENERALIST": {
+      "model_id": "glm-5.3-flash",
+      "agent_instances": 3
+    },
+    "H_L2_ML": {
+      "model_id": "gpt-5-mini",
+      "agent_instances": 3
+    }
+  },
+  "ability_gate": {
+    "rank_rule": "workload_specific_wilson_lower_95_bound",
+    "price_is_not_ability": true,
+    "ability_profile_frozen": true
+  },
+  "blocking_fields": [
+    "immutable_alias_to_underlying_model_mapping",
+    "input_price_per_million_tokens",
+    "output_price_per_million_tokens"
+  ]
+}

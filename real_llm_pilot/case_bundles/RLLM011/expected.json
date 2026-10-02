@@ -1,0 +1,12 @@
+{
+  "answer": {
+    "mean_age": 42.44,
+    "mean_hours_per_week": 44.75,
+    "missing_workclass_count": 1,
+    "positive_count": 5,
+    "positive_rate": 0.3125,
+    "records": 16
+  },
+  "tolerance": 0.011,
+  "validator_type": "numeric_json"
+}

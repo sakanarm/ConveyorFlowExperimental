@@ -1,0 +1,13 @@
+{
+  "expected_runs": 22500,
+  "observed_runs": 22500,
+  "unique_run_ids": 22500,
+  "duplicate_run_ids": 0,
+  "zero_success_runs": 0,
+  "difficulty_label_hashes": [
+    "56207cd87a28ab221911c2bf07ee0cf6f8ec6547bab7880fc5ef268ad24b2add",
+    "7519b662625614a8a87de4e05a9c4f6f6442443f82d0e37d9b9af997aeb02a86",
+    "92a15a89f5779213d97dfd472e399572eadbd703ea36450b5d5ec409c6f04e27"
+  ],
+  "pass": true
+}

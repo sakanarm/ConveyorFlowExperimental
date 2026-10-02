@@ -1,0 +1,18 @@
+{
+  "answer": {
+    "repair_action": "maximum"
+  },
+  "hidden_tests": [
+    {
+      "expected": 0,
+      "x": 0,
+      "y": -5
+    },
+    {
+      "expected": 2,
+      "x": 0,
+      "y": 2
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

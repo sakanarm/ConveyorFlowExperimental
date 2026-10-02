@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "analysis_class": "secondary_exploratory",
+  "pareto": {
+    "rows": 20,
+    "nondominated": {
+      "R0/economic": [
+        "CENTRAL_FIT",
+        "S2",
+        "S3"
+      ],
+      "R0/service_quality": [
+        "CENTRAL_FIT"
+      ],
+      "R1/economic": [
+        "CENTRAL_FIT",
+        "S1",
+        "S3"
+      ],
+      "R1/service_quality": [
+        "CENTRAL_FIT",
+        "CF_FIT"
+      ]
+    }
+  },
+  "competing_risk": {
+    "runs_checked": 4500,
+    "summary_rows": 100,
+    "grid_max": 1000
+  },
+  "notes": [
+    "Pareto frontiers are descriptive two-objective summaries and are not composite rankings.",
+    "Competing-risk curves use task creation as time zero and VERIFIED/DEAD_LETTER as competing events.",
+    "Unresolved tasks are right-censored at the run horizon; aggregation is across run-level curves."
+  ]
+}

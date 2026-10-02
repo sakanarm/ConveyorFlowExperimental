@@ -1,0 +1,24 @@
+{
+  "construction": "deterministic_public_row_microtask",
+  "dataset": "adult",
+  "dataset_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+  "source_indices": [
+    2542,
+    5951,
+    8751,
+    11910,
+    15174,
+    18428,
+    21511,
+    24893,
+    28114,
+    28131,
+    31074,
+    34288,
+    37573,
+    40584,
+    44394,
+    48069
+  ],
+  "stratum": "age_q1_hours_q4"
+}

@@ -124,6 +124,12 @@ def set_repeat_table_header(row) -> None:
     tr_pr.append(tbl_header)
 
 
+def prevent_row_split(row) -> None:
+    tr_pr = row._tr.get_or_add_trPr()
+    if tr_pr.find(qn("w:cantSplit")) is None:
+        tr_pr.append(OxmlElement("w:cantSplit"))
+
+
 def shade_cell(cell, fill: str) -> None:
     tc_pr = cell._tc.get_or_add_tcPr()
     shd = tc_pr.find(qn("w:shd"))
@@ -224,6 +230,7 @@ def format_table(table, *, font: str, size: float, header_fill: str = "D9EAF7") 
     if table.rows:
         set_repeat_table_header(table.rows[0])
     for row_index, row in enumerate(table.rows):
+        prevent_row_split(row)
         for cell in row.cells:
             set_cell_margins(cell)
             cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
@@ -885,10 +892,25 @@ def build_ieee(data: dict) -> None:
     ]
     ieee_paragraph(
         doc,
-        "CF-Fit and Central-Fit were descriptively close under the selected team, and none of the six "
-        f"paired comparisons reached Holm-adjusted p<0.05 (minimum adjusted p="
+        "CF-Fit and Central-Fit were descriptively close under the selected team. Their mean completion rates "
+        f"were {100 * main_desc[('CF_FIT', 'completion_rate')]:.2f}% and "
+        f"{100 * main_desc[('CENTRAL_FIT', 'completion_rate')]:.2f}%, mean wall times were "
+        f"{main_desc[('CF_FIT', 'run_wall_time_seconds')]:.2f} and "
+        f"{main_desc[('CENTRAL_FIT', 'run_wall_time_seconds')]:.2f} s, verified throughputs were "
+        f"{main_desc[('CF_FIT', 'verified_throughput_per_second')]:.5f} and "
+        f"{main_desc[('CENTRAL_FIT', 'verified_throughput_per_second')]:.5f} tasks/s, utilizations were "
+        f"{100 * main_desc[('CF_FIT', 'resource_utilization')]:.2f}% and "
+        f"{100 * main_desc[('CENTRAL_FIT', 'resource_utilization')]:.2f}%, and costs per verified task were "
+        f"${main_desc[('CF_FIT', 'cost_per_verified_task')]:.6f} and "
+        f"${main_desc[('CENTRAL_FIT', 'cost_per_verified_task')]:.6f}, respectively. None of the six paired "
+        f"comparisons reached Holm-adjusted p<0.05 (minimum adjusted p="
         f"{min(f(row, 'p_holm') for row in cf_central):.6f}). This result does not establish equivalence; it "
-        "states only that the ten-seed supplementary study detected no difference at the prespecified threshold.",
+        "states only that the ten-seed supplementary study detected no difference at the prespecified threshold. "
+        "Within the tested team and workload, decentralized local self-selection therefore reproduced a similar "
+        "observed operational profile without a global agent-task matcher. Architecturally, CF-Fit removes the "
+        "central matcher from the allocation decision path and reduces dependence on an allocation-layer central "
+        "decision point or bottleneck. This is not evidence of end-to-end fault tolerance: the READY belt, atomic "
+        "claim, and event ledger remain shared infrastructure, and no component-failure injection was performed.",
     )
     add_full_width_section(doc)
     paragraph = doc.add_paragraph()
@@ -942,7 +964,7 @@ def build_ieee(data: dict) -> None:
     ieee_paragraph(doc, "The results should be read as a Pareto-style trade-off map. ConveyorFlow is supported when local self-selection produces an operationally useful cost–throughput–time combination while respecting completion and terminal-failure margins; it need not dominate every centralized or static control on every axis. Resource-stratified reporting is essential because a mechanism that protects high-ability agents can have different economic consequences when capability is or is not expensive.")
     ieee_paragraph(doc, "The heterogeneity experiment distinguishes diversity from average team strength. H0, H1, and H2 share the same mean latent ability; differences therefore arise from composition and task matching rather than simply adding a stronger team. The ablations further separate the contribution of noisy local assessment, fit ranking, temporary overqualification stand-down, and task aging.")
     ieee_paragraph(doc, "Operationally, stand-down should not be presented as refusal. It is a decaying backoff term that reserves scarce capability early and disappears as waiting becomes urgent. Aging and bounded dead-letter behavior are therefore part of the mechanism’s safety story: they prevent an easy task from being postponed forever when the preferred lower-level agent is unavailable.")
-    ieee_paragraph(doc, "The live MFEC execution provides a complementary implementation check rather than replacing the controlled simulation. Relative to Static S3, CF-Fit completed fewer tasks and spent more per verified task, but finished the observed workload window faster with substantially higher verified throughput and utilization. Relative to Central-Fit, the ten paired seeds produced descriptively close results and no Holm-significant metric-level contrast; this is absence of detected difference, not evidence of equivalence. The extension tests whether the live pattern is sensitive to removing stand-down and to two ecologically plausible homogeneous deployments. Because homogeneous models change both capability profile and provider behavior, those conditions bound deployment behavior but do not isolate heterogeneity as cleanly as the mean-matched simulation compositions.")
+    ieee_paragraph(doc, "The live MFEC execution provides a complementary implementation check rather than replacing the controlled simulation. Relative to Static S3, CF-Fit completed fewer tasks and spent more per verified task, but finished the observed workload window faster with substantially higher verified throughput and utilization. Relative to Central-Fit, the ten paired seeds produced descriptively close results and no Holm-significant metric-level contrast; this is absence of detected difference, not evidence of equivalence. The practical architectural observation is that this similar measured profile was obtained without a global agent-task matcher, reducing dependence on a central allocation decision point. Because shared belt, claim, and ledger services remain, and failure injection was outside the experiment, this observation must not be generalized into a claim of system-wide fault tolerance. The extension tests whether the live pattern is sensitive to removing stand-down and to two ecologically plausible homogeneous deployments. Because homogeneous models change both capability profile and provider behavior, those conditions bound deployment behavior but do not isolate heterogeneity as cleanly as the mean-matched simulation compositions.")
     ieee_paragraph(doc, "The secondary Pareto and competing-risk views sharpen, but do not broaden, that conclusion. They show why a single rank is unstable across objective pairs and why terminal latency must be interpreted with the probability of verification, dead letter, and censoring. Because these views were added after confirmatory inspection, they are evidence for interpretation and future preregistration rather than additional confirmatory claims.")
 
     ieee_heading(doc, "VIII. THREATS TO VALIDITY")
@@ -953,7 +975,7 @@ def build_ieee(data: dict) -> None:
     ieee_paragraph(doc, "The competing-risk envelopes summarize between-run dispersion rather than sampling uncertainty, and right-censoring at the fixed simulation horizon assumes that unresolved work is not reclassified after observation ends. The Pareto frontiers depend on the two displayed objectives and would change under a different objective set. Both analyses are explicitly secondary.")
 
     ieee_heading(doc, "IX. CONCLUSION")
-    ieee_paragraph(doc, "ConveyorFlow reframes heterogeneous LLM-agent allocation as decentralized capability-aware self-selection over a ready-task belt. Its scientific story joins local decision authority, capability heterogeneity, fit, temporary stand-down, and aging. A pre-specified simulation frozen before execution across 22,500 unique runs evaluates the resulting trade-offs against realistic static and centralized controls rather than claiming universal dominance. A completed, safety-locked Real-LLM study adds implementation-level evidence: it exposes a statistically clear speed-utilization versus completion-cost trade-off against static assignment, while the selected decentralized and centralized fit mechanisms were not distinguishable with ten paired seeds. The separately frozen stand-down and homogeneous-team extension supplies sensitivity and deployment-boundary evidence, not a replacement for the simulation’s controlled causal comparisons. Human validation of task difficulty remains separate and pending.")
+    ieee_paragraph(doc, "ConveyorFlow reframes heterogeneous LLM-agent allocation as decentralized capability-aware self-selection over a ready-task belt. Its scientific story joins local decision authority, capability heterogeneity, fit, temporary stand-down, and aging. A pre-specified simulation frozen before execution across 22,500 unique runs evaluates the resulting trade-offs against realistic static and centralized controls rather than claiming universal dominance. A completed, safety-locked Real-LLM study adds implementation-level evidence: it exposes a statistically clear speed-utilization versus completion-cost trade-off against static assignment, while the selected decentralized and centralized fit mechanisms were not distinguishable with ten paired seeds. In the tested setting, CF-Fit therefore achieved a similar observed operational profile without a global matcher and reduced dependence on a central allocation decision point; shared coordination services remain, so system-wide fault tolerance is not claimed. The separately frozen stand-down and homogeneous-team extension supplies sensitivity and deployment-boundary evidence, not a replacement for the simulation’s controlled causal comparisons. Human validation of task difficulty remains separate and pending.")
 
     ieee_heading(doc, "DATA AND CODE AVAILABILITY")
     ieee_paragraph(doc, "The v2 research package contains source code, frozen configurations, public-data manifests, annotation packets and prompts, event-ledger hashes, analysis scripts, secondary-analysis outputs, the pre-execution source snapshot, and the vendor-neutral Real-LLM protocol and harness. The editable ConveyorFlow_diagrams_en_working.drawio source contains the system architecture, process architecture, CF-Fit belt, static baseline, and one-tick pages reproduced in Figures 1–5. Dated MFEC calibration and execution ledgers, team-selection evidence, immutable configuration and case hashes, validated main and extension run manifests, statistical summaries, figures, and the documented path-only extension deviation are included. Provider aliases and prices are recorded as observed configuration metadata and should not be interpreted as independently verified model lineage. Raw CodeXGLUE files remain subject to their upstream license. A public archival DOI should be added after advisor approval and repository release.")

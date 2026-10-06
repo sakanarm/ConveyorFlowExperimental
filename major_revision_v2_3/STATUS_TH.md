@@ -1,5 +1,19 @@
 # ConveyorFlow v2.3 สถานะปิด Major Revision
 
+## Live update 6 ตุลาคม 2026 เวลา 15:26 น.
+
+**กำลังเรียก real LLM ใหม่ทั้ง ML และ repository ตามงบที่ผู้ใช้อนุญาตแล้ว** ไม่รอเพดาน calls เพิ่ม และยังไม่สรุปว่า Major Revision ปิดแล้ว
+
+- ML ecological calibration snapshot: completed 33/288 คู่, VERIFIED 26, STAGE_CONTRACT_FAILED 3, PROVIDER_UNRESOLVED 3, REPLAY_UNRESOLVED 1; active GLM / CAL_ADULT_02 / preprocess. เป็นสถานะระหว่างรัน ไม่ใช่ final success rate
+- Continuation 1 หยุดที่ 22 คู่จาก fresh replay เกิน 360 วินาที เก็บ unresolved เดิมไว้ ตรวจ trusted backend ใน Podman image ที่ถูกต้องผ่าน แล้วเริ่ม continuation 2 เฉพาะ 266 คู่ที่ยังไม่เริ่ม เวลา 15:11 น. lock SHA256 `11eae1a8e6e36f180b826744832e1a2238cea8e1a38368e592814f6877cb020a` กติกาใหม่แยก cleaned workload timeout จาก backend failure และตรวจ health ก่อนเดินต่อ ไม่เปลี่ยน prompts/source/gates/timeout ไม่ retry คู่เดิม
+- Offline health probe v1 เคยใช้ default Docker image lock ผิดและจบ exit125; เก็บไว้ แก้เฉพาะ diagnostic launch เป็น v2 ซึ่งผ่าน ไม่เปลี่ยน research outcome
+- Repository calibration ใหม่เริ่ม API จริงเวลา 15:19 น.: 6 cases × 3 deployments = 18 คู่; snapshot completed5, VERIFIED3 และ VISIBLE_TEST_FAILED2, active GLM / pandas_37. lock SHA256 `24c9e82cc93f3f177e2e8cff6f580e5212be52c99ceb7ba407f98cefef438d1a`
+- Repository baseline/source/no-op/import-sentinel ครบ6 cases และ60 case-specific regression identities ผ่านก่อน calls. Matplotlib10 เพิ่ม pinned pandas/pytz เพื่อรัน2 testsที่เดิม skipped; ใช้ test IDsเดิมทั้ง10 และรักษา original evidence. Context amendment เพิ่ม public formatter excerpts ก่อน LLM ไม่อ่าน gold diff ไม่ใช่ model success
+- Local code suite ผ่าน **201 pytest tests** (169 unittest cases รวม6 controller guardsใหม่และ32 pytest-style checks). Git public code ชุดก่อนหน้าถูก push แล้วที่ `b886159`; ชุดใหม่กำลังตรวจและบันทึก ไม่รวม credential/raw responses/candidate artifacts/Office drafts
+- สร้าง IEEE v2.3 Progress Rev3 ใหม่ด้วย Microsoft Word: 15รูป,13 native equations,10ตาราง,20หน้า รวม completed supporting ML36 และ repository18 ชุดเดิม แยก ongoing calibration จาก allocation main; กำลังตรวจ rendered pages ไม่ใช้ LibreOffice และไม่ทับ v2.2
+
+ตรวจสถานะสดด้วย `EcologicalMLCalibrationAudit` และ `EcologicalRepositoryCalibrationAudit` ที่ `REPRODUCE_V2_3.ps1` สองชุดนี้ยังเป็น calibration ไม่ใช่ paired live allocation main. ยังต้อง freeze profiles จากผลครบ เชื่อม belt/claim/assessor/executor/verifier และรัน CF-Fit กับ CENTRAL_RULE_MATCHED/Static ตาม RQ1/RQ2 พร้อม ablations. ส่วน snapshot ด้านล่างเป็นประวัติของเวลาที่ระบุ ไม่ใช่สถานะปัจจุบัน
+
 ## Live update 6 ตุลาคม 2026 เวลา 14:22 น. — ใช้ส่วนนี้แทน snapshot ถัดไป
 
 **เริ่ม real-LLM ecological calibration แล้ว ไม่ได้รอเพดานงบอีกต่อไป**. ผู้ใช้อนุญาตให้ใช้เท่าที่จำเป็นโดยไม่จำกัดงบ แผน ML ถูกตรึงที่ 24 task specifications × 4 stages × 3 deployments = 288 first-attempt requests; ไม่มี retry เพื่อคัดผลให้ผ่าน เริ่มเรียกจริงเวลา 14:05 น. (07:05 UTC)

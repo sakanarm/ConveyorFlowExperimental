@@ -1,5 +1,16 @@
 # v2.3: ต้องรันอะไรเพื่อปิด Major Revision และรีรันอย่างไร
 
+## Live update 6 ตุลาคม 2026 เวลา 15:26 น.
+
+งบอนุญาตแล้วและ **ML/repository calibration กำลังเรียก MFEC จริงทั้งสองชุด**. ML completed33/288 (26VERIFIED,3contract failure,3provider-unresolved,1replay-unresolved), repositoryใหม่ completed5/18 (3VERIFIED,2visible failure) ณเวลานี้ ไม่รวมกับ36/18 supporting pairsเก่า และไม่ใช่ final rates. ตรวจสดด้วยสองคำสั่ง audit ด้านล่าง; Execute จะสร้าง calls ไม่ใช่การดูสถานะ
+
+```powershell
+& 'v2/REPRODUCE_V2_3.ps1' -Stage EcologicalMLCalibrationAudit
+& 'v2/REPRODUCE_V2_3.ps1' -Stage EcologicalRepositoryCalibrationAudit
+```
+
+ML continuation2 ตรวจ backend ผ่านและเดินเฉพาะ266 never-started pairsหลัง continuation1หยุดจากtimeout. ไม่เพิ่ม cap/เปลี่ยน codeเพื่อให้คะแนนผ่าน. Repositoryใหม่ผ่าน baseline/context/identityก่อนcalls ใช้60case-specific public regression identities; เติมdependencyและpublic excerptsในamendmentsที่เก็บแยกก่อนmodel outcomes. Code suiteล่าสุด201pytest testsผ่าน. IEEE ProgressRev3สร้างด้วยWordแล้วกำลังตรวจ20หน้า. **G5 paired live main และ Major Revisionยังไม่ปิด**. snapshotต่อไปเป็นประวัติเท่านั้น
+
 ## Live update 6 ตุลาคม 2026 เวลา 14:22 น.
 
 งบได้รับอนุมัติแล้ว (ใช้เท่าที่จำเป็น ไม่จำกัดเพดาน) ML ecological calibration **เริ่มจริงเวลา 14:05 น.** ตาม execution lock 288 first-attempt calls. ตัวรันเดิมหยุดหลัง 10 คู่: 7 VERIFIED, 2 contract failures, 1 GLM provider-unresolved. เวลา 14:22 น. เริ่ม continuation ที่ตรึงเฉพาะ 278 never-started pairs ไม่เรียกคู่ที่เริ่มแล้วซ้ำ. Repository calibration preflight กำลังทำก่อน calls. ตรวจสดด้วย `EcologicalMLCalibrationAudit`; คำสั่ง `Execute` ไม่ใช่คำสั่งดูสถานะ. Full code suite ล่าสุดผ่าน 162 tests. Snapshot ที่บอกว่าไม่มี API calls ใหม่/รอเพดานงบด้านล่างเป็นประวัติก่อนรอบนี้; **G5 allocation main ยังไม่พร้อม และ Major Revision ยังไม่ปิด**

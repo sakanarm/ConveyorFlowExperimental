@@ -11,7 +11,7 @@ python -m pytest tests -q
 ./REPRODUCE_V2_3.ps1 -Stage CodeCheck
 ```
 
-On 6 October 2026, the local suite passed 195 pytest tests (163 unittest cases plus pytest-style tests). A clean Git-index export without private data or the external benchmark passed 191 tests and explicitly skipped four integration checks that require public-data/reference preparation or the separately fetched BugsInPy reference patch. Skipped checks are not reported as passed. Fixture guard checks remain active without the gold patch. Tests do not constitute live-LLM results. `Check` additionally audits *locally available* historical result capsules and may require investigator artifacts that are deliberately not committed. Do not infer that missing historical raw ledgers were regenerated.
+On 6 October 2026, the local suite passed 201 pytest tests (169 unittest cases plus 32 pytest-style tests). A fresh public Git-index export passed 197 tests and explicitly skipped four integration checks that require public-data/reference preparation or the separately fetched BugsInPy reference patch. The six new controller-guard tests passed in both runs. Skipped checks are not reported as passed. Fixture guard checks remain active without the gold patch. Tests do not constitute live-LLM results. `Check` additionally audits *locally available* historical result capsules and may require investigator artifacts that are deliberately not committed. Do not infer that missing historical raw ledgers were regenerated.
 
 Fixtures can be rerun into **new** destinations. Never overwrite a frozen run:
 
@@ -33,9 +33,14 @@ The investigator used WSL Ubuntu with Podman; `Dockerfile.ml_eval` and the image
 
 ```powershell
 ./REPRODUCE_V2_3.ps1 -Stage EcologicalMLCalibrationAudit
+./REPRODUCE_V2_3.ps1 -Stage EcologicalRepositoryCalibrationAudit
 ```
 
 The above is read-only and makes no API calls. `EcologicalMLCalibrationFreeze` and `EcologicalMLCalibrationExecute` refer to the investigator's immutable first-attempt batch. Existing output evidence causes a restart to be rejected. `EcologicalMLContinuationFreeze/Execute` are a separately recorded recovery of **never-started pairs only**, not general retry commands. A reviewer should use a fresh checkout/output capsule and record a new date, image/model identities and locks, not pretend to recreate historical hashes.
+
+`EcologicalMLContinuation2Freeze/Execute` preserves all previously started pairs and requires the recorded trusted backend-health gate. A cleaned workload timeout stays unresolved; another trusted health probe precedes further never-started calls. Launch/auth/mapping/hash failures still stop execution. `EcologicalRepositoryCalibrationFreeze/Execute` uses six different environment-qualified cases, one call per deployment, guarded exact edits, ten case-specific public regression identities, and fresh replay. Existing paid evidence is not overwritten. These commands address the dated investigator capsule; a clean reviewer checkout without that capsule cannot audit historical raw outcomes merely because a lock file is present.
+
+Before repository model calls, two instrument amendments were recorded: pinned pandas/pytz activated two previously skipped Matplotlib regressions without replacing test identities, and public formatter-method excerpts completed one missing context. Original failed/incomplete instrument evidence is retained. Neither amendment is a model observation or a reference repair.
 
 ## Evidence boundaries
 

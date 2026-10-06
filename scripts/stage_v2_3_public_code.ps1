@@ -5,7 +5,9 @@ $taskRepo = (Resolve-Path -LiteralPath (Split-Path -Parent $PSScriptRoot)).Path
 Push-Location -LiteralPath $taskRepo
 try {
     $taskPaths = @('.gitattributes','.gitignore','REPRODUCE_V2_3.ps1','REPRODUCIBILITY_V2_3.md',
-                   'ConveyorFlow_diagrams_en_working.drawio','scripts/stage_v2_3_public_code.ps1')
+                   'ConveyorFlow_diagrams_en_working.drawio','scripts/stage_v2_3_public_code.ps1',
+                   'scripts/build_ieee_v2_3_progress_with_word.ps1',
+                   'scripts/render_native_word_document.ps1')
     foreach ($taskFolder in @('major_revision_v2_3','major_revision_v2_3/ecological_v1')) {
         $taskPaths += @(Get-ChildItem -LiteralPath $taskFolder -File | Where-Object {
             $_.Extension -in @('.py','.md','.json') -or $_.Name.StartsWith('Dockerfile.')
@@ -19,7 +21,8 @@ try {
         } | ForEach-Object { $taskFolder + '/' + $_.Name })
     }
     $taskPaths += @('major_revision_v2_3/ml_cases/case_manifest.json',
-                    'major_revision_v2_3/ml_cases/quality_gates.json')
+                    'major_revision_v2_3/ml_cases/quality_gates.json',
+                    'major_revision_v2_3/requirements_ml_eval.lock.txt')
     $taskPaths = @($taskPaths | Sort-Object -Unique)
     $taskSuspicious = @()
     foreach ($taskPath in $taskPaths) {

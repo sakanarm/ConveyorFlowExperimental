@@ -12,7 +12,9 @@ param(
                  'EcologicalDecisionCheck', 'EcologicalClaimCheck', 'CodeCheck',
                  'EcologicalMLCalibrationAudit', 'EcologicalMLCalibrationFreeze',
                  'EcologicalMLCalibrationExecute', 'EcologicalMLContinuationFreeze',
-                 'EcologicalMLContinuationExecute')]
+                 'EcologicalMLContinuationExecute', 'EcologicalMLContinuation2Freeze',
+                 'EcologicalMLContinuation2Execute', 'EcologicalRepositoryCalibrationAudit',
+                 'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute')]
     [string]$Stage = 'Check',
     [string]$CaseId = 'ADULT_P1',
     [string]$ModelSlot = 'agent_1',
@@ -64,6 +66,30 @@ try {
         }
         'EcologicalMLCalibrationAudit' {
             Invoke-Python @("$major/ecological_v1/audit_ml_calibration.py")
+        }
+        'EcologicalRepositoryCalibrationAudit' {
+            Invoke-Python @("$major/ecological_v1/audit_repository_calibration.py")
+        }
+        { $_ -in @('EcologicalMLContinuation2Freeze','EcologicalMLContinuation2Execute',
+                   'EcologicalRepositoryCalibrationFreeze','EcologicalRepositoryCalibrationExecute') } {
+            $taskPaid = $Stage.EndsWith('Execute')
+            if ($taskPaid -and (-not $ConfirmPaidRun -or -not $env:MFEC_LITELLM_API_KEY)) {
+                throw 'Process credential and -ConfirmPaidRun are required for billable calls.'
+            }
+            $taskIsML = $Stage.StartsWith('EcologicalMLContinuation2')
+            $taskRunner = if ($taskIsML) { 'continue_ml_calibration_v2.py' } else { 'run_repository_calibration.py' }
+            $taskBridge = if ($taskIsML) { 'wsl_continuation_v2_bridge.py' } else { 'wsl_repository_calibration_bridge.py' }
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0) { throw 'Unable to resolve workspace in WSL.' }
+            $taskEco = "$taskLinuxV2/$major/ecological_v1"
+            if ($taskPaid) {
+                $env:MFEC_LITELLM_API_KEY | & wsl -d Ubuntu -u root -e python3 "$taskEco/$taskBridge" $taskRunner --execute
+            } else {
+                & wsl -d Ubuntu -u root -e env CONVEYORFLOW_CONTAINER_COMMAND=podman `
+                    CONVEYORFLOW_EVALUATOR_LOCK="$taskLinuxV2/$major/ml_eval_image_lock_podman_v1.json" `
+                    python3 "$taskEco/$taskRunner" --freeze
+            }
+            if ($LASTEXITCODE -ne 0) { throw 'Controller stopped; audit evidence before explicit recovery. Do not duplicate paid requests.' }
         }
         { $_ -in @('EcologicalMLCalibrationFreeze','EcologicalMLCalibrationExecute',
                    'EcologicalMLContinuationFreeze','EcologicalMLContinuationExecute') } {

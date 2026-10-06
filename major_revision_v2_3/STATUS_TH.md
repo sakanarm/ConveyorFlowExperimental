@@ -1,5 +1,9 @@
 # ConveyorFlow v2.3 สถานะปิด Major Revision
 
+## ML main live seam draft 6 ตุลาคม 2026 เวลา 23:57 น.
+
+เพิ่ม `ecological_v1/main_live_ml_bundle_v1.py` ให้คัดลอกเฉพาะ public inputs ของ main case ไม่ใช้ trusted predecessor clone และ `main_live_ml_stage_v1.py` สำหรับ one-attempt request marker, provider response/source, Podman verifier, fresh replay และ same-arm artifact origin. ต้องมี separate frozen main lock, Linux/Podman และ explicit paid confirmation; ไม่มี CLI execute. Tests ใช้ fake provider/verifier เพื่อพิสูจน์ success path และ timeout→unresolved/no blind retry. ยังไม่ใช่ paid main หรือ end-to-end sentinel; allocator, retry/late-return, paired accounting และ case references ยังต้องทำ. Calibration ยังรันแยกอยู่
+
 ## Main artifact-chain contract 6 ตุลาคม 2026 เวลา 23:25 น.
 
 เพิ่ม `ecological_v1/main_artifact_chain_v1.py` และ tests เพื่อตรวจ lineage ของ ML main ทุก stage ว่า predecessor มาจาก run/arm/case เดียวกัน, verifier ผ่าน และ source/response/artifact hashes ไม่ถูกเปลี่ยน. Trusted calibration predecessor ที่ไม่มี main origin ถูกปฏิเสธ. เป็น offline contract ที่ยังต้องเชื่อม live adapter/Podman/provider ledger จึงไม่ใช่ผล allocation main. Full local suite ผ่าน 238 tests. รอบ ML calibration ยังรันแยกอยู่

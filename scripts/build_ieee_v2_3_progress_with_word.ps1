@@ -1,5 +1,5 @@
 # Native Microsoft Word authoring. Creates a new progress manuscript; never overwrites v2.2.
-param([string]$OutputName='ConveyorFlow_IEEE_Manuscript_v2_3_Progress_Rev4.docx')
+param([string]$OutputName='ConveyorFlow_IEEE_Manuscript_v2_3_Progress_Rev6.docx')
 Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
 $taskV2=Split-Path -Parent $PSScriptRoot
@@ -12,6 +12,12 @@ if(Test-Path -LiteralPath $taskOutput){throw 'New revision already exists; refus
 $taskMajor=Join-Path $taskV2 'major_revision_v2_3'
 $taskML=Get-Content -LiteralPath (Join-Path $taskMajor 'results/ml_isolated_stage_pilot_v2_final/summary.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $taskRepo=Get-Content -LiteralPath (Join-Path $taskMajor 'results/repository_first_attempt_v1_audit_20261005.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$taskNewRepoPath=Join-Path $taskMajor 'results/ecological_repository_calibration_v1_final/summary.json'
+$taskNewRepo=$null
+if(Test-Path -LiteralPath $taskNewRepoPath){
+    $taskNewRepo=Get-Content -LiteralPath $taskNewRepoPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    if($taskNewRepo.status -ne 'completed_localized_repository_calibration' -or $taskNewRepo.total.planned_and_completed -ne 18){throw 'New repository result capsule is incomplete'}
+}
 if($taskML.completed_pairs -ne 36 -or -not $taskRepo.complete -or $taskRepo.completed_pairs -ne 18){throw 'Completed evidence capsules required'}
 $taskSourceHash=(Get-FileHash -LiteralPath $taskSource -Algorithm SHA256).Hash
 $taskFigureHash=(Get-FileHash -LiteralPath $taskFigures -Algorithm SHA256).Hash
@@ -80,6 +86,8 @@ try{
     $taskTitle.Style=$taskDoc.Styles.Item(-63)
     $taskDoc.Styles.Item(-63).ParagraphFormat.Borders.Enable=0
     $taskTitle.ParagraphFormat.Borders.Enable=0;$taskTitle.Font.Color=0
+    $taskTitle.Font.Name='Times New Roman';$taskTitle.Font.Size=18
+    $taskTitle.ParagraphFormat.Alignment=1
     Replace-Paragraph $taskDoc 'Sakan Punyanon' 'Sakan Punyanon, Chaiyaporn Khemapatapan, and Aomduan Jeamaon'
     Replace-Paragraph $taskDoc 'Affiliation and corresponding-author' 'College of Innovative Technology and Engineering, Dhurakij Pundit University, Thailand. Corresponding author: Sakan Punyanon (68140010@dpu.ac.th).'
     [void](Insert-Paragraph $taskDoc 'I. INTRODUCTION' 'Research progress version 2.3, 6 October 2026. Completed supporting execution studies are reported separately. New ecological calibration is running; paired live allocation main and independent human difficulty validation remain incomplete. This draft is not submission-ready.')
@@ -100,6 +108,13 @@ try{
     Replace-Paragraph $taskDoc 'The scientific contribution is therefore not' 'The scientific contribution is the allocation mechanism, not the policy count. Agents differ in capability and resource cost, so each idle agent chooses suitable work from the READY belt. Capability-task fit guides its bid. In the main simulator, soft stand-down adds a decaying priority penalty when an agent is overqualified; it does not require that agent to refuse every easy task. Aging relaxes the penalty. The experiments test the resulting cost, throughput, time, utilization and failure trade-offs, not universal dominance.'
     Replace-Paragraph $taskDoc 'Construct validity is limited by simulated' 'Construct validity is limited by simulated success, time, token, assessment and cost functions. Simulation Ability Ranks are ordinal scenario profiles, not statistically estimated capabilities of current provider models. Public corpora shape the workloads, but a simulated task is not equivalent to building an executable ML pipeline or repairing a repository. The original 60-case live study uses ML microtasks and repair surrogates; CodeXGLUE pairs are not executable repository repairs. Supporting executable studies are therefore reported separately.'
     Replace-Paragraph $taskDoc 'The live validators establish task-specific' 'The original live validators establish narrow functional success for microtasks and repair surrogates. They do not establish complete ML-build or repository-repair ability. The new isolated-stage and localized-repair verifiers narrow that gap, but public tests, explicit localization and trusted predecessors limit generalization. Provider, generation, execution and unresolved outcomes remain distinct. No stage probe is counted as a completed pipeline or as evidence of an allocation-policy advantage.'
+    $taskLiveDescription=Find-Paragraph $taskDoc 'The Real-LLM tier freezes 60'
+    Replace-Paragraph $taskDoc 'The Real-LLM tier freezes 60' ($taskLiveDescription.Text.Trim().Replace('60 executable cases','60 ML microtasks and repair-surrogate cases'))
+    $taskLiveStudy=Find-Paragraph $taskDoc 'The Real-LLM study used the selected'
+    Replace-Paragraph $taskDoc 'The Real-LLM study used the selected' ($taskLiveStudy.Text.Trim().Replace('60 executable cases','60 ML microtasks and repair-surrogate cases'))
+    $taskCostDescription=Find-Paragraph $taskDoc 'For each valid run, completion'
+    Replace-Paragraph $taskDoc 'For each valid run, completion' ($taskCostDescription.Text.Trim().Replace('cost is computed from recorded input/output tokens and the frozen observed price metadata','cost is summed from the recorded provider response-cost values'))
+    Replace-Paragraph $taskDoc 'Equation (13) replaces' 'Equation (13) replaces simulation ticks with measured monotonic wall time T. Each call_cost is the recorded provider response-cost value when supplied; token counts and declared rates are used only when that alternative is configured and known. Creal includes recorded calls on failed attempts. The currency of the MFEC response-cost values is unconfirmed. The extension provider-gap exclusions affect only timing-based quantities, not completion or recorded cost.'
     $taskExecution=Find-Paragraph $taskDoc 'Every paired policy run uses'
     Replace-Paragraph $taskDoc 'Every paired policy run uses' ($taskExecution.Text.Trim().Replace('churn schedule','fixed agent pool'))
     $abstract=Find-Paragraph $taskDoc 'Abstract';$text=$abstract.Text.Trim()
@@ -118,6 +133,15 @@ try{
     [void](Insert-Paragraph $taskDoc 'VI. RESULTS' ((Find-Paragraph $taskFigDoc 'Probability parameter provenance.').Text.Trim()))
     [void](Insert-Paragraph $taskDoc 'VI. RESULTS' 'Figure 1 describes the original simulation and microtask allocation engines. The new container-based ML-stage and repository studies use supporting execution harnesses, not a shared executable core inherited from that drawing. The paired live allocation backend still needs end-to-end integration; completed supporting verifier observations cannot be substituted for that main experiment.')
     [void](Insert-Paragraph $taskDoc 'VI. RESULTS' 'The new repository calibration freezes six different cases from an outcome-blind environment pool, giving 18 first-attempt pairs across three deployments. Each case has ten fixed, case-specific public regression identities. Before model calls, all six candidate environments passed source hashes, no-op reproduction and an import-sentinel test. Matplotlib case 10 needed pinned pandas and pytz dependencies to activate two skipped tests; the same ten test identities then passed both buggy and fixed baselines. A separate context amendment added public formatter-method excerpts before calls. Neither instrument amendment is a model observation, and no gold patch was used to select editable source.')
+    [void](Insert-Paragraph $taskDoc 'VI. RESULTS' 'Cost units are kept separate from billing claims. The original MFEC microtask study and new executable studies use the reported x-litellm-response-cost values. Their currency has not been independently confirmed, so live-study cost figures are provider-reported units, not confirmed US dollars or invoiced payments. Simulation costs remain the declared scenario resource units. Relative contrasts retain their original numeric values; they do not establish a monetary saving in a confirmed currency.')
+    [void](Insert-Paragraph $taskDoc 'VI. RESULTS' 'The ecological ML sandbox also imposes a frozen 256 MiB file-size limit. CPU, memory and execution time were stated in the prompt, but this file limit was not explicitly stated. One Beijing train attempt reached that limit while serializing its estimator and remains a stage-contract failure. Such failures measure operational fulfillment under this artifact budget, not intrinsic regression ability. The running batch is unchanged; future main prompts must disclose all resource limits before outcomes. Selective reruns or investigator code repairs are not used to promote failed observations.')
+    # Historical numeric values are retained, but unsupported dollar labels
+    # must not survive in the body or tables. Figure images are untouched.
+    $taskDollar=$taskDoc.Content.Duplicate
+    $taskDollar.Find.ClearFormatting();$taskDollar.Find.Replacement.ClearFormatting()
+    $taskDollar.Find.Text='$';$taskDollar.Find.Replacement.Text='';$taskDollar.Find.Wrap=0
+    $taskDollar.Find.MatchWildcards=$false
+    [void]$taskDollar.Find.Execute('$',$false,$false,$false,$false,$false,$true,0,$false,'',2)
 
     [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' 'J. Supporting Executable ML Results' -3)
     [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' 'The isolated-stage pilot completed all 36 pairs: 28 verified, six generation or stage-contract failures, and two unresolved provider requests. Table IX reports each deployment. A verified observation passed its frozen stage contract and fresh replay. Two corpora, three reused specifications and dependent stages limit inference; these counts do not rank general model ability or compare allocation policies.')
@@ -131,13 +155,24 @@ try{
     foreach($m in $taskRepo.cells){$rows+=,@($m.model_alias,[string]$m.planned_pairs,[string]$m.verified,[string]$m.unresolved)}
     Insert-Table $taskDoc 'TABLE X. FIRST ATTEMPT LOCALIZED REPAIRS' $rows
     [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' 'The 17 returned responses reported 223,970 input tokens and 223,724 output tokens, with 0.199841350 provider-reported cost units. One unresolved request has unknown billing. These results show bounded executable repairs under this contract, not autonomous repository-wide repair or an allocation-policy advantage. The new calibration started on 6 October 2026; it is still running in this progress revision. No partial calibration counts are treated as a final result.')
+    if($null -ne $taskNewRepo){
+        [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' 'L. Completed Repository Calibration' -3)
+        $taskTotal=$taskNewRepo.total
+        [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' ("The separate ecological repository calibration completed all 18 first-attempt pairs on six different cases: $($taskTotal.verified) verified, $($taskTotal.model_failed) model failures and $($taskTotal.unresolved) unresolved outcomes. Table XI reports deployment counts. The cases were selected from an outcome-blind environment pool, not from model successes, and are not pooled with the supporting batch in Table X."))
+        $rows=@();$rows+=,@('Deployment','N','Verified','Unresolved')
+        foreach($m in $taskNewRepo.models){$rows+=,@($m.alias,[string]$m.planned_and_completed,[string]$m.verified,[string]$m.unresolved)}
+        Insert-Table $taskDoc 'TABLE XI. ECOLOGICAL REPOSITORY CALIBRATION' $rows
+        $taskAccounts=$taskNewRepo.accounting
+        [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' ("Returned responses recorded $($taskAccounts.observed_input_tokens) input tokens, $($taskAccounts.observed_output_tokens) output tokens and $([string]::Format([Globalization.CultureInfo]::InvariantCulture,'{0:F9}',$taskAccounts.observed_provider_cost_units)) provider cost units. Billing remains unknown for $($taskAccounts.provider_unresolved_billable_outcomes) provider-unresolved requests. The operational denominator retains every planned pair, including failures and unresolved requests. Source files were investigator-localized, and verification used ten case-specific public regressions and fresh replay. With two cases per repository and deployment, nominal Wilson intervals are descriptive binomial references, not uncertainty estimates for a general repository population. The report assigns no Ability Ranks and fits no difficulty-specific success curve. ML calibration and paired live allocation main remain incomplete."))
+    }
     [void](Insert-Paragraph $taskDoc 'REFERENCES' 'AUTHOR CONTRIBUTIONS' -3)
     [void](Insert-Paragraph $taskDoc 'REFERENCES' 'Sakan Punyanon: investigation, software, validation, formal analysis, visualization and original draft. Chaiyaporn Khemapatapan: conceptualization, methodology and supervision. Aomduan Jeamaon: conceptualization, experimental design, supervision and manuscript review. The authors should confirm the final contribution wording before submission.')
     [void](Insert-Paragraph $taskDoc 'REFERENCES' 'FUNDING AND CONFLICTS OF INTEREST' -3)
     [void](Insert-Paragraph $taskDoc 'REFERENCES' 'The research received no external research funding and was self-funded by the first author. Dhurakij Pundit University supports the article processing charges. The authors declare no conflicts of interest.')
-    [void](Insert-Paragraph $taskDoc 'REFERENCES' 'Code and editable diagrams are available at https://github.com/sakanarm/ConveyorFlowExperimental. API credentials, raw provider responses, heavy data and model artifacts, and working Office drafts are not committed. The fresh public code export passed 197 tests, with four explicitly skipped integration checks requiring prepared data or the external benchmark. Local tests with those inputs passed 201. Historical audits additionally require dated investigator capsules.')
+    [void](Insert-Paragraph $taskDoc 'REFERENCES' 'Code and editable diagrams are available at https://github.com/sakanarm/ConveyorFlowExperimental. API credentials, raw provider responses, heavy data and model artifacts, and working Office drafts are not committed. The reproducibility guide records dated code-test counts and integration checks requiring prepared data or the external benchmark. Code tests do not constitute live-model results. Historical audits additionally require dated investigator capsules.')
     Replace-Paragraph $taskDoc 'The v2 research package contains' 'The public repository provides experimental source, frozen configurations, public-data manifests, annotation protocols, analysis utilities, editable diagrams and the v2.3 code/contract checks. Detailed dated provider and execution capsules are retained by the investigators; raw responses and heavy artifacts are not all committed. Historical hash audits require those capsules, whereas a new reviewer run records its own provider date, image identity and outputs. Upstream datasets and benchmarks remain subject to their licenses. Provider aliases and prices are observed metadata, not independently verified immutable model lineage. An archival DOI will be added only after a release exists.'
-    if($taskDoc.InlineShapes.Count -ne 15 -or $taskDoc.OMaths.Count -ne 13 -or $taskDoc.Tables.Count -ne 10){throw 'Figure/equation/table preservation failed'}
+    $taskExpectedTables=if($null -ne $taskNewRepo){11}else{10}
+    if($taskDoc.InlineShapes.Count -ne 15 -or $taskDoc.OMaths.Count -ne 13 -or $taskDoc.Tables.Count -ne $taskExpectedTables){throw 'Figure/equation/table preservation failed'}
     # Keep every figure with its caption; no half-caption on the next page.
     for($n=1;$n -le 15;$n++){
         $taskCaption=Find-Paragraph $taskDoc "Fig. $n."
@@ -146,11 +181,12 @@ try{
         $taskPicture.Range.ParagraphFormat.KeepWithNext=-1
         if($n -eq 1 -and $taskPicture.Height -gt 290){$taskPicture.LockAspectRatio=-1;$taskPicture.Height=290}
     }
-    # A continuous two-column section can balance separate picture/caption
-    # paragraphs into different columns despite KeepWithNext. Keep Fig. 6 in
-    # one paragraph with a manual line break; do not remove section markers.
+    # This isolated figure section previously balanced picture/caption into
+    # opposite columns. Give the figure its own full-width section and keep
+    # the image/caption together without deleting either section boundary.
     $taskCaption=Find-Paragraph $taskDoc 'Fig. 6.'
     $taskPicture=Nearest-Figure $taskDoc $taskCaption
+    $taskPicture.Range.Sections.Item(1).PageSetup.TextColumns.SetCount(1)
     $taskBreak=$taskPicture.Range.Paragraphs.Item(1).Range.End-1
     if($taskCaption.Start -ne $taskBreak+1){throw 'Fig. 6 caption adjacency changed'}
     $taskDoc.Range($taskBreak,$taskBreak+1).Text=[string][char]11
@@ -194,7 +230,7 @@ try{
     if((Get-FileHash -LiteralPath $taskSource -Algorithm SHA256).Hash -ne $taskSourceHash -or
        (Get-FileHash -LiteralPath $taskFigures -Algorithm SHA256).Hash -ne $taskFigureHash){throw 'Source manuscript changed'}
     [PSCustomObject]@{output=$taskOutput;authoring='Microsoft Word';source_sha256=$taskSourceHash;
-        figures=15;native_equations=13;tables=10;pages=$taskPageCount;
+        figures=15;native_equations=13;tables=$taskExpectedTables;pages=$taskPageCount;
         ecological_calibration='running_not_final';allocation_main='not_completed';visual_QA_required=$true} | ConvertTo-Json
 }finally{
     if($null -ne $taskFigDoc){$taskFigDoc.Close($false);[void][Runtime.InteropServices.Marshal]::ReleaseComObject($taskFigDoc)}

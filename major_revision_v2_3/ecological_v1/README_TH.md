@@ -1,5 +1,13 @@
 # Ecological v1 ภายใน ConveyorFlow v2.3
 
+## ความคืบหน้า 6 ตุลาคม 2026 เวลา 15:48 น.
+
+ทั้ง ML continuation 2 และ repository calibration กำลังเรียก MFEC จริง ไม่รออนุมัติงบแล้ว. ML execution population มี 288 first-attempt pairs; repository มี 18 pairs จากหกเคสใหม่/สาม repositories. Snapshot เวลา 15:44 น.: ML จบ 42 คู่ (33 VERIFIED), repository จบ 14 คู่ (6 VERIFIED). ตัวเลขนี้ยังเป็น partial ไม่ใช่ผลสุดท้าย และไม่ใช่ allocation main.
+
+ตรวจสดด้วย `EcologicalMLCalibrationAudit` และ `EcologicalRepositoryCalibrationAudit`. ตัวรันไม่ส่งคู่ที่มี request marker แล้วซ้ำ. Provider disconnect, output ที่จบไม่สมบูรณ์, test failure และ replay-unresolved เก็บเป็นคนละประเภท. Candidate execution ใช้ offline Podman containers. ก่อน repository calls มี dependency/context amendments แยกพร้อมเดิมที่ไม่ผ่าน; ไม่เปลี่ยน test identities เพื่อให้ผลโมเดลดีขึ้น.
+
+โค้ด continuation/calibration ขึ้น Git แล้วที่ `912c63a`. หลังครบ 18 คู่ ใช้ `EcologicalRepositoryCalibrationFinalize` พร้อม NEW output directory เพื่อสร้าง aggregate capsule; ห้าม finalise partial หรือทับรอบเก่า. IEEE Word Progress Rev5 มี 15 figures, 13 native equations และ supporting-results tables; paired live main และ expert validation ยังไม่เสร็จ. รายละเอียดด้านล่างเป็นประวัติ preparation/launch ไม่ใช่สถานะปัจจุบัน.
+
 ## Live execution เริ่มแล้ว — 6 ตุลาคม 2026
 
 ผู้ใช้อนุญาตให้ใช้ API เท่าที่จำเป็นโดยไม่จำกัดงบแล้ว เวลา 14:05 น. เริ่ม ML calibration ตาม execution lock แยกจาก preparation lock: 24 specifications × 4 stages × 3 deployments = 288 first-attempt calls. หลัง 10 คู่ ตัวรันเดิมหยุดจาก GLM RemoteDisconnected; เก็บ VERIFIED 7, contract failures 2 และ provider-unresolved 1 ไว้ทั้งหมด เวลา 14:22 น. เริ่ม continuation ที่ตรึง 278 **never-started pairs** ไม่ใช่ retry คู่ที่มี request แล้ว ดู `ML_CONTINUATION_AMENDMENT_TH.md` และ `BUDGET_AND_EXECUTION_AMENDMENT_TH.md`

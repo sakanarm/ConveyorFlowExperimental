@@ -11,7 +11,7 @@ python -m pytest tests -q
 ./REPRODUCE_V2_3.ps1 -Stage CodeCheck
 ```
 
-On 6 October 2026, the local suite passed 201 pytest tests (169 unittest cases plus 32 pytest-style tests). A fresh public Git-index export passed 197 tests and explicitly skipped four integration checks that require public-data/reference preparation or the separately fetched BugsInPy reference patch. The six new controller-guard tests passed in both runs. Skipped checks are not reported as passed. Fixture guard checks remain active without the gold patch. Tests do not constitute live-LLM results. `Check` additionally audits *locally available* historical result capsules and may require investigator artifacts that are deliberately not committed. Do not infer that missing historical raw ledgers were regenerated.
+On 6 October 2026, the local suite passed 207 pytest tests (175 unittest cases plus 32 pytest-style tests). A fresh public Git-index export passed 203 tests and explicitly skipped four integration checks that require public-data/reference preparation or the separately fetched BugsInPy reference patch. Controller and final-analysis guards passed in both runs. Skipped checks are not reported as passed. Fixture guard checks remain active without the gold patch. Tests do not constitute live-LLM results. `Check` additionally audits *locally available* historical result capsules and may require investigator artifacts that are deliberately not committed. Do not infer that missing historical raw ledgers were regenerated.
 
 Fixtures can be rerun into **new** destinations. Never overwrite a frozen run:
 
@@ -41,6 +41,14 @@ The above is read-only and makes no API calls. `EcologicalMLCalibrationFreeze` a
 `EcologicalMLContinuation2Freeze/Execute` preserves all previously started pairs and requires the recorded trusted backend-health gate. A cleaned workload timeout stays unresolved; another trusted health probe precedes further never-started calls. Launch/auth/mapping/hash failures still stop execution. `EcologicalRepositoryCalibrationFreeze/Execute` uses six different environment-qualified cases, one call per deployment, guarded exact edits, ten case-specific public regression identities, and fresh replay. Existing paid evidence is not overwritten. These commands address the dated investigator capsule; a clean reviewer checkout without that capsule cannot audit historical raw outcomes merely because a lock file is present.
 
 Before repository model calls, two instrument amendments were recorded: pinned pandas/pytz activated two previously skipped Matplotlib regressions without replacing test identities, and public formatter-method excerpts completed one missing context. Original failed/incomplete instrument evidence is retained. Neither amendment is a model observation or a reference repair.
+
+After all 18 repository pairs and their ledger appends finish, seal an aggregate report into a **new** directory:
+
+```powershell
+./REPRODUCE_V2_3.ps1 -Stage EcologicalRepositoryCalibrationFinalize -OutputPath major_revision_v2_3/results/ecological_repository_calibration_v1_final
+```
+
+This command rejects incomplete batches and existing destinations. It checks the final controller marker and evidence identity, retains unresolved outcomes, and records analysis/evidence hashes. It makes no API calls, executes no candidate code, and assigns no Ability Ranks. Per-repository cells contain only two cases per deployment; nominal Wilson intervals do not account for repository dependence and are not population-wide confidence statements.
 
 ## Evidence boundaries
 

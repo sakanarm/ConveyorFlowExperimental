@@ -14,7 +14,8 @@ param(
                  'EcologicalMLCalibrationExecute', 'EcologicalMLContinuationFreeze',
                  'EcologicalMLContinuationExecute', 'EcologicalMLContinuation2Freeze',
                  'EcologicalMLContinuation2Execute', 'EcologicalRepositoryCalibrationAudit',
-                 'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute')]
+                 'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
+                 'EcologicalRepositoryCalibrationFinalize')]
     [string]$Stage = 'Check',
     [string]$CaseId = 'ADULT_P1',
     [string]$ModelSlot = 'agent_1',
@@ -69,6 +70,10 @@ try {
         }
         'EcologicalRepositoryCalibrationAudit' {
             Invoke-Python @("$major/ecological_v1/audit_repository_calibration.py")
+        }
+        'EcologicalRepositoryCalibrationFinalize' {
+            if (-not $OutputPath) { throw 'Specify a new result directory with -OutputPath.' }
+            Invoke-Python @("$major/ecological_v1/finalize_repository_calibration.py", '--output', $OutputPath)
         }
         { $_ -in @('EcologicalMLContinuation2Freeze','EcologicalMLContinuation2Execute',
                    'EcologicalRepositoryCalibrationFreeze','EcologicalRepositoryCalibrationExecute') } {

@@ -1,0 +1,11 @@
+{
+  "status": "revised_output_contract_sentinel_not_main",
+  "case_id": "pandas_88",
+  "model_slots": ["agent_1", "agent_2", "agent_3"],
+  "max_attempts_per_job": 1,
+  "max_provider_calls": 3,
+  "generation": {"temperature": 0, "max_output_tokens": 32768, "timeout_seconds": 720},
+  "execution_timeout_seconds": 180,
+  "purpose": "Check whether all three model aliases can emit executable exact-text edits without asking them to calculate diff hunk counts. Output cap is doubled equally for all aliases. This sentinel reuses a prior feasibility case; it is not held-out calibration, a new independent benchmark sample or an allocation comparison.",
+  "rule": "One call per alias, no automatic retries or manual source repairs. Empty/non-stop/schema/apply/visible/regression failures are separate. Same frozen images, source allowlist and tests. Do not escalate to a full batch until every sentinel outcome has been audited. Previous v1 and offline decoder outcomes remain unchanged."
+}

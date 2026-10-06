@@ -1,0 +1,14 @@
+{
+  "status": "frozen_before_serial_build_preflight",
+  "source_ledger": "results/bugsinpy_prefix_extension_v4/combined_prefix_ledger.jsonl",
+  "source_config": "config_bugsinpy_preflight_v2.json",
+  "expected_prefix_length": 7,
+  "candidate_index": 1,
+  "artifact_prefix": "bugsinpy_serial_build_recovery_v6",
+  "llm_calls": 0,
+  "overrides": {
+    "compile_flags": "-O0 -g0",
+    "project_build": "python setup.py build_ext --inplace -j 1"
+  },
+  "reason": "Both optimized and unoptimized parallel builds failed to import _path due to a contour-specific ARRAY_API symbol. Extension builds share object-file paths, so test serial rather than parallel compilation as a build-race hypothesis. Relative to the original v2 profile, only -j 2 becomes -j 1. Do not change repository source, commits, relevant tests or gold patches. Preserve all previous failed profiles and the Python 3.7 mirror exclusion. This environment-only recovery does not count as an LLM repair or a new independent bug case."
+}

@@ -1,0 +1,7 @@
+# Trusted evaluator base only. No task commits, patches or LLM source.
+FROM docker.io/library/python:3.7.17-slim-bullseye@sha256:603879aeff06df23f0d392a19f7ce02aa85e14e6b4d25fd9647b116e0cb93467
+# The generic Debian security CDN served an index whose package URLs were 404.
+# Use the official security endpoint over HTTPS; retain APT signature checking.
+RUN sed -i 's|http://deb.debian.org/debian-security|https://security.debian.org/debian-security|g' /etc/apt/sources.list \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends git build-essential libfreetype6-dev libpng-dev pkg-config

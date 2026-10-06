@@ -8,8 +8,8 @@ from pathlib import Path
 import pytest
 
 
-ROOT = Path(__file__).resolve().parents[2]
-PILOT = ROOT / "v2" / "real_llm_pilot"
+ROOT = Path(__file__).resolve().parents[1]
+PILOT = ROOT / "real_llm_pilot"
 sys.path.insert(0, str(PILOT))
 
 

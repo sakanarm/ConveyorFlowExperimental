@@ -1,0 +1,196 @@
+{
+  "status": "frozen_before_isolated_stage_provider_calls",
+  "created_at_utc": "2026-10-05T10:49:42.210860+00:00",
+  "dependencies": {
+    "run_ml_isolated_stage_pilot_v1.py": "5a73b7c9e226fe4df66fcddcb4aabfd743a971732d0e29f25781e66bfbe58f61",
+    "wsl_ml_stage_probe_bridge_v1.py": "7cd8fd49aa1a7756a02d9398c1d607d7e7fd4b4d312ac1c4cd6f0ee88ab168b6",
+    "prepare_ml_isolated_stage_pilot_v1.py": "fd42cd1f9fba5570f0229f1514131ef5f273a793a1162e5e9e4c93464a64441b",
+    "ML_ISOLATED_STAGE_PILOT_V1_PROTOCOL_TH.md": "d5402bc405c571503ff931b0954513eea05e5df098b306e76e67b23b3237c2de",
+    "ml_stage_probe_sandbox_v1.py": "257bee693f716fa64545cb5f919de57503c56ff8feaaa60e7cc92348aed00aab",
+    "ml_stage_probe_verifier_v1.py": "9248987010a620c61ffa995b070dab3dadc357b386861ff66ec81b18a6979ace",
+    "run_ml_dag_llm_feasibility.py": "1e43fb274caa400ddd0aa596e530d824eea189765b1c3b8d176d6d13382c2e3a",
+    "run_ml_dag_stage.py": "8a16d7b20237327eb54e0b5e252e27b9e1c947fed95ef0535179a1bb3e9f8089",
+    "run_ml_container.py": "f8be5dc1b39eb29124ad6c9aa3b315afaf12d1b1fe44913e09b2ad50789d01f8",
+    "container_cli.py": "196c22ca95d7d5a7c6d26c1c3b33b3ed0608b3737268370b3dd9bb8027763680",
+    "materialize_ml_bundle.py": "15eaf116ed437fb098ab5f909647b65eca5235687b9543ca3a4c7aea427f91fb",
+    "validate_ml_outputs.py": "4efd1c40efaae42360e3b62d97d60532da56586c29149ff10bedf62d2689df57",
+    "reference_ml_gates.py": "a32e7935e67d7b74738a9a76869039ea1c16c061001d093ea7087e49f821e32e",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "provider_adapter": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "preparation": "47ed2437e99868c9e5cd86e9b0678633eafe9f5322428636a6f1b61a26c60939",
+    "evaluator": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b",
+    "case_manifest": "20cd2a67125a987aabd0b348c8b3b96002b33a0d57629bc5752f3232030a7875",
+    "quality_gates": "1598ae92b7f490b9d095dd9aaabba9278df51f4afa03f686cab9b7659ca137dc",
+    "run_ml_isolated_stage_pilot_v2.py": "66911da4f32d867e9e979e97012e924e03d85d89cef9b62a8ed797aa77c504e0",
+    "wsl_ml_stage_probe_bridge_v2.py": "bf21ff03b9cc835f180f592676a53169c18274d63ac18daeeeeea87565433175",
+    "ML_ISOLATED_STAGE_PILOT_V2_PROTOCOL_TH.md": "9ba589fcea57fa143bccedfe86176353badb889e96ac06a23c919616d00cd03e",
+    "legacy_exposure_inventory": "23ac0ffde82699335f5942aaa9c658f40b9d9092cbb923079e13c4f09562cfdf",
+    "preserved_unexecuted_v1_lock": "9aae36fa005db6d48fd803c23f3fdf5625b1f086c4a25dc615ee12837d2685b2"
+  },
+  "probes": [
+    {
+      "probe_id": "BEIJING_P1_package",
+      "case_id": "BEIJING_P1",
+      "stage": "package",
+      "corpus": "beijing",
+      "prompt_sha256": "d9dc325f9786481f118bd53f2d774ad629de15c48799437b3d36816025ff0c23"
+    },
+    {
+      "probe_id": "ADULT_P1_package",
+      "case_id": "ADULT_P1",
+      "stage": "package",
+      "corpus": "adult",
+      "prompt_sha256": "b383768ee63e343d9e572a1fcd44cb58b742acfcfb26d6c0c2ed714cc849a178"
+    },
+    {
+      "probe_id": "ADULT_P2_train",
+      "case_id": "ADULT_P2",
+      "stage": "train",
+      "corpus": "adult",
+      "prompt_sha256": "e639625a4c3d9a7ae80045a1b6937db338bad319a0846569ea1eebe283a57c2b"
+    },
+    {
+      "probe_id": "BEIJING_P1_ingest",
+      "case_id": "BEIJING_P1",
+      "stage": "ingest",
+      "corpus": "beijing",
+      "prompt_sha256": "ef0a34e6db28255154dd7c935e955e61132109851fb9ef103df23c9db505171e"
+    },
+    {
+      "probe_id": "ADULT_P2_package",
+      "case_id": "ADULT_P2",
+      "stage": "package",
+      "corpus": "adult",
+      "prompt_sha256": "22328e8f2404e2c8b2687e18864da35f471af7153c147bf839efd7f91b21b0cd"
+    },
+    {
+      "probe_id": "BEIJING_P1_train",
+      "case_id": "BEIJING_P1",
+      "stage": "train",
+      "corpus": "beijing",
+      "prompt_sha256": "7c4c8ab3e5c648f195915783f5520d548e09743efb923ad27e6103f0e252626c"
+    },
+    {
+      "probe_id": "ADULT_P2_ingest",
+      "case_id": "ADULT_P2",
+      "stage": "ingest",
+      "corpus": "adult",
+      "prompt_sha256": "c85fef701924cff38391de03157fe40a4f761b4535fc79193aad98447c7ce06e"
+    },
+    {
+      "probe_id": "BEIJING_P1_preprocess",
+      "case_id": "BEIJING_P1",
+      "stage": "preprocess",
+      "corpus": "beijing",
+      "prompt_sha256": "830ada1d3b83e301214277762a1c252d0e9fd4a339a06b6fd4c961a958b5334a"
+    },
+    {
+      "probe_id": "ADULT_P1_ingest",
+      "case_id": "ADULT_P1",
+      "stage": "ingest",
+      "corpus": "adult",
+      "prompt_sha256": "557f2644c601ca6916545948a4107137df4f4eb04d5f33be979a451fc08a295c"
+    },
+    {
+      "probe_id": "ADULT_P1_train",
+      "case_id": "ADULT_P1",
+      "stage": "train",
+      "corpus": "adult",
+      "prompt_sha256": "448644ecf261f3ff9d9e29f0b7c5f8b1b03a5e8fc420c4b3b547df076ad71f5e"
+    },
+    {
+      "probe_id": "ADULT_P2_preprocess",
+      "case_id": "ADULT_P2",
+      "stage": "preprocess",
+      "corpus": "adult",
+      "prompt_sha256": "98ab7b3639aa0db01246d603bf9ad4732a31e9902aa465d606743ed7b1c65fe6"
+    },
+    {
+      "probe_id": "ADULT_P1_preprocess",
+      "case_id": "ADULT_P1",
+      "stage": "preprocess",
+      "corpus": "adult",
+      "prompt_sha256": "8eef0eefafb0fcceb0516e47047c03a861ba8e31cfd9ad1ee8f9f4b26dbfec3b"
+    }
+  ],
+  "model_slots": [
+    "agent_1",
+    "agent_2",
+    "agent_3"
+  ],
+  "models": [
+    {
+      "slot": "agent_1",
+      "provider": "mfec_litellm",
+      "model_id": "tencent-hy3",
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "ability_profile": {
+        "ml_build": 3,
+        "fix_bug": 1
+      },
+      "role": "ML-advanced / Fix-Bug-basic specialist",
+      "screen_mean_latency_seconds": 11.060728453332802,
+      "screen_total_input_tokens": 3591,
+      "screen_total_output_tokens": 34914,
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null,
+      "api_key_env": "MFEC_LITELLM_API_KEY",
+      "cost_accounting_mode": "provider_response_header",
+      "session_id": "conveyorflow-v2-main-agent_1"
+    },
+    {
+      "slot": "agent_2",
+      "provider": "mfec_litellm",
+      "model_id": "gpt-5-mini",
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "ability_profile": {
+        "ml_build": 2,
+        "fix_bug": 3
+      },
+      "role": "ML-intermediate / Fix-Bug-advanced specialist",
+      "screen_mean_latency_seconds": 2.01235096666666,
+      "screen_total_input_tokens": 3495,
+      "screen_total_output_tokens": 1157,
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null,
+      "api_key_env": "MFEC_LITELLM_API_KEY",
+      "cost_accounting_mode": "provider_response_header",
+      "session_id": "conveyorflow-v2-main-agent_2"
+    },
+    {
+      "slot": "agent_3",
+      "provider": "mfec_litellm",
+      "model_id": "glm-5.3-flash",
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "ability_profile": {
+        "ml_build": 3,
+        "fix_bug": 3
+      },
+      "role": "advanced generalist",
+      "screen_mean_latency_seconds": 8.987742030000664,
+      "screen_total_input_tokens": 3588,
+      "screen_total_output_tokens": 9742,
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null,
+      "api_key_env": "MFEC_LITELLM_API_KEY",
+      "cost_accounting_mode": "provider_response_header",
+      "session_id": "conveyorflow-v2-main-agent_3"
+    }
+  ],
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 720
+  },
+  "max_provider_calls": 36,
+  "max_attempts_per_pair": 1,
+  "container_preflight": {
+    "docker_server_version": "3.4.4",
+    "container_runtime": "podman",
+    "image_id": "sha256:d1dd86e9ef7bb249f3468e90214f3ceb3a9e8ff1ed84b0b7e1926458f423a37e",
+    "evaluator_lock_sha256": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b"
+  },
+  "not_probability_fit": true,
+  "not_allocation_comparison": true,
+  "source_corpora": 2
+}

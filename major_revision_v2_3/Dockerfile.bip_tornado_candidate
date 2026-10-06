@@ -1,0 +1,18 @@
+# Candidate-facing image for a single BugsInPy feasibility case.
+# The final stage contains buggy source and the fixed-version test only;
+# no .git history, fixed source, reference patch, or hidden validator.
+FROM conveyorflow-bip-tornado-smoke:v2.3 AS source
+USER root
+RUN mkdir /candidate \
+    && git -C /src archive 34c43f4775971ab9b2b8ed43356f218add6387b2 | tar -x -C /candidate \
+    && git -C /src show 5d4a9ab26372efd255bbb29fde55c41395ed17b1:tornado/test/websocket_test.py \
+       > /candidate/tornado/test/websocket_test.py \
+    && test ! -e /candidate/.git
+
+FROM python:3.8.20-slim-bookworm@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f
+RUN apt-get update && apt-get install -y --no-install-recommends patch \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=source --chown=65534:65534 /candidate /candidate
+ENV PYTHONDONTWRITEBYTECODE=1
+USER 65534:65534
+WORKDIR /candidate

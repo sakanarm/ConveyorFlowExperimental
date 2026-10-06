@@ -5,8 +5,8 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
-MODULE_PATH = ROOT / "v2" / "real_llm_pilot" / "run_mfec_calibration.py"
+ROOT = Path(__file__).resolve().parents[1]
+MODULE_PATH = ROOT / "real_llm_pilot" / "run_mfec_calibration.py"
 sys.path.insert(0, str(MODULE_PATH.parent))
 SPEC = importlib.util.spec_from_file_location("run_mfec_calibration", MODULE_PATH)
 assert SPEC is not None and SPEC.loader is not None
@@ -14,7 +14,7 @@ MODULE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MODULE)
 
 FIX_SPEC = importlib.util.spec_from_file_location(
-    "run_mfec_fixbug_v2", ROOT / "v2" / "real_llm_pilot" / "run_mfec_fixbug_v2.py"
+    "run_mfec_fixbug_v2", ROOT / "real_llm_pilot" / "run_mfec_fixbug_v2.py"
 )
 assert FIX_SPEC is not None and FIX_SPEC.loader is not None
 FIX_MODULE = importlib.util.module_from_spec(FIX_SPEC)

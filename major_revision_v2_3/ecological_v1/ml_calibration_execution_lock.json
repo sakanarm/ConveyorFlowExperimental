@@ -1,0 +1,600 @@
+{
+  "status": "frozen_before_new_ecological_ml_provider_calls",
+  "created_at_utc": "2026-10-06T07:03:52.988084+00:00",
+  "dependencies": {
+    "ecological_v1/run_ml_calibration.py": "b065e273b2d245b9407e1ff3a830aa7d75fedefc40b9981c5f12ce7cf0afc50d",
+    "ecological_v1/wsl_calibration_bridge.py": "a1659157b703f9fe93a84e8703532dbe7aa159b62570f03dfa33ef35f719b300",
+    "ecological_v1/stage_gate.py": "994323253685100b28921edcdac2e1b0cb6167e677c395e4524ab3b7c80aa417",
+    "ecological_v1/prepare_container_reference.py": "79e02322489e56ed00045b3f69983fd77bda613ee75ef7037be9612536736ff0",
+    "ecological_v1/public_probe_bundle.py": "3b5859c15ba4afd9dae165d2cfa62b550ee003739bc0558f236a50ba01c1b983",
+    "ecological_v1/prepare_ml_case.py": "0ba85b8ab6a4f9032a76076aaa16ef7e4750b724405f5fc7bc695322ba56a2fa",
+    "ecological_v1/prepare_design.py": "690147a30a1b7fd20323108fe380089c5923da8e5a5f6703b3843d3f140465cd",
+    "ecological_v1/audit_preparation.py": "f8847918666c001fae5987f08d52fd3302bfeef36857f218b174c858cdf36c06",
+    "ecological_v1/run_dry.py": "c5ab35c9c9e347cbc4015c25e6260e2ff212521f49d8543209928adf24c036d2",
+    "ecological_v1/belt_contract.py": "25b6a0f2b705c11ec6234291c6f310ab5c210f037d1e404cdab291aa42e1d1d1",
+    "ecological_v1/BUDGET_AND_EXECUTION_AMENDMENT_TH.md": "d9e4bd2d40e27fae3e4c616ac8d604b54df1599822d63e98d569bd9c3fa635bf",
+    "run_ml_dag_stage.py": "8a16d7b20237327eb54e0b5e252e27b9e1c947fed95ef0535179a1bb3e9f8089",
+    "run_ml_dag_llm_feasibility.py": "1e43fb274caa400ddd0aa596e530d824eea189765b1c3b8d176d6d13382c2e3a",
+    "ml_stage_probe_sandbox_v1.py": "257bee693f716fa64545cb5f919de57503c56ff8feaaa60e7cc92348aed00aab",
+    "ml_stage_probe_verifier_v1.py": "9248987010a620c61ffa995b070dab3dadc357b386861ff66ec81b18a6979ace",
+    "run_ml_container.py": "f8be5dc1b39eb29124ad6c9aa3b315afaf12d1b1fe44913e09b2ad50789d01f8",
+    "container_cli.py": "196c22ca95d7d5a7c6d26c1c3b33b3ed0608b3737268370b3dd9bb8027763680",
+    "run_ml_isolated_stage_pilot_v1.py": "5a73b7c9e226fe4df66fcddcb4aabfd743a971732d0e29f25781e66bfbe58f61",
+    "reference_ml_gates.py": "a32e7935e67d7b74738a9a76869039ea1c16c061001d093ea7087e49f821e32e",
+    "smoke_dag_candidate/ingest_validate.py": "96e49be6dad560cc05ac64d18eaa628d307ba61e58847a7783c8a3dcf752d725",
+    "smoke_dag_candidate/preprocess_split.py": "adb9bf9f9abe99e1d6ae7133692eafd7914209655ae62ac8dcfd7137d4d05555",
+    "smoke_dag_candidate/train_model.py": "fb518e464888bd030c53a59281352a4956375729d130775312d6dfcd829d7bc2",
+    "smoke_dag_candidate/predict.py": "d32cdbbb2e68ef157a6f00281e2dd7f51b30d9f96065459642be56ecf3843a0c",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "provider_adapter": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "preparation_design": "bcda309b38d1fb6681e63319c4bdb467594460a6ecb3566ad6249ff8eb809c0b",
+    "evaluator_lock": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b"
+  },
+  "cases": [
+    {
+      "case_id": "CAL_ADULT_01",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "hours_per_week",
+        "relationship",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_01",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "DEWP",
+        "PRES",
+        "WSPM"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_02",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_gain",
+        "education",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_02",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "SO2",
+        "day",
+        "year"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_03",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "age",
+        "occupation",
+        "sex"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_03",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "TEMP",
+        "WSPM"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_04",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_gain",
+        "capital_loss",
+        "occupation"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_04",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "CO",
+        "PRES",
+        "wd"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_05",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_loss",
+        "education",
+        "occupation"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_05",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "CO",
+        "RAIN",
+        "station"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_06",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "age",
+        "sex",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_06",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "O3",
+        "PRES"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_07",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "occupation",
+        "race",
+        "sex"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_07",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "PRES",
+        "RAIN",
+        "WSPM"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_08",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "age",
+        "fnlwgt",
+        "marital_status"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_08",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "PM10",
+        "WSPM",
+        "day"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_09",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_gain",
+        "fnlwgt"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_09",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "PRES",
+        "RAIN",
+        "day"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_10",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_loss",
+        "fnlwgt",
+        "marital_status"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_10",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "SO2",
+        "hour",
+        "year"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_11",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "marital_status",
+        "sex",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_11",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "PRES",
+        "day",
+        "hour"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_12",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "education_num",
+        "hours_per_week",
+        "native_country"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_12",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "DEWP",
+        "RAIN",
+        "wd"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    }
+  ],
+  "models": [
+    {
+      "slot": "agent_1",
+      "model_id": "tencent-hy3",
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3"
+    },
+    {
+      "slot": "agent_2",
+      "model_id": "gpt-5-mini",
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6"
+    },
+    {
+      "slot": "agent_3",
+      "model_id": "glm-5.3-flash",
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15"
+    }
+  ],
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 720
+  },
+  "planned_generation_calls": 288,
+  "max_attempts_per_pair": 1,
+  "user_budget_authorization": "unlimited_but_use_only_needed_calls_20261006",
+  "estimand": "first-attempt operational verification per deployment/corpus/stage on this finite specification population",
+  "n_per_corpus_stage_deployment": 12,
+  "source_corpora": 2,
+  "not_independent_datasets": true,
+  "not_raw_data_holdout": true,
+  "not_allocation_main": true,
+  "not_D1_D3_parameter_fit": true,
+  "reference_gate_rule": "certify a case before any of its calls; stop on instrument failure, do not outcome-select model cases",
+  "provider_drift_rule": "stop batch on returned deployment mapping mismatch; no automatic retry",
+  "container_preflight": {
+    "docker_server_version": "3.4.4",
+    "container_runtime": "podman",
+    "image_id": "sha256:d1dd86e9ef7bb249f3468e90214f3ceb3a9e8ff1ed84b0b7e1926458f423a37e",
+    "evaluator_lock_sha256": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b"
+  }
+}

@@ -1,0 +1,48 @@
+# Reproducing ConveyorFlow v2.3
+
+This extension studies decentralized self-selection, capability heterogeneity, and capability–task fit with soft stand-down. Tasks remain on a dependency-ready conveyor belt. Policies are experimental controls, not the primary contribution. The research questions concern trade-offs, not superiority on every metric.
+
+## Code and contract checks
+
+Use Python 3.10+ and install the dependencies declared in this repository. From the checkout root:
+
+```powershell
+python -m pytest tests -q
+./REPRODUCE_V2_3.ps1 -Stage CodeCheck
+```
+
+On 6 October 2026, the local suite passed 195 pytest tests (163 unittest cases plus pytest-style tests). A clean Git-index export without private data or the external benchmark passed 191 tests and explicitly skipped four integration checks that require public-data/reference preparation or the separately fetched BugsInPy reference patch. Skipped checks are not reported as passed. Fixture guard checks remain active without the gold patch. Tests do not constitute live-LLM results. `Check` additionally audits *locally available* historical result capsules and may require investigator artifacts that are deliberately not committed. Do not infer that missing historical raw ledgers were regenerated.
+
+Fixtures can be rerun into **new** destinations. Never overwrite a frozen run:
+
+```powershell
+./REPRODUCE_V2_3.ps1 -Stage EcologicalDryRun -OutputPath major_revision_v2_3/ecological_v1/reviewer_dry_01
+./REPRODUCE_V2_3.ps1 -Stage EcologicalDecisionCheck -OutputPath major_revision_v2_3/ecological_v1/reviewer_decision_01.json
+./REPRODUCE_V2_3.ps1 -Stage EcologicalClaimCheck -OutputPath major_revision_v2_3/ecological_v1/reviewer_claim_01
+```
+
+The separate-process decision check and SQLite claim check use trusted code. They test parity and ownership invariants, not LLM throughput, distributed fault tolerance, or network latency.
+
+## Live execution and security
+
+The evaluator executes generated Python, patches, and serialized models only inside Linux containers. Network is disabled for candidate execution; hidden labels, quality gates, reference predictions, fixed repository trees/history, API credentials, and the claim database must not be mounted into candidate containers. Never execute candidate Python or deserialize candidate joblib on the host.
+
+The investigator used WSL Ubuntu with Podman; `Dockerfile.ml_eval` and the image-lock/build utilities record the ML runtime. Repository builds use explicit BugsInPy commits, Python/package/build profiles and buggy-fail/fixed-pass qualification. A rebuild creates a new image identity: retain it in a new execution capsule rather than changing a historical lock. Fetch external benchmarks and public source datasets using the existing preparation/download utilities. Source availability does not imply identical future provider responses.
+
+`MFEC_LITELLM_API_KEY` is a **process environment variable**. Supply your own credential; no key is committed. Provider deployment aliases and returned exact versions are checked against the frozen configuration. The WSL bridge reads the key from stdin, not arguments or a file, and does not pass it to candidate containers. Execution stages require `-ConfirmPaidRun`.
+
+```powershell
+./REPRODUCE_V2_3.ps1 -Stage EcologicalMLCalibrationAudit
+```
+
+The above is read-only and makes no API calls. `EcologicalMLCalibrationFreeze` and `EcologicalMLCalibrationExecute` refer to the investigator's immutable first-attempt batch. Existing output evidence causes a restart to be rejected. `EcologicalMLContinuationFreeze/Execute` are a separately recorded recovery of **never-started pairs only**, not general retry commands. A reviewer should use a fresh checkout/output capsule and record a new date, image/model identities and locks, not pretend to recreate historical hashes.
+
+## Evidence boundaries
+
+- The completed isolated-stage pilot has 36 case–stage–deployment pairs: 28 verified, 6 contract/execution failures, and 2 unresolved provider outcomes. All pairs use trusted predecessors. This is not 36 full pipelines or held-out ability calibration.
+- The completed localized-repair pilot has 18 case–deployment pairs from six cases in three repositories: 7 verified. Public regression tests are withheld from candidates, not novel hidden tests. Environment exclusions, explicit localization, failures and unresolved billing remain disclosed.
+- New ecological calibration started on 6 October 2026. The frozen ML population has 24 task specifications, four stages, and three deployments: 288 first-attempt requests. It reuses two source corpora and row splits; it is a task-specification holdout, not 24 independent datasets or a raw-data holdout. Repository calibration uses a separate outcome-blind environment pool.
+- Main live allocation comparison is not complete. `CENTRAL_RULE_MATCHED` moves the same choice computation to one coordinator; the older Central-Matched experiment only relayed bids. Do not merge these estimands. The shared belt/claim store remains a failure dependency.
+- Original simulation probabilities are scenario assumptions. These pilot observations do not retroactively turn them into empirical estimates or provide a difficulty-specific probability curve. Ability ranks must come from calibration with uncertainty, not vendor, price or release date.
+
+Detailed protocols, deviations and results are in `major_revision_v2_3/*.md` and `major_revision_v2_3/ecological_v1/*.md`. `STATUS_TH.md` is a dated progress record. API keys, provider response text, heavy data/model/candidate trees and Office drafts are intentionally excluded from Git. Diagram sources remain editable in `ConveyorFlow_diagrams_en_working.drawio`.

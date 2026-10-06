@@ -1,0 +1,13 @@
+{
+  "status": "preparation_identity_lock_not_paid_execution_authorization",
+  "design_sha256": "bcda309b38d1fb6681e63319c4bdb467594460a6ecb3566ad6249ff8eb809c0b",
+  "dependencies": {
+    "prepare_design.py": "690147a30a1b7fd20323108fe380089c5923da8e5a5f6703b3843d3f140465cd",
+    "ml_source_manifest": "20cd2a67125a987aabd0b348c8b3b96002b33a0d57629bc5752f3232030a7875",
+    "bugs_source_manifest": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "protocol": "714e55283abe7316d32ba9a7290feb20f76e8fc8bd95238f861e0e000b584eb9"
+  },
+  "no_provider_calls": true,
+  "paid_execution_allowed": false
+}

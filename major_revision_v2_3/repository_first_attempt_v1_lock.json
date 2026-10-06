@@ -1,0 +1,212 @@
+{
+  "dependencies": {
+    "run_repository_first_attempt_v1.py": "3917687fbca5060d6d3a7a5f9ef90f7fee753eaba7d7311083a423db727b3f5c",
+    "prepare_repository_first_attempt_v1.py": "10469cc53cddba40851ffe9ddde90a42b6019a7b81ae6dbac7c5ab59d94a3ce7",
+    "build_repository_calibration_candidates_v1.py": "717eccecef26a50e3726d3bd8fb6aa85303ea865548ee8abf222819cbdeb3fa2",
+    "repository_exact_edits_v3.py": "984005c0fd8939256aef19e6edc651413bac5615e8f11d3512928a152a0f001f",
+    "build_repository_calibration_candidates_recovery_v2.py": "ea4a73c2608214a24ce9ef7f7e89b2b96954868b22176239244b697da7c09216",
+    "build_repository_calibration_candidates_amendment_v3.py": "da4cd845417a6f44610cd1a652e3b56ff34af01a1772550cf05f9124de126705",
+    "build_repository_calibration_candidates_final_v4.py": "c8a8ab40291968811ffa67a51eca8b6d7873328b85f56bea67fe59fbf0307885",
+    "repository_patch_guard_v1.py": "e7e7a4fe367f64952c1600815c16288cbfeadcb1c55526b43705c7a5881d4720",
+    "run_repository_repair_pilot_v1.py": "71936de4586967085e3ecc783424dc20460b57ecb2bf467eb2e58ce7ded315c4",
+    "build_bugsinpy_candidate_v1.py": "c6d58bb61ba53195666b3ba4bbad31760493b7eb283cb58b0613dcb5b91d67d8",
+    "audit_repository_baselines_v2.py": "48e3075e5b77316af9c4d2d7c27327f945745c5407b4cf8e23654239e2ae11aa",
+    "run_bugsinpy_preflight.py": "00e2097830846694b53751cf45f0ff6dc9b6255cd689508ed09a133eb4ccdef0",
+    "container_cli.py": "196c22ca95d7d5a7c6d26c1c3b33b3ed0608b3737268370b3dd9bb8027763680",
+    "wsl_repository_first_attempt_bridge_v1.py": "df08af6d0294954c0529405604465077eb27aa97a626791312d0dc1c3f2948bb",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "provider_adapter": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "preparation_lock": "c39ad67d1a2f394c5c84769421bfea2f40c3649d3eaff7bf2c332d8283244cf7",
+    "preparation_summary": "37468f206ed23d1d83595e2f14684e367b693f943633a2d15f0badf125c20018",
+    "build_lock": "60ea24c7d56aee711f6ed7d21c7fd72f5fb11c384d921c77dc45b00224ede68f",
+    "build_summary": "1de64cf75922efb774ff431dc00b449b122dea8e38c571b77d47f3b288373e2e"
+  },
+  "settings": {
+    "model_slots": [
+      "agent_1",
+      "agent_2",
+      "agent_3"
+    ],
+    "case_count": 6,
+    "max_provider_calls": 18,
+    "max_attempts_per_case_model": 1,
+    "generation": {
+      "temperature": 0,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 720
+    },
+    "execution_timeout_seconds": 180,
+    "estimand": "First-attempt verified localized-repair rate on these six new, environment-supported cases, under the frozen exact-edits/excerpts/test budget. Not a population-wide capability or difficulty-specific success curve.",
+    "denominator": "Every planned case-model pair. Unfinished/schema/apply/test failure and unresolved provider/execution outcomes stay in the operational denominator. Missing rows stay missing, not failures. Also report unresolved counts and conservative bounds if provider completion is unknown.",
+    "statistics": "Observed rates and descriptive Wilson 95% intervals per deployment, with repository clusters disclosed; n=6, no significance tests/rank promotion/D1-D3 fit. No pooling with older pilots or reused sentinels.",
+    "retry_rule": "One provider invocation per pair, SDK retries disabled. Never rerun a pair whose request has started; retain partial evidence. Fresh container replay of the same patch is verification, not a model retry.",
+    "execution_order": "Frozen case order within each alias; three alias workers may run concurrently. Request timestamps/window specificity are reported. This is not a randomized causal comparison of model vendors."
+  },
+  "cases": [
+    {
+      "project": "luigi",
+      "bug_id": "31",
+      "buggy_commit_id": "554850f32784537796383db5ee188d0455863ca9",
+      "fixed_commit_id_for_validator_only": "c0857e9e06012b696017e0a353ae74f4f621d066",
+      "test_file": "test/central_planner_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "fe5cf5a106ef4ef90c9db22ca497ac460dbdfe33803fe4c0be44cc41e0c565a3",
+      "run_test_sha256": "eb893cb525c196f2463b8ec271268d62540775fad2e97c1a878d9eae80d621a5",
+      "preflight_status": "not_executed",
+      "selection_hash": "0f050ec3f0e1f875489387c1e12a48ac8221fa1bfea366823cbc658032f6b3cd",
+      "case_id": "luigi_31",
+      "validator_source_image": "sha256:66f8b7851511dce4426b6a29017579878c08e022918a85b67e10f97c47a21ce3",
+      "visible_test": "test/central_planner_test.py::CentralPlannerTest::test_assistant_get_work_external_task",
+      "allowed_files": [
+        "luigi/scheduler.py"
+      ],
+      "preflight_artifact": "results/calibration_preflight_v1_00/000_luigi_31",
+      "environment_deviation": "New outcome-blind calibration-preparation pool, not historical-environment reproduction. Use the documented feasibility environment revisions before any new tests: common Python 3.8.20, -O0 -g0, pinned minimal packages; nose 1.3.7 for every Luigi candidate; serial extension build for every Matplotlib candidate. Repository source and original metadata/tests are unchanged. No provider calls, no previous model repair or gold patch is a selection criterion.",
+      "prompt_sha256": "a381fb7f70eefc1cc4c8dd7479db9a5fb08ef22b6510a84916d5a22584add49b",
+      "preparation_summary_sha256": "34b964ad12e5a791ba77400bb3549ac7d96477f5eba319f45dd9e11bc8f6c701",
+      "regression_selection_sha256": "dac9c385ca69725005c50924496b61697bac87717986d382db203b6235f49fa3"
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "18",
+      "buggy_commit_id": "7d958c63f4fbcd8a28df666d738400b251f89af7",
+      "fixed_commit_id_for_validator_only": "47479b04b6718a65ebaac094db106d44b40da509",
+      "test_file": "lib/matplotlib/tests/test_axes.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "293642204fab1c1633d537dc0f880e42810aded0bd2f7feddfef0d063ddda8db",
+      "run_test_sha256": "5ebb605e35a414a40fb2b7cfd3b2983f4e9b0ef57e67a7c033dda0f7c6a8957a",
+      "preflight_status": "not_executed",
+      "selection_hash": "1a26db231f7f57894a96b5350d83a45606ec15965c96e0ad4e6f3ddffc54a096",
+      "case_id": "matplotlib_18",
+      "validator_source_image": "sha256:894b51f4c9cc690d53a53f7506c1004b867118ac59b0dcd8d74c8439823ca78f",
+      "visible_test": "lib/matplotlib/tests/test_axes.py::test_polar_no_data",
+      "allowed_files": [
+        "lib/matplotlib/pyplot.py",
+        "lib/matplotlib/axes/_base.py",
+        "lib/matplotlib/projections/polar.py"
+      ],
+      "preflight_artifact": "results/calibration_preflight_v1_01/000_matplotlib_18",
+      "environment_deviation": "New outcome-blind calibration-preparation pool, not historical-environment reproduction. Use the documented feasibility environment revisions before any new tests: common Python 3.8.20, -O0 -g0, pinned minimal packages; nose 1.3.7 for every Luigi candidate; serial extension build for every Matplotlib candidate. Repository source and original metadata/tests are unchanged. No provider calls, no previous model repair or gold patch is a selection criterion.",
+      "prompt_sha256": "40f857ec84aca62c8f8307ac243dda47beeaf202a986c2619c067ddc189aefc1",
+      "preparation_summary_sha256": "3140498d6ea11fd7b905f5a8ec6ab5628ac5c94787057f4e189b434b767a9c9f",
+      "regression_selection_sha256": "0bd72f83b22f9ce749b7b6b8930f7ece064c41caa34cded9d533fd1e2975885d"
+    },
+    {
+      "project": "pandas",
+      "bug_id": "166",
+      "buggy_commit_id": "4056ded",
+      "fixed_commit_id_for_validator_only": "d44fb07063e9a8bd8a209ddce35b40d8a56c8d02",
+      "test_file": "pandas/tests/frame/test_join.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "2f797fff2510420e8b1c8c869c255e47d8198752ff9c47ce521fe70eb0fc4c6d",
+      "run_test_sha256": "e021048d36ff872a1ae098472d038b10c491ffd35b2b74852b9e3c1b37bd07f3",
+      "preflight_status": "not_executed",
+      "selection_hash": "0483ae82d4a8147898bfc297eb01f20953e6ebd26030a45c79ac5272e7eedd51",
+      "case_id": "pandas_166",
+      "validator_source_image": "sha256:cd9d0df9e46ad776cc10c230ec682016879f1204554362caea8742f0ef97289e",
+      "visible_test": "pandas/tests/frame/test_join.py::test_suppress_future_warning_with_sort_kw",
+      "allowed_files": [
+        "pandas/core/frame.py",
+        "pandas/core/reshape/concat.py"
+      ],
+      "preflight_artifact": "results/calibration_preflight_v1_02/000_pandas_166",
+      "environment_deviation": "New outcome-blind calibration-preparation pool, not historical-environment reproduction. Use the documented feasibility environment revisions before any new tests: common Python 3.8.20, -O0 -g0, pinned minimal packages; nose 1.3.7 for every Luigi candidate; serial extension build for every Matplotlib candidate. Repository source and original metadata/tests are unchanged. No provider calls, no previous model repair or gold patch is a selection criterion.",
+      "prompt_sha256": "f790079243a4b71eda58c48a57c7e160cbbe04913194cc3fbc66aa8b8c4cc684",
+      "preparation_summary_sha256": "7bc0f2236e5a1cfacba41e79440bee11d6fb5b2697321b6fdd2764c766a0e2c5",
+      "regression_selection_sha256": "4f79cae1e5b3e5d0e1de48f4d7be86a8dd6362e5077419c8d652ac8855ab0fae"
+    },
+    {
+      "project": "luigi",
+      "bug_id": "17",
+      "buggy_commit_id": "c39922350cba3a93c96c2ed223283bf8cf315a7d",
+      "fixed_commit_id_for_validator_only": "e38392a1381dd8daee0f180f0ac7f651edb88e0c",
+      "test_file": "test/scheduler_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "ceb278f546609206e4e6d170e989f1d6e34ee921b91f567d976159ef2fc7a338",
+      "run_test_sha256": "67440507812c7cc91a52626ee5f3079862ee66638f2e60b8f32031ada4729de5",
+      "preflight_status": "not_executed",
+      "selection_hash": "12a9a66b7d667f78064d624b0f2df14747417cf5e56c9827c71d4699a000237d",
+      "case_id": "luigi_17",
+      "validator_source_image": "sha256:c666885f0bfb5e2d8932ee6620e1775bcd167a5fe4c4acd42314d005cd177433",
+      "visible_test": "test/scheduler_test.py::SchedulerTest::test_local_scheduler_task_history_status",
+      "allowed_files": [
+        "luigi/interface.py",
+        "luigi/scheduler.py",
+        "luigi/db_task_history.py"
+      ],
+      "preflight_artifact": "results/calibration_preflight_v1_03/000_luigi_17",
+      "environment_deviation": "New outcome-blind calibration-preparation pool, not historical-environment reproduction. Use the documented feasibility environment revisions before any new tests: common Python 3.8.20, -O0 -g0, pinned minimal packages; nose 1.3.7 for every Luigi candidate; serial extension build for every Matplotlib candidate. Repository source and original metadata/tests are unchanged. No provider calls, no previous model repair or gold patch is a selection criterion.",
+      "prompt_sha256": "6461dbb06fefe0dab88785fbd943cfe4d011886d5abc3c6910c76f4e33747773",
+      "preparation_summary_sha256": "416bc06a7ac0a653581151c02c03608476b2f96102d36691e068253d7dd783bc",
+      "regression_selection_sha256": "edf208c326fbccd020de81de8d8b27e5c1d6e7907ecdfa038a9425fff47f13a9"
+    },
+    {
+      "project": "pandas",
+      "bug_id": "147",
+      "buggy_commit_id": "6acfc75",
+      "fixed_commit_id_for_validator_only": "773f341c8cc5a481a5a222508718034457ed1ebc",
+      "test_file": "pandas/tests/dtypes/test_dtypes.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "718c7b5ac7ed7a362d0094868dd55d307a85986142ad1ee15f0aa34753f88326",
+      "run_test_sha256": "df1ced8cc6a1a5225e781e2b70db6fd3c3f910b314211e9363015da097aa2a48",
+      "preflight_status": "not_executed",
+      "selection_hash": "055e743393910a9c609d8d17f1dbbaf5502a43f44e0a5019b7ac119c2ef2f7b6",
+      "case_id": "pandas_147",
+      "validator_source_image": "sha256:b3c5408837ac8221f0b8fc76201d7baa6e87731d37b963d5d756cb5b25b6bd75",
+      "visible_test": "pandas/tests/dtypes/test_dtypes.py::TestDatetimeTZDtype::test_construct_from_string_raises",
+      "allowed_files": [
+        "pandas/core/dtypes/dtypes.py"
+      ],
+      "preflight_artifact": "results/calibration_preflight_v1_05/000_pandas_147",
+      "environment_deviation": "New outcome-blind calibration-preparation pool, not historical-environment reproduction. Use the documented feasibility environment revisions before any new tests: common Python 3.8.20, -O0 -g0, pinned minimal packages; nose 1.3.7 for every Luigi candidate; serial extension build for every Matplotlib candidate. Repository source and original metadata/tests are unchanged. No provider calls, no previous model repair or gold patch is a selection criterion.",
+      "prompt_sha256": "79cd88ef1a5808a4d696b829f60f44c623f95a5cafc97787c6ccd9b9f5310f0e",
+      "preparation_summary_sha256": "914c41ca121ce499a3f0febca271b7bd376d7149db82dc4d7b533c3a88d337eb",
+      "regression_selection_sha256": "76e1522b4746ba2a922c011c7e81a98dcff397d74b261a9639328fa7d9cf0be7"
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "9",
+      "buggy_commit_id": "8673167d4c44dc2ede02fedd718dadf7f88e102d",
+      "fixed_commit_id_for_validator_only": "c01f9d3eff9b6239446c1bb2d205eccd69054aeb",
+      "test_file": "lib/matplotlib/tests/test_polar.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "589aafe94ebf5a232867f24917fceb7fee9468703e92a861f2a5c49ad1233422",
+      "run_test_sha256": "5c176c78b625d1f546e9b3f24952fa40f0880a74a5aef0c16570cb7f28cf1101",
+      "preflight_status": "not_executed",
+      "selection_hash": "1f977cded7fde48a95a9846228c3c0233dfc2db2692774429927cb18068a2337",
+      "case_id": "matplotlib_9",
+      "validator_source_image": "sha256:0e3ce18ee9409c6dd5137a56495e65c3e99f6fd35b82c711ac7c2123556e54cf",
+      "visible_test": "lib/matplotlib/tests/test_polar.py::test_polar_invertedylim_rorigin",
+      "allowed_files": [
+        "lib/matplotlib/projections/polar.py"
+      ],
+      "preflight_artifact": "results/calibration_preflight_v1_07/000_matplotlib_9",
+      "environment_deviation": "New outcome-blind calibration-preparation pool, not historical-environment reproduction. Use the documented feasibility environment revisions before any new tests: common Python 3.8.20, -O0 -g0, pinned minimal packages; nose 1.3.7 for every Luigi candidate; serial extension build for every Matplotlib candidate. Repository source and original metadata/tests are unchanged. No provider calls, no previous model repair or gold patch is a selection criterion.",
+      "prompt_sha256": "83842f37f02d8056cf08f54508a95447dfd2d5e12ad835fd585ec36875993816",
+      "preparation_summary_sha256": "aa9612c38beee8214fe70f7835716577cc741a3fa0f3124ac93d7d5c178b4b78",
+      "regression_selection_sha256": "f88eece481d8fb4389496382066230e062444e1a2c9a4490a17b820317bf0686"
+    }
+  ],
+  "models": [
+    {
+      "slot": "agent_1",
+      "model_id": "tencent-hy3",
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3"
+    },
+    {
+      "slot": "agent_2",
+      "model_id": "gpt-5-mini",
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6"
+    },
+    {
+      "slot": "agent_3",
+      "model_id": "glm-5.3-flash",
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15"
+    }
+  ],
+  "created_at_utc": "2026-10-05T10:07:17.143205+00:00",
+  "status": "new_case_first_attempt_frozen_before_calls",
+  "not_allocation_comparison": true,
+  "not_difficulty_rank_calibration": true,
+  "not_simulator_parameter_fit": true
+}

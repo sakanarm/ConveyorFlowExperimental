@@ -1,0 +1,12 @@
+# Feasibility smoke for BugsInPy tornado#8 only; not an experimental arm.
+FROM python:3.8.20-slim-bookworm
+
+RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN git clone https://github.com/tornadoweb/tornado.git /src \
+    && git -C /src cat-file -e 34c43f4775971ab9b2b8ed43356f218add6387b2^{commit} \
+    && git -C /src cat-file -e 5d4a9ab26372efd255bbb29fde55c41395ed17b1^{commit}
+
+USER 65534:65534
+WORKDIR /src

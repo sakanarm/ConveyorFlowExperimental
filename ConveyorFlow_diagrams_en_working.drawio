@@ -1,4 +1,5 @@
-<mxfile host="Electron" agent="ConveyorFlow" pages="9">
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Electron" agent="ConveyorFlow" pages="15">
   <diagram name="Baseline - Static assignment (P0_FIXED)" id="3">
     <mxGraphModel dx="1204" dy="593" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -223,7 +224,7 @@
         <mxCell id="n74" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A4&lt;br&gt;Ability Rank 3 - owns train_model / report" vertex="1">
           <mxGeometry height="27" width="108" x="754.2" y="434.70000000000005" as="geometry" />
         </mxCell>
-        <mxCell id="n75" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#c0392b;fontStyle=0;fontFamily=Helvetica" value="BUSY on another job&#39;s&lt;br&gt;training task. T04 is its&lt;br&gt;property, so T04 waits -&lt;br&gt;and nobody may take it" vertex="1">
+        <mxCell id="n75" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#c0392b;fontStyle=0;fontFamily=Helvetica" value="BUSY on another job's&lt;br&gt;training task. T04 is its&lt;br&gt;property, so T04 waits -&lt;br&gt;and nobody may take it" vertex="1">
           <mxGeometry height="39.6" width="113.4" x="751.5" y="464.40000000000003" as="geometry" />
         </mxCell>
         <mxCell id="n82" edge="1" parent="1" source="n60" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#2f8f46;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0" target="n66" value="T03  assigned">
@@ -532,7 +533,7 @@
         <mxCell id="n85" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#2c7fb8;fontStyle=1;fontFamily=Helvetica" value="HEFT is not free. It is bought with information." vertex="1">
           <mxGeometry height="19.8" width="486" x="36" y="505.8" as="geometry" />
         </mxCell>
-        <mxCell id="n86" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="The scheduler needs the whole DAG, including tasks nobody has seen yet, and every agent&#39;s&lt;br&gt;published capability vector. rank_u is built from base_effort read off the job spec, because&lt;br&gt;ranking BLOCKED tasks means ranking tasks no agent has estimated - knowledge ConveyorFlow&lt;br&gt;never collects, and the paper states that asymmetry rather than claiming a parity it lacks.&lt;br&gt;On the READY set HEFT uses the agents&#39; own estimates, so selection carries P3&#39;s noise too." vertex="1">
+        <mxCell id="n86" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="The scheduler needs the whole DAG, including tasks nobody has seen yet, and every agent's&lt;br&gt;published capability vector. rank_u is built from base_effort read off the job spec, because&lt;br&gt;ranking BLOCKED tasks means ranking tasks no agent has estimated - knowledge ConveyorFlow&lt;br&gt;never collects, and the paper states that asymmetry rather than claiming a parity it lacks.&lt;br&gt;On the READY set HEFT uses the agents' own estimates, so selection carries P3's noise too." vertex="1">
           <mxGeometry height="50.4" width="486" x="36" y="527.4" as="geometry" />
         </mxCell>
         <mxCell id="n87" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f6f8fa;strokeColor=#8fa2b3;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
@@ -812,7 +813,7 @@
         <mxCell id="n85" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#7b4397;fontStyle=1;fontFamily=Helvetica" value="Perfect load balance, bought by ignoring who is good at what." vertex="1">
           <mxGeometry height="19.8" width="486" x="36" y="505.8" as="geometry" />
         </mxCell>
-        <mxCell id="n86" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="Equal task counts by construction, not on average - which is why this arm is the reference&lt;br&gt;for the two fairness metrics: the Gini coefficient of task counts, and the weakest agent&#39;s&lt;br&gt;longest idle streak. Nothing else in the arm set is trying to be fair, so without P8 there&lt;br&gt;is no reference for what fairness costs. P4_RANDOM is this same picture with the pointer&lt;br&gt;replaced by a uniform draw: equal counts on average rather than by construction." vertex="1">
+        <mxCell id="n86" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="Equal task counts by construction, not on average - which is why this arm is the reference&lt;br&gt;for the two fairness metrics: the Gini coefficient of task counts, and the weakest agent's&lt;br&gt;longest idle streak. Nothing else in the arm set is trying to be fair, so without P8 there&lt;br&gt;is no reference for what fairness costs. P4_RANDOM is this same picture with the pointer&lt;br&gt;replaced by a uniform draw: equal counts on average rather than by construction." vertex="1">
           <mxGeometry height="50.4" width="486" x="36" y="527.4" as="geometry" />
         </mxCell>
         <mxCell id="n87" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f6f8fa;strokeColor=#8fa2b3;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
@@ -2074,6 +2075,1013 @@
         <mxCell id="n47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf5f4;strokeColor=#c0392b;fontSize=11;fontColor=#c0392b;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;No scheduler appears anywhere in this diagram.&lt;br&gt;Every arrow is a decision an agent made about itself.&lt;/font&gt;" vertex="1">
           <mxGeometry height="72" width="828" x="54" y="1224" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="AJSTR v2.2 | Fig 1 - system architecture" id="ajstr-v2-2-figure-1">
+    <mxGraphModel dx="1479" dy="759" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=17;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="ConveyorFlow architecture: shared design, separate execution tiers" vertex="1">
+          <mxGeometry height="27" width="720" x="180" y="5.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#fbfcfd;strokeColor=#7b8791;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="84.6" width="1008" x="36" y="36.9" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#7b8791;fontStyle=1;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Inputs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="23.4" width="360" x="54" y="40.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;public-data-derived workloads&lt;br&gt;ML Build and Fix Bug DAGs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52.2" width="288" x="72" y="59.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;frozen experiment configs&lt;br&gt;policies, teams, loads, seeds&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52.2" width="288" x="396" y="59.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;ability and resource profiles&lt;br&gt;Rank 1/2/3, speed, tokens, price&lt;/font&gt;" vertex="1">
+          <mxGeometry height="52.2" width="288" x="720" y="59.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#f6faf6;strokeColor=#2f8f46;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="165.6" width="1008" x="36" y="149.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#2f8f46;fontStyle=1;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Simulation implementation&lt;/font&gt;" vertex="1">
+          <mxGeometry height="23.4" width="360" x="54" y="153" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;simulation engine&lt;br&gt;fixed-horizon deterministic ticks&lt;/font&gt;" vertex="1">
+          <mxGeometry height="54" width="360" x="360" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" edge="1" parent="1" source="n6" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;READY frontier&lt;br&gt;ordered claims and collision events&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="216" x="63" y="235.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n10" style="edgeStyle=none;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;fixed agent profiles&lt;br&gt;no churn in main runs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="216" x="306" y="235.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" edge="1" parent="1" source="n10" style="edgeStyle=none;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;allocation policy&lt;br&gt;the controlled decision rule&lt;br&gt;that differs between arms&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="234" x="549" y="235.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" edge="1" parent="1" source="n10" style="edgeStyle=none;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;task / job states&lt;br&gt;and event records&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="207" x="810" y="235.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" edge="1" parent="1" source="n10" style="edgeStyle=none;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" parent="1" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#f6edf7;strokeColor=#7b4397;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="215.1" width="1008" x="36" y="328.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#7b4397;fontStyle=1;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Comparable concepts across tiers; implementations and logs are separate&lt;/font&gt;" vertex="1">
+          <mxGeometry height="23.4" width="360" x="54" y="332.1" as="geometry" />
+        </mxCell>
+        <mxCell id="n22" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b4397;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="Assessor" vertex="1">
+          <mxGeometry height="46.8" width="288" x="72" y="361.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n23" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b4397;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="Executor" vertex="1">
+          <mxGeometry height="46.8" width="288" x="396" y="361.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n24" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b4397;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="Verifier" vertex="1">
+          <mxGeometry height="46.8" width="288" x="720" y="361.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#7b4397;strokeColor=#7b4397;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="1.4" width="648" x="216" y="418.9" as="geometry" />
+        </mxCell>
+        <mxCell id="n26" edge="1" parent="1" source="n22" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b4397;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=none;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.0;entryY=0;entryDx=0;entryDy=0" target="n25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n27" edge="1" parent="1" source="n23" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b4397;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=none;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0" target="n25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n28" edge="1" parent="1" source="n24" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b4397;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=none;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1.0;entryY=0;entryDx=0;entryDy=0" target="n25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n29" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b4397;fontSize=9;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Simulation engine&lt;br&gt;seeded stochastic outcomes&lt;br&gt;22,500 frozen runs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="73.8" width="396" x="90" y="435.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n30" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b4397;fontSize=9;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Real-LLM engine&lt;br&gt;60 independent microtasks&lt;br&gt;provider calls + validators&lt;/font&gt;" vertex="1">
+          <mxGeometry height="73.8" width="396" x="594" y="435.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n31" edge="1" parent="1" source="n29" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b4397;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.111;entryY=1;entryDx=0;entryDy=0" target="n25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n32" edge="1" parent="1" source="n30" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b4397;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.889;entryY=1;entryDx=0;entryDy=0" target="n25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n33" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#7b4397;fontStyle=2;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;same research questions; not the same executable state machine&lt;/font&gt;" vertex="1">
+          <mxGeometry height="23.4" width="720" x="180" y="513" as="geometry" />
+        </mxCell>
+        <mxCell id="n34" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fbfaf5;strokeColor=#c0ae74;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="Tier-specific append-only records&lt;br&gt;outcomes and accounting stay separate" vertex="1">
+          <mxGeometry height="50.4" width="1008" x="36" y="561.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n35" edge="1" parent="1" source="n20" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0" target="n34" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" parent="1" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#fbfcfd;strokeColor=#7b8791;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="127.8" width="1008" x="36" y="637.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n37" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#7b8791;fontStyle=1;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Analysis&lt;/font&gt;" vertex="1">
+          <mxGeometry height="23.4" width="360" x="54" y="640.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;metric derivation&lt;br&gt;completion, cost, time,&lt;br&gt;throughput, utilization&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="225" x="63" y="678.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" edge="1" parent="1" source="n34" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.14;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0" target="n38" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n40" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;paired analysis&lt;br&gt;bootstrap, Wilcoxon,&lt;br&gt;Holm correction&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="234" x="306" y="678.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n41" edge="1" parent="1" source="n38" style="edgeStyle=none;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n40" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n42" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;visualization&lt;br&gt;metric-level figures&lt;br&gt;and descriptive radar charts&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="198" x="558" y="678.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n43" edge="1" parent="1" source="n40" style="edgeStyle=none;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n42" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n44" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8fa2b3;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Manuscript tables,&lt;br&gt;figures, and audit package&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="243" x="774" y="678.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n45" edge="1" parent="1" source="n42" style="edgeStyle=none;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n44" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n46" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#8a7530;fontStyle=2;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Simulation and Real-LLM metrics are computed within tier; they are never pooled as one experiment.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="21.6" width="720" x="216" y="612" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="AJSTR v2.2 | Fig 2 - process architecture" id="ajstr-v2-2-figure-2">
+    <mxGraphModel dx="2976" dy="1290" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=19;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="ConveyorFlow - Process Architecture" vertex="1">
+          <mxGeometry height="36" width="576" x="180" y="14.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7fbfd;strokeColor=#c3d3de;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="117" width="828" x="54" y="81" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3f6f9f;fontStyle=1;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;SIMULATION BELT - tasks from multiple jobs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="23.4" width="540" x="72" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#e4edf7;strokeColor=#3f6f9f;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;J12:T01&lt;br&gt;VERIFIED&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="144" x="81" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;J14:T02&lt;br&gt;CLAIMED&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="144" x="243" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;J12:T03&lt;br&gt;READY&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="144" x="405" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;J13:T04&lt;br&gt;READY&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="144" x="567" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#a8a8a8;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;J12:T05&lt;br&gt;BLOCKED&lt;/font&gt;" vertex="1">
+          <mxGeometry height="66.6" width="144" x="729" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" edge="1" parent="1" source="n5" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" edge="1" parent="1" source="n6" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" edge="1" parent="1" source="n7" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n8" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fbfdfb;strokeColor=#cddccd;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="144" width="828" x="54" y="243" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#1b7837;fontStyle=1;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;AGENT POOL - heterogeneous, stands beside the belt&lt;/font&gt;" vertex="1">
+          <mxGeometry height="23.4" width="540" x="72" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#c7e9b4;strokeColor=#26313a;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A1&lt;br&gt;Ability Rank 1&lt;br&gt;IDLE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="86.4" width="162" x="90" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#5aae61;strokeColor=#26313a;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A2&lt;br&gt;Ability Rank 2&lt;br&gt;IDLE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="86.4" width="162" x="288" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#5aae61;strokeColor=#26313a;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A3&lt;br&gt;Ability Rank 2&lt;br&gt;BUSY&lt;/font&gt;" vertex="1">
+          <mxGeometry height="86.4" width="162" x="486" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#1b7837;strokeColor=#26313a;fontSize=9;fontColor=#ffffff;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;A4&lt;br&gt;Ability Rank 3&lt;br&gt;IDLE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="86.4" width="162" x="684" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f9fcf9;strokeColor=#2f8f46;fontSize=9;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;LOCAL ASSESSMENT&lt;br&gt;estimated difficulty + success probability&lt;br&gt;idle agents consider at most 8 READY tasks&lt;/font&gt;" vertex="1">
+          <mxGeometry height="104.4" width="612" x="162" y="426.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" edge="1" parent="1" source="n7" style="edgeStyle=none;curved=0;html=1;strokeColor=#2f8f46;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n22" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#55606a;fontStyle=2;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;the belt broadcasts the READY set - visible to idle agents only&lt;/font&gt;" vertex="1">
+          <mxGeometry height="32.4" width="378" x="504" y="203.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n23" edge="1" parent="1" source="n16" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n24" edge="1" parent="1" source="n17" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n25" edge="1" parent="1" source="n19" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n26" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;VOLUNTEER&lt;/font&gt;" vertex="1">
+          <mxGeometry height="61.2" width="252" x="144" y="574.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n27" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f4f5f6;strokeColor=#9aa5ae;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;NO BID / LOWER PRIORITY&lt;/font&gt;" vertex="1">
+          <mxGeometry height="61.2" width="252" x="540" y="574.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n28" edge="1" parent="1" source="n20" style="edgeStyle=none;curved=0;html=1;strokeColor=#2f8f46;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n26" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n29" edge="1" parent="1" source="n20" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n30" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#6b7680;fontStyle=2;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;ineligible agents do not bid;&lt;br&gt;overqualified agents incur a fit penalty&lt;/font&gt;" vertex="1">
+          <mxGeometry height="39.6" width="252" x="540" y="640.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n31" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;ORDERED ATOMIC CLAIM&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64.8" width="252" x="144" y="687.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n32" edge="1" parent="1" source="n26" style="edgeStyle=none;curved=0;html=1;strokeColor=#2f8f46;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n33" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#8a7530;fontStyle=2;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;local bid delay = fit gap + stand-down penalty + seeded jitter.&lt;br&gt;Ordered nonconflicting claims resolve contention.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="39.6" width="360" x="414" y="687.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n34" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf6e3;strokeColor=#d9a441;fontSize=9.5;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;RUNNING - one task per agent at a time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64.8" width="324" x="108" y="804.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n35" edge="1" parent="1" source="n31" style="edgeStyle=none;curved=0;html=1;strokeColor=#d9a441;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n34" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fbfaf5;strokeColor=#c0ae74;fontSize=11;fontColor=#26313a;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;VERIFY&lt;/font&gt;" vertex="1">
+          <mxGeometry height="126" width="252" x="144" y="923.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n37" edge="1" parent="1" source="n34" style="edgeStyle=none;curved=0;html=1;strokeColor=#d9a441;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n36" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;attempt cap -&amp;gt; DEAD_LETTER&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64.8" width="270" x="486" y="954" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" edge="1" parent="1" source="n36" style="edgeStyle=none;curved=0;html=1;strokeColor=#8c8c8c;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n38" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n40" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#e4edf7;strokeColor=#3f6f9f;fontSize=9;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;EVENT LEDGER - outcome and provenance&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64.8" width="342" x="90" y="1101.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n41" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=9;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;all tasks VERIFIED -&amp;gt; JOB COMPLETE&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64.8" width="306" x="504" y="1101.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n42" edge="1" parent="1" source="n36" style="edgeStyle=none;curved=0;html=1;strokeColor=#3f6f9f;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n40" value="PASS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n43" edge="1" parent="1" source="n40" style="edgeStyle=none;curved=0;html=1;strokeColor=#2f8f46;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n41" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n44" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#2f8f46;fontStyle=2;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;unfinished tasks at fixed horizon are UNSETTLED&lt;/font&gt;" vertex="1">
+          <mxGeometry height="27" width="306" x="504" y="1175.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n45" edge="1" parent="1" source="n36" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#c0392b;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.72;entryDx=0;entryDy=0" target="n3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;FAIL - attempts &amp;lt; R&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="432" y="1042.2" />
+              <mxPoint x="936" y="1042.2" />
+              <mxPoint x="936" y="167.4" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n46" edge="1" parent="1" source="n31" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#c0392b;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=1;exitY=0.92;exitDx=0;exitDy=0;entryX=1;entryY=0.28;entryDx=0;entryDy=0" target="n3" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;collision: losing bid waits for the next tick&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="747" />
+              <mxPoint x="990" y="113.4" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf5f4;strokeColor=#c0392b;fontSize=11;fontColor=#c0392b;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;No central task matcher in CF-Fit.&lt;br&gt;The shared READY store and claim operation remain common dependencies.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="828" x="54" y="1224" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="AJSTR v2.2 | Fig 3 - CF-Fit belt" id="ajstr-v2-2-figure-3">
+    <mxGraphModel dx="1324" dy="652" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=17;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="ConveyorFlow: tasks ride the belt, agents choose their own work" vertex="1">
+          <mxGeometry height="27" width="756" x="180" y="5.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#1b7837;fontStyle=1;fontFamily=Helvetica" value="Illustration of CF-Fit: READY tasks ride the belt; idle agents bid locally; overqualification lowers bid priority." vertex="1">
+          <mxGeometry height="23.4" width="936" x="90" y="39.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#a8a8a8;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="21.6" width="21.6" x="270" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="BLOCKED" vertex="1">
+          <mxGeometry height="18" width="180" x="298.8" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="21.6" width="21.6" x="486" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="READY" vertex="1">
+          <mxGeometry height="18" width="180" x="514.8" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="21.6" width="21.6" x="684" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="CLAIMED / RUNNING" vertex="1">
+          <mxGeometry height="18" width="180" x="712.8" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e4edf7;strokeColor=#3f6f9f;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="21.6" width="21.6" x="900" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="VERIFIED" vertex="1">
+          <mxGeometry height="18" width="180" x="928.8" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fcfcfc;strokeColor=#b8c2cb;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="261" width="216" x="18" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="Job #12   ml_pipeline" vertex="1">
+          <mxGeometry height="23.4" width="180" x="36" y="93.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9.5;fontColor=#55606a;fontStyle=2;fontFamily=Helvetica" value="Job 12 DAG; belt also carries other jobs" vertex="1">
+          <mxGeometry height="21.6" width="180" x="36" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T1" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="110.7" y="142.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T2" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="110.7" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T3" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="110.7" y="217.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T4" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="56.7" y="258.3" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T5" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="164.7" y="258.3" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T6" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="79.2" y="301.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T7" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="151.2" y="301.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n22" edge="1" parent="1" source="n15" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n23" edge="1" parent="1" source="n16" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n24" edge="1" parent="1" source="n17" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n25" edge="1" parent="1" source="n17" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n26" edge="1" parent="1" source="n18" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n27" edge="1" parent="1" source="n19" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n28" edge="1" parent="1" source="n20" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n29" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9.5;fontColor=#55606a;fontStyle=2;fontFamily=Helvetica" value="a task reaches the belt only after all predecessors are VERIFIED" vertex="1">
+          <mxGeometry height="23.4" width="180" x="36" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="n30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d9d9d9;strokeColor=#8c8c8c;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="72" width="810" x="270" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="n31" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="278.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n32" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="332.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n33" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="386.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n34" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="440.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n35" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="494.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="548.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n37" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="602.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="656.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="710.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n40" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="764.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n41" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="818.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n42" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="872.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n43" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="926.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n44" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="980.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n45" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="1034.5" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="0.9" width="0.9" x="306" y="130.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="0.9" width="0.9" x="1026" y="130.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n48" edge="1" parent="1" source="n46" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n47" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n49" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#55606a;fontStyle=0;fontFamily=Helvetica" value="belt direction" vertex="1">
+          <mxGeometry height="21.6" width="360" x="486" y="100.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n50" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#a8a8a8;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=1;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J12:T05 Advanced model&lt;br&gt;waiting for J12:T03" vertex="1">
+          <mxGeometry height="57.6" width="117" x="283.5" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n51" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J13:T04 Baseline model (D1)" vertex="1">
+          <mxGeometry height="57.6" width="117" x="432" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n52" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J12:T03 Clean + features" vertex="1">
+          <mxGeometry height="57.6" width="117" x="580.5" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n53" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J14:T02 EDA&lt;br&gt;held by A3" vertex="1">
+          <mxGeometry height="57.6" width="117" x="729" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n54" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#e4edf7;strokeColor=#3f6f9f;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J12:T01 Validate/load" vertex="1">
+          <mxGeometry height="57.6" width="117" x="877.5" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n55" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#c7e9b4;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="73.8" width="57.6" x="277.2" y="327.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n56" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A1&lt;br&gt;Ability Rank 1" vertex="1">
+          <mxGeometry height="32.4" width="108" x="252" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="n57" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#2f8f46;fontStyle=0;fontFamily=Helvetica" value="wins ordered claim&lt;br&gt;for this D1 task" vertex="1">
+          <mxGeometry height="46.8" width="113.4" x="249.3" y="444.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n58" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#5aae61;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="73.8" width="57.6" x="394.2" y="327.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n59" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A2&lt;br&gt;Ability Rank 2" vertex="1">
+          <mxGeometry height="32.4" width="108" x="369" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="n60" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#c0392b;fontStyle=0;fontFamily=Helvetica" value="loses claim;&lt;br&gt;may retry next tick" vertex="1">
+          <mxGeometry height="46.8" width="113.4" x="366.3" y="444.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n61" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#5aae61;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="73.8" width="57.6" x="511.2" y="327.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n62" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A3&lt;br&gt;Ability Rank 2" vertex="1">
+          <mxGeometry height="32.4" width="108" x="486" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="n62_busy" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#d9a441;fontStyle=0;fontFamily=Helvetica" value="BUSY: holds T02;&lt;br&gt;does not bid this tick" vertex="1">
+          <mxGeometry height="46.8" width="113.4" x="483.3" y="444.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n63" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#1b7837;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="73.8" width="57.6" x="628.2" y="327.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n64" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A4&lt;br&gt;Ability Rank 3" vertex="1">
+          <mxGeometry height="32.4" width="108" x="603" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="n65" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#6b7680;fontStyle=0;fontFamily=Helvetica" value="stand-down penalty:&lt;br&gt;still eligible, but gives&lt;br&gt;lower-rank bids priority&lt;br&gt;on easier work" vertex="1">
+          <mxGeometry height="46.8" width="113.4" x="600.3" y="444.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n72" edge="1" parent="1" source="n55" style="edgeStyle=none;curved=1;html=1;strokeColor=#2f8f46;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n51" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n73" edge="1" parent="1" source="n58" style="edgeStyle=none;curved=1;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n51" value="collision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n75" edge="1" parent="1" source="n63" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=none;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n79" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f7f9fb;strokeColor=#8fa2b3;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="Event ledger&lt;br&gt;outcomes + provenance" vertex="1">
+          <mxGeometry height="99" width="162" x="936" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="n80" edge="1" parent="1" source="n54" style="edgeStyle=none;curved=0;html=1;strokeColor=#8fa2b3;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n79" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n81" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9.5;fontColor=#55606a;fontStyle=2;fontFamily=Helvetica" value="job completes when all 7 tasks are VERIFIED" vertex="1">
+          <mxGeometry height="21.6" width="162" x="936" y="396" as="geometry" />
+        </mxCell>
+        <mxCell id="n82" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f4f9f5;strokeColor=#1b7837;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="86.4" width="522" x="18" y="500.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n83" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#1b7837;fontStyle=1;fontFamily=Helvetica" value="No central task matcher in CF-Fit." vertex="1">
+          <mxGeometry height="21.6" width="486" x="36" y="502.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n84" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="Each idle agent scores up to 8 READY tasks and submits at most one bid.&lt;br&gt;Delay = fit gap + overqualification penalty + seeded jitter.&lt;br&gt;Ordered atomic claims settle collisions; loser may bid next tick." vertex="1">
+          <mxGeometry height="46.8" width="486" x="36" y="529.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n85" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fbfaf5;strokeColor=#c0ae74;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="86.4" width="522" x="576" y="500.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n86" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#8a7530;fontStyle=1;fontFamily=Helvetica" value="Three invariants, enforced and unit-tested" vertex="1">
+          <mxGeometry height="21.6" width="486" x="594" y="502.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n87" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="1. one task has at most one holder&lt;br&gt;2. one agent holds at most one task&lt;br&gt;3. predecessors must be VERIFIED before release" vertex="1">
+          <mxGeometry height="46.8" width="486" x="594" y="529.4" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="AJSTR v2.2 | Fig 4 - static belt" id="ajstr-v2-2-figure-4">
+    <mxGraphModel dx="1204" dy="593" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=17;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="Static baseline: tasks still ride the belt, but owners are fixed before execution" vertex="1">
+          <mxGeometry height="27" width="828" x="144" y="5.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#a0522d;fontStyle=1;fontFamily=Helvetica" value="S1-style static ownership: skill-to-agent mapping is frozen before the run; no runtime self-selection." vertex="1">
+          <mxGeometry height="23.4" width="936" x="90" y="39.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#a8a8a8;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="21.6" width="21.6" x="270" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="BLOCKED" vertex="1">
+          <mxGeometry height="18" width="180" x="298.8" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="21.6" width="21.6" x="486" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="READY" vertex="1">
+          <mxGeometry height="18" width="180" x="514.8" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="21.6" width="21.6" x="684" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="CLAIMED / RUNNING" vertex="1">
+          <mxGeometry height="18" width="180" x="712.8" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e4edf7;strokeColor=#3f6f9f;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="21.6" width="21.6" x="900" y="73.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="VERIFIED" vertex="1">
+          <mxGeometry height="18" width="180" x="928.8" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fcfcfc;strokeColor=#b8c2cb;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="261" width="216" x="18" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="Job #12   ml_pipeline" vertex="1">
+          <mxGeometry height="23.4" width="180" x="36" y="93.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9.5;fontColor=#55606a;fontStyle=2;fontFamily=Helvetica" value="Job 12 DAG; belt also carries other jobs" vertex="1">
+          <mxGeometry height="21.6" width="180" x="36" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T1" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="110.7" y="142.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T2" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="110.7" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T3" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="110.7" y="217.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T4" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="56.7" y="258.3" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T5" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="164.7" y="258.3" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T6" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="79.2" y="301.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="T7" vertex="1">
+          <mxGeometry height="30.6" width="30.6" x="151.2" y="301.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n22" edge="1" parent="1" source="n15" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n23" edge="1" parent="1" source="n16" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n24" edge="1" parent="1" source="n17" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n25" edge="1" parent="1" source="n17" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n26" edge="1" parent="1" source="n18" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n27" edge="1" parent="1" source="n19" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n28" edge="1" parent="1" source="n20" style="edgeStyle=none;curved=0;html=1;strokeColor=#7b8791;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n29" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9.5;fontColor=#55606a;fontStyle=2;fontFamily=Helvetica" value="a task reaches the belt only after all predecessors are VERIFIED" vertex="1">
+          <mxGeometry height="23.4" width="180" x="36" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="n30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d9d9d9;strokeColor=#8c8c8c;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="72" width="810" x="270" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="n31" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="278.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n32" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="332.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n33" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="386.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n34" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="440.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n35" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="494.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="548.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n37" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="602.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="656.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="710.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n40" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="764.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n41" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="818.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n42" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="872.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n43" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="926.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n44" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="980.6" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n45" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#8c8c8c;fontSize=9;fontColor=#26313a;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="18.9" width="18.9" x="1034.5" y="239.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="0.9" width="0.9" x="306" y="130.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=11;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="0.9" width="0.9" x="1026" y="130.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n48" edge="1" parent="1" source="n46" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n47" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n49" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#55606a;fontStyle=0;fontFamily=Helvetica" value="belt direction" vertex="1">
+          <mxGeometry height="21.6" width="360" x="486" y="100.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n50" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#a8a8a8;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=1;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J12:T05 Advanced model&lt;br&gt;waiting for J12:T03" vertex="1">
+          <mxGeometry height="57.6" width="117" x="283.5" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n51" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J13:T04 Baseline model (D1)" vertex="1">
+          <mxGeometry height="57.6" width="117" x="432" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n52" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J12:T03 Clean + features" vertex="1">
+          <mxGeometry height="57.6" width="117" x="580.5" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n53" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J14:T02 EDA&lt;br&gt;held by A1" vertex="1">
+          <mxGeometry height="57.6" width="117" x="729" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n54" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#e4edf7;strokeColor=#3f6f9f;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="J12:T01 Validate/load" vertex="1">
+          <mxGeometry height="57.6" width="117" x="877.5" y="169.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n55" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fbf7f2;strokeColor=#a0522d;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="72" width="571.5" x="524.7" y="266.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n56" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#a0522d;fontStyle=1;fontFamily=Helvetica" value="STATIC SKILL-OWNER TABLE - frozen before execution" vertex="1">
+          <mxGeometry height="18" width="679.5" x="534.5999999999999" y="270.90000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n57" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="Example for 4 agents: analysis/test -&amp;gt; A1; data -&amp;gt; A2;&lt;br&gt;ml -&amp;gt; A3; report -&amp;gt; A4. The rule is frozen before time starts." vertex="1">
+          <mxGeometry height="32.4" width="679.5" x="538.2" y="284.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n58" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#c0392b;fontStyle=2;fontFamily=Helvetica" value="owner lookup only; not a scheduler" vertex="1">
+          <mxGeometry height="16.2" width="423" x="538.2" y="319.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n59" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#55606a;fontStyle=2;fontFamily=Helvetica" value="checks READY work for its fixed owner" vertex="1">
+          <mxGeometry height="16.2" width="265.5" x="824" y="319.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n60" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#cfd8e3;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="46.8" width="44.1" x="435.59999999999997" y="291.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n61" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#a0522d;fontStyle=1;fontFamily=Helvetica" value="PRE-RUN OWNER RULE&lt;br&gt;applied locally at runtime&lt;br&gt;no dynamic matching" vertex="1">
+          <mxGeometry height="26.1" width="127.8" x="406.79999999999995" y="262.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n62" edge="1" parent="1" source="n51" style="edgeStyle=none;curved=0;html=1;strokeColor=#9aa5ae;strokeWidth=2;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.46;entryY=0.0;entryDx=0;entryDy=0" target="n61" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n63" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#c7e9b4;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="57.6" width="57.6" x="428.4" y="374.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n64" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A1&lt;br&gt;Ability Rank 1 - assigned skills" vertex="1">
+          <mxGeometry height="27" width="108" x="403.2" y="434.70000000000005" as="geometry" />
+        </mxCell>
+        <mxCell id="n65" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#d9a441;fontStyle=0;fontFamily=Helvetica" value="BUSY: holds T02.&lt;br&gt;Only mapped work can&lt;br&gt;enter its queue." vertex="1">
+          <mxGeometry height="39.6" width="113.4" x="400.5" y="464.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n66" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#5aae61;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="57.6" width="57.6" x="545.4" y="374.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n67" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A2&lt;br&gt;Ability Rank 2 - assigned skills" vertex="1">
+          <mxGeometry height="27" width="108" x="520.2" y="434.70000000000005" as="geometry" />
+        </mxCell>
+        <mxCell id="n68" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#2f8f46;fontStyle=0;fontFamily=Helvetica" value="takes T03 only if&lt;br&gt;its skill is pre-mapped&lt;br&gt;to A2 in this example" vertex="1">
+          <mxGeometry height="39.6" width="113.4" x="517.5" y="464.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n69" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=8.5;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="T02" vertex="1">
+          <mxGeometry height="19.8" width="55.8" x="487.8" y="400.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n70" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#5aae61;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="57.6" width="57.6" x="662.4" y="374.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n71" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A3&lt;br&gt;Ability Rank 2 - owns ML" vertex="1">
+          <mxGeometry height="27" width="108" x="637.2" y="434.70000000000005" as="geometry" />
+        </mxCell>
+        <mxCell id="n72" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#6b7680;fontStyle=0;fontFamily=Helvetica" value="BUSY on another ML task;&lt;br&gt;T04 waits for A3" vertex="1">
+          <mxGeometry height="39.6" width="113.4" x="634.5" y="464.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n73" parent="1" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#1b7837;strokeColor=#26313a;fontSize=10;fontColor=#26313a;verticalLabelPosition=bottom;verticalAlign=top;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="57.6" width="57.6" x="779.4000000000001" y="374.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n74" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="A4&lt;br&gt;Ability Rank 3 - owns report" vertex="1">
+          <mxGeometry height="27" width="108" x="754.2" y="434.70000000000005" as="geometry" />
+        </mxCell>
+        <mxCell id="n75" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#c0392b;fontStyle=0;fontFamily=Helvetica" value="IDLE: report is blocked;&lt;br&gt;A4 cannot take T04" vertex="1">
+          <mxGeometry height="39.6" width="113.4" x="751.5" y="464.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n82" edge="1" parent="1" source="n60" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#2f8f46;strokeWidth=2;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0" target="n66" value="T03: fixed owner">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="574.2" y="346.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n83" edge="1" parent="1" source="n60" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#c0392b;strokeWidth=2;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0" target="n70" value="T04 waits for A3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="808.2" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n84" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#c0392b;fontStyle=0;fontFamily=Helvetica" value="✕" vertex="1">
+          <mxGeometry height="17.1" width="28.8" x="837.9" y="356.40000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="n85" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf6f2;strokeColor=#a0522d;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="85" width="522" x="18.9" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="n86" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#a0522d;fontStyle=1;fontFamily=Helvetica" value="The cost of this picture is structural, not accidental." vertex="1">
+          <mxGeometry height="19.8" width="486" x="36.9" y="515.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n87" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="An idle agent may coexist with READY work owned by a busy agent.&lt;br&gt;The baseline does not rematch this work at runtime; doing so would change&lt;br&gt;the static policy being tested." vertex="1">
+          <mxGeometry height="50.4" width="486" x="36.9" y="537.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n88" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f6f8fa;strokeColor=#8fa2b3;fontSize=11;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="" vertex="1">
+          <mxGeometry height="88" width="522" x="576.9" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="n89" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=11;fontColor=#3f6f9f;fontStyle=1;fontFamily=Helvetica" value="Same workload and belt; the allocation rule changes." vertex="1">
+          <mxGeometry height="19.8" width="486" x="594.9" y="515.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n90" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=8.5;fontColor=#26313a;fontStyle=0;fontFamily=Helvetica" value="The DAG, arrivals, potential outcomes and fixed horizon are paired.&lt;br&gt;S1 uses pre-run ownership; CF-Fit uses local bids and atomic claims.&lt;br&gt;No collision under S1 because no agents contest ownership." vertex="1">
+          <mxGeometry height="50.4" width="486" x="594.9" y="537.4" as="geometry" />
+        </mxCell>
+        <mxCell id="ufCyCDXi9dJuTzYtInnU-4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=8;fontColor=#a0522d;fontStyle=1;fontFamily=Helvetica" value="This box illustrates pre-run ownership. It does not assign tasks during execution." vertex="1">
+          <mxGeometry height="26.1" width="127.8" x="275.4" y="270.9" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="AJSTR v2.2 | Fig 5 - simulation tick" id="ajstr-v2-2-figure-5">
+    <mxGraphModel dx="1397" dy="717" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=17;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="One tick of the conveyor, in order" vertex="1">
+          <mxGeometry height="27" width="540" x="273" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;fixed agent pool&lt;br&gt;no join/leave in main runs&lt;/font&gt;" vertex="1">
+          <mxGeometry height="59.4" width="243" x="87.75" y="75.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;collect(t)&lt;br&gt;verify finished attempts&lt;br&gt;PASS to VERIFIED, FAIL retries&lt;/font&gt;" vertex="1">
+          <mxGeometry height="59.4" width="243" x="87.75" y="149.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" edge="1" parent="1" source="n3" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;admit(t)&lt;br&gt;new jobs arrive (Poisson)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="59.4" width="243" x="87.75" y="223.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" edge="1" parent="1" source="n4" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;release(t)&lt;br&gt;predecessors VERIFIED&lt;br&gt;make task READY&lt;/font&gt;" vertex="1">
+          <mxGeometry height="59.4" width="243" x="87.75" y="297" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" edge="1" parent="1" source="n6" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;allocate(t)&lt;br&gt;CF: local bids; static: fixed owners&lt;/font&gt;" vertex="1">
+          <mxGeometry height="59.4" width="243" x="87.75" y="370.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" edge="1" parent="1" source="n8" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;resolve(t)&lt;br&gt;CF claims or central/static rule&lt;/font&gt;" vertex="1">
+          <mxGeometry height="59.4" width="243" x="87.75" y="444.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" edge="1" parent="1" source="n10" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;start(t)&lt;br&gt;assigned agents go BUSY&lt;/font&gt;" vertex="1">
+          <mxGeometry height="59.4" width="243" x="87.75" y="518.4" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" edge="1" parent="1" source="n12" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;account(t)&lt;br&gt;append events to the log&lt;/font&gt;" vertex="1">
+          <mxGeometry height="59.4" width="243" x="87.75" y="592.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" edge="1" parent="1" source="n14" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontColor=#55606a;fontStyle=0;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;t = t + 1&lt;/font&gt;" vertex="1">
+          <mxGeometry height="21.6" width="108" x="68.75" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fbfaf5;strokeColor=#c0ae74;fontSize=10;fontColor=#26313a;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;t reaches fixed horizon H?&lt;/font&gt;" vertex="1">
+          <mxGeometry height="97.2" width="198" x="110.25" y="678.6" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" edge="1" parent="1" source="n16" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#8c8c8c;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;mark unfinished&lt;br&gt;UNSETTLED; run ends&lt;/font&gt;" vertex="1">
+          <mxGeometry height="54" width="144" x="344.25" y="700.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n22" edge="1" parent="1" source="n19" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n21" value="yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n23" edge="1" parent="1" source="n19" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" target="n3" value="no">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="58.95" y="727.2" />
+              <mxPoint x="58.95" y="105.3" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n24" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f9fcf9;strokeColor=#2f8f46;fontSize=9;fontColor=#26313a;strokeWidth=2;fontStyle=0;dashed=0;align=left;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;CF-Fit allocation only&lt;/b&gt;&lt;br&gt;&lt;br&gt;1. Each idle agent sees at most 8 READY tasks.&lt;br&gt;2. Estimate difficulty and success probability.&lt;br&gt;3. Filter below eligibility threshold.&lt;br&gt;4. Submit one fit-ranked bid, with overqualification penalty.&lt;br&gt;5. Resolve ordered nonconflicting claims.&lt;br&gt;6. Handle no-volunteer aging and bounded retry.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="197" width="368.25" x="357.75" y="328.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n25" edge="1" parent="1" source="n10" style="edgeStyle=none;curved=0;html=1;strokeColor=#2f8f46;strokeWidth=1;dashed=1;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n26" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="Task state machine" vertex="1">
+          <mxGeometry height="27" width="153" x="802" y="111" as="geometry" />
+        </mxCell>
+        <mxCell id="n27" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#a8a8a8;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="BLOCKED" vertex="1">
+          <mxGeometry height="46.8" width="153" x="802" y="136.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n28" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eaf6ea;strokeColor=#2f8f46;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="READY" vertex="1">
+          <mxGeometry height="46.8" width="153" x="802" y="203.7" as="geometry" />
+        </mxCell>
+        <mxCell id="n29" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="CLAIMED" vertex="1">
+          <mxGeometry height="46.8" width="153" x="802" y="271.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n30" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf3d8;strokeColor=#d9a441;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="RUNNING" vertex="1">
+          <mxGeometry height="46.8" width="153" x="802" y="338.7" as="geometry" />
+        </mxCell>
+        <mxCell id="n31" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#e4edf7;strokeColor=#3f6f9f;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="VERIFIED" vertex="1">
+          <mxGeometry height="46.8" width="153" x="802" y="406.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n32" edge="1" parent="1" source="n27" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n28" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;deps VERIFIED&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n33" edge="1" parent="1" source="n28" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n29" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;wins claim&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n34" edge="1" parent="1" source="n29" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n30" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n35" edge="1" parent="1" source="n30" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n31" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;verify PASS&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" edge="1" parent="1" source="n30" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" target="n28" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;FAIL, attempts &amp;lt; R&lt;/font&gt;">
+          <mxGeometry relative="1" x="-0.0338" y="58" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="766" y="362.1" />
+              <mxPoint x="766" y="227.1" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n37" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#8c8c8c;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=0;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="DEAD_LETTER" vertex="1">
+          <mxGeometry height="46.8" width="171" x="1057" y="338.7" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" edge="1" parent="1" source="n30" style="edgeStyle=none;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n37" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;attempt cap&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#26313a;fontStyle=1;fontFamily=Helvetica" value="Agent state machine" vertex="1">
+          <mxGeometry height="27" width="153" x="802" y="484.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n40" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="IDLE" vertex="1">
+          <mxGeometry height="46.8" width="153" x="802" y="523.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n41" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="BIDDING" vertex="1">
+          <mxGeometry height="46.8" width="153" x="802" y="590.7" as="geometry" />
+        </mxCell>
+        <mxCell id="t_csKau-SENMY2UGk-Rz-2" edge="1" parent="1" source="n42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="n41" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n42" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="BUSY" vertex="1">
+          <mxGeometry height="46.8" width="153" x="802" y="658.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n43" edge="1" parent="1" source="n40" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n41" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;bids&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n44" edge="1" parent="1" source="n41" style="edgeStyle=none;curved=0;html=1;strokeColor=#26313a;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica" target="n42" value="won">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_csKau-SENMY2UGk-Rz-3" edge="1" parent="1" source="n41" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.007;entryY=0.402;entryDx=0;entryDy=0;entryPerimeter=0;" target="n40" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;lose&lt;/font&gt;">
+          <mxGeometry relative="1" x="-0.1003" y="16" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="779.5" y="614.13" />
+              <mxPoint x="779.5" y="542" />
+            </Array>
+            <mxPoint x="790" y="608" as="sourcePoint" />
+            <mxPoint x="790" y="473" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_csKau-SENMY2UGk-Rz-4" edge="1" parent="1" source="n42" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;strokeColor=#6b7680;strokeWidth=1;dashed=0;fontSize=9;fontColor=#55606a;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;fontFamily=Helvetica;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="n40" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;done&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0819" y="-14" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="970.2" y="681.73" />
+              <mxPoint x="970.2" y="546.45" />
+            </Array>
+            <mxPoint x="811.5" y="690" as="sourcePoint" />
+            <mxPoint x="812.5" y="618" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="AJSTR v2.3 | Matched decision paths" id="ajstr-v23-matched-paths">
+    <mxGraphModel page="1" pageScale="1" pageWidth="1400" pageHeight="830" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="v23title" parent="1" vertex="1" value="ConveyorFlow v2.3 matched decision path" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=31;fontStyle=1;align=center;verticalAlign=middle;"><mxGeometry x="30" y="15" width="1340" height="60" as="geometry"/></mxCell>
+        <mxCell id="v23belt" parent="1" vertex="1" value="Shared READY belt&#xa;Same frontier, agents, fit, stand-down, retry rules and verifier" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#EEF6FD;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;"><mxGeometry x="65" y="105" width="1270" height="95" as="geometry"/></mxCell>
+        <mxCell id="v23local" parent="1" vertex="1" value="CF-Fit&#xa;Each idle agent chooses one local bid" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#EEF8EE;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;"><mxGeometry x="60" y="245" width="370" height="110" as="geometry"/></mxCell>
+        <mxCell id="v23matched" parent="1" vertex="1" value="Central-Matched&#xa;The same one local bid per idle agent" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF4DF;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;"><mxGeometry x="515" y="245" width="370" height="110" as="geometry"/></mxCell>
+        <mxCell id="v23static" parent="1" vertex="1" value="Static S3&#xa;Stage ownership fixed before execution" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F0F0F0;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;"><mxGeometry x="970" y="245" width="370" height="110" as="geometry"/></mxCell>
+        <mxCell id="v23direct" parent="1" vertex="1" value="Direct claim&#xa;No central agent-task matcher" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#EEF8EE;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=24;fontStyle=0;align=center;verticalAlign=middle;"><mxGeometry x="60" y="405" width="370" height="90" as="geometry"/></mxCell>
+        <mxCell id="v23relay" parent="1" vertex="1" value="Coordinator relay&#xa;Cannot add candidates or rerank" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF4DF;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=24;fontStyle=0;align=center;verticalAlign=middle;"><mxGeometry x="515" y="405" width="370" height="90" as="geometry"/></mxCell>
+        <mxCell id="v23owner" parent="1" vertex="1" value="Idle owner takes its&#xa;own dependency-ready stage" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F0F0F0;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=24;fontStyle=0;align=center;verticalAlign=middle;"><mxGeometry x="970" y="405" width="370" height="90" as="geometry"/></mxCell>
+        <mxCell id="v23claim" parent="1" vertex="1" value="Shared claim store and execution / verification&#xa;CF-Fit removes the coordinator from its path, not the shared store" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#EEF6FD;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;"><mxGeometry x="65" y="550" width="1270" height="95" as="geometry"/></mxCell>
+        <mxCell id="v23note" parent="1" vertex="1" value="Zero-overhead control: CF-Fit and Central-Matched must match&#xa;A coordinator outage affects the relay path; a belt outage affects both&#xa;Static is a separate baseline, not the matched authority control" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#65798A;fontColor=#172D3E;fontFamily=Arial;fontSize=23;fontStyle=0;align=center;verticalAlign=middle;"><mxGeometry x="65" y="700" width="1270" height="100" as="geometry"/></mxCell>
+        <mxCell id="v23e0" parent="1" edge="1" source="v23belt" target="v23local" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="v23e1" parent="1" edge="1" source="v23belt" target="v23matched" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="v23e2" parent="1" edge="1" source="v23belt" target="v23static" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="v23e3" parent="1" edge="1" source="v23local" target="v23direct" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="v23e4" parent="1" edge="1" source="v23matched" target="v23relay" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="v23e5" parent="1" edge="1" source="v23static" target="v23owner" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="v23e6" parent="1" edge="1" source="v23direct" target="v23claim" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="v23e7" parent="1" edge="1" source="v23relay" target="v23claim" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="v23e8" parent="1" edge="1" source="v23owner" target="v23claim" style="endArrow=block;strokeColor=#65798A;strokeWidth=2;"><mxGeometry relative="1" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>

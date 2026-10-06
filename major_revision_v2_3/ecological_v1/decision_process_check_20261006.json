@@ -1,0 +1,54 @@
+{
+  "status": "trusted_decision_process_placement_checked",
+  "research_results": false,
+  "no_provider_calls": true,
+  "fixture_only": true,
+  "single_host": true,
+  "parent_process_id": 28612,
+  "local_agent_process_ids": [
+    7404,
+    25716,
+    29352,
+    33716
+  ],
+  "central_decision_process_id": 6460,
+  "same_proposals": true,
+  "agent_choices": [
+    {
+      "agent_id": "A1",
+      "proposal": [
+        0.07261807511348793,
+        0,
+        "easy"
+      ]
+    },
+    {
+      "agent_id": "A2",
+      "proposal": [
+        1.877606884124543,
+        0,
+        "easy"
+      ]
+    },
+    {
+      "agent_id": "A3",
+      "proposal": [
+        1.8351006082872645,
+        0,
+        "easy"
+      ]
+    },
+    {
+      "agent_id": "A4",
+      "proposal": [
+        0.04733149639782708,
+        1,
+        "hard"
+      ]
+    }
+  ],
+  "not_a_latency_or_fault_tolerance_result": true,
+  "atomic_shared_claim_backend_not_checked": true,
+  "live_assessment_execution_verification_not_checked": true,
+  "worker_sha256": "e86b6b19dc0571f24e0bc2baae75cd03cba8341cd5155ec584fe0578b1ff3406"
+}

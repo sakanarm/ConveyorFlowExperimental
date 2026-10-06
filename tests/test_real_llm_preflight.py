@@ -7,8 +7,8 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
-MODULE_PATH = ROOT / "v2" / "real_llm_pilot" / "run_pilot.py"
+ROOT = Path(__file__).resolve().parents[1]
+MODULE_PATH = ROOT / "real_llm_pilot" / "run_pilot.py"
 sys.path.insert(0, str(MODULE_PATH.parent))
 SPEC = importlib.util.spec_from_file_location("run_pilot", MODULE_PATH)
 assert SPEC is not None and SPEC.loader is not None
@@ -17,8 +17,8 @@ SPEC.loader.exec_module(MODULE)
 
 
 def test_current_final_team_reports_research_blockers() -> None:
-    config_path = ROOT / "v2" / "real_llm_pilot" / "config.mfec_final_team.json"
-    cases_path = ROOT / "v2" / "real_llm_pilot" / "case_manifest.csv"
+    config_path = ROOT / "real_llm_pilot" / "config.mfec_final_team.json"
+    cases_path = ROOT / "real_llm_pilot" / "case_manifest.csv"
     config = json.loads(config_path.read_text(encoding="utf-8"))
     cases = MODULE.load_cases(cases_path)
 

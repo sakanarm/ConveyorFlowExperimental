@@ -1,0 +1,9 @@
+{
+  "status": "post_hoc_instrument_diagnostic_not_main_results",
+  "source_protocol": "repository_repair_pilot_v1",
+  "provider_calls": 0,
+  "scope": "Replay every recorded v1 attempt in original case/slot/attempt order. Non-stop or empty outputs are not recovered. Recover only file/hunk metadata against unique exact buggy-source context, preserving every context/addition/deletion byte. Do not choose a decoder by test result, manually repair source, read fixed production code or disclose withheld tests.",
+  "execution_timeout_seconds": 180,
+  "verification": "Use unchanged frozen strict guard, verifier images, visible identity and public regression dispositions; require fresh-container replay after both test gates pass.",
+  "reporting": "Original v1 outcomes remain unchanged. Diagnostic recovery is a separate revision, not new independent model jobs, calibration or an allocation-policy comparison. Report all rejected, failed, verified and unresolved attempts and distinguish first-attempt from any-attempt recovery."
+}

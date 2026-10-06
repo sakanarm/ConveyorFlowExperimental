@@ -1,0 +1,17 @@
+{
+  "study_kind": "exploratory_interface_feasibility_not_policy_comparison",
+  "prompt_revision": "v3_explicit_serialization_missing_values_20261005",
+  "case_ids": ["ADULT_P0", "BEIJING_P0"],
+  "model_slots": ["agent_1", "agent_2", "agent_3"],
+  "max_jobs": 6,
+  "max_attempts_per_stage": 2,
+  "max_total_provider_calls": 48,
+  "generation": {"temperature": 0, "max_output_tokens": 16384, "timeout_seconds": 360},
+  "max_api_retries": 0,
+  "feedback": "Previous source and current-stage execution/schema error only; no hidden labels, hidden scores, or reference source.",
+  "stopping": "Stop a job after two candidate failures in one stage. Stop unresolved infrastructure/provider/version failures without automatic new API calls.",
+  "reason": "Earlier pilots failed on nullable missing values or exhausted completion budgets. Clarify a common artifact contract and give all models the same finite budget, rather than changing validators or repairing model code manually.",
+  "case_reuse": "P0 cases are reused for interface debugging. These are not new independent datasets and are not pooled with earlier prompt revisions.",
+  "ability_rank": "Single-model harness placeholder only; previous microtask ranks are not ecological calibration.",
+  "cost_units": "Provider-reported response-cost units; currency/pricing unconfirmed. Include failed attempts."
+}

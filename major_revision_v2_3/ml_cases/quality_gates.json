@@ -1,0 +1,262 @@
+{
+  "status": "frozen_before_provider_calls",
+  "research_results": false,
+  "case_manifest_sha256": "20cd2a67125a987aabd0b348c8b3b96002b33a0d57629bc5752f3232030a7875",
+  "reference_script_sha256": "a32e7935e67d7b74738a9a76869039ea1c16c061001d093ea7087e49f821e32e",
+  "cases": [
+    {
+      "case_id": "ADULT_P0",
+      "corpus": "adult",
+      "excluded_features": [],
+      "features": [
+        "age",
+        "workclass",
+        "fnlwgt",
+        "education",
+        "education_num",
+        "marital_status",
+        "occupation",
+        "relationship",
+        "race",
+        "sex",
+        "capital_gain",
+        "capital_loss",
+        "hours_per_week",
+        "native_country"
+      ],
+      "quality": {
+        "metric": "roc_auc",
+        "direction": "higher_is_better",
+        "dummy_score": 0.5,
+        "reference_score": 0.8921465672458825,
+        "quality_floor": 0.6960732836229413,
+        "rule": "at least half the reference ROC-AUC improvement over 0.5"
+      },
+      "reference_predictions_sha256": "08713fe983ee8d023d5d51170e228c8e370e623254f7e2501c91fca6a58e8381"
+    },
+    {
+      "case_id": "ADULT_P1",
+      "corpus": "adult",
+      "excluded_features": [
+        "fnlwgt"
+      ],
+      "features": [
+        "age",
+        "workclass",
+        "education",
+        "education_num",
+        "marital_status",
+        "occupation",
+        "relationship",
+        "race",
+        "sex",
+        "capital_gain",
+        "capital_loss",
+        "hours_per_week",
+        "native_country"
+      ],
+      "quality": {
+        "metric": "roc_auc",
+        "direction": "higher_is_better",
+        "dummy_score": 0.5,
+        "reference_score": 0.8918696619195688,
+        "quality_floor": 0.6959348309597844,
+        "rule": "at least half the reference ROC-AUC improvement over 0.5"
+      },
+      "reference_predictions_sha256": "0c30e9500e6c4e6eef3b4fe71b9ce62aacfdbcfc8a891b85a033145160d91a31"
+    },
+    {
+      "case_id": "ADULT_P2",
+      "corpus": "adult",
+      "excluded_features": [
+        "education_num"
+      ],
+      "features": [
+        "age",
+        "workclass",
+        "fnlwgt",
+        "education",
+        "marital_status",
+        "occupation",
+        "relationship",
+        "race",
+        "sex",
+        "capital_gain",
+        "capital_loss",
+        "hours_per_week",
+        "native_country"
+      ],
+      "quality": {
+        "metric": "roc_auc",
+        "direction": "higher_is_better",
+        "dummy_score": 0.5,
+        "reference_score": 0.8921482191012611,
+        "quality_floor": 0.6960741095506305,
+        "rule": "at least half the reference ROC-AUC improvement over 0.5"
+      },
+      "reference_predictions_sha256": "ccb4644e0f254ae3bc77aba5bfe3bba93128adcb1f5babc915b53209d3a32658"
+    },
+    {
+      "case_id": "ADULT_P3",
+      "corpus": "adult",
+      "excluded_features": [
+        "occupation",
+        "native_country"
+      ],
+      "features": [
+        "age",
+        "workclass",
+        "fnlwgt",
+        "education",
+        "education_num",
+        "marital_status",
+        "relationship",
+        "race",
+        "sex",
+        "capital_gain",
+        "capital_loss",
+        "hours_per_week"
+      ],
+      "quality": {
+        "metric": "roc_auc",
+        "direction": "higher_is_better",
+        "dummy_score": 0.5,
+        "reference_score": 0.8874452300166795,
+        "quality_floor": 0.6937226150083398,
+        "rule": "at least half the reference ROC-AUC improvement over 0.5"
+      },
+      "reference_predictions_sha256": "ee0be036d5f93e03dd3cad29952e1c46878a3176e8d9d8d46f9956b4d5aad831"
+    },
+    {
+      "case_id": "BEIJING_P0",
+      "corpus": "beijing",
+      "excluded_features": [],
+      "features": [
+        "year",
+        "month",
+        "day",
+        "hour",
+        "PM10",
+        "SO2",
+        "NO2",
+        "CO",
+        "O3",
+        "TEMP",
+        "PRES",
+        "DEWP",
+        "RAIN",
+        "wd",
+        "WSPM",
+        "station"
+      ],
+      "quality": {
+        "metric": "mean_absolute_error",
+        "direction": "lower_is_better",
+        "dummy_score": 63.78191050665459,
+        "reference_score": 17.870344031253314,
+        "quality_ceiling": 40.826127268953954,
+        "rule": "at least half the reference MAE reduction versus train-median dummy"
+      },
+      "reference_predictions_sha256": "a60e20ce181b06cf84e994096b798f8e3b54aeb9807b4131566b4ffb2389e587"
+    },
+    {
+      "case_id": "BEIJING_P1",
+      "corpus": "beijing",
+      "excluded_features": [
+        "PM10"
+      ],
+      "features": [
+        "year",
+        "month",
+        "day",
+        "hour",
+        "SO2",
+        "NO2",
+        "CO",
+        "O3",
+        "TEMP",
+        "PRES",
+        "DEWP",
+        "RAIN",
+        "wd",
+        "WSPM",
+        "station"
+      ],
+      "quality": {
+        "metric": "mean_absolute_error",
+        "direction": "lower_is_better",
+        "dummy_score": 63.78191050665459,
+        "reference_score": 30.317719929114464,
+        "quality_ceiling": 47.04981521788453,
+        "rule": "at least half the reference MAE reduction versus train-median dummy"
+      },
+      "reference_predictions_sha256": "9f268f0dac34b64b2ee330b2f0ef33e1ddb9d04c4cb3c3529e8047f3fa184360"
+    },
+    {
+      "case_id": "BEIJING_P2",
+      "corpus": "beijing",
+      "excluded_features": [
+        "PM10",
+        "NO2"
+      ],
+      "features": [
+        "year",
+        "month",
+        "day",
+        "hour",
+        "SO2",
+        "CO",
+        "O3",
+        "TEMP",
+        "PRES",
+        "DEWP",
+        "RAIN",
+        "wd",
+        "WSPM",
+        "station"
+      ],
+      "quality": {
+        "metric": "mean_absolute_error",
+        "direction": "lower_is_better",
+        "dummy_score": 63.78191050665459,
+        "reference_score": 32.577447995234905,
+        "quality_ceiling": 48.179679250944744,
+        "rule": "at least half the reference MAE reduction versus train-median dummy"
+      },
+      "reference_predictions_sha256": "f152d6e520e3525fb9124fa5184ccfb2e86fb90d0c8e50d3dc1e2a3b61677891"
+    },
+    {
+      "case_id": "BEIJING_P3",
+      "corpus": "beijing",
+      "excluded_features": [
+        "PM10",
+        "SO2",
+        "NO2",
+        "CO",
+        "O3"
+      ],
+      "features": [
+        "year",
+        "month",
+        "day",
+        "hour",
+        "TEMP",
+        "PRES",
+        "DEWP",
+        "RAIN",
+        "wd",
+        "WSPM",
+        "station"
+      ],
+      "quality": {
+        "metric": "mean_absolute_error",
+        "direction": "lower_is_better",
+        "dummy_score": 63.78191050665459,
+        "reference_score": 55.72473937082391,
+        "quality_ceiling": 59.753324938739254,
+        "rule": "at least half the reference MAE reduction versus train-median dummy"
+      },
+      "reference_predictions_sha256": "438ebcfe4f8680f34d5351043673da15c43495919c9c3ea3162f9a504aa6c88b"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "status": "contract_sentinel_frozen_before_calls",
+  "created_at_utc": "2026-10-05T08:47:40.607304+00:00",
+  "inputs": {
+    "config": "8ca37e96ce81c369cc478130d16c21e23628b0972f4ad4f88e7728eac6676927",
+    "runner": "b39c0ad189559404c3a9c4593caedb853496a9fa2510278db2069d17d40cb4ec",
+    "exact_edits": "984005c0fd8939256aef19e6edc651413bac5615e8f11d3512928a152a0f001f",
+    "source_lock": "f6a23edb3bf8e3e058c1904e56c3cf2070de2f3c4721a0edbf87456faa6baf9a",
+    "source_auditor": "ab9ad19d5c963277df5c3d6dd9e010dfa183a557649a9bd13d7ca2303b3a809c",
+    "bridge": "52c3196d49258bc84fc8a13f040a187b9ac73fc97226bf2c80ccf6f85f274c02"
+  },
+  "settings": {
+    "status": "revised_output_contract_sentinel_not_main",
+    "case_id": "pandas_88",
+    "model_slots": [
+      "agent_1",
+      "agent_2",
+      "agent_3"
+    ],
+    "max_attempts_per_job": 1,
+    "max_provider_calls": 3,
+    "generation": {
+      "temperature": 0,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 720
+    },
+    "execution_timeout_seconds": 180,
+    "purpose": "Check whether all three model aliases can emit executable exact-text edits without asking them to calculate diff hunk counts. Output cap is doubled equally for all aliases. This sentinel reuses a prior feasibility case; it is not held-out calibration, a new independent benchmark sample or an allocation comparison.",
+    "rule": "One call per alias, no automatic retries or manual source repairs. Empty/non-stop/schema/apply/visible/regression failures are separate. Same frozen images, source allowlist and tests. Do not escalate to a full batch until every sentinel outcome has been audited. Previous v1 and offline decoder outcomes remain unchanged."
+  },
+  "context_hashes": {
+    "agent_1": "6fb65c77c6b0d0504b583d5ed9a1dd4a6acae9ef8bdee1f3178ab497de296048",
+    "agent_2": "6fb65c77c6b0d0504b583d5ed9a1dd4a6acae9ef8bdee1f3178ab497de296048",
+    "agent_3": "6fb65c77c6b0d0504b583d5ed9a1dd4a6acae9ef8bdee1f3178ab497de296048"
+  },
+  "research_results": false
+}

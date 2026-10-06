@@ -1,0 +1,9 @@
+{
+  "status": "frozen_before_measurement",
+  "research_scope": "single_host_serial_ipc_proxy_not_provider_latency",
+  "seed": 20261004,
+  "warmup_pairs": 100,
+  "main_pairs": 1000,
+  "smoke_pairs": 5,
+  "response_timeout_seconds": 15
+}

@@ -38,6 +38,9 @@ node_modules/
 # Upstream raw datasets are downloaded by scripts/download_data.py
 data/raw/
 
+# External benchmark checkout; record its commit and fetch it separately
+bip/
+
 # Large simulation ledgers and resumable checkpoints
 results/*/events/
 results/**/metrics.partial.jsonl
@@ -66,3 +69,20 @@ real_llm_pilot/RESUME_*.cmd
 # Logs
 *.log
 debug.log
+
+# v2.3 private execution artifacts (publish code and bounded aggregate reports only)
+major_revision_v2_3/candidate_workspaces/
+major_revision_v2_3/ecological_v1/ml_preparation/
+major_revision_v2_3/results/
+major_revision_v2_3/contexts/
+major_revision_v2_3/.container_context*/
+major_revision_v2_3/**/context/
+major_revision_v2_3/**/build_context/
+major_revision_v2_3/**/candidate_context/
+major_revision_v2_3/**/verifier_context/
+major_revision_v2_3/ml_cases/*/
+CURRENT_MANUSCRIPTS/
+AJSTR Journal/v2_3_word_work/
+.reviewer_code_check_*/
+major_revision_v2_3/ecological_v1/dry_checks_*/
+major_revision_v2_3/ecological_v1/shared_claim_check_*/

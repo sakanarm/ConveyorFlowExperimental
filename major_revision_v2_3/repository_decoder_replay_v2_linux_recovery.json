@@ -1,0 +1,10 @@
+{
+  "status": "platform_manifest_revision_before_any_decoder_tests",
+  "reason": "Windows relative-path keys differ from WSL slash keys; first invocation stopped before output directory or tests",
+  "original_windows_lock_sha256": "fe0b7784fb236e9a6816e1da35cb35eb429fab5bb2d6cb800d338c8157286c0d",
+  "unchanged_runner_sha256": "9b1e4f951a3c3d486eb64b1966e075aa4a8d26d22566527050f5905afdef5eb2",
+  "linux_wrapper_sha256": "20d1165eff174a8f5873407f6d0f7289e39f5c81e181830ee1ed11382a5324b7",
+  "provider_calls": 0,
+  "decoder_algorithm_changed": false,
+  "test_or_source_changes": false
+}

@@ -1,5 +1,9 @@
 # ConveyorFlow v2.3 สถานะปิด Major Revision
 
+## Main allocation design/readiness 6 ตุลาคม 2026 เวลา 23:17 น.
+
+เพิ่ม `ecological_v1/MAIN_ALLOCATION_DESIGN_V1_TH.md` เพื่อระบุ RQ1 แบบ trade-off, matched decision-locus control, static baseline, Fit/stand-down ablations, RQ2 teams ≤4, full artifact chain, metrics/uncertainty และ gates ก่อน paid main. ระบุชัดว่าแผนนี้เขียนหลังเห็น calibration บางส่วนแต่ก่อน main ไม่ใช่ preregistration ก่อน calibration. เพิ่ม `-Stage EcologicalMainReadiness` แบบ read-only/no-provider: ณ audit 113/288 ML pairs, repository capsule ครบ แต่ main-case preparation, profile, live sentinel และ execution lock ยังขาด จึง `ready_to_execute=false`. ตัวตรวจเป็น inventory เท่านั้น; file presence ไม่ใช่ quality certification. Full local suite ผ่าน 233 tests. Main ยังไม่เริ่มและ Major Revision ยังไม่ปิด
+
 ## แผนพื้นที่เก็บข้อมูล 6 ตุลาคม 2026 เวลา 22:53 น.
 
 ผู้ใช้เห็นด้วยกับการใช้ D: พร้อม junction ที่พาธเดิมหลังรอบที่กำลังเขียนหยุดหรือจบ. ทดลอง junction ชั่วคราวในโฟลเดอร์ที่ตั้งชื่อเฉพาะแล้ว Windows แสดง `Junction` และ WSL มองผ่านพาธเดิมได้; ลบเฉพาะ probe ว่างแล้ว ไม่ย้ายผลจริงระหว่าง live run. C: ว่างประมาณ 12.7 GiB, D: ว่าง 242.9 GiB. `candidate_workspaces` 3.6 GiB โดย old isolated stage pilot v2 1.2 GiB และ live ecological ML calibration ประมาณ 0.8 GiB. Git objects ประมาณ 40 MiB จึงไม่ใช้ Git เป็นที่เก็บ raw artifacts. `watch_ml_disk_v3.py` ร้องขอ pause เมื่อ volume เหลือต่ำกว่า 4 GiB; ต้องรอ controller acknowledgement. ก่อนย้ายจริงต้องตรึงรายการ source/destination, ตรวจ hashes ก่อนและหลัง, ทดสอบ Windows/WSL/Podman กับพาธจริง และเก็บหลักฐานการย้ายไว้

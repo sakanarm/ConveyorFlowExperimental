@@ -8,7 +8,7 @@ param(
                  'RepositoryContractAudit', 'BugsCalibrationPreflightStatus', 'BugsCalibrationPreflightExecute',
                  'RepositoryFirstAttemptAudit', 'RepositoryFirstAttemptPrepare', 'RepositoryFirstAttemptExecute',
                  'MLIsolatedStageAudit', 'MLIsolatedStageExecute', 'MLIsolatedStageFinalize',
-                 'EcologicalAudit', 'EcologicalDryRun', 'EcologicalMLPrepare',
+                 'EcologicalAudit', 'EcologicalMainReadiness', 'EcologicalDryRun', 'EcologicalMLPrepare',
                  'EcologicalDecisionCheck', 'EcologicalClaimCheck', 'CodeCheck',
                  'EcologicalMLCalibrationAudit', 'EcologicalMLCalibrationFreeze',
                  'EcologicalMLCalibrationExecute', 'EcologicalMLContinuationFreeze',
@@ -248,6 +248,9 @@ try {
                 throw 'Provide a NEW probe directory -OutputPath inside major_revision_v2_3/ecological_v1.'
             }
             Invoke-Python @("$major/ecological_v1/check_integration_backend_v1.py", '--out', $OutputPath)
+        }
+        'EcologicalMainReadiness' {
+            Invoke-Python @("$major/ecological_v1/check_main_readiness_v1.py")
         }
         'MatchedVerify' {
             Invoke-Python @("$major/verify_matched_v1.py")

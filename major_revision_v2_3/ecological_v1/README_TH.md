@@ -1,5 +1,7 @@
 # Ecological v1 ภายใน ConveyorFlow v2.3
 
+แผนก่อน main และตัวตรวจสถานะใหม่: `MAIN_ALLOCATION_DESIGN_V1_TH.md` และ `python check_main_readiness_v1.py` (หรือ `-Stage EcologicalMainReadiness`). เป็น read-only inventory ไม่เรียก provider/container และไม่อนุญาตให้ launch main อัตโนมัติ; main ต้องมี independent quality audit กับ execution lock แยก
+
 ## กลับมารัน 6 ตุลาคม 2026 เวลา 22:36 น.
 
 Operational disk guard เพิ่มภายหลังโดยไม่แก้ frozen measurement: `watch_ml_disk_v3.py` ตรวจพื้นที่ว่างทุก 60 วินาที และจะสร้าง pause request ผ่านกติกาเดิมเมื่อพื้นที่ใน volume ของ candidate workspace ต่ำกว่า 4 GiB. ต้องรอ controller finished acknowledgment ก่อนถือว่าหยุด. Guard ไม่เรียก provider หรือรัน container และไม่เปลี่ยนผลคู่ที่เริ่มแล้ว

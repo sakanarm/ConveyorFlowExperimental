@@ -5,3 +5,4 @@ REPRODUCE_V2_3.ps1 -text
 REPRODUCIBILITY_V2_3.md -text
 tests/** -text
 real_llm_pilot/** -text
+public_results/v2_3/** -text

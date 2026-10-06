@@ -1,5 +1,5 @@
 # Native Microsoft Word authoring. Creates a new progress manuscript; never overwrites v2.2.
-param([string]$OutputName='ConveyorFlow_IEEE_Manuscript_v2_3_Progress_Rev6.docx')
+param([string]$OutputName='ConveyorFlow_IEEE_Manuscript_v2_3_Progress_Rev7.docx')
 Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
 $taskV2=Split-Path -Parent $PSScriptRoot
@@ -112,6 +112,8 @@ try{
     Replace-Paragraph $taskDoc 'The Real-LLM tier freezes 60' ($taskLiveDescription.Text.Trim().Replace('60 executable cases','60 ML microtasks and repair-surrogate cases'))
     $taskLiveStudy=Find-Paragraph $taskDoc 'The Real-LLM study used the selected'
     Replace-Paragraph $taskDoc 'The Real-LLM study used the selected' ($taskLiveStudy.Text.Trim().Replace('60 executable cases','60 ML microtasks and repair-surrogate cases'))
+    $taskCalibrationNote=Find-Paragraph $taskDoc 'Calibration instrument corrections are fully logged'
+    Replace-Paragraph $taskDoc 'Calibration instrument corrections are fully logged' ($taskCalibrationNote.Text.Trim().Replace('60 executable bundles','60 microtask and repair-surrogate bundles'))
     $taskCostDescription=Find-Paragraph $taskDoc 'For each valid run, completion'
     Replace-Paragraph $taskDoc 'For each valid run, completion' ($taskCostDescription.Text.Trim().Replace('cost is computed from recorded input/output tokens and the frozen observed price metadata','cost is summed from the recorded provider response-cost values'))
     Replace-Paragraph $taskDoc 'Equation (13) replaces' 'Equation (13) replaces simulation ticks with measured monotonic wall time T. Each call_cost is the recorded provider response-cost value when supplied; token counts and declared rates are used only when that alternative is configured and known. Creal includes recorded calls on failed attempts. The currency of the MFEC response-cost values is unconfirmed. The extension provider-gap exclusions affect only timing-based quantities, not completion or recorded cost.'
@@ -154,7 +156,7 @@ try{
     $rows=@();$rows+=,@('Deployment','N','Verified','Unresolved')
     foreach($m in $taskRepo.cells){$rows+=,@($m.model_alias,[string]$m.planned_pairs,[string]$m.verified,[string]$m.unresolved)}
     Insert-Table $taskDoc 'TABLE X. FIRST ATTEMPT LOCALIZED REPAIRS' $rows
-    [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' 'The 17 returned responses reported 223,970 input tokens and 223,724 output tokens, with 0.199841350 provider-reported cost units. One unresolved request has unknown billing. These results show bounded executable repairs under this contract, not autonomous repository-wide repair or an allocation-policy advantage. The new calibration started on 6 October 2026; it is still running in this progress revision. No partial calibration counts are treated as a final result.')
+    [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' 'The 17 returned responses reported 223,970 input tokens and 223,724 output tokens, with 0.199841350 provider-reported cost units. One unresolved request has unknown billing. These results show bounded executable repairs under this contract, not autonomous repository-wide repair or an allocation-policy advantage. The separate ecological ML calibration started on 6 October 2026 and is still running in this progress revision. No partial calibration counts are treated as a final result.')
     if($null -ne $taskNewRepo){
         [void](Insert-Paragraph $taskDoc 'VII. DISCUSSION' 'L. Completed Repository Calibration' -3)
         $taskTotal=$taskNewRepo.total
@@ -184,15 +186,17 @@ try{
     # This isolated figure section previously balanced picture/caption into
     # opposite columns. Give the figure its own full-width section and keep
     # the image/caption together without deleting either section boundary.
-    $taskCaption=Find-Paragraph $taskDoc 'Fig. 6.'
-    $taskPicture=Nearest-Figure $taskDoc $taskCaption
-    $taskPicture.Range.Sections.Item(1).PageSetup.TextColumns.SetCount(1)
-    $taskBreak=$taskPicture.Range.Paragraphs.Item(1).Range.End-1
-    if($taskCaption.Start -ne $taskBreak+1){throw 'Fig. 6 caption adjacency changed'}
-    $taskDoc.Range($taskBreak,$taskBreak+1).Text=[string][char]11
-    $taskBlock=$taskPicture.Range.Paragraphs.Item(1).Range
-    $taskBlock.ParagraphFormat.KeepTogether=-1;$taskBlock.ParagraphFormat.KeepWithNext=0
-    $taskBlock.ParagraphFormat.Alignment=1
+    foreach($taskFigureNumber in @(6,9)){
+        $taskCaption=Find-Paragraph $taskDoc "Fig. $taskFigureNumber."
+        $taskPicture=Nearest-Figure $taskDoc $taskCaption
+        $taskPicture.Range.Sections.Item(1).PageSetup.TextColumns.SetCount(1)
+        $taskBreak=$taskPicture.Range.Paragraphs.Item(1).Range.End-1
+        if($taskCaption.Start -ne $taskBreak+1){throw "Fig. $taskFigureNumber caption adjacency changed"}
+        $taskDoc.Range($taskBreak,$taskBreak+1).Text=[string][char]11
+        $taskBlock=$taskPicture.Range.Paragraphs.Item(1).Range
+        $taskBlock.ParagraphFormat.KeepTogether=-1;$taskBlock.ParagraphFormat.KeepWithNext=0
+        $taskBlock.ParagraphFormat.Alignment=1
+    }
     # A table caption must travel with the first row, including older tables.
     foreach($taskParagraph in $taskDoc.Paragraphs){
         if($taskParagraph.Range.Text.StartsWith('TABLE ')){

@@ -15,7 +15,8 @@ param(
                  'EcologicalMLContinuationExecute', 'EcologicalMLContinuation2Freeze',
                  'EcologicalMLContinuation2Execute', 'EcologicalRepositoryCalibrationAudit',
                  'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
-                 'EcologicalRepositoryCalibrationFinalize')]
+                 'EcologicalRepositoryCalibrationFinalize', 'EcologicalIntegrationCheck',
+                 'EcologicalMLCalibrationFinalize')]
     [string]$Stage = 'Check',
     [string]$CaseId = 'ADULT_P1',
     [string]$ModelSlot = 'agent_1',
@@ -70,6 +71,10 @@ try {
         }
         'EcologicalRepositoryCalibrationAudit' {
             Invoke-Python @("$major/ecological_v1/audit_repository_calibration.py")
+        }
+        'EcologicalMLCalibrationFinalize' {
+            if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/results.' }
+            Invoke-Python @("$major/ecological_v1/finalize_ml_calibration_v1.py", '--output', $OutputPath)
         }
         'EcologicalRepositoryCalibrationFinalize' {
             if (-not $OutputPath) { throw 'Specify a new result directory with -OutputPath.' }
@@ -195,6 +200,12 @@ try {
                 throw 'Provide a NEW probe directory -OutputPath inside major_revision_v2_3/ecological_v1.'
             }
             Invoke-Python @("$major/ecological_v1/check_shared_claim.py", '--out', $OutputPath)
+        }
+        'EcologicalIntegrationCheck' {
+            if (-not $OutputPath) {
+                throw 'Provide a NEW probe directory -OutputPath inside major_revision_v2_3/ecological_v1.'
+            }
+            Invoke-Python @("$major/ecological_v1/check_integration_backend_v1.py", '--out', $OutputPath)
         }
         'MatchedVerify' {
             Invoke-Python @("$major/verify_matched_v1.py")

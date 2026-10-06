@@ -1,0 +1,106 @@
+{
+  "execution_lock": {
+    "path": "ecological_v1\\repository_calibration_execution_lock.json",
+    "sha256": "24c9e82cc93f3f177e2e8cff6f580e5212be52c99ceb7ba407f98cefef438d1a"
+  },
+  "controller_finished": {
+    "path": "candidate_workspaces\\ecological_repository_calibration_v1\\batch_finished.json",
+    "sha256": "97fb3964653f86fd1992e2de0544fbb9b48c87c8a8f50101b61b00931124662b"
+  },
+  "analysis_script": {
+    "path": "ecological_v1\\finalize_repository_calibration.py",
+    "sha256": "e3615bcb4af241cda3d54b52abaebe192ed26f4abd007242efc8a7872d9f4a49"
+  },
+  "auditor": {
+    "path": "ecological_v1\\audit_repository_calibration.py",
+    "sha256": "342c3ab008b8f28178eafe95d3fb699d6beb3390a91bb018a24402ecac932e57"
+  },
+  "ledgers": [
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\ledger_agent_1.jsonl",
+      "sha256": "32a00982f9ddee05c7eb4b32c3598051aad64c8da49dfacec2d16d4fb941479f"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\ledger_agent_2.jsonl",
+      "sha256": "9ce826c2e988e123de86de0c93a380c92fbfcdeadcb7f9b4d2dced4d359912e3"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\ledger_agent_3.jsonl",
+      "sha256": "0688462a0d60c8f35d3c7e5ea80fcb0cec4c87df8466096174104c9c4e2bc540"
+    }
+  ],
+  "summaries": [
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\luigi_4_agent_1\\summary.json",
+      "sha256": "1ae9cf65a24135bea8fdab46e18e2138d3a91095f124ebc25de97134e0ef739e"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\luigi_4_agent_2\\summary.json",
+      "sha256": "81069502a6545417142166376e94be42bf1d5ca1792f7d3998a507febcae0702"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\luigi_4_agent_3\\summary.json",
+      "sha256": "27f56c8d7dc4e2c001ea3bf392293f0cd2c043f2f7afe29b7ff01b84862c1fe2"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\pandas_37_agent_1\\summary.json",
+      "sha256": "82e3ebfd2b2a48547bb454386a5ac6d853d5813480d5c1053c106a6f8d71d6de"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\pandas_37_agent_2\\summary.json",
+      "sha256": "8c04d112dda6e652e1089453620ea9a954fa214406667ed7ab9dabdaf5efa5a9"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\pandas_37_agent_3\\summary.json",
+      "sha256": "dd49dc8f7202d8ce6d0127c2759777b3997499857d63ef702d8cb3a7fd9ed308"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\luigi_18_agent_1\\summary.json",
+      "sha256": "170694de695381fde2607f9bd3cd62c2d3d3f9a54493a18f622ea6cadeedde28"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\luigi_18_agent_2\\summary.json",
+      "sha256": "f590646d576d9f21b50f55b210d054a8da431cdce56ef9ad56af049a62a09299"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\luigi_18_agent_3\\summary.json",
+      "sha256": "2ce867eb5304dac08d47d4d621e1ad9b353c8e1573a6a463b47c0a1160fa6ddb"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\matplotlib_30_agent_1\\summary.json",
+      "sha256": "559d291ffefb5e8ec6ed42d41b8a4ea4afcdd5f8f31fcc585beafb1bfc786882"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\matplotlib_30_agent_2\\summary.json",
+      "sha256": "2c528540c9208cdbe79fccd3f37497ba62d2a2aa468d270980b4405ee186f754"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\matplotlib_30_agent_3\\summary.json",
+      "sha256": "a8b3fecc63de59b74a266ae95ff10a3925c50750cfc6ddbefd2b6e36f9e09957"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\pandas_139_agent_1\\summary.json",
+      "sha256": "33c1edb891fd8dad8dd906d563bf2876fc4ee3d711b1cad10a4bdea758e81ea0"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\pandas_139_agent_2\\summary.json",
+      "sha256": "4a7e0bf5f252073ea27982763f1717ae1696a5fb066655690effdbb7fcc9e345"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\pandas_139_agent_3\\summary.json",
+      "sha256": "5eba4c6bc858b0ffc67b664b442c84f700e54d87cd30bd96a00edc20b4375b59"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\matplotlib_10_agent_1\\summary.json",
+      "sha256": "b9292b12a5ae18603735cafb0f626758fd8c0110b6ecd3a3b5349c7504161b2e"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\matplotlib_10_agent_2\\summary.json",
+      "sha256": "5c4591682128d48dcfc3d21c3739d293af40ce05fcd22f04f2902c6135a5a2ed"
+    },
+    {
+      "path": "candidate_workspaces\\ecological_repository_calibration_v1\\matplotlib_10_agent_3\\summary.json",
+      "sha256": "d160d050b07ec014cc50caf3ffc51722ecf82230b9a110294a524897bec2d55d"
+    }
+  ]
+}

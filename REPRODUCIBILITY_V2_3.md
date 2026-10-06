@@ -11,7 +11,7 @@ python -m pytest tests -q
 ./REPRODUCE_V2_3.ps1 -Stage CodeCheck
 ```
 
-On 6 October 2026, the local suite passed 207 pytest tests (175 unittest cases plus 32 pytest-style tests). A fresh public Git-index export passed 203 tests and explicitly skipped four integration checks that require public-data/reference preparation or the separately fetched BugsInPy reference patch. Controller and final-analysis guards passed in both runs. Skipped checks are not reported as passed. Fixture guard checks remain active without the gold patch. Tests do not constitute live-LLM results. `Check` additionally audits *locally available* historical result capsules and may require investigator artifacts that are deliberately not committed. Do not infer that missing historical raw ledgers were regenerated.
+On 6 October 2026, the explicitly scoped local suite passed 217 pytest tests (185 unittest cases plus 32 pytest-style tests). A clean public Git-index export passed 213 tests and explicitly skipped four integration checks that require public-data/reference preparation or the separately fetched BugsInPy reference patch. The integrated-backend and ML-finalizer guards passed in both runs. Skipped checks are not reported as passed. Fixture guard checks remain active without the gold patch. Tests do not constitute live-LLM results. `pytest.ini` limits default collection to trusted `tests/`; never collect candidate or benchmark source trees on the host. `Check` additionally audits *locally available* historical result capsules and may require investigator artifacts that are deliberately not committed. Do not infer that missing historical raw ledgers were regenerated.
 
 Fixtures can be rerun into **new** destinations. Never overwrite a frozen run:
 
@@ -19,9 +19,12 @@ Fixtures can be rerun into **new** destinations. Never overwrite a frozen run:
 ./REPRODUCE_V2_3.ps1 -Stage EcologicalDryRun -OutputPath major_revision_v2_3/ecological_v1/reviewer_dry_01
 ./REPRODUCE_V2_3.ps1 -Stage EcologicalDecisionCheck -OutputPath major_revision_v2_3/ecological_v1/reviewer_decision_01.json
 ./REPRODUCE_V2_3.ps1 -Stage EcologicalClaimCheck -OutputPath major_revision_v2_3/ecological_v1/reviewer_claim_01
+./REPRODUCE_V2_3.ps1 -Stage EcologicalIntegrationCheck -OutputPath major_revision_v2_3/ecological_v1/reviewer_integration_01
 ```
 
 The separate-process decision check and SQLite claim check use trusted code. They test parity and ownership invariants, not LLM throughput, distributed fault tolerance, or network latency.
+
+The integrated fixture check connects actual agent/coordinator choice processes, shared CAS, concurrent trusted fixture executors, predecessor artifact digests and verifier completion. CF computes its proposal in its claimant process; the rule-matched coordinator computes the same pure function centrally. Static ownership is fixed before execution. Hash-chain ledgers retain failures and unknown outcomes. There is no paid launch route in this fixture backend: its ranks, 100 ms clock and 20 ms backoff unit are diagnostic settings, not calibrated main-experiment parameters. Active work exceeding the fixture horizon leaves incomplete evidence rather than being promoted to a passed run. Live assessor/executor/container-verifier adapters and late-return billing rules remain integration gates.
 
 ## Live execution and security
 
@@ -50,11 +53,13 @@ After all 18 repository pairs and their ledger appends finish, seal an aggregate
 
 This command rejects incomplete batches and existing destinations. It checks the final controller marker and evidence identity, retains unresolved outcomes, and records analysis/evidence hashes. It makes no API calls, executes no candidate code, and assigns no Ability Ranks. Per-repository cells contain only two cases per deployment; nominal Wilson intervals do not account for repository dependence and are not population-wide confidence statements.
 
+`EcologicalMLCalibrationFinalize` likewise requires all 288 ML pairs, no active/pending pairs, final ledger agreement and a complete continuation controller. It reports deployment × corpus × stage operational rates, failures, unknown-outcome bounds and nominal Wilson references, not full pipelines, general-population intervals, Ability Ranks or D1–D3 coefficients. `ecological_v1/watch_ml_completion_v1.py` can wait for the existing controller and invoke this read-only finalizer. The watcher never issues/retries provider calls or changes Office/Git files; a stopped controller produces no final capsule. Its source/analysis/lock hashes are checked while waiting.
+
 ## Evidence boundaries
 
 - The completed isolated-stage pilot has 36 case–stage–deployment pairs: 28 verified, 6 contract/execution failures, and 2 unresolved provider outcomes. All pairs use trusted predecessors. This is not 36 full pipelines or held-out ability calibration.
 - The completed localized-repair pilot has 18 case–deployment pairs from six cases in three repositories: 7 verified. Public regression tests are withheld from candidates, not novel hidden tests. Environment exclusions, explicit localization, failures and unresolved billing remain disclosed.
-- New ecological calibration started on 6 October 2026. The frozen ML population has 24 task specifications, four stages, and three deployments: 288 first-attempt requests. It reuses two source corpora and row splits; it is a task-specification holdout, not 24 independent datasets or a raw-data holdout. Repository calibration uses a separate outcome-blind environment pool.
+- New ecological calibration started on 6 October 2026. The frozen ML population has 24 task specifications, four stages, and three deployments: 288 first-attempt requests. It reuses two source corpora and row splits; it is a task-specification holdout, not 24 independent datasets or a raw-data holdout. ML calibration is still running. Repository calibration used a separate outcome-blind environment pool and completed all 18 pairs: 8 verified, 8 model failures and 2 unresolved provider outcomes. The aggregate capsule is in `public_results/v2_3/ecological_repository_calibration_v1/`; raw candidate/provider artifacts remain investigator-held. Do not pool it with the earlier 18-pair repair pilot.
 - Main live allocation comparison is not complete. `CENTRAL_RULE_MATCHED` moves the same choice computation to one coordinator; the older Central-Matched experiment only relayed bids. Do not merge these estimands. The shared belt/claim store remains a failure dependency.
 - Original simulation probabilities are scenario assumptions. These pilot observations do not retroactively turn them into empirical estimates or provide a difficulty-specific probability curve. Ability ranks must come from calibration with uncertainty, not vendor, price or release date.
 

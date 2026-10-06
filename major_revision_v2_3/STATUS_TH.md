@@ -1,5 +1,29 @@
 # ConveyorFlow v2.3 สถานะปิด Major Revision
 
+## Live update 6 ตุลาคม 2026 เวลา 16:35 น.
+
+**ML continuation2กำลังรัน MFEC จริง; repositoryรอบใหม่จบ18/18แล้ว**. งบไม่ใช่blockerและไม่ต้องขอAPIceilingเพิ่ม. MLsnapshot16:35:05น.:completed67/288,VERIFIED53,STAGE_CONTRACT_FAILED5,GENERATION_CONTRACT_FAILED1,PROVIDER_UNRESOLVED7,REPLAY_UNRESOLVED1;active2และnever-started219. ActiveคือGLM/Beijing03/preprocessและTencent/Beijing03/train. Provider/model/token/source/gatesยังใช้locksเดิม ไม่retryคู่ที่เริ่มแล้ว
+
+- เพิ่มintegratedprocessbackendfixtureแยกจากfrozenpaidcontrollers. เชื่อมREADY/dependencies → actualagentหรือcoordinatorchoiceprocess → sharedSQLiteCAS → concurrenttrustedfixtureexecution → verifier/artifact/terminalaccounting. ทั้ง5armsและupstreamfailure/unknownผ่านที่`ecological_v1/integration_checks_20261006_v2/`. ใหม่แก้Windowslong-pathimportในreviewercheckoutและตรึงdefaultpytestcollectionไว้trustedtests. ไม่อ้างว่าfixtureเป็นpaidmainหรือproductionconcurrencyครบ;liveadapters/late-returnsettlement/claim-roundbarrierยังเป็นgates
+- Local217testsผ่าน;cleanpublicGit-indexexport213ผ่าน/4integrationchecksที่ต้องpublicdata/externalbenchmarkถูกskipอย่างชัดเจน ไม่ใช่passed. พร้อมpublicaggregate4filesของrepository18pairsที่byte-identicalกับfinalcapsule ไม่มีcredential/rawresponses/candidateartifactsในstaging
+- เพิ่มMLfinalizerพร้อม4guards. การเรียกบนpartialbatchถูกปฏิเสธจริงและไม่มีfinaldirectoryสร้าง. ตัวเฝ้าcompletionแบบread-onlyเริ่มแล้วที่`watch_ml_completion_v1.py`:ไม่ใช้key/ไม่เรียกAPI/ไม่restartcontroller เมื่อครบ288และfinalmarkersตรงจึงseal`results/ecological_ml_calibration_v1_final/`;หากcontrollerหยุดจะไม่สร้างรายงานผลจบ. ห้ามเปลี่ยนwatcher/analysis/lockระหว่างเฝ้าโดยใช้identityเดิม
+- IEEEProgressRev6ยังเป็นร่างล่าสุดที่สร้างสำเร็จ (21หน้า,15figures,13nativeeq,11tablesพร้อมrepositoryfinalcounts). Rev7caption-repairสองrouteหยุดเฉพาะhiddenWordhelpersในtempcopiesเพราะCOMไม่เดินต่อ;ไม่มีRev7outputและไม่กระทบLLMworkersหรือsource/v2.2. Fig9caption/whitespaceยังต้องแก้ก่อนdelivery. AJSTR/PowerPoint/QEยังไม่รับfinalaggregateรอบใหม่
+
+**ยังไม่ปิดMajor Revision**:หลังcalibrationครบต้องfreezeprofiles/uncertainty/difficultyprovenance,เชื่อมlivecontaineradaptersและรันpairedCF-Fit/CENTRAL_RULE_MATCHED/Staticพร้อมRQ2/ablations. Storyตามที่ปรึกษาคงเดิม;วัดtrade-offs ไม่must-win. Snapshotsด้านล่างเป็นประวัติ
+
+## Live update 6 ตุลาคม 2026 เวลา 16:06 น.
+
+**ชุด repository ecological calibration จบครบ18/18แล้ว; ชุด ML ยังรัน MFEC จริงอยู่**. งบได้รับอนุญาตแล้ว ไม่รอคำตอบเรื่องเพดาน API และไม่เรียกคู่ที่เริ่มแล้วซ้ำเพื่อคัดผลดี
+
+- Repository รอบใหม่: VERIFIED8, VISIBLE_TEST_FAILED5, UNFINISHED_OR_EMPTY_OUTPUT3, PROVIDER_UNRESOLVED2. Tencent4/6, GPT2/6, GLM2/6 VERIFIED. Auditor ตรวจ markers, summaries, append-only ledger และ replay gates ครบ ไม่มีคู่ซ้ำหรือคู่ค้าง ไม่ pool กับ supporting batch เก่าที่ VERIFIED7/18
+- Final capsule: `results/ecological_repository_calibration_v1_final/`; summary SHA256 `6c03c7cc56a924683d2f18e2f660b7d31b19a6d3064cf33a7e7d3981d02eb51d`. มี16 returned responses,164113 input tokens,183522 output tokens และ0.159635836 provider-reported cost units. สกุลเงินยังไม่ยืนยัน; อีก2 requestsมีbillingที่ไม่ทราบ ไม่เรียกยอดนี้ว่าtotal billed cost
+- Public aggregate copies ที่ `../public_results/v2_3/ecological_repository_calibration_v1/` มีเพียง audit/summary/manifest/RESULTS; ไม่มี credentials, responses หรือ candidate code. Local tests207ผ่าน; clean public code export203ผ่าน/4integration skips. Code pushล่าสุด`78a6f0f`; aggregate copyกำลังบันทึกในcommitถัดไป
+- ML snapshot16:05:35น.: completed47/288, VERIFIED36, STAGE_CONTRACT_FAILED4, PROVIDER_UNRESOLVED6, REPLAY_UNRESOLVED1; active1, never-started240. ตัวเลขนี้ไม่ใช่final rate. Continuation2ยังทำงานด้วยlockเดิม
+- หนึ่งBeijing trainชนfrozen256MiB file-size capซึ่งไม่ได้ระบุชัดในprompt; คงfailureไว้และเปิดเผยใน`ecological_v1/OBSERVED_RESOURCE_LIMITATION_TH.md`. ห้ามเปลี่ยนcapหรือrepair/rerunคู่เดิมเพื่อpromoteคะแนน; future mainต้องระบุresource limitsทั้งหมดก่อนoutcomes
+- IEEE v2.3 ProgressRev6สร้างด้วยMicrosoft Wordแล้ว:21หน้า,15figures,13nativeequations,11tables รวมrepositoryรอบใหม่และข้อจำกัด. Renderedครบ21หน้าและตรวจทุกหน้าแล้ว พบFig9captionแยกcolumnและช่องว่างจากsection breaksที่ยังต้องแก้ จึงยังไม่ตั้งเป็นsubmission-ready. AJSTR/PowerPoint/QEยังไม่ได้รับfinal aggregateชุดนี้
+
+**G5 paired live allocation main และ Major Revision ยังไม่ปิด**. ขั้นถัดไปคือfreeze profilesหลังcalibrationครบและเชื่อมseparate-process decision/claim/assessor/executor/verifierก่อนmainตามRQ1/RQ2. Controlใหม่CENTRAL_RULE_MATCHEDใช้choice functionเดียวกันแต่คำนวณที่coordinator; controlเก่าCentral-Matchedเป็นrelay-onlyและใช้แทนกันไม่ได้. ส่วนด้านล่างเป็นdated history ไม่ใช่สถานะปัจจุบัน
+
 ## Live update 6 ตุลาคม 2026 เวลา 15:26 น.
 
 **กำลังเรียก real LLM ใหม่ทั้ง ML และ repository ตามงบที่ผู้ใช้อนุญาตแล้ว** ไม่รอเพดาน calls เพิ่ม และยังไม่สรุปว่า Major Revision ปิดแล้ว

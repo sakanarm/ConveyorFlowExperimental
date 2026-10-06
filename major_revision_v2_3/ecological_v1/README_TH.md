@@ -1,5 +1,19 @@
 # Ecological v1 ภายใน ConveyorFlow v2.3
 
+## ความคืบหน้า 6 ตุลาคม 2026 เวลา 16:35 น.
+
+MLcontinuation2กำลังรันMFECจริง:67/288completed,53VERIFIED,6contract/generationfailures,7provider-unresolved,1replay-unresolved;2activeและ219never-started. Repositorycalibrationครบ18/18และsealaggregateแล้ว. Read-onlycompletionwatcherเริ่มเฝ้าMLcontroller;เมื่อครบและmarkers/ledgersตรงจึงสร้างfinalcapsule หากcontrollerหยุดจะไม่sealและไม่restart/retrypaidcalls. งบอนุญาตแล้ว ไม่รอceiling
+
+Integratedbackendfixture/checksอยู่`integration_backend_v1.py`,`integration_worker_v1.py`,`check_integration_backend_v1.py`;canonicalcurrentprobe`integration_checks_20261006_v2/`ผ่าน5armsและupstreamfailure/unknown. รายละเอียดข้อจำกัดอยู่`INTEGRATION_BACKEND_STATUS_TH.md` ยังคงไม่มีpaidmainroute. Local217testsผ่าน;publicexport213ผ่าน4integration skips. IEEERev6รับผลrepositoryแล้วแต่ยังมีlayoutfix;Rev7COMค้างและไม่มีoutput. AJSTR/slides/QEยังไม่อัปเดตชุดนี้. Snapshotsด้านล่างเป็นประวัติ
+
+## ความคืบหน้า 6 ตุลาคม 2026 เวลา 16:06 น.
+
+Repository calibrationรอบใหม่จบ18/18และfinalizeแล้ว:8VERIFIED,8model failures,2provider-unresolved. MLcontinuation2ยังเรียกMFECจริง:47completed/288ณ16:05น.;36VERIFIED,4contract failure,6provider-unresolved,1replay-unresolved,1activeและ240never-started. ไม่rerunคู่เดิมหรือทับfrozenevidence. งบไม่ใช่blockerแล้ว
+
+Finalrepositorycapsuleอยู่`../results/ecological_repository_calibration_v1_final/`; publiccopiesแบบaggregate-onlyอยู่`../../public_results/v2_3/ecological_repository_calibration_v1/`. ตรวจซ้ำด้วยauditไม่เรียกfinalizerทับผล. เป็นlocalizedconditionalcalibrationหกcases/สามrepos ไม่ใช่repository-wideautonomousrepairหรือallocationmain. NominalWilsonintervalsไม่ใช่cluster-adjustedpopulationinference. Mainprofilesยังต้องรอMLcalibrationและdifficultyprovenance; G5ยังไม่พร้อม
+
+IEEEProgressRev6รับผลrepositoryรอบใหม่แล้วแต่layoutQAยังพบFig9captionแยกcolumn; ยังไม่ใช่submission-ready. ไม่กล่าวว่าAJSTR/PowerPoint/QEรับผลแล้ว. ข้อจำกัดfile-sizecapอยู่`OBSERVED_RESOURCE_LIMITATION_TH.md`; ไม่แก้frozenpromptsระหว่างbatch. Snapshotด้านล่างเป็นประวัติเท่านั้น
+
 ## ความคืบหน้า 6 ตุลาคม 2026 เวลา 15:48 น.
 
 ทั้ง ML continuation 2 และ repository calibration กำลังเรียก MFEC จริง ไม่รออนุมัติงบแล้ว. ML execution population มี 288 first-attempt pairs; repository มี 18 pairs จากหกเคสใหม่/สาม repositories. Snapshot เวลา 15:44 น.: ML จบ 42 คู่ (33 VERIFIED), repository จบ 14 คู่ (6 VERIFIED). ตัวเลขนี้ยังเป็น partial ไม่ใช่ผลสุดท้าย และไม่ใช่ allocation main.

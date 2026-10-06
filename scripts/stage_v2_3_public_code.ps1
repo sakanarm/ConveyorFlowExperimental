@@ -4,9 +4,10 @@ $ErrorActionPreference = 'Stop'
 $taskRepo = (Resolve-Path -LiteralPath (Split-Path -Parent $PSScriptRoot)).Path
 Push-Location -LiteralPath $taskRepo
 try {
-    $taskPaths = @('.gitattributes','.gitignore','REPRODUCE_V2_3.ps1','REPRODUCIBILITY_V2_3.md',
+    $taskPaths = @('.gitattributes','.gitignore','pytest.ini','REPRODUCE_V2_3.ps1','REPRODUCIBILITY_V2_3.md',
                    'ConveyorFlow_diagrams_en_working.drawio','scripts/stage_v2_3_public_code.ps1',
                    'scripts/build_ieee_v2_3_progress_with_word.ps1',
+                   'scripts/repair_ieee_v2_3_caption_with_word.ps1',
                    'scripts/render_native_word_document.ps1')
     foreach ($taskFolder in @('major_revision_v2_3','major_revision_v2_3/ecological_v1')) {
         $taskPaths += @(Get-ChildItem -LiteralPath $taskFolder -File | Where-Object {
@@ -23,6 +24,13 @@ try {
     $taskPaths += @('major_revision_v2_3/ml_cases/case_manifest.json',
                     'major_revision_v2_3/ml_cases/quality_gates.json',
                     'major_revision_v2_3/requirements_ml_eval.lock.txt')
+    # Four completed aggregate files only; never stage raw paid evidence.
+    $taskAggregate='public_results/v2_3/ecological_repository_calibration_v1'
+    if(Test-Path -LiteralPath $taskAggregate){
+        foreach($taskName in @('audit.json','summary.json','evidence_manifest.json','RESULTS.md')){
+            $taskPaths += $taskAggregate+'/'+$taskName
+        }
+    }
     $taskPaths = @($taskPaths | Sort-Object -Unique)
     $taskSuspicious = @()
     foreach ($taskPath in $taskPaths) {

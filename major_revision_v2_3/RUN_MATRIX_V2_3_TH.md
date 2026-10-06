@@ -1,5 +1,17 @@
 # v2.3: ต้องรันอะไรเพื่อปิด Major Revision และรีรันอย่างไร
 
+## Live update 6 ตุลาคม 2026 เวลา 16:35 น.
+
+MLกำลังรันMFECจริง:67completed/288 (53VERIFIED,6contract/generationfailures,7provider-unresolved,1replay-unresolved),2active,219never-started. Repositorycalibrationรอบใหม่ครบ18/18และfinalcapsule/publicaggregateพร้อมแล้ว. งบไม่ใช่blocker. เพิ่ม`EcologicalIntegrationCheck`ที่เชื่อมactualdecisionprocess/CAS/concurrenttrustedfixtures/verificationครบ แต่ยังไม่ใช่liveadaptermain. Local217testsผ่าน/publicexport213ผ่าน4integration skips
+
+`EcologicalMLCalibrationFinalize`มีcomplete-controller/ledgerguardsและปฏิเสธpartialrunแล้ว. Read-onlycompletionwatcherกำลังเฝ้าเพื่อsealreportหลังครบเท่านั้น ไม่เรียกAPIหรือretrycontroller. WordRev7ไม่สำเร็จเพราะCOMค้าง;Rev6ยังเป็นร่างล่าสุดต้องแก้Fig9captionและตรวจlayoutใหม่. **G5/MajorRevisionยังไม่ปิด**;latestblockนี้แทนsnapshotsต่อไป
+
+## Live update 6 ตุลาคม 2026 เวลา 16:06 น.
+
+Repository ecological calibrationครบ18/18:8VERIFIED,8model failuresและ2provider-unresolved. Final capsuleอยู่`results/ecological_repository_calibration_v1_final/`; public aggregate copiesอยู่`../public_results/v2_3/ecological_repository_calibration_v1/`. ห้ามเรียกfinalizerทับdirectoryนี้. MLยังเรียกMFECจริง: snapshotcompleted47/288,36VERIFIED,4contract failures,6provider-unresolved,1replay-unresolved; active1,never-started240. งบอนุญาตแล้วและไม่มีbudget blocker. สองcalibration tiersยังไม่ใช่G5allocation main
+
+Local tests207ผ่าน; public export203ผ่าน/4integration skips. IEEEProgressRev6สร้างด้วยWordและrenderครบ21หน้า แต่Fig9caption/section whitespaceยังต้องแก้ก่อนส่งเอกสาร. Gitล่าสุด`78a6f0f`; aggregate commitกำลังทำ. ตรวจสถานะสดด้วยauditsด้านล่าง ไม่ใช้Executeเป็นstatus check. **ยังไม่ปิดMajor Revision**; latestsnapshotนี้แทนประวัติต่อไป
+
 ## Live update 6 ตุลาคม 2026 เวลา 15:26 น.
 
 งบอนุญาตแล้วและ **ML/repository calibration กำลังเรียก MFEC จริงทั้งสองชุด**. ML completed33/288 (26VERIFIED,3contract failure,3provider-unresolved,1replay-unresolved), repositoryใหม่ completed5/18 (3VERIFIED,2visible failure) ณเวลานี้ ไม่รวมกับ36/18 supporting pairsเก่า และไม่ใช่ final rates. ตรวจสดด้วยสองคำสั่ง audit ด้านล่าง; Execute จะสร้าง calls ไม่ใช่การดูสถานะ

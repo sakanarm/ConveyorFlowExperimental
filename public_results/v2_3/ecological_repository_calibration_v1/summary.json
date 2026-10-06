@@ -1,0 +1,341 @@
+{
+  "created_at_utc": "2026-10-06T08:59:58.899526+00:00",
+  "status": "completed_localized_repository_calibration",
+  "total": {
+    "planned_and_completed": 18,
+    "verified": 8,
+    "model_failed": 8,
+    "unresolved": 2,
+    "outcomes": {
+      "VERIFIED": 8,
+      "VISIBLE_TEST_FAILED": 5,
+      "PROVIDER_UNRESOLVED": 2,
+      "UNFINISHED_OR_EMPTY_OUTPUT": 3
+    },
+    "operational_verified_fraction": 0.4444444444444444,
+    "unresolved_outcome_sensitivity_range": [
+      0.4444444444444444,
+      0.5555555555555556
+    ],
+    "nominal_wilson95": [
+      0.24559518127005633,
+      0.6628358435795723
+    ],
+    "nominal_interval_not_source_population_inference": true,
+    "median_request_to_final_gate_seconds": 107.6929665,
+    "elapsed_includes_provider_verification_and_queue": true
+  },
+  "models": [
+    {
+      "slot": "agent_1",
+      "alias": "tencent-hy3",
+      "exact_model_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "planned_and_completed": 6,
+      "verified": 4,
+      "model_failed": 2,
+      "unresolved": 0,
+      "outcomes": {
+        "VERIFIED": 4,
+        "VISIBLE_TEST_FAILED": 1,
+        "UNFINISHED_OR_EMPTY_OUTPUT": 1
+      },
+      "operational_verified_fraction": 0.6666666666666666,
+      "unresolved_outcome_sensitivity_range": [
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "nominal_wilson95": [
+        0.299993315138392,
+        0.9032285888942195
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 158.66914350000002,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_2",
+      "alias": "gpt-5-mini",
+      "exact_model_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "planned_and_completed": 6,
+      "verified": 2,
+      "model_failed": 4,
+      "unresolved": 0,
+      "outcomes": {
+        "VERIFIED": 2,
+        "VISIBLE_TEST_FAILED": 4
+      },
+      "operational_verified_fraction": 0.3333333333333333,
+      "unresolved_outcome_sensitivity_range": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "nominal_wilson95": [
+        0.09677141110578041,
+        0.700006684861608
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 8.082035,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_3",
+      "alias": "glm-5.3-flash",
+      "exact_model_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "planned_and_completed": 6,
+      "verified": 2,
+      "model_failed": 2,
+      "unresolved": 2,
+      "outcomes": {
+        "VERIFIED": 2,
+        "PROVIDER_UNRESOLVED": 2,
+        "UNFINISHED_OR_EMPTY_OUTPUT": 2
+      },
+      "operational_verified_fraction": 0.3333333333333333,
+      "unresolved_outcome_sensitivity_range": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "nominal_wilson95": [
+        0.09677141110578041,
+        0.700006684861608
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 499.142778,
+      "elapsed_includes_provider_verification_and_queue": true
+    }
+  ],
+  "project_cells": [
+    {
+      "slot": "agent_1",
+      "project": "luigi",
+      "planned_and_completed": 2,
+      "verified": 2,
+      "model_failed": 0,
+      "unresolved": 0,
+      "outcomes": {
+        "VERIFIED": 2
+      },
+      "operational_verified_fraction": 1.0,
+      "unresolved_outcome_sensitivity_range": [
+        1.0,
+        1.0
+      ],
+      "nominal_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 98.31474750000001,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_1",
+      "project": "matplotlib",
+      "planned_and_completed": 2,
+      "verified": 2,
+      "model_failed": 0,
+      "unresolved": 0,
+      "outcomes": {
+        "VERIFIED": 2
+      },
+      "operational_verified_fraction": 1.0,
+      "unresolved_outcome_sensitivity_range": [
+        1.0,
+        1.0
+      ],
+      "nominal_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 189.77115,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_1",
+      "project": "pandas",
+      "planned_and_completed": 2,
+      "verified": 0,
+      "model_failed": 2,
+      "unresolved": 0,
+      "outcomes": {
+        "VISIBLE_TEST_FAILED": 1,
+        "UNFINISHED_OR_EMPTY_OUTPUT": 1
+      },
+      "operational_verified_fraction": 0.0,
+      "unresolved_outcome_sensitivity_range": [
+        0.0,
+        0.0
+      ],
+      "nominal_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 153.573725,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_2",
+      "project": "luigi",
+      "planned_and_completed": 2,
+      "verified": 1,
+      "model_failed": 1,
+      "unresolved": 0,
+      "outcomes": {
+        "VERIFIED": 1,
+        "VISIBLE_TEST_FAILED": 1
+      },
+      "operational_verified_fraction": 0.5,
+      "unresolved_outcome_sensitivity_range": [
+        0.5,
+        0.5
+      ],
+      "nominal_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 8.2429125,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_2",
+      "project": "matplotlib",
+      "planned_and_completed": 2,
+      "verified": 1,
+      "model_failed": 1,
+      "unresolved": 0,
+      "outcomes": {
+        "VISIBLE_TEST_FAILED": 1,
+        "VERIFIED": 1
+      },
+      "operational_verified_fraction": 0.5,
+      "unresolved_outcome_sensitivity_range": [
+        0.5,
+        0.5
+      ],
+      "nominal_wilson95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 26.819021999999997,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_2",
+      "project": "pandas",
+      "planned_and_completed": 2,
+      "verified": 0,
+      "model_failed": 2,
+      "unresolved": 0,
+      "outcomes": {
+        "VISIBLE_TEST_FAILED": 2
+      },
+      "operational_verified_fraction": 0.0,
+      "unresolved_outcome_sensitivity_range": [
+        0.0,
+        0.0
+      ],
+      "nominal_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 7.0552045,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_3",
+      "project": "luigi",
+      "planned_and_completed": 2,
+      "verified": 2,
+      "model_failed": 0,
+      "unresolved": 0,
+      "outcomes": {
+        "VERIFIED": 2
+      },
+      "operational_verified_fraction": 1.0,
+      "unresolved_outcome_sensitivity_range": [
+        1.0,
+        1.0
+      ],
+      "nominal_wilson95": [
+        0.34238022750665303,
+        1.0
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 43.621377,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_3",
+      "project": "matplotlib",
+      "planned_and_completed": 2,
+      "verified": 0,
+      "model_failed": 1,
+      "unresolved": 1,
+      "outcomes": {
+        "UNFINISHED_OR_EMPTY_OUTPUT": 1,
+        "PROVIDER_UNRESOLVED": 1
+      },
+      "operational_verified_fraction": 0.0,
+      "unresolved_outcome_sensitivity_range": [
+        0.0,
+        0.5
+      ],
+      "nominal_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 552.1981335,
+      "elapsed_includes_provider_verification_and_queue": true
+    },
+    {
+      "slot": "agent_3",
+      "project": "pandas",
+      "planned_and_completed": 2,
+      "verified": 0,
+      "model_failed": 1,
+      "unresolved": 1,
+      "outcomes": {
+        "PROVIDER_UNRESOLVED": 1,
+        "UNFINISHED_OR_EMPTY_OUTPUT": 1
+      },
+      "operational_verified_fraction": 0.0,
+      "unresolved_outcome_sensitivity_range": [
+        0.0,
+        0.5
+      ],
+      "nominal_wilson95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "nominal_interval_not_source_population_inference": true,
+      "median_request_to_final_gate_seconds": 552.7125635,
+      "elapsed_includes_provider_verification_and_queue": true
+    }
+  ],
+  "cases": 6,
+  "repository_clusters": 3,
+  "one_first_attempt_per_pair": true,
+  "investigator_localized": true,
+  "withheld_tests_are_public_not_novel_hidden_tests": true,
+  "nominal_intervals_ignore_repository_dependence": true,
+  "not_allocation_main": true,
+  "not_autonomous_repository_wide_repair": true,
+  "not_ability_rank_assignment": true,
+  "not_D1_D3_probability_fit": true,
+  "accounting": {
+    "returned_responses": 16,
+    "observed_input_tokens": 164113,
+    "observed_output_tokens": 183522,
+    "observed_provider_cost_units": 0.159635836,
+    "returned_responses_without_cost": 0,
+    "provider_unresolved_billable_outcomes": 2,
+    "cost_currency_confirmed": false,
+    "not_total_billed_cost": true
+  }
+}

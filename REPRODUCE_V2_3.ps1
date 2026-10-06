@@ -14,6 +14,9 @@ param(
                  'EcologicalMLCalibrationExecute', 'EcologicalMLContinuationFreeze',
                  'EcologicalMLContinuationExecute', 'EcologicalMLContinuation2Freeze',
                  'EcologicalMLContinuation2Execute', 'EcologicalRepositoryCalibrationAudit',
+                 'EcologicalMLContinuation3Health', 'EcologicalMLContinuation3Freeze',
+                 'EcologicalMLContinuation3Execute', 'EcologicalMLContinuation3Pause',
+                 'EcologicalMLContinuation3Finalize',
                  'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
                  'EcologicalRepositoryCalibrationFinalize', 'EcologicalIntegrationCheck',
                  'EcologicalMLCalibrationFinalize')]
@@ -75,6 +78,40 @@ try {
         'EcologicalMLCalibrationFinalize' {
             if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/results.' }
             Invoke-Python @("$major/ecological_v1/finalize_ml_calibration_v1.py", '--output', $OutputPath)
+        }
+        'EcologicalMLContinuation3Finalize' {
+            if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/results.' }
+            Invoke-Python @("$major/ecological_v1/finalize_ml_calibration_v3.py", '--output', $OutputPath)
+        }
+        { $_ -in @('EcologicalMLContinuation3Health','EcologicalMLContinuation3Freeze',
+                   'EcologicalMLContinuation3Execute','EcologicalMLContinuation3Pause') } {
+            $taskPaid = $Stage -eq 'EcologicalMLContinuation3Execute'
+            if ($taskPaid -and (-not $ConfirmPaidRun -or -not $env:MFEC_LITELLM_API_KEY)) {
+                throw 'Process credential and -ConfirmPaidRun are required for billable calls.'
+            }
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            $taskEco = "$taskLinuxV2/$major/ecological_v1"
+            $taskImageLock = "$taskLinuxV2/$major/ml_eval_image_lock_podman_v1.json"
+            if ($Stage -eq 'EcologicalMLContinuation3Health') {
+                & wsl -d Ubuntu -u root -e env CONVEYORFLOW_CONTAINER_COMMAND=podman `
+                    CONVEYORFLOW_EVALUATOR_LOCK=$taskImageLock python3 -c `
+                    "import sys; sys.path.insert(0,sys.argv[1]); from ml_backend_health_v2 import probe,ROOT; report=probe(ROOT/'backend_health_continuation_3_prestart'); assert report['status']=='backend_health_passed'" $taskEco
+            } elseif ($Stage -eq 'EcologicalMLContinuation3Pause') {
+                & wsl -d Ubuntu -u root -e env CONVEYORFLOW_CONTAINER_COMMAND=podman `
+                    CONVEYORFLOW_EVALUATOR_LOCK=$taskImageLock python3 `
+                    "$taskEco/continue_ml_calibration_v3.py" --request-pause
+            } elseif ($Stage -eq 'EcologicalMLContinuation3Freeze') {
+                & wsl -d Ubuntu -u root -e env CONVEYORFLOW_CONTAINER_COMMAND=podman `
+                    CONVEYORFLOW_EVALUATOR_LOCK=$taskImageLock python3 `
+                    "$taskEco/continue_ml_calibration_v3.py" --freeze
+            } else {
+                $env:MFEC_LITELLM_API_KEY | & wsl -d Ubuntu -u root -e python3 `
+                    "$taskEco/wsl_continuation_v3_bridge.py" continue_ml_calibration_v3.py --execute
+            }
+            if ($LASTEXITCODE -ne 0) {
+                throw 'Continuation 3 step failed; audit evidence before any retry.'
+            }
         }
         'EcologicalRepositoryCalibrationFinalize' {
             if (-not $OutputPath) { throw 'Specify a new result directory with -OutputPath.' }

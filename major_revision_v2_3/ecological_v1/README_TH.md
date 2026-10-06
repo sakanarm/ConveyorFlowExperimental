@@ -1,5 +1,9 @@
 # Ecological v1 ภายใน ConveyorFlow v2.3
 
+## กลับมารัน 6 ตุลาคม 2026 เวลา 22:36 น.
+
+Continuation 3 ใช้ `continue_ml_calibration_v3.py` กับ `wsl_continuation_v3_bridge.py` และ amendment แยกใน `ML_CONTINUATION_3_AMENDMENT_TH.md`. Trusted backend health ผ่านก่อนเริ่ม API. Lock ระบุ 195 never-started pairs, เก็บ 91 completed และสอง user-interrupted pairs ด้วย hashes. ณ 22:36 น. auditor รายงาน completed 92, VERIFIED 72, marker-based-unsettled 3 (สองคู่จาก user pause เดิมกับหนึ่งคู่ใหม่) และ never-started 193. ตัวรันและ read-only watcher ยังทำงาน. `finalize_ml_calibration_v3.py` ต้องการ 286 settled + สอง interrupted + ไม่มี never-started จึงยังไม่สามารถ seal ผล. REPRODUCE มี Continuation3Health/Freeze/Execute/Pause/Finalize routes; route Pause ต้องรอ finished acknowledgment ก่อนถือว่าหยุดจริง. `python -m pytest tests -q` ผ่าน 221 tests. Main allocation, ranked profiles และ manuscript result update ยังรอผล/การตรวจต่อไป
+
 ## ความคืบหน้า 6 ตุลาคม 2026 เวลา 16:35 น.
 
 MLcontinuation2กำลังรันMFECจริง:67/288completed,53VERIFIED,6contract/generationfailures,7provider-unresolved,1replay-unresolved;2activeและ219never-started. Repositorycalibrationครบ18/18และsealaggregateแล้ว. Read-onlycompletionwatcherเริ่มเฝ้าMLcontroller;เมื่อครบและmarkers/ledgersตรงจึงสร้างfinalcapsule หากcontrollerหยุดจะไม่sealและไม่restart/retrypaidcalls. งบอนุญาตแล้ว ไม่รอceiling

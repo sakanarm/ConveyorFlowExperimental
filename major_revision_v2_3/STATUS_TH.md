@@ -1,5 +1,13 @@
 # ConveyorFlow v2.3 สถานะปิด Major Revision
 
+## กลับมารัน 6 ตุลาคม 2026 เวลา 22:36 น.
+
+ML continuation 3 เริ่มแล้วหลัง trusted offline backend health ผ่าน และ freeze คู่ที่ยังไม่เคยเริ่ม 195 คู่ด้วย lock SHA256 `86526557d7090bb1074f407d08a34d55a0d027be7687bf046a055b3713fd3622`. Frozen prompts, generation settings, image, validators และทรัพยากรเดิมคงเดิม. Snapshot 22:36 น.: 92/288 เสร็จ, 72 VERIFIED, มีสองคู่ที่ถูกขัดจังหวะตามจุดพักเดิม และหนึ่งคู่ใหม่กำลังทำ. ตัวรันใหม่มี pause request; read-only watcher เฝ้า completion และจะสร้าง final capsule เฉพาะเมื่อ 195 คู่ใหม่ settle ครบภายใต้ protocol. Analysis ฉบับใหม่รายงานสอง interrupted cells เป็น unresolved แยก ไม่ retry หรือเติมผล. Trusted tests 221 ผ่าน; repository calibration 18/18 ยังคงเดิม. นี่ยังเป็น conditional ML stage calibration ไม่ใช่ main allocation, Ability Rank ที่ยืนยันแล้ว หรือผลพร้อมส่งวารสาร
+
+## พักตามคำขอผู้ใช้ 6 ตุลาคม 2026 เวลา 17:36 น.
+
+หยุด ML controller และ completion watcher แล้ว ผลเสร็จ 91/288 (VERIFIED 71) มีสองคู่ขัดจังหวะและ 195 คู่ยังไม่เคยเริ่ม รายละเอียดใน `ecological_v1/USER_PAUSE_20261006_1736_TH.md`. Live updates ด้านล่างเป็นประวัติก่อนพัก
+
 ## Live update 6 ตุลาคม 2026 เวลา 16:35 น.
 
 **ML continuation2กำลังรัน MFEC จริง; repositoryรอบใหม่จบ18/18แล้ว**. งบไม่ใช่blockerและไม่ต้องขอAPIceilingเพิ่ม. MLsnapshot16:35:05น.:completed67/288,VERIFIED53,STAGE_CONTRACT_FAILED5,GENERATION_CONTRACT_FAILED1,PROVIDER_UNRESOLVED7,REPLAY_UNRESOLVED1;active2และnever-started219. ActiveคือGLM/Beijing03/preprocessและTencent/Beijing03/train. Provider/model/token/source/gatesยังใช้locksเดิม ไม่retryคู่ที่เริ่มแล้ว

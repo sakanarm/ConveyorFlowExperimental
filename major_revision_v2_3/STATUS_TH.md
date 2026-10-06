@@ -1,5 +1,9 @@
 # ConveyorFlow v2.3 สถานะปิด Major Revision
 
+## แผนพื้นที่เก็บข้อมูล 6 ตุลาคม 2026 เวลา 22:53 น.
+
+ผู้ใช้เห็นด้วยกับการใช้ D: พร้อม junction ที่พาธเดิมหลังรอบที่กำลังเขียนหยุดหรือจบ. ทดลอง junction ชั่วคราวในโฟลเดอร์ที่ตั้งชื่อเฉพาะแล้ว Windows แสดง `Junction` และ WSL มองผ่านพาธเดิมได้; ลบเฉพาะ probe ว่างแล้ว ไม่ย้ายผลจริงระหว่าง live run. C: ว่างประมาณ 12.7 GiB, D: ว่าง 242.9 GiB. `candidate_workspaces` 3.6 GiB โดย old isolated stage pilot v2 1.2 GiB และ live ecological ML calibration ประมาณ 0.8 GiB. Git objects ประมาณ 40 MiB จึงไม่ใช้ Git เป็นที่เก็บ raw artifacts. `watch_ml_disk_v3.py` ร้องขอ pause เมื่อ volume เหลือต่ำกว่า 4 GiB; ต้องรอ controller acknowledgement. ก่อนย้ายจริงต้องตรึงรายการ source/destination, ตรวจ hashes ก่อนและหลัง, ทดสอบ Windows/WSL/Podman กับพาธจริง และเก็บหลักฐานการย้ายไว้
+
 ## Event-driven integration fixture 6 ตุลาคม 2026 เวลา 22:47 น.
 
 ตัวตรวจ `integration_backend_v2.py` dispatch trusted fixture execution ทันทีเมื่อ agent แต่ละตัวชนะ SQLite claim; targeted test ยืนยันว่า agent ที่เร็วเริ่ม execution ก่อน agent ช้าตอบกลับ. ห้า arms และ upstream failure/unknown ผ่านที่ `ecological_v1/integration_event_checks_20261006_v1/`; `python -m pytest tests -q` ผ่าน 226 tests. ยังไม่มี paid main หรือ full ML pipelines จากทีม. การ push commit ล่าสุดไป GitHub ยังรอการเชื่อมบัญชี GitHub ใน session นี้; commit อยู่ใน local main และไม่สูญหาย

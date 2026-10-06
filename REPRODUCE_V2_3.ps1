@@ -17,6 +17,7 @@ param(
                  'EcologicalMLContinuation3Health', 'EcologicalMLContinuation3Freeze',
                  'EcologicalMLContinuation3Execute', 'EcologicalMLContinuation3Pause',
                  'EcologicalMLContinuation3Finalize',
+                 'EcologicalIntegrationEventCheck',
                  'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
                  'EcologicalRepositoryCalibrationFinalize', 'EcologicalIntegrationCheck',
                  'EcologicalMLCalibrationFinalize')]
@@ -82,6 +83,10 @@ try {
         'EcologicalMLContinuation3Finalize' {
             if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/results.' }
             Invoke-Python @("$major/ecological_v1/finalize_ml_calibration_v3.py", '--output', $OutputPath)
+        }
+        'EcologicalIntegrationEventCheck' {
+            if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/ecological_v1.' }
+            Invoke-Python @("$major/ecological_v1/check_integration_backend_v2.py", '--out', $OutputPath)
         }
         { $_ -in @('EcologicalMLContinuation3Health','EcologicalMLContinuation3Freeze',
                    'EcologicalMLContinuation3Execute','EcologicalMLContinuation3Pause') } {

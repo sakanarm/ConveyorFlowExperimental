@@ -1,5 +1,9 @@
 # ConveyorFlow v2.3 สถานะปิด Major Revision
 
+## Event-driven integration fixture 6 ตุลาคม 2026 เวลา 22:47 น.
+
+ตัวตรวจ `integration_backend_v2.py` dispatch trusted fixture execution ทันทีเมื่อ agent แต่ละตัวชนะ SQLite claim; targeted test ยืนยันว่า agent ที่เร็วเริ่ม execution ก่อน agent ช้าตอบกลับ. ห้า arms และ upstream failure/unknown ผ่านที่ `ecological_v1/integration_event_checks_20261006_v1/`; `python -m pytest tests -q` ผ่าน 226 tests. ยังไม่มี paid main หรือ full ML pipelines จากทีม. การ push commit ล่าสุดไป GitHub ยังรอการเชื่อมบัญชี GitHub ใน session นี้; commit อยู่ใน local main และไม่สูญหาย
+
 ## กลับมารัน 6 ตุลาคม 2026 เวลา 22:36 น.
 
 ML continuation 3 เริ่มแล้วหลัง trusted offline backend health ผ่าน และ freeze คู่ที่ยังไม่เคยเริ่ม 195 คู่ด้วย lock SHA256 `86526557d7090bb1074f407d08a34d55a0d027be7687bf046a055b3713fd3622`. Frozen prompts, generation settings, image, validators และทรัพยากรเดิมคงเดิม. Snapshot 22:36 น.: 92/288 เสร็จ, 72 VERIFIED, มีสองคู่ที่ถูกขัดจังหวะตามจุดพักเดิม และหนึ่งคู่ใหม่กำลังทำ. ตัวรันใหม่มี pause request; read-only watcher เฝ้า completion และจะสร้าง final capsule เฉพาะเมื่อ 195 คู่ใหม่ settle ครบภายใต้ protocol. Analysis ฉบับใหม่รายงานสอง interrupted cells เป็น unresolved แยก ไม่ retry หรือเติมผล. Trusted tests 221 ผ่าน; repository calibration 18/18 ยังคงเดิม. นี่ยังเป็น conditional ML stage calibration ไม่ใช่ main allocation, Ability Rank ที่ยืนยันแล้ว หรือผลพร้อมส่งวารสาร

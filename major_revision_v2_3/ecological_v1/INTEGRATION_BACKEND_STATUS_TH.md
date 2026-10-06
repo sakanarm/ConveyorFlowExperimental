@@ -1,5 +1,11 @@
 # การเชื่อมสายพานกับ decision processes และ execution interface
 
+## Event-driven fixture check 6 ตุลาคม 2026 เวลา 22:45 น.
+
+เพิ่ม `integration_backend_v2.py` ให้ parent event loop รับผล claim ของแต่ละ agent แล้วเริ่ม trusted execution ทันที โดยไม่รอ claim responses ของทั้งทีมก่อน dispatch. CF-Fit ยังให้ agent process คำนวณข้อเสนอเอง; `CENTRAL_RULE_MATCHED` ยังให้ coordinator process คำนวณด้วย pure choice rule เดียวกันแล้วส่ง nomination; Static owner ตรึงก่อนรัน. ใช้ SQLite CAS, READY belt, dependencies, verified artifacts, bounded failure และ hash-chain ledger เดิม. `check_integration_backend_v2.py` ผ่านห้า arms และ upstream failure/unknown ใน NEW output `integration_event_checks_20261006_v1/`; targeted test พิสูจน์ว่า execution_started ของ agent เร็วเกิดก่อน agent ช้าส่งคำตอบ. ทุกรายการเป็น trusted fixture, ไม่มี MFEC calls, ไม่มี candidate code, ไม่มีตัวเลข performance ที่ใช้เป็นผลตีพิมพ์
+
+ยังต้องเชื่อม paid assessor/executor/verifier, calibrated profiles, full pipeline artifacts, late-return settlement, common paired streams และการตรวจ provider/resource accounting ก่อนทดลอง allocation main. Shared SQLite ยังเป็น failure dependency. Snapshot/claim semantics เปลี่ยนตาม event time จริง จึงต้องบันทึก snapshot hashes และ paired block order ก่อน paid main; fixture parity ไม่ใช่การพิสูจน์ผล real LLM
+
 อัปเดต 6 ตุลาคม 2026. สร้าง backend fixture แยกจาก frozen calibration controllers เพื่อเตรียม paired real-LLM main ระหว่างที่ ML calibration ยังรันอยู่ ไม่มี API calls จาก integration checks และไม่มีการรันโค้ดที่ LLM สร้างใน host
 
 `integration_worker_v1.py` ทำ CF choice และ SQLite claim ใน process ของ agent เดียวกัน ฝั่ง CENTRAL_RULE_MATCHED ให้ coordinator process ใช้ pure choice functionเดียวกันแล้วส่ง nomination ให้ agent claim โดยไม่เลือกใหม่ ผู้เชื่อมระบบไม่ sort proposals แล้วเลือกผู้ชนะ แต่ compare-and-swap ใช้ arrival order จริง Static owner mappingกำหนดก่อนรัน ทุกเส้นทางใช้ store/execution seamเดียวกัน ไม่มี model keyในdecision subprocess environment

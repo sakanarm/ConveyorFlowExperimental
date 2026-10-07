@@ -1,0 +1,965 @@
+{
+  "agents": [
+    {
+      "agent_id": "A1",
+      "declined_tasks": [],
+      "model_slot": "agent_1",
+      "ranks": {
+        "adult:ingest": 2,
+        "adult:package": 3,
+        "adult:preprocess": 3,
+        "adult:train": 3,
+        "beijing:ingest": 3,
+        "beijing:package": 3,
+        "beijing:preprocess": 3,
+        "beijing:train": 1,
+        "bugs2fix:repair": 2
+      }
+    },
+    {
+      "agent_id": "A2",
+      "declined_tasks": [],
+      "model_slot": "agent_2",
+      "ranks": {
+        "adult:ingest": 3,
+        "adult:package": 3,
+        "adult:preprocess": 1,
+        "adult:train": 2,
+        "beijing:ingest": 3,
+        "beijing:package": 3,
+        "beijing:preprocess": 2,
+        "beijing:train": 2,
+        "bugs2fix:repair": 1
+      }
+    },
+    {
+      "agent_id": "A3",
+      "declined_tasks": [],
+      "model_slot": "agent_3",
+      "ranks": {
+        "adult:ingest": 3,
+        "adult:package": 3,
+        "adult:preprocess": 1,
+        "adult:train": 2,
+        "beijing:ingest": 3,
+        "beijing:package": 3,
+        "beijing:preprocess": 1,
+        "beijing:train": 1,
+        "bugs2fix:repair": 1
+      }
+    }
+  ],
+  "analysis_plan": {
+    "block_bootstrap_resamples": 5000,
+    "comparisons": [
+      "CF_FIT-CENTRAL_RULE_MATCHED",
+      "CF_FIT-STATIC_OWNERS"
+    ],
+    "corpus_repository_dependence_disclosed": true,
+    "cost_undefined_if_any_attempt_unknown": true,
+    "no_scalar_superiority_or_equivalence_claim": true,
+    "paired_unit": "mixed_workload_block",
+    "primary": [
+      "verified_job_throughput_fixed_window",
+      "successful_job_completion_time",
+      "busy_utilization",
+      "provider_reported_cost_per_verified_job"
+    ]
+  },
+  "analysis_sha256": "3a58aa1aff191acd4851dc367dacdadff4cd763349615a6f6ce874092cdab6de",
+  "arm_ids": [
+    "CF_FIT",
+    "CENTRAL_RULE_MATCHED",
+    "STATIC_OWNERS"
+  ],
+  "blocks": [
+    {
+      "arm_order": [
+        "CF_FIT",
+        "CENTRAL_RULE_MATCHED",
+        "STATIC_OWNERS"
+      ],
+      "block_id": "MAIN_BLOCK_01",
+      "case_ids": [
+        "MAIN_ADULT_01",
+        "MAIN_BEIJING_01",
+        "luigi_3"
+      ],
+      "owners": {
+        "MAIN_ADULT_01:ingest": "A2",
+        "MAIN_ADULT_01:package": "A3",
+        "MAIN_ADULT_01:preprocess": "A1",
+        "MAIN_ADULT_01:train": "A1",
+        "MAIN_BEIJING_01:ingest": "A2",
+        "MAIN_BEIJING_01:package": "A3",
+        "MAIN_BEIJING_01:preprocess": "A1",
+        "MAIN_BEIJING_01:train": "A2",
+        "luigi_3:repair": "A1"
+      },
+      "run_id": "MAIN_BLOCK_01",
+      "seed": 6101,
+      "tasks": [
+        {
+          "arrival": 0,
+          "dependencies": [],
+          "job_id": "MAIN_ADULT_01",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_ADULT_01:ingest",
+          "workload": "adult"
+        },
+        {
+          "arrival": 20,
+          "dependencies": [],
+          "job_id": "luigi_3",
+          "required_rank": 2,
+          "stage": "repair",
+          "task_id": "luigi_3:repair",
+          "workload": "bugs2fix"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_01:ingest"
+          ],
+          "job_id": "MAIN_ADULT_01",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_ADULT_01:preprocess",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_01:ingest",
+            "MAIN_ADULT_01:preprocess"
+          ],
+          "job_id": "MAIN_ADULT_01",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_ADULT_01:train",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_01:ingest",
+            "MAIN_ADULT_01:preprocess",
+            "MAIN_ADULT_01:train"
+          ],
+          "job_id": "MAIN_ADULT_01",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_ADULT_01:package",
+          "workload": "adult"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [],
+          "job_id": "MAIN_BEIJING_01",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_BEIJING_01:ingest",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_01:ingest"
+          ],
+          "job_id": "MAIN_BEIJING_01",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_BEIJING_01:preprocess",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_01:ingest",
+            "MAIN_BEIJING_01:preprocess"
+          ],
+          "job_id": "MAIN_BEIJING_01",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_BEIJING_01:train",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_01:ingest",
+            "MAIN_BEIJING_01:preprocess",
+            "MAIN_BEIJING_01:train"
+          ],
+          "job_id": "MAIN_BEIJING_01",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_BEIJING_01:package",
+          "workload": "beijing"
+        }
+      ]
+    },
+    {
+      "arm_order": [
+        "CENTRAL_RULE_MATCHED",
+        "STATIC_OWNERS",
+        "CF_FIT"
+      ],
+      "block_id": "MAIN_BLOCK_02",
+      "case_ids": [
+        "MAIN_ADULT_02",
+        "MAIN_BEIJING_02",
+        "pandas_100"
+      ],
+      "owners": {
+        "MAIN_ADULT_02:ingest": "A2",
+        "MAIN_ADULT_02:package": "A3",
+        "MAIN_ADULT_02:preprocess": "A1",
+        "MAIN_ADULT_02:train": "A1",
+        "MAIN_BEIJING_02:ingest": "A2",
+        "MAIN_BEIJING_02:package": "A3",
+        "MAIN_BEIJING_02:preprocess": "A1",
+        "MAIN_BEIJING_02:train": "A2",
+        "pandas_100:repair": "A1"
+      },
+      "run_id": "MAIN_BLOCK_02",
+      "seed": 6102,
+      "tasks": [
+        {
+          "arrival": 0,
+          "dependencies": [],
+          "job_id": "MAIN_ADULT_02",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_ADULT_02:ingest",
+          "workload": "adult"
+        },
+        {
+          "arrival": 20,
+          "dependencies": [],
+          "job_id": "pandas_100",
+          "required_rank": 2,
+          "stage": "repair",
+          "task_id": "pandas_100:repair",
+          "workload": "bugs2fix"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_02:ingest"
+          ],
+          "job_id": "MAIN_ADULT_02",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_ADULT_02:preprocess",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_02:ingest",
+            "MAIN_ADULT_02:preprocess"
+          ],
+          "job_id": "MAIN_ADULT_02",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_ADULT_02:train",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_02:ingest",
+            "MAIN_ADULT_02:preprocess",
+            "MAIN_ADULT_02:train"
+          ],
+          "job_id": "MAIN_ADULT_02",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_ADULT_02:package",
+          "workload": "adult"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [],
+          "job_id": "MAIN_BEIJING_02",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_BEIJING_02:ingest",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_02:ingest"
+          ],
+          "job_id": "MAIN_BEIJING_02",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_BEIJING_02:preprocess",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_02:ingest",
+            "MAIN_BEIJING_02:preprocess"
+          ],
+          "job_id": "MAIN_BEIJING_02",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_BEIJING_02:train",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_02:ingest",
+            "MAIN_BEIJING_02:preprocess",
+            "MAIN_BEIJING_02:train"
+          ],
+          "job_id": "MAIN_BEIJING_02",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_BEIJING_02:package",
+          "workload": "beijing"
+        }
+      ]
+    },
+    {
+      "arm_order": [
+        "STATIC_OWNERS",
+        "CF_FIT",
+        "CENTRAL_RULE_MATCHED"
+      ],
+      "block_id": "MAIN_BLOCK_03",
+      "case_ids": [
+        "MAIN_ADULT_03",
+        "MAIN_BEIJING_03",
+        "matplotlib_1"
+      ],
+      "owners": {
+        "MAIN_ADULT_03:ingest": "A2",
+        "MAIN_ADULT_03:package": "A3",
+        "MAIN_ADULT_03:preprocess": "A1",
+        "MAIN_ADULT_03:train": "A1",
+        "MAIN_BEIJING_03:ingest": "A2",
+        "MAIN_BEIJING_03:package": "A3",
+        "MAIN_BEIJING_03:preprocess": "A1",
+        "MAIN_BEIJING_03:train": "A2",
+        "matplotlib_1:repair": "A1"
+      },
+      "run_id": "MAIN_BLOCK_03",
+      "seed": 6103,
+      "tasks": [
+        {
+          "arrival": 0,
+          "dependencies": [],
+          "job_id": "MAIN_ADULT_03",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_ADULT_03:ingest",
+          "workload": "adult"
+        },
+        {
+          "arrival": 20,
+          "dependencies": [],
+          "job_id": "matplotlib_1",
+          "required_rank": 2,
+          "stage": "repair",
+          "task_id": "matplotlib_1:repair",
+          "workload": "bugs2fix"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_03:ingest"
+          ],
+          "job_id": "MAIN_ADULT_03",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_ADULT_03:preprocess",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_03:ingest",
+            "MAIN_ADULT_03:preprocess"
+          ],
+          "job_id": "MAIN_ADULT_03",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_ADULT_03:train",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_03:ingest",
+            "MAIN_ADULT_03:preprocess",
+            "MAIN_ADULT_03:train"
+          ],
+          "job_id": "MAIN_ADULT_03",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_ADULT_03:package",
+          "workload": "adult"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [],
+          "job_id": "MAIN_BEIJING_03",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_BEIJING_03:ingest",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_03:ingest"
+          ],
+          "job_id": "MAIN_BEIJING_03",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_BEIJING_03:preprocess",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_03:ingest",
+            "MAIN_BEIJING_03:preprocess"
+          ],
+          "job_id": "MAIN_BEIJING_03",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_BEIJING_03:train",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_03:ingest",
+            "MAIN_BEIJING_03:preprocess",
+            "MAIN_BEIJING_03:train"
+          ],
+          "job_id": "MAIN_BEIJING_03",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_BEIJING_03:package",
+          "workload": "beijing"
+        }
+      ]
+    },
+    {
+      "arm_order": [
+        "CF_FIT",
+        "STATIC_OWNERS",
+        "CENTRAL_RULE_MATCHED"
+      ],
+      "block_id": "MAIN_BLOCK_04",
+      "case_ids": [
+        "MAIN_ADULT_04",
+        "MAIN_BEIJING_04",
+        "luigi_9"
+      ],
+      "owners": {
+        "MAIN_ADULT_04:ingest": "A2",
+        "MAIN_ADULT_04:package": "A3",
+        "MAIN_ADULT_04:preprocess": "A1",
+        "MAIN_ADULT_04:train": "A1",
+        "MAIN_BEIJING_04:ingest": "A2",
+        "MAIN_BEIJING_04:package": "A3",
+        "MAIN_BEIJING_04:preprocess": "A1",
+        "MAIN_BEIJING_04:train": "A2",
+        "luigi_9:repair": "A1"
+      },
+      "run_id": "MAIN_BLOCK_04",
+      "seed": 6104,
+      "tasks": [
+        {
+          "arrival": 0,
+          "dependencies": [],
+          "job_id": "MAIN_ADULT_04",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_ADULT_04:ingest",
+          "workload": "adult"
+        },
+        {
+          "arrival": 20,
+          "dependencies": [],
+          "job_id": "luigi_9",
+          "required_rank": 2,
+          "stage": "repair",
+          "task_id": "luigi_9:repair",
+          "workload": "bugs2fix"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_04:ingest"
+          ],
+          "job_id": "MAIN_ADULT_04",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_ADULT_04:preprocess",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_04:ingest",
+            "MAIN_ADULT_04:preprocess"
+          ],
+          "job_id": "MAIN_ADULT_04",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_ADULT_04:train",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_04:ingest",
+            "MAIN_ADULT_04:preprocess",
+            "MAIN_ADULT_04:train"
+          ],
+          "job_id": "MAIN_ADULT_04",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_ADULT_04:package",
+          "workload": "adult"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [],
+          "job_id": "MAIN_BEIJING_04",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_BEIJING_04:ingest",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_04:ingest"
+          ],
+          "job_id": "MAIN_BEIJING_04",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_BEIJING_04:preprocess",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_04:ingest",
+            "MAIN_BEIJING_04:preprocess"
+          ],
+          "job_id": "MAIN_BEIJING_04",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_BEIJING_04:train",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_04:ingest",
+            "MAIN_BEIJING_04:preprocess",
+            "MAIN_BEIJING_04:train"
+          ],
+          "job_id": "MAIN_BEIJING_04",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_BEIJING_04:package",
+          "workload": "beijing"
+        }
+      ]
+    },
+    {
+      "arm_order": [
+        "CENTRAL_RULE_MATCHED",
+        "CF_FIT",
+        "STATIC_OWNERS"
+      ],
+      "block_id": "MAIN_BLOCK_05",
+      "case_ids": [
+        "MAIN_ADULT_05",
+        "MAIN_BEIJING_05",
+        "pandas_82"
+      ],
+      "owners": {
+        "MAIN_ADULT_05:ingest": "A2",
+        "MAIN_ADULT_05:package": "A3",
+        "MAIN_ADULT_05:preprocess": "A1",
+        "MAIN_ADULT_05:train": "A1",
+        "MAIN_BEIJING_05:ingest": "A2",
+        "MAIN_BEIJING_05:package": "A3",
+        "MAIN_BEIJING_05:preprocess": "A1",
+        "MAIN_BEIJING_05:train": "A2",
+        "pandas_82:repair": "A1"
+      },
+      "run_id": "MAIN_BLOCK_05",
+      "seed": 6105,
+      "tasks": [
+        {
+          "arrival": 0,
+          "dependencies": [],
+          "job_id": "MAIN_ADULT_05",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_ADULT_05:ingest",
+          "workload": "adult"
+        },
+        {
+          "arrival": 20,
+          "dependencies": [],
+          "job_id": "pandas_82",
+          "required_rank": 2,
+          "stage": "repair",
+          "task_id": "pandas_82:repair",
+          "workload": "bugs2fix"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_05:ingest"
+          ],
+          "job_id": "MAIN_ADULT_05",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_ADULT_05:preprocess",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_05:ingest",
+            "MAIN_ADULT_05:preprocess"
+          ],
+          "job_id": "MAIN_ADULT_05",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_ADULT_05:train",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_05:ingest",
+            "MAIN_ADULT_05:preprocess",
+            "MAIN_ADULT_05:train"
+          ],
+          "job_id": "MAIN_ADULT_05",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_ADULT_05:package",
+          "workload": "adult"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [],
+          "job_id": "MAIN_BEIJING_05",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_BEIJING_05:ingest",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_05:ingest"
+          ],
+          "job_id": "MAIN_BEIJING_05",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_BEIJING_05:preprocess",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_05:ingest",
+            "MAIN_BEIJING_05:preprocess"
+          ],
+          "job_id": "MAIN_BEIJING_05",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_BEIJING_05:train",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_05:ingest",
+            "MAIN_BEIJING_05:preprocess",
+            "MAIN_BEIJING_05:train"
+          ],
+          "job_id": "MAIN_BEIJING_05",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_BEIJING_05:package",
+          "workload": "beijing"
+        }
+      ]
+    },
+    {
+      "arm_order": [
+        "STATIC_OWNERS",
+        "CENTRAL_RULE_MATCHED",
+        "CF_FIT"
+      ],
+      "block_id": "MAIN_BLOCK_06",
+      "case_ids": [
+        "MAIN_ADULT_06",
+        "MAIN_BEIJING_06",
+        "matplotlib_28"
+      ],
+      "owners": {
+        "MAIN_ADULT_06:ingest": "A2",
+        "MAIN_ADULT_06:package": "A3",
+        "MAIN_ADULT_06:preprocess": "A1",
+        "MAIN_ADULT_06:train": "A1",
+        "MAIN_BEIJING_06:ingest": "A2",
+        "MAIN_BEIJING_06:package": "A3",
+        "MAIN_BEIJING_06:preprocess": "A1",
+        "MAIN_BEIJING_06:train": "A2",
+        "matplotlib_28:repair": "A1"
+      },
+      "run_id": "MAIN_BLOCK_06",
+      "seed": 6106,
+      "tasks": [
+        {
+          "arrival": 0,
+          "dependencies": [],
+          "job_id": "MAIN_ADULT_06",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_ADULT_06:ingest",
+          "workload": "adult"
+        },
+        {
+          "arrival": 20,
+          "dependencies": [],
+          "job_id": "matplotlib_28",
+          "required_rank": 2,
+          "stage": "repair",
+          "task_id": "matplotlib_28:repair",
+          "workload": "bugs2fix"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_06:ingest"
+          ],
+          "job_id": "MAIN_ADULT_06",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_ADULT_06:preprocess",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_06:ingest",
+            "MAIN_ADULT_06:preprocess"
+          ],
+          "job_id": "MAIN_ADULT_06",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_ADULT_06:train",
+          "workload": "adult"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "MAIN_ADULT_06:ingest",
+            "MAIN_ADULT_06:preprocess",
+            "MAIN_ADULT_06:train"
+          ],
+          "job_id": "MAIN_ADULT_06",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_ADULT_06:package",
+          "workload": "adult"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [],
+          "job_id": "MAIN_BEIJING_06",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "MAIN_BEIJING_06:ingest",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_06:ingest"
+          ],
+          "job_id": "MAIN_BEIJING_06",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "MAIN_BEIJING_06:preprocess",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_06:ingest",
+            "MAIN_BEIJING_06:preprocess"
+          ],
+          "job_id": "MAIN_BEIJING_06",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "MAIN_BEIJING_06:train",
+          "workload": "beijing"
+        },
+        {
+          "arrival": 40,
+          "dependencies": [
+            "MAIN_BEIJING_06:ingest",
+            "MAIN_BEIJING_06:preprocess",
+            "MAIN_BEIJING_06:train"
+          ],
+          "job_id": "MAIN_BEIJING_06",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "MAIN_BEIJING_06:package",
+          "workload": "beijing"
+        }
+      ]
+    }
+  ],
+  "created_at_utc": "2026-10-07T10:55:53.528747+00:00",
+  "design_sha256": "bcda309b38d1fb6681e63319c4bdb467594460a6ecb3566ad6249ff8eb809c0b",
+  "generation": {
+    "max_output_tokens": 32768,
+    "temperature": 0,
+    "timeout_seconds": 720
+  },
+  "limits": {
+    "horizon": 3600,
+    "max_attempts": 1,
+    "no_volunteer_limit": 6,
+    "scan": 8,
+    "w1": 2,
+    "w2": 4
+  },
+  "live_ml_stage_sha256": "0fc103fc4a3cc5debce75bf2f69cc902e8ff3a594154fe0475161ba83146fa17",
+  "live_repo_adapter_sha256": "35b3aae33a24a459e0ca6f607e007740328f47591cb146a7c11c43d08d70023e",
+  "major_source_sha256": {
+    "container_cli.py": "196c22ca95d7d5a7c6d26c1c3b33b3ed0608b3737268370b3dd9bb8027763680",
+    "repository_patch_guard_v1.py": "e7e7a4fe367f64952c1600815c16288cbfeadcb1c55526b43705c7a5881d4720",
+    "run_ml_container.py": "f8be5dc1b39eb29124ad6c9aa3b315afaf12d1b1fe44913e09b2ad50789d01f8",
+    "run_ml_dag_llm_feasibility.py": "1e43fb274caa400ddd0aa596e530d824eea189765b1c3b8d176d6d13382c2e3a",
+    "run_ml_isolated_stage_pilot_v1.py": "5a73b7c9e226fe4df66fcddcb4aabfd743a971732d0e29f25781e66bfbe58f61",
+    "run_repository_repair_pilot_v1.py": "71936de4586967085e3ecc783424dc20460b57ecb2bf467eb2e58ce7ded315c4"
+  },
+  "matched_authority_comparison": "CF and Central use the same pure fit rule; local agent versus separate coordinator process decides",
+  "max_provider_calls_overall": 162,
+  "max_provider_calls_per_arm": 9,
+  "max_wall_seconds_per_arm": 5400,
+  "ml_case_ids": [
+    "MAIN_ADULT_01",
+    "MAIN_ADULT_02",
+    "MAIN_ADULT_03",
+    "MAIN_ADULT_04",
+    "MAIN_ADULT_05",
+    "MAIN_ADULT_06",
+    "MAIN_BEIJING_01",
+    "MAIN_BEIJING_02",
+    "MAIN_BEIJING_03",
+    "MAIN_BEIJING_04",
+    "MAIN_BEIJING_05",
+    "MAIN_BEIJING_06"
+  ],
+  "ml_evaluator_lock_sha256": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b",
+  "models": {
+    "agent_1": {
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "model_id": "tencent-hy3"
+    },
+    "agent_2": {
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "model_id": "gpt-5-mini"
+    },
+    "agent_3": {
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "model_id": "glm-5.3-flash"
+    }
+  },
+  "no_automatic_retry_of_started_provider_call": true,
+  "no_stage_level_pseudoreplication": true,
+  "paid_execution_allowed": true,
+  "prepared_ml_summary_sha256": {
+    "MAIN_ADULT_01": "c0ea130c38a24d74f1d2589d1604d4527f7b218e92c83867401a20d8c348a37f",
+    "MAIN_ADULT_02": "ae8260e90d96fef5403a92d99db6877a0caeebb06ace8c98c6914329541deae4",
+    "MAIN_ADULT_03": "0ab816a540fe1852f1dfdf144d6561a5e27e2d80455ae3d7cd1c59f2053d24fd",
+    "MAIN_ADULT_04": "a47699461c6d98f46a9011d46672bc04cbe7dc2d1706e2c9616c64c2ce8f39bb",
+    "MAIN_ADULT_05": "f7da1bd87170062bdeb653f007621096d6bfbd641bf260077ea30ea130f6180e",
+    "MAIN_ADULT_06": "d75147f9e5e214a4200351185d5713c422bed52a537a2561d59eacac1e0afe7e",
+    "MAIN_BEIJING_01": "364455b5db2cfbd0e2f53cae0db655e96880f955acab1a3919aae47e5115b947",
+    "MAIN_BEIJING_02": "8528c45fb4df260e8e55beb28e8a65d71767ef467d5508d7853d07f33a7de07c",
+    "MAIN_BEIJING_03": "11233e1c9afb2609cbc55e44ef80600c1a48aed48d5b9da1a80fb662ab63b8b0",
+    "MAIN_BEIJING_04": "8f870bf539e179f5fcafa113dc73e4a5b8f069e6ee5065cef6d4b3e75a7a397d",
+    "MAIN_BEIJING_05": "c91b33ad9a8c1d623455a3438a22b7e6daa4a8f9697b7e73d80c54282b1602e0",
+    "MAIN_BEIJING_06": "a549797d395db721bf6c99e09a88ba8d21a1a0dbfe1b2d2ee19729064eebd509"
+  },
+  "profile_sha256": "8a17c2c06fd7696dcea5234d136fd666a3d0c24d1432c972d743387db4954972",
+  "provider_config_sha256": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+  "repository_case_ids": [
+    "luigi_3",
+    "pandas_100",
+    "matplotlib_1",
+    "luigi_9",
+    "pandas_82",
+    "matplotlib_28"
+  ],
+  "repository_context_sha256": {
+    "luigi_3": "242a90ae6b974ce41187b27c509f5ac9bf3ded5039e3901e0b13abdb40e12071",
+    "luigi_9": "19825272b35601da867ea3403646ff77f705ee984dc536a56531ff4a684c527e",
+    "matplotlib_1": "79ec0f5d7e83c488799e726b694f528f894a83860c6a67c7bde6d68372aa0ef5",
+    "matplotlib_28": "ba4974d47d41058baffa4aaee5f5a752de99fce2147a05b9d426935191058a52",
+    "pandas_100": "6b42db47ff0f25559c5f9e3e597ba338406f84fffd6a9f48dfa2baa2c9925f18",
+    "pandas_82": "111d42833ff2bbae12f173932459af10ec789343f463fd3a66dd252c12645157"
+  },
+  "repository_contexts_audit_sha256": "299297b74fe1328c0ab8d47f731d1eaf7bb8a7ee2d23c0d7c6b625fd2e03b918",
+  "repository_test_timeout_seconds": 180,
+  "research_results_before_independent_audit": false,
+  "run_ids": [
+    "MAIN_BLOCK_01",
+    "MAIN_BLOCK_02",
+    "MAIN_BLOCK_03",
+    "MAIN_BLOCK_04",
+    "MAIN_BLOCK_05",
+    "MAIN_BLOCK_06"
+  ],
+  "runtime_root": "\\mnt\\d\\ConveyorFlowRuntime\\v2_3\\candidate_workspaces\\ecological_main_v1",
+  "scope": "paired_mixed_full_ml_dag_and_gold_free_repository_repair",
+  "source_sha256": {
+    "analyze_ecological_main_v1.py": "3a58aa1aff191acd4851dc367dacdadff4cd763349615a6f6ce874092cdab6de",
+    "audit_ecological_main_v1.py": "3e62dbe4d87c1874802bca7f630aa637174692d71727c21a12136b273ecac75c",
+    "belt_contract.py": "25b6a0f2b705c11ec6234291c6f310ab5c210f037d1e404cdab291aa42e1d1d1",
+    "claim_store.py": "b5d83fe1c7a01420a6f4de4aeaa00792e783a339f5d886ae168613d924c8988e",
+    "freeze_ecological_main_v1.py": "63765ce7e15283290b883fcb09af3d7c84757d313580664f90945b42d152b85b",
+    "integration_backend_v1.py": "b2bc8fdac131ff65517c719c01b34b7dce987d8e7a0bcffb853f95c5250a58b8",
+    "integration_worker_v1.py": "82056f86dc91c8016c4934000b9e3303d8f45e6c760df4b738fd40c270df0d62",
+    "live_allocator_core_v1.py": "a495594144c158193794b97a12dd4ab21df0e3506736a27aa2587176b2b22595",
+    "main_artifact_chain_v1.py": "9ef7aaaec4164a2b17280e4b715c54580da201a427a2dec15c7bbe7cab6400f9",
+    "main_live_ml_bundle_v1.py": "371c636a2e6518990d60ad86286c3c9138d6200b0bbab0b0bc46afff83ca6477",
+    "main_live_ml_stage_v1.py": "0fc103fc4a3cc5debce75bf2f69cc902e8ff3a594154fe0475161ba83146fa17",
+    "main_live_repository_repair_v1.py": "35b3aae33a24a459e0ca6f607e007740328f47591cb146a7c11c43d08d70023e",
+    "main_stage_compatibility_v1.py": "26c8c2b2e07c5e4a7e730de7a02ea68dc10c5cf388f8cb35da81b7bccc0be0b7",
+    "run_ecological_main_v1.py": "d588b85ad7ef11fbbc1de13b31e817e71ebca070da9203562ad857e35a9a26e0",
+    "wsl_ecological_main_bridge_v1.py": "677bdc3e6e03aaef8c6e7f9712b47fff94da6f5dbfdd38566bf2e4d12a3e60a4"
+  },
+  "static_owner_rule": "highest calibrated cell rank; pre-run load and agent ID tie-break; no live reassignment",
+  "status": "ecological_main_execution_frozen_v1",
+  "tick_ns": 1000000000
+}

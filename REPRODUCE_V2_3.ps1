@@ -37,6 +37,9 @@ param(
                  'EcologicalMainSentinelV3Audit',
                  'EcologicalPairedAllocatorFreeze', 'EcologicalPairedAllocatorExecute',
                  'EcologicalPairedAllocatorAudit', 'EcologicalRepositoryMainContextsAudit',
+                 'EcologicalMainFreeze', 'EcologicalMainMetricsCheck',
+                 'EcologicalMainBlockExecute', 'EcologicalMainBlockAudit',
+                 'EcologicalMainAnalyze',
                  'EcologicalIntegrationEventCheck',
                  'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
                  'EcologicalRepositoryCalibrationFinalize', 'EcologicalIntegrationCheck',
@@ -44,6 +47,7 @@ param(
     [string]$Stage = 'Check',
     [string]$CaseId = 'ADULT_P1',
     [string]$ModelSlot = 'agent_1',
+    [ValidatePattern('^MAIN_BLOCK_0[1-6]$')][string]$BlockId = 'MAIN_BLOCK_01',
     [string]$CalibrationManifest,
     [string]$CalibrationLedger,
     [string]$OutputPath,
@@ -226,6 +230,40 @@ try {
         }
         'EcologicalRepositoryMainContextsAudit' {
             Invoke-Python @("$major/ecological_v1/audit_repository_main_contexts_v1.py")
+        }
+        'EcologicalMainFreeze' {
+            Invoke-Python @("$major/ecological_v1/freeze_ecological_main_v1.py", '--freeze')
+        }
+        'EcologicalMainMetricsCheck' {
+            Invoke-Python @("$major/ecological_v1/check_ecological_main_analysis_v1.py")
+        }
+        'EcologicalMainBlockExecute' {
+            if (-not $ConfirmPaidRun -or -not $env:MFEC_LITELLM_API_KEY) {
+                throw 'Process credential and -ConfirmPaidRun are required for a frozen main block.'
+            }
+            $taskCFree = ([System.IO.DriveInfo]::new('C:\')).AvailableFreeSpace
+            $taskDFree = ([System.IO.DriveInfo]::new('D:\')).AvailableFreeSpace
+            if ($taskCFree -lt 8GB -or $taskDFree -lt 8GB) {
+                throw 'At least 8 GiB free on each C and D drive required before a main block.'
+            }
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            $env:MFEC_LITELLM_API_KEY | & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/wsl_ecological_main_bridge_v1.py" $BlockId
+            if ($LASTEXITCODE -ne 0) { throw 'Main block stopped; preserve evidence and never blindly retry.' }
+        }
+        'EcologicalMainBlockAudit' {
+            Invoke-Python @("$major/ecological_v1/audit_ecological_main_v1.py", '--block', $BlockId, '--write')
+        }
+        'EcologicalMainAnalyze' {
+            $taskRawRoot = 'D:\ConveyorFlowRuntime\v2_3\candidate_workspaces\ecological_main_v1'
+            $taskAuditRoot = "$major/ecological_v1/main_block_audits_v1"
+            if (-not $OutputPath) {
+                $OutputPath = "$major/ecological_v1/main_analysis_v1.json"
+            }
+            Invoke-Python @("$major/ecological_v1/analyze_ecological_main_v1.py",
+                '--lock', "$major/ecological_v1/main_allocation_execution_lock_v1.json",
+                '--audit-root', $taskAuditRoot, '--raw-root', $taskRawRoot, '--output', $OutputPath)
         }
         'EcologicalIntegrationEventCheck' {
             if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/ecological_v1.' }

@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from audit_ml_calibration import audit as audit_ml
+from audit_main_capability_profiles_v1 import audit as audit_profiles
 from prepare_design import audit as audit_design, DEST, HERE, MAJOR
 
 ML_FINAL = MAJOR / 'results/ml_calibration_continuation_4_complete_v1/summary.json'
@@ -77,7 +78,7 @@ def audit():
                       ml_final=final_matches, repo_final=repo_final,
                       expected_main_ml=expected, prepared_main_ml=prepared,
                       repo_main_preflight=REPO_MAIN.is_file(),
-                      profiles=PROFILES.is_file(),
+                      profiles=bool(PROFILES.is_file() and audit_profiles()['profiles'] == 3),
                       live_sentinel=LIVE_SENTINEL.is_file(),
                       execution_lock=MAIN_LOCK.is_file())
     result.update(design_sha256=design_audit['design_sha256'],

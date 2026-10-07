@@ -1,0 +1,499 @@
+{
+  "calibration_not_full_model_built_pipeline": true,
+  "created_at_utc": "2026-10-07T06:57:06.355599+00:00",
+  "difficulty_proxy": {
+    "ml_stage_required_rank": {
+      "ingest": 1,
+      "package": 2,
+      "preprocess": 2,
+      "train": 3
+    },
+    "no_within_stage_difficulty_inference": true,
+    "not_human_expert_or_independent_llm_ground_truth": true,
+    "repository_repair_required_rank": 2,
+    "source": "investigator stage rubric documented before ecological calibration",
+    "stage_confounded_with_difficulty": true
+  },
+  "main_results": false,
+  "model_count": 3,
+  "no_provider_calls": true,
+  "profiles": {
+    "agent_1": {
+      "cells": {
+        "adult:ingest": {
+          "model_contract_failed": 2,
+          "n": 12,
+          "operational_verified_fraction": 0.8333333333333334,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 2,
+          "routing_rank_primary": 2,
+          "unknown_outcome_sensitivity_range": [
+            0.8333333333333334,
+            0.8333333333333334
+          ],
+          "unresolved": 0,
+          "verified": 10
+        },
+        "adult:package": {
+          "model_contract_failed": 1,
+          "n": 12,
+          "operational_verified_fraction": 0.9166666666666666,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            0.9166666666666666,
+            0.9166666666666666
+          ],
+          "unresolved": 0,
+          "verified": 11
+        },
+        "adult:preprocess": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "adult:train": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "beijing:ingest": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "beijing:package": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "beijing:preprocess": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "beijing:train": {
+          "model_contract_failed": 5,
+          "n": 12,
+          "operational_verified_fraction": 0.3333333333333333,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 1,
+          "routing_rank_primary": 1,
+          "unknown_outcome_sensitivity_range": [
+            0.3333333333333333,
+            0.5833333333333334
+          ],
+          "unresolved": 3,
+          "verified": 4
+        },
+        "bugs2fix:repair": {
+          "model_contract_failed": 2,
+          "n": 6,
+          "operational_verified_fraction": 0.6666666666666666,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 2,
+          "routing_rank_primary": 2,
+          "unknown_outcome_sensitivity_range": [
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          "unresolved": 0,
+          "verified": 4
+        }
+      },
+      "model_alias": "tencent-hy3",
+      "price_not_part_of_ability_rank": true,
+      "routing_ranks": {
+        "adult:ingest": 2,
+        "adult:package": 3,
+        "adult:preprocess": 3,
+        "adult:train": 3,
+        "beijing:ingest": 3,
+        "beijing:package": 3,
+        "beijing:preprocess": 3,
+        "beijing:train": 1,
+        "bugs2fix:repair": 2
+      }
+    },
+    "agent_2": {
+      "cells": {
+        "adult:ingest": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "adult:package": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "adult:preprocess": {
+          "model_contract_failed": 5,
+          "n": 12,
+          "operational_verified_fraction": 0.5833333333333334,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 1,
+          "routing_rank_primary": 1,
+          "unknown_outcome_sensitivity_range": [
+            0.5833333333333334,
+            0.5833333333333334
+          ],
+          "unresolved": 0,
+          "verified": 7
+        },
+        "adult:train": {
+          "model_contract_failed": 3,
+          "n": 12,
+          "operational_verified_fraction": 0.75,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 2,
+          "routing_rank_primary": 2,
+          "unknown_outcome_sensitivity_range": [
+            0.75,
+            0.75
+          ],
+          "unresolved": 0,
+          "verified": 9
+        },
+        "beijing:ingest": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "beijing:package": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "beijing:preprocess": {
+          "model_contract_failed": 2,
+          "n": 12,
+          "operational_verified_fraction": 0.8333333333333334,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 2,
+          "routing_rank_primary": 2,
+          "unknown_outcome_sensitivity_range": [
+            0.8333333333333334,
+            0.8333333333333334
+          ],
+          "unresolved": 0,
+          "verified": 10
+        },
+        "beijing:train": {
+          "model_contract_failed": 2,
+          "n": 12,
+          "operational_verified_fraction": 0.8333333333333334,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 2,
+          "routing_rank_primary": 2,
+          "unknown_outcome_sensitivity_range": [
+            0.8333333333333334,
+            0.8333333333333334
+          ],
+          "unresolved": 0,
+          "verified": 10
+        },
+        "bugs2fix:repair": {
+          "model_contract_failed": 4,
+          "n": 6,
+          "operational_verified_fraction": 0.3333333333333333,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 1,
+          "routing_rank_primary": 1,
+          "unknown_outcome_sensitivity_range": [
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          "unresolved": 0,
+          "verified": 2
+        }
+      },
+      "model_alias": "gpt-5-mini",
+      "price_not_part_of_ability_rank": true,
+      "routing_ranks": {
+        "adult:ingest": 3,
+        "adult:package": 3,
+        "adult:preprocess": 1,
+        "adult:train": 2,
+        "beijing:ingest": 3,
+        "beijing:package": 3,
+        "beijing:preprocess": 2,
+        "beijing:train": 2,
+        "bugs2fix:repair": 1
+      }
+    },
+    "agent_3": {
+      "cells": {
+        "adult:ingest": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "adult:package": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "adult:preprocess": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 0.4166666666666667,
+          "rank_changes_if_unresolved_verified": true,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 1,
+          "unknown_outcome_sensitivity_range": [
+            0.4166666666666667,
+            1.0
+          ],
+          "unresolved": 7,
+          "verified": 5
+        },
+        "adult:train": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 0.8333333333333334,
+          "rank_changes_if_unresolved_verified": true,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 2,
+          "unknown_outcome_sensitivity_range": [
+            0.8333333333333334,
+            1.0
+          ],
+          "unresolved": 2,
+          "verified": 10
+        },
+        "beijing:ingest": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "beijing:package": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 1.0,
+          "rank_changes_if_unresolved_verified": false,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 3,
+          "unknown_outcome_sensitivity_range": [
+            1.0,
+            1.0
+          ],
+          "unresolved": 0,
+          "verified": 12
+        },
+        "beijing:preprocess": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 0.08333333333333333,
+          "rank_changes_if_unresolved_verified": true,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 1,
+          "unknown_outcome_sensitivity_range": [
+            0.08333333333333333,
+            1.0
+          ],
+          "unresolved": 11,
+          "verified": 1
+        },
+        "beijing:train": {
+          "model_contract_failed": 0,
+          "n": 12,
+          "operational_verified_fraction": 0.5,
+          "rank_changes_if_unresolved_verified": true,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 3,
+          "routing_rank_primary": 1,
+          "unknown_outcome_sensitivity_range": [
+            0.5,
+            1.0
+          ],
+          "unresolved": 6,
+          "verified": 6
+        },
+        "bugs2fix:repair": {
+          "model_contract_failed": 2,
+          "n": 6,
+          "operational_verified_fraction": 0.3333333333333333,
+          "rank_changes_if_unresolved_verified": true,
+          "rank_is_not_statistically_confirmed": true,
+          "routing_rank_if_all_unresolved_verified": 2,
+          "routing_rank_primary": 1,
+          "unknown_outcome_sensitivity_range": [
+            0.3333333333333333,
+            0.6666666666666666
+          ],
+          "unresolved": 2,
+          "verified": 2
+        }
+      },
+      "model_alias": "glm-5.3-flash",
+      "price_not_part_of_ability_rank": true,
+      "routing_ranks": {
+        "adult:ingest": 3,
+        "adult:package": 3,
+        "adult:preprocess": 1,
+        "adult:train": 2,
+        "beijing:ingest": 3,
+        "beijing:package": 3,
+        "beijing:preprocess": 1,
+        "beijing:train": 1,
+        "bugs2fix:repair": 1
+      }
+    }
+  },
+  "rank_definition": {
+    "not_intrinsic_intelligence_or_provider_price": true,
+    "not_statistically_confirmed_or_independent_population_estimate": true,
+    "rank_1": "fewer than two-thirds VERIFIED in the frozen cell",
+    "rank_2": "at least two-thirds but fewer than eleven-twelfths VERIFIED",
+    "rank_3": "at least eleven-twelfths VERIFIED",
+    "thresholds_selected_after_calibration_before_main": true,
+    "unresolved_counted_as_not_verified_operationally": true
+  },
+  "repository_calibration_only_six_cases_per_model": true,
+  "sensitivity_required": [
+    "all_unresolved_as_verified",
+    "rank_neutral_routing",
+    "stage_and_project_stratification"
+  ],
+  "source_sha256": {
+    "ml_summary": "852721634f25f4f668d8066ce7009b14570d9564616305be79a274336a7530a9",
+    "profile_builder": "a3be2f2436d81e337fb134c9caa0114ffb49a0da312141ff7c9e31c697bd74f3",
+    "repository_summary": "6c03c7cc56a924683d2f18e2f660b7d31b19a6d3064cf33a7e7d3981d02eb51d"
+  },
+  "status": "descriptive_operational_routing_profiles_frozen_before_main"
+}

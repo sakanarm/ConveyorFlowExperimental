@@ -9,7 +9,7 @@ from pathlib import Path
 from audit_ml_calibration import audit as audit_ml
 from prepare_design import audit as audit_design, DEST, HERE, MAJOR
 
-ML_FINAL = MAJOR / 'results/ecological_ml_calibration_v3_final/summary.json'
+ML_FINAL = MAJOR / 'results/ml_calibration_continuation_4_complete_v1/summary.json'
 REPO_FINAL = MAJOR / 'results/ecological_repository_calibration_v1_final/summary.json'
 REPO_MAIN = MAJOR / 'results/ecological_repository_main_preflight_v1/summary.json'
 PROFILES = HERE / 'main_capability_profiles_v1.json'

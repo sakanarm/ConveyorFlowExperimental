@@ -106,3 +106,79 @@ Before paid paired main, the remaining work is: gold-free repository contexts
 and verifier audit, a real paired live allocator with decision-locus/claim/
 failure/late-return accounting, then a frozen arrival/arm-order/limits/analysis
 lock. Merely creating a lock file is not sufficient.
+
+## Later technical allocator and repository-preparation record (7 October 2026)
+
+The preceding paragraph describes the state **before** this later work. It
+must not be read as the current readiness result. The live allocator
+`live_allocator_core_v1.py` first failed an offline fixture because the
+observation clock started before SQLite initialization on the D-backed mount.
+The failed fixture directory was retained. The clock was then anchored after
+store creation; a separate fixture completed all five policy arms, upstream
+model failure, unresolved provider outcome, and bounded no-volunteer handling.
+These are trusted fixtures, not throughput or cost measurements.
+
+A separately frozen technical paired sentinel then used two **exposed
+calibration** ingest cases in each of `CF_FIT`, `CENTRAL_RULE_MATCHED`, and
+`STATIC_OWNERS`. The public-only six-bundle lock was audited before any paid
+call. Its first launch checked the rootless Podman store, found no evaluator
+image, and stopped before a provider call. The exact locked image ID
+`d1dd86e9ef7bb249f3468e90214f3ceb3a9e8ff1ed84b0b7e1926458f423a37e`
+was verified in the rootful store used by the previous successful sentinel;
+the same frozen evaluator and inputs were then run there. The technical run
+made exactly six provider requests, with no automatic retry. All six generated
+ingest stages passed the locked first verifier and fresh replay. The read-only
+`audit_main_allocator_sentinel_v1.py` checked request/model identity, local
+versus coordinator decision process, SQLite claim wins, generated source,
+artifact provenance, replay, tokens, and provider cost units. The technical
+lock SHA-256 is `c375053ee16389628ea29bdb0903693149ee41863a9390d4d0700efe3a8a058a`;
+the raw summary SHA-256 is
+`c064cab4691ec5e77209e74af119966ff0ae7c5c2d7aeb4960c7e2af765054c5`.
+This is **not** a main paired effect estimate: it has only two familiar
+calibration jobs, one stage, and a fixed arm order.
+
+For repository main, six selected cases were localized from buggy public
+tracebacks and API names, without reading a gold diff. The first image-build
+attempt used the Docker default in WSL and stopped with `docker` not found;
+no image or LLM observation was made. A first frozen recovery stopped before
+building because its output-root override also redirected a lock lookup.
+Both failures remain. The second separate recovery required explicit rootful
+Podman and a minimum of 8 GiB free on C before each case. It built isolated
+candidate/verifier images for Luigi 2, Pandas 2, and Matplotlib 2; candidate
+source hashes match the buggy trees and the final candidate images have no
+fixed/source/protected/gold roots. The original candidate gate passed five
+cases. `matplotlib_28` failed the original all-active rule only because one
+of ten selected public regressions was skipped for the same FreeType
+environment reason on buggy and fixed; the other nine passed on both. This
+failed status remains unchanged.
+
+Before **any repository-repair main LLM call**, a disclosed post-outcome
+environment amendment applied one rule to all six preselected cases: visible
+buggy failure; identical candidate/fixed regression dispositions; no
+regression failures/errors; and at least `min(8, selected_count)` active
+passes on both. No test was replaced or rerun. The amended candidate gate
+qualifies six cases for context preparation, but `matplotlib_1` has only two
+eligible public regressions and `matplotlib_28` has nine active plus one
+common skip. This limited coverage and the post-preflight timing of the
+amendment must be disclosed in the manuscript, not portrayed as an original
+preregistration. The amendment lock SHA-256 is
+`531c715ec81a023e05872c421a453407a19ac550bcd3d43b4ca602edf2cb29e2`.
+
+The first main-context extraction stopped on `luigi_3` because the old
+extractor assumed the visible method name was unique across all test classes.
+The original failure remains. A separate class-qualified selector and bounded
+container file transport then prepared all six cases. For each, a no-op patch
+reproduced the visible bug and frozen public regression dispositions, while a
+trusted import-sentinel mutation caused its unique failure marker, proving
+that patched source is actually loaded. The read-only six-case context audit
+checks the buggy-source hashes, prompt paths/excerpts, and identity evidence.
+Its recovery lock SHA-256 is
+`1cc1ef5c3512536c66882c7a25e8a1fcefb635e6bae0fa2e0062c0ec4cafcae9`.
+No repository-repair main model call has yet occurred.
+
+The current `check_main_readiness_v1.py` still returns
+`ready_to_execute: false`. The outstanding conditions are a frozen paired
+main execution lock, an audited full-workload live adapter (the technical
+sentinel covers ingest only), and a frozen paired arm order/arrival/limits/
+analysis protocol. The six-call technical sentinel and the six repository
+contexts must never be copied into the paper's main-results denominator.

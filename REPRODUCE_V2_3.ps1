@@ -35,6 +35,8 @@ param(
                  'EcologicalMainSentinelV2Audit',
                  'EcologicalMainSentinelV3Freeze', 'EcologicalMainSentinelV3Execute',
                  'EcologicalMainSentinelV3Audit',
+                 'EcologicalPairedAllocatorFreeze', 'EcologicalPairedAllocatorExecute',
+                 'EcologicalPairedAllocatorAudit', 'EcologicalRepositoryMainContextsAudit',
                  'EcologicalIntegrationEventCheck',
                  'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
                  'EcologicalRepositoryCalibrationFinalize', 'EcologicalIntegrationCheck',
@@ -199,6 +201,31 @@ try {
         }
         'EcologicalMainSentinelV3Audit' {
             Invoke-Python @("$major/ecological_v1/audit_main_adapter_sentinel_v3.py")
+        }
+        'EcologicalPairedAllocatorFreeze' {
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/run_main_allocator_sentinel_v1.py" --freeze
+            if ($LASTEXITCODE -ne 0) { throw 'Technical paired allocator freeze failed; no provider call.' }
+            Invoke-Python @("$major/ecological_v1/audit_main_allocator_sentinel_lock_v1.py")
+        }
+        'EcologicalPairedAllocatorExecute' {
+            if (-not $ConfirmPaidRun -or -not $env:MFEC_LITELLM_API_KEY) {
+                throw 'Process credential and -ConfirmPaidRun are required for technical paired calls.'
+            }
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            $env:MFEC_LITELLM_API_KEY | & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/wsl_main_allocator_sentinel_v1_bridge.py" `
+                run_main_allocator_sentinel_v1.py --execute
+            if ($LASTEXITCODE -ne 0) { throw 'Technical paired allocator stopped; preserve evidence and never blindly retry.' }
+        }
+        'EcologicalPairedAllocatorAudit' {
+            Invoke-Python @("$major/ecological_v1/audit_main_allocator_sentinel_v1.py")
+        }
+        'EcologicalRepositoryMainContextsAudit' {
+            Invoke-Python @("$major/ecological_v1/audit_repository_main_contexts_v1.py")
         }
         'EcologicalIntegrationEventCheck' {
             if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/ecological_v1.' }

@@ -10,7 +10,9 @@ from audit_ml_calibration import audit as audit_ml
 from audit_main_capability_profiles_v1 import audit as audit_profiles
 from audit_main_ml_inputs_v1 import audit as audit_main_inputs
 from audit_main_adapter_sentinel_v3 import audit_outcome as audit_sentinel
+from audit_main_allocator_sentinel_v1 import audit as audit_paired_technical
 from audit_main_repository_qualification_v1 import audit as audit_repo_main
+from audit_repository_main_contexts_v1 import audit as audit_repo_contexts
 from prepare_design import audit as audit_design, DEST, HERE, MAJOR
 
 ML_FINAL = MAJOR / 'results/ml_calibration_continuation_4_complete_v1/summary.json'
@@ -92,9 +94,14 @@ def audit():
                                          audit_sentinel()['verified_generated_stages'] == 4),
                       execution_lock=MAIN_LOCK.is_file(),
                       additional_blockers=(
-                          'gold_free_repository_main_contexts_audited',
                           'paired_live_allocator_backend_audited',
                           'paired_arm_order_limits_and_analysis_frozen'))
+    result['gates']['gold_free_repository_main_contexts_audited'] = bool(
+        audit_repo_contexts()['eligible_for_repository_main_execution_lock'])
+    result['gates']['technical_paired_ingest_allocator_sentinel_audited'] = bool(
+        audit_paired_technical()['verified_generated_ingest_stages'] == 6)
+    result['inventory_complete'] = all(result['gates'].values())
+    result['blockers'] = [name for name, passed in result['gates'].items() if not passed]
     result.update(design_sha256=design_audit['design_sha256'],
                   ml_calibration_completed=ml_report.get('completed_pairs'),
                   ml_calibration_never_started=ml_report.get('not_started_pairs'),

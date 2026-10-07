@@ -1,0 +1,37 @@
+{
+  "candidate_lock_sha256": "6ebc67f0c9095ee897e617b6813b25bbcb3b33ced066728cd1a0d2f0b0292a50",
+  "candidate_summaries_sha256": {
+    "luigi_3": "706a516c89fadae33df5916206d0aaac63589fe0fa405fcbd03e9b5bd5a737fd",
+    "luigi_9": "b2e53bdf04b0d41b71e85875e40a55e7ec80f5534bbdfb00f0e14dd844a36177",
+    "matplotlib_1": "a6fb13107e46b96bf14d08103d8263f38948faf6231a8cfc9ae5a310f3e27f89",
+    "matplotlib_28": "e06bac8e1d5755f8f310ed50f00a51b68990d4c5ea3b5046134bf00ac2820334",
+    "pandas_100": "f0ee8e4a3d81c6d464b037566acd319cfe17d20c5ba74e403477d5192bd4ada6",
+    "pandas_82": "5a17fabd2469983772481e396229be697cff3da82cd1ca76921065018e398b0d"
+  },
+  "created_at_utc": "2026-10-07T10:27:53.303708+00:00",
+  "minimum_active_passes": "min(8, selected_count)",
+  "no_test_replacement_or_rerun": true,
+  "original_failed_matplotlib_28_summary_preserved": true,
+  "outcomes_observed_before_amendment": true,
+  "population": [
+    "luigi_3",
+    "luigi_9",
+    "pandas_100",
+    "pandas_82",
+    "matplotlib_1",
+    "matplotlib_28"
+  ],
+  "provider_calls": 0,
+  "research_results": false,
+  "rule": "Require visible buggy failure, unchanged selected regression identities, candidate/fixed dispositions identical, no regression failures/errors, and at least min(8, selected count) active passes on BOTH sides. Common environment skips remain reported; no replacements.",
+  "runner_sha256": "2d3ff8cd7be9b0b15ee1f229d57125b64b7e4475807552987e76836ff0e8b26f",
+  "selection_sha256": {
+    "luigi_3": "4b71dfee2dd65334d2854392c10163fa94b11b984996256bea9ede3df8c8c34e",
+    "luigi_9": "b57379f8db5bbe735b3e838ef94bd3609fafd2535c76feadabd1b1a5734b71a2",
+    "matplotlib_1": "35b624cd0149731ac7cb2e12e372d22bf27e063df40714444df3dc1a686b0bc4",
+    "matplotlib_28": "8b6ff8a30ad719feea4fac124d72131b7570f4528498acb2052a2fbead5b80c5",
+    "pandas_100": "1f1556493834da67d16e928f5ffe49058a284a4d4a161e119c7dc4321f51274c",
+    "pandas_82": "d9a596a2c3b7b5fde22bb7e8ee5a085bc659f8ff8da41a49c1c282709f01801c"
+  },
+  "status": "post_candidate_preflight_common_skip_amendment_frozen_before_repair_main"
+}

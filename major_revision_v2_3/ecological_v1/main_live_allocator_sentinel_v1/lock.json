@@ -1,0 +1,109 @@
+{
+  "arm_ids": [
+    "CF_FIT",
+    "CENTRAL_RULE_MATCHED",
+    "STATIC_OWNERS"
+  ],
+  "arm_order": [
+    "CF_FIT",
+    "CENTRAL_RULE_MATCHED",
+    "STATIC_OWNERS"
+  ],
+  "bundle_origin_sha256": {
+    "CENTRAL_RULE_MATCHED/CAL_ADULT_01": "557df5159a61ef3a795ac8803d51ad8c2243e6eeff8e6e0f3d44a6bddc9d9ff8",
+    "CENTRAL_RULE_MATCHED/CAL_BEIJING_01": "c2552c2f16c593947fd76191baba72968a0ce293aa2d86fb3070861548d51235",
+    "CF_FIT/CAL_ADULT_01": "80fb870dcb4c7abe2463fb53c2b8969fee6bc3cdf1fee7b3b0a165841ad9fb1d",
+    "CF_FIT/CAL_BEIJING_01": "6a86461dc7a0c1edfa164190ab3e98b27cfa432af3fef450c7c071f0e391486f",
+    "STATIC_OWNERS/CAL_ADULT_01": "01431f01af84af58e862e3be316baad6fe778c72542de3488d2e2fd81fcc38d2",
+    "STATIC_OWNERS/CAL_BEIJING_01": "22415fd1fa13ecaebc972b2754ca75e860ea46de5f9148c2c5e7cf2584cc4222"
+  },
+  "created_at_utc": "2026-10-07T09:56:55.017454+00:00",
+  "dependencies": {
+    "CAL_ADULT_01_prepared": "0517255ca3e736ddb9fa4a490e45a9867bcbc556d6a31f662f8ec6300b812395",
+    "CAL_BEIJING_01_prepared": "6f29a0b9932108373f71b67a72fb53d4f90fc747573498b2a4f997cc8d04855a",
+    "belt_contract.py": "25b6a0f2b705c11ec6234291c6f310ab5c210f037d1e404cdab291aa42e1d1d1",
+    "claim_store.py": "b5d83fe1c7a01420a6f4de4aeaa00792e783a339f5d886ae168613d924c8988e",
+    "design": "bcda309b38d1fb6681e63319c4bdb467594460a6ecb3566ad6249ff8eb809c0b",
+    "evaluator_lock": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b",
+    "integration_backend_v1.py": "b2bc8fdac131ff65517c719c01b34b7dce987d8e7a0bcffb853f95c5250a58b8",
+    "integration_worker_v1.py": "82056f86dc91c8016c4934000b9e3303d8f45e6c760df4b738fd40c270df0d62",
+    "live_allocator_core_v1.py": "a495594144c158193794b97a12dd4ab21df0e3506736a27aa2587176b2b22595",
+    "main_artifact_chain_v1.py": "9ef7aaaec4164a2b17280e4b715c54580da201a427a2dec15c7bbe7cab6400f9",
+    "main_live_ml_bundle_v1.py": "371c636a2e6518990d60ad86286c3c9138d6200b0bbab0b0bc46afff83ca6477",
+    "main_live_ml_stage_v1.py": "0fc103fc4a3cc5debce75bf2f69cc902e8ff3a594154fe0475161ba83146fa17",
+    "main_stage_compatibility_v1.py": "26c8c2b2e07c5e4a7e730de7a02ea68dc10c5cf388f8cb35da81b7bccc0be0b7",
+    "profile": "8a17c2c06fd7696dcea5234d136fd666a3d0c24d1432c972d743387db4954972",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "run_main_allocator_sentinel_v1.py": "f779f7271c00637eb2cf75ad653370b72f279920ce244bcaf3d6ccb4dd47d6e7",
+    "v3_full_chain_sentinel": "4dd21844739dbc3b64080d25b2088c192c1d4a1434bf6cf8b0259e3748d49e74",
+    "wsl_main_allocator_sentinel_v1_bridge.py": "c13187adb06267ad3437db3069e7f854548b9fbce37553ef90a815ad40e34ba6"
+  },
+  "design_sha256": "bcda309b38d1fb6681e63319c4bdb467594460a6ecb3566ad6249ff8eb809c0b",
+  "generation": {
+    "max_output_tokens": 32768,
+    "temperature": 0,
+    "timeout_seconds": 720
+  },
+  "limits": {
+    "horizon": 900,
+    "max_attempts": 1,
+    "no_volunteer_limit": 6,
+    "scan": 8,
+    "w1": 2,
+    "w2": 4
+  },
+  "live_ml_stage_sha256": "0fc103fc4a3cc5debce75bf2f69cc902e8ff3a594154fe0475161ba83146fa17",
+  "max_provider_calls": 6,
+  "max_wall_seconds_per_arm": 1800,
+  "ml_case_ids": [
+    "CAL_ADULT_01",
+    "CAL_BEIJING_01"
+  ],
+  "models": {
+    "agent_1": {
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "model_id": "tencent-hy3"
+    },
+    "agent_2": {
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "model_id": "gpt-5-mini"
+    }
+  },
+  "no_retry_of_started_stage": true,
+  "not_a_model_performance_observation": true,
+  "not_allocation_main": true,
+  "owners": {
+    "CAL_ADULT_01:ingest": "A1",
+    "CAL_BEIJING_01:ingest": "A2"
+  },
+  "paid_execution_allowed": true,
+  "provider_config_sha256": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+  "run_ids": [
+    "ALLOCATOR_SENTINEL_V1"
+  ],
+  "runtime_root": "/mnt/d/ConveyorFlowRuntime/v2_3/candidate_workspaces",
+  "scope": "technical_paired_allocator_sentinel_not_research_main",
+  "seed": 61,
+  "status": "ecological_main_execution_frozen_v1",
+  "tasks": [
+    {
+      "arrival": 0,
+      "dependencies": [],
+      "job_id": "CAL_ADULT_01",
+      "required_rank": 1,
+      "stage": "ingest",
+      "task_id": "CAL_ADULT_01:ingest",
+      "workload": "adult"
+    },
+    {
+      "arrival": 0,
+      "dependencies": [],
+      "job_id": "CAL_BEIJING_01",
+      "required_rank": 1,
+      "stage": "ingest",
+      "task_id": "CAL_BEIJING_01:ingest",
+      "workload": "beijing"
+    }
+  ],
+  "tick_ns": 1000000000
+}

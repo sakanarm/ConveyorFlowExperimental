@@ -21,6 +21,8 @@ def host_bundle():
 def verified_stage(bundle, stage, record):
     generation = bundle / 'main_generation' / stage
     row = read(generation / 'summary.json')
+    first = read(generation / 'first_gate.json')
+    replay = read(generation / 'replay_gate.json')
     if (record != {'stage': stage, 'status': 'VERIFIED',
                    'summary_sha256': sha256(generation / 'summary.json'),
                    'provider_calls': 1}
@@ -32,9 +34,19 @@ def verified_stage(bundle, stage, record):
             or row.get('first_gate_sha256') != sha256(generation / 'first_gate.json')
             or row.get('replay_gate_sha256') != sha256(generation / 'replay_gate.json')
             or row.get('main_origin_sha256') != sha256(bundle / 'dag_output' / stage / 'main_origin.json')
-            or read(generation / 'first_gate.json').get('verified') is not True
-            or read(generation / 'replay_gate.json').get('verified') is not True):
+            or first.get('verified') is not True
+            or replay.get('verified') is not True
+            or first.get('stage_report') != read(bundle / 'dag_output' / stage / 'stage_report.json')
+            or replay.get('stage_report') != read(generation / 'replay_bundle/dag_output' / stage / 'stage_report.json')):
         raise ValueError('Sentinel v3 verified evidence mismatch: ' + stage)
+    for root, label, gate in ((bundle, 'main_first_attempt', first),
+                              (generation / 'replay_bundle', 'main_fresh_replay', replay)):
+        if stage in {'preprocess', 'train'}:
+            report = read(root / ('compatibility_' + label + '_' + stage) / 'report.json')
+            if gate.get('compatibility') != report or report.get('stage_scoped_output') is not True:
+                raise ValueError('Stage-scoped compatibility evidence mismatch: ' + stage)
+        elif gate.get('compatibility') is not None:
+            raise ValueError('Unexpected compatibility gate for stage: ' + stage)
     artifact = bundle / 'dag_output' / stage / ARTIFACT[stage]
     if artifact.is_symlink() or not artifact.is_file():
         raise ValueError('Missing generated artifact: ' + stage)

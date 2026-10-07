@@ -1,0 +1,43 @@
+{
+  "automatic_retry": false,
+  "bundle_origin_sha256": "bee0ea3a3ce164bd90dbe911b5443d1255b240ce7f7a21a692b6fff4176b3756",
+  "case_id": "CAL_ADULT_01",
+  "created_at_utc": "2026-10-07T08:00:53.445187+00:00",
+  "lock_sha256": "ea76e188a4e2eca35bb7ea892bead0a58bcaac77ac76aa1315f5c5b711cb1819",
+  "max_provider_calls": 4,
+  "model_slot": "agent_1",
+  "not_a_model_performance_observation": true,
+  "not_allocation_main": true,
+  "provider_calls": 4,
+  "records": [
+    {
+      "provider_calls": 1,
+      "stage": "ingest",
+      "status": "VERIFIED",
+      "summary_sha256": "ab9694857216cddda32952c955b265eb4bf0ef491e9e48edbd0d94442993f99a"
+    },
+    {
+      "provider_calls": 1,
+      "stage": "preprocess",
+      "status": "VERIFIED",
+      "summary_sha256": "87b7536a6d9cf4dffde79fa3e5701d83917b2eed1b06ec6594c7d56fe7e83079"
+    },
+    {
+      "provider_calls": 1,
+      "stage": "train",
+      "status": "VERIFIED",
+      "summary_sha256": "f1ecb6e44afeffe1704c9a607f1df47a619816441d355b9cdd0ea01e722a3c55"
+    },
+    {
+      "provider_calls": 1,
+      "stage": "package",
+      "status": "VERIFIED",
+      "summary_sha256": "d157b381b8761dd555eceaa85bb919c76e5bd5382172022f71505d7981191071"
+    }
+  ],
+  "runtime_root": "/mnt/d/ConveyorFlowRuntime/v2_3/candidate_workspaces",
+  "source_cohort": "calibration_exposed_not_main",
+  "started_sha256": "b11a136c887e9ffcaaa2a941f93870f49190312cb80c916c40037d4e44be8a07",
+  "status": "sentinel_v3_full_generated_chain_verified",
+  "v1_v2_instrument_failures_preserved": true
+}

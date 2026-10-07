@@ -86,3 +86,23 @@ is exclusively for instrument validation; it must not be used to improve an
 estimated ability rank or select a favorable main outcome. A legitimate v3
 candidate quality failure, if observed, must be reported and not retried
 until it passes.
+
+V3 completed all four generated stages on `CAL_ADULT_01` with one provider
+call per stage. Ingest, preprocess, train, and package each passed both the
+first locked verifier and a fresh replay; same-run/same-arm predecessor
+origin checks passed. `audit_main_adapter_sentinel_v3.py` independently
+verified the source/response/gate/artifact hashes, stage-scoped compatibility
+reports, and predecessor chain. Its summary SHA-256 is
+`4dd21844739dbc3b64080d25b2088c192c1d4a1434bf6cf8b0259e3748d49e74`.
+Across v1/v2/v3 there were 1+3+4=8 technical provider calls; none belongs to
+the ecological allocation-main denominator. A passing sentinel validates this
+one integration route, not all agents, cases, policy arms, provider reliability,
+or the proposed RQ1/RQ2 claims.
+
+All 12 frozen main ML inputs were also audited case by case for source hashes,
+public/hidden separation, schemas, row counts, and preparation-script identity.
+The repository environment gate now has six selected cases (two per project).
+Before paid paired main, the remaining work is: gold-free repository contexts
+and verifier audit, a real paired live allocator with decision-locus/claim/
+failure/late-return accounting, then a frozen arrival/arm-order/limits/analysis
+lock. Merely creating a lock file is not sufficient.

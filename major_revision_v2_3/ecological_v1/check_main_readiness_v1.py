@@ -27,7 +27,7 @@ def read(path):
 
 def evaluate(*, calibration_settled, ml_final, repo_final,
              expected_main_ml, prepared_main_ml, repo_main_preflight,
-             profiles, live_sentinel, execution_lock):
+             profiles, live_sentinel, execution_lock, additional_blockers=()):
     gates = {
         'ml_calibration_finite_population_settled': calibration_settled and ml_final,
         'repository_calibration_capsule': repo_final,
@@ -37,6 +37,10 @@ def evaluate(*, calibration_settled, ml_final, repo_final,
         'live_adapter_sentinel_summary_present': live_sentinel,
         'paired_main_execution_lock_file_present': execution_lock,
     }
+    for name in additional_blockers:
+        if name in gates:
+            raise ValueError('Duplicate main prerequisite')
+        gates[name] = False
     return {'status': 'main_preconditions_recorded_not_execution_authorization',
             'research_results': False, 'no_provider_calls': True,
             'no_container_or_candidate_execution': True,
@@ -86,7 +90,11 @@ def audit():
                       profiles=bool(PROFILES.is_file() and audit_profiles()['profiles'] == 3),
                       live_sentinel=bool(LIVE_SENTINEL.is_file() and
                                          audit_sentinel()['verified_generated_stages'] == 4),
-                      execution_lock=MAIN_LOCK.is_file())
+                      execution_lock=MAIN_LOCK.is_file(),
+                      additional_blockers=(
+                          'gold_free_repository_main_contexts_audited',
+                          'paired_live_allocator_backend_audited',
+                          'paired_arm_order_limits_and_analysis_frozen'))
     result.update(design_sha256=design_audit['design_sha256'],
                   ml_calibration_completed=ml_report.get('completed_pairs'),
                   ml_calibration_never_started=ml_report.get('not_started_pairs'),

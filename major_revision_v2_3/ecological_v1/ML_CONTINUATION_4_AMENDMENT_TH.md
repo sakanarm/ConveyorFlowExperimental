@@ -1,0 +1,7 @@
+# ML calibration continuation 4 หลังพักตามคำขอผู้ใช้
+
+ประชากรเดิมยังคงเป็น 24 task specifications × 4 ML stages × 3 deployments = 288 case-stage-model identities ไม่เปลี่ยน prompt, generation settings, validator, container image, timeout หรือเกณฑ์ first attempt. ณ การหยุด continuation 3 มี 190 คู่ที่มีผลสรุป, สองคู่เดิมที่มี request marker แต่ไม่ settled และ 96 คู่ที่ไม่เคยเริ่ม. `continuation_3_finished.json` ยืนยัน `paused_after_inflight_settled`.
+
+Continuation 4 อนุญาตคำขอใหม่เฉพาะ 96 คู่ที่ไม่เคยเริ่ม ณ เวลาตรึง lock. Hash ของผล 190 คู่, หลักฐานสองคู่ที่ขัดจังหวะ, prefix ของ append-only ledgers, lock และ pause acknowledgment ก่อนหน้า รวมทั้ง trusted offline Podman health ถูกบันทึกก่อนส่ง API. ไม่มีการ retry คู่ที่มี request marker. หากมี drift, authentication error, unclean container timeout หรือ circuit breaker ของ deployment จะหยุดหรือปิด slot ตามกติกาเดิม และรายงานช่องที่ยังไม่เริ่มตามจริง.
+
+การทดสอบนี้เป็น conditional stage calibration: แต่ละ stage ใช้ trusted predecessors เท่ากัน ไม่ใช่การสร้าง ML pipeline ครบโดย model และไม่ใช่ paired main allocation experiment. สองคู่ที่ user interruption ยังคงเป็น unresolved ไม่ตีเป็น model failure หรือ verified. ผลเชิงสถิติต้องแสดง denominator ครบ 288 คู่และข้อจำกัดของสอง public corpora, specification variants และ provider/resource budgets. ห้ามใช้ calibration นี้เป็นหลักฐานว่า CF-Fit ชนะ Central-Fit หรือว่าปิด Major Revision แล้ว.

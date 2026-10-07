@@ -8,15 +8,15 @@ from pathlib import Path
 
 from audit_ml_calibration import audit as audit_ml
 from audit_main_capability_profiles_v1 import audit as audit_profiles
-from audit_main_adapter_sentinel_v1 import audit as audit_sentinel
-from audit_main_repository_preflight_v1 import audit as audit_repo_main
+from audit_main_adapter_sentinel_v2 import audit_outcome as audit_sentinel
+from audit_main_repository_qualification_v1 import audit as audit_repo_main
 from prepare_design import audit as audit_design, DEST, HERE, MAJOR
 
 ML_FINAL = MAJOR / 'results/ml_calibration_continuation_4_complete_v1/summary.json'
 REPO_FINAL = MAJOR / 'results/ecological_repository_calibration_v1_final/summary.json'
 REPO_MAIN = MAJOR / 'results/ecological_repository_main_preflight_v1/summary.json'
 PROFILES = HERE / 'main_capability_profiles_v1.json'
-LIVE_SENTINEL = HERE / 'main_live_adapter_sentinel_v1/summary.json'
+LIVE_SENTINEL = HERE / 'main_live_adapter_sentinel_v2/summary.json'
 MAIN_LOCK = HERE / 'main_allocation_execution_lock_v1.json'
 
 

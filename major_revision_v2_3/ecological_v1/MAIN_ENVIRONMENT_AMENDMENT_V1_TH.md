@@ -1,0 +1,67 @@
+# v2.3 main environment amendment (7 October 2026)
+
+This is an instrument/eligibility amendment **after** the original repository
+preflight and **before** any repository-repair main-model call. It is not a
+retrospective model-performance adjustment. The original preflight ledger and
+its four Matplotlib exclusions remain unchanged and auditable.
+
+## Repository environment
+
+The frozen 12-case pool required two reproducible cases from each of Luigi,
+Pandas, and Matplotlib. The original preflight qualified Luigi 2/2 and Pandas
+2/2, but all four Matplotlib candidates stopped during pytest collection in
+both buggy and fixed revisions. The common observed error was a Python 3.8
+`DeprecationWarning` for an invalid escape sequence in legacy Matplotlib
+source, promoted to a collection error. This did not measure the relevant bug.
+
+Before amending the protocol, an offline diagnostic on the first frozen
+Matplotlib case (`matplotlib_1`) showed that the narrowly scoped pytest option
+`-W ignore::DeprecationWarning` allowed the relevant test to run: buggy failed
+and fixed passed. The diagnostic case and outcome were therefore known before
+the amendment and must be disclosed. We then froze one amendment for **all
+four** original Matplotlib candidates in the original order, with the same
+existing validator images, test selectors, resource limits, network isolation,
+and no LLM calls. The sole change was the warning filter. All four were run,
+even after the first two qualified. All four met the buggy-fail/fixed-pass
+criterion. The predeclared first-two rule selects `matplotlib_1` and
+`matplotlib_28`; `matplotlib_6` and `matplotlib_26` remain in the ledger, not
+silently discarded.
+
+The combined repository qualification is Luigi 2, Pandas 2, Matplotlib 2.
+This is **environment eligibility only**. It says nothing about LLM repair
+success and is not a paired allocation result. Commands:
+
+```text
+python ecological_v1/amend_matplotlib_preflight_v1.py --freeze
+CONVEYORFLOW_CONTAINER_COMMAND=podman python3 ecological_v1/amend_matplotlib_preflight_v1.py --execute
+python ecological_v1/amend_matplotlib_preflight_v1.py --audit
+python ecological_v1/audit_main_repository_qualification_v1.py
+```
+
+The original ledger SHA-256 is
+`16446c0e0e835bb18b886d32b4f12605fefc1b4ef91c03d616d002de9e53cd87`;
+the amendment ledger SHA-256 is
+`5d7867eca906bfa9b7ff975fa4138e0d88c5d2950f9d7fe845eb754868c802f6`.
+These are distinct capsules. The amendment is not a preregistration made
+before inspecting any Matplotlib environment outcome.
+
+## Real-LLM adapter instrument
+
+Technical sentinel v1 used the exposed calibration case `CAL_ADULT_01` and
+one `tencent-hy3` call, not any main case. Its generated ingest source passed
+the first locked container gate, but a fresh replay of the same source failed
+to open `/submission/ingest_validate.py` with `[Errno 5] Input/output error`.
+The same source hashes on both copies. A read-only Podman diagnostic reproduced
+the I/O error from the long C-path bind mount; a short D-path copy with the
+same SHA-256 was readable, and an offline container execution on D completed.
+This is recorded as an instrument failure, not as evidence that the LLM could
+not implement ingest. V1 remains stopped with one provider call and no retry.
+
+Technical sentinel v2 is a separately frozen run on short D-backed candidate
+workspaces. It uses the same public calibration case, model mapping, generation
+bounds, locked offline evaluator, fresh replay, and same-arm provenance.
+`run_main_adapter_sentinel_v2.py` explicitly restricts the unchanged verifier
+module's workspace guard to the frozen D root **only in that process**; it does
+not modify the old verifier source or v1 evidence. V2 is technical only: even
+if all four stages verify, it is not a paper allocation observation. A separate
+paired main execution lock and audited live allocator are still required.

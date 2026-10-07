@@ -56,5 +56,47 @@ def audit():
             'not_allocation_main': True, 'no_provider_calls_by_auditor': True}
 
 
+def audit_outcome():
+    """Audit a stopped sentinel as evidence, without upgrading it to a pass."""
+    summary = read(SUMMARY)
+    if summary.get('status') == 'sentinel_full_generated_chain_verified':
+        return audit()
+    locked, started = read(LOCK), read(STARTED)
+    rows = summary.get('records')
+    if (summary.get('status') != 'sentinel_stopped_after_first_unverified_stage'
+            or locked.get('scope') != 'technical_sentinel_not_research_main'
+            or locked.get('dependencies') != dependencies()
+            or started.get('lock_sha256') != sha256(LOCK)
+            or summary.get('lock_sha256') != sha256(LOCK)
+            or summary.get('started_sha256') != sha256(STARTED)
+            or summary.get('bundle_origin_sha256') != sha256(BUNDLE / 'main_bundle_origin.json')
+            or summary.get('provider_calls') != 1
+            or summary.get('not_allocation_main') is not True
+            or summary.get('not_a_model_performance_observation') is not True
+            or summary.get('automatic_retry') is not False
+            or not isinstance(rows, list) or len(rows) != 1):
+        raise ValueError('Stopped sentinel identity mismatch')
+    generation = BUNDLE / 'main_generation/ingest'
+    row = read(generation / 'summary.json')
+    first, replay = read(generation / 'first_gate.json'), read(generation / 'replay_gate.json')
+    if (rows[0] != {'stage': 'ingest', 'status': row.get('status'),
+                    'summary_sha256': sha256(generation / 'summary.json'), 'provider_calls': 1}
+            or row.get('status') != 'REPLAY_CONTRACT_FAILED'
+            or row.get('source_sha256') != sha256(BUNDLE / 'submission' / SCRIPT['ingest'])
+            or row.get('source_sha256') != sha256(generation / 'replay_bundle/submission' / SCRIPT['ingest'])
+            or row.get('provider_sha256') != sha256(generation / 'provider.json')
+            or row.get('response_sha256') != sha256(generation / 'response.txt')
+            or row.get('first_gate_sha256') != sha256(generation / 'first_gate.json')
+            or row.get('replay_gate_sha256') != sha256(generation / 'replay_gate.json')
+            or first.get('verified') is not True or replay.get('verified') is not False):
+        raise ValueError('Stopped sentinel stage evidence mismatch')
+    return {'status': 'technical_sentinel_stopped_and_audited',
+            'verified_generated_stages': 0, 'provider_calls': 1,
+            'first_stage_verified': True, 'fresh_replay_verified': False,
+            'replay_stderr_tail': replay['stage_report']['execution']['stderr_tail'],
+            'not_allocation_main': True, 'automatic_retry': False,
+            'summary_sha256': sha256(SUMMARY)}
+
+
 if __name__ == '__main__':
     print(json.dumps(audit(), indent=2))

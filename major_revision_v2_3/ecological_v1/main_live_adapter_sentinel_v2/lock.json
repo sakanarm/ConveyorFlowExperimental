@@ -1,0 +1,55 @@
+{
+  "arm_ids": [
+    "SENTINEL_ONLY"
+  ],
+  "bundle_origin_sha256": "7536fc1068527abf88671e1d5a291ba96252b68df48dd7dd1a322cadca4b1b6c",
+  "created_at_utc": "2026-10-07T07:35:27.047752+00:00",
+  "dependencies": {
+    "audit_preparation.py": "f8847918666c001fae5987f08d52fd3302bfeef36857f218b174c858cdf36c06",
+    "design": "bcda309b38d1fb6681e63319c4bdb467594460a6ecb3566ad6249ff8eb809c0b",
+    "evaluator_lock": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b",
+    "main_artifact_chain_v1.py": "9ef7aaaec4164a2b17280e4b715c54580da201a427a2dec15c7bbe7cab6400f9",
+    "main_live_ml_bundle_v1.py": "371c636a2e6518990d60ad86286c3c9138d6200b0bbab0b0bc46afff83ca6477",
+    "main_live_ml_stage_v1.py": "0fc103fc4a3cc5debce75bf2f69cc902e8ff3a594154fe0475161ba83146fa17",
+    "ml_stage_probe_sandbox_v1.py": "257bee693f716fa64545cb5f919de57503c56ff8feaaa60e7cc92348aed00aab",
+    "prepared_summary": "0517255ca3e736ddb9fa4a490e45a9867bcbc556d6a31f662f8ec6300b812395",
+    "profile": "8a17c2c06fd7696dcea5234d136fd666a3d0c24d1432c972d743387db4954972",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "run_main_adapter_sentinel_v2.py": "b8c3dac9809837c640efa3dd5783dd03ece4afe8e2c6e24e9ae7295a266b39aa",
+    "run_ml_calibration.py": "b065e273b2d245b9407e1ff3a830aa7d75fedefc40b9981c5f12ce7cf0afc50d",
+    "run_ml_container.py": "f8be5dc1b39eb29124ad6c9aa3b315afaf12d1b1fe44913e09b2ad50789d01f8",
+    "run_ml_dag_llm_feasibility.py": "1e43fb274caa400ddd0aa596e530d824eea189765b1c3b8d176d6d13382c2e3a",
+    "run_ml_dag_stage.py": "8a16d7b20237327eb54e0b5e252e27b9e1c947fed95ef0535179a1bb3e9f8089",
+    "stage_gate.py": "994323253685100b28921edcdac2e1b0cb6167e677c395e4524ab3b7c80aa417",
+    "v1_failed_summary": "c862ad569d2d4bcc724f7afde8c2a2685865015c923d59132dfa8a9ad839201f",
+    "wsl_main_adapter_sentinel_v2_bridge.py": "6b1e7f8a978e92d615e23aa158e1f969d03373ea23209223af4bc76d9b39ef30"
+  },
+  "design_sha256": "bcda309b38d1fb6681e63319c4bdb467594460a6ecb3566ad6249ff8eb809c0b",
+  "generation": {
+    "max_output_tokens": 32768,
+    "temperature": 0,
+    "timeout_seconds": 720
+  },
+  "live_ml_stage_sha256": "0fc103fc4a3cc5debce75bf2f69cc902e8ff3a594154fe0475161ba83146fa17",
+  "max_provider_calls": 4,
+  "ml_case_ids": [
+    "CAL_ADULT_01"
+  ],
+  "models": {
+    "agent_1": {
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "model_id": "tencent-hy3"
+    }
+  },
+  "no_retry_of_started_stage": true,
+  "not_allocation_main": true,
+  "paid_execution_allowed": true,
+  "provider_config_sha256": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+  "run_ids": [
+    "SENTINEL_V2_D_SHORT"
+  ],
+  "runtime_root": "/mnt/d/ConveyorFlowRuntime/v2_3/candidate_workspaces",
+  "scope": "technical_sentinel_v2_D_short_not_research_main",
+  "status": "ecological_main_execution_frozen_v1",
+  "v1_failed_summary_sha256": "c862ad569d2d4bcc724f7afde8c2a2685865015c923d59132dfa8a9ad839201f"
+}

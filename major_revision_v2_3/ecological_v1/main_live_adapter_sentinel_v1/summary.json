@@ -1,0 +1,23 @@
+{
+  "automatic_retry": false,
+  "bundle_origin_sha256": "d3a8d4eae69491646a702053a55cb63906c47ae8ae94b87de000fec64d2ee4de",
+  "case_id": "CAL_ADULT_01",
+  "created_at_utc": "2026-10-07T07:24:33.334175+00:00",
+  "lock_sha256": "2efbcf872eb3cffe4c83945c8b2dea2b965df6242d22bf785ba84d354b5b611a",
+  "max_provider_calls": 4,
+  "model_slot": "agent_1",
+  "not_a_model_performance_observation": true,
+  "not_allocation_main": true,
+  "provider_calls": 1,
+  "records": [
+    {
+      "provider_calls": 1,
+      "stage": "ingest",
+      "status": "REPLAY_CONTRACT_FAILED",
+      "summary_sha256": "8fa44db6db76862a0440f9ae7fefbbc65180be6c9ff4283c59985a6d9a1fcc2d"
+    }
+  ],
+  "source_cohort": "calibration_exposed_not_main",
+  "started_sha256": "af2e1f77aa12ecd34f92627b0187f34dbd7f715fe62a7ed9077df2bcb5f527bc",
+  "status": "sentinel_stopped_after_first_unverified_stage"
+}

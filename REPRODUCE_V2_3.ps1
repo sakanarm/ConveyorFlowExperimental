@@ -24,8 +24,14 @@ param(
                  'EcologicalRepositoryMainPreflightFreeze',
                  'EcologicalRepositoryMainPreflightExecute',
                  'EcologicalRepositoryMainPreflightAudit',
+                 'EcologicalRepositoryMainMatplotlibFreeze',
+                 'EcologicalRepositoryMainMatplotlibExecute',
+                 'EcologicalRepositoryMainMatplotlibAudit',
+                 'EcologicalRepositoryMainQualificationAudit',
                  'EcologicalMainSentinelFreeze', 'EcologicalMainSentinelExecute',
                  'EcologicalMainSentinelAudit',
+                 'EcologicalMainSentinelV2Freeze', 'EcologicalMainSentinelV2Execute',
+                 'EcologicalMainSentinelV2Audit',
                  'EcologicalIntegrationEventCheck',
                  'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
                  'EcologicalRepositoryCalibrationFinalize', 'EcologicalIntegrationCheck',
@@ -113,6 +119,22 @@ try {
                 "$taskLinuxV2/$major/ecological_v1/preflight_repositories.py" --split main --execute
             if ($LASTEXITCODE -ne 0) { throw 'Repository main preflight failed; audit partial evidence.' }
         }
+        'EcologicalRepositoryMainMatplotlibFreeze' {
+            Invoke-Python @("$major/ecological_v1/amend_matplotlib_preflight_v1.py", '--freeze')
+        }
+        'EcologicalRepositoryMainMatplotlibExecute' {
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            & wsl -d Ubuntu -u root -e env CONVEYORFLOW_CONTAINER_COMMAND=podman python3 `
+                "$taskLinuxV2/$major/ecological_v1/amend_matplotlib_preflight_v1.py" --execute
+            if ($LASTEXITCODE -ne 0) { throw 'Matplotlib amendment failed; audit partial evidence.' }
+        }
+        'EcologicalRepositoryMainMatplotlibAudit' {
+            Invoke-Python @("$major/ecological_v1/amend_matplotlib_preflight_v1.py", '--audit')
+        }
+        'EcologicalRepositoryMainQualificationAudit' {
+            Invoke-Python @("$major/ecological_v1/audit_main_repository_qualification_v1.py")
+        }
         'EcologicalMainSentinelFreeze' {
             Invoke-Python @("$major/ecological_v1/run_main_adapter_sentinel_v1.py", '--freeze')
         }
@@ -129,6 +151,27 @@ try {
         }
         'EcologicalMainSentinelAudit' {
             Invoke-Python @("$major/ecological_v1/audit_main_adapter_sentinel_v1.py")
+        }
+        'EcologicalMainSentinelV2Freeze' {
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/run_main_adapter_sentinel_v2.py" --freeze
+            if ($LASTEXITCODE -ne 0) { throw 'Sentinel v2 freeze failed; no provider call was made.' }
+        }
+        'EcologicalMainSentinelV2Execute' {
+            if (-not $ConfirmPaidRun -or -not $env:MFEC_LITELLM_API_KEY) {
+                throw 'Process credential and -ConfirmPaidRun are required for technical sentinel v2.'
+            }
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            $env:MFEC_LITELLM_API_KEY | & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/wsl_main_adapter_sentinel_v2_bridge.py" `
+                run_main_adapter_sentinel_v2.py --execute
+            if ($LASTEXITCODE -ne 0) { throw 'Sentinel v2 failed; preserve evidence and do not retry.' }
+        }
+        'EcologicalMainSentinelV2Audit' {
+            Invoke-Python @("$major/ecological_v1/audit_main_adapter_sentinel_v2.py")
         }
         'EcologicalIntegrationEventCheck' {
             if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/ecological_v1.' }

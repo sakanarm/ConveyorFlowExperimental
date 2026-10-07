@@ -1,0 +1,36 @@
+{
+  "arms": [
+    {
+      "arm": "CF_FIT",
+      "case_id": "luigi_3",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "1b2b6caf2b95b4f7b309982c38242a65e441cd869436b7262db5ae5f0f350c10"
+    },
+    {
+      "arm": "CENTRAL_RULE_MATCHED",
+      "case_id": "luigi_3",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "a31c67f6848388647ea7438e3573ce9bab62bba2dbcaddb1e8324d10c8005a3c"
+    },
+    {
+      "arm": "STATIC_OWNERS",
+      "case_id": "luigi_3",
+      "diagnostic_status": "MODEL_PATCH_CONTEXT_MISMATCH",
+      "guard_execution_sha256": "96eee2f4831a65947049ef5af1e4c728dff4556f65c067e578cc23bfa189493f",
+      "raw_status_unchanged": "VERIFIER_ENVIRONMENT_UNRESOLVED",
+      "raw_summary_sha256": "9f24d9a0110ab51794705bc68c45d918b4f51874e65792912ecdba48746868ea",
+      "strict_signature_seen": true,
+      "verifier_sha256": "ea371ec4a3afe75ada93ade7afe6467028bf3e56d079ec5bc11f1c6aae3120cd"
+    }
+  ],
+  "block_id": "MAIN_BLOCK_01",
+  "independent_audit_sha256": "9bc63aa5679449f1daa28e560da7c5fb4c4dac1ff79cbb0c20d4f9a00026c576",
+  "lock_sha256": "2206d6dde060cf467b920745ef3912d3da4269b8ceda4d3a9c45f3f82386efe2",
+  "post_block_1_rule_frozen_before_subsequent_blocks": true,
+  "primary_metrics_unchanged": true,
+  "provider_call_count_unchanged": true,
+  "raw_ledger_and_summary_unchanged": true,
+  "status": "supplemental_guard_diagnosis_not_raw_rewrite"
+}

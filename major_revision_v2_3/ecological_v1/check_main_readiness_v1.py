@@ -8,7 +8,8 @@ from pathlib import Path
 
 from audit_ml_calibration import audit as audit_ml
 from audit_main_capability_profiles_v1 import audit as audit_profiles
-from audit_main_adapter_sentinel_v2 import audit_outcome as audit_sentinel
+from audit_main_ml_inputs_v1 import audit as audit_main_inputs
+from audit_main_adapter_sentinel_v3 import audit_outcome as audit_sentinel
 from audit_main_repository_qualification_v1 import audit as audit_repo_main
 from prepare_design import audit as audit_design, DEST, HERE, MAJOR
 
@@ -16,7 +17,7 @@ ML_FINAL = MAJOR / 'results/ml_calibration_continuation_4_complete_v1/summary.js
 REPO_FINAL = MAJOR / 'results/ecological_repository_calibration_v1_final/summary.json'
 REPO_MAIN = MAJOR / 'results/ecological_repository_main_preflight_v1/summary.json'
 PROFILES = HERE / 'main_capability_profiles_v1.json'
-LIVE_SENTINEL = HERE / 'main_live_adapter_sentinel_v2/summary.json'
+LIVE_SENTINEL = HERE / 'main_live_adapter_sentinel_v3/summary.json'
 MAIN_LOCK = HERE / 'main_allocation_execution_lock_v1.json'
 
 
@@ -75,7 +76,8 @@ def audit():
     repo = read(REPO_FINAL) if REPO_FINAL.is_file() else None
     repo_final = bool(repo and repo.get('status') == 'completed_localized_repository_calibration'
                       and repo.get('total', {}).get('planned_and_completed') == 18)
-    prepared = [case for case in expected if (HERE / 'ml_preparation' / case / 'summary.json').is_file()]
+    input_audit = audit_main_inputs()
+    prepared = input_audit['case_ids']
     result = evaluate(calibration_settled=calibration_settled,
                       ml_final=final_matches, repo_final=repo_final,
                       expected_main_ml=expected, prepared_main_ml=prepared,
@@ -89,7 +91,7 @@ def audit():
                   ml_calibration_completed=ml_report.get('completed_pairs'),
                   ml_calibration_never_started=ml_report.get('not_started_pairs'),
                   main_ml_expected=expected, main_ml_prepared=prepared,
-                  main_ml_prepared_inputs_not_yet_cryptographically_audited=True,
+                  main_ml_prepared_inputs_cryptographically_audited=True,
                   file_presence_is_not_a_quality_certification=True,
                   no_paid_main_launch_route_in_this_script=True)
     return result

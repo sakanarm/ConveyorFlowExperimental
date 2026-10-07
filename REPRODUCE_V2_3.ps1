@@ -21,6 +21,7 @@ param(
                  'EcologicalMLContinuation4Execute', 'EcologicalMLContinuation4Pause',
                  'EcologicalMLContinuation4Finalize',
                  'EcologicalMainProfileAudit',
+                 'EcologicalMainMLInputsAudit',
                  'EcologicalRepositoryMainPreflightFreeze',
                  'EcologicalRepositoryMainPreflightExecute',
                  'EcologicalRepositoryMainPreflightAudit',
@@ -32,6 +33,8 @@ param(
                  'EcologicalMainSentinelAudit',
                  'EcologicalMainSentinelV2Freeze', 'EcologicalMainSentinelV2Execute',
                  'EcologicalMainSentinelV2Audit',
+                 'EcologicalMainSentinelV3Freeze', 'EcologicalMainSentinelV3Execute',
+                 'EcologicalMainSentinelV3Audit',
                  'EcologicalIntegrationEventCheck',
                  'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
                  'EcologicalRepositoryCalibrationFinalize', 'EcologicalIntegrationCheck',
@@ -106,6 +109,9 @@ try {
         'EcologicalMainProfileAudit' {
             Invoke-Python @("$major/ecological_v1/audit_main_capability_profiles_v1.py")
         }
+        'EcologicalMainMLInputsAudit' {
+            Invoke-Python @("$major/ecological_v1/audit_main_ml_inputs_v1.py")
+        }
         'EcologicalRepositoryMainPreflightFreeze' {
             Invoke-Python @("$major/ecological_v1/preflight_repositories.py", '--split', 'main', '--freeze')
         }
@@ -172,6 +178,27 @@ try {
         }
         'EcologicalMainSentinelV2Audit' {
             Invoke-Python @("$major/ecological_v1/audit_main_adapter_sentinel_v2.py")
+        }
+        'EcologicalMainSentinelV3Freeze' {
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/run_main_adapter_sentinel_v3.py" --freeze
+            if ($LASTEXITCODE -ne 0) { throw 'Sentinel v3 freeze failed; no provider call was made.' }
+        }
+        'EcologicalMainSentinelV3Execute' {
+            if (-not $ConfirmPaidRun -or -not $env:MFEC_LITELLM_API_KEY) {
+                throw 'Process credential and -ConfirmPaidRun are required for technical sentinel v3.'
+            }
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            $env:MFEC_LITELLM_API_KEY | & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/wsl_main_adapter_sentinel_v3_bridge.py" `
+                run_main_adapter_sentinel_v3.py --execute
+            if ($LASTEXITCODE -ne 0) { throw 'Sentinel v3 failed; preserve evidence and do not retry.' }
+        }
+        'EcologicalMainSentinelV3Audit' {
+            Invoke-Python @("$major/ecological_v1/audit_main_adapter_sentinel_v3.py")
         }
         'EcologicalIntegrationEventCheck' {
             if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/ecological_v1.' }

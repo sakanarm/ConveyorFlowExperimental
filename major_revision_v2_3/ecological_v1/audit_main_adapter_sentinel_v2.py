@@ -12,25 +12,76 @@ from run_main_adapter_sentinel_v2 import (BUNDLE, CASE_ID, LOCK, STARTED, SUMMAR
 def host_bundle():
     if sys.platform == 'win32':
         frozen_prefix = '/mnt/d/'
-        if not str(BUNDLE).startswith(frozen_prefix):
+        if not BUNDLE.as_posix().startswith(frozen_prefix):
             raise ValueError('Sentinel bundle no longer on frozen D root')
-        return Path('D:/') / str(BUNDLE)[len(frozen_prefix):]
+        return Path('D:/') / BUNDLE.as_posix()[len(frozen_prefix):]
     return BUNDLE
+
+
+def audit_instrument_stop(bundle, locked, started, summary):
+    """Validate the v2 train-directory collision without treating it as a model failure."""
+    if (locked.get('scope') != 'technical_sentinel_v2_D_short_not_research_main'
+            or locked.get('dependencies') != dependencies()
+            or locked.get('bundle_origin_sha256') != sha256(bundle / 'main_bundle_origin.json')
+            or started.get('lock_sha256') != sha256(LOCK)
+            or started.get('runtime_root') != WORKSPACES.as_posix()
+            or summary.get('status') != 'sentinel_v2_instrument_unresolved'
+            or summary.get('started_sha256') != sha256(STARTED)
+            or summary.get('stage') != 'train'
+            or summary.get('error_type') != 'FileExistsError'
+            or summary.get('automatic_retry') is not False
+            or summary.get('not_allocation_main') is not True):
+        raise ValueError('Sentinel v2 instrument-stop identity mismatch')
+    records = summary.get('completed_stage_records')
+    if not isinstance(records, list) or len(records) != 2:
+        raise ValueError('Sentinel v2 completed prefix mismatch')
+    for stage, record in zip(STAGES[:2], records):
+        generation = bundle / 'main_generation' / stage
+        row = read(generation / 'summary.json')
+        if (record != {'stage': stage, 'status': 'VERIFIED',
+                       'summary_sha256': sha256(generation / 'summary.json'),
+                       'provider_calls': 1}
+                or row.get('status') != 'VERIFIED'
+                or row.get('source_sha256') != sha256(bundle / 'submission' / SCRIPT[stage])
+                or row.get('main_origin_sha256') != sha256(bundle / 'dag_output' / stage / 'main_origin.json')
+                or read(generation / 'first_gate.json').get('verified') is not True
+                or read(generation / 'replay_gate.json').get('verified') is not True):
+            raise ValueError('Sentinel v2 verified prefix evidence mismatch')
+        verify_parents(bundle, stage, run_id=RUN_ID, arm_id=ARM_ID, case_id=CASE_ID)
+    generation = bundle / 'main_generation/train'
+    produced = read(generation / 'generation.json')
+    report = read(bundle / 'dag_output/train/stage_report.json')
+    if ((generation / 'summary.json').exists()
+            or produced.get('source_sha256') != sha256(bundle / 'submission' / SCRIPT['train'])
+            or produced.get('response_sha256') != sha256(generation / 'response.txt')
+            or produced.get('request_sha256') != sha256(generation / 'request_started.json')
+            or report.get('source_sha256') != produced['source_sha256']
+            or report.get('verified') is not True
+            or report.get('status') != 'stage_verified'
+            or not (bundle / 'compatibility_main_first_attempt/report.json').is_file()):
+        raise ValueError('Sentinel v2 train collision evidence mismatch')
+    return {'status': 'technical_sentinel_v2_instrument_stop_audited',
+            'verified_generated_stages': 2, 'provider_calls': 3,
+            'full_chain_pass': False, 'instrument_unresolved': True,
+            'summary_sha256': sha256(SUMMARY), 'not_allocation_main': True,
+            'no_provider_calls_by_auditor': True}
 
 
 def audit_outcome():
     bundle = host_bundle()
     locked, started, summary = read(LOCK), read(STARTED), read(SUMMARY)
+    if summary.get('status') == 'sentinel_v2_instrument_unresolved':
+        return audit_instrument_stop(bundle, locked, started, summary)
     if (locked.get('scope') != 'technical_sentinel_v2_D_short_not_research_main'
             or locked.get('dependencies') != dependencies()
-            or locked.get('runtime_root') != str(WORKSPACES)
+            or locked.get('runtime_root') != WORKSPACES.as_posix()
             or locked.get('bundle_origin_sha256') != sha256(bundle / 'main_bundle_origin.json')
             or started.get('lock_sha256') != sha256(LOCK)
-            or started.get('runtime_root') != str(WORKSPACES)
+            or started.get('runtime_root') != WORKSPACES.as_posix()
             or summary.get('lock_sha256') != sha256(LOCK)
             or summary.get('started_sha256') != sha256(STARTED)
             or summary.get('bundle_origin_sha256') != sha256(bundle / 'main_bundle_origin.json')
-            or summary.get('runtime_root') != str(WORKSPACES)
+            or summary.get('runtime_root') != WORKSPACES.as_posix()
             or summary.get('source_cohort') != 'calibration_exposed_not_main'
             or summary.get('not_allocation_main') is not True
             or summary.get('not_a_model_performance_observation') is not True

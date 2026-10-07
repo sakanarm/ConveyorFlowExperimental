@@ -65,3 +65,24 @@ module's workspace guard to the frozen D root **only in that process**; it does
 not modify the old verifier source or v1 evidence. V2 is technical only: even
 if all four stages verify, it is not a paper allocation observation. A separate
 paired main execution lock and audited live allocator are still required.
+
+V2 then verified generated ingest and preprocess, and made a third provider
+call for train. The train source and artifact passed the first-stage verifier,
+but the calibration compatibility helper tried to create the same
+`compatibility_main_first_attempt` directory already used by preprocess.
+The run stopped with `FileExistsError` before writing a train gate summary.
+This is another instrument defect, not a failed model result. The v2 summary
+and three request records remain intact. On a separate diagnostic clone, a
+stage-scoped verifier checked that existing train artifact successfully:
+ROC AUC 0.90857 versus the frozen 0.69383 floor. This diagnostic is not a
+new model observation or an allocation result.
+
+V3 freezes a distinct technical run with the sole additional verifier change
+`compatibility_<label>_<stage>`, applied to both preprocess and train. The
+calibration helper source is not rewritten; the stage-scoped function is
+injected only in the v3 technical process and its hash is included in the
+v3 lock. V1/v2 failures are retained. Repeating this exposed calibration case
+is exclusively for instrument validation; it must not be used to improve an
+estimated ability rank or select a favorable main outcome. A legitimate v3
+candidate quality failure, if observed, must be reported and not retried
+until it passes.

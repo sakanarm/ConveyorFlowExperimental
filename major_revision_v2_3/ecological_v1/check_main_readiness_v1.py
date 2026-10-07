@@ -8,6 +8,8 @@ from pathlib import Path
 
 from audit_ml_calibration import audit as audit_ml
 from audit_main_capability_profiles_v1 import audit as audit_profiles
+from audit_main_adapter_sentinel_v1 import audit as audit_sentinel
+from audit_main_repository_preflight_v1 import audit as audit_repo_main
 from prepare_design import audit as audit_design, DEST, HERE, MAJOR
 
 ML_FINAL = MAJOR / 'results/ml_calibration_continuation_4_complete_v1/summary.json'
@@ -77,9 +79,11 @@ def audit():
     result = evaluate(calibration_settled=calibration_settled,
                       ml_final=final_matches, repo_final=repo_final,
                       expected_main_ml=expected, prepared_main_ml=prepared,
-                      repo_main_preflight=REPO_MAIN.is_file(),
+                      repo_main_preflight=bool(REPO_MAIN.is_file() and
+                                               audit_repo_main()['eligible_for_frozen_main']),
                       profiles=bool(PROFILES.is_file() and audit_profiles()['profiles'] == 3),
-                      live_sentinel=LIVE_SENTINEL.is_file(),
+                      live_sentinel=bool(LIVE_SENTINEL.is_file() and
+                                         audit_sentinel()['verified_generated_stages'] == 4),
                       execution_lock=MAIN_LOCK.is_file())
     result.update(design_sha256=design_audit['design_sha256'],
                   ml_calibration_completed=ml_report.get('completed_pairs'),

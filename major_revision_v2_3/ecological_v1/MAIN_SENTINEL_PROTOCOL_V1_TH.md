@@ -1,0 +1,7 @@
+# Technical real-LLM sentinel ก่อน paired main
+
+Sentinel ใช้ `CAL_ADULT_01` ที่อยู่ใน **calibration cohort ที่เคยเปิดเผยต่อโมเดลแล้ว** ไม่ใช้ 12 main-case specifications เพื่อไม่ให้ชุด main ปน exposure. เลือก deployment `tencent-hy3` ล่วงหน้าจาก operational routing profile ก่อน sentinel call. เป้าหมายเป็นการทดสอบการต่อ provider → generated source → locked Linux Podman verifier → fresh replay → same-run/same-arm predecessor artifact lineage จริงครบสี่ ML stages; **ไม่ใช่ผลการจัดสรรงานหรือ model performance observation ใหม่**.
+
+ใช้ public train/validation/test_features เท่านั้นใน bundle; hidden labels และ trusted predecessors ไม่ถูกคัดลอกให้ candidate. ตรึง prompt builder, provider mapping/version, evaluator image, limits และ source hashes ก่อน API call. Temperature 0, output ≤32768 tokens, provider timeout 720 วินาที, สูงสุด 4 calls และหนึ่ง call ต่อ stage. หาก stage ไม่ VERIFIED จะหยุด chain; ไม่ retry stage ที่มี request marker, ไม่ซ่อม source ให้ผ่าน และไม่เอาผลนี้ไปรวมใน calibration/main denominator. หากเกิด instrument error ต้องรักษา evidence และ audit ก่อน protocol revision.
+
+การผ่าน sentinel เป็น gate เชิงวิศวกรรมที่จำเป็นแต่ **ไม่เพียงพอ** ให้ main พร้อม: ยังต้องมี repository main preflight, policy-matched decision path, failure/late-return accounting, paired order/arrival/limits lock และ main executor ที่บันทึก append-only provider ledger. หาก sentinel ไม่ผ่าน ห้ามสร้าง main lock จากแค่ file presence.

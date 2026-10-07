@@ -1,0 +1,303 @@
+{
+  "arms": {
+    "CENTRAL_RULE_MATCHED": {
+      "attempts": [
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "06416c256c8bbd302c0477b7d1668bfb37ed88fa7809f165abafc8982afd9ef8",
+          "request_sha256": "d7d4b04479a05732694e3f5cdc0622ce1790c34c3acef0072cd15b38f53453a8",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "372b2a41188753ff9c7248511b402f7969d48964fc8f934f37fc32b071d69209",
+          "task_id": "MAIN_ADULT_03:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "64dbbd47aa30cfd9c5cfb32a0dd89a56fc6866360494f076d9885e7b909ff83a",
+          "request_sha256": "4fc1ee0688a305f6663b7b53b65593371dbabd6e958d741f38af021d481502a4",
+          "stage_status": "PATCH_FORMAT_FAILED",
+          "summary_sha256": "32ec50eddbd8fd6265b3f8e814266d6b75968a51bc61062bed159fb784f6b0ea",
+          "task_id": "matplotlib_1:repair"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "6556d80c0df6d5b6528f84f68b35c8ae012797340f7220727f05d89205dee65d",
+          "request_sha256": "26fcf440b02dfc8eb18a449f7276178983a29009b77a00156c558e5565f8cbd8",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "ad798e675ea9d298be99fcd4f91097c538ec0c2e4e232fb751f0ea18f4da4bdf",
+          "task_id": "MAIN_ADULT_03:preprocess"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "2ef85eeafcf782bd2e4c17ac22161ba6d3dbbefc38e69dc397f8742cc056a570",
+          "request_sha256": "e6d8fe2428a45e30dee41db092cef88d32598c3af500a23fedce5421a1427830",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "86210aeb520f8c3aec4356efbc28c4a061ebfa247caf16325a3f060fabbd15b9",
+          "task_id": "MAIN_BEIJING_03:ingest"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "f9e6baa773461f3d2ed5069022e12d410b2d111810986266e1247eac899ac0e6",
+          "request_sha256": "dd9f13e4d88bbfb02812cef6a5ce9ab944bcf0a0577d195821ec95075adfe58d",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "b8788abb7ee538518ef1505986204f73764a8cb14032dd78ad78bba64a4ac334",
+          "task_id": "MAIN_ADULT_03:train"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "9b5bb4b0bda38b1c98b7d5d4eeacc8ba6135da0bd8a1b9e3e75aa05962701779",
+          "request_sha256": "f8cde7829c3eac18cd9735fb5f12e4494bc54a1bdb92f0f5b624c5a70200b815",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "5279ed49ec4f46db548615bd303b74398d82a0b1e9a1870f960a30bc38965498",
+          "task_id": "MAIN_ADULT_03:package"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "aaaf50183e329903b306faf08071d073987d627286504e6f53b5cfa51dd645c0",
+          "request_sha256": "0a139f82d47cf9ba0eaf3029d55cf7805355d7a5286335be6401c205bb180752",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "22a4936f7481dd535e6c8f75521052ab7ece36ebb7af60216e041f3bf01b8307",
+          "task_id": "MAIN_BEIJING_03:preprocess"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "8d89c10808a6b77b1f814fca40c1a36bd7c8670a2ad4f2be9be3f10bdc83c6cc",
+          "request_sha256": "8dcea4153ddc63257b177acab69179fad5c7a0d377a56002cb495a7d2b5e9622",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "09be63dd2fb341ca9a5fe264feea4e3f2cb168608f34b6156f26783d955795da",
+          "task_id": "MAIN_BEIJING_03:train"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "52e4b7e460cd320f4a12086d69ca7488a7b98e1aed8c9095bb66f4d9fc193f97",
+          "request_sha256": "073f8e718f9882f9bc341daa96192422574ce3b62911e4344958146997f61d44",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "26fcd6f01b35810e51256dfebf044de7b7294b76cbd3d49cac72f6c27292d79b",
+          "task_id": "MAIN_BEIJING_03:package"
+        }
+      ],
+      "claims_sha256": "2e0257568d26592afef4b7e883952b73f6ccfe97b8898665f09db0b36df1175a",
+      "jobs": {
+        "MAIN_ADULT_03": "VERIFIED",
+        "MAIN_BEIJING_03": "VERIFIED",
+        "matplotlib_1": "DEAD_LETTER"
+      },
+      "ledger_sha256": "042615497b6ed08abdefbc32b702f9b09e4b6dc28e3716efe9776af5d8f19520",
+      "summary_sha256": "04ecded7b1b3518e7272fcead393c055572c178d63ced685695003c0c4af8180"
+    },
+    "CF_FIT": {
+      "attempts": [
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "01024a66e78187b38c5be141a182e546c4d009f120c5514a3471cf05a3691a49",
+          "request_sha256": "fc581817d0ceac22cd722463de2dc1a8e96cd3ce46387270f3180807256ae7a0",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "4f438c657297b75a1256eba8db629d37ca7541349b4552d33776e998f80122e1",
+          "task_id": "MAIN_ADULT_03:ingest"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "8abf895c0982dfedeca5f1a3a51042f8060dea6a9bc34bed6ed74a1cca278c46",
+          "request_sha256": "7e3939dd2d28c182f41eb429d78bb84d59d889cf99b689aeacbb08849127f498",
+          "stage_status": "PATCH_FORMAT_FAILED",
+          "summary_sha256": "06055df1e817ed31e632cd4259d60970fa72a75f5243289aa2932838e010c173",
+          "task_id": "matplotlib_1:repair"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "380407fbdd0e39eb467dd469ee82eefdf6a1462ef0c3bd1804db1728e2e18e23",
+          "request_sha256": "0ff0968d5d2a118a3189841a89c56344ab96c68ea4eaa4c6c87d20c413dfa93e",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "14c4b4f7a943bc920f987f1389bafe8a602abf0950f2584d6a35c50ae93f0986",
+          "task_id": "MAIN_BEIJING_03:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "17031a3564bb378bc229922ae842cb8122afc6e61dba2adbbe1251a65c0fa65a",
+          "request_sha256": "126260746e00f9e79957b214a95494fac80ebe20139bd8fe69e1446d7fa75818",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "79ea9a8d0ee3fe6788e3da3d60474a82f6230a131f4b7b179f79803418f8f0ea",
+          "task_id": "MAIN_ADULT_03:preprocess"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "fb3430d4e9979070676d76c51605d2394b352b0f5060e24f05f6574217fe831e",
+          "request_sha256": "8eb77f085f42837a6c50670054b88f8f948be15360b29d6032dca97207871376",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "15b9f60fe2e2de2919094a06b7276ffe7ec0cea2f3ac1ce1690a01ee0af56e52",
+          "task_id": "MAIN_ADULT_03:train"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "62e42cf2c4613c6c3fbebfa00fb9f41d51f45f7c4caf49254637538b1a7074bf",
+          "request_sha256": "c293f24398e964e76db50b4f930f17906530caf55d8cee34e30e5298203fcf87",
+          "stage_status": "STAGE_CONTRACT_FAILED",
+          "summary_sha256": "38759c22df0b158891d8d581ca98e63a2ccc730db96288be8cef77e5a8934755",
+          "task_id": "MAIN_BEIJING_03:preprocess"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "608b831b7152a1ae4da869c2f06a40e2f319e227e2d58da79bcd3db825fe0ad6",
+          "request_sha256": "0132d54ad0195cd082dc56b042d20b8d3da52a4901bf6edd24ebae6aa6e9cce9",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "dba5e0d96a79516334f6b3e3ca88144a7347d59ada54e45c3d4c4390b354d426",
+          "task_id": "MAIN_ADULT_03:package"
+        }
+      ],
+      "claims_sha256": "aeab72a1a71d71f0052233d417747b7d0a198d0111e7ad35ce81b5dbeb75b49d",
+      "jobs": {
+        "MAIN_ADULT_03": "VERIFIED",
+        "MAIN_BEIJING_03": "DEAD_LETTER",
+        "matplotlib_1": "DEAD_LETTER"
+      },
+      "ledger_sha256": "1ba62e92f7d3907806feb820ba8c7153e13978990f6c93724c3c6903cc76086f",
+      "summary_sha256": "5a030d578bf80e0618e0ff33231b41ab6e5ba0b62fda72556f0e6c2c8ca014f7"
+    },
+    "STATIC_OWNERS": {
+      "attempts": [
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "cecec2f8c022d3f8e085d7bcb676a80b2a81655225404e347a396ee9bbfdc375",
+          "request_sha256": "dd296e5c1fb78b5c8014ac224b48e12b26ab7b4fe049a050288e7aced805fb8b",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "88b6fffa5a56fbb25a61bf2bd35bc6cbeb0799863a94d3e0f3f25217c63afaad",
+          "task_id": "MAIN_ADULT_03:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "55cb85982615564140aad01d1fdeb35d8e72c6fb7be651f6c858e34fb3349456",
+          "request_sha256": "c608efa8a7c8fac510251521ebc1b4b6ab08551eef86e56ad65a5e1d1b4e98ac",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "5b5599cef07cb863d29645db1550fe54a154fb28f9b5cfa6ff8ff7a0313f35bf",
+          "task_id": "MAIN_ADULT_03:preprocess"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "5b7c79b881d8fd93454d32f334747af080a122bead49aea57ddc2385a3d5a42e",
+          "request_sha256": "06f9ce7bfc3b1c3154518ed2c604023d72c8407004635232057c75724f990071",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "4d8c0b86cb656bf34d79fd4ee40aaf9bb8deb40a7bab3291a0cf9c98c9527d62",
+          "task_id": "MAIN_BEIJING_03:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "d62c302916a715733926677312562fb156265faa35a1ed1da0a4948293415d0f",
+          "request_sha256": "0a66f61437463654e4244ff9d5081e3309436dcafdd938263f30b5fa6222222c",
+          "stage_status": "PATCH_FORMAT_FAILED",
+          "summary_sha256": "141cf63bca0453bf77998fa71ada4dd4b2b0f7f0f1c2bc8dee8a7fdf8092f42e",
+          "task_id": "matplotlib_1:repair"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "5125292365cb8e43ee0a366b03b2521bdb1c36d09224e0806ef1d6c8a51c4dc5",
+          "request_sha256": "70795ca5cf922a731be5c1ed87f9748f51f3ec0338fd0a7f79e7dd8598a09d92",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "3ec2cc813a0877ddf9ba3afc87a95a0d7aeca2afa8861e73644dc13f99983227",
+          "task_id": "MAIN_ADULT_03:train"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "7f60fb627cdd6e463454c340c27558054fdf1ada270013c0f2c4a20dfe94cbe0",
+          "request_sha256": "4b6fe08343193d409a5d79c2a53d2b09a0c86e618eca6e71d6e685053dfe58f2",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "70dbaa11523b4f3d1aea85913591fc8e2aceb041303a0cad12c72a52318987fb",
+          "task_id": "MAIN_BEIJING_03:preprocess"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "c1a2e639bf2a69a18f359bd3733129baf34509efd37517e473fd01422b0e2cde",
+          "request_sha256": "29f7409e311e2445827b25df03499c4f88507df45860b0cfc7a1a8593bc40fcd",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "ad0b687cc40790af1d66d4be192163cb0b613a911d06f6fd6cb5b7451de17ee5",
+          "task_id": "MAIN_ADULT_03:package"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "836b55a072da5e20e3c6406a09c580d9fea31ed668f359f8baa67ebe7f8182d7",
+          "request_sha256": "72906837185fcce8779b9c5d21ae90b1c945a1e8cefaed2b6afc243b5215c977",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "d2a0db016b51ba9c0fcf41ccf926ee70876219470aae45f6a2bffce1ee6af08a",
+          "task_id": "MAIN_BEIJING_03:train"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "c51453ca8b6295af9e5f495b975abe0984e53c73ecdeb2ebd583016799541f6a",
+          "request_sha256": "4387296c07088114231fac82504eebfc17b19c31efe3182d8d88ad5803f3578c",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "1a7e8c0eb2b42bb1b30f54afd5179dacbadccbb70a6b74995e3c41d4a3b885de",
+          "task_id": "MAIN_BEIJING_03:package"
+        }
+      ],
+      "claims_sha256": "fbb012e6b67622d47cb770e26039ce1db1b1768d1b11ebbdb12843fce30a0183",
+      "jobs": {
+        "MAIN_ADULT_03": "VERIFIED",
+        "MAIN_BEIJING_03": "VERIFIED",
+        "matplotlib_1": "DEAD_LETTER"
+      },
+      "ledger_sha256": "6d5c60ee6b0b918d259be4300bb5aab9605f772ee7930dbfd5336801eb784d9a",
+      "summary_sha256": "fb2db9afbb8078b06ce914b951105120decc3c7f1da337a12cc2fbd8a29d4f73"
+    }
+  },
+  "block_id": "MAIN_BLOCK_03",
+  "lock_sha256": "2206d6dde060cf467b920745ef3912d3da4269b8ceda4d3a9c45f3f82386efe2",
+  "no_provider_calls_by_auditor": true,
+  "paper_caveats": [
+    "Two reused ML corpora, not 12 independent datasets",
+    "Three repositories, clustered cases",
+    "Matplotlib common-environment skip amendment applies",
+    "No failure-tolerance or equivalence proof"
+  ],
+  "provider_attempts": 25,
+  "raw_complete_sha256": "c1235be7cb947e414f37343c3198df7be82dab50695589a62955ce00d73b8538",
+  "research_results": true,
+  "status": "main_block_independently_audited"
+}

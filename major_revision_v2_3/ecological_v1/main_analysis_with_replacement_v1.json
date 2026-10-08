@@ -1,0 +1,1163 @@
+{
+  "blocks": [
+    {
+      "arm_order": [
+        "CF_FIT",
+        "CENTRAL_RULE_MATCHED",
+        "STATIC_OWNERS"
+      ],
+      "arms": {
+        "CENTRAL_RULE_MATCHED": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.057098157999999996,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.08984318256175926,
+            "cost_units_per_verified_job": 0.028549078999999998,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 32826,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 229.930279892,
+            "output_tokens": 61840,
+            "p95_verified_job_completion_s": 322.2365342255,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CENTRAL_RULE_MATCHED",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "CF_FIT": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.048396162000000006,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.05782656447916667,
+            "cost_units_per_verified_job": 0.024198081000000003,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 31566,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 315.20821787,
+            "output_tokens": 44062,
+            "p95_verified_job_completion_s": 355.0470317378,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CF_FIT",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "STATIC_OWNERS": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.056135967999999994,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.08680505279851852,
+            "cost_units_per_verified_job": 0.028067983999999997,
+            "dead_letter_jobs": 0,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 32424,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 695.3512543305001,
+            "output_tokens": 77014,
+            "p95_verified_job_completion_s": 759.64068116835,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 1
+          },
+          "policy": "STATIC_OWNERS",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        }
+      },
+      "block_id": "MAIN_BLOCK_01",
+      "cases": [
+        "MAIN_ADULT_01",
+        "MAIN_BEIJING_01",
+        "luigi_3"
+      ],
+      "original_block_id": "MAIN_BLOCK_01",
+      "technical_replacement": false
+    },
+    {
+      "arm_order": [
+        "CENTRAL_RULE_MATCHED",
+        "STATIC_OWNERS",
+        "CF_FIT"
+      ],
+      "arms": {
+        "CENTRAL_RULE_MATCHED": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.046320444,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.04706092620222222,
+            "cost_units_per_verified_job": 0.023160222,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 25359,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 257.60709777750003,
+            "output_tokens": 40343,
+            "p95_verified_job_completion_s": 309.01331070375,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CENTRAL_RULE_MATCHED",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "CF_FIT": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.060945226,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.10190463503055555,
+            "cost_units_per_verified_job": 0.030472613,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 25845,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 300.9554850775,
+            "output_tokens": 76872,
+            "p95_verified_job_completion_s": 472.24739625024995,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CF_FIT",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "STATIC_OWNERS": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.053250552,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.09230391181509259,
+            "cost_units_per_verified_job": 0.026625276,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 25389,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 759.4058512055001,
+            "output_tokens": 75677,
+            "p95_verified_job_completion_s": 808.56220520405,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "STATIC_OWNERS",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        }
+      },
+      "block_id": "MAIN_BLOCK_02",
+      "cases": [
+        "MAIN_ADULT_02",
+        "MAIN_BEIJING_02",
+        "pandas_100"
+      ],
+      "original_block_id": "MAIN_BLOCK_02",
+      "technical_replacement": false
+    },
+    {
+      "arm_order": [
+        "STATIC_OWNERS",
+        "CF_FIT",
+        "CENTRAL_RULE_MATCHED"
+      ],
+      "arms": {
+        "CENTRAL_RULE_MATCHED": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.071169448,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.0471195956425,
+            "cost_units_per_verified_job": 0.035584724,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 36739,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 153.0135829275,
+            "output_tokens": 48757,
+            "p95_verified_job_completion_s": 197.83851771435,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CENTRAL_RULE_MATCHED",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "CF_FIT": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.047570386,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.054400197607037036,
+            "cost_units_per_verified_job": 0.047570386,
+            "dead_letter_jobs": 2,
+            "eventual_verified_jobs": 1,
+            "input_tokens": 25358,
+            "job_success_fraction": 0.3333333333333333,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 425.249717013,
+            "output_tokens": 56915,
+            "p95_verified_job_completion_s": 425.249717013,
+            "throughput_verified_jobs_per_hour": 1.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CF_FIT",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 1
+        },
+        "STATIC_OWNERS": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.05351382,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.07151357727120371,
+            "cost_units_per_verified_job": 0.02675691,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 32638,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 586.953047962,
+            "output_tokens": 68699,
+            "p95_verified_job_completion_s": 606.2531407092999,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "STATIC_OWNERS",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        }
+      },
+      "block_id": "MAIN_BLOCK_03",
+      "cases": [
+        "MAIN_ADULT_03",
+        "MAIN_BEIJING_03",
+        "matplotlib_1"
+      ],
+      "original_block_id": "MAIN_BLOCK_03",
+      "technical_replacement": false
+    },
+    {
+      "arm_order": [
+        "CF_FIT",
+        "STATIC_OWNERS",
+        "CENTRAL_RULE_MATCHED"
+      ],
+      "arms": {
+        "CENTRAL_RULE_MATCHED": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.045926904,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.046632494178796294,
+            "cost_units_per_verified_job": 0.022963452,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 26385,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 256.0899924795,
+            "output_tokens": 34178,
+            "p95_verified_job_completion_s": 293.45156903685,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CENTRAL_RULE_MATCHED",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "CF_FIT": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.060269344,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.08861474158194445,
+            "cost_units_per_verified_job": 0.030134672,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 26327,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 206.752518141,
+            "output_tokens": 71640,
+            "p95_verified_job_completion_s": 291.4872613917,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CF_FIT",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "STATIC_OWNERS": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.06960794799999999,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.1084964688287963,
+            "cost_units_per_verified_job": 0.034803973999999994,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 26499,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 887.2246987025001,
+            "output_tokens": 103474,
+            "p95_verified_job_completion_s": 968.41960559825,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "STATIC_OWNERS",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        }
+      },
+      "block_id": "MAIN_BLOCK_04",
+      "cases": [
+        "MAIN_ADULT_04",
+        "MAIN_BEIJING_04",
+        "luigi_9"
+      ],
+      "original_block_id": "MAIN_BLOCK_04",
+      "technical_replacement": false
+    },
+    {
+      "arm_order": [
+        "CENTRAL_RULE_MATCHED",
+        "CF_FIT",
+        "STATIC_OWNERS"
+      ],
+      "arms": {
+        "CENTRAL_RULE_MATCHED": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.037021254,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.03212657973175926,
+            "cost_units_per_verified_job": 0.037021254,
+            "dead_letter_jobs": 2,
+            "eventual_verified_jobs": 1,
+            "input_tokens": 20811,
+            "job_success_fraction": 0.3333333333333333,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 306.436890458,
+            "output_tokens": 29318,
+            "p95_verified_job_completion_s": 306.436890458,
+            "throughput_verified_jobs_per_hour": 1.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CENTRAL_RULE_MATCHED",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 1
+        },
+        "CF_FIT": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.042769366,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.06455394425009259,
+            "cost_units_per_verified_job": 0.021384683,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 27413,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 351.37364331649997,
+            "output_tokens": 50754,
+            "p95_verified_job_completion_s": 384.54675101825,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CF_FIT",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "STATIC_OWNERS": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.060926551999999995,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.11263297600851851,
+            "cost_units_per_verified_job": 0.030463275999999997,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 28266,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 875.025024989,
+            "output_tokens": 88748,
+            "p95_verified_job_completion_s": 927.7269280844,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "STATIC_OWNERS",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        }
+      },
+      "block_id": "MAIN_BLOCK_05_R1",
+      "cases": [
+        "MAIN_ADULT_05",
+        "MAIN_BEIJING_05",
+        "pandas_82"
+      ],
+      "original_block_id": "MAIN_BLOCK_05",
+      "technical_replacement": true
+    },
+    {
+      "arm_order": [
+        "STATIC_OWNERS",
+        "CENTRAL_RULE_MATCHED",
+        "CF_FIT"
+      ],
+      "arms": {
+        "CENTRAL_RULE_MATCHED": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.036313492,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.04295492888333333,
+            "cost_units_per_verified_job": 0.036313492,
+            "dead_letter_jobs": 2,
+            "eventual_verified_jobs": 1,
+            "input_tokens": 18834,
+            "job_success_fraction": 0.3333333333333333,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 438.48636862,
+            "output_tokens": 35923,
+            "p95_verified_job_completion_s": 438.48636862,
+            "throughput_verified_jobs_per_hour": 1.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CENTRAL_RULE_MATCHED",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 1
+        },
+        "CF_FIT": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.051441498,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.06129766417453704,
+            "cost_units_per_verified_job": 0.025720749,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 24181,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 333.6601722555,
+            "output_tokens": 54037,
+            "p95_verified_job_completion_s": 504.17577454125,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CF_FIT",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        },
+        "STATIC_OWNERS": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 3,
+          "known_provider_cost_units": 0.052190764,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.07669378642731481,
+            "cost_units_per_verified_job": 0.026095382,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 2,
+            "input_tokens": 21606,
+            "job_success_fraction": 0.6666666666666666,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 513.2032778225,
+            "output_tokens": 70729,
+            "p95_verified_job_completion_s": 687.3109965087499,
+            "throughput_verified_jobs_per_hour": 2.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "STATIC_OWNERS",
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 2
+        }
+      },
+      "block_id": "MAIN_BLOCK_06",
+      "cases": [
+        "MAIN_ADULT_06",
+        "MAIN_BEIJING_06",
+        "matplotlib_28"
+      ],
+      "original_block_id": "MAIN_BLOCK_06",
+      "technical_replacement": false
+    }
+  ],
+  "caveats": [
+    "The user-paused original MAIN_BLOCK_05 has an in-flight request with unknown billing outcome and is not a research result.",
+    "MAIN_BLOCK_05_R1 repeats all three arms after an interruption; time/provider-state differences are possible.",
+    "Two ML corpora and three repositories are reused; block bootstrap is descriptive, not a population confidence interval.",
+    "Provider response_cost units are used as reported; currency is unverified."
+  ],
+  "fixed_horizon_rule": "Only jobs completed before each arm fixed horizon count as primary successes.",
+  "incident_sha256": "c14ec23b81f6c18ab241539ef8b48753c4f1fe439ddab1c2492f44a6dd0c8402",
+  "interrupted_original_block_excluded": true,
+  "no_equivalence_or_fault_tolerance_proof": true,
+  "no_scalar_superiority_score": true,
+  "original_lock_sha256": "2206d6dde060cf467b920745ef3912d3da4269b8ceda4d3a9c45f3f82386efe2",
+  "paired_contrasts_six_including_replacement": {
+    "CF_FIT_minus_CENTRAL_RULE_MATCHED": {
+      "busy_utilization_fraction": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.002897022710370367,
+          0.04094086334574074
+        ],
+        "direction": "context_dependent",
+        "mean_difference": 0.020476673320493827,
+        "paired_blocks_defined": 6,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -0.03201661808259259
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.05484370882833333
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": 0.007280601964537038
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": 0.041982247403148154
+          },
+          {
+            "block_id": "MAIN_BLOCK_05_R1",
+            "difference": 0.03242736451833333
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": 0.018342735291203706
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "cost_units_per_verified_job": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.009090177166666668,
+          0.006902721333333335
+        ],
+        "direction": "lower",
+        "mean_difference": -0.0006851731666666661,
+        "paired_blocks_defined": 6,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -0.004350997999999995
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.007312390999999998
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": 0.011985662000000001
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": 0.0071712200000000025
+          },
+          {
+            "block_id": "MAIN_BLOCK_05_R1",
+            "difference": -0.015636571000000002
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -0.010592743000000002
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "mean_verified_job_completion_s": {
+        "descriptive_block_bootstrap_95pct": [
+          -36.93842780100001,
+          149.33287553266666
+        ],
+        "direction": "lower",
+        "mean_difference": 48.60592358649999,
+        "paired_blocks_defined": 6,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": 85.27793797800001
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 43.348387299999956
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": 272.2361340855
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": -49.33747433849999
+          },
+          {
+            "block_id": "MAIN_BLOCK_05_R1",
+            "difference": 44.93675285849997
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -104.82619636449999
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "throughput_verified_jobs_per_hour": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.3333333333333333,
+          0.6666666666666666
+        ],
+        "direction": "higher",
+        "mean_difference": 0.16666666666666666,
+        "paired_blocks_defined": 6,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": -1.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_05_R1",
+            "difference": 1.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": 1.0
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      }
+    },
+    "CF_FIT_minus_STATIC_OWNERS": {
+      "busy_utilization_fraction": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.03382920928695988,
+          -0.005733846333549387
+        ],
+        "direction": "context_dependent",
+        "mean_difference": -0.01997467100435185,
+        "paired_blocks_defined": 6,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -0.028978488319351854
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.009600723215462958
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": -0.01711337966416667
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": -0.019881727246851846
+          },
+          {
+            "block_id": "MAIN_BLOCK_05_R1",
+            "difference": -0.04807903175842593
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -0.01539612225277777
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "cost_units_per_verified_job": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.005290054333333329,
+          0.009624760000000003
+        ],
+        "direction": "lower",
+        "mean_difference": 0.001111397000000003,
+        "paired_blocks_defined": 6,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -0.003869902999999994
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.0038473369999999993
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": 0.020813476
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": -0.004669301999999993
+          },
+          {
+            "block_id": "MAIN_BLOCK_05_R1",
+            "difference": -0.009078592999999996
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -0.0003746329999999992
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "mean_verified_job_completion_s": {
+        "descriptive_block_bootstrap_95pct": [
+          -543.3588301222501,
+          -254.09647196990858
+        ],
+        "direction": "lower",
+        "mean_difference": -397.32723355641673,
+        "paired_blocks_defined": 6,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -380.14303646050007
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": -458.4503661280001
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": -161.70333094900002
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": -680.4721805615001
+          },
+          {
+            "block_id": "MAIN_BLOCK_05_R1",
+            "difference": -523.6513816725001
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -179.543105567
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "throughput_verified_jobs_per_hour": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.5,
+          0.0
+        ],
+        "direction": "higher",
+        "mean_difference": -0.16666666666666666,
+        "paired_blocks_defined": 6,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": -1.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_05_R1",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": 0.0
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      }
+    }
+  },
+  "primary_metrics": [
+    "throughput_verified_jobs_per_hour",
+    "mean_verified_job_completion_s",
+    "busy_utilization_fraction",
+    "cost_units_per_verified_job"
+  ],
+  "replacement_lock_sha256": "5161275f5a7b1b91c6758601cebbc04eeed0457ad6e1e9b0d3ca9b5aaccb2ee2",
+  "replacement_protocol_sha256": "1b67207a685f13ca0b1693e5a574a85db0e8d8b69ffd5d447ec53fd6eb72d717",
+  "research_results": true,
+  "secondary_metrics": [
+    "job_success_fraction",
+    "p95_verified_job_completion_s",
+    "input_tokens",
+    "output_tokens",
+    "unknown_cost_attempts",
+    "dead_letter_jobs",
+    "unsettled_jobs",
+    "late_verified_tasks",
+    "eventual_verified_jobs"
+  ],
+  "sensitivity_paired_contrasts_five_original_complete": {
+    "CF_FIT_minus_CENTRAL_RULE_MATCHED": {
+      "busy_utilization_fraction": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.009357400976018514,
+          0.04275879517053704
+        ],
+        "direction": "context_dependent",
+        "mean_difference": 0.018086535080925926,
+        "paired_blocks_defined": 5,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -0.03201661808259259
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.05484370882833333
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": 0.007280601964537038
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": 0.041982247403148154
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": 0.018342735291203706
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "cost_units_per_verified_job": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.005599346999999996,
+          0.0091534652
+        ],
+        "direction": "lower",
+        "mean_difference": 0.002305106400000001,
+        "paired_blocks_defined": 5,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -0.004350997999999995
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.007312390999999998
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": 0.011985662000000001
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": 0.0071712200000000025
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -0.010592743000000002
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "mean_verified_job_completion_s": {
+        "descriptive_block_bootstrap_95pct": [
+          -52.9957908212,
+          170.5297731792
+        ],
+        "direction": "lower",
+        "mean_difference": 49.3397577321,
+        "paired_blocks_defined": 5,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": 85.27793797800001
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 43.348387299999956
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": 272.2361340855
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": -49.33747433849999
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -104.82619636449999
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "throughput_verified_jobs_per_hour": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.6,
+          0.6
+        ],
+        "direction": "higher",
+        "mean_difference": 0.0,
+        "paired_blocks_defined": 5,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": -1.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": 1.0
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      }
+    },
+    "CF_FIT_minus_STATIC_OWNERS": {
+      "busy_utilization_fraction": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.023897579662056943,
+          -0.0016385874529259285
+        ],
+        "direction": "context_dependent",
+        "mean_difference": -0.014353798853537037,
+        "paired_blocks_defined": 5,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -0.028978488319351854
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.009600723215462958
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": -0.01711337966416667
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": -0.019881727246851846
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -0.01539612225277777
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "cost_units_per_verified_job": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.0034906085999999946,
+          0.012323692600000002
+        ],
+        "direction": "lower",
+        "mean_difference": 0.0031493950000000027,
+        "paired_blocks_defined": 5,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -0.003869902999999994
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.0038473369999999993
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": 0.020813476
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": -0.004669301999999993
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -0.0003746329999999992
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "mean_verified_job_completion_s": {
+        "descriptive_block_bootstrap_95pct": [
+          -535.8820026759,
+          -212.52718189850003
+        ],
+        "direction": "lower",
+        "mean_difference": -372.0624039332001,
+        "paired_blocks_defined": 5,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": -380.14303646050007
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": -458.4503661280001
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": -161.70333094900002
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": -680.4721805615001
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": -179.543105567
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      },
+      "throughput_verified_jobs_per_hour": {
+        "descriptive_block_bootstrap_95pct": [
+          -0.6,
+          0.0
+        ],
+        "direction": "higher",
+        "mean_difference": -0.2,
+        "paired_blocks_defined": 5,
+        "paired_differences": [
+          {
+            "block_id": "MAIN_BLOCK_01",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_02",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_03",
+            "difference": -1.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_04",
+            "difference": 0.0
+          },
+          {
+            "block_id": "MAIN_BLOCK_06",
+            "difference": 0.0
+          }
+        ],
+        "undefined_blocks_not_imputed": 0
+      }
+    }
+  },
+  "status": "audited_main_vector_analysis_with_disclosed_replacement"
+}

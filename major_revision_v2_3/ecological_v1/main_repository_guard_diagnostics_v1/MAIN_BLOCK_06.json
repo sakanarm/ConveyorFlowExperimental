@@ -1,0 +1,33 @@
+{
+  "arms": [
+    {
+      "arm": "STATIC_OWNERS",
+      "case_id": "matplotlib_28",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "VERIFIED",
+      "raw_summary_sha256": "27326bc37f6cc7878b0e2c74cdf8334648a8e9d10e7d921d57d90e3cb7b5f610"
+    },
+    {
+      "arm": "CENTRAL_RULE_MATCHED",
+      "case_id": "matplotlib_28",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "5d348279ceb7396ee9fce5ad45543b69697478141f9f086fe6f8d2cce1c07443"
+    },
+    {
+      "arm": "CF_FIT",
+      "case_id": "matplotlib_28",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "15d65e770e9c54ecb31fe25422a43c1c1375fd09fb999c39a4f6d9be57b1740e"
+    }
+  ],
+  "block_id": "MAIN_BLOCK_06",
+  "independent_audit_sha256": "8a0baebaf017370eee42ebcae1916629124b9a06520f8f7d979f0cc9c8d2139f",
+  "lock_sha256": "2206d6dde060cf467b920745ef3912d3da4269b8ceda4d3a9c45f3f82386efe2",
+  "post_block_1_rule_frozen_before_subsequent_blocks": true,
+  "primary_metrics_unchanged": true,
+  "provider_call_count_unchanged": true,
+  "raw_ledger_and_summary_unchanged": true,
+  "status": "supplemental_guard_diagnosis_not_raw_rewrite"
+}

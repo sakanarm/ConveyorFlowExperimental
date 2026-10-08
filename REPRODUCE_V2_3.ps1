@@ -40,6 +40,9 @@ param(
                  'EcologicalMainFreeze', 'EcologicalMainMetricsCheck',
                  'EcologicalMainBlockExecute', 'EcologicalMainBlockAudit',
                  'EcologicalMainAnalyze',
+                 'EcologicalMainReplacementCheck', 'EcologicalMainReplacementFreeze',
+                 'EcologicalMainReplacementExecute', 'EcologicalMainReplacementAudit',
+                 'EcologicalMainAnalyzeWithReplacement',
                  'EcologicalIntegrationEventCheck',
                  'EcologicalRepositoryCalibrationFreeze', 'EcologicalRepositoryCalibrationExecute',
                  'EcologicalRepositoryCalibrationFinalize', 'EcologicalIntegrationCheck',
@@ -264,6 +267,49 @@ try {
             Invoke-Python @("$major/ecological_v1/analyze_ecological_main_v1.py",
                 '--lock', "$major/ecological_v1/main_allocation_execution_lock_v1.json",
                 '--audit-root', $taskAuditRoot, '--raw-root', $taskRawRoot, '--output', $OutputPath)
+        }
+        'EcologicalMainReplacementCheck' {
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/check_main_block05_replacement_v1.py"
+            if ($LASTEXITCODE -ne 0) { throw 'Replacement lock/evidence check failed.' }
+        }
+        'EcologicalMainReplacementFreeze' {
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/freeze_main_block05_replacement_v1.py" --freeze
+            if ($LASTEXITCODE -ne 0) { throw 'Replacement freeze failed; never overwrite its lock.' }
+        }
+        'EcologicalMainReplacementExecute' {
+            if (-not $ConfirmPaidRun -or -not $env:MFEC_LITELLM_API_KEY) {
+                throw 'Process credential and -ConfirmPaidRun are required for the replacement.'
+            }
+            $taskCFree = ([System.IO.DriveInfo]::new('C:\')).AvailableFreeSpace
+            $taskDFree = ([System.IO.DriveInfo]::new('D:\')).AvailableFreeSpace
+            if ($taskCFree -lt 8GB -or $taskDFree -lt 8GB) {
+                throw 'At least 8 GiB free on each C and D drive required before replacement.'
+            }
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            $env:MFEC_LITELLM_API_KEY | & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/wsl_main_block05_replacement_bridge_v1.py"
+            if ($LASTEXITCODE -ne 0) { throw 'Replacement stopped; preserve evidence and never blindly retry.' }
+        }
+        'EcologicalMainReplacementAudit' {
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/audit_main_block05_replacement_v1.py" --write
+            if ($LASTEXITCODE -ne 0) { throw 'Replacement audit failed; do not analyze.' }
+        }
+        'EcologicalMainAnalyzeWithReplacement' {
+            $taskLinuxV2 = (& wsl -d Ubuntu -e wslpath -a $v2Root).Trim()
+            if ($LASTEXITCODE -ne 0 -or -not $taskLinuxV2) { throw 'Unable to resolve workspace in WSL.' }
+            & wsl -d Ubuntu -u root -e python3 `
+                "$taskLinuxV2/$major/ecological_v1/analyze_main_with_replacement_v1.py"
+            if ($LASTEXITCODE -ne 0) { throw 'Audited vector analysis with replacement failed.' }
         }
         'EcologicalIntegrationEventCheck' {
             if (-not $OutputPath) { throw 'Provide a NEW -OutputPath inside major_revision_v2_3/ecological_v1.' }

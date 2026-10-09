@@ -1,0 +1,240 @@
+{
+  "settings": {
+    "model_slots": [
+      "agent_1",
+      "agent_2",
+      "agent_3"
+    ],
+    "case_count": 5,
+    "max_provider_calls": 15,
+    "max_attempts_per_case_model": 1,
+    "generation": {
+      "temperature": 0,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 720
+    },
+    "execution_timeout_seconds": 180,
+    "estimand": "First-attempt verified repository repair under a new exact-edits artifact contract on the five pre-provider-qualified holdouts from six prespecified cases; not an allocation-policy comparison.",
+    "denominator": "Every planned case-model pair. Unfinished/schema/apply/test failure and unresolved provider/execution outcomes stay in the operational denominator. Missing rows stay missing, not failures. Also report unresolved counts and conservative bounds if provider completion is unknown.",
+    "statistics": "Observed rates and descriptive Wilson 95% intervals per deployment, with repository clusters disclosed; n=6, no significance tests/rank promotion/D1-D3 fit. No pooling with older pilots or reused sentinels.",
+    "retry_rule": "One provider invocation per pair, SDK retries disabled. Never rerun a pair whose request has started; retain partial evidence. Fresh container replay of the same patch is verification, not a model retry.",
+    "execution_order": "Frozen case order within each alias; three alias workers may run concurrently. Request timestamps/window specificity are reported. This is not a randomized causal comparison of model vendors.",
+    "not_allocation_main": true,
+    "not_D1_D3_probability_fit": true,
+    "source_repository_clusters": 3,
+    "verification_concurrency": 1,
+    "provider_circuit": "Stop this deployment after three consecutive unresolved requests; stop all on auth, mapping drift or execution backend failure. Do not retry a started pair.",
+    "planned_case_count": 6,
+    "post_main_protocol_amendment": true
+  },
+  "cases": [
+    {
+      "project": "luigi",
+      "bug_id": "11",
+      "buggy_commit_id": "bf8b5cba573d5d6cd11f7f10a03b458aeaf955c1",
+      "fixed_commit_id_for_validator_only": "70d8734d60e168389f425082b41b1936d63c028e",
+      "test_file": "test/scheduler_api_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "c2503d1de6dded26568f67f17eb75ac56222aeef6b22d10eeb4f28eec738623b",
+      "run_test_sha256": "31c361d5da4c9f9d815245ddab1bb6735109fc67c1da2c7810470a1c9526f1c1",
+      "preflight_status": "not_executed",
+      "selection_hash": "a7e415f19cae871fa864de86ed8385ceaa5580ba93cc05230e1ca6eb978291a6",
+      "split": "main",
+      "pool_order_within_repository": 2,
+      "case_id": "luigi_11",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true,
+      "validator_source_image": "sha256:919bf2cab06cd42523b573a1491af64de4352228da4ae1d523c95da7bd3e1d35",
+      "visible_test": "test/scheduler_api_test.py::SchedulerApiTest::test_batch_ignore_items_not_ready",
+      "allowed_files": [
+        "luigi/scheduler.py"
+      ],
+      "preflight_artifact": "results/eco_repair_followup_luigi_11_rootful_v3/000_luigi_11",
+      "environment_deviation": "New outcome-blind pool. Same documented feasibility environment: CPython3.8.20, -O0 -g0, pinned minimal packages, nose for all Luigi, serial Matplotlib build. Not exact historical environment reproduction. No LLM outcomes used for selection.",
+      "candidate_summary_sha256": "25b702aa56f34a501abb137d569a0121db98b762249846918ce9f49a409e9bed",
+      "regression_selection_sha256": "dd3b661ec6f24e928041831a07e19837f255e7e0ac6c4cc6faf359cb03f5a303",
+      "preparation_root": "candidate_workspaces/ecological_repair_followup_preparation_v1",
+      "baseline_root": "results/ecological_repair_followup_candidates_v1",
+      "prompt_sha256": "56ea47061a4dfb84ef778365ba2589d375b76ab813f845d073b71df46e112b36",
+      "preparation_summary_sha256": "67662f4d38c1d1297f9d86851142753ebb186d0729cd4e19523ba2d6a1bdf16e"
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "6",
+      "buggy_commit_id": "fb9e72309aeefb51d1a56ecbdb1e7399d105ff06",
+      "fixed_commit_id_for_validator_only": "d84f4a7ac8d43d1288cb8ce11ab60ae557306b7e",
+      "test_file": "lib/matplotlib/tests/test_axes.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "5d667bbe39e45fd000863ecc47c3eaa3a50bde4e3f8ba26e0bcb4b90f822cae1",
+      "run_test_sha256": "aed8b61bce54e420d4e3328a9305b37ded6524a9e718313cd29717edfe74e070",
+      "preflight_status": "not_executed",
+      "selection_hash": "b0091b1c2c9b9d1eef0e4d7ec6bee729bab166a03f3deb192474df2490319e2b",
+      "split": "main",
+      "pool_order_within_repository": 2,
+      "case_id": "matplotlib_6",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true,
+      "validator_source_image": "sha256:3fc6c744f84dad95e2a3ad02ced94fb47be9b306636ac9aaa286d47606011ef7",
+      "visible_test": "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_single_color_c",
+      "allowed_files": [
+        "lib/matplotlib/axes/_axes.py",
+        "lib/matplotlib/colors.py"
+      ],
+      "preflight_artifact": "results/ecological_repository_matplotlib_warning_amendment_v1/matplotlib_6",
+      "environment_deviation": "Uniform Matplotlib DeprecationWarning preflight amendment",
+      "candidate_summary_sha256": "a55e1157a64e7f5790e149668c17d7d7f890143433723666afb84bbd9812b70d",
+      "regression_selection_sha256": "0ba88316eb547f1c831cafb6f51af468a8f934944bd1c8758e760b90171fe558",
+      "preparation_root": "candidate_workspaces/ecological_repair_followup_preparation_v1",
+      "baseline_root": "results/ecological_repair_followup_candidates_v1",
+      "prompt_sha256": "9262325ee83a2f8420175ffa814e283ff3ef17644b1a494f21a90072c341c921",
+      "preparation_summary_sha256": "d8043396191985270099788defdbdf5f917e0abc5cc177c91008dafffb29a4cf"
+    },
+    {
+      "project": "pandas",
+      "bug_id": "127",
+      "buggy_commit_id": "f7d6b58",
+      "fixed_commit_id_for_validator_only": "710d82c0d393c9031e469ec0371660d8187b7dc3",
+      "test_file": "pandas/tests/series/test_timeseries.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "05be1e969b07c50719ef2c4d7599c9ba2e4f126ef18df4d0eca8001f932a7ee7",
+      "run_test_sha256": "51a3affeaba0f0fae83b3cca778d6bc60bc55d56d02622c09253c980b238e371",
+      "preflight_status": "not_executed",
+      "selection_hash": "4a470855fbb6ec097f360345a9af03ca61c55531cd6c9284432904f1b6cfbe33",
+      "split": "main",
+      "pool_order_within_repository": 2,
+      "case_id": "pandas_127",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true,
+      "validator_source_image": "sha256:21344c4825e79539ac2ede0a96557a8a357b83d9a973884af380cd34432ac738",
+      "visible_test": "pandas/tests/series/test_timeseries.py::TestTimeSeries::test_pct_change_with_duplicate_axis",
+      "allowed_files": [
+        "pandas/core/generic.py",
+        "pandas/core/series.py"
+      ],
+      "preflight_artifact": "results/eco_repair_followup_pandas_127_rootful_v3/000_pandas_127",
+      "environment_deviation": "New outcome-blind pool. Same documented feasibility environment: CPython3.8.20, -O0 -g0, pinned minimal packages, nose for all Luigi, serial Matplotlib build. Not exact historical environment reproduction. No LLM outcomes used for selection.",
+      "candidate_summary_sha256": "ad1ebf83232bbf4e533e899fef0835540205baa5c858aed0bd179a85d462bb8c",
+      "regression_selection_sha256": "10854758b5a65a1472a41a4851c5d9ff7ce9a2ad8f45212703feeb7acfffd8ae",
+      "preparation_root": "candidate_workspaces/ecological_repair_followup_preparation_v1",
+      "baseline_root": "results/ecological_repair_followup_candidates_v1",
+      "prompt_sha256": "8289558654a4fa0bc90d1e75d41077e07b1d45962f74c4e8de6c80aaa6ee2a15",
+      "preparation_summary_sha256": "1fc87039a9ff499b17f8be766a82a2770957fd569ba22bff6582feac599145be"
+    },
+    {
+      "project": "luigi",
+      "bug_id": "16",
+      "buggy_commit_id": "e38392a1381dd8daee0f180f0ac7f651edb88e0c",
+      "fixed_commit_id_for_validator_only": "96f2b5a97c2cc5f63bea0f422c57f93dcec0ebac",
+      "test_file": "test/central_planner_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "b80aedf1026429f2d86fffd51be320a18673a9e8f390c7f8b84ae8760b5f1fcf",
+      "run_test_sha256": "6d0bc7729904d7b9b90f27e89f49c1d220274400a14fe6bdf4c31ea02b135c2f",
+      "preflight_status": "not_executed",
+      "selection_hash": "db754520f4438d76eb5672a5efe8414f76f52fec46ef61c695247db7b184d6b5",
+      "split": "main",
+      "pool_order_within_repository": 3,
+      "case_id": "luigi_16",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true,
+      "validator_source_image": "sha256:85e73caf51b385027f5ae2da80489e9d53119837d2fc67ef1f0b1edd5e919b14",
+      "visible_test": "test/central_planner_test.py::CentralPlannerTest::test_re_enable_failed_task_assistant",
+      "allowed_files": [
+        "luigi/scheduler.py"
+      ],
+      "preflight_artifact": "results/eco_repair_followup_luigi_16_rootful_v3/000_luigi_16",
+      "environment_deviation": "New outcome-blind pool. Same documented feasibility environment: CPython3.8.20, -O0 -g0, pinned minimal packages, nose for all Luigi, serial Matplotlib build. Not exact historical environment reproduction. No LLM outcomes used for selection.",
+      "candidate_summary_sha256": "2dd6f5e6bb1f31b3519f4df2df256668685b746622dc3b125ade263684d1a0ec",
+      "regression_selection_sha256": "506979355515d1ecb239751c0d083b63f6441d89d154f07df14974104dec5789",
+      "preparation_root": "candidate_workspaces/ecological_repair_followup_preparation_v1",
+      "baseline_root": "results/ecological_repair_followup_candidates_v1",
+      "prompt_sha256": "835d52aefd0fa759307bd147a214cae10d846edc5f4f828725b7852fd2115f60",
+      "preparation_summary_sha256": "91d833226a95da56dd6d721016911b047f2850950ace119ef705405f55f06bf5"
+    },
+    {
+      "project": "pandas",
+      "bug_id": "74",
+      "buggy_commit_id": "9a211aa",
+      "fixed_commit_id_for_validator_only": "839e7f1416148caff518a5b75327a2480a2bbbb4",
+      "test_file": "pandas/tests/indexes/timedeltas/test_constructors.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "ad142bb0a7e61d3431501d08c0e4fca15aa3f9c66f66ea69318630f10206d130",
+      "run_test_sha256": "a957d8307a40470a1289178811b852395a183f1d1a5ce53604c69d00036705dc",
+      "preflight_status": "not_executed",
+      "selection_hash": "9f7a92e7dce2c5773b9d49d25f9a40d5d1ecd203c13e4bea561a6bbee03c347f",
+      "split": "main",
+      "pool_order_within_repository": 3,
+      "case_id": "pandas_74",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true,
+      "validator_source_image": "sha256:67dccfa5f87b8ad7dfc8b81644565bbf3a2f4e6e36498d46f6a692ac12275f52",
+      "visible_test": "pandas/tests/indexes/timedeltas/test_constructors.py::TestTimedeltaIndex::test_infer_from_tdi_mismatch",
+      "allowed_files": [
+        "pandas/core/indexes/timedeltas.py",
+        "pandas/core/arrays/timedeltas.py",
+        "pandas/core/indexes/base.py"
+      ],
+      "preflight_artifact": "results/eco_repair_followup_pandas_74_rootful_v3/000_pandas_74",
+      "environment_deviation": "New outcome-blind pool. Same documented feasibility environment: CPython3.8.20, -O0 -g0, pinned minimal packages, nose for all Luigi, serial Matplotlib build. Not exact historical environment reproduction. No LLM outcomes used for selection.",
+      "candidate_summary_sha256": "868f85eb71f95c171ff610817251ea71437ebcb65dd76f1b09d83ad74bed52ec",
+      "regression_selection_sha256": "9a9dc6c27090f004315a2f1479421b21ae8bdd6e7e06845e060a660bfab51f66",
+      "preparation_root": "candidate_workspaces/ecological_repair_followup_preparation_v1",
+      "baseline_root": "results/ecological_repair_followup_candidates_v1",
+      "prompt_sha256": "191dbbbbab7e184802fa929da8357a1703b348a5ca040e202de05e893f9218fe",
+      "preparation_summary_sha256": "d79a970bf60a959772d7919a23dcb481df1e7d1f3590cea750021a5f7cab0dcb"
+    }
+  ],
+  "models": [
+    {
+      "slot": "agent_1",
+      "model_id": "tencent-hy3",
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3"
+    },
+    {
+      "slot": "agent_2",
+      "model_id": "gpt-5-mini",
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6"
+    },
+    {
+      "slot": "agent_3",
+      "model_id": "glm-5.3-flash",
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15"
+    }
+  ],
+  "provider_config_sha256": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+  "dependencies": {
+    "runner": "953ab2b24003587dcfdd3f798ff9d9e856144945ba9e983cf8957748bedd7305",
+    "credential_bridge": "dec7d35bfc20a4d9cb30bcdb5f4e1aa888065b8b9a0b854c7101258d82b98d65",
+    "calibration_execution_core": "8291416f8dac0de3fa10ce82f607b3f1a307b12b5194d4de97a8a97a9143a467",
+    "provider_adapter": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "context_lock": "ccdc7bb18c744150920090d513c2265fbe6e8d8a8dd35c4de453d29ac7b9e05c",
+    "candidate_lock": "46663a22beaadf47353503b4077e50406daa936c3c7ee129136700604cf4043c",
+    "exact_edits": "984005c0fd8939256aef19e6edc651413bac5615e8f11d3512928a152a0f001f",
+    "patch_guard": "e7e7a4fe367f64952c1600815c16288cbfeadcb1c55526b43705c7a5881d4720",
+    "verifier": "ffb147a84333e039af429c7f379637e62adf24d323afb3aa66c79bb029260eec",
+    "preflight_lock": "9a894fbe63c96f0c8c8c20f5d482e62af774864d341bfe4d6edcb9aee778f106",
+    "protocol": "bd05afb00b4769f5fae31eda97f7392094df9302b22a254ad4a538a4016cfdc1",
+    "pre_provider_cohort_amendment": "c0634a154ee929dba7aea07d8b3658a59b307862bada6bfedbbf940467a104ba"
+  },
+  "planned_case_ids": [
+    "luigi_11",
+    "matplotlib_6",
+    "pandas_127",
+    "luigi_16",
+    "matplotlib_26",
+    "pandas_74"
+  ],
+  "pre_provider_exclusions": [
+    {
+      "case_id": "matplotlib_26",
+      "candidate_status": "candidate_preflight_failed"
+    }
+  ],
+  "planned_pairs": 15,
+  "not_allocation_main": true,
+  "not_pooled_with_strict_diff_main": true,
+  "provider_cost_currency_unverified": true,
+  "no_retry_of_started_pairs": true,
+  "status": "repair_followup_exact_edits_frozen_before_holdout_model_calls",
+  "created_at_utc": "2026-10-09T10:33:38.171297+00:00",
+  "research_results": false
+}

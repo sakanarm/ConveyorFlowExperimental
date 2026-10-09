@@ -1,5 +1,15 @@
 # ConveyorFlow v2.3 สถานะปิด Major Revision
 
+## สถานะ 9 ตุลาคม 2026: main real-LLM จบและ audit แล้ว แต่ยังไม่อ้างว่าปิด Major Revision ทั้งหมด
+
+หก paired mixed-workload blocks วิเคราะห์ครบแล้ว (`MAIN_BLOCK_01–04`, `MAIN_BLOCK_05_R1`, `MAIN_BLOCK_06`) รวม 155 provider attempts. Original Block 05 ถูกผู้ใช้พักก่อนครบสามแขน เก็บ partial ledger แต่ไม่นับผลวิจัย; `05_R1` รันใหม่ทั้งสามแขนด้วย amended lock. ผลภายใน fixed horizon ต่อ 18 งานต่อแขน: CF-Fit verified 11, Central-Rule-Matched 10, Static Owners 12. ML pipelines ผ่าน 11/12, 10/12, 11/12; repository repair ผ่าน 0/6, 0/6, 1/6 ตามลำดับ. Repair ที่ผ่านคือ Matplotlib #28 ใน Static เท่านั้น. ตัวเลขหลักอยู่ใน `ecological_v1/main_analysis_with_replacement_v1.json` (SHA-256 `4808c4b22923c25c30b7fd686c33edf266755fcb5aaa4eb6b0ef7cd0dd3e44e7`) และบันทึก `ecological_v1/MAIN_EXPERIMENT_RESULTS_WITH_REPLACEMENT_V1_TH.md`.
+
+ผลนี้ทำให้ paper สามารถอธิบายการจัดสรรงาน ML DAG ที่รันจริงและความพยายามซ่อม repository จริง แทน microtask surrogate เพียงอย่างเดียว แต่ไม่พิสูจน์ว่า CF-Fit ซ่อม repository สำเร็จ และยังไม่แยก causal effect ของ decision locus ออกจากการเปลี่ยน assignment/provider time ในระบบสดได้หมด. Matched simulation parity และ synthetic coordinator outage เป็นหลักฐานคนละชั้น ไม่ใช่ production fault-tolerance proof. เอกสารตอบ reviewer อย่างจำกัด claim อยู่ใน `REVIEWER_RESPONSE_ECOLOGICAL_ALLOCATION_EN.md`; แผน follow-up repository ที่กำหนดไว้หลังเห็น format failures อยู่ใน `ecological_v1/REPOSITORY_REPAIR_FOLLOWUP_PLAN_V1_TH.md` ยังไม่ใช่ผลทดลอง. Human expert labels ผู้ใช้จะดำเนินการเอง.
+
+Word v2.3 ใหม่อยู่ใน `../CURRENT_MANUSCRIPTS/` ชื่อ `*_Main_Rev7.docx` (IEEE) และ `*_Main_Rev5.docx` (AJSTR blind/unblind). โปรดใช้ `../CURRENT_MANUSCRIPTS/README_CURRENT_TH.md` แทนสถานะ Word เก่าในบันทึกด้านล่าง. ยังต้องตรวจร่วมกับผู้เขียนและ journal target ก่อนส่งจริง.
+
+สไลด์อธิบายอาจารย์ที่อัปเดตผล main แล้วคือ `../presentation/ConveyorFlow_Advisor_Presentation_TH_v2_3_main_v11.pptx` (20 หน้า; ตรวจด้วย Microsoft PowerPoint). สคริปต์ `../scripts/qa_v2_3_main_manuscripts.py` ตรวจทั้ง IEEE และ AJSTR blind/unblind ว่ามีตัวเลข 11/18, 10/18, 12/18, การเปิดเผย Block 05_R1, รูปและสมการครบ และฉบับ blind ไม่มีข้อมูลระบุตัวผู้เขียนใน XML package. การตรวจนี้ไม่แทนการประเมินเชิงวิชาการหรือการตรวจ PDF ก่อนส่งจริง.
+
 ## ML main live seam draft 6 ตุลาคม 2026 เวลา 23:57 น.
 
 เพิ่ม `ecological_v1/main_live_ml_bundle_v1.py` ให้คัดลอกเฉพาะ public inputs ของ main case ไม่ใช้ trusted predecessor clone และ `main_live_ml_stage_v1.py` สำหรับ one-attempt request marker, provider response/source, Podman verifier, fresh replay และ same-arm artifact origin. ต้องมี separate frozen main lock, Linux/Podman และ explicit paid confirmation; ไม่มี CLI execute. Tests ใช้ fake provider/verifier เพื่อพิสูจน์ success path และ timeout→unresolved/no blind retry. ยังไม่ใช่ paid main หรือ end-to-end sentinel; allocator, retry/late-return, paired accounting และ case references ยังต้องทำ. Calibration ยังรันแยกอยู่

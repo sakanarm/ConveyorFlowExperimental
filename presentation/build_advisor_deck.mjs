@@ -223,7 +223,7 @@ function setNotes(slide, time, script, source) {
     fontSize: 28,
     color: C.orangeLight,
   });
-  addText(slide, "Sakan Punyanon  •  Simulation 22,500 runs  •  Real-LLM validation  •  v2", { left: 76, top: 612, width: 1040, height: 32 }, {
+  addText(slide, "Sakan Punyanon  •  Simulation 22,500 runs  •  Real-LLM main: 6 paired blocks  •  v2.3", { left: 76, top: 612, width: 1100, height: 32 }, {
     fontSize: 20,
     color: "#B9CAD5",
   });
@@ -322,7 +322,7 @@ function setNotes(slide, time, script, source) {
     slide,
     "1:00–1:40",
     "Story ของงานมีห้าช่วงที่ต่อกัน หนึ่ง Agent มีความสามารถและต้นทุนต่างกัน สองจึงให้ Agent ประเมินงานเอง สามไม่ใช่เลือกเพียงเพราะทำได้ แต่เลือกตาม capability-task fit สี่ถ้า Agent เก่งเกินความจำเป็นและมี Agent ระดับต่ำกว่าที่เพียงพอ Agent เก่งจะ stand down ชั่วคราว ห้าเมื่องานรอนาน aging จะผ่อนเงื่อนไขและยกเลิกการชะลอ นี่คือเหตุผลที่ contribution ไม่ใช่การเสนอ 13 policies จำนวนมาก แต่เป็นกลไก self-selection, heterogeneity, fit, stand-down และ aging ที่เชื่อมกันครับ",
-    "Advisor comments in task brief; v2/ConveyorFlow_IEEE_Manuscript.docx",
+    "Advisor comments in task brief; v2/CURRENT_MANUSCRIPTS/ConveyorFlow_IEEE_Manuscript.docx",
   );
 }
 
@@ -535,18 +535,32 @@ function setNotes(slide, time, script, source) {
 
 // 14. Main Real-LLM policy validation
 {
-  const slide = setupSlide("ผล Real-LLM Main", 14, "10 paired seeds × 60 tasks • CF-Fit, Static S3, Central-Fit");
+  const slide = setupSlide("ผล Real-LLM microtasks เดิม", 14, "10 paired seeds × 60 tasks • เป็นหลักฐานคนละชุดกับ executable main v2.3");
   await addImage(slide, MAIN_REAL_LLM_RADAR, { left: 35, top: 135, width: 660, height: 455 }, "Main Real-LLM policy radar", "contain");
   addText(slide, "CF-Fit เทียบ Static S3", { left: 720, top: 145, width: 470, height: 45 }, { fontSize: 28, bold: true, color: C.teal });
-  addText(slide, "Completion −13.5 จุด\n(−24.7% แบบ relative)\nCost/verified +62.1%\nWall time −62.1%\nThroughput +99.5%\nUtilization +63.6%", { left: 745, top: 190, width: 420, height: 225 }, { fontSize: 22, color: C.ink });
-  addText(slide, "ทุก metric-level contrast: Holm p=.005859", { left: 735, top: 407, width: 450, height: 38 }, { fontSize: 18, color: C.muted });
-  addText(slide, "CF-Fit เทียบ Central-Fit", { left: 720, top: 465, width: 470, height: 42 }, { fontSize: 27, bold: true, color: C.orange });
-  addText(slide, "ไม่พบความแตกต่างที่ Holm p<.05 ใน 6 metrics\n≠ หลักฐานว่าเทียบเท่ากัน", { left: 745, top: 510, width: 425, height: 82 }, { fontSize: 21, color: C.ink });
-  addText(slide, "ข้อสรุป: เร็วและใช้ทรัพยากรสูงขึ้น แต่แลกด้วย completion และต้นทุน", { left: 95, top: 610, width: 1090, height: 52 }, { fontSize: 25, bold: true, color: C.navy2, textAlign: "center" });
+  addText(slide, "Completion −13.5 จุด (−24.7%)\nCost/verified +62.1%\nWall time −62.1%\nThroughput +99.5%\nUtilization +63.6%", { left: 745, top: 188, width: 420, height: 162 }, { fontSize: 20, color: C.ink });
+  addText(slide, "ทุก metric-level contrast: Holm p=.005859", { left: 735, top: 351, width: 450, height: 34 }, { fontSize: 17, color: C.muted });
+  addText(slide, "CF-Fit เทียบ Central-Fit", { left: 720, top: 385, width: 470, height: 38 }, { fontSize: 27, bold: true, color: C.orange });
+  const centralRows = [
+    ["ตัวชี้วัด", "CF-Fit", "Central-Fit"],
+    ["Completion", "41.17%", "41.83%"],
+    ["Wall time", "284.58 s", "283.00 s"],
+    ["Throughput / s", "0.08855", "0.08966"],
+    ["Utilization", "89.88%", "95.22%"],
+    ["Cost / verified (units)", "0.005095", "0.004972"],
+  ];
+  centralRows.forEach((values, row) => {
+    const y = 423 + row * 25;
+    addText(slide, values[0], { left: 738, top: y, width: 176, height: 24 }, { fontSize: 16, bold: row === 0, color: row === 0 ? C.navy2 : C.ink });
+    addText(slide, values[1], { left: 916, top: y, width: 122, height: 24 }, { fontSize: 16, bold: row === 0, color: row === 0 ? C.navy2 : C.ink, textAlign: "center" });
+    addText(slide, values[2], { left: 1040, top: y, width: 160, height: 24 }, { fontSize: 16, bold: row === 0, color: row === 0 ? C.navy2 : C.ink, textAlign: "center" });
+  });
+  addText(slide, "6 metrics: ไม่พบ Holm p<.05 (ต่ำสุด .105469) • ไม่ใช่ equivalence", { left: 720, top: 580, width: 500, height: 31 }, { fontSize: 15, color: C.muted, textAlign: "center" });
+  addText(slide, "ผลใกล้กันโดย CF-Fit ไม่ใช้ global matcher; ยังไม่ใช่หลักฐาน fault tolerance ทั้งระบบ", { left: 65, top: 625, width: 1150, height: 48 }, { fontSize: 22, bold: true, color: C.navy2, textAlign: "center" });
   setNotes(
     slide,
     "8:00–8:45",
-    "ผลรันโมเดลจริงใช้สิบ paired seeds แต่ละ seed มีหกสิบงานและใช้ validator เดียวกัน เมื่อเทียบ Static S3 นั้น CF-Fit มี completion ต่ำกว่าและ cost per verified task สูงกว่า แต่จบหน้าต่างทดลองเร็วกว่า มี throughput และ utilization สูงกว่ามาก ทุกความต่างระดับ metric ผ่าน Holm correction ดังนั้นนี่คือ trade-off ที่ชัด ไม่ใช่ชัยชนะทุกด้าน ส่วนเมื่อเทียบ Central-Fit ผลใกล้กันและไม่มี metric ใด significant หลัง Holm แต่ห้ามตีความว่าเทียบเท่า เพราะงานนี้ไม่ได้ออกแบบเป็น equivalence test ครับ",
+    "นี่คือชุด microtasks เดิม สิบ paired seeds และหกสิบงานต่อ seed ไม่ใช่ผล executable main v2.3 เมื่อเทียบ Static S3 นั้น CF-Fit completion ต่ำกว่าและ cost per verified task สูงกว่า แต่จบหน้าต่างทดลองเร็วกว่า มี throughput และ utilization สูงกว่า เมื่อเทียบ Central-Fit ค่า completion เท่ากับ 41.17 ต่อ 41.83 เปอร์เซ็นต์ wall time 284.58 ต่อ 283.00 วินาที throughput 0.08855 ต่อ 0.08966 งานต่อวินาที และ cost per verified task 0.005095 ต่อ 0.004972 หน่วยที่ provider รายงาน โดยยังยืนยันสกุลเงินไม่ได้ ไม่มี metric ใด significant หลัง Holm ค่าต่ำสุด .105469 ไม่ใช่ผล equivalence และไม่ได้พิสูจน์ fault tolerance ทั้งระบบ ผล full ML DAG กับ repository จริงอยู่ในสไลด์ executable main แยกต่างหากครับ",
     "v2/real_llm_pilot/main_mfec_aggregated/real_llm_descriptive.csv; real_llm_pairwise.csv",
   );
 }
@@ -567,22 +581,48 @@ function setNotes(slide, time, script, source) {
   );
 }
 
-// 16. Claims and advisor ask
+// 16. Executable ecological main
 {
-  const slide = setupSlide("ข้อสรุปและประเด็นขอคำแนะนำ", 16);
+  const slide = setupSlide("ผล executable real-LLM main v2.3", 16, "6 paired blocks • ML pipeline 4 ขั้นและ BugsInPy repository repair");
+  const table = slide.tables.add({
+    rows: 4,
+    columns: 5,
+    left: 70,
+    top: 158,
+    width: 1140,
+    height: 238,
+    columnWidths: [290, 210, 210, 210, 220],
+    values: [
+      ["Allocation", "Verified /18", "ML /12", "Repair /6", "Jobs/hour"],
+      ["CF-Fit", "11", "11", "0", "1.833"],
+      ["Central-Fit", "10", "10", "0", "1.667"],
+      ["Static Owners", "12", "11", "1", "2.000"],
+    ],
+  });
+  styleTable(table, C.navy);
+  addText(slide, "เวลาเสร็จเฉพาะงานที่ผ่าน: CF-Fit 322 s • Central-Fit 274 s • Static 720 s", { left: 75, top: 415, width: 1130, height: 46 }, { fontSize: 23, color: C.ink });
+  addText(slide, "Cost ต่อ verified job (หน่วยที่ provider รายงาน): 0.02991 • 0.03060 • 0.02880", { left: 75, top: 468, width: 1130, height: 46 }, { fontSize: 22, color: C.ink });
+  addText(slide, "Repository repair ผ่าน 1 เคสใน Static เท่านั้น; CF-Fit ยัง 0/6", { left: 75, top: 540, width: 1130, height: 52 }, { fontSize: 27, bold: true, color: C.red, textAlign: "center" });
+  addText(slide, "Block 05 เดิมถูกพักและไม่รวมผล; 05_R1 รันใหม่ครบสามแขนภายใต้ lock แยก", { left: 80, top: 606, width: 1120, height: 36 }, { fontSize: 18, color: C.muted, textAlign: "center" });
+  setNotes(slide, "v2.3 main", "นี่คือผล real LLM ที่รัน pipeline และ repository จริง ไม่ใช่ microtasks สอง corpus คือ Adult กับ Beijing ถูกใช้ซ้ำเป็น variants ภายในหกบล็อก แต่ละบล็อกมีงาน ML สองงานและ repair หนึ่งงาน ทั้งสามแขนใช้ roster และ verifier เดียวกัน 155 provider attempts มี audit capsule ครบ CF-Fit ผ่าน 11 จาก 18 งาน Central-Fit 10 จาก 18 และ Static 12 จาก 18 เมื่อแยกงานซ่อม CF-Fit กับ Central ไม่ผ่านเลย ส่วน Static ผ่าน Matplotlib 28 หนึ่งเคส เวลาเสร็จเป็น conditional on success จึงเปรียบงานคนละ subset และ cost เป็น provider-reported units ที่ยังไม่ยืนยันสกุลเงิน ช่วง bootstrap ของหกบล็อกเป็น descriptive ไม่ใช่ population CI หรือ equivalence proof Block 05 เดิมหยุดตามคำขอและถูกเก็บไว้เป็น partial ledger ส่วน 05_R1 รันใหม่ครบทั้งสามแขนโดยไม่รวมผลดิบเดิมครับ", "v2/major_revision_v2_3/ecological_v1/main_analysis_with_replacement_v1.json; v2/major_revision_v2_3/ecological_v1/MAIN_EXPERIMENT_RESULTS_WITH_REPLACEMENT_V1_TH.md");
+}
+
+// 17. Claims and advisor ask
+{
+  const slide = setupSlide("ข้อสรุปและประเด็นขอคำแนะนำ", 17);
   addText(slide, "Claim ที่เขียนได้", { left: 75, top: 145, width: 500, height: 50 }, { fontSize: 30, bold: true, color: C.teal });
   addBullets(slide, [
     "CF-Fit เปลี่ยน trade-off vector ภายใต้ simulation",
     "Fit และ Aging มี contribution ที่วัดได้",
-    "Real-LLM ยืนยัน speed–utilization / completion–cost trade-off",
-    "Extension เป็น sensitivity และ boundary evidence",
+    "main v2.3 จัดสรร ML pipeline ที่รันจริงบน READY belt",
+    "CF-Fit กับ matched Central-Fit ใช้กฎ fit เดียวกัน",
   ], { left: 90, top: 205, width: 500, height: 235 }, { fontSize: 22, spaceAfterPoints: 7 });
   addText(slide, "Claim ที่ยังห้ามเขียน", { left: 675, top: 145, width: 500, height: 50 }, { fontSize: 30, bold: true, color: C.red });
   addBullets(slide, [
     "CF-Fit ชนะทุก baseline ทุก metric",
     "ไม่ significant = เทียบเท่ากัน",
-    "ทีม homogeneous พิสูจน์ causal effect ของ heterogeneity",
-    "LLM role labels คือ human ground truth",
+    "ผลใกล้กัน = fault tolerance ทั้งระบบ",
+    "main นี้พิสูจน์ว่า CF-Fit ซ่อม repository สำเร็จ",
   ], { left: 690, top: 205, width: 500, height: 235 }, { fontSize: 22, spaceAfterPoints: 7 });
   addRule(slide, 75, 470, 1130, C.grid, 2);
   addText(slide, "ขอคำแนะนำจากอาจารย์", { left: 75, top: 495, width: 330, height: 42 }, { fontSize: 28, bold: true, color: C.navy });
@@ -592,36 +632,36 @@ function setNotes(slide, time, script, source) {
   setNotes(
     slide,
     "9:25–10:00",
-    "สรุปแล้ว งานนี้ควรเสนอว่า ConveyorFlow เป็นกลไก decentralized capability-aware self-selection ที่สร้าง trade-off แตกต่างจาก static และ centralized controls หลักฐาน simulation สนับสนุน fit และ aging ส่วน Real-LLM สนับสนุนว่ากลไกทำงานได้จริงและทำให้เห็น speed-utilization กับ completion-cost trade-off Claim ที่ยังห้ามเขียนคือชนะทุก baseline, ผลไม่ significant แปลว่าเทียบเท่า, homogeneous boundary พิสูจน์ causal effect ของ heterogeneity หรือ role-conditioned LLM labels เป็น human ground truth วันนี้ขอคำแนะนำเรื่อง contribution framing, journal target และแผน human-expert validation ก่อน submission ครับ",
-    "v2/ConveyorFlow_IEEE_Manuscript.docx; v2/ConveyorFlow_Advisor_Explanation_TH.docx",
+    "สรุปงานนี้เป็น decentralized capability-aware self-selection บน READY belt หลักฐาน simulation สนับสนุน fit และ aging ส่วน executable real LLM main แสดงว่า ML DAG ทำงานได้จริงภายใต้ allocation สามแบบ ผล CF-Fit 11 งาน Central-Fit 10 งาน Static 12 งานจาก 18 งานต่อแขน ไม่มี universal winner และ repository repair ที่ผ่านอยู่ใน Static เท่านั้น เราไม่อ้าง equivalence, pure causal decision-locus effect หรือ fault tolerance ทั้งระบบ ขอคำแนะนำอาจารย์เรื่องขอบเขต claim, repository follow-up และ human difficulty validation ก่อนส่งจริงครับ",
+    "v2/CURRENT_MANUSCRIPTS/ConveyorFlow_IEEE_Manuscript.docx; v2/ConveyorFlow_Advisor_Explanation_TH.docx",
   );
 }
 
-// 17. Reviewer audit appendix
+// 18. Reviewer audit appendix
 {
-  const slide = setupSlide("Reviewer audit: ยังต้องแก้อะไรก่อนส่งวารสาร", 17, "คำแนะนำปัจจุบัน: Major Revision ก่อน external submission");
+  const slide = setupSlide("Reviewer audit: ยังต้องแก้อะไรก่อนส่งวารสาร", 18, "ผล executable main ตอบบางส่วน แต่ยังต้องจำกัดข้ออ้าง");
   addText(slide, "จุดแข็ง", { left: 75, top: 145, width: 500, height: 44 }, { fontSize: 29, bold: true, color: C.teal });
   addBullets(slide, [
     "Scientific story และ trade-off framing ชัด",
-    "paired design, multiplicity control และ audit trail ครบ",
-    "แยก simulation, main Real-LLM และ boundary evidence",
+    "paired executable main 6 blocks ตรวจสอบ ledger ได้",
+    "ML pipeline ผ่านจริงและมี repair ผ่านใน Static",
   ], { left: 88, top: 195, width: 510, height: 205 }, { fontSize: 21, spaceAfterPoints: 8 });
   addText(slide, "รายการที่ต้องปิด", { left: 665, top: 145, width: 500, height: 44 }, { fontSize: 29, bold: true, color: C.orange });
   addBullets(slide, [
-    "เขียน RQ1–RQ3 อย่างเป็นทางการใน Introduction",
-    "อธิบายที่มาพารามิเตอร์ simulation และ baseline fairness",
-    "ตรึง public commit/tag + DOI archive",
-    "เพิ่มรายละเอียด cost accounting และ provider metadata",
-    "ทำ human-expert validation หรือจำกัด claim ให้ตรงหลักฐาน",
+    "CF-Fit ยังไม่มี repository repair ผ่านใน main",
+    "6 blocks ใช้ Adult/Beijing ซ้ำ และ 3 repositories",
+    "matched-rule live ยังไม่ใช่ pure causal effect",
+    "human-expert difficulty labels ยังรอคนตรวจ",
+    "ตรึง public commit/tag และให้ผู้เขียนร่วมตรวจ",
   ], { left: 680, top: 195, width: 520, height: 275 }, { fontSize: 20, spaceAfterPoints: 6 });
   addRule(slide, 75, 495, 1130, C.grid, 2);
   addText(slide, "สถานะ: พร้อมให้อาจารย์ตรวจรอบถัดไป แต่ยังไม่ใช่ฉบับพร้อม submit", { left: 115, top: 535, width: 1050, height: 70 }, { fontSize: 27, bold: true, color: C.navy2, textAlign: "center" });
-  setNotes(slide, "Appendix", "ถ้ามองแบบ reviewer งานมีแกนความรู้และหลักฐานเพียงพอ แต่ยังควรเป็น Major Revision ก่อนส่งจริง ประเด็นสำคัญไม่ใช่เพิ่มการทดลองจำนวนมากโดยอัตโนมัติ แต่คือทำให้ RQ, calibration rationale, baseline fairness, cost accounting และ public reproducibility ตรวจสอบได้ครับ", "v2/docs/REVIEWER_AUDIT_TH.md");
+  setNotes(slide, "Appendix", "ผล main ปิดช่องว่าง microtasks ได้บางส่วน แต่ CF-Fit ยังซ่อม repository ไม่ผ่านในหกเคส การเปรียบ matched fit rule ยังมี provider timing และ assignment ต่างกัน จึงไม่ควรอ้าง causal decision locus หรือ equivalence โดยตรง Reviewer อาจยังขอ follow-up เพิ่ม หากจะส่งด้วยผลปัจจุบันต้องเขียน claim แบบ bounded และเปิดเผยตัวอย่างน้อยกับ task clusters ที่ใช้ซ้ำครับ", "v2/major_revision_v2_3/REVIEWER_RESPONSE_ECOLOGICAL_ALLOCATION_EN.md");
 }
 
-// 18. AI transparency appendix
+// 19. AI transparency appendix
 {
-  const slide = setupSlide("AI transparency และการตรวจภาษา", 18, "ตรวจ provenance และ claim traceability แทนการพึ่ง AI detector");
+  const slide = setupSlide("AI transparency และการตรวจภาษา", 19, "ตรวจ provenance และ claim traceability แทนการพึ่ง AI detector");
   addText(slide, "เปิดเผยให้ตรงหลักฐาน", { left: 75, top: 150, width: 500, height: 45 }, { fontSize: 28, bold: true, color: C.teal });
   addBullets(slide, [
     "difficulty labels มาจาก LLM เดียว 3 role-conditioned passes",
@@ -640,16 +680,16 @@ function setNotes(slide, time, script, source) {
   setNotes(slide, "Appendix", "การตรวจ AI ในที่นี้ไม่ใช้ detector ตัดสินว่าใครเขียน เพราะเครื่องมือกลุ่มนั้นไม่เหมาะเป็นหลักฐาน เราตรวจจาก provenance แทน ได้แก่ที่มาของ labels การเก็บ prompts และ outputs ความสอดคล้องระหว่าง claim กับผลทดลอง และการรับผิดชอบของผู้เขียน พร้อมปรับภาษาให้เป็นธรรมชาติและเฉพาะเจาะจงกับงานนี้ครับ", "v2/docs/AI_USE_DISCLOSURE.md; v2/docs/REVIEWER_AUDIT_TH.md");
 }
 
-// 19. Reproducibility appendix
+// 20. Reproducibility appendix
 {
-  const slide = setupSlide("Git package สำหรับให้ Reviewer ทดลองซ้ำ", 19, "Git เก็บสิ่งที่จำเป็นต่อการตรวจและสร้างผลใหม่");
+  const slide = setupSlide("Git package สำหรับให้ Reviewer ทดลองซ้ำ", 20, "Git เก็บสิ่งที่จำเป็นต่อการตรวจและสร้างผลใหม่");
   addText(slide, "ขึ้น Git", { left: 70, top: 145, width: 350, height: 44 }, { fontSize: 29, bold: true, color: C.teal });
   addBullets(slide, [
     "source code, frozen configs, tests และ CI",
     "data manifests/download scripts และ derived metadata",
     "AI-label audit trail และ 60 Real-LLM case bundles",
     "aggregate results, statistics, figures, hashes และ source snapshot",
-    "Draw.io, manuscript, presentation และ reproduction guide",
+    "Draw.io source และ reproduction guide; manuscript แยกเป็นไฟล์ตรวจทาน",
   ], { left: 85, top: 195, width: 545, height: 300 }, { fontSize: 20, spaceAfterPoints: 7 });
   addText(slide, "ไม่ขึ้น Git", { left: 690, top: 145, width: 400, height: 44 }, { fontSize: 29, bold: true, color: C.red });
   addBullets(slide, [
@@ -663,8 +703,8 @@ function setNotes(slide, time, script, source) {
 }
 
 const requirements = {
-  explicitTotalSlideCount: 19,
-  requiredNativeTableOwnerSlides: [8, 12],
+  explicitTotalSlideCount: 20,
+  requiredNativeTableOwnerSlides: [8, 12, 16],
   requiredNativeChartOwnerSlides: [],
 };
 const fontPolicy = {
@@ -692,6 +732,7 @@ const result = await finalizePresentation({
     "--validate-heading-fit",
     "--require-native-table-slide", "8",
     "--require-native-table-slide", "12",
+    "--require-native-table-slide", "16",
   ],
   requiredNativeTableOwnerSlides: requirements.requiredNativeTableOwnerSlides,
   fontPolicy,
@@ -699,7 +740,7 @@ const result = await finalizePresentation({
   // The isolated re-import probe is disabled because the bundled Windows runtime
   // terminates after producing its inspection artifact before publishing the file.
   verifyArtifactToolImport: false,
-  receiptPath: path.join(stagingDir, "ConveyorFlow_Advisor_Presentation_TH_v6.validation.json"),
+  receiptPath: path.join(stagingDir, "ConveyorFlow_Advisor_Presentation_TH_v2_3_main_v11.validation.json"),
 });
 
 console.log(JSON.stringify({ status: "complete", finalPath: FINAL_PPTX, result }, null, 2));

@@ -1,0 +1,136 @@
+{
+  "assumed_sd_scenarios_jobs_per_hour": [
+    0.5,
+    1.0
+  ],
+  "formula": "t_{0.975,n-1} * assumed_between_repository_sd / sqrt(n)",
+  "limitations": [
+    "Only four pilot repositories; their observed SD is unstable and likely optimistic.",
+    "This grid does not model within-repository case variation or two reused ML corpora.",
+    "No equivalence, superiority, or power claim follows from reaching a row of this grid.",
+    "The planning target and final hierarchical analysis need approval before paid extension."
+  ],
+  "pilot_between_repository_sd_jobs_per_hour": 0.16666666666666666,
+  "pilot_complete_paired_blocks": 11,
+  "pilot_independent_repository_clusters": 4,
+  "pilot_repository_mean_cf_minus_central_jobs_per_hour": {
+    "fastapi": 0.3333333333333333,
+    "luigi": 0.3333333333333333,
+    "matplotlib": 0.3333333333333333,
+    "pandas": 0.0
+  },
+  "planning_target_half_width_jobs_per_hour": 0.25,
+  "scenarios": [
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.2652038333333333,
+      "assumed_between_repository_sd_jobs_per_hour": 0.16666666666666666,
+      "independent_repository_clusters": 4,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.13933680544637156,
+      "assumed_between_repository_sd_jobs_per_hour": 0.16666666666666666,
+      "independent_repository_clusters": 8,
+      "meets_illustrative_half_width_0_25": true
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.10589494018602738,
+      "assumed_between_repository_sd_jobs_per_hour": 0.16666666666666666,
+      "independent_repository_clusters": 12,
+      "meets_illustrative_half_width_0_25": true
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.07800239904230866,
+      "assumed_between_repository_sd_jobs_per_hour": 0.16666666666666666,
+      "independent_repository_clusters": 20,
+      "meets_illustrative_half_width_0_25": true
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.06008972802575495,
+      "assumed_between_repository_sd_jobs_per_hour": 0.16666666666666666,
+      "independent_repository_clusters": 32,
+      "meets_illustrative_half_width_0_25": true
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.04163210416666666,
+      "assumed_between_repository_sd_jobs_per_hour": 0.16666666666666666,
+      "independent_repository_clusters": 64,
+      "meets_illustrative_half_width_0_25": true
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.7956115,
+      "assumed_between_repository_sd_jobs_per_hour": 0.5,
+      "independent_repository_clusters": 4,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.4180104163391147,
+      "assumed_between_repository_sd_jobs_per_hour": 0.5,
+      "independent_repository_clusters": 8,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.31768482055808217,
+      "assumed_between_repository_sd_jobs_per_hour": 0.5,
+      "independent_repository_clusters": 12,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.234007197126926,
+      "assumed_between_repository_sd_jobs_per_hour": 0.5,
+      "independent_repository_clusters": 20,
+      "meets_illustrative_half_width_0_25": true
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.18026918407726486,
+      "assumed_between_repository_sd_jobs_per_hour": 0.5,
+      "independent_repository_clusters": 32,
+      "meets_illustrative_half_width_0_25": true
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.1248963125,
+      "assumed_between_repository_sd_jobs_per_hour": 0.5,
+      "independent_repository_clusters": 64,
+      "meets_illustrative_half_width_0_25": true
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 1.591223,
+      "assumed_between_repository_sd_jobs_per_hour": 1.0,
+      "independent_repository_clusters": 4,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.8360208326782294,
+      "assumed_between_repository_sd_jobs_per_hour": 1.0,
+      "independent_repository_clusters": 8,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.6353696411161643,
+      "assumed_between_repository_sd_jobs_per_hour": 1.0,
+      "independent_repository_clusters": 12,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.468014394253852,
+      "assumed_between_repository_sd_jobs_per_hour": 1.0,
+      "independent_repository_clusters": 20,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.3605383681545297,
+      "assumed_between_repository_sd_jobs_per_hour": 1.0,
+      "independent_repository_clusters": 32,
+      "meets_illustrative_half_width_0_25": false
+    },
+    {
+      "approximate_95pct_t_interval_half_width_jobs_per_hour": 0.249792625,
+      "assumed_between_repository_sd_jobs_per_hour": 1.0,
+      "independent_repository_clusters": 64,
+      "meets_illustrative_half_width_0_25": true
+    }
+  ],
+  "status": "scenario_grid_not_sample_size_commitment",
+  "target_is_illustrative_not_advisor_signed_off": true,
+  "unit_of_independence": "source repository (ML corpus clustering is separate and unresolved)"
+}

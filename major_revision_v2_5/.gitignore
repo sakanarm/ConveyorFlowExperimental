@@ -1,0 +1,11 @@
+# Rebuildable container logs, source images, and test artifacts remain local.
+results/v25_*/
+results/sanic_preflight_v1/[0-9][0-9]_sanic_*/
+results/sanic_candidate_v1/sanic_5/
+results/pysnooper_preflight_v1*/[0-9][0-9]_pysnooper_*/
+results/pysnooper_candidate_v1/PySnooper_3/
+results/pysnooper_candidate_v1b/PySnooper_3/
+results/pysnooper_regression_v1c/*_files/
+results/pysnooper_regression_v1c/visible.json
+results/pysnooper_regression_v1c/buggy_regression.json
+results/pysnooper_regression_v1c/fixed_regression.json

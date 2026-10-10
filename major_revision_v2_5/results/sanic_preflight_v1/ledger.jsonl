@@ -1,0 +1,1 @@
+{"bug_id": "5", "engine_ledger_sha256": "d4281708205f643db939ca2dbe698220e3b9f8700585f31a8ae56d2cfb49b949", "provider_calls": 0, "queue_index": 0, "reason": null, "selection_hash": "4ceb4b9236cce3eacd1c1a8283d48901ba35b1a3de5e54306abd600bd4411477", "status": "reproducible"}

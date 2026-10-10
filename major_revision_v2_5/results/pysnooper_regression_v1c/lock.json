@@ -1,0 +1,23 @@
+{
+  "candidate_image_id": "sha256:d28f1d9fd54b51192dbdb735264454e967217cf1f578f55f2ccd0ed86efed9df",
+  "created_at_utc": "2026-10-10T18:02:45.037916+00:00",
+  "minimum_active_passes": 4,
+  "non_visible_public_nodes": [
+    "tests/test_pysnooper.py::test_string_io",
+    "tests/test_pysnooper.py::test_variables",
+    "tests/test_pysnooper.py::test_depth",
+    "tests/test_pysnooper.py::test_method_and_prefix"
+  ],
+  "paid_execution_allowed": false,
+  "prior_failed_summary_sha256": "c2c62c685fafa393c2e448edd09254ee81b32987d9f0e44758a655a7bca8b5a6",
+  "prior_recovery_lock_sha256": "1857743e428cac97b9984458da7b4af36fdd2946f735a31f2d78c4684ca492e9",
+  "prior_selection_sha256": "0d1cab92c1382f1e48bbfe1deac5335d54b84e6e0ffb8cf6c08c68e887330654",
+  "provider_calls": 0,
+  "rule": "Run all four previously selected non-visible public nodes; require all four active passes with identical buggy/fixed dispositions; do not substitute",
+  "runner_sha256": "58a8f55644da7d248ec1ceae4f45d5476f205024e6b79e897086a040430d51e0",
+  "status": "v2_5_all_four_public_regressions_frozen_before_provider",
+  "trusted_candidate_runner_sha256": "8ed77fab535e09286a4d76269c5b1bd4d33ff5cbe7b8c35cb8cd7b19b333baf9",
+  "validator_source_image_id": "sha256:860be2bb535f67dbc6b0744bc8033d4a5d664a219286cc6b9edf2d442079af79",
+  "verifier_image_id": "sha256:ec1b7be323a3ec150c6437fa357c0bd9fd9dca9c116b267b78a282cbf3203ac7",
+  "visible_test": "tests/test_pysnooper.py::test_file_output"
+}

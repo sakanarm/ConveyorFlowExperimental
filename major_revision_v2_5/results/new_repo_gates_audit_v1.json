@@ -1,0 +1,17 @@
+{
+  "cost_completeness_gap_closed": false,
+  "independent_new_repo_paid_results": 0,
+  "new_source_repository_ready_for_later_paid_extension": "PySnooper",
+  "provider_calls": 0,
+  "pysnooper_fixed_visible_passes": 1,
+  "pysnooper_preflight_record_sha256": "e1f070a2e322bf4f1f1b26b3bf3d0dd68c6fc09249219752485ff45b14b9ee2e",
+  "pysnooper_public_regression_common_passes": 4,
+  "pysnooper_regression_summary_sha256": "2af61b2e78877a9a6fe2201f67ec6c4a5761a05926cf91b99db6e06daaae43e1",
+  "pysnooper_visible_buggy_failures": 1,
+  "ready_case_id": "PySnooper_3",
+  "sanic_candidate_summary_sha256": "ad22ba5fc6c2df64505e761183f6410842e322b6429f06ab305f356261e262e2",
+  "sanic_preflight_record_sha256": "aabad61299079140229817fc7d9954e36233d7fce7d0a88962f46dc6434decb4",
+  "sanic_status": "preflight_passed_candidate_gate_failed_network_isolated_regression_timeout",
+  "statistical_generalization_gap_closed": false,
+  "status": "one_new_repo_candidate_gate_audited"
+}

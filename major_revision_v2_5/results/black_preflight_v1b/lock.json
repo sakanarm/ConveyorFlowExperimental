@@ -1,0 +1,15 @@
+{
+  "config_sha256": "63c979c9d45b7f3056783e0133d72f62c8316ceab3ae02cf722f4e3e50687c14",
+  "created_at_utc": "2026-10-10T18:11:11.452908+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "original_case21_record_sha256": "aea2702bdb01466ab6db78b19c2eb7b53447a371ed2c9776210d21adf5ed83d9",
+  "original_case3_record_sha256": "167a90c5c8f2cb2afac5c8b17b2b2a2e0c462ce26214ba1779ef49936b7238c2",
+  "original_config_sha256": "ad20cf79dc88044384554772c0c263fe33b0e6d866921eef0a87c231452aa8b0",
+  "original_ledger_sha256": "54271383807d9d93ad740e8067be4914e77ccd7360a0b7237afc73f2ea8fd0a7",
+  "original_queue_sha256": "902f9c00fa41384e5dd11ed3b5d65132861c98fa50631dfabdbfdb461a23188e",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "rule": "Add only repository-declared missing package to common profile; replay original queue from zero",
+  "runner_sha256": "419f3955793c1a7a10143da5eed763e593606b763909c607fde14fa5400cee72",
+  "status": "v2_5_black_typing_extensions_amendment_frozen_before_provider"
+}

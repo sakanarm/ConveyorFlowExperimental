@@ -1,0 +1,12 @@
+{
+  "base_config_sha256": "a1f47956e787109c5aada4a6a6568784a9435c4382f12262e930c0116a0be982",
+  "config_sha256": "ad20cf79dc88044384554772c0c263fe33b0e6d866921eef0a87c231452aa8b0",
+  "created_at_utc": "2026-10-10T18:08:11.444869+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "queue_sha256": "902f9c00fa41384e5dd11ed3b5d65132861c98fa50631dfabdbfdb461a23188e",
+  "runner_sha256": "4106e93012926da885a958faebd4c6cf123efcc3349a17fc00f8296498cb1c10",
+  "source_manifest_sha256": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+  "status": "v2_5_black_preflight_frozen_no_provider_calls"
+}

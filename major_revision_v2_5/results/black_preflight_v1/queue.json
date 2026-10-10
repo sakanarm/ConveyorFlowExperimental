@@ -1,0 +1,154 @@
+{
+  "candidates": [
+    {
+      "bug_id": "21",
+      "bug_info_sha256": "78218556f1b16cb721f0357250c0c7792a6d6dceac97c0698deb5190aeba9ac9",
+      "buggy_commit_id": "c071af761e1550c6e4ebab8e5af747d2d8fdd48e",
+      "fixed_commit_id_for_validator_only": "8e7848c63efe36f09e4651bece8c0efc34a1c3e1",
+      "preflight_status": "not_executed",
+      "project": "black",
+      "python_version": "3.8.3",
+      "run_test_sha256": "83a2e1c97e7386790f067243547e582bd284543060de5c7b10045f89c5559b72",
+      "selection_hash": "aa0b235b7bcd9dccb16adfc1b91a181fed079bdd0e39ecc90c0359b1a6695b39",
+      "test_file": "tests/test_black.py"
+    },
+    {
+      "bug_id": "3",
+      "bug_info_sha256": "e76c0dd095d507314b97830c90cb72226aa14e507a0fc90cb58b7c6c3f98f118",
+      "buggy_commit_id": "8126b4f6a9342290de4655e6a8a78cd288ce7daa",
+      "fixed_commit_id_for_validator_only": "7a14a37981862ef418f3cdb4a7e2375856f97529",
+      "preflight_status": "not_executed",
+      "project": "black",
+      "python_version": "3.8.3",
+      "run_test_sha256": "41745e9452aa678f675d1f6c66d963586276803f86ada6a9daffe7a8e5adae90",
+      "selection_hash": "14df1f4c640697a7e475516295ecfb7dd5b8d452b57d787678b1bb134036cbd1",
+      "test_file": "tests/test_black.py"
+    },
+    {
+      "bug_id": "10",
+      "bug_info_sha256": "112e2040c58d759d806b29fd408271a7512c30e687f7c0121627d52561ec677b",
+      "buggy_commit_id": "f6643c4f0cfbae1f2493fdfce46cfbae3d26f46b",
+      "fixed_commit_id_for_validator_only": "66aa676278948368dff251dffd58c850cb8b889e",
+      "preflight_status": "not_executed",
+      "project": "black",
+      "python_version": "3.8.3",
+      "run_test_sha256": "b4e7e20372742ed6618e446423c63bcd87c0a64702542266a474974b48949be9",
+      "selection_hash": "328da5fedcdfd94c00d9c03924e0ddfecfb48d75da1265cdbac182f23c41f65f",
+      "test_file": "tests/test_black.py"
+    },
+    {
+      "bug_id": "17",
+      "bug_info_sha256": "3b69d7489cad3225a610edfd824a66f449555117f73d6b55055480bb0d72eeae",
+      "buggy_commit_id": "bbc09a4f013f2a584f143f3f5e3f76f6082367d4",
+      "fixed_commit_id_for_validator_only": "7fc6ce990669464f5172b63fafa3724f5f308be3",
+      "preflight_status": "not_executed",
+      "project": "black",
+      "python_version": "3.8.3",
+      "run_test_sha256": "09607b3b20887977a50e9f91100df899adea48b682cde6189aa23ccacd9836f2",
+      "selection_hash": "31f34b607b14644b04936f5c7159cb725202e6d6774cf8dad4bb874bfd541ef1",
+      "test_file": "tests/test_black.py"
+    },
+    {
+      "bug_id": "18",
+      "bug_info_sha256": "d2e78ece6615e27a8ab65edc07da09e24cd3daf3dda9a431ed03275a3f79d58b",
+      "buggy_commit_id": "dbe26161fa68632d608a440666a0960a32630902",
+      "fixed_commit_id_for_validator_only": "00a302560b92951c22f0f4c8d618cf63de39bd57",
+      "preflight_status": "not_executed",
+      "project": "black",
+      "python_version": "3.8.3",
+      "run_test_sha256": "abe91eedde7f8730e7c42e311b7f8f2b7ad9b7cd420848a7bbb5c25496b01b9b",
+      "selection_hash": "d9572c7c07909622a2e40475dd297262660a043e9c92dad356a57da1ce38fd1d",
+      "test_file": "tests/test_black.py"
+    },
+    {
+      "bug_id": "2",
+      "bug_info_sha256": "b0df2c14f5a36c5f19bcdc5c2c724aee8bb35d3797097d06f365c1789ee1db95",
+      "buggy_commit_id": "c8ca6b2b9ff3510bee12129824cebfc2fc51e5b2",
+      "fixed_commit_id_for_validator_only": "892eddacd215d685e136686b7f629ade70adca83",
+      "preflight_status": "not_executed",
+      "project": "black",
+      "python_version": "3.8.3",
+      "run_test_sha256": "661c7eff06a036821b9e66a3ef8b7c0e46e6a6e815f65db6427aad3f8f6adcec",
+      "selection_hash": "1456ddc38d80cdac696ed937fdd64c4e32bf55e59337a921960eed82e6292969",
+      "test_file": "tests/test_black.py"
+    },
+    {
+      "bug_id": "14",
+      "bug_info_sha256": "a23cc0a2b6e4ee8f6e089afacfc1756beab9c80bae234d9a7aa04972f0191ceb",
+      "buggy_commit_id": "3bdd42389128bbbe8b64a8e050563f09bff99979",
+      "fixed_commit_id_for_validator_only": "dd8bde6d2fbfe8a7a11093e761a0cb5837efa96a",
+      "preflight_status": "not_executed",
+      "project": "black",
+      "python_version": "3.8.3",
+      "run_test_sha256": "9594895f9c8df922598b68c35013b15ff979992533653d5443e48258689a7b41",
+      "selection_hash": "cd01611674cb7ca08c1ca2881ad7cb78fd3c72ae534d6f9000c5d71b704bac85",
+      "test_file": "tests/test_black.py"
+    },
+    {
+      "bug_id": "20",
+      "bug_info_sha256": "ccfe5a8e3208cec9ea753c6b88142b2a9d2dd2d47c074f18a96acd54b17687a8",
+      "buggy_commit_id": "2e52a2b3ecc0fe025439c3db05a4457ab14f167b",
+      "fixed_commit_id_for_validator_only": "06e95b1e9bcd43c4574840f8174ba4b2c5d281bd",
+      "preflight_status": "not_executed",
+      "project": "black",
+      "python_version": "3.8.3",
+      "run_test_sha256": "89dca792b4dcb3dd888e9c6d2a9c667b760438304b18926caa102afebea6a48e",
+      "selection_hash": "29831aeb33ac7f03ada0dc91f6d19092dce1667bd4319534e92819ae0366750e",
+      "test_file": "tests/test_black.py"
+    }
+  ],
+  "metadata_exclusions": [
+    {
+      "bug_id": "4",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "6",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "7",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "8",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "9",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "11",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "12",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "13",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "15",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "19",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "22",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    },
+    {
+      "bug_id": "23",
+      "reason": "unsupported multi-file or non-unittest public selector"
+    }
+  ],
+  "provider_calls": 0,
+  "rule": "First buggy-fail/fixed-pass in first eight supported cases sorted by salted case hash; retain every failed preflight",
+  "selection_domain": "ConveyorFlow-v2.5-new-project-black-20261011",
+  "status": "metadata_only_not_preflighted"
+}

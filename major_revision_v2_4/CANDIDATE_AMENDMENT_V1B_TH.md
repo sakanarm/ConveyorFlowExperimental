@@ -1,0 +1,11 @@
+# v2.4 candidate instrument amendment v1b — before any provider call
+
+วันที่ 10 ตุลาคม 2026. Candidate gate v1 ที่ตรึงไว้ตรวจครบ 12 เคสแล้ว: ผ่าน 7 เคส; `luigi_8`, `luigi_25`, `fastapi_10`, `fastapi_12`, `fastapi_9` ไม่ผ่าน. **ไม่มีผล LLM ของ v2.4 ให้ใช้เลือกเคสหรือ test**. รายงาน v1, JUnit, image hashes และ lock เดิมคงไว้ไม่แก้ย้อนหลัง
+
+ปัญหาเป็นนิยามเครื่องมือวัด: v1 เลือก public test nodes จาก hash order ก่อนรัน buggy baseline แล้วกำหนดให้ทุก node ต้องผ่านบน buggy source. แต่บาง node ตรวจ defect เดียวกับ visible test จึง fail อยู่ก่อนการซ่อม และไม่ใช่ *regression* ที่มี baseline-pass จริง. Luigi 25 มี eligible nodes ในไฟล์เดียวไม่ถึงเกณฑ์. การนับเคสเหล่านี้เป็น model failure จะผิดหลักวิธีวิจัย
+
+กติกา v1b ใช้กับทุกเคสโดยไม่ดูผล model: (1) ประกาศไฟล์ public regression ก่อน, (2) collect nodeids, ตัด visible node และ image-comparison functions, (3) เรียง nodeids ด้วย hash rule เดิม, (4) รันทดสอบบน buggy candidate image แบบ networkless และบันทึก pass/fail ของแต่ละ node, (5) ตรึง 10 nodeids แรกที่ **ผ่าน buggy baseline** เป็น regression set; ต้องได้อย่างน้อย 5, (6) ตรวจชุดที่ตรึงนี้ซ้ำบน buggy และ fixed images และกำหนดให้ dispositions ตรงกันและผ่านทั้งหมด. Node ที่ fail บน buggy ไม่ถูกแอบนับเป็น regression หรือ hidden test; รายชื่อและสถานะเก็บไว้ใน preselection ledger. โมเดลจะเห็นเพียง visible test/context และต้องผ่าน visible bug test + ชุด regression ที่ตรึงไว้ ทั้งครั้งแรกและ fresh replay
+
+`luigi_8` และ `luigi_25` ขยายเฉพาะ **ไฟล์ public regression** ด้วย `test/central_planner_test.py` และ `test/parameter_test.py` ซึ่งผ่าน collection gate ใน buggy image; source files ที่ให้โมเดลแก้, symbols และ visible bug test ไม่เปลี่ยน. เคสอื่นทุกเคสใช้ scope เดิม. ชุด core tests เป็น project-level smoke regression ไม่ใช่การรับประกันว่าทุกพฤติกรรม Redshift ถูกซ่อม ข้อจำกัดนี้ต้องเปิดเผยใน paper
+
+v1b ต้องมี preselection manifest/lock ใหม่, candidate image/validator lock ใหม่, context identity gate และ execution lock ใหม่ โดยอ้าง hash ของ v1 failures. ห้ามเริ่ม provider call หากเคสใดมี baseline-pass regression ต่ำกว่า 5, fixed-version test ไม่ผ่าน, source leakage, context identity ไม่ผ่าน หรือมี provider/model drift. Amendment นี้เป็นการแก้ measurement instrument หลังเห็น **เฉพาะ no-LLM preflight** จึงไม่ใช่ preregistration แท้ของทั้งโครงการและต้องรายงานตามจริง

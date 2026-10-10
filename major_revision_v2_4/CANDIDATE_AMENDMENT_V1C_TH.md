@@ -1,0 +1,5 @@
+# v2.4 public test path correction v1c, before provider calls
+
+Preselection v1b หยุดที่ `luigi_8` **ก่อนสร้าง selection.json หรือเรียก LLM** เพราะ `test/central_planner_test.py` ไม่มีใน buggy source ของ Luigi เวอร์ชันนั้น. เก็บ `results/regression_preselection_v1b` และ lock เดิมไว้เป็นหลักฐาน ไม่ลบ/รันซ้ำ. การตรวจไฟล์และ `pytest --collect-only` แบบ read-only จาก buggy images พบว่า `test/scheduler_test.py` และ `test/parameter_test.py` มีและ collect ได้ทั้ง `luigi_8` และ `luigi_25`. ฉบับ v1c เปลี่ยนเพียง public regression path `central_planner_test.py` เป็น `scheduler_test.py` ในสองเคสนี้; allowed production files, visible test, API symbols, รุ่นโมเดล, allocation arms และ rule ที่เลือก baseline-pass tests ไม่เปลี่ยน. ไม่ใช้ fixed production source หรือผลของ LLM ในการแก้ path นี้
+
+ก่อนเรียก provider ต้องตรึง manifest v1c ใหม่ครบ 12 เคส แล้วให้ candidate/verifier, context identity และ execution lock ใหม่ตรวจ hash ทั้งหมด. หาก path หรือ regression gate ยังไม่ผ่าน หยุดต่อและบันทึก amendment เพิ่ม ห้ามนับเป็น model failure

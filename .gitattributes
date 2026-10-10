@@ -1,5 +1,6 @@
 # Experimental locks hash exact bytes; disable platform newline conversion.
 major_revision_v2_3/** -text
+major_revision_v2_4/** -text
 ConveyorFlow_diagrams_en_working.drawio -text
 REPRODUCE_V2_3.ps1 -text
 REPRODUCIBILITY_V2_3.md -text

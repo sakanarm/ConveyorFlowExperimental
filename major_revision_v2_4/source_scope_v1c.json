@@ -1,0 +1,62 @@
+{
+  "luigi_8": {
+    "allowed_files": ["luigi/contrib/redshift.py"],
+    "regression_files": ["test/contrib/redshift_test.py", "test/scheduler_test.py", "test/parameter_test.py"],
+    "symbols": ["S3CopyToTable", "does_table_exist", "run"]
+  },
+  "luigi_25": {
+    "allowed_files": ["luigi/contrib/redshift.py"],
+    "regression_files": ["test/contrib/redshift_test.py", "test/scheduler_test.py", "test/parameter_test.py"],
+    "symbols": ["S3CopyToTable", "s3_load_path", "run"]
+  },
+  "luigi_14": {
+    "allowed_files": ["luigi/scheduler.py"],
+    "regression_files": ["test/central_planner_test.py"],
+    "symbols": ["has_excessive_failures", "set_status", "add_task", "Task"]
+  },
+  "matplotlib_29": {
+    "allowed_files": ["lib/matplotlib/axis.py", "lib/matplotlib/axes/_base.py"],
+    "regression_files": ["lib/matplotlib/tests/test_axes.py"],
+    "symbols": ["set_inverted", "cla", "clear", "sharey", "set_ylim"]
+  },
+  "matplotlib_24": {
+    "allowed_files": ["lib/matplotlib/axis.py", "lib/matplotlib/axes/_base.py"],
+    "regression_files": ["lib/matplotlib/tests/test_axes.py"],
+    "symbols": ["set_ticks", "set_xticks", "set_xlim", "_set_lim"]
+  },
+  "matplotlib_19": {
+    "allowed_files": ["lib/matplotlib/projections/polar.py", "lib/matplotlib/pyplot.py", "lib/matplotlib/axes/_base.py"],
+    "regression_files": ["lib/matplotlib/tests/test_axes.py"],
+    "symbols": ["polar", "PolarAxes", "autoscale_view", "get_rmin"]
+  },
+  "pandas_121": {
+    "allowed_files": ["pandas/core/generic.py", "pandas/core/frame.py", "pandas/core/internals/blocks.py"],
+    "regression_files": ["pandas/tests/frame/test_replace.py"],
+    "symbols": ["replace", "_replace_single", "replace_list", "DataFrame"]
+  },
+  "pandas_1": {
+    "allowed_files": ["pandas/core/dtypes/common.py", "pandas/core/dtypes/dtypes.py"],
+    "regression_files": ["pandas/tests/dtypes/test_dtypes.py"],
+    "symbols": ["is_string_dtype", "CategoricalDtype", "kind"]
+  },
+  "pandas_80": {
+    "allowed_files": ["pandas/core/series.py", "pandas/core/arrays/sparse/array.py"],
+    "regression_files": ["pandas/tests/arrays/sparse/test_arithmetics.py"],
+    "symbols": ["__invert__", "SparseArray", "_unary_method"]
+  },
+  "fastapi_10": {
+    "allowed_files": ["fastapi/encoders.py", "fastapi/routing.py"],
+    "regression_files": ["tests/test_skip_defaults.py", "tests/test_jsonable_encoder.py", "tests/test_serialize_response.py"],
+    "symbols": ["jsonable_encoder", "serialize_response", "get_request_handler"]
+  },
+  "fastapi_12": {
+    "allowed_files": ["fastapi/security/http.py", "fastapi/dependencies/utils.py"],
+    "regression_files": ["tests/test_security_http_bearer_optional.py", "tests/test_security_http_bearer.py", "tests/test_security_http_basic_optional.py"],
+    "symbols": ["HTTPBearer", "HTTPBase", "__call__"]
+  },
+  "fastapi_9": {
+    "allowed_files": ["fastapi/openapi/utils.py", "fastapi/dependencies/utils.py", "fastapi/routing.py"],
+    "regression_files": ["tests/test_request_body_parameters_media_type.py", "tests/test_union_body.py", "tests/test_multi_body_errors.py"],
+    "symbols": ["get_openapi_path", "get_body_field", "media_type", "requestBody"]
+  }
+}

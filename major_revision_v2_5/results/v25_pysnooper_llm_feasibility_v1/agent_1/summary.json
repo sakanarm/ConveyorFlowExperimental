@@ -1,0 +1,50 @@
+{
+  "input_tokens": 968,
+  "model_id": "tencent-hy3",
+  "output_tokens": 14157,
+  "patch_sha256": "71146fda73a23b790f3cc310da11f120a9953df5e65767c370d2d8f95f2c0e87",
+  "provider_request_id": "c14078e6-223a-48cc-9bb6-7b0a91dde5f5",
+  "regression": {
+    "dispositions": {
+      "tests.test_pysnooper::test_depth": "passed",
+      "tests.test_pysnooper::test_method_and_prefix": "passed",
+      "tests.test_pysnooper::test_string_io": "passed",
+      "tests.test_pysnooper::test_variables": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "02bc46f88cc6ff0e7d974f1433893a6e25578cd3380aba00addb59e115bcddb3"
+  },
+  "replay_regression": {
+    "dispositions": {
+      "tests.test_pysnooper::test_depth": "passed",
+      "tests.test_pysnooper::test_method_and_prefix": "passed",
+      "tests.test_pysnooper::test_string_io": "passed",
+      "tests.test_pysnooper::test_variables": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "8f7ec0fa6ce68b2a135ac464894c45946f51f447b6c0344cf103e2ca2fb4eee6"
+  },
+  "replay_visible": {
+    "dispositions": {
+      "tests.test_pysnooper::test_file_output": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "07f3a1cc71a6ecc700de52d9b74829621ca3f3f8c1f74bd8d28f8ce992fc0109"
+  },
+  "response_cost": 0.007602671999999999,
+  "response_sha256": "f74dea91823f2825a7316472ca67003de09ab388dd29bf51d5a818a7211140b2",
+  "returned_model_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+  "slot": "agent_1",
+  "status": "VERIFIED",
+  "visible": {
+    "dispositions": {
+      "tests.test_pysnooper::test_file_output": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "99baaadca9d7fb5c059cf4399c4995987ab95e68b085398484d794909e07739a"
+  }
+}

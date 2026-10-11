@@ -1,0 +1,50 @@
+{
+  "input_tokens": 957,
+  "model_id": "gpt-5-mini",
+  "output_tokens": 125,
+  "patch_sha256": "891a9005420029dac67963af314d366cb810b9e6c046b5b8575c22b29b46cf0d",
+  "provider_request_id": "chatcmpl-EXgpkRHPnKsFowGsViL6zttzjAzct",
+  "regression": {
+    "dispositions": {
+      "tests.test_pysnooper::test_depth": "passed",
+      "tests.test_pysnooper::test_method_and_prefix": "passed",
+      "tests.test_pysnooper::test_string_io": "passed",
+      "tests.test_pysnooper::test_variables": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "d6b6173122773cf0c48090959642b238e40af2c4b5a6b29caf01fdac33dcccb9"
+  },
+  "replay_regression": {
+    "dispositions": {
+      "tests.test_pysnooper::test_depth": "passed",
+      "tests.test_pysnooper::test_method_and_prefix": "passed",
+      "tests.test_pysnooper::test_string_io": "passed",
+      "tests.test_pysnooper::test_variables": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "6d943d99000a2dfd21d4fb9243b58b0894ef3dd6859005ee08447d41dfe724d7"
+  },
+  "replay_visible": {
+    "dispositions": {
+      "tests.test_pysnooper::test_file_output": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "d71d03654a4bc485e0852b1f30989ff3995f603b9759a3f9cca0a4c061a26762"
+  },
+  "response_cost": 0.0012802500000000001,
+  "response_sha256": "9ced6a9b0fc9cbccf3a4be176ce7bed4554ef6cfdbb1e182676939a1a47e7de3",
+  "returned_model_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+  "slot": "agent_2",
+  "status": "VERIFIED",
+  "visible": {
+    "dispositions": {
+      "tests.test_pysnooper::test_file_output": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "a3cbaefe20d1fdcf9c16b04de5cd5bdbf5b9cb2388002a47358d84225b9c81c3"
+  }
+}

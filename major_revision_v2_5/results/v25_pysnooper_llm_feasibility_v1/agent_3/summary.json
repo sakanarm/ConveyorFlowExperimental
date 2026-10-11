@@ -1,0 +1,50 @@
+{
+  "input_tokens": 952,
+  "model_id": "glm-5.3-flash",
+  "output_tokens": 99,
+  "patch_sha256": "71146fda73a23b790f3cc310da11f120a9953df5e65767c370d2d8f95f2c0e87",
+  "provider_request_id": "47f7c357-c9c4-4223-bbf2-7873a985e886",
+  "regression": {
+    "dispositions": {
+      "tests.test_pysnooper::test_depth": "passed",
+      "tests.test_pysnooper::test_method_and_prefix": "passed",
+      "tests.test_pysnooper::test_string_io": "passed",
+      "tests.test_pysnooper::test_variables": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "a0b5b7a5c89b81eb9a42930af9eda0328ba6307eb6a15eea15966c9a2d695096"
+  },
+  "replay_regression": {
+    "dispositions": {
+      "tests.test_pysnooper::test_depth": "passed",
+      "tests.test_pysnooper::test_method_and_prefix": "passed",
+      "tests.test_pysnooper::test_string_io": "passed",
+      "tests.test_pysnooper::test_variables": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "3889afda1ae0cd51f92758f26fdb9bfb274c3a5343986ac0901f0f47f55b9f4d"
+  },
+  "replay_visible": {
+    "dispositions": {
+      "tests.test_pysnooper::test_file_output": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "575e633ee9bdbf58d22d37f1e130f6b28c532ff7e38f810d1090f888fe57372d"
+  },
+  "response_cost": 0.0001923,
+  "response_sha256": "f74dea91823f2825a7316472ca67003de09ab388dd29bf51d5a818a7211140b2",
+  "returned_model_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+  "slot": "agent_3",
+  "status": "VERIFIED",
+  "visible": {
+    "dispositions": {
+      "tests.test_pysnooper::test_file_output": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "5c6f556401e5d7d12e4fc3f1d7b773edd3a3f63c6250f62081efb910037b7075"
+  }
+}

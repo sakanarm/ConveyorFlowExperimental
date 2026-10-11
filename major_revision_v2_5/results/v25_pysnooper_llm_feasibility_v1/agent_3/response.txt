@@ -1,0 +1,1 @@
+{"edits":[{"path":"pysnooper/pysnooper.py","before":"            with open(output_path, 'a') as output_file:","after":"            with open(output, 'a') as output_file:"}]}

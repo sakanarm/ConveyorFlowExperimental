@@ -1,0 +1,11 @@
+diff --git a/pysnooper/pysnooper.py b/pysnooper/pysnooper.py
+--- a/pysnooper/pysnooper.py
++++ b/pysnooper/pysnooper.py
+@@ -22,6 +22,7 @@
+             stderr = sys.stderr
+             stderr.write(s)
+     elif isinstance(output, (pycompat.PathLike, str)):
++        output_path = output
+         def write(s):
+             with open(output_path, 'a') as output_file:
+                 output_file.write(s)

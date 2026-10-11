@@ -1,0 +1,171 @@
+{
+  "corpora": {
+    "bank": {
+      "class_counts": {
+        "test": {
+          "0": 4114,
+          "1": 2668
+        },
+        "train": {
+          "0": 29807,
+          "1": 1840
+        },
+        "validation": {
+          "0": 6001,
+          "1": 781
+        }
+      },
+      "client_group_split_verified": false,
+      "exact_feature_duplicate_cross_split_rows": {},
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "balance",
+        "housing",
+        "loan",
+        "contact",
+        "day",
+        "month",
+        "campaign",
+        "pdays",
+        "previous",
+        "poutcome"
+      ],
+      "interpretation_note": "No client identifier or exact contact timestamp; temporal order is source row order and client-level independence cannot be established.",
+      "paths": {
+        "test_features": "public/bank/test_features.csv",
+        "test_labels": "hidden/bank/test_labels.csv",
+        "train": "public/bank/train.csv",
+        "validation": "public/bank/validation.csv"
+      },
+      "rows": {
+        "test": 6782,
+        "train": 31647,
+        "validation": 6782
+      },
+      "sha256": {
+        "test_features": "489a902a207b701255f2e3827972b8f967d611b4e9d5d03f269b13172118ba1b",
+        "test_labels": "1b843e8b2c5078b6449dbe72a420a0dce6e042cb697eef9fa898680aff2e7b85",
+        "train": "3321957a8af3c4d1eb200f5a9e2b234ce8b02a3f479ce6fa133166e7d14b0d6d",
+        "validation": "2fb30fda783f2bd6f2d1db61a8ea4554b50a6087ed1349d02c3b69ccfa57468b"
+      },
+      "split_rule": "Source bank-full.csv order (UCI says ordered by date); first 70%, next 15%, last 15%; no shuffle; drop post-call duration before writing any public input"
+    },
+    "covertype": {
+      "class_counts": {
+        "test": {
+          "1": 31794,
+          "2": 42549,
+          "3": 5433,
+          "4": 396,
+          "5": 1406,
+          "6": 2675,
+          "7": 3003
+        },
+        "train": {
+          "1": 148324,
+          "2": 198502,
+          "3": 25032,
+          "4": 1964,
+          "5": 6679,
+          "6": 12110,
+          "7": 14447
+        },
+        "validation": {
+          "1": 31722,
+          "2": 42250,
+          "3": 5289,
+          "4": 387,
+          "5": 1408,
+          "6": 2582,
+          "7": 3060
+        }
+      },
+      "features": [
+        "Elevation",
+        "Aspect",
+        "Slope",
+        "Horizontal_Distance_To_Hydrology",
+        "Vertical_Distance_To_Hydrology",
+        "Horizontal_Distance_To_Roadways",
+        "Hillshade_9am",
+        "Hillshade_Noon",
+        "Hillshade_3pm",
+        "Horizontal_Distance_To_Fire_Points",
+        "Wilderness_Area_1",
+        "Wilderness_Area_2",
+        "Wilderness_Area_3",
+        "Wilderness_Area_4",
+        "Soil_Type_1",
+        "Soil_Type_2",
+        "Soil_Type_3",
+        "Soil_Type_4",
+        "Soil_Type_5",
+        "Soil_Type_6",
+        "Soil_Type_7",
+        "Soil_Type_8",
+        "Soil_Type_9",
+        "Soil_Type_10",
+        "Soil_Type_11",
+        "Soil_Type_12",
+        "Soil_Type_13",
+        "Soil_Type_14",
+        "Soil_Type_15",
+        "Soil_Type_16",
+        "Soil_Type_17",
+        "Soil_Type_18",
+        "Soil_Type_19",
+        "Soil_Type_20",
+        "Soil_Type_21",
+        "Soil_Type_22",
+        "Soil_Type_23",
+        "Soil_Type_24",
+        "Soil_Type_25",
+        "Soil_Type_26",
+        "Soil_Type_27",
+        "Soil_Type_28",
+        "Soil_Type_29",
+        "Soil_Type_30",
+        "Soil_Type_31",
+        "Soil_Type_32",
+        "Soil_Type_33",
+        "Soil_Type_34",
+        "Soil_Type_35",
+        "Soil_Type_36",
+        "Soil_Type_37",
+        "Soil_Type_38",
+        "Soil_Type_39",
+        "Soil_Type_40"
+      ],
+      "paths": {
+        "test_features": "public/covertype/test_features.csv",
+        "test_labels": "hidden/covertype/test_labels.csv",
+        "train": "public/covertype/train.csv",
+        "validation": "public/covertype/validation.csv"
+      },
+      "rows": {
+        "test": 87256,
+        "train": 407058,
+        "validation": 86698
+      },
+      "sha256": {
+        "test_features": "d7ceb8b4cbc8abfc7e12048d79d26c3735d26c1c309957c04f736186039115c2",
+        "test_labels": "8acd770fe49f5209f4611df980e1ba4a7d0ee0852012bf37836bc6caf0b0cbcd",
+        "train": "68b5f007257dec3fa6ddd845361c0f3813986c823d7253f2e6354c92b913b692",
+        "validation": "b09de9d82866c45ad89fbe3d16df16c55ce260822c795ae88e14b4c49989ff55"
+      },
+      "split_rule": "Deterministic 70/15/15 blake2b grouping on all 54 features (not label); exact feature-identical rows cannot cross splits"
+    }
+  },
+  "created_at_utc": "2026-10-11T03:01:30.339907+00:00",
+  "note": "Reference quality gates and live-LLM case integration must be frozen and audited separately.",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "runner_sha256": "dbfac1823a02510227d0b2f0dfa3618ce51aae86bc050e518df7bdb8dedbab41",
+  "source_manifest_sha256": "8af44db7965f2e981329bc42347cb4f7995bbe73b5938fe10b1d924c16c04ab3",
+  "split_seed": "ConveyorFlow-v2.5-ml-split-20261011",
+  "status": "splits_prepared_not_verifier_qualified"
+}

@@ -11,3 +11,6 @@ results/pysnooper_regression_v1c/buggy_regression.json
 results/pysnooper_regression_v1c/fixed_regression.json
 results/black_preflight_v1/[0-9][0-9]_black_*/
 results/black_preflight_v1b/[0-9][0-9]_black_*/
+new_ml_corpora_v1/raw/
+new_ml_corpora_v1/public/
+new_ml_corpora_v1/hidden/

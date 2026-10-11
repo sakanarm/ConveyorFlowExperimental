@@ -19,12 +19,13 @@ PREVIOUS_LLM_PROJECTS = {
 }
 
 
-def sha(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-
-
 def inventory():
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    # Semantic digest: the older manifest is checked out as CRLF on Windows
+    # but LF on Linux, so raw-byte SHA would make this inventory nonportable.
+    manifest_digest = hashlib.sha256(json.dumps(
+        manifest, sort_keys=True, separators=(",", ":"),
+        ensure_ascii=False).encode("utf-8")).hexdigest()
     groups = defaultdict(list)
     for case in manifest["candidates"]:
         groups[case["project"]].append(case)
@@ -45,7 +46,7 @@ def inventory():
         raise ValueError("BugsInPy source frame no longer has 17 projects")
     return {
         "status": "metadata_inventory_not_a_frozen_main_cohort",
-        "source_manifest_sha256": sha(MANIFEST),
+        "source_manifest_canonical_sha256": manifest_digest,
         "selection_domain": DOMAIN,
         "target_distinct_qualified_projects": 12,
         "cases_per_qualified_project": 2,

@@ -177,7 +177,7 @@
     }
   ],
   "selection_domain": "ConveyorFlow-v2.6-project-frame-20261011",
-  "source_manifest_sha256": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+  "source_manifest_canonical_sha256": "4fc983e834b5f25d348b8ec3989727fed0857901dfbcd6fcaeca45118cae72fc",
   "status": "metadata_inventory_not_a_frozen_main_cohort",
   "target_distinct_qualified_projects": 12
 }

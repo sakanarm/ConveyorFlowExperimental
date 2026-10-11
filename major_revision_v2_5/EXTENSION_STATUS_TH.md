@@ -34,3 +34,11 @@ PySnooper มีบันทึก instrument amendments ทุกฉบับ: 
 4. ต้องมี provider billing export หรือประกาศ cost missingness เป็นข้อจำกัดก่อนเริ่ม, พร้อม stopping rule ที่ไม่เพิ่ม calls ตามทิศทางผล.
 
 จากนั้นจึงยิง real LLM เพิ่มและปรับ manuscript IEEE/AJSTR ตามผลที่ audit จริง. **ยังไม่ควรเปลี่ยนข้อความใน paper เป็น “ปิด Major Revision gap แล้ว”** จาก feasibility รอบนี้.
+
+## 5. Real-LLM exploratory feasibility (11 ตุลาคม 2026)
+
+หลังจากพบว่า MFEC gateway ตอบจริง (`mfec_gateway_probe_v1.json`; ไม่นับเป็นข้อมูลวิจัย) ได้ freeze prompt จาก buggy source และ visible test ของ PySnooper bug 3 ซึ่งผ่าน pre-provider gate แล้ว ก่อนเรียก LLM จริง 3 deployment ด้วยกติกา exact-edits เดียวกัน โมเดลเห็นเพียง buggy source และ visible public test; fixed source อยู่ใน validator เท่านั้น ไม่อยู่ใน prompt หรือ candidate image. งานแต่ละ model–case pair เรียกหนึ่งครั้ง ไม่มี retry และ patch ทดสอบใน Podman แบบ `--network none` กับ visible test, public regressions 4 ตัว และ clean replay ทั้งสองชุด
+
+Audit อิสระจาก response, canonical patch, JUnit XML และ frozen hashes ผ่าน: `tencent-hy3`, `gpt-5-mini`, `glm-5.3-flash` ได้ **VERIFIED 3/3 model–case pairs** บน **repository อิสระเพียง 1 แห่ง** ใช้ input/output tokens ตามลำดับ 968/14,157; 957/125; 952/99. Gateway ส่ง response-cost header ครบทั้งสาม (0.007602672, 0.00128025, 0.0001923 ในหน่วยที่ gateway รายงาน) แต่ **ยังไม่ยืนยันสกุลเงินหรือเทียบเป็นเงินที่เรียกเก็บจริง**. ดูเครื่องมือ [`run_pysnooper_llm_feasibility_v1.py`](run_pysnooper_llm_feasibility_v1.py), [`audit_pysnooper_llm_feasibility_v1.py`](audit_pysnooper_llm_feasibility_v1.py) และ [`audit JSON`](results/pysnooper_llm_feasibility_audit_v1.json). Raw prompts/responses/patches และ JUnit อยู่ใน `results/v25_pysnooper_llm_feasibility_v1/` บนเครื่องและไม่ขึ้น Git เพราะอาจใหญ่/ขึ้นกับ local image; Git เก็บตัวรัน, frozen lock และ audit summary.
+
+นี่พิสูจน์ได้เพียงว่า **interface และ verifier ใช้งานกับ repository ใหม่ได้จริง** ไม่ใช่ 3 repositories, ไม่ใช่ผล CF-Fit เทียบ Central-Fit, ไม่ใช่หลักฐานสถิติของความทั่วไป และยัง **ไม่ปิด Major Revision**. Gate ข้อ 1–4 ด้านบนยังใช้กับ *paired allocation main extension*; รอบ exploratory นี้ถูกระบุแยกไว้ตั้งแต่ก่อน calls และห้ามนำไป pool กับ v2.4 main.

@@ -1,0 +1,15 @@
+{
+  "created_at_utc": "2026-10-11T05:52:03.715272+00:00",
+  "finish_reason": "stop",
+  "input_tokens": 45,
+  "latency_seconds": 1.3671054000005824,
+  "model_id": "gpt-5-mini",
+  "output_tokens": 8,
+  "paired_block": false,
+  "provider_request_id": "chatcmpl-EXglVpxtwJfsG55pqPCtKjh23wmZW",
+  "reported_response_cost": 6.975e-05,
+  "research_results": false,
+  "response_content_sha256": "032edb511d01fa17f3a421d032cb5f9e7156be09f672e0969e06de484a361009",
+  "returned_model_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+  "status": "gateway_probe_passed"
+}

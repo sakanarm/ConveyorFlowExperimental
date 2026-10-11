@@ -1,0 +1,34 @@
+{
+  "independent_repository_sources": 1,
+  "paired_allocation_results": false,
+  "pairs": [
+    {
+      "input_tokens": 968,
+      "model_id": "tencent-hy3",
+      "output_tokens": 14157,
+      "reported_response_cost_units": 0.007602671999999999,
+      "slot": "agent_1",
+      "status": "VERIFIED"
+    },
+    {
+      "input_tokens": 957,
+      "model_id": "gpt-5-mini",
+      "output_tokens": 125,
+      "reported_response_cost_units": 0.0012802500000000001,
+      "slot": "agent_2",
+      "status": "VERIFIED"
+    },
+    {
+      "input_tokens": 952,
+      "model_id": "glm-5.3-flash",
+      "output_tokens": 99,
+      "reported_response_cost_units": 0.0001923,
+      "slot": "agent_3",
+      "status": "VERIFIED"
+    }
+  ],
+  "provider_calls": 3,
+  "provider_cost_currency_unverified": true,
+  "status": "audit_passed",
+  "verified_model_case_pairs": 3
+}

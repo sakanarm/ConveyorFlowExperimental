@@ -1,0 +1,111 @@
+{
+  "active_regression_passes": 10,
+  "candidate_audit": {
+    "allowed_source_sha256": {
+      "youtube_dl/utils.py": "ad96dcee56a993032c65893a827a5518fc8ebad2e646f960a195332f1e3b8bac"
+    },
+    "blocked_paths": [],
+    "missing_forbidden_roots": [],
+    "source_files": 614
+  },
+  "case_id": "youtube-dl_27",
+  "images": {
+    "candidate": "sha256:cc771a90f4f1d97c27315b87225d0cbd186f6c78641c1791ecff48232499bdb7",
+    "verifier": "sha256:864dfc95cf379775d788bb593d69799ad8dd9965f847b2799a5a833660119be2"
+  },
+  "provider_calls": 0,
+  "reason": null,
+  "reports": {
+    "buggy_regressions": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 10
+      },
+      "dispositions": {
+        "test.test_utils.TestUtil::test_cli_valueless_option": "passed",
+        "test.test_utils.TestUtil::test_daterange": "passed",
+        "test.test_utils.TestUtil::test_determine_ext": "passed",
+        "test.test_utils.TestUtil::test_find_xpath_attr": "passed",
+        "test.test_utils.TestUtil::test_match_str": "passed",
+        "test.test_utils.TestUtil::test_render_table": "passed",
+        "test.test_utils.TestUtil::test_sanitize_ids": "passed",
+        "test.test_utils.TestUtil::test_sanitize_path": "passed",
+        "test.test_utils.TestUtil::test_version_tuple": "passed",
+        "test.test_utils.TestUtil::test_xpath_element": "passed"
+      },
+      "execution_sha256": "731498229920356041dab7b93de55d5a9d26217062e20702c12924794bd6eeae",
+      "return_code": 0,
+      "timeout": false,
+      "xml_sha256": "1b8146ebcf252eacc73295ce9f65adced90d480443d3d9c5930a95a6362f3832"
+    },
+    "fixed_regressions": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 10
+      },
+      "dispositions": {
+        "test.test_utils.TestUtil::test_cli_valueless_option": "passed",
+        "test.test_utils.TestUtil::test_daterange": "passed",
+        "test.test_utils.TestUtil::test_determine_ext": "passed",
+        "test.test_utils.TestUtil::test_find_xpath_attr": "passed",
+        "test.test_utils.TestUtil::test_match_str": "passed",
+        "test.test_utils.TestUtil::test_render_table": "passed",
+        "test.test_utils.TestUtil::test_sanitize_ids": "passed",
+        "test.test_utils.TestUtil::test_sanitize_path": "passed",
+        "test.test_utils.TestUtil::test_version_tuple": "passed",
+        "test.test_utils.TestUtil::test_xpath_element": "passed"
+      },
+      "execution_sha256": "31e6efc2c1925121c5ab7c9d59eb9310d78f305dbdeab9f13f487c1fa3b73395",
+      "return_code": 0,
+      "timeout": false,
+      "xml_sha256": "5ddfcdbd223d056e4ef117554ff7403cc27723fa21996b81d86dc5665fe27d66"
+    },
+    "visible_buggy": {
+      "counts": {
+        "errors": 0,
+        "failures": 1,
+        "skipped": 0,
+        "tests": 1
+      },
+      "dispositions": {
+        "test.test_utils.TestUtil::test_parse_dfxp_time_expr": "failed"
+      },
+      "execution_sha256": "79253bb439d3845dd672629c40f20c251f493d62c1b339b74214a4ae9324bc66",
+      "return_code": 1,
+      "timeout": false,
+      "xml_sha256": "95cc54912cb9bd4404262f02e3b0eea2bcae381d7f72885fb293f658468cc4d3"
+    },
+    "visible_fixed": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "dispositions": {
+        "test.test_utils.TestUtil::test_parse_dfxp_time_expr": "passed"
+      },
+      "execution_sha256": "c4e0079803681e4d5df849d237c6c0f6b1810a8ee1270d64297885ad2da66968",
+      "return_code": 0,
+      "timeout": false,
+      "xml_sha256": "3d32ece658c5135c7750ef2fc4f0d6f6f89cadde9ef7ab6efbab79e2517b87f8"
+    }
+  },
+  "selected_regression_nodes": [
+    "test/test_utils.py::TestUtil::test_render_table",
+    "test/test_utils.py::TestUtil::test_version_tuple",
+    "test/test_utils.py::TestUtil::test_match_str",
+    "test/test_utils.py::TestUtil::test_determine_ext",
+    "test/test_utils.py::TestUtil::test_find_xpath_attr",
+    "test/test_utils.py::TestUtil::test_daterange",
+    "test/test_utils.py::TestUtil::test_xpath_element",
+    "test/test_utils.py::TestUtil::test_sanitize_ids",
+    "test/test_utils.py::TestUtil::test_cli_valueless_option",
+    "test/test_utils.py::TestUtil::test_sanitize_path"
+  ],
+  "status": "candidate_preflight_passed"
+}

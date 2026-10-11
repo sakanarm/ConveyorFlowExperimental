@@ -1,0 +1,1 @@
+{"bug_id": "27", "provider_calls": 0, "queue_index": 0, "reason": null, "record_sha256": "abcc89faa337762bbc5bf54d61d64f39fe65ee738a2dbea3be4ca2919ad6fbe1", "selection_hash": "d49031462fa3924403d81e6352f81f969dd748d026aa14caeafbde6e4160df1f", "status": "reproducible"}

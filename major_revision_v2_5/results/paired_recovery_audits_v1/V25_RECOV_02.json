@@ -1,0 +1,160 @@
+{
+  "arms": {
+    "CENTRAL_RULE_MATCHED": {
+      "attempts": [
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "141af810298a34ac6ecee7e88a7ff67714ad62e33d2d94a1160da1656099046d",
+          "request_sha256": "b483eaf3215f54a1149f10a9c8ca3004333241af7f4355009dc5cbfcc9e9912f",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "cd20b54997a04aad6f5c759c340abb2c423e53a2f553d17f32e3059dbd2cc69c",
+          "task_id": "V25_COVERTYPE_01:ingest"
+        },
+        {
+          "agent_id": "A2",
+          "cost_unknown": false,
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "3837aa6ed811895028937bc3a827ebe575ceb97c4c0966966b49a65d5cb269a4",
+          "request_sha256": "fe3ec86ca8126299b26ae4240149d6077aeb80791605db5d22dcfe51ff368881",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "02d8d685b4e2a3d784fb28ea1979e7ad0a2b83d3eeea0b66a381fd0b34bf13d5",
+          "task_id": "PySnooper_3:repair"
+        },
+        {
+          "agent_id": "A2",
+          "cost_unknown": false,
+          "model_slot": "agent_2",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "64457480d4ba3014a7fb818790dde98f669988cc67d35b68a5b685b0710bca41",
+          "request_sha256": "1a74b4cd87f8c4a62944c0161a2595dcaef0e3813cfb92bb2bf0704c591b3b1a",
+          "stage_status": "STAGE_CONTRACT_FAILED",
+          "summary_sha256": "47a7dbea5e23e8a8d6680d521027c69f56bf9074d3ce6dcfdf348059e4352fc5",
+          "task_id": "V25_COVERTYPE_01:preprocess"
+        }
+      ],
+      "claims_sha256": "af651f81bbaef9f4325d530beaddc1e4b0fce2d93099984068c313bcb3a1abac",
+      "cost_per_verified_job": "derive_from_ledger",
+      "jobs": {
+        "PySnooper_3": "VERIFIED",
+        "V25_COVERTYPE_01": "DEAD_LETTER"
+      },
+      "ledger_sha256": "01e01ce1a07d0d16decc80201a9d79a797df5068fb374e134e4834145e4a788e",
+      "summary_sha256": "75793fb13c11cdecb32fcaf9665412641c4ea20025aa11efde2596798b0b919d"
+    },
+    "CF_FIT": {
+      "attempts": [
+        {
+          "agent_id": "A3",
+          "cost_unknown": false,
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "8857799ab3a863d4978881e295af92404f664e51b7517ea2cf5e731cb96f7b15",
+          "request_sha256": "d750032adc0189b8febb51b6fe95a5ebe5462440025cef6d2a0876e369132451",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "0499d857a00c221f8de764fa1f94dc023a62e9843052cc5ecd971eff3a911cef",
+          "task_id": "V25_COVERTYPE_01:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "cd44098ac68e6a67634df8d5e92d051267f2f4e9b28f3b005be499419f1581ee",
+          "request_sha256": "a0253a66524306fb8bff34f5afe0e276f3907455ac206f5d0cf6e554c23d5d55",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "a7c40cbdb7cd6bf7eb0003778682308fbd414d582203067605a74270e17842cf",
+          "task_id": "PySnooper_3:repair"
+        },
+        {
+          "agent_id": "A2",
+          "cost_unknown": false,
+          "model_slot": "agent_2",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "a3ae4c1a62c32d02fd64585df2aabc73ab38b02810490c403be289c50155b11a",
+          "request_sha256": "e52b178c0b9bd3ecda2308e4c6413db3b4cf8215fb9c4b6d5fb72ccd5b67ec54",
+          "stage_status": "STAGE_CONTRACT_FAILED",
+          "summary_sha256": "85ccb87568ebaae7f06527e36f56f5e0e7d4bc65ae609747f849fb16956179ef",
+          "task_id": "V25_COVERTYPE_01:preprocess"
+        }
+      ],
+      "claims_sha256": "7ae41fdc755e6aefcacc0932696f085f56d6685c96b0ba7844f3397104b24c70",
+      "cost_per_verified_job": "derive_from_ledger",
+      "jobs": {
+        "PySnooper_3": "VERIFIED",
+        "V25_COVERTYPE_01": "DEAD_LETTER"
+      },
+      "ledger_sha256": "9382960775e7c3bf6ec64d45a182b7b7890d6b0ff59247d5078710cffb675127",
+      "summary_sha256": "b37daae4c6fb0c94620c17b2421501eb0d5a09ddc0068b1f0b5525b9ed009904"
+    },
+    "STATIC_OWNERS": {
+      "attempts": [
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "1ab9b465cc8acde49a94342472a94ddd99c788f1a5fcd6ce4e124f379d9690cc",
+          "request_sha256": "1418d1728b2709d0339392cb4ad9a8f238a94965b87055b5e6f34261885be8af",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "5210a471a0fa13cf9c1df5955e5f84e550b04847304933a9cf2d0f3d387715e6",
+          "task_id": "V25_COVERTYPE_01:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "70e7759951e1429ff55664ac6573607ae380c9fbcb62c621530dbeb1f874f0ac",
+          "request_sha256": "15f94ccfd9b29b2e2f6f9295526c39fe7059a0b6694340f2a36e3954d9ef34f1",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "5e5f9a82cbe3219eb6128650311880d2e2fb5b4b5d6d7a685365d721aaec7fd8",
+          "task_id": "PySnooper_3:repair"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "c89e60c3f5e55a53df9f5b428d5a0e2d2217ed34e527a822e6eded0ba329bf87",
+          "request_sha256": "066d34b95ab317e5d896d05bfec6d45274941c3b5ed65f81ef6058bb559642ae",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "1e4861e7b27b4b81573f1f86c1e34e820e5b6dcfbdb8ff977e534833fd1f4467",
+          "task_id": "V25_COVERTYPE_01:preprocess"
+        },
+        {
+          "agent_id": "A2",
+          "cost_unknown": false,
+          "model_slot": "agent_2",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "859eb96918d91ef318e3f5cb9dc058b4a31f66d5a624be2ba2ce1de3e51354a9",
+          "request_sha256": "eab09bdfe767c089030e060ffadbd165a4d3fde6fe76141ca5963f2cc84b2f85",
+          "stage_status": "STAGE_CONTRACT_FAILED",
+          "summary_sha256": "5475a7890860ce96439a56c49450e82236f5696b12086033d04a2fd42692ecce",
+          "task_id": "V25_COVERTYPE_01:train"
+        }
+      ],
+      "claims_sha256": "99db149de95b0998e58c270b5a993fbe1b1cce0e73ec14943e7e7e7adee6a03f",
+      "cost_per_verified_job": "derive_from_ledger",
+      "jobs": {
+        "PySnooper_3": "VERIFIED",
+        "V25_COVERTYPE_01": "DEAD_LETTER"
+      },
+      "ledger_sha256": "b925b0dd1825a410d133769fbed0952ecc4edb82e93e12637e3de300182a21d3",
+      "summary_sha256": "97342b2994df14998a439137e6ba3de24f44b02af7233e82ebb8aa97e502d07b"
+    }
+  },
+  "block_id": "V25_RECOV_02",
+  "insufficient_for_population_precision_or_equivalence": true,
+  "lock_sha256": "9c0c75cf6061e78d9dce15c7a59f9fe58ddbad458cc69f3b762beceb158bf2ac",
+  "new_ml_corpora_in_extension": 2,
+  "prior_instrument_invalid_calls_excluded": 2,
+  "provider_attempts": 10,
+  "raw_complete_sha256": "edc965aef27c29b32b29799ec3a1f5b612fc71e035fc901a89f92635f2426663",
+  "research_results": true,
+  "source_repository_clusters_in_extension": 2,
+  "status": "v2_5_paired_recovery_block_independently_audited"
+}

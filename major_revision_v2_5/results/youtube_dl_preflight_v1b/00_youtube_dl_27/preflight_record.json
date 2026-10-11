@@ -1,0 +1,37 @@
+{
+  "bug_id": "27",
+  "buggy_test_report_sha256": "e544841e415304607e92b309f8a2d81e52d9b36d6ca1de63853702b40b7eb449",
+  "build_report_sha256": "d1acb7ec7d9bb5ae42d0d7d0cb8568abef807f4a19341c156a7b736686e22aa4",
+  "container_image_id": "sha256:365c7c75b50fd8a6edfb3d439df2cfb6de3c0711b73202e4effe1c5e063ee7a1",
+  "container_runtime": "podman",
+  "dockerfile_sha256": "43593416a1c3e2d4743823b78460413276b68066278694a3423fa1fe762cd9f6",
+  "environment_deviation": "CPython 3.8.20 rather than original 3.7.x; benchmark bug requirements files are empty for the selected cases. The same pinned pytest and container image are used for buggy and fixed public selectors. Historical unittest selectors are mapped mechanically to pytest nodes.",
+  "fixed_test_report_sha256": "04dc243618e428e88ecf0c7135f2c0da6f502a514ce5437a0afacc4473fccf83",
+  "normalized_public_test_node": "test/test_utils.py::TestUtil::test_parse_dfxp_time_expr",
+  "original_requirements_sha256": "a340939687159df087faf908528181fa00b7e825e9a1179c96abdfa33f504c69",
+  "project": "youtube-dl",
+  "provider_calls": 0,
+  "reason": null,
+  "recorded_at_utc": "2026-10-11T09:21:37.640516+00:00",
+  "runner_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "runtime_version": "3.4.4",
+  "selection_hash": "d49031462fa3924403d81e6352f81f969dd748d026aa14caeafbde6e4160df1f",
+  "status": "reproducible",
+  "test_outcomes": {
+    "buggy": {
+      "errors": 0,
+      "failures": 1,
+      "return_code": 1,
+      "skipped": 0,
+      "tests": 1
+    },
+    "fixed": {
+      "errors": 0,
+      "failures": 0,
+      "return_code": 0,
+      "skipped": 0,
+      "tests": 1
+    }
+  },
+  "validator_only_image": true
+}

@@ -23,4 +23,8 @@
 - `REVIEWER_RESPONSE_BOUNDED_V2_6_EN.md`
 - `build_bounded_manuscripts_v1.py` สร้างสำเนาใหม่จากต้นฉบับ ไม่ทับไฟล์เดิม รูปเดิม 15 ภาพยังอยู่ทุกฉบับ
 
+ภาพ Fig. 1–5 ในสำเนาใหม่เปลี่ยนเป็น export ที่แก้ความหมายแล้วจาก `AJSTR Journal/figures_v2_2/legacy_style_corrected/` และมี source draw.io สองไฟล์ในโฟลเดอร์เดียวกัน ภาพ Fig. 1 ระบุชัดว่า simulation กับ real-LLM เป็นคนละ executable engine; Fig. 4 ระบุว่า static owner ถูกกำหนดก่อนเริ่ม ไม่ใช่ผู้จ่ายงานขณะรัน ภาพ Fig. 1 แสดง cohort microtask เดิม จึงเพิ่ม caption ระบุว่า executable v2.4 เป็น cohort แยกต่างหาก ไม่แอบอ้างว่ารูปครอบคลุมการทดลองใหม่ทั้งหมด
+
+QA แบบโครงสร้างผ่าน: DOCX ทั้งสามไม่เสีย, มี 15 ภาพและ 10 ตารางต่อฉบับ, AJSTR blind ไม่พบชื่อ/อีเมล/ORCID/GitHub handle ใน XML แต่ยัง **ไม่ได้ตรวจหน้ากระดาษด้วย Microsoft Word** เพราะเครื่องมือควบคุม Word ไม่ปรากฏใน session นี้ และผู้ใช้ไม่อนุญาต LibreOffice จึงไม่เรียกไฟล์นี้ว่า camera-ready
+
 **ข้อสรุป:** ถ้าปรับ claim ตามเอกสารใหม่ เราตอบ major concerns สองข้อนี้ด้วยหลักฐานที่มีได้อย่างซื่อสัตย์ แต่ไม่สามารถรับประกันว่า reviewer จะยกสถานะ Major Revision โดยอัตโนมัติ การอ้างทั่วไป/ต้นทุนรวม/ความทนทานทั้งระบบยังต้องผลเพิ่มหรือคงเป็น limitation ที่ชัดเจน

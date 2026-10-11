@@ -9,10 +9,17 @@ from __future__ import annotations
 from pathlib import Path
 
 from docx import Document
+from docx.oxml.ns import qn
 
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(__file__).resolve().parent / "manuscripts_bounded_v2_6"
+CORRECTED_FIGURES = ROOT / "AJSTR Journal" / "figures_v2_2" / "legacy_style_corrected"
+
+
+def windows_safe(path: Path) -> str:
+    value = str(path.resolve())
+    return "\\\\?\\" + value if len(value) >= 240 and not value.startswith("\\\\?\\") else value
 
 ABSTRACT = (
     "Heterogeneous large language model (LLM) agents differ in capability, speed, "
@@ -141,8 +148,27 @@ def table_before(anchor, rows: list[tuple[str, ...]], doc: Document):
 
 
 def add_evidence(doc: Document, *, ajstr: bool):
+    replace_first_five_figures(doc)
     abstract = next(p for p in doc.paragraphs if p.text.startswith("Abstract"))
     abstract.text = ("Abstract: " if ajstr else "Abstract—") + ABSTRACT
+
+    figure_one_caption = next(
+        p for p in doc.paragraphs
+        if p.text.startswith("Figure 1. ConveyorFlow system architecture")
+        or p.text.startswith("Fig. 1. ConveyorFlow system architecture")
+    )
+    figure_one_caption.text = (
+        "Figure 1. " if ajstr else "Fig. 1. "
+    ) + (
+        "ConveyorFlow study architecture. The simulation and real-LLM tiers share "
+        "research concepts and interfaces, but use separate executable engines and "
+        "tier-specific records; their metrics are not pooled. The shown 60-case "
+        "microtask cohort is the original live tier. The separately audited v2.4 "
+        "executable-workload cohort and decision-fault experiment are described "
+        + ("in Sections 2.2.8 and 3.10. " if ajstr else "in Sections V-H and VI-J. ")
+        + "Editable corrected source: AJSTR Journal/figures_v2_2/"
+        "ConveyorFlow_architecture_process_corrected.drawio."
+    )
 
     method_anchor = find(doc, "3. Results and Discussion" if ajstr else "VI. RESULTS")
     insert_before(
@@ -246,12 +272,25 @@ def set_properties(doc: Document, *, blind: bool):
     props.comments = ""
 
 
+def replace_first_five_figures(doc: Document):
+    """Use the already-corrected draw.io exports, preserving Word placements."""
+    if len(doc.inline_shapes) < 5:
+        raise ValueError("Expected the five architecture/process figures")
+    for number, shape in enumerate(list(doc.inline_shapes)[:5], start=1):
+        blips = shape._inline.xpath(".//a:blip")
+        if len(blips) != 1:
+            raise ValueError(f"Figure {number}: expected one embedded image")
+        relationship_id = blips[0].get(qn("r:embed"))
+        image_part = doc.part.related_parts[relationship_id]
+        image_part._blob = (CORRECTED_FIGURES / f"Figure_{number}.png").read_bytes()
+
+
 def build_ieee():
     doc = Document(ROOT / "ConveyorFlow_IEEE_Manuscript.docx")
     add_evidence(doc, ajstr=False)
     set_properties(doc, blind=False)
     out = OUT / "ConveyorFlow_IEEE_Manuscript_Bounded_v2_6.docx"
-    doc.save(out)
+    doc.save(windows_safe(out))
     return out
 
 
@@ -260,10 +299,10 @@ def build_ajstr():
     add_evidence(doc, ajstr=True)
     set_properties(doc, blind=True)
     blind = OUT / "ConveyorFlow_AJSTR_Blinded_Bounded_v2_6.docx"
-    doc.save(blind)
+    doc.save(windows_safe(blind))
 
     # The non-blind copy differs only in author-identifying front matter and link.
-    unblind = Document(blind)
+    unblind = Document(windows_safe(blind))
     lines = [
         "Sakan Punyanon 1, Chaiyaporn Khemapatapan 2, Aomduan Jeamaon 3",
         "1 College of Innovative Technology and Engineering, Dhurakij Pundit University, Thailand; 68140010@dpu.ac.th; ORCID 0009-0004-5309-8926",
@@ -301,7 +340,7 @@ def build_ajstr():
         insert_before(ref, statement)
     set_properties(unblind, blind=False)
     identified = OUT / "ConveyorFlow_AJSTR_Unblinded_Bounded_v2_6.docx"
-    unblind.save(identified)
+    unblind.save(windows_safe(identified))
     return blind, identified
 
 
@@ -309,7 +348,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     files = [build_ieee(), *build_ajstr()]
     for file in files:
-        doc = Document(file)
+        doc = Document(windows_safe(file))
         print(f"{file}: {len(doc.paragraphs)} paragraphs, {len(doc.tables)} tables, {len(doc.inline_shapes)} inline figures")
 
 

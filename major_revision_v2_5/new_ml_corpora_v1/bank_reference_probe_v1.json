@@ -1,0 +1,20 @@
+{
+  "container_network": "none",
+  "container_read_only": true,
+  "created_at_utc": "2026-10-11T03:07:26.100057+00:00",
+  "hidden_test_mounted": false,
+  "image_id": "c303e2440992fc0c745aa442cb2467cfbe80b36a9adaa25002d5960cc1da5c58",
+  "paid_execution_allowed": false,
+  "probe_sha256": "536c9db2c7cc397991fe71032b200b86df4893e9a2729758d04d8d140534b89d",
+  "provider_calls": 0,
+  "result": null,
+  "return_code": 126,
+  "runner_sha256": "ef9d8bcb6ec3a9d0dc5a44c269363adb02e6df4b17490b98f47699151841d774",
+  "source_manifest_sha256": "8af44db7965f2e981329bc42347cb4f7995bbe73b5938fe10b1d924c16c04ab3",
+  "split_manifest_sha256": "767398dd2d04436b5a3bb98443875fa844090d7134eb7d81f916622c4138b7c5",
+  "status": "container_reference_failed",
+  "stderr": "time=\"2026-10-11T10:07:25+07:00\" level=warning msg=\"The cgroupv2 manager is set to systemd but there is no systemd user session available\"\ntime=\"2026-10-11T10:07:25+07:00\" level=warning msg=\"For using systemd, you may need to login using an user session\"\ntime=\"2026-10-11T10:07:25+07:00\" level=warning msg=\"Alternatively, you can enable lingering with: `loginctl enable-linger 1000` (possibly as root)\"\ntime=\"2026-10-11T10:07:25+07:00\" level=warning msg=\"Falling back to --cgroup-manager=cgroupfs\"\nError: OCI runtime error: cannot set limits without cgroups\n",
+  "stdout": "",
+  "train_sha256": "3321957a8af3c4d1eb200f5a9e2b234ce8b02a3f479ce6fa133166e7d14b0d6d",
+  "validation_sha256": "2fb30fda783f2bd6f2d1db61a8ea4554b50a6087ed1349d02c3b69ccfa57468b"
+}

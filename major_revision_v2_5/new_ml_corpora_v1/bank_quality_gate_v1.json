@@ -1,0 +1,19 @@
+{
+  "corpus": "bank",
+  "created_at_utc": "2026-10-11T03:08:34.556018+00:00",
+  "direction": "higher_is_better",
+  "dummy_score": 0.5,
+  "hidden_test_opened": false,
+  "metric": "roc_auc",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "quality_floor": 0.5840650011169713,
+  "reference_report_sha256": "873402aa504357cc8387f483405ad4908eba90c2340b9654fa1a7347587867e4",
+  "reference_validation_score": 0.6681300022339427,
+  "rule": "At least half of trusted validation reference ROC-AUC improvement over 0.5, matching original Adult quality-gate rule",
+  "runner_sha256": "c7bd223254c25923bedf3214d5469f0eb06dc69e1d307bbe57ee26f24ad564f2",
+  "source_manifest_sha256": "8af44db7965f2e981329bc42347cb4f7995bbe73b5938fe10b1d924c16c04ab3",
+  "split_manifest_sha256": "767398dd2d04436b5a3bb98443875fa844090d7134eb7d81f916622c4138b7c5",
+  "status": "quality_gate_frozen_before_hidden_test_and_provider_calls",
+  "warning": "This gate is provisional until a trusted container reference passes the untouched hidden test; do not change the floor based on that test."
+}

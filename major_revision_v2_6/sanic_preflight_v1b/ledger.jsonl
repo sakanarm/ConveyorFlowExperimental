@@ -1,0 +1,1 @@
+{"case_id": "sanic_5", "provider_calls": 0, "queue_index": 0, "reason": "container build failed or timed out", "record_sha256": "33da98e4e10c34ffb0a70592e494c44f3e1a684bab36539123a95fb1b6517287", "selection_hash": "2edb56b6e3d02ce3c7cebb0aa1dd04cf5b29cc4d0d32648358cff140cac0d09c", "status": "environment_excluded"}

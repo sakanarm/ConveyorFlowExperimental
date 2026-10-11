@@ -1,0 +1,3690 @@
+{
+  "prior_exposure_ledger_sha256": "78ac8dab901fc14faa8494521400d039712e84629ebae91f75eb7af3bf69a040",
+  "projects": [
+    {
+      "candidate_count": 3,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "PySnooper_2",
+          "case_order_sha256": "778aed7ba799c81329bd03e6b12b0bf74dc0a35369a5da0960d9478bec7b9c40",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "PySnooper_1",
+          "case_order_sha256": "c7a407dd77d9097e35e137b6228468254406591626cd8783190bc0985d943583",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "PySnooper_3",
+          "case_order_sha256": "e478e65e1ca41d4555b3e62f20adf0ad968853dd00d475ee06160dfaef056d82",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 1,
+      "project": "PySnooper",
+      "project_order_sha256": "3cbb4aa43f0e3c3c489e4dc12d53154b0fda4532092695ef64691cc1caf43b94",
+      "unexposed_candidate_count": 2
+    },
+    {
+      "candidate_count": 5,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "sanic_5",
+          "case_order_sha256": "2edb56b6e3d02ce3c7cebb0aa1dd04cf5b29cc4d0d32648358cff140cac0d09c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "sanic_3",
+          "case_order_sha256": "33074a3792cb691435df61a455ca4deec931efb26afab55bde1af45db27935e0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "sanic_2",
+          "case_order_sha256": "67f3ea9538589c03150d87715f2c99bad8eedac925669979f1a4351c2b77d03f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "sanic_1",
+          "case_order_sha256": "8ac7ab76b3d3bb957c9f2edd7e51e6ba5d8db3c95294ff539d3535a209036ac8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "sanic_4",
+          "case_order_sha256": "d9e7d5288c61d692259b44f396a78540b98c5ba38cf55a557ee0c228835d512d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "sanic",
+      "project_order_sha256": "449ced7e9eeb9bc9052bde19a8643dad40c630d6b89f5161e20405094c9ccbc4",
+      "unexposed_candidate_count": 5
+    },
+    {
+      "candidate_count": 4,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "cookiecutter_3",
+          "case_order_sha256": "284fe5562e01f72a2add0b4e227caaf94dcbafa1fa61ff7984a91a13fcb8c017",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "cookiecutter_1",
+          "case_order_sha256": "8541ce93622134c32a418f40cffc3b301e32eff642b31b997720e15d6568cfb1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "cookiecutter_4",
+          "case_order_sha256": "bbaec96b55f068a29b7129a0112ac10ab0e5f7a92f5cec1379adab5171483785",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "cookiecutter_2",
+          "case_order_sha256": "e52a835284b766c0a88a7fac99ed88d62ef77f40288fc5ee87541337da4384df",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "cookiecutter",
+      "project_order_sha256": "4b8e0eb09bed504e028b67e84e9f8d446fd6c2b7277d44dbe036b528ad974bba",
+      "unexposed_candidate_count": 4
+    },
+    {
+      "candidate_count": 16,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "fastapi_11",
+          "case_order_sha256": "025a144ec5eb334a4fe72d16d0cf3dbab63056c21b86f08527ae67d0a31d45ee",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_8",
+          "case_order_sha256": "187885776d4856cac52b4e8f8cf9c555114b9ce9d0bae098f675c771ede5d560",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_2",
+          "case_order_sha256": "4dcb56406637ee6c46e983e90789a01d04a7246228d6317a053722a84ed9f183",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_12",
+          "case_order_sha256": "69a987f2f342100c9b5896dcd018d37fe6effc82944b387a6afb3bc77c51292b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_1",
+          "case_order_sha256": "7c4cd4653ef191219fb24fef7a6d9a80729ca6c64db3aa91cef12dc33c019c62",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_14",
+          "case_order_sha256": "7d42abafb8ab38c4c47e208c1f0b63aa14de877c63f057d55d89a8f081a6432e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_13",
+          "case_order_sha256": "86ea6b551281310d7feaf8eade02add5bc31621849dbd6c16f3523c13a888146",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_7",
+          "case_order_sha256": "8bed916eb21076b63932ee5bf5518c8627756e7454549d44f1144af74bdc55eb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_15",
+          "case_order_sha256": "8bf1cd0c03c4dca0bd06cb39c67889739fa48d7f45c518c6ea29620c51f78ae5",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_6",
+          "case_order_sha256": "9099323333117296584fdbc9e84a21cd4443337f06c353ac4878ae4773385f45",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_16",
+          "case_order_sha256": "947e60d1e2a1d21270cad80429104fe4a55d61c66c1af5e1b5233a862f1e9551",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_4",
+          "case_order_sha256": "9abd8df349541097219a5a12c2e7e56c782a921db33fa5e5ac9d0edb972fcbe3",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_9",
+          "case_order_sha256": "a8237f648d85340d7b588c374d810fea78403099fbda060927e58103c5d3a3d4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_3",
+          "case_order_sha256": "c7b714d0a537d61498f1c7a8edd6ec22237a40623d4165f92b1d8ec621963dfd",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_5",
+          "case_order_sha256": "e12313df3c549c4e1b98fc9d3820504a9baaa9de7b3214702ca29cd77f1e6df1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "fastapi_10",
+          "case_order_sha256": "ed745f393a2b12382199cd67e4187d50f87627f666cccfa25d920bfedde62ecb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 3,
+      "project": "fastapi",
+      "project_order_sha256": "5671848951f19e87e7b28243f12b900f14cd18afdd8dead24194c11862ee36ec",
+      "unexposed_candidate_count": 13
+    },
+    {
+      "candidate_count": 40,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "scrapy_39",
+          "case_order_sha256": "006f4e3e9aac220d4482471f0dabf9b96dd84ca560576d2d3d6eba2883d64abe",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_34",
+          "case_order_sha256": "02bd5f2b849f05192c8b3dfef58c6eb8f190e7f1ea1f439a55199224cfecd9ff",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_6",
+          "case_order_sha256": "0dd2c5392d1c1b34f0ecf91e31ea7555b0ae3d523ce2b309b4e7afdceeba7f6f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_36",
+          "case_order_sha256": "199de4e508b0738da182b2b63c188a56735b03f4f7de5a04df579c45eb4c89a2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_8",
+          "case_order_sha256": "21945e9c689e41d8d35a4bdb5fa6d14e74b1b12223e4ef3890dd0cc3e3a1c07c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_4",
+          "case_order_sha256": "3d4c410c3274e491bd8271eb89b5f27b10a564eecabe49f66e9bee0e6a1ba2e8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_27",
+          "case_order_sha256": "41136cdb3bcef777a72cbef748622f7cb674488c55b768babc3f36f5799ab6cb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_19",
+          "case_order_sha256": "416525254b04e579d6056a22c186a86d669467c6d29b0962e4c2b598ef2bcbbb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_35",
+          "case_order_sha256": "44cb1540b7520097e99ed1e8b410c6e531435c06c010d6f45ab081e93e324444",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_33",
+          "case_order_sha256": "4ae6016994542929e41e8ed7bcd510fa46cb08cf04f2f7fac4feef64cf2cec15",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_20",
+          "case_order_sha256": "548a7c30c664e3a39ed2d0bab9eee28d95fcc8b9a3f2d10f352a1ff450ee922f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_9",
+          "case_order_sha256": "615fbdbcd90179ebe60b5c598c09a105f563ae9009fb0679ca2bc45f979ec6f4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_18",
+          "case_order_sha256": "666a11f083ec2dd581ef336a082c45acfe68f023c647604e54ee570870e03da6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_7",
+          "case_order_sha256": "6fa29945c02eb80752e83e556ca27743eaea9eea038094a513842a03c6673970",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_3",
+          "case_order_sha256": "7113230e8b687bfb1988b14cdf8f5c8d1645473a403b8c000b042d8a1fc0fcb6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_21",
+          "case_order_sha256": "7714ad048e55842f5834b131da952b0e0a28d21a24f4b17154d79d90729270ec",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_29",
+          "case_order_sha256": "787dea77d15a9a27edf5d85edc8dec8c652334b8866fad7f0eb23d3c25f7460b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_16",
+          "case_order_sha256": "79d95fbce3538d544ec58e103ca13350c52251c401393124280fbd96084c1c3d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_37",
+          "case_order_sha256": "7d8b79f4b65bf819462ff3e30607e4afd33e521f1d6b782d2666974bf9f6732c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_23",
+          "case_order_sha256": "7fa3fc0c6494cccbe8a7bfd3e6c668767a474014163e1deac41d821f84d94fb0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_15",
+          "case_order_sha256": "8031b13ce792ac8012be8455da6afd3f4880a2bce7de33e40ffccac914c85f38",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_32",
+          "case_order_sha256": "82d758e0d658e9baad9fa622ed548d6bdffa5cb64210ec92dd4e2e17fbf8143a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_31",
+          "case_order_sha256": "8695b554b16c010261e88132fd9e3526cbafe4c08b591fb2904309180114a9ab",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_25",
+          "case_order_sha256": "96f304a1b92bc30430e4642d7d7f880d667bf9e522f1139990dc834207b30bd8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_14",
+          "case_order_sha256": "a4198687ef2d11ba385eedce512e1fb022d9de339555c250be33eb43dda52442",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_12",
+          "case_order_sha256": "aa3f9735fdf6441a3f1dfd24dede17529049f30efee8b0db92467ecc974c110d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_11",
+          "case_order_sha256": "ae1a65f0fe6b02bdb75e8c3d3b3147f0955d3f1523512627ee385dcdf569aadf",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_40",
+          "case_order_sha256": "b03bf5856d8ba7eabfe054218f572e2fc6545f85a92673a8666c413e7ba6d80f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_24",
+          "case_order_sha256": "b7ba485080743e3c48e10f13352d5983af47eca3f2fc43e74b62f7b19535d43c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_30",
+          "case_order_sha256": "c24de97b1daf14208c7bf8b562ad0f96f121a048e176c08d2d7936588390b732",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_2",
+          "case_order_sha256": "c7219e36577f1123175b3aa538e90b5ed6f8eb21ebe31c176f1f24c14db38cdc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_5",
+          "case_order_sha256": "dce4ec7e13200cc88136d85690a673fdddd318a263c0d50963192754e08b5325",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_28",
+          "case_order_sha256": "dff03b8ae8c1ae886fec4d25f4699fefd28ef1420d22c8081b469d496cba57a8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_17",
+          "case_order_sha256": "e20dd9b45719d5b9fe9bcdae1b374a8471957f02882c7e1b7b12c4ba19c62a8e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_22",
+          "case_order_sha256": "e52610f7296c41f973cee683dd0e679b22c154c7ddafb4ffbf197235687a114a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_13",
+          "case_order_sha256": "e8c1cef2b42a900fc93e9ae486eb83033a6be55dc398b5894786787b95247fba",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_10",
+          "case_order_sha256": "ec092ad403bf9709b2ada56faeeb47f696e5798c1a9be850e53eb6e32765602f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_26",
+          "case_order_sha256": "efe677e4f274c8bb88078a9bd4b4458cda3fc08d3aaf00e5b05818a5d8ee0e67",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_1",
+          "case_order_sha256": "f5bc073acce1b563e7c958826d6fa8cf6b2da20b66bda4ee6b66f520b5d9dada",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "scrapy_38",
+          "case_order_sha256": "fdd9e387a66aa5494aab6894ac34127aad22c2ea2efd016c7980418e4a58395e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "scrapy",
+      "project_order_sha256": "62de0e5980caa0dd956f298028cefd3acc1270a685f24ef40325eadeb14c6aa4",
+      "unexposed_candidate_count": 40
+    },
+    {
+      "candidate_count": 169,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "pandas_80",
+          "case_order_sha256": "021ba5bdfcc3a4850c559d983941655838e9b2ce520f8d0816aad92e79142069",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_1",
+          "case_order_sha256": "03f1b694f181d0a2c1570940ca55247d3eae3700a3ac59fd27f4be3f0d63b5b0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_48",
+          "case_order_sha256": "05cc84fb4992922f0582e8f82e16dffdeae80bdb50fb8f3c094cf248931093ea",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_138",
+          "case_order_sha256": "05f350b4f3aeeeb8f6c69021962f9027af6a5943cd450ffb232fb5f6cf30c272",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_32",
+          "case_order_sha256": "0635f9937dc9b0e2956616ac02f23c1fc399136b57c1bc66779fd3a0437ebc18",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_158",
+          "case_order_sha256": "077c83e1de0afba2bdf4d23ed2d8f8338a6934ce4dbf5a72f96915632f4413bf",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_38",
+          "case_order_sha256": "079cbdac5842e9eab140575b395cf3ca0ff9dfc4a2dc3a6ae11fe749dbc9f937",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_89",
+          "case_order_sha256": "07b86308b259c75af120b7bc6b1e09d8900733217317f766b9d2c9060a911a0a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_104",
+          "case_order_sha256": "0aeacd15c759d0737f5e2052571230aa75980cd536f1e514f3c6b0470956f93c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_151",
+          "case_order_sha256": "0bb609f4c2d2fa1ceea606065f0770c1c498befb88a0ad434f14667b7b17e8d8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_105",
+          "case_order_sha256": "0d094b499ff74007bed22d9484f654a161467f454f8d527425768ccd86b92bbc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_66",
+          "case_order_sha256": "0d22129ee786e5458bfefa44db7561a6dfc6a8b31b39be9fb3e62ac90b9d3fb7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_72",
+          "case_order_sha256": "0e2c3ece7cc953b9ab3b1e713369e8a92608424bd357003a98497a3fd6ea17ac",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_145",
+          "case_order_sha256": "0f71e36b0f335f4d85a944d326440965bb9fb790a4804c1a4df2af6d57fac77a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_141",
+          "case_order_sha256": "0fc2aba526ba43ce961dfd87e4294011dc2363c92514375cf067135da2e0b659",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_35",
+          "case_order_sha256": "139363e3ab9b4428b782d41057a2663c3ee2112c24a09f21b60a7d5af7d65108",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_4",
+          "case_order_sha256": "15473e25ce2b2e29f62dff53dfc6b976441ec0530d3d7ba204af60211bba4370",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_127",
+          "case_order_sha256": "1554666ec795cf5a94c943112ae083b98f1c694d1b82d3717482fa22cc15d7da",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_76",
+          "case_order_sha256": "1739737c5b929bb8d244fc3492d764982d1412c4c2ea954bd90249693f9a5ed0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_65",
+          "case_order_sha256": "1892830807c475dceaf0fc190bbebdbe0cf681cef9660d1a5ef9170de74f2db1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_96",
+          "case_order_sha256": "18a4e467399c864617aae82c434e15e62295a2be51b33f2aa0eb04bafa624a1e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_49",
+          "case_order_sha256": "19d41f21698db65bb93c9cf6fdb370128882d311af6d96d1c23c8ab631138891",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_58",
+          "case_order_sha256": "1a0a653fa763696b2b74e6b7ac7bae560dedc16f6363df972032a21c67fcd4d6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_140",
+          "case_order_sha256": "1a9c68a7e20d831aa10a7154ac08a1a403eb1d450b9df3949ad13c6d2e48903c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_34",
+          "case_order_sha256": "1afe591c57f805ba58e490bb12267723cbbe54b42a064c0bffd9c7a184411dc7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_79",
+          "case_order_sha256": "1c75ca7d404104025795bca7562a91d272902a58e926f58997cb740f56ede502",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_44",
+          "case_order_sha256": "1f08509bab254cd394865edd2ea5d9465a0f583202beb1f37aaec1eeec81de4f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_33",
+          "case_order_sha256": "1ff53c493e4fdac9d95edf6242a36a54c838eb4c6f48b91b69fea5bb94db9f14",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_16",
+          "case_order_sha256": "22b85555800afaf9ef09985f903414c9fa70543c913b1a9b3fc9c758ca1e76fb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_121",
+          "case_order_sha256": "24152570eca1af111b3afb00ef56359267f01bfb4fb7e5b059bf77d44d2f2a5b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_159",
+          "case_order_sha256": "2563b94b810cf869650be2b37d63474396742f9982f5e3c2155079f6c47dadb2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_131",
+          "case_order_sha256": "29a993b276a40c5404c06cafc81c918d2ad41934bdc0e03e47f9258891b7df32",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_9",
+          "case_order_sha256": "2a89ac35d2ba2dac8f0b2e13d77cd410b41b487076aeb839edf58667dbb88854",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_12",
+          "case_order_sha256": "2bcdb4e88c829a08b1282daedbcecb2ad2e9015547d6c624049ffd0416bf7ca8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_143",
+          "case_order_sha256": "2bed416fe08b75e788f7e185908cb4b3beb11d6960b7328783f860aa54a0830b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_53",
+          "case_order_sha256": "2dfba416985cd0d7339185b467355d068b4eca9098d26165cfefdb74535493e0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_166",
+          "case_order_sha256": "314e2f26320e16c33e3b0f636cf3a535c784cb0bd7ca009e5ffd89101060803e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_112",
+          "case_order_sha256": "3350480114f13fc584865730910cfd16c6bdaff4d6dd0db57859642f5346dff0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_22",
+          "case_order_sha256": "361976b14904ecb2893ae90bb1de1abe39a72d48c1cd8782804e3b520abb8f13",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_149",
+          "case_order_sha256": "3624e0224177e3a79d6bfb472acc518f6ffa1f312a91fa432bddce18efcf091d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_126",
+          "case_order_sha256": "395f71c565ddddd10c84f1ece3832148c6bd43e41590521a1244e3e26175112c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_157",
+          "case_order_sha256": "3a96f9b19ee7166c9c05cf1bc8e2e09d3572e2f8d68935b78040391e3f4a14e4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_155",
+          "case_order_sha256": "3bcde26defd743d025317fe7c9efe409179117258b4903db44deb524d79c6311",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_71",
+          "case_order_sha256": "3cf66320f818e9093342715f3b455a7cfb70c83af4b036724edcb97a6a270d38",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_85",
+          "case_order_sha256": "3e47ccd8f8ee072e5be06508e35e2aad8dfe3eb999a4677c6ba803ef5c0326ec",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_97",
+          "case_order_sha256": "3ed72369a978d23b6e521dda8cc4a4706cc20940d1bffb54edf75248029d717b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_102",
+          "case_order_sha256": "446199db29b20e9c14b3a6ce9c7a115539d1664892436c641e5817e817da3b9d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_161",
+          "case_order_sha256": "463cff9d51976bcda3d2aa9d89ba6f3c42444b30f937b9ab15e6b3f3a246ad09",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_94",
+          "case_order_sha256": "48dc6cc53d4f51b530f7837af1236bed6d4403b6fd8180c6e2a6d573ed40d8e4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_88",
+          "case_order_sha256": "4beddf25fddbee2e2fc743a193d678fb2d44cbd6a0442547c4edb99171f5b10d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_113",
+          "case_order_sha256": "4e61cbbb4d9655d313d5a56d13227a2cae49146303d330c38e0919310432462e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_133",
+          "case_order_sha256": "4ebb8ecc0958395ec312563f47c7feaa31d893446166f79c383bcfa65eb7916f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_115",
+          "case_order_sha256": "4fb366b662df9495c4a2eda15db3e630cd0234a34b5d117762a87425c56d2ad8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_87",
+          "case_order_sha256": "530f610c72fe077e9a94ae730080753959bf7a19be22990390d9791b507217ed",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_61",
+          "case_order_sha256": "56f979c43ca9807e2c4b5b6b25c167545e1e4025cc7ba1f89edceb14cad6929a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_14",
+          "case_order_sha256": "5a4dab70cf0c7b119ca904f987ca00f1b6def2764d8dfbfd25dbc4f7a0045e06",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_118",
+          "case_order_sha256": "5bb807ab5ff6f8496a03ce1d7c23d0e7c53b1b29b28e210421382073b899d972",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_103",
+          "case_order_sha256": "5c71732de92a2398f0d317bc0fd9458c30b96931baa893332b3656ca820768c6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_10",
+          "case_order_sha256": "5e941370ccc7a7503cc8014df7a0300af0a849641d631f56810988b1f17939a2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_52",
+          "case_order_sha256": "639e6280fea4068a12af74f0db6bb3128143b4890ea36a8980fd7b4921f41034",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_39",
+          "case_order_sha256": "642ce9a977028449fb212bb063e664557845afc6c8033379450154a868de4fd7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_122",
+          "case_order_sha256": "64a1985085ae88e7e4f5f90cc2cdbb668eea04670ec25eeebfb4c8b894c987e7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_114",
+          "case_order_sha256": "6985379989acbc61e7596d28ade2d15507fe225c5c864f57d06f0856cc1de930",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_36",
+          "case_order_sha256": "69d370fec0fd9b6e05d3b003d561f9c504b51ae2441bad318583781b467e54a8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_8",
+          "case_order_sha256": "6b9f7bc860d3f54694efecf3170257a766a1d53c95e8ac1ad910dcee61126dab",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_15",
+          "case_order_sha256": "6d90d326c36feeca9267844ff28d8adeb260c03f59ad577722e898fb6e9e5a4f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_128",
+          "case_order_sha256": "72a6f2b7ab4b1e4b5d630b0f4717c30f6a447938c8615598d19dd97bdee1c8da",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_146",
+          "case_order_sha256": "74a75f0912b424752371a65473d2b3f39de08d23be76d969c1f38690ad2bf0e9",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_56",
+          "case_order_sha256": "7666c357a6abc2fff08a34f365cb039909c000bbc398f68990ab1935c9e664d7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_84",
+          "case_order_sha256": "77349913cdf34e7899f47584520fc3de96033b66b5d40f11f20bbb102ff14294",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_45",
+          "case_order_sha256": "79cb8cd93e63f692ca882631872edf5d01cc1456849a0955aecd22c406310b82",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_37",
+          "case_order_sha256": "7a74a878be85b3c08d2be6c8e3250e333a331ba3953a8deaa6b9136ba511ab62",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_24",
+          "case_order_sha256": "7a80796ad59580561ed6a0311861276bef5edb156996723aa5a292f31c22fa51",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_86",
+          "case_order_sha256": "7b5f160a8c141151d164dbf5b58fd8b7d7939dd2f0b2d73746e74b92ad99ae41",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_142",
+          "case_order_sha256": "7f88800179d6b1e709b232af8bf91d00e29a2403597e8cd99c7d2039798765cc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_73",
+          "case_order_sha256": "800a9a3e90fc4d74e6a5c036d87cc8c5d6d9b6e3b303e567f43d2e4f52380cd9",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_46",
+          "case_order_sha256": "812075c471102e99dc0fcdbe46c99c36e7403237de07a7b2b0a2a19d32b36e78",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_106",
+          "case_order_sha256": "8148d42b68a192eeefd054ec10f5b1f1f7caaea57285cb03f7c82e126333dff1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_129",
+          "case_order_sha256": "844af412be970d10dd38e9f697663680c6675e4c55684b98f4d2cf1d3c011def",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_92",
+          "case_order_sha256": "891b8c97a46a03e93ad7d6af1093c33b44da87a9248977c12bd7c6b7aaa45949",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_98",
+          "case_order_sha256": "894fbfd895a0e9acf1fec93df4e3bd31cbad0cfb252568f0c56263cb734296f2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_130",
+          "case_order_sha256": "8c748ee9303657b087943a14a740ff6a525149e754f08d1d2b50b726fc409f20",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_81",
+          "case_order_sha256": "8d583257c84ffee239616e08fc64e406a445e9028ab3d6018a798138e86321fc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_110",
+          "case_order_sha256": "8ef1bf8690c2ceb4cdd40243790e831e9a07dadc0921dc77842a767c9a6ab6a7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_25",
+          "case_order_sha256": "8efd7a9dd0e9b63a90427ac31205717292d956cfa3bf43542c9d8a33848dafbf",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_31",
+          "case_order_sha256": "9038302ef323d358061716d183bee1dbf9cb663b4af9f4ad3463760417f9d0e0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_6",
+          "case_order_sha256": "93eb7aeb9a51ca7d34d7792e8d308c362539bd664c8c35fc3411ce30b095814e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_109",
+          "case_order_sha256": "93fb1f8c3b1a8c837d17d7732ae982afd7e9970dd5a83438c8186c0d406d297f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_67",
+          "case_order_sha256": "949ba854eee03a19cfc9eb12eaf106382aaaf7712fdad724bfbab22516b2400d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_156",
+          "case_order_sha256": "97d7eccbe398eab4667a2405e95aa25818a205b7ca3ad236669910325e1745c2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_64",
+          "case_order_sha256": "98897aad0a44e215d2f5d2b002b64263b7be2035c2162f4bd0a3966f43efd188",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_54",
+          "case_order_sha256": "999e570b6a90fdc202684f72e3e1c1820f82a008f64c86bf239841f70e4f3643",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_23",
+          "case_order_sha256": "99c401e1fef598eb022fe718e9201cbe563d1a1b12eb52c1feb39f7081e508df",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_169",
+          "case_order_sha256": "9b3c1ad6ff4ef96ac9e2c35da710e3325aef7a1fe142e58f4e465c01e347f805",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_117",
+          "case_order_sha256": "9c43b926ea489c99235e8232900a91d07cfcfcc65060f931459adb811b131e19",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_144",
+          "case_order_sha256": "9e22f8d094d88341c1a9a4e754a5c75fd18bbde49d836e22d46a04e6ba5caefd",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_108",
+          "case_order_sha256": "9f4e3162dfff2a41abbe851b94f1e35afbb107dcdfd71caedc9b55723e573d79",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_62",
+          "case_order_sha256": "a08e1ebf2ddbb1be40d25c3d6e5bcb50452d76a44a734903acabb5393e84d8f1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_167",
+          "case_order_sha256": "a1886980f2cacaeb8f68cb5d87e7d6b5cc8c9b59ac11fd309e9f38a568440b4e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_100",
+          "case_order_sha256": "a29decb43b810a5cd036873ffea46e547f6d3d9f0e729c152f870ceea36909fb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_139",
+          "case_order_sha256": "a480e7e0b73e2490b9f7116d61ceb381be50556fff6cf67ab79acff75b303184",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_95",
+          "case_order_sha256": "a48640ca3156c0931f4eda1732b39056f3a8c6dbbca37662f0dfc0628af094d6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_3",
+          "case_order_sha256": "a540bfb3ddbea133d7ebacd8cffd6b330e790c2f9e6ff35ca0d0ac1ccf8d1888",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_137",
+          "case_order_sha256": "a571f2e2ca1c7b1ce1dcf015f5b8a08e86ffdafc1e64f2b235e47157f4439154",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_43",
+          "case_order_sha256": "a6cc4883951e95c6f506fd80d10c8f0477939971e47726bfa657226f0cb0988c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_111",
+          "case_order_sha256": "a6da93a749e484f22cf9426cf3e061b5c445c5328307936dffe914e758cc0114",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_107",
+          "case_order_sha256": "a81446134a9e6c5facc4e540e866312ca1501e67e387dcfd49887b7f0291d457",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_27",
+          "case_order_sha256": "aa87c2049e56ce26391baf0959acd2361d1f613b212d3770e90a85afea0dca63",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_78",
+          "case_order_sha256": "aa9a44cf519e6bf2f786750f25b845e389ed1a24eb0b501695826b902d21c82f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_123",
+          "case_order_sha256": "ac497633beb4bead29eec2f7de713f65e9b2a20adb84aadb029d697bef04ec24",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_82",
+          "case_order_sha256": "ac8799222dc0bed1ae3a5519edab65908efb15f8129e155a6e5c50d6f762dbb3",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_135",
+          "case_order_sha256": "ad94887d7db91f6e3a187b0f174cd739a5e65dc14e70f0f20a0d1b9271e050d0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_42",
+          "case_order_sha256": "af1da1a3b3c00bf87feff73343c93bc37d891af5dc7bbbc30dce4c52eb84f55f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_150",
+          "case_order_sha256": "af465c8389a492bb55e664d357a20eb96a939f37c743e6f8c0331d0447b9ea6c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_57",
+          "case_order_sha256": "af678630364db72b8ecb22d2e63e4e5278b8b003df6be1a4730907759a648911",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_152",
+          "case_order_sha256": "af6ea8370963ab79a871c40525e3e7946b94542c67187f6a1bf9cb4f5deae81e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_124",
+          "case_order_sha256": "af7fc53157e797d0144d5bab44a90a2c31a453d919837fdebc5e1295c65aded2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_125",
+          "case_order_sha256": "af97d1c1b22d0c9fd606346df254c36f1880726ddb74f7669fdf89e443b2a059",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_41",
+          "case_order_sha256": "b03c8ceb97400e2501f71af4e3841de8b42598ee087eeef092c50892b5ffbcd2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_17",
+          "case_order_sha256": "b0845c6049412acbb6d61f4a91cc82444a49690f90a8155a979e875b9e714aab",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_18",
+          "case_order_sha256": "b45311568a6144c0404535787c8d359ce5a3289c9fad24bc88c9355567f9057f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_29",
+          "case_order_sha256": "b4d94e1049e61e8dcb3f1244852677ff1b3ae2ae8409871500bf9cfed9204559",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_163",
+          "case_order_sha256": "b5811761336603921f28f3fe420339ce51b5439200186717715e4b4eb15a8b60",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_69",
+          "case_order_sha256": "b67c076fffbd37152cf27dc0e082625e646463ae8b2451ff2afd59812010fdb1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_90",
+          "case_order_sha256": "b92e73d31b4bf535768415ffb2d29422ba0d5859072ae855d4259ef7cbab3232",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_11",
+          "case_order_sha256": "b9871376a12c59d0d5cce048fb1c6e391e132d6e63b25fb75b72dc1c271e78e8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_13",
+          "case_order_sha256": "b9adb7b89808a108ee9c9449597c6ee8c767584283abd053fc82335e24b352d8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_83",
+          "case_order_sha256": "bbec7b61cd3a3ac33bd1ac9fe521afa74572011a0718c5031c90b7541a12afe4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_134",
+          "case_order_sha256": "bc96930a1ba4b7cdbafd69475ffe06876392007108b826c75067a1fedde0b82b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_119",
+          "case_order_sha256": "bca33bf35ac213fcbe7072fd02dd77009c437509b746094129cf09a1dacba434",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_77",
+          "case_order_sha256": "bee5874e31baa92b71e2631639e32f307fa9f6acf7afd7cd601abdf59535c5be",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_162",
+          "case_order_sha256": "c1af080ea8a9e28d696855c86680a55df4d1187377ffc45210597eb5f345aab5",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_74",
+          "case_order_sha256": "c46cb9378a3ed8fcead20ba9077606808dc686fcd6cfe515b53fb0a4b0e6f84f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_68",
+          "case_order_sha256": "c728aead288985c3e89b2ca78db7979e0a8eb796d8111de371d0c9251eb91202",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_154",
+          "case_order_sha256": "c72986e7b407b6245701a2438fed5848e465729e4f365a106f0e74b642afaa07",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_55",
+          "case_order_sha256": "c936e7d4d8f7983447db0f9148c9a0da081698be5a76ed4d40eb91173ce4070d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_70",
+          "case_order_sha256": "cd674fc3962095fa9ad17e1b18d331a95ee253a30bd1abb40d8a3a36d4b5f3a3",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_47",
+          "case_order_sha256": "d08dec432f6a69c0cf59286c53249d741275735c4be5a61dedcea4f7a5a86981",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_148",
+          "case_order_sha256": "d110e7dce839d437eedddb0d65336fa49cc8c53025d1f4d61c5556f5a879a5b7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_21",
+          "case_order_sha256": "d177d621c6f0b86f0d0406ed993dfe7b0ce8bf30cc3be7c90930a2f0ebde4c62",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_59",
+          "case_order_sha256": "d1a8d894baeb30d0856669ec3a3505ef639296659497506fb503bdf4626f04da",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_75",
+          "case_order_sha256": "d1eaa65fc980306460f37a5cb92170b7d8a59622d154c985a26c2f372fb5a8dc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_20",
+          "case_order_sha256": "d266862cc97020eab87a5378f138c924d7c71590a322a6fbe1f53ca056d4edcc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_30",
+          "case_order_sha256": "d39e689487ddc55d85e493ed8d2def4f0b2ee38c1cde9c9656d5cb05fe7958e1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_28",
+          "case_order_sha256": "d42bb2acc5ef5968b625880b1aa458817a8dd58e7a2caf72c876f0102bc95195",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_26",
+          "case_order_sha256": "d4463fdb15c8ea6c0eb6b4314970c9e128798cba1a18656911fad424472f3340",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_19",
+          "case_order_sha256": "d5e1247fd85b7102bd8dac8b460cbaa4079f1dfb3cff528188970156eec8f39f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_136",
+          "case_order_sha256": "db3523c596a266c280bbcc5dbf205def6b583d39f953b694702475858c1d28f1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_40",
+          "case_order_sha256": "dbaa02ac3f1e5b377c824c91f586ede1b2485625b40d5aba2634286a79715f26",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_50",
+          "case_order_sha256": "de416d6b95498a11a6f9fc05712dedf333e5ad0784e4b4b1c0d971978c4cd206",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_116",
+          "case_order_sha256": "e1a152e6514dcbd421eac394719a6148473b26fe9b569b510f93825b1d2a41d3",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_2",
+          "case_order_sha256": "e1f579afac815b1029e0dc697b759eb2776094dc10ce9aa5570cf36e83391980",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_147",
+          "case_order_sha256": "e212e0c938904c54d9094a9734e88e801ce1c2d11632a8d216aff62fad3b6bc6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_120",
+          "case_order_sha256": "e3d08e881208d493504122cc6279d8e018c45fb5b5dba8a41a478cf768a68493",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_101",
+          "case_order_sha256": "e3fa3dac329cd373f329ea1485c8040631cf2d4dc748a5ef143645e94f9fbc33",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_168",
+          "case_order_sha256": "e5ad05a4cf53235a220b1d89864524edfbde75eb9c553ab58b92b6649a3c549a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_91",
+          "case_order_sha256": "e8bc4a0162059759c2a30c4b51ac3d19163c2f33c195cd1eb44e61aa182de1e7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_165",
+          "case_order_sha256": "e9157b0e118073ac9ce1d6809292a4f25c54a24d00cbefa8a0a5c4ff84145c65",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_60",
+          "case_order_sha256": "e9e584e90ae13d4fca6d396b22fb164c4b9cb9cd3923d30625e3c8e4c0e0e0a3",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_51",
+          "case_order_sha256": "e9f04b1c17781c07144f07d10570d238f655a1910fa0e0c8e5b9e69f84d9a8f2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_63",
+          "case_order_sha256": "eb23caf06c6b5b7017be2398416f7e8deff77b7ed4e8da8f1c64815af889fa6f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_99",
+          "case_order_sha256": "ed6777f0c89b17107584623495aa47b42301e2cea5ef815cf2c4291c31929382",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_93",
+          "case_order_sha256": "eeec5d50d64b1e69cfabf38bfa32efb3508cd443d5ccb6ebeeddf37c23c69b23",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_153",
+          "case_order_sha256": "ef40e27dac05dae1f141e27e46da832e257937730bf6623f0b9055726c51f8de",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_132",
+          "case_order_sha256": "f7d909edb44316b3248c4addb6125df41b306e3e93475773787739360c39631f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_160",
+          "case_order_sha256": "f7e9d1a007b917caf5a58dc44d71b7f0fa0b6163d71392929e92e4918a563523",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_7",
+          "case_order_sha256": "fd1d1b9490af2cdddfc9ce3979cd2b80efe5e27392d7c311942895422842545e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_5",
+          "case_order_sha256": "fef1cd6d189ae961e455d42ff61da86741deaec2420767d1a24da20594b7265a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "pandas_164",
+          "case_order_sha256": "ff865f2b02e7ee479f471271d91a072f1c5c10e9d5fd8fba79297add2294d32b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 15,
+      "project": "pandas",
+      "project_order_sha256": "76398ccb7c0da0a43632391d02f5d78db48d1978931ddd09e0e4ad60af7c3f80",
+      "unexposed_candidate_count": 154
+    },
+    {
+      "candidate_count": 10,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "spacy_7",
+          "case_order_sha256": "28edfef2ac2da5525220f0d046fb87b584c4b07dd10063765271b8962eca24bc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        },
+        {
+          "case_id": "spacy_10",
+          "case_order_sha256": "2da2de70d5490826b343d371253b697c60a8f1a7fa2fd31d7b1ef1e9c933947a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        },
+        {
+          "case_id": "spacy_3",
+          "case_order_sha256": "3e28657286d23bf3a4b16d3d8fdca674e4b3e67c7bc9e5506285f1f52d36dd86",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        },
+        {
+          "case_id": "spacy_2",
+          "case_order_sha256": "442731ce2f563931f24285b7e2f8e8c28a75d3c9290f088aab389d2ad6d94d31",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        },
+        {
+          "case_id": "spacy_1",
+          "case_order_sha256": "598cda384e1f5648dc27470ec3efa5a7d96f16ef88afdd2fa2a1c88ff74722ff",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        },
+        {
+          "case_id": "spacy_9",
+          "case_order_sha256": "5ccfcf4fd1481962e54597ce5a77a2c5629e9d4058a3a73d2be19a898788dcde",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        },
+        {
+          "case_id": "spacy_4",
+          "case_order_sha256": "5f3d61ea09fb08bdbe708d6d2d63962bada7ae6eaaef18ac2955a5bf213dd24c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "spacy_5",
+          "case_order_sha256": "7180bb1a3486155cb334d30aa183d72cebc8651957a028b4bb8c285c628ca8c2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        },
+        {
+          "case_id": "spacy_6",
+          "case_order_sha256": "da929dc1870b2227711393b809b0af67e93daba37b897f5ae0d8cc2026cbca57",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        },
+        {
+          "case_id": "spacy_8",
+          "case_order_sha256": "fb5eba1912b11dac4500663e3681845ddae16da20a780069dd32e2940ea2418b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.7"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "spacy",
+      "project_order_sha256": "84f63e96fb898dae1060cd4a18f1e484fefafa459619b648368ca6c246fc432c",
+      "unexposed_candidate_count": 10
+    },
+    {
+      "candidate_count": 32,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "thefuck_30",
+          "case_order_sha256": "017bf59a7976fcf411e0da487b288ca6854843f4719db1bbc526795ba67da15b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_23",
+          "case_order_sha256": "19a96167a00d1cd3cdbb4139de7742940e0f108cc4c94a07db7690a2a415f837",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_8",
+          "case_order_sha256": "1e19b0a3894d29432badbb7133a69a4d2ee43e86180ec25c953ebc66e42823d0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_20",
+          "case_order_sha256": "24e598d4604a4a0f3d9b460edc179c38c55fd05f437672492660fd2a11bf1788",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_21",
+          "case_order_sha256": "279936fe7b645d9f5564b292617059a84bbf511c618ca0957f9605d283124196",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_26",
+          "case_order_sha256": "2e2d1abaa4ea475fceeef4e3784117bbb65fef9925ba09a0ebcaaf07d382cb7d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_31",
+          "case_order_sha256": "3069757b34fbf95bafab0a1a19c7b47c0e8b33b33ea9b1a4397dc33f9c53203f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_29",
+          "case_order_sha256": "308ada0d54c1cd45dd8bae35bb25057de318ec7a8961483ed71e5c2bc0d7bbc7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_17",
+          "case_order_sha256": "41e4dd227b36d98819ba9543341d93da69fcb04a3bbddf7bfb4ef4f9489d5565",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_22",
+          "case_order_sha256": "5fd5c072e61a844e054d4dc41d68f63e34e0329cf2a2660f3d05d39564232faa",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_2",
+          "case_order_sha256": "611ec62272a957831a6079e9ac2bd6da67bcc56db1ff8d8a11554d17b14b2dee",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_16",
+          "case_order_sha256": "6685f262d9aacde6b8531f3c0df8deae3c677b43a3e8bf230be249ed10e585ac",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_27",
+          "case_order_sha256": "720781fa049cc770e9966c9790045d08abe5d3f3490810a3170ea5464d8f8e6e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_13",
+          "case_order_sha256": "7295b4df1407ec2bc27348af52fe93c264d97f08c02a5be6974e635dbae0ebfb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_12",
+          "case_order_sha256": "7bd3c21f6691c286c20c27256fafceef488cc851f3785c03ebfb067f0b44a8f0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_18",
+          "case_order_sha256": "7dac20825c967ad852595001b712a3d12909d74f6f7738cb30140c21f9c1534b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_5",
+          "case_order_sha256": "8684f6c36d423099015510efb5072b94de74bca49fc66c7e3cc67a4fd0be79af",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_9",
+          "case_order_sha256": "88e6e69ab6ce3e6e58115f78a4a9fff3ffb9c6768e169eeca7565889189b8aaf",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_32",
+          "case_order_sha256": "9c62f3257332013b72cb6d98fe0213934879452391b29f37cf493faac0145c9c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_14",
+          "case_order_sha256": "a7bd67406c1d4edcdf051dc05b0d8e30cf9e1fe76687910b0d250bd347ef66d0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_25",
+          "case_order_sha256": "addfd6a2d9f58f03c65b2b634effdacba4e69b88ecc0b2db666368e35d17914c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_6",
+          "case_order_sha256": "b1800cac35f7ddcd0562dd273762f75e573b7c15541bbb03438b0deb9b0c2862",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_15",
+          "case_order_sha256": "b8fb72655161cbdef36b0bbb6473d14391e875a799aecaf124f96842eddbcb8a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_24",
+          "case_order_sha256": "c51f0dbfe3ee4c998918b084cefe5aae3456d2c69753cd970a24ca55e706949a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_28",
+          "case_order_sha256": "c55cd9e9042b1b15cb6878bf5547f22dc58c3d167be4463c8710f3335e18768c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_10",
+          "case_order_sha256": "d677b1911f17c63bce3dc85e6989ef4b7fad338b643b372a8cb827d2b629a2be",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_11",
+          "case_order_sha256": "dac11c98c42054a32d004c832e51341315a1fc7b89b2e158eb2de2e7252a5b84",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_4",
+          "case_order_sha256": "e32c73a0934160f1fc8854f4b383e4eb1224d14cf9214d081bfe32bca56314e9",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_3",
+          "case_order_sha256": "e90529346f577399c9f8909589dcba4a1388f98061aa1b555d688088a9f90d3c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_19",
+          "case_order_sha256": "f4474adc1de91524448fb963c6e5fe0819ed3245a7d724a6d2f1022d60976a82",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_7",
+          "case_order_sha256": "f9fb4e2946fd97dca1a750013bb9c42cff82cf4b4ed781637565fd70a34fd572",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "thefuck_1",
+          "case_order_sha256": "fa0790354bad6a295c9b0d40e407055f383d0ba631b0483120251568cc32c087",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "thefuck",
+      "project_order_sha256": "8ad028e12e20c59a8b8186c8a3bb964298078aea64165d802987f3e391bec8ba",
+      "unexposed_candidate_count": 32
+    },
+    {
+      "candidate_count": 45,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "keras_3",
+          "case_order_sha256": "01618e5e9dc98631f24f0ee0b2075c6952076bd99875c74dac5f454bb9f47a03",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_26",
+          "case_order_sha256": "02efe87c624caa0bf5e7920a1bc363d137c91346ebc69b02b80800d1d8a831ee",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_6",
+          "case_order_sha256": "0428e202c9fcad5ed7effc58eeaef1215b4bcc25faa5fa4f1cfd7ec30a599850",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_29",
+          "case_order_sha256": "0796594460650c77166bbd7bd82345f447ee640675d90f07f578c03cbcfa576b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_17",
+          "case_order_sha256": "0ceae0a4551a8faa2c91bb551e998ab31ca8fd0c054f6cf5fdd8bd3891677afa",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_19",
+          "case_order_sha256": "10275508c8872237c66e15c59e57936e680d6f3c03d2ea649afa4aa414664f1d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_15",
+          "case_order_sha256": "1d0c619347653ccfb224febae05a822dc2c8008b5c0f7cba6fcac1930ad8b61b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_12",
+          "case_order_sha256": "1d4cc81b8996b62aaeaf270bfb3ca5f0c9f6d507f5433cb5df858ed6bee792ec",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_40",
+          "case_order_sha256": "1e00cd36b06dbf596561c5d37effbd588ace6e53da91b9d1b74f92a17a90c60d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_39",
+          "case_order_sha256": "30ae3ac6711164532ca7a238255c0d8061596907d4e4a4b3bd0e386e48396b87",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_10",
+          "case_order_sha256": "31f744db5504d003cb4561ee360dac649713b920162f27e194f5b82a3c7e429e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_36",
+          "case_order_sha256": "3649949f5d4cf42ab6c0486e89b935aa9af56a9a07890c2d6a22afa16aa8752d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_7",
+          "case_order_sha256": "39feb42b47b6c6893e1d831cddc0b8d351238cdc0294759c8e030e7e5ddf8762",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_44",
+          "case_order_sha256": "3f93bddc3d11ae8d7ec70048bc948ccb2be8822b4ba20f6bbbdc587ced0d08bd",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_11",
+          "case_order_sha256": "4e05ec8682cbb40a5c57daac7fdcb7c7f6a1ecf9ca562f3108a0b92776bdd3fc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_38",
+          "case_order_sha256": "4e58e3aee4c860f42dd5132f2c68fe525bc45197ba851f213102ac55b9f2c591",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_23",
+          "case_order_sha256": "50439a7cc943c4a07011833aff3d974a7203b49dd44d0c874b3b2b2635acc58d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_13",
+          "case_order_sha256": "5ccc29d7036cb762b3eb659aa0b19d8c58b779309215457ce381f22c4a0b9dff",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_8",
+          "case_order_sha256": "64349f26602998e456814f797bf46280e577195084bd22fdd4246816c349341d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_5",
+          "case_order_sha256": "68cfb4c1fe73e3c8b5d09738e8b9c3383a7bb97ebc36f0713e1700ff255cf34e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_18",
+          "case_order_sha256": "768721b67ac4f4402dff61c75c24e3b80c67c482bd0677d9c2be3e43cb050d9d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_28",
+          "case_order_sha256": "7c453cec6e6140a372f5bbd9788ac0bf91c72ebaf98c98413e6c51b03c40b09c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_31",
+          "case_order_sha256": "80d2e8c8fbe9cc98a31963f2ed412dc921b3e091fca97bd12ae19f0b9b17303f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_25",
+          "case_order_sha256": "8556195fb6add78ddc1159c5fa7b3f039e594ce18e453804d5734a48890b6fc2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_22",
+          "case_order_sha256": "8d9f016192bf85fdfa4eda08941b2ad291b534d141b87203f26d601533998d72",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_20",
+          "case_order_sha256": "927469b21a9ba8efc7d77d4a8ef3a380a6007b8e8a418bf2f3810d30212deb5d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_33",
+          "case_order_sha256": "942e1f6b154569bae91e6e7a96c689cc09e587472412c6d6e774ab131c85d401",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_43",
+          "case_order_sha256": "95291183fd792dabba24348432885397987454dc80fbfb52754f6b1b66008a32",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_21",
+          "case_order_sha256": "a2ce42ca10ecf9c113db123b5dc406649ffa853ca5dbc2fca8bf9bc80b9532c4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_16",
+          "case_order_sha256": "a434f0abb3c64114a00cb5374ec8b9b0ca0ce29b350b52334a3be9f5c360d1cb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_32",
+          "case_order_sha256": "aa00aba210d9725d2881af6323f2f6beca02e544d527aae01d1044b95adad19d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_34",
+          "case_order_sha256": "aa0f819d5596f1057c175b58ec65dd7d92c91c661a7f414b4af924cac04da3ce",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_24",
+          "case_order_sha256": "aaca52608f617b2c41e938b458c7945c3eea6f9ee4fdcb32757379702a748d77",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_1",
+          "case_order_sha256": "ac62a66f6b10ef0d156b3e63dc9edad496c1927d186956d0b838fb7d24a9980c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_45",
+          "case_order_sha256": "af93554ac587e1d66c260c2c4b0e14c6fccdbd61e99ef1b745d862b11e581733",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_41",
+          "case_order_sha256": "c969ba669edbe125588d72134516f2513d92c8518552edd1bf87792a6fb1bfff",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_35",
+          "case_order_sha256": "cca86add14e42e41975a0e188a062dfed5574032fd35c40345b5d05255cc0de5",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_27",
+          "case_order_sha256": "d58c4f93a42f5f9e51fffad5c67eab2652dce57578ee466a395a19ba5a647846",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_37",
+          "case_order_sha256": "dd251e1866f0b1c8e3ec8c5c9b8daee19c3a26a6cb850060fe5c8d8b1c8e3ab3",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_42",
+          "case_order_sha256": "deb498ed877cf8dc4a8460c20308624812a3af3658d93087d8ddc477485e9370",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_9",
+          "case_order_sha256": "e0815158290bb8fbb482fcd272da19248d272aa5381519e859c53a5a41346e06",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_14",
+          "case_order_sha256": "e437a6352f269d545990301e9bb6fd6925594e52272f053e9bd84bd0011d9c7e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_2",
+          "case_order_sha256": "ea633fa25653aa58e78423364b79bea09ca030d0e6cc0fb8b94aa6d1929b1ab5",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_30",
+          "case_order_sha256": "f0329cd7f1f9d6ec88b607dae76fd515aeb2705a3aeed84e7714e6f157366ad5",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "keras_4",
+          "case_order_sha256": "f6cb8c5608a9a67473b0b7570febd2ca5c6b95874413a83e90a4bad35abf0f65",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "keras",
+      "project_order_sha256": "a371a120019a3dbafcfda227e6b2e9cbbd38baa0946aef1a6154ccf0f14a89a1",
+      "unexposed_candidate_count": 45
+    },
+    {
+      "candidate_count": 23,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "black_2",
+          "case_order_sha256": "1f2f09dfac79358551c9ffe594784e75cce0f8c944e974af09b996869dd2de29",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_15",
+          "case_order_sha256": "2d87b7889bbc5ea85c813d14f989b6adef336fac3d1b12e7a0cc6dcb9288dc64",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_10",
+          "case_order_sha256": "2db7cdcaefb985ea1887f902ce2ff334d602a137ad6df461bbb50bf7a682bc70",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_19",
+          "case_order_sha256": "34d97a2e801811b7f450a403d21754ffa7b78b38f6ea26ad667f90b369d609a1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_14",
+          "case_order_sha256": "3529294c22f28f88e522da0da64c2793e35ce875cce3acffca29c2b7a9348888",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_11",
+          "case_order_sha256": "4039f7a9d17f73d4d17d0c002d0a07565141e49c30148ab1a73a893c52e4ebbd",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_9",
+          "case_order_sha256": "460e4be756793128d715c63b4fa2e71f281e35f1c5e9020379ee68281965fb4b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_7",
+          "case_order_sha256": "57092b1fd34756a609150ebfecce7e2cb202e0d8a68f4b786a002646062ee8c0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_16",
+          "case_order_sha256": "585d24bdba3a4b3f41a244807484f38451e036d5e98ecba8cef4223b2f6b9200",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_4",
+          "case_order_sha256": "64cbcd23a8e5393d4e8f663390980b133cb5cc0bd7197facae45743b845215e6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_17",
+          "case_order_sha256": "6ecf01013609db0d339aaeee58ee18e1ab8fd850451d2667b8a14965f674597b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_22",
+          "case_order_sha256": "6fa371f85eff5143853ba7275066173df585f4ba7927264db11862ad1427d4a6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_21",
+          "case_order_sha256": "755732d94ccc8e789a29e9a5401a9d4b4105146eab2c0dafc498b4bf48453723",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_1",
+          "case_order_sha256": "79b2a604f23390e937f53f76a1f83840c5f3fd95dbffaf523031b5b5262ac003",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_23",
+          "case_order_sha256": "91544c1422bff6d1cb7aa0ca1d4f095614571e2369f0688db4e3c20ad1a8b55e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_13",
+          "case_order_sha256": "932f00653f149bea75a6a63bf3c4ca586531c9f205ab6090a556795eb849b93f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_6",
+          "case_order_sha256": "9aa3b9ec5ee86bec38461d3e0a82154e885bcd063ae2b978e9171526c77b8ada",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_18",
+          "case_order_sha256": "b1bdaf5c6489155feff2b230636a2c8e86759778e5b749d44322690f2740c0ee",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_3",
+          "case_order_sha256": "b565102daf0fe36e7de237b8361cd8fc0c6b8d681c5bc1e63a9b116faa63355a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_8",
+          "case_order_sha256": "bff010e6aeb29a49c6f1fd79ea50f90aadc315c7a5392b9b47d2d6d921678778",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_12",
+          "case_order_sha256": "e4af4a98cf0bf93a63cfade8d03e82d2c49f2bcea2153f8d47dce7b11395dd60",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_20",
+          "case_order_sha256": "e5b5c71b15f12a998fe889374735598a656d9cb66867bccfc787f77c0d442ccf",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "black_5",
+          "case_order_sha256": "fdb50f11cd93c9640e78f011032f7b4cf29accd2380053a8661da3a26d424fc1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 1,
+      "project": "black",
+      "project_order_sha256": "b669c02a54b7371c34b0ef07573cd7b84979226120d77325c5f726c0f79da9b6",
+      "unexposed_candidate_count": 22
+    },
+    {
+      "candidate_count": 5,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "httpie_5",
+          "case_order_sha256": "152af3e9c93cc2eb8ffe753a35e8e8b459ee718dd2a9653ddddc17387c9256d8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "httpie_1",
+          "case_order_sha256": "1c840042374daa6576f8a50e8ef7084ce0e369aa9d03e322f66b41934b26b627",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "httpie_4",
+          "case_order_sha256": "754a8c7eaf3e49d8de88618b4eb673fc22bc3af21061f377e5531eaad9b78c7d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "httpie_2",
+          "case_order_sha256": "d8e6299cd8b2d05618daa364b415122d43860985330f4918e168df49ace5c967",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        },
+        {
+          "case_id": "httpie_3",
+          "case_order_sha256": "f2dbe89c2796db7ac72230d81083f8b438de38d7ef6a00304b4e515bca55ddba",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.3"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "httpie",
+      "project_order_sha256": "cbe08a67805df3fb1e3f006792ae971eb5ba0b32bb16bf591d0802ab03bd7c5d",
+      "unexposed_candidate_count": 5
+    },
+    {
+      "candidate_count": 9,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "tqdm_8",
+          "case_order_sha256": "15abfb63d0e04277bf54798a2c66f5169be78ab691fc6647e8ad29773d054209",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "tqdm_5",
+          "case_order_sha256": "1a767c0e008e13dd75afd9b0598a3147654555a707a164d8ea5b8bf4ce36b06d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "tqdm_4",
+          "case_order_sha256": "3048a51c985664b3f286fbe4ee1ddb59cf60720011a37aabc41d1aedea5adc34",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "tqdm_3",
+          "case_order_sha256": "5c160c66ff7b3c4eff590d3164db32db3c10471432f39d4d0cc2e17c904d9366",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "tqdm_6",
+          "case_order_sha256": "6807f5177fff7d8bf1c155ac3e27ff0660299f5df8678b8d1aa44893d4fbf450",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "tqdm_7",
+          "case_order_sha256": "6f68e7aecede4699a6727f91b11db63ee62c2c35926a7d5f956d9fbb6e7af185",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "tqdm_2",
+          "case_order_sha256": "aedd83e8b7be2a3e26a80c4cad6cf2b0cd0ee84ea6a68fc978747e6f830901c8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "tqdm_9",
+          "case_order_sha256": "b5b97a92f54cc55d060b19283f0733194f026628a9f92f930117d601743becfe",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "tqdm_1",
+          "case_order_sha256": "c2d54cb6259c133596fab0c16e16406dda8af382bed41a75c3b82d031d9ce9c0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "tqdm",
+      "project_order_sha256": "cc865b4d8ef84a0092081f36309a59918c1c851b22eae5f35f5cc45986e34c4e",
+      "unexposed_candidate_count": 9
+    },
+    {
+      "candidate_count": 18,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "ansible_16",
+          "case_order_sha256": "04865ce4e6aa7d151b302c97bd6a33b0d87ee1d2ca35b69480a6da3a8ab21ac8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_1",
+          "case_order_sha256": "0c98b0bb7892fdae9c334ab34b17ffb3a0e7fda7d068f8d8d4bbfa52a294c74c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_4",
+          "case_order_sha256": "1cc43d0e2b94c088569336038a3abc8618556d1eba5e66f7cfa26beca28d47b2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_8",
+          "case_order_sha256": "2f979c984ee6539709ba551689ee215c7c17734b637370c1d46fedcf4ba06db4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_13",
+          "case_order_sha256": "3506a0bb59de316809d48510c708f3cc5d7546f0ae3e91b4cab71de6cf94f7e9",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_18",
+          "case_order_sha256": "447225f4e337634e6a54d57fc845d125440727a7dded8bf3d586fe0092fa712c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_10",
+          "case_order_sha256": "449aff98f7ead34da9665de320d6146a62c7a069bc47402540262f87edb5ad6d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_7",
+          "case_order_sha256": "4529dffc824e9815e153fa8e0fe4736d2a9ec27b7f3f5923be967843be39da14",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_17",
+          "case_order_sha256": "5ce2b834ea56c917335866f41a5ebabd57b0535fec85319aa6d4e9e40318acec",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_6",
+          "case_order_sha256": "6bd5c0b19bf160a9927b0de652d7ff2e4b8eba035b882998944d6c702a78f9fe",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_12",
+          "case_order_sha256": "7a5c3af1d3c23358a82fb1e42a523f47d12c89135b9d4a60183ad3ad50d1e44d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_5",
+          "case_order_sha256": "8f4a2cb47f8915fb72010f6ae78a0b522dc7e9b256b816206738bc0bc5fccd88",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_15",
+          "case_order_sha256": "b193e930971affc7edfd9616158658ff5aab8c30c0da0ec6e9e38d84e4d8e4e6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_9",
+          "case_order_sha256": "c1ece669a624dda7740c9132762a1cc2996d0f710c40b3e1df73fc1b9c96064a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_3",
+          "case_order_sha256": "e829c7893ff29874d78f0171b1aa821fa5c5ebaa8574edf3df98e9967b121dd4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_14",
+          "case_order_sha256": "f50a8e3fab23f88248c4beb67f2aec5875f97c75a7388b45dbf7b06f61dce5be",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_2",
+          "case_order_sha256": "f5b71538617a82c24c6180acb57bb20441e286e21720b6e3b2e6be49b2fd4958",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        },
+        {
+          "case_id": "ansible_11",
+          "case_order_sha256": "febe7c82115f1f6317baf0e3d4d5ae8d7961ec81b66691105b53297bbcd30e6f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.6.9"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "ansible",
+      "project_order_sha256": "dc42da989fea9590b77a95c3f320d15afc44f106437791391b6abe69bb5f1bf3",
+      "unexposed_candidate_count": 18
+    },
+    {
+      "candidate_count": 30,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "matplotlib_8",
+          "case_order_sha256": "004eda60fcfc3911f00e98f4d638de4c5287b6956a8cefa6ecf918090f76e2ba",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_30",
+          "case_order_sha256": "040be6da390a61f6393e2dac876db8bcf0145730a8ab3b3d36f741f8527c3977",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_23",
+          "case_order_sha256": "15f1491f54d711ea97626d4f109eadf9a45c75418a1e9e17435273c1c85d8864",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_12",
+          "case_order_sha256": "247fc046ed25b63b2e7a1d7a68419d8fb4b9af76cea78cfc51deca1c4ca85970",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_20",
+          "case_order_sha256": "31a0bd7ac8b8895206b69b2057e195d081cde2cc43ad7cc2d5a016a8e9aef86a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_22",
+          "case_order_sha256": "37cd251c1ab258b3bbcd02fad617092e180f1b8e5a813e53edf1649aae2d9ab7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_19",
+          "case_order_sha256": "3a5c893c14ded09721a653bcc982445c991887778e69cde81da60c74a03ac22b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_16",
+          "case_order_sha256": "408054c67942af731df626960c2a49471f5496fe889a5370309edc1d4ab55001",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_2",
+          "case_order_sha256": "457e86e68fc8336da13252648081a08af94eba36ee210899e5f137db8fa12d6a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_6",
+          "case_order_sha256": "4c487d0f0c7e8bf508289827fe99e74b24c29501167ba300881c1a123c59d032",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_13",
+          "case_order_sha256": "526c030c4600d92f177a2a95a8947e54b96ac8f52a92ca2242e92757c2be9ddb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_26",
+          "case_order_sha256": "56b9c0625ada4dfcc1209fbd8eb8b1efdc2f6495e0981b0e726e388778083d51",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_17",
+          "case_order_sha256": "907247fb8ee94758301d2230467659b67d366bd63a1e3323ca30a837ac329cf8",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_18",
+          "case_order_sha256": "a5705fab40f4a716917f562625cc9a8388fe2e63b96d3d69d508b95007f1d430",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_7",
+          "case_order_sha256": "ad830fdb270397303ea1190b0f2cbbf3164b469eba46e48362c0fa8aad9a5f4c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_10",
+          "case_order_sha256": "af111a721565da389514f0b32bcc40f3fc9d3a3221c4e8e35befb0001baae3b2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_14",
+          "case_order_sha256": "b8d8922b568a5d59991303e193b578ba1fbdf21df94bf8ced2e5c4d7eac12126",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_25",
+          "case_order_sha256": "b93b6ee9c231fbd1339f250ed9ff0dcc6fde5f302b46dc9ff3d68325c6ed8b1e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_15",
+          "case_order_sha256": "c03976747ad46bb3aa3341227d224b7ebc3519b101256cc0bcd9e41c7ee46dd1",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_1",
+          "case_order_sha256": "c955ccf8fb1dd405d1492878d022afecd16c3bd5bfb6304d1f81f2e1db953a5c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_27",
+          "case_order_sha256": "ce3ad4460eb2eca436f6176d1c0a6a72a9d8549fddd0b943ea4728a38e7cccad",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_21",
+          "case_order_sha256": "d2b9e7e4a45df293d5c63a0281fb439736c3ad97e6846f426f5f901669b75fa0",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_9",
+          "case_order_sha256": "d31bb073dd6735d8d8973e170011b070713cca06baa848c8e3501de34bbb036d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_11",
+          "case_order_sha256": "df73acb8128aa5be5e9a2e53ad4274a6c178fdd63fa96f1bee718a9beb75292f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_24",
+          "case_order_sha256": "e867d0684ecd36f78ae1c7f7b7d824414a62509edc295df2a281866e1ba25768",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_28",
+          "case_order_sha256": "f12422f4bb14e0b2d52acd705bfb5399abd266dcbfc3eba0d0aba26c69183313",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_4",
+          "case_order_sha256": "f78b9c4ef62591a7246563308436943e16046a21055d1fd715dba23d5b4d1335",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_29",
+          "case_order_sha256": "f8690f4999bd953e8609c8f3c3ff6554787620625d22b76751550c3b192bda8c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_5",
+          "case_order_sha256": "fadcbbaf8af777476eb388ae73656d6493ad71fa7e78f8bdcd0ebfb81b448234",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        },
+        {
+          "case_id": "matplotlib_3",
+          "case_order_sha256": "fb2b4b7ee91c3fde8852dceb4cbbc93a354715956e1e429c10ae456d8949cbe5",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.1"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 11,
+      "project": "matplotlib",
+      "project_order_sha256": "e7745008c735dae43dc68c97496bc9fb8ad7704c290ac45773674b9061d200dc",
+      "unexposed_candidate_count": 19
+    },
+    {
+      "candidate_count": 33,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "luigi_26",
+          "case_order_sha256": "0168ad4f6a4398482b81b55c17411305ffa0170062943c9757000fd4d1c0aa8b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_4",
+          "case_order_sha256": "01b76db74630bc6a1763edb4769fc3df9ebb2fee7fdf218400a2f1d70537e5f2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_6",
+          "case_order_sha256": "020116a2d07ca8540f05d16a68880ab8263565bc56bbfaa87d9c71829fb3837b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_32",
+          "case_order_sha256": "115248e983a6491e3b81d7c4298485515131de6067054944b19ded98b5652258",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_5",
+          "case_order_sha256": "1a8de9616ccc745d12159e603a72157b355a5d5ac131de0dae33bde14b120ebd",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_17",
+          "case_order_sha256": "27e0feffeaeaacda339949768d64ac79efdaa4f665373ba23aba8fe170fa26cc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_24",
+          "case_order_sha256": "2f3d73432e69f12530f7d184e1c0e669c5ca3bef3e30ed6f6f057349e7a9be0b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_30",
+          "case_order_sha256": "3ae3506afe0b262c70c0733d7e125806dd82b88276b62aa12f32f8d880ac3027",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_3",
+          "case_order_sha256": "3dbd6c7ccc65958ca42d4201ad12550220b7886dbaceb36578bfc3cff6653c71",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_33",
+          "case_order_sha256": "4a3886134e95270a730477c74999d01e7b0b7e5aab2a0bf3c0c6d03e3af4387d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_2",
+          "case_order_sha256": "4a7e0610de0f8c53aa3a4b921065eda595aa1c8773b6b0b6363c26bee9119d3d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_31",
+          "case_order_sha256": "4db47732168bfc2928f6247520afa8723e52302ccb0f2156c3557e555d9c055b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_18",
+          "case_order_sha256": "4f3263496d74fb4b8e2f9bfe27067c5265e9eb26c99c0843c14a983d62d63592",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_28",
+          "case_order_sha256": "507e3f3e0a5b2b5e6465e729ce71290c11036625abe64c4afab9d2107c2ea6e9",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_15",
+          "case_order_sha256": "51168e7f6be9276b1d287d11240a88bbf5a3dd37ccda3f7044198ad22e0d10c4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_20",
+          "case_order_sha256": "61c527e24a8643ba5713f06ed3a5c93b729be0e1d9bcbf01ea97a6d465556a61",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_8",
+          "case_order_sha256": "626028b6cb02c4f18cd82284c3a8bba0ca89d90893cac2dd4d268e41826adf09",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_25",
+          "case_order_sha256": "67517d38bc162b24b4b5ac1b489005518eec53bb97bd276d27d136e937b0bcdf",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_13",
+          "case_order_sha256": "692a286c4a07ca50eb918a47cd4855d62e89f95664d7c8d3140a9356a6b27221",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_16",
+          "case_order_sha256": "6d348502418b2001b98f050acfde63f81658a636473003a1eefd28914cfb8f71",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_19",
+          "case_order_sha256": "6f22298d95a677257963d2ac6e37ef01062f7549ef36d9deae944338145b24c2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_29",
+          "case_order_sha256": "7d4f01e2fb70581058e57b1cc7c48eb847622a5bd17ce13a40f1dfbc22c17cb7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_23",
+          "case_order_sha256": "7ec96b37128f3a912cb09d0b15b117d162095e0c0be85eb9b481b438abd97770",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_12",
+          "case_order_sha256": "8fef561bbb206b78e0c9059bcaf8e5adae907e309541f14f3fdd227dc7f1e9c6",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_9",
+          "case_order_sha256": "951253b0d80c4da7f4ee998b217be26cd4e6f9d6a68d32f11c0592c8061e796c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_10",
+          "case_order_sha256": "aac2e5c5520e72a54420b2ad531ce6a026c99f62f303bec72c7a299cdbbc1b5e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_14",
+          "case_order_sha256": "c3a175d8976f1adc4d93c9bae09eaa628648458537bda0e53197faa18f71f03b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_7",
+          "case_order_sha256": "c455ca9b6787849c3253ee1ca54cb568df1a0749969f9404407fc00b269fd20f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_22",
+          "case_order_sha256": "c8778b1d9058b6d6644028b7df632ec713fcf7547f4218a01649c2c09d395e92",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_21",
+          "case_order_sha256": "dbf125a701753fb3ab3f348cec0bdd94e195d8e1544f47c04b0e2334132014d2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_1",
+          "case_order_sha256": "ee4ef8232860eec738cf2f1e25b003a0e5b389ba7bce0fa5ef9e5c5e2da62e2e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_27",
+          "case_order_sha256": "f2c99db53e66f8a2110ed29f54927f30df4b2041c83db62ad845325860c77536",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.8.3"
+        },
+        {
+          "case_id": "luigi_11",
+          "case_order_sha256": "ffb95b405efc59a934c424170a5082109a9c14f8e9a7033f3c08227de87a0f74",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": true,
+          "python_version_from_public_metadata": "3.8.3"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 12,
+      "project": "luigi",
+      "project_order_sha256": "e8c03af547c139f8ef12eaf934d3fe5e7b0635e262ffcea28721e86345e1c406",
+      "unexposed_candidate_count": 21
+    },
+    {
+      "candidate_count": 16,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "tornado_16",
+          "case_order_sha256": "1ea2bcfbeeae88fb47505c5a880309048914d9ac272aefca2d0d9d0e224fb549",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_15",
+          "case_order_sha256": "20ac7b98b80f5a113a6c60dba05b401a300d24ff524eaae5c5bceaa90834e06f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_8",
+          "case_order_sha256": "3062d003d4fb7f4e0e3277c25f2908011b243b94853fd9cab5ab7453300424ca",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_1",
+          "case_order_sha256": "4adfbcd373d8fafbbc51ccab28636cba77dc9c262fb57fd8c320ebd6b5e5ef84",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_11",
+          "case_order_sha256": "550621a1cf895e784312f1b009d47360a7dcd4404416270f2e1b70c4114ec4fc",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_10",
+          "case_order_sha256": "603543e8498ca31bd58d8b58c3b8f9e54fc6f0ee3e2160bdad5ae070b4514b7f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_2",
+          "case_order_sha256": "6bc9703a23721b8bbe56fe1f5ea5320a779008ab5efaa6449fcb71c2bb50ae8b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_3",
+          "case_order_sha256": "717b17eeb48e1b382a104e2e65214aaf1cf666e8094ab68047eb9321c559b7ab",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_12",
+          "case_order_sha256": "7a7ff759f02089ac362031f3f8521234051aba4b612c29d6faee9e3e900147d5",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_9",
+          "case_order_sha256": "7ac6faf9f2fb7fcfb2a7f53ef9ae2e95268a03095e40fc5dbfe0b0e351dab77c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_4",
+          "case_order_sha256": "cea1f6d10edcdc8267272eded8b2b8b2f79185d2f18fb628bd5ee760f8c7dcec",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_6",
+          "case_order_sha256": "cf9fcf13c99e850ad60a8c5f9a07de92564f6b9b34c34375218a8828a62b62ac",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_13",
+          "case_order_sha256": "ee4c88a217d805479f156ea0e330e06839bd1488ca69c811282d67e7829161f3",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_7",
+          "case_order_sha256": "f519a263038d532d6a9432af83b806604adf5d9d0587da7285658b1ae137cb75",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_5",
+          "case_order_sha256": "f574bd2c58637b5e254911017c42e4a17bd783e4125e12a5c655eedd1bccdd07",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "tornado_14",
+          "case_order_sha256": "fe98ff56d9a2a3c33d4f7284a8f10b46e7ff135dd2791d212dd2b4c1e547362f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "tornado",
+      "project_order_sha256": "ee875b4db0bd668f290a7ae0fd90f73ecada875f29355983f3c5117b1095a425",
+      "unexposed_candidate_count": 16
+    },
+    {
+      "candidate_count": 43,
+      "cases_in_frozen_hash_order": [
+        {
+          "case_id": "youtube-dl_34",
+          "case_order_sha256": "05fc9f56f767d4ddca35140a7213ee99ff0cefd442fb68a710d025285943bf5d",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_9",
+          "case_order_sha256": "0e149740f8956ad55c7887eab3e039fd7b46623f1437c2a059675151b92b545b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_8",
+          "case_order_sha256": "10bae4cbe834fd0e4ac071e28d44d7ea836d021cbcdc4a20c997baf267886a8a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_35",
+          "case_order_sha256": "11e1f7d5b27740f53f5f833393d13fe354b2655fb8c76d69b77ffefaf0b3dd29",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_6",
+          "case_order_sha256": "17bb3cc3187dc8748276aa3e7412fc63fd8f08906e9376feddf795d81a52cccb",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_41",
+          "case_order_sha256": "17e8203e5f68eb447aa0f252abd6d78f896d6051ea58737cfd320a0e272b8b98",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_43",
+          "case_order_sha256": "185fcfd40a3c4ce9309f7610af82749649d0543be4368ffe5f9a54981b828aa7",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_42",
+          "case_order_sha256": "1cb6bf5a0dead6e4bcfda3b3fb99ed00d318dd90b8765c5238afc72febe3e692",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_13",
+          "case_order_sha256": "1e8cc13ef7bc6041db805d9d2cfd60c84f202eaf775382199045100c29122e00",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_4",
+          "case_order_sha256": "2b0c9ef96374912482aa049fd0d211d80653690edf07b9eda14914bb1e9eeba2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_27",
+          "case_order_sha256": "2ed6058bd352f3f1932344df4058720cef760647e7bbfd6779fdf5cdfee16728",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_14",
+          "case_order_sha256": "33ede60a6dbdb71374dbc1150cb9641620165f92086779e2c9670c8837fed14b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_2",
+          "case_order_sha256": "38e8dca02f68a983eaa1a591a7f722591546f509f11c84b4c44fb3f10231ba4b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_32",
+          "case_order_sha256": "39db6db9a0dc1ea58fc822c4795de9c76dffb741cd38a52be8fc4c06c2a81a12",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_33",
+          "case_order_sha256": "41091932752980717dace8e397ea453ef39a9296bbd3be10d018ab7a4859d006",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_21",
+          "case_order_sha256": "429e4896454a728c8636470e9d6b54c512c40339ff1816dd7fd291e825fe6c6c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_29",
+          "case_order_sha256": "4c8e780031e1327e282cc133a61ae119a40ddb3dab5dde8ad11886b0fc76f51c",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_36",
+          "case_order_sha256": "5174645b63dcf2b1ff401168175a071c267d80e95617a84f18de20a638e16e1f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_37",
+          "case_order_sha256": "55f4d802e90239bfcf1ffc9d198d2dcf226fa66898f065b7a7b92e8a9fc74153",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_40",
+          "case_order_sha256": "5abc2e86300fb035bac9a75fd1e8b3ff36ed82258994c6318ad464885416c563",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_31",
+          "case_order_sha256": "5f3894db44f82316890408486c74468d5c642518bc5356c31a3da76668aa7aa2",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_15",
+          "case_order_sha256": "64f716183d443b6c97f4ab7f8330e25c92033d2bb50c40221ae8fb3a29e4741b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_24",
+          "case_order_sha256": "6583097f3b3f893117b8ee29a8bad435f3fc7f4cf1158b314ddebbec083ae28a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_38",
+          "case_order_sha256": "6658a49e6b046a60785d08a9dc8fc59e4beef7afe5aa07165d81cc8fcdffd75f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_10",
+          "case_order_sha256": "6d3dba59bc568c37e25ae151f400b797ccabf586099e4cd2836bd0dfb8b7e52a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_22",
+          "case_order_sha256": "6d6246f8e9bf4e7c8bfcea939c6b12f6c2bb92600f8977622ced7a678dfc09f4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_17",
+          "case_order_sha256": "9437e87c1f27b95c559d54b8f396c30030c21a8de59cef0af403a94a7e786a05",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_1",
+          "case_order_sha256": "96d9b24bc01a08e9850ec9d2259158929f81aa6ef665a12b05620bfcc64c78ae",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_16",
+          "case_order_sha256": "adcb76125e9ca6c06a8c0eb95d6465a6318ec3e8949242ad0c1e1617196d6ade",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_30",
+          "case_order_sha256": "babc432104c465e42c5136bc9d8877da4e5e99f88d041d527b1dfe59d203539f",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_12",
+          "case_order_sha256": "bd424bc2002cdc1b371c2fa9d35a09dcb32fd9a0806ace96ae1ed24a1ca28da4",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_28",
+          "case_order_sha256": "bd8b71afe929620e2a358fcac0f017aa231a305a0c877444bafc20f6150eed47",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_3",
+          "case_order_sha256": "c4b48bc74f277ba49a26bcd245a2066c0743807c26b21b14c846e3069409a524",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_23",
+          "case_order_sha256": "cc58bd89c5e435e38970847310467656fdc9879bd6b59d055bcb0cfc7cd64fec",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_5",
+          "case_order_sha256": "d12bf16679aec9936297dd438c6ed5047625dc7c676b6482683352c3aa0b2f0b",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_25",
+          "case_order_sha256": "d7515d7c2f6fd38bf02b1570d471da82e5092941e9ca395afea832db11b29243",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_18",
+          "case_order_sha256": "e1f8ebe2b0423ed3548f77f567834a8a97421fe0179a02f8377e7a992eb0df5a",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_7",
+          "case_order_sha256": "e7f96a27d6149251583111fed8e3c69cc86a0455810595df93bf0619efdf2190",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.0"
+        },
+        {
+          "case_id": "youtube-dl_26",
+          "case_order_sha256": "ea72f5b5ec4da82b66bba11f5fb8fc37572281c24ee272a048cfaec5517fcb4e",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_11",
+          "case_order_sha256": "f29fe9a851592d362b58f61103c129fa7210e4efc77ed34085599b2dd1ccf424",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_39",
+          "case_order_sha256": "f4cca74ef45ccae3032ebf1912157bc8cd80bf454ff43d08827100d625d3bd27",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_20",
+          "case_order_sha256": "f91f93b9b7ed73306a6fc2aba24ab09804d32bc1a454d82d45a8b67601dbd328",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        },
+        {
+          "case_id": "youtube-dl_19",
+          "case_order_sha256": "fa70a3766f21f3200df1ea05da1a567c58acb46f78dbac6b8324bc0645623c73",
+          "preflight_status": "not_qualified_by_v2_6",
+          "prior_provider_exposure": false,
+          "python_version_from_public_metadata": "3.7.4"
+        }
+      ],
+      "metadata_can_supply_two_unexposed_cases": true,
+      "prior_exposed_case_count": 0,
+      "project": "youtube-dl",
+      "project_order_sha256": "fa57a4bbea2a60753760cfc3087191e8eb0717dd4050a8b03718586dca1a243d",
+      "unexposed_candidate_count": 43
+    }
+  ],
+  "projects_in_frame": 17,
+  "projects_with_two_unexposed_metadata_candidates": 17,
+  "selection_domain": "ConveyorFlow-v2.6-case-queue-20261011",
+  "selection_rule": "Visit projects and their cases in recorded hash order; skip every prior-exposed case; preflight every examined candidate; accept first two passing cases per project; retain all exclusions and stop if fewer than 12 projects qualify.",
+  "source_manifest_canonical_sha256": "4fc983e834b5f25d348b8ec3989727fed0857901dfbcd6fcaeca45118cae72fc",
+  "status": "metadata_queue_not_preflighted_not_main_cohort",
+  "target_qualified_projects": 12,
+  "v2_6_provider_calls_authorized": 0
+}

@@ -1,0 +1,16 @@
+{
+  "config_sha256": "5d74ab54f5537e12b852c99116c7b6332e79f9c257d2b3094f2e111d918f8317",
+  "created_at_utc": "2026-10-11T11:29:02.660337+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "paid_execution_allowed": false,
+  "predecessor_issue": "Windows Path string for /mnt/d differed from WSL string; zero container/provider calls before amendment",
+  "predecessor_lock_sha256": "0e288185c9a7ec7589c2704bb99d57b8f3abec8abcf1d634352e4820405d05ef",
+  "prior_manifest_sha256": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+  "profile_source_sha256": "4158e959eda09c876565e3f072c96717674bc19a3610e3fc495259787f232f55",
+  "provider_calls": 0,
+  "queue_sha256": "a76f8ff4fce77ec4c0911a1e28542a85e5d5b93ef8ad21587c1b70b13452573b",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/pysnooper_preflight_v1b",
+  "runner_sha256": "74f8ee07eb0a015a71f73ed3a15b3761523deba14d1321debcea1cb3e4173bbd",
+  "source_queue_sha256": "7add5639f4dd01af87055dd579b519bc6b67cff41a1853ebc978042ee9fcea20",
+  "status": "v1b_cross_os_path_amendment_before_container"
+}

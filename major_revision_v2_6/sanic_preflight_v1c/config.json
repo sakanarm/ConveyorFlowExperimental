@@ -1,0 +1,37 @@
+{
+  "amendment_wrapper_sha256": "5bd9da6bae3afa445060562e24037c77332502a6c3fed0c47989d23fb08ad3c0",
+  "base_image": "python:3.8.20-slim-bookworm@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+  "build_timeout_seconds": 1800,
+  "common_packages": [
+    "pip==23.0.1",
+    "setuptools==59.6.0",
+    "wheel==0.38.4"
+  ],
+  "compile_flags": "-O0 -g0",
+  "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight. V1c replays all five frozen cases with httpx==0.9.3, which is listed by four of five public case requirements. Sanic_1 lists httpx==0.11.1 and remains a disclosed mismatch. Public metadata also lists requests-async==0.5.0 for some cases, but that exact release was unavailable from the package index (v1b build error); it is not silently substituted. No LLM outcomes informed this change.",
+  "max_candidates": 5,
+  "profiles": {
+    "sanic": {
+      "build": "true",
+      "packages": [
+        "pytest==5.2.1",
+        "pytest-sanic==1.6.1",
+        "aiofiles==0.5.0",
+        "httptools==0.1.1",
+        "websockets==8.1",
+        "ujson==3.0.0",
+        "uvloop==0.14.0",
+        "multidict==4.7.6",
+        "aiohttp==3.6.2",
+        "requests==2.23.0",
+        "httpx==0.9.3"
+      ],
+      "url": "https://github.com/sanic-org/sanic"
+    }
+  },
+  "python_scope": "3.8",
+  "status": "v2_6_sanic_httpx_only_amendment_v1c",
+  "test_timeout_seconds": 180,
+  "v1b_failed_ledger_sha256": "8fc829d35d5441225d937d7ddc449483938af2a06588b5020de09c85af727c89",
+  "v1b_failed_lock_sha256": "d00b7938765a12e1e52b7c4ef44db56a709bf13f6872880cba71305a45056641"
+}

@@ -1,0 +1,2 @@
+{"case_id": "sanic_5", "provider_calls": 0, "queue_index": 0, "reason": null, "record_sha256": "e38cf1633ff26a90f8ed657df94f5072f1e1ace34b975fe3d9d3c33b99952019", "selection_hash": "2edb56b6e3d02ce3c7cebb0aa1dd04cf5b29cc4d0d32648358cff140cac0d09c", "status": "reproducible"}
+{"case_id": "sanic_3", "provider_calls": 0, "queue_index": 1, "reason": null, "record_sha256": "9022665deec0310072279485eee4c11625a59f62ebaa3bb27ee8ed5e0039c8b7", "selection_hash": "33074a3792cb691435df61a455ca4deec931efb26afab55bde1af45db27935e0", "status": "reproducible"}

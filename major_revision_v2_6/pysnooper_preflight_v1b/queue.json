@@ -1,0 +1,26 @@
+[
+  {
+    "bug_id": "2",
+    "bug_info_sha256": "0853b73f2900c3cb2703e8b0c4417aac3b998184994a032a66e584210cea9912",
+    "buggy_commit_id": "e21a31162f4c54be693d8ca8260e42393b39abd3",
+    "fixed_commit_id_for_validator_only": "814abc34a098c1b98cb327105ac396f985d2413e",
+    "preflight_status": "not_executed",
+    "project": "PySnooper",
+    "python_version": "3.8.1",
+    "run_test_sha256": "44460547246a8683d22a2b15723c80ab2e23d07022493bd80c16e4c63b4f5fe4",
+    "selection_hash": "778aed7ba799c81329bd03e6b12b0bf74dc0a35369a5da0960d9478bec7b9c40",
+    "test_file": "tests/test_pysnooper.py"
+  },
+  {
+    "bug_id": "1",
+    "bug_info_sha256": "f526381ea5dc370109926d95dd757d2278b91fdecc5d6ff266ee2cdf2775bd22",
+    "buggy_commit_id": "e21a31162f4c54be693d8ca8260e42393b39abd3",
+    "fixed_commit_id_for_validator_only": "56f22f8ffe1c6b2be4d2cf3ad1987fdb66113da2",
+    "preflight_status": "not_executed",
+    "project": "PySnooper",
+    "python_version": "3.8.1",
+    "run_test_sha256": "6d24d2d88478e17cefec81f33a1ef5c44cea64321ff46762384c68e219064d0b",
+    "selection_hash": "c7a407dd77d9097e35e137b6228468254406591626cd8783190bc0985d943583",
+    "test_file": "tests/test_chinese.py"
+  }
+]

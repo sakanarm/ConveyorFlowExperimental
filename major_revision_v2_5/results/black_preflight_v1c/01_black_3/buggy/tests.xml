@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="49e60800e91a" name="pytest" skipped="0" tests="1" time="0.419" timestamp="2026-10-11T07:08:10.912230"><testcase classname="" file="tests/test_black.py" name="tests.test_black" time="0.000"><error message="collection failure">tests/test_black.py:1659: in &lt;module&gt;
+    class BlackDTestCase(AioHTTPTestCase):
+E   NameError: name &apos;AioHTTPTestCase&apos; is not defined</error></testcase></testsuite></testsuites>

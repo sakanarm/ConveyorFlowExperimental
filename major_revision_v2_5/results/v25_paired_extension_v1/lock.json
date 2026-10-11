@@ -1,0 +1,276 @@
+{
+  "ability_transport_assumption": "Bank inherits historical Adult stage ranks; Covertype inherits Beijing stage ranks. Transfer is not independently calibrated and is a limitation.",
+  "agents": [
+    {
+      "agent_id": "A1",
+      "declined_tasks": [],
+      "model_slot": "agent_1",
+      "ranks": {
+        "bank:ingest": 2,
+        "bank:package": 3,
+        "bank:preprocess": 3,
+        "bank:train": 3,
+        "bugs2fix:repair": 2,
+        "covertype:ingest": 3,
+        "covertype:package": 3,
+        "covertype:preprocess": 3,
+        "covertype:train": 1
+      }
+    },
+    {
+      "agent_id": "A2",
+      "declined_tasks": [],
+      "model_slot": "agent_2",
+      "ranks": {
+        "bank:ingest": 3,
+        "bank:package": 3,
+        "bank:preprocess": 1,
+        "bank:train": 2,
+        "bugs2fix:repair": 1,
+        "covertype:ingest": 3,
+        "covertype:package": 3,
+        "covertype:preprocess": 2,
+        "covertype:train": 2
+      }
+    },
+    {
+      "agent_id": "A3",
+      "declined_tasks": [],
+      "model_slot": "agent_3",
+      "ranks": {
+        "bank:ingest": 3,
+        "bank:package": 3,
+        "bank:preprocess": 1,
+        "bank:train": 2,
+        "bugs2fix:repair": 1,
+        "covertype:ingest": 3,
+        "covertype:package": 3,
+        "covertype:preprocess": 1,
+        "covertype:train": 1
+      }
+    }
+  ],
+  "analysis_unit": "source-paired mixed block, not provider call",
+  "arm_ids": [
+    "CF_FIT",
+    "CENTRAL_RULE_MATCHED",
+    "STATIC_OWNERS"
+  ],
+  "blocks": [
+    {
+      "arm_order": [
+        "CF_FIT",
+        "CENTRAL_RULE_MATCHED",
+        "STATIC_OWNERS"
+      ],
+      "block_id": "V25_PAIR_01",
+      "ml_case_id": "V25_BANK_01",
+      "owners": {
+        "V25_BANK_01:ingest": "A2",
+        "V25_BANK_01:package": "A3",
+        "V25_BANK_01:preprocess": "A1",
+        "V25_BANK_01:train": "A1",
+        "black_3:repair": "A1"
+      },
+      "repository_case_id": "black_3",
+      "seed": 25012,
+      "tasks": [
+        {
+          "arrival": 0,
+          "dependencies": [],
+          "job_id": "V25_BANK_01",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "V25_BANK_01:ingest",
+          "workload": "bank"
+        },
+        {
+          "arrival": 20,
+          "dependencies": [],
+          "job_id": "black_3",
+          "required_rank": 2,
+          "stage": "repair",
+          "task_id": "black_3:repair",
+          "workload": "bugs2fix"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "V25_BANK_01:ingest"
+          ],
+          "job_id": "V25_BANK_01",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "V25_BANK_01:preprocess",
+          "workload": "bank"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "V25_BANK_01:ingest",
+            "V25_BANK_01:preprocess"
+          ],
+          "job_id": "V25_BANK_01",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "V25_BANK_01:train",
+          "workload": "bank"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "V25_BANK_01:ingest",
+            "V25_BANK_01:preprocess",
+            "V25_BANK_01:train"
+          ],
+          "job_id": "V25_BANK_01",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "V25_BANK_01:package",
+          "workload": "bank"
+        }
+      ]
+    },
+    {
+      "arm_order": [
+        "CENTRAL_RULE_MATCHED",
+        "STATIC_OWNERS",
+        "CF_FIT"
+      ],
+      "block_id": "V25_PAIR_02",
+      "ml_case_id": "V25_COVERTYPE_01",
+      "owners": {
+        "PySnooper_3:repair": "A1",
+        "V25_COVERTYPE_01:ingest": "A1",
+        "V25_COVERTYPE_01:package": "A3",
+        "V25_COVERTYPE_01:preprocess": "A1",
+        "V25_COVERTYPE_01:train": "A2"
+      },
+      "repository_case_id": "PySnooper_3",
+      "seed": 25013,
+      "tasks": [
+        {
+          "arrival": 0,
+          "dependencies": [],
+          "job_id": "V25_COVERTYPE_01",
+          "required_rank": 1,
+          "stage": "ingest",
+          "task_id": "V25_COVERTYPE_01:ingest",
+          "workload": "covertype"
+        },
+        {
+          "arrival": 20,
+          "dependencies": [],
+          "job_id": "PySnooper_3",
+          "required_rank": 2,
+          "stage": "repair",
+          "task_id": "PySnooper_3:repair",
+          "workload": "bugs2fix"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "V25_COVERTYPE_01:ingest"
+          ],
+          "job_id": "V25_COVERTYPE_01",
+          "required_rank": 2,
+          "stage": "preprocess",
+          "task_id": "V25_COVERTYPE_01:preprocess",
+          "workload": "covertype"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "V25_COVERTYPE_01:ingest",
+            "V25_COVERTYPE_01:preprocess"
+          ],
+          "job_id": "V25_COVERTYPE_01",
+          "required_rank": 3,
+          "stage": "train",
+          "task_id": "V25_COVERTYPE_01:train",
+          "workload": "covertype"
+        },
+        {
+          "arrival": 0,
+          "dependencies": [
+            "V25_COVERTYPE_01:ingest",
+            "V25_COVERTYPE_01:preprocess",
+            "V25_COVERTYPE_01:train"
+          ],
+          "job_id": "V25_COVERTYPE_01",
+          "required_rank": 2,
+          "stage": "package",
+          "task_id": "V25_COVERTYPE_01:package",
+          "workload": "covertype"
+        }
+      ]
+    }
+  ],
+  "claim_scope": "Two paired mixed-workload source blocks; descriptive only",
+  "cost_rule": "cost/job null if any provider attempt has unknown cost; currency unknown",
+  "created_at_utc": "2026-10-11T07:36:37.689560+00:00",
+  "decision_rule": "Agent-local versus coordinator process; same fit/stand-down, belt, CAS and verifier",
+  "dependencies_sha256": {
+    "bank_gate": "4fb587f5b254f31ac8f96b50c8e91a09404eca39e657dd5f7c468c838913803f",
+    "black_candidate": "8301404d203e149ed1c511eb5a1fe89ea84216f19b02a74180b3926533f3e89e",
+    "black_prompt": "b004d1782203a4d36cfa822ec7d22f51257edceebef26736945999b1de349fc8",
+    "capability_profile": "8a17c2c06fd7696dcea5234d136fd666a3d0c24d1432c972d743387db4954972",
+    "container_evaluator": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b",
+    "covertype_gate": "2bc9bff4c4cd5aae23e16e3f5ec9c2ace72a18ebe9d97351a25cdd6b383b066b",
+    "design": "cc8f40635c56a3619fb4f759a78c4d2e85c31ebcdbab18b6c977d24cf149bfc7",
+    "exact_edits": "984005c0fd8939256aef19e6edc651413bac5615e8f11d3512928a152a0f001f",
+    "live_core": "a495594144c158193794b97a12dd4ab21df0e3506736a27aa2587176b2b22595",
+    "ml_adapter": "a2115546d36bc2852ee3ecc4d27c71ae1a8f371e7c223924c815d72f90ae417b",
+    "ml_bundle_lock": "bb62cca279cf9b383f51a396f2bd31b8877dca6d8587ab63ad965762963188db",
+    "ml_public_manifest_bank": "294f9ac97c5d6fbc8854910e82c8f862c6cfad1b6a5dd30485324a94b56596fa",
+    "ml_public_manifest_covertype": "bca25019859bd8f9d9e441067d720c26155c1a9dc23545a2d5cb2604f9c6801a",
+    "paired_runner": "d294c5a4c6df6de69a6a5ef2461463d5719f4bb06901d497446518424c177ed9",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "pysnooper_candidate": "2af61b2e78877a9a6fe2201f67ec6c4a5761a05926cf91b99db6e06daaae43e1",
+    "pysnooper_prompt": "a4388a7e55fffa8b5ed7451e556e5c685d79d3fcefed1dfa7796fc9f72c59d0d",
+    "repair_adapter": "7bdc1131ac46ab0ec1568ace5dc2edeb2ca9667cee791a7484db5e0547e986bf",
+    "stage_core": "0fc103fc4a3cc5debce75bf2f69cc902e8ff3a594154fe0475161ba83146fa17"
+  },
+  "diversity_floor_not_yet_met": true,
+  "generation": {
+    "max_output_tokens": 32768,
+    "temperature": 0,
+    "timeout_seconds": 720
+  },
+  "limits": {
+    "horizon": 3600,
+    "max_attempts": 1,
+    "no_volunteer_limit": 6,
+    "scan": 8,
+    "w1": 2,
+    "w2": 4
+  },
+  "max_provider_calls_overall": 30,
+  "max_provider_calls_per_arm": 5,
+  "max_wall_seconds_per_arm": 5400,
+  "ml_runtime_root": "/mnt/c/Users/Sakan P/Desktop/Personal/\u0e1b\u0e40\u0e2d\u0e01/2_Other Projects/9_ConveyorFlow A Decentralized Volunteer-Based Task Allocation Framework for Heterogeneous LLM Agents_\u0e01\u0e33\u0e25\u0e31\u0e07\u0e17\u0e33/v2/major_revision_v2_5/results/v25_paired_extension_v1/runtime/ml",
+  "models": {
+    "agent_1": {
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "model_id": "tencent-hy3"
+    },
+    "agent_2": {
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "model_id": "gpt-5-mini"
+    },
+    "agent_3": {
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "model_id": "glm-5.3-flash"
+    }
+  },
+  "no_universal_superiority_claim": true,
+  "not_pretended_to_be_new_independent_repos_after_feasibility": true,
+  "paid_execution_allowed": true,
+  "post_v2_4_exploratory_protocol": true,
+  "repair_runtime_root": "/mnt/c/Users/Sakan P/Desktop/Personal/\u0e1b\u0e40\u0e2d\u0e01/2_Other Projects/9_ConveyorFlow A Decentralized Volunteer-Based Task Allocation Framework for Heterogeneous LLM Agents_\u0e01\u0e33\u0e25\u0e31\u0e07\u0e17\u0e33/v2/major_revision_v2_5/results/v25_paired_extension_v1/runtime/repair",
+  "repository_test_timeout_seconds": 240,
+  "research_results_before_audit": false,
+  "runtime_root": "/mnt/c/Users/Sakan P/Desktop/Personal/\u0e1b\u0e40\u0e2d\u0e01/2_Other Projects/9_ConveyorFlow A Decentralized Volunteer-Based Task Allocation Framework for Heterogeneous LLM Agents_\u0e01\u0e33\u0e25\u0e31\u0e07\u0e17\u0e33/v2/major_revision_v2_5/results/v25_paired_extension_v1/runtime",
+  "status": "v2_5_two_block_paired_extension_frozen",
+  "tick_ns": 1000000000
+}

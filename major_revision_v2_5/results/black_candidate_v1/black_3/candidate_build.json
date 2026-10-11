@@ -1,0 +1,6 @@
+{
+  "return_code": 0,
+  "stdout": "[1/2] STEP 1/4: FROM sha256:291caba4e1782fd6138638de304153f3542b5b87a81343ee0a46084d2914fd11 AS trusted\n[1/2] STEP 2/4: USER root\n--> 203e19b8394\n[1/2] STEP 3/4: RUN mkdir /candidate /protected && cp -a /buggy/. /candidate/ && find /candidate -type d \\( -name tests -o -name test -o -name __pycache__ \\) -prune -exec rm -rf '{}' + && rm -f /candidate/.git /candidate/bug_patch.txt\n--> 75a768f1ea6\n[1/2] STEP 4/4: RUN cp -a /buggy/. /protected/ && rm -f /protected/.git\n--> 67d99afe7d6\n[2/2] STEP 1/7: FROM python:3.8.20-slim-bookworm@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f AS candidate\n[2/2] STEP 2/7: COPY --from=trusted /usr/local /usr/local\n--> e94822e18fd\n[2/2] STEP 3/7: COPY --from=trusted /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu\n--> ba281b9ec09\n[2/2] STEP 4/7: COPY --from=trusted /candidate /candidate\n--> be4cd40ae7e\n[2/2] STEP 5/7: ENV PYTHONDONTWRITEBYTECODE=1\n--> 581fc2ce6db\n[2/2] STEP 6/7: USER 65534:65534\n--> 0e7efb66012\n[2/2] STEP 7/7: WORKDIR /tmp\n[2/2] COMMIT conveyorflow-v25-black3-candidate:v1\n--> 9257637c634\nSuccessfully tagged localhost/conveyorflow-v25-black3-candidate:v1\n9257637c634da518f211b7a735f2724ea8da3b8d5e12d428243cec34a4aa53ea\n",
+  "stderr": "",
+  "elapsed_seconds": 12.702743801999532
+}

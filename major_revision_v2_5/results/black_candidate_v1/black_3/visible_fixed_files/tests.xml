@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="052b88da5a5f" name="pytest" skipped="0" tests="1" time="0.466" timestamp="2026-10-11T07:13:52.093853"><testcase classname="tests.test_black.BlackTestCase" file="tests/test_black.py" line="1647" name="test_invalid_config_return_code" time="0.003"></testcase></testsuite></testsuites>

@@ -1,0 +1,18 @@
+{
+  "config_sha256": "18095cbd778124a43a328c149cfcafd42034fa947797c1678fe3c4e21e8231a6",
+  "created_at_utc": "2026-10-11T07:07:13.133612+00:00",
+  "dependency_provenance": "Black setup.py use_scm_version.write_to; PyPI setuptools-scm 4.1.2 Python 3.8 distribution",
+  "dependency_url": "https://pypi.org/project/setuptools-scm/4.1.2/",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "original_queue_sha256": "902f9c00fa41384e5dd11ed3b5d65132861c98fa50631dfabdbfdb461a23188e",
+  "paid_execution_allowed": false,
+  "previous_case21_record_sha256": "b1789f4a1c897b92f5cbdd72af894494776c4b3769defe2886d023b545630aac",
+  "previous_case3_record_sha256": "d177bf71e41bc47a35bc1667f9d2a941f9e84b5aa174f36c870ac71eeaa27b4a",
+  "previous_config_sha256": "63c979c9d45b7f3056783e0133d72f62c8316ceab3ae02cf722f4e3e50687c14",
+  "previous_ledger_sha256": "278a6f27a19a79bb11f7d9d081e3decc3d079ef605c4a7009dda109570f72169",
+  "previous_lock_sha256": "d6a6b2b5b90c2188986ea5948ffd00eb36939a8b5de5fcc6abd892132059e700",
+  "provider_calls": 0,
+  "rule": "Install declared SCM build dependency, generate version file in both variants, replay whole original queue",
+  "runner_sha256": "aa5b4376006fda68ddf1d66dd88fb7bb8209a08bce82418834b1847e4c81ad38",
+  "status": "v2_5_black_scm_build_amendment_frozen_before_provider"
+}

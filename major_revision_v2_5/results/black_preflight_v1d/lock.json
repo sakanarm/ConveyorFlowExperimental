@@ -1,0 +1,19 @@
+{
+  "config_sha256": "e90f4aaf60318185d46b204c3c66914e0c31915c383eb8252200723c0568e5a4",
+  "created_at_utc": "2026-10-11T07:10:32.831433+00:00",
+  "dependency_urls": [
+    "https://pypi.org/project/aiohttp/3.8.6/",
+    "https://pypi.org/project/aiohttp-cors/0.7.0/"
+  ],
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "original_queue_sha256": "902f9c00fa41384e5dd11ed3b5d65132861c98fa50631dfabdbfdb461a23188e",
+  "paid_execution_allowed": false,
+  "previous_case21_record_sha256": "f80fec0d5200ae99da1f492f8697b25eaef97149131e50a01abbc6277e2e41f7",
+  "previous_case3_record_sha256": "6848171214a672be7fee673e7ece3da11cd057527a24674777b47d042c9516d7",
+  "previous_ledger_sha256": "ea0947322222144858ca8189cd9e86e0b081a4542e2ccd418de550c77d4fea0f",
+  "previous_lock_sha256": "a02a85296d4da57ba83b6cc532c0e40b258a1ffff989c8f60fc637bf01256322",
+  "provider_calls": 0,
+  "rule": "Install declared blackd extras in both variants; replay original queue from zero",
+  "runner_sha256": "b0de346a62f1c9e7deb14ef10bcbef05fa342143bf1e978abc1fbffd6cdb5407",
+  "status": "v2_5_black_declared_blackd_extra_amendment_frozen_before_provider"
+}

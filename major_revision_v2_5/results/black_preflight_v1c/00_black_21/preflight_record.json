@@ -1,0 +1,37 @@
+{
+  "bug_id": "21",
+  "buggy_test_report_sha256": "77b92d78e7161b9cfa6dad49961ce4cd8461496a5b8f137a6e05314963ea5959",
+  "build_report_sha256": "85316868c7790984d602c92bfec6b6d4c4e8ef3f46b0931ad21774a9119ef656",
+  "container_image_id": "sha256:3af8baa9fc43d1bfe6990188cb6bca76ee16277d3bff5fdff998bdb9be48540c",
+  "container_runtime": "podman",
+  "dockerfile_sha256": "172d0dfc2d85051fb3400d8b7a372536f224abb7e8f9752e4e368b14d21e3111",
+  "environment_deviation": "Black feasibility on CPython 3.8.20 with pinned minimal packages drawn from the public benchmark requirements. Historical unittest class/method is run as the corresponding pytest node. Not exact historical environment; both variants use identical test runner. V1b adds typing-extensions==3.7.4.1 from the public bug-3 requirements after identical missing-import collection errors in both variants. V1c adds project-declared setuptools-scm pinned to the 2020 Python-3.8 compatible 4.1.2 release and runs setup.py egg_info in both historical variants to generate _black_version.py. The previous common import failure is retained; case queue and visible tests are unchanged.",
+  "fixed_test_report_sha256": "cf788dd89ae088745c212e7029c2c2175c1a176ed23bcb909e926a5774938d6d",
+  "normalized_public_test_node": "tests/test_black.py::BlackTestCase::test_expression_ff",
+  "original_requirements_sha256": "b7476a20a1ed680663a3227e09caa04b84e1f554a0b524f203f79b829af0a181",
+  "project": "black",
+  "provider_calls": 0,
+  "reason": "buggy/fixed test contrast not reproduced",
+  "recorded_at_utc": "2026-10-11T07:07:43.979850+00:00",
+  "runner_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "runtime_version": "3.4.4",
+  "selection_hash": "aa0b235b7bcd9dccb16adfc1b91a181fed079bdd0e39ecc90c0359b1a6695b39",
+  "status": "environment_excluded",
+  "test_outcomes": {
+    "buggy": {
+      "errors": 0,
+      "failures": 0,
+      "return_code": 0,
+      "skipped": 0,
+      "tests": 1
+    },
+    "fixed": {
+      "errors": 0,
+      "failures": 0,
+      "return_code": 0,
+      "skipped": 0,
+      "tests": 1
+    }
+  },
+  "validator_only_image": true
+}

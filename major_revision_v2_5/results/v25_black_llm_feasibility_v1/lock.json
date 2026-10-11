@@ -1,0 +1,43 @@
+{
+  "adapter_sha256": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+  "baseline_lock_sha256": "761addc15b7f3803755f6f350c7928818c7608ee00e8adb17ae60f58ba88780a",
+  "baseline_sha256": "8301404d203e149ed1c511eb5a1fe89ea84216f19b02a74180b3926533f3e89e",
+  "buggy_source_sha256": "39028a4006e67238efea16ffee98c8d72084741bcddc79440ce3e3285d2fe22d",
+  "case_id": "black_3",
+  "created_at_utc": "2026-10-11T07:25:21.863885+00:00",
+  "exact_edits_sha256": "984005c0fd8939256aef19e6edc651413bac5615e8f11d3512928a152a0f001f",
+  "exploratory_repository_repair_feasibility": true,
+  "generation": {
+    "max_output_tokens": 32768,
+    "temperature": 0,
+    "timeout_seconds": 720
+  },
+  "models": [
+    {
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "model_id": "tencent-hy3",
+      "slot": "agent_1"
+    },
+    {
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "model_id": "gpt-5-mini",
+      "slot": "agent_2"
+    },
+    {
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "model_id": "glm-5.3-flash",
+      "slot": "agent_3"
+    }
+  ],
+  "no_retry_after_request_started": true,
+  "not_allocation_comparison": true,
+  "one_call_per_model": true,
+  "one_independent_repository_source": true,
+  "planned_provider_calls": 3,
+  "prompt_sha256": "b004d1782203a4d36cfa822ec7d22f51257edceebef26736945999b1de349fc8",
+  "provider_config_sha256": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+  "research_results": false,
+  "runner_sha256": "a1f353bdf1c86623e7088986d0bb1e874408a1037860087fe0981534989e9912",
+  "status": "frozen_before_black_paid_calls",
+  "visible_test_source_sha256": "7c303e358f9616522f333ed229708cf014c297bc238dfb7f5efc2dfdfb91457d"
+}

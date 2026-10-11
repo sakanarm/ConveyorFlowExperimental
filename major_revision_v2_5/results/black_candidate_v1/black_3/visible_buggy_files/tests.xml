@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="88f31d334233" name="pytest" skipped="0" tests="1" time="0.965" timestamp="2026-10-11T07:13:49.574848"><testcase classname="tests.test_black.BlackTestCase" file="tests/test_black.py" line="1647" name="test_invalid_config_return_code" time="0.004"><failure message="AssertionError: 1 != 2 : Error: Could not open file /tmp/blk_915xpdv3.log: Error reading configuration file: [Errno 2] No such file or directory: &apos;/tmp/blk_915xpdv3.log&apos;">self = &lt;test_black.BlackTestCase testMethod=test_invalid_config_return_code&gt;
+
+    def test_invalid_config_return_code(self) -&gt; None:
+        tmp_file = Path(black.dump_to_file())
+        try:
+            tmp_config = Path(black.dump_to_file())
+            tmp_config.unlink()
+            args = [&quot;--config&quot;, str(tmp_config), str(tmp_file)]
+&gt;           self.invokeBlack(args, exit_code=2, ignore_config=False)
+
+tests/test_black.py:1654: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_black.py:162: in invokeBlack
+    self.assertEqual(result.exit_code, exit_code, msg=runner.stderr_bytes.decode())
+E   AssertionError: 1 != 2 : Error: Could not open file /tmp/blk_915xpdv3.log: Error reading configuration file: [Errno 2] No such file or directory: &apos;/tmp/blk_915xpdv3.log&apos;</failure></testcase></testsuite></testsuites>

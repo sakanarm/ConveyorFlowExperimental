@@ -1,0 +1,3 @@
+# Frozen scripts, prompts, locks and raw evidence use byte-level SHA-256.
+# Git must not rewrite line endings when archiving or checking out this tree.
+* -text

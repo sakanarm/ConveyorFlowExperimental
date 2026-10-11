@@ -1,0 +1,15 @@
+{
+  "arm_id": "CF_FIT",
+  "automatic_retry": false,
+  "case_id": "V25_BANK_01",
+  "credentials_recorded": false,
+  "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+  "lock_sha256": "1cb6e4dad4417f4c72b86ef287ada78a3120990b20740b231e105c47e1a9e359",
+  "model_id": "tencent-hy3",
+  "model_slot": "agent_1",
+  "prompt_sha256": "d8d873e74051892ca5d7cffdb310bb68f9c64898b0a3678f539420ee9a25218c",
+  "provider_calls": 1,
+  "run_id": "V25_PAIR_01",
+  "stage": "ingest",
+  "started_at_utc": "2026-10-11T07:39:04.458229+00:00"
+}

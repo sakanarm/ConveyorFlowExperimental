@@ -1,0 +1,14 @@
+diff --git a/black.py b/black.py
+--- a/black.py
++++ b/black.py
+@@ -251,8 +251,8 @@
+     try:
+         config = parse_pyproject_toml(value)
+     except (toml.TomlDecodeError, OSError) as e:
+-        raise click.FileError(
+-            filename=value, hint=f"Error reading configuration file: {e}"
++        raise click.BadParameter(
++            f"Error reading configuration file: {e}", param=param, ctx=ctx
+         )
+ 
+     if not config:

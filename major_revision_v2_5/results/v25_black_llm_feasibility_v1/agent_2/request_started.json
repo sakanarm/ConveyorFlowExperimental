@@ -1,0 +1,7 @@
+{
+  "lock_sha256": "00203019ef12ac2f0ed63aa3ffb317cc8b74ca861c532f60d905c4c0fc7a7f93",
+  "model_id": "gpt-5-mini",
+  "prompt_sha256": "b004d1782203a4d36cfa822ec7d22f51257edceebef26736945999b1de349fc8",
+  "slot": "agent_2",
+  "started_at_utc": "2026-10-11T07:29:14.637454+00:00"
+}

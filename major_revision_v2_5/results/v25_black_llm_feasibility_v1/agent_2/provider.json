@@ -1,0 +1,9 @@
+{
+  "exact_model_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+  "finish_reason": "stop",
+  "input_tokens": 594,
+  "latency_seconds": 2.692518766998546,
+  "output_tokens": 153,
+  "provider_request_id": "chatcmpl-EXiHauKleHt5jr156HiYdrUEzPdKq",
+  "response_cost": 0.001134
+}

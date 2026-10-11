@@ -1,0 +1,62 @@
+{
+  "input_tokens": 594,
+  "model_id": "gpt-5-mini",
+  "output_tokens": 153,
+  "patch_sha256": "121aef196569efbce0b451bff56d7a9b3eb99b968c26389dcca83acd7bd51f2b",
+  "provider_request_id": "chatcmpl-EXiHauKleHt5jr156HiYdrUEzPdKq",
+  "regression": {
+    "dispositions": {
+      "tests.test_black.BlackTestCase::test_assertFormatEqual": "passed",
+      "tests.test_black.BlackTestCase::test_black": "passed",
+      "tests.test_black.BlackTestCase::test_comments4": "passed",
+      "tests.test_black.BlackTestCase::test_conv": "passed",
+      "tests.test_black.BlackTestCase::test_fstring": "passed",
+      "tests.test_black.BlackTestCase::test_function2": "passed",
+      "tests.test_black.BlackTestCase::test_numeric_literals_py2": "passed",
+      "tests.test_black.BlackTestCase::test_preserves_line_endings_via_stdin": "passed",
+      "tests.test_black.BlackTestCase::test_report_quiet": "passed",
+      "tests.test_black.BlackTestCase::test_self": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "5c678c7d5ee76f076542679a8127ebf957675bab72d09a41bcdb7624dbd31e31"
+  },
+  "replay_regression": {
+    "dispositions": {
+      "tests.test_black.BlackTestCase::test_assertFormatEqual": "passed",
+      "tests.test_black.BlackTestCase::test_black": "passed",
+      "tests.test_black.BlackTestCase::test_comments4": "passed",
+      "tests.test_black.BlackTestCase::test_conv": "passed",
+      "tests.test_black.BlackTestCase::test_fstring": "passed",
+      "tests.test_black.BlackTestCase::test_function2": "passed",
+      "tests.test_black.BlackTestCase::test_numeric_literals_py2": "passed",
+      "tests.test_black.BlackTestCase::test_preserves_line_endings_via_stdin": "passed",
+      "tests.test_black.BlackTestCase::test_report_quiet": "passed",
+      "tests.test_black.BlackTestCase::test_self": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "4239ceb692bb9d0550e19478ef42dc8ede220c88e86ad336c4202f5f7b668eb3"
+  },
+  "replay_visible": {
+    "dispositions": {
+      "tests.test_black.BlackTestCase::test_invalid_config_return_code": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "d94d3b279326b68e06db664ed3d817e0616a95333430d65d15505f0147f482e4"
+  },
+  "response_cost": 0.001134,
+  "response_sha256": "c5822a02d9266adbc8dcb44971eb47f62d6e318b37601bc6bea67b4bc69ffb59",
+  "returned_model_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+  "slot": "agent_2",
+  "status": "VERIFIED",
+  "visible": {
+    "dispositions": {
+      "tests.test_black.BlackTestCase::test_invalid_config_return_code": "passed"
+    },
+    "return_code": 0,
+    "timeout": false,
+    "xml_sha256": "796a308eff4a10043890e71452c1c98c6a3077f1743fb737f15e56534e998327"
+  }
+}

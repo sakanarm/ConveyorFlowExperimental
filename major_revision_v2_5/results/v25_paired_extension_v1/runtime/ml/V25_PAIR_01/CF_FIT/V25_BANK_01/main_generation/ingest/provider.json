@@ -1,0 +1,9 @@
+{
+  "exact_model_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+  "finish_reason": "stop",
+  "input_tokens": 1595,
+  "latency_seconds": 83.76097133499934,
+  "output_tokens": 10493,
+  "provider_request_id": "d6cfc92f-68f9-4c1c-8366-02828cfba76f",
+  "response_cost": 0.005750844
+}

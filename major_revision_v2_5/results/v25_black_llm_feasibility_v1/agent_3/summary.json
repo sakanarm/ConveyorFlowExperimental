@@ -1,0 +1,8 @@
+{
+  "billable_outcome_unknown": true,
+  "http_status": null,
+  "model_id": "glm-5.3-flash",
+  "provider_error_type": "TimeoutError",
+  "slot": "agent_3",
+  "status": "PROVIDER_UNRESOLVED"
+}

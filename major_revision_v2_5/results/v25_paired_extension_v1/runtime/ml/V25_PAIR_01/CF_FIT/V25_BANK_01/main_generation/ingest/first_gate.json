@@ -1,0 +1,24 @@
+{
+  "compatibility": null,
+  "environment_unresolved": false,
+  "queue_seconds": 3.016997652594e-06,
+  "stage_report": {
+    "artifact_sha256": null,
+    "case_id": "V25_BANK_01",
+    "execution": {
+      "container_name": "cf-ml-stage-v1-b8a4fc2ebaa24c9eb1009c62d6c5d0cb",
+      "elapsed_seconds": 0.8787662020004063,
+      "return_code": 2,
+      "stderr_tail": "python: can't open file '/submission/ingest_validate.py': [Errno 5] Input/output error\n",
+      "stdout_tail": "",
+      "timed_out": false
+    },
+    "image_id": "sha256:d1dd86e9ef7bb249f3468e90214f3ceb3a9e8ff1ed84b0b7e1926458f423a37e",
+    "label": "main_first_attempt",
+    "source_sha256": "9f3a50cca08e155488d4b6da9c2a1e97225d80bf7682fa271ae27d79612d5091",
+    "stage": "ingest",
+    "status": "stage_failed",
+    "verified": false
+  },
+  "verified": false
+}

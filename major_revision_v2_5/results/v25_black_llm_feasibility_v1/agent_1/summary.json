@@ -1,0 +1,11 @@
+{
+  "input_tokens": 616,
+  "model_id": "tencent-hy3",
+  "output_tokens": 32768,
+  "provider_request_id": "19c08b48-a2ce-4d7f-bdc2-b25e61a3b440",
+  "response_cost": 0.017382816,
+  "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "returned_model_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+  "slot": "agent_1",
+  "status": "UNFINISHED_OR_EMPTY_OUTPUT"
+}

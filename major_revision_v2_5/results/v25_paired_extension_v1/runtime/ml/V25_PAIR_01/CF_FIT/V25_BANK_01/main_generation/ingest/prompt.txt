@@ -1,0 +1,33 @@
+Case V25_BANK_01: build a complete executable bank ML pipeline using only the supplied public train.csv, validation.csv, and test_features.csv. Validation is for model selection; hidden test labels are unavailable. Excluded features: duration. 
+This is stage ingest of a four-stage DAG on the READY belt. Only the current stage is assigned to you. Prior verified source is included so artifact formats can be handed off. Do not redo or edit earlier stage scripts. Offline libraries: Python 3.12.8, numpy 1.26.4, pandas 2.3.3, scikit-learn 1.7.1, joblib 1.5.1. No network or package installs.
+Current stage contract: Read all three public CSVs, validate train/validation schema and at least 20,000 train rows, and write JSON with exactly train_columns, validation_columns, test_columns, train_rows, validation_rows, test_rows. The columns fields are ordered lists of strings and row fields are integers. The CLI arguments are --train --validation --test --output.
+Return exactly one JSON object with one string key, 'ingest_validate.py', whose value is complete Python source. No markdown.
+Public schemas and sample rows:
+[{"file": "train.csv", "columns": ["row_id", "age", "job", "marital", "education", "default", "balance", "housing", "loan", "contact", "day", "month", "campaign", "pdays", "previous", "poutcome", "target"], "example_rows": [{"row_id": "bank_000000", "age": "58", "job": "management", "marital": "married", "education": "tertiary", "default": "no", "balance": "2143", "housing": "yes", "loan": "no", "contact": "unknown", "day": "5", "month": "may", "campaign": "1", "pdays": "-1", "previous": "0", "poutcome": "unknown", "target": "0"}, {"row_id": "bank_000001", "age": "44", "job": "technician", "marital": "single", "education": "secondary", "default": "no", "balance": "29", "housing": "yes", "loan": "no", "contact": "unknown", "day": "5", "month": "may", "campaign": "1", "pdays": "-1", "previous": "0", "poutcome": "unknown", "target": "0"}]}, {"file": "validation.csv", "columns": ["row_id", "age", "job", "marital", "education", "default", "balance", "housing", "loan", "contact", "day", "month", "campaign", "pdays", "previous", "poutcome", "target"], "example_rows": [{"row_id": "bank_031647", "age": "77", "job": "retired", "marital": "married", "education": "tertiary", "default": "no", "balance": "0", "housing": "no", "loan": "no", "contact": "cellular", "day": "6", "month": "apr", "campaign": "1", "pdays": "-1", "previous": "0", "poutcome": "unknown", "target": "0"}, {"row_id": "bank_031648", "age": "33", "job": "blue-collar", "marital": "married", "education": "secondary", "default": "no", "balance": "1101", "housing": "yes", "loan": "no", "contact": "cellular", "day": "6", "month": "apr", "campaign": "2", "pdays": "-1", "previous": "0", "poutcome": "unknown", "target": "0"}]}, {"file": "test_features.csv", "columns": ["row_id", "age", "job", "marital", "education", "default", "balance", "housing", "loan", "contact", "day", "month", "campaign", "pdays", "previous", "poutcome"], "example_rows": [{"row_id": "bank_038429", "age": "37", "job": "services", "marital": "single", "education": "secondary", "default": "no", "balance": "1175", "housing": "yes", "loan": "no", "contact": "cellular", "day": "15", "month": "may", "campaign": "1", "pdays": "333", "previous": "2", "poutcome": "failure"}, {"row_id": "bank_038430", "age": "29", "job": "blue-collar", "marital": "married", "education": "secondary", "default": "no", "balance": "339", "housing": "yes", "loan": "no", "contact": "cellular", "day": "15", "month": "may", "campaign": "3", "pdays": "354", "previous": "2", "poutcome": "failure"}]}]
+Prior verified Python source:
+{}
+This NEW isolated-stage experiment uses trusted predecessor state. Other
+stages' model outcomes never determine whether this stage is reached. Follow
+this deliberately narrow public ordinal-state interface exactly:
+columns = training CSV columns in original order, excluding row_id, target,
+timestamp. For each NONNUMERIC training column (as inferred by pandas.read_csv),
+map sorted unique training values after fillna('__MISSING__').astype(str) to
+integers 0,1,... . Do not add validation/test-only categories. Preprocessor
+joblib must be exactly {'columns': columns, 'mappings': mappings}. Transform
+categoricals with that mapping and unknown=-1, cast float; numeric columns use
+pd.to_numeric(errors='coerce').astype(float), preserving np.nan. Do not add
+scalers or imputers to the preprocessor artifact. The train-stage estimator
+may handle or impute NaNs internally using an importable sklearn Pipeline.
+Model joblib must be exactly {'columns': columns, 'mappings': mappings,
+'model': fitted importable sklearn estimator, 'classification': bool}.
+Classification is True for Adult and False for Beijing. Model estimator must
+consume the public transformed feature frame. For classification return
+positive-class probabilities; regression returns finite PM2.5 predictions.
+No custom __main__ classes/lambdas/closures in joblib. Train fit uses training
+rows only. Never fit on test or reveal hidden labels. This is an interface
+test, not an unrestricted AutoML benchmark. No future reference solution or
+hidden reference score is supplied. Return concise complete current-stage
+source in the required single-key JSON, no commentary. Runtime: 2 CPUs/4 GiB,
+360 seconds per execution, OMP/OpenBLAS/MKL/NumExpr threads=2, no network.
+
+Read only public input and verified predecessor artifacts in this same arm/job. Hidden labels and network are unavailable. The model artifact cap is 268435456 bytes (256 MiB).

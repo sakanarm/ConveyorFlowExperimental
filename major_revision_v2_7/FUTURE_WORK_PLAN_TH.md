@@ -1,0 +1,20 @@
+# Future Work ที่ต่อจาก v2.7 โดยไม่ออกนอกเรื่อง ConveyorFlow
+
+เรื่องหลักยังเป็น **task อยู่บน READY belt; agent ต่าง Ability Rank เลือกงานเองด้วย fit และ stand-down; เปรียบเทียบกับ central rule-matched และ static allocation**. งานด้านล่างเป็นการตรวจ robustness และปิดช่องว่างหลักฐาน ไม่ใช่การเสนอ policy อีกจำนวนมาก. ต้องเขียนใน manuscript ว่าเป็นงานที่จะทำ ไม่ใช่ผลที่ทำแล้ว.
+
+| ลำดับ | คำถามที่ยังเปิด | การทดลองที่ควรตรึงก่อนรัน | หน่วยวิเคราะห์/ผลที่รายงาน |
+|---|---|---|---|
+| 1 | ผลข้ามงานจริงหรือไม่ | เพิ่มหลาย public repository projects (มากกว่าหนึ่ง bug ต่อ project) และหลาย public ML corpora; gate buggy fail/fixed pass และ complete ML DAG ก่อน API; ใช้ CF-Fit, Central-Rule-Matched, Static-Owners กับ case/seed เดียวกัน | paired **project/corpus blocks**, ไม่ใช่จำนวน API calls; verified jobs, throughput, completion, utilization, tokens, failures; interval/precision ระดับ cluster เมื่อมี cluster พอ |
+| 2 | Fit และ stand-down ได้ประโยชน์จาก heterogeneity จริงหรือไม่ | ประเมิน Ability Rank 1/2/3 และ task difficulty ล่วงหน้าด้วยผู้ประเมินอิสระ; จับคู่ heterogeneous กับ homogeneous teams ที่ควบคุมกำลังรวม/งบ; ablate fit และ stand-down แยกกัน | interaction ของ composition × mechanism, overqualification, high-rank reservation, completion/cost trade-off; ไม่บังคับ CF-Fit ชนะทุก metric |
+| 3 | ลำดับบนสายพานเปลี่ยนผลหรือไม่ | แยกสองปัจจัย: **task presentation/scan order** (arrival FIFO, seeded permutation, difficulty-first เป็น sensitivity ไม่ใช่ baseline ใหม่) และ **agent reach/claim order** (seeded launch permutation, equal/perturbed backoff). ใช้ workload/roster/fit rule เดิมและ cross-over order เดียวกันทุก arm | collision count, wait distribution/P95, age of READY task, starvation/dead-letter, rank share, completion/time/cost; ตรวจว่า CF vs central contrast คงทิศหรือไม่ |
+| 4 | การไม่มีตัวกลางลด failure domain แค่ไหน | fault injection แบบ coordinator-only, agent-only, shared claim-store/belt และ provider outage โดยประกาศ duration/recovery ก่อนรัน; รักษา task stream เดียวกัน | verified during outage และ recovery, stalled time, duplicate claim safety; สรุปเฉพาะ decision-layer resilience ไม่กล่าวว่าทนทุก shared-service failure |
+| 5 | Cost efficiency จริงเท่าไร | ตรวจวันที่/model alias/deployment ID, input/output/cached tokens, gateway tariff, spend logs และ invoice/APC ไม่ใช่ราคาหน้าเว็บของ alias อื่น; เก็บ failed/timeout/unknown calls ใน denominator | billed currency/job, billed currency/verified job, token-based sensitivity range และ unknown-cost count; ควบคู่ success และ time |
+| 6 | ใช้ได้เมื่อ load และ model เปลี่ยนหรือไม่ | ทดสอบ arrival load/queue depth/team size ภายในเพดานไม่เกิน 4 agents, model version drift และ provider latency ด้วย frozen cross-over blocks; version ใหม่เป็น cohort แยก | saturation, queue delay, contention, no-volunteer re-entry, abandonment, utilization และ robustness ของ trade-off |
+
+## ข้อสังเกตต่อการทดลองปัจจุบัน
+
+ใน simulation core ปัจจุบัน `belt_contract.py` เลือก READY ตาม `state.order` ก่อนจำกัด `scan`, แล้วเรียง proposal ด้วย priority และ `agent_id` เมื่อเสมอกัน. ใน live core `live_allocator_core_v1.py` สร้าง frontier ตามลำดับงาน แต่การแย่ง claim จริงเกิดจาก process scheduling + fit-weighted backoff + atomic claim. ดังนั้นการบอกว่า “ลำดับไม่สำคัญ” ยังไม่มีหลักฐาน. v2.7 มีเพียงหนึ่ง READY task ต่อ case (`scan=1`) และทุก arm ได้ A1 จึง **ไม่สามารถ**ประเมินผลของ task-order, agent-order หรือ stand-down ได้จากชุด Scrapy นี้.
+
+การทดสอบ order ควรมีอย่างน้อยหลาย READY tasks พร้อมกันและ agent หลาย rank ที่ eligible ซ้อนกัน เพื่อให้มีโอกาสแย่งงาน/stand-down จริง. ตรึง RNG seeds และ cross-over order ก่อนดูผล; ทำการวิเคราะห์ paired ภายใน block เดียวกัน ไม่เพิ่มจำนวน API calls ของ case เดิมแล้วนับเป็นโครงการอิสระ. ความต่างของ policy bundle กับ stochastic LLM output ต้องรายงานแยกจากผลของ decision location.
+
+ก่อนรอบใหญ่ควรกำหนด **minimum meaningful difference/precision target** สำหรับ verified throughput และ cost per verified job, แล้วคำนวณจำนวน independent projects/corpora ตามนั้น; หลีกเลี่ยงการตั้ง p-value จาก 6 calls หรือ 2 bugs ใน repository เดียว. หากทรัพยากรไม่พอ ให้ลด claim ใน paper ไม่เปลี่ยน threshold หลังเห็นผล.

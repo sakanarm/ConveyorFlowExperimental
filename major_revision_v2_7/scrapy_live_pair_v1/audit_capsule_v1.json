@@ -1,0 +1,144 @@
+{
+  "arms_complete": 6,
+  "candidate_lock_sha256": "1b3737a9d8045d7ade3047fb986c9ca0a5cd675b8ff6fdd0419073f2633c887d",
+  "cases": 2,
+  "independent_repository_projects": 1,
+  "lock_sha256": "cf25faa1f16a466e992b93b8ab6ba96a9e3de10b231c4961d492b373747a58b7",
+  "not_main_mixed_cohort": true,
+  "provider_request_markers": 6,
+  "rows": [
+    {
+      "allocation_summary_sha256": "d1bbb99a49cf183d8f4d0f9c335083c18acdb32d4c0b864d1da842ba21cf9815",
+      "arm": "CF_FIT",
+      "attempt_status": "VERIFIED",
+      "attempt_summary_sha256": "c06ee64727818ab53c11e22492bb19fe55a28174b884d977ccf22b0a8d176dba",
+      "case_id": "scrapy_39",
+      "event_ledger_sha256": "a3f12a859a08d383d75e1d1bee58b21a4fa7ff5ca93cfed2378d4f80341d3e1e",
+      "independent_regression_replay": {
+        "tests": 5,
+        "transcript_sha256": "329b138ee68df00533ec1e1ae4a4a397df3459a0a1e9dc9658b77b4ce12fe288"
+      },
+      "independent_visible_replay": {
+        "tests": 1,
+        "transcript_sha256": "e5f3ecc6cda5db89fbbc11446c8620d8c45facbe8e209cdab2bea8a0d0e39d42"
+      },
+      "input_tokens": 1689,
+      "model_slot": "agent_1",
+      "output_tokens": 13939,
+      "provider_cost_units_currency_unverified": 0.007582739999999999,
+      "provider_request_id": "d8f025ff-63dc-41e0-8b91-2fb43c986177",
+      "provider_request_markers": 1,
+      "status": "COMPLETE",
+      "task_state": "VERIFIED",
+      "verified": 1
+    },
+    {
+      "allocation_summary_sha256": "9a655970f8a332a1227f41e825d5a2d9bea70ccb57c4fe208c80346a2710cd15",
+      "arm": "CENTRAL_RULE_MATCHED",
+      "attempt_status": "VERIFIED",
+      "attempt_summary_sha256": "8a4a215e8d7279b3884e975daf81b0be24fc045102d8f1fd87b831e55c0f8902",
+      "case_id": "scrapy_39",
+      "event_ledger_sha256": "c0911461215bca2fee3c167857201d95eaea8372532791feb0eada5ea63a6cc4",
+      "independent_regression_replay": {
+        "tests": 5,
+        "transcript_sha256": "a7bc1d9e8c85f0295399c7a5f8fc619eb6eefb9ff9f875c602a7cc62c739e4b8"
+      },
+      "independent_visible_replay": {
+        "tests": 1,
+        "transcript_sha256": "b90460c5c41409bf56c940286c9afb99b7743618629e5079ec6082dddf1f58a2"
+      },
+      "input_tokens": 1689,
+      "model_slot": "agent_1",
+      "output_tokens": 16962,
+      "provider_cost_units_currency_unverified": 0.009020483999999999,
+      "provider_request_id": "c5ac33c2-7753-4c30-b023-3d5477bf7994",
+      "provider_request_markers": 1,
+      "status": "COMPLETE",
+      "task_state": "VERIFIED",
+      "verified": 1
+    },
+    {
+      "allocation_summary_sha256": "7ff88f4c4869957132f528187b7161f3b399626f1cdfa57ea7ae9c11e3355f4a",
+      "arm": "STATIC_OWNERS",
+      "attempt_status": "VERIFIED",
+      "attempt_summary_sha256": "3b4a4679c87f4fc5fe2fa65864091535b2091265004fe3553beecdee04b5ed3a",
+      "case_id": "scrapy_39",
+      "event_ledger_sha256": "37bb10fa9a38bb811d24b5c10ad9f1814403dc050e532f3357401166c27cb0a2",
+      "independent_regression_replay": {
+        "tests": 5,
+        "transcript_sha256": "025dd56c682554fd5ea275ea1bd80b7817145ecb37d4ac6a9321d030edef2259"
+      },
+      "independent_visible_replay": {
+        "tests": 1,
+        "transcript_sha256": "2af08c5fa2900b0cf05e8d14be1cd055652694c1c6e1f2daa7d77d32a25f5c81"
+      },
+      "input_tokens": 1689,
+      "model_slot": "agent_1",
+      "output_tokens": 14534,
+      "provider_cost_units_currency_unverified": 0.0077385,
+      "provider_request_id": "b4828c0e-fd7c-4cc2-afdf-e436ae2c44a7",
+      "provider_request_markers": 1,
+      "status": "COMPLETE",
+      "task_state": "VERIFIED",
+      "verified": 1
+    },
+    {
+      "allocation_summary_sha256": "e048a954dd722388fbca9921714b138a8181dd85b5dabae0c53556cb12b56d6b",
+      "arm": "CENTRAL_RULE_MATCHED",
+      "attempt_status": "UNFINISHED_OR_EMPTY_OUTPUT",
+      "attempt_summary_sha256": "49ea523820ac817fcfb497e38096510945318ee8dd1101f67326e4a4dc223070",
+      "case_id": "scrapy_34",
+      "event_ledger_sha256": "e8d6d2b852bd786f9e8dca41b54f5292c2b375b5bb6bcfcb0da71d8bb65d703e",
+      "input_tokens": 1566,
+      "model_slot": "agent_1",
+      "output_tokens": 32768,
+      "provider_cost_units_currency_unverified": 0.017508216,
+      "provider_request_id": "209760e7-f9ee-4dd1-b6f1-363a7a24efcc",
+      "provider_request_markers": 1,
+      "status": "COMPLETE",
+      "task_state": "DEAD_LETTER",
+      "verified": 0
+    },
+    {
+      "allocation_summary_sha256": "0f7a0608d1ad187f96c6a03282b696410ae9996c259f4a5b75c4fbb49326e6cd",
+      "arm": "STATIC_OWNERS",
+      "attempt_status": "TEST_OR_REPLAY_FAILED",
+      "attempt_summary_sha256": "a80404d69e8db1f415cb1816df455b114b8063d28d0d6da0194458dce9d594c1",
+      "case_id": "scrapy_34",
+      "event_ledger_sha256": "7e00d87841cab2abb733ba1d09621ba9343da31d9056cc03c2e03ea188e4a620",
+      "input_tokens": 1566,
+      "model_slot": "agent_1",
+      "output_tokens": 30641,
+      "provider_cost_units_currency_unverified": 0.016239431999999998,
+      "provider_request_id": "ee188761-982e-4221-8060-3ab4685829ab",
+      "provider_request_markers": 1,
+      "status": "COMPLETE",
+      "task_state": "DEAD_LETTER",
+      "verified": 0
+    },
+    {
+      "allocation_summary_sha256": "71a9d7966b9ca4f8156a39fea115a65a774625005d0e9aaedcf5dcd8482e3c64",
+      "arm": "CF_FIT",
+      "attempt_status": "UNFINISHED_OR_EMPTY_OUTPUT",
+      "attempt_summary_sha256": "b5db1825893136e91d4ac889d39a60b0992ffc571f1c2ff87b9ba18af7ef4ecd",
+      "case_id": "scrapy_34",
+      "event_ledger_sha256": "257b66ed27265294493f2d25902497e842bbcaeb701bed9c27c32b1a960950ae",
+      "input_tokens": 1566,
+      "model_slot": "agent_1",
+      "output_tokens": 32768,
+      "provider_cost_units_currency_unverified": 0.017362488,
+      "provider_request_id": "4b9ede53-9780-413b-9847-856427543165",
+      "provider_request_markers": 1,
+      "status": "COMPLETE",
+      "task_state": "DEAD_LETTER",
+      "verified": 0
+    }
+  ],
+  "sealed_at_utc": "2026-10-12T19:26:16.506695+00:00",
+  "status": "SIX_ARMS_INDEPENDENTLY_AUDITED_BOUNDED_ONE_REPOSITORY",
+  "verified_jobs": {
+    "CENTRAL_RULE_MATCHED": 1,
+    "CF_FIT": 1,
+    "STATIC_OWNERS": 1
+  }
+}

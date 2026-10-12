@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('AuditSource','AuditCandidate','Freeze','RunNext','RunRemaining')]
+    [ValidateSet('AuditSource','AuditCandidate','Freeze','RunNext','RunRemaining','AuditLive','SealLive','VerifyAnalysis')]
     [string]$Mode = 'AuditCandidate'
 )
 
@@ -17,6 +17,18 @@ if ($Mode -eq 'AuditCandidate') {
 }
 if ($Mode -eq 'Freeze') {
     & wsl -d Ubuntu -u root --cd $v2Root -- env CONVEYORFLOW_CONTAINER_COMMAND=podman python3 major_revision_v2_7/run_scrapy_live_pair_v1.py --freeze
+    exit $LASTEXITCODE
+}
+if ($Mode -eq 'AuditLive') {
+    & wsl -d Ubuntu -u root --cd $v2Root -- python3 major_revision_v2_7/audit_scrapy_live_pair_v1.py
+    exit $LASTEXITCODE
+}
+if ($Mode -eq 'SealLive') {
+    & wsl -d Ubuntu -u root --cd $v2Root -- python3 major_revision_v2_7/audit_scrapy_live_pair_v1.py --seal
+    exit $LASTEXITCODE
+}
+if ($Mode -eq 'VerifyAnalysis') {
+    & wsl -d Ubuntu -u root --cd $v2Root -- python3 major_revision_v2_7/analyze_scrapy_live_pair_v1.py --verify
     exit $LASTEXITCODE
 }
 

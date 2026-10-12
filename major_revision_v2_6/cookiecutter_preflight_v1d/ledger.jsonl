@@ -1,1 +1,2 @@
 {"case_id": "cookiecutter_3", "provider_calls": 0, "queue_index": 0, "reason": null, "record_sha256": "a65895b1d55ea124c7747a85de2f687c617395929614ddf7044a8f4a91852efe", "selection_hash": "284fe5562e01f72a2add0b4e227caaf94dcbafa1fa61ff7984a91a13fcb8c017", "status": "reproducible"}
+{"case_id": "cookiecutter_1", "provider_calls": 0, "queue_index": 1, "reason": null, "record_sha256": "5d3365262d1e75b314adf91c7bd6f9b6d41685f2a1900263e97285b839dfdb73", "selection_hash": "8541ce93622134c32a418f40cffc3b301e32eff642b31b997720e15d6568cfb1", "status": "reproducible"}

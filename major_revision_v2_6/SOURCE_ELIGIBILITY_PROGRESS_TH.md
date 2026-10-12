@@ -78,3 +78,7 @@ v1c ผ่าน public contrast ตาม frozen order สองเคส: `fas
 ## 5. เริ่ม Scrapy ตาม frozen source order
 
 หลัง FastAPI ผ่าน ได้สร้าง `freeze_scrapy_source_queue_v1.py` และตรึง `scrapy_source_queue_v1/queue.json` กับ `lock.json` สำหรับ 40 เคสที่ยังไม่เคยเรียก provider. เคสแรกตาม hash order คือ `scrapy_39`, `scrapy_34`; metadata ของ Scrapy ใช้ `python -m unittest -q` และบางเคสมีหลายคำสั่ง/หลาย test files จึงตรึง **ทุกคำสั่ง** ที่ประกาศไว้ก่อนเห็นผล ไม่เลือกเฉพาะ node ที่ผ่าน. ขั้นนี้ตรวจเพียง metadata และคำสั่งสาธารณะ (`provider_calls=0`): **ยังไม่ได้ build container, ยังไม่ผ่าน public contrast/candidate gate และยังไม่เริ่ม Real-LLM**. ขั้นต่อไปคือสร้าง environment profile ที่เปิดเผย deviation แล้วรัน buggy/fixed ตามคิวเดิม.
+
+## 6. Real-LLM bounded diagnostic แยกจาก prospective main
+
+ต่อมาในวันที่ 12 ตุลาคม 2026 มีการ freeze และรัน **FastAPI repair diagnostic** ด้วย MFEC จริงเพื่อให้ได้หลักฐานภายในวันเดียวกัน. งานนี้ไม่ใช่ v2.6 12-repository main, ไม่ใช่ ConveyorFlow allocation comparison และไม่ใช่ ML Build. Independent audit ตรวจ 6/6 คำขอแรกแล้ว: 0 verified, 4 empty outputs, 2 patches fail visible test. Prompt amendment แยกอีกเวอร์ชัน (เพิ่ม public visible-test source หลังเห็นผลแรก) ตรวจ 2/2 แล้ว: 0 verified; ห้าม pool กับ first attempts. รายละเอียดและขอบเขตข้ออ้างอยู่ใน `FASTAPI_REAL_LLM_DIAGNOSTIC_TH.md`. สถานะ Major Revision ยังเปิดอยู่.

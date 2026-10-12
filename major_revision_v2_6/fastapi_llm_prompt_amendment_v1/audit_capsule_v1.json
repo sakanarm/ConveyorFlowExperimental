@@ -1,0 +1,27 @@
+{
+  "adaptive_exploratory": true,
+  "allocation_comparison": false,
+  "attempts": [
+    {
+      "case_id": "fastapi_11",
+      "input_tokens": 18577,
+      "output_tokens": 144,
+      "provider_request_id": "chatcmpl-EYBgnBMqBrcCPr6323iDnLdi0zdHt",
+      "status": "TEST_OR_REPLAY_FAILED",
+      "summary_sha256": "32d7c444fcf1558adab7655342908460ca641e418ceb78f66c876a7fc2ccce5f"
+    },
+    {
+      "case_id": "fastapi_8",
+      "input_tokens": 9207,
+      "output_tokens": 324,
+      "provider_request_id": "chatcmpl-EYBij6LxhlEN2xAzZ4uMZPAvGDiNw",
+      "status": "TEST_OR_REPLAY_FAILED",
+      "summary_sha256": "74294295cea5fe58346de356092ffa3f4831f91e400319abbb13c902da201e61"
+    }
+  ],
+  "ledger_sha256": "ec176924ff3f927699f3b89437da3fb6e5aba829ab779df084eac3ef4d3197b2",
+  "lock_sha256": "578d5ca20bb20e46a76439ec8b7433a0d78d5f9d3be28e98959fe530c2034fb4",
+  "raw_root": "D:\\ConveyorFlowRuntime\\v2_6\\fastapi_llm_prompt_amendment_v1",
+  "status": "two_adaptive_attempts_audited_not_pooled",
+  "verified_repairs": 0
+}

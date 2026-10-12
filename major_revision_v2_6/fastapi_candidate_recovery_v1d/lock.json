@@ -1,0 +1,13 @@
+{
+  "amendment": "Accept verified first-case completion when resuming unchanged second-case gate",
+  "created_at_utc": "2026-10-12T10:30:20.359872+00:00",
+  "first_summary_sha256": "600fd0245507bc2543e636cf95e5ea785bce01b1000dac64dea65ee4eb322e5b",
+  "paid_execution_allowed": false,
+  "prior_candidate_lock_sha256": "bc739b4e48845248faa904f5d616f88821152cfb18d42a938f85bf406a7f2246",
+  "prior_collection_lock_sha256": "815d2aba59eaf76174fc3e687b05ca7e71f2dec3dcf3347b51b649975d2ed01a",
+  "prior_reuse_lock_sha256": "77c977dfd1422665c4058400b9e00e53bf6ddb5b648a9424b1c4711b37175598",
+  "prior_runner_sha256": "9ab85fac37cdbf0888ca77425a12d6662c96691ad6a4a130e8f85c2c67856a93",
+  "provider_calls": 0,
+  "runner_sha256": "57797b729fc0ff3e42d704bdccfcd5ce942c3054d3fe3f2e005558b1d20eb31d",
+  "status": "v2_6_fastapi_case2_resume_after_first_candidate_pass"
+}

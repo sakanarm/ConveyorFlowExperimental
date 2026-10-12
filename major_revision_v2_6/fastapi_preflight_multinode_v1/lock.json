@@ -1,0 +1,14 @@
+{
+  "config_sha256": "6efde67df34188d3cc810494d335254b27004f11fe6e7de63df27fb1299157e7",
+  "created_at_utc": "2026-10-12T09:55:29.877162+00:00",
+  "manifest_sha256": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "queue_count": 13,
+  "queue_sha256": "fa3324784bc3846270868c98af5759910e0aafdcefc965a991351cd6f7a6e75d",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/fastapi_preflight_multinode_v1",
+  "runner_sha256": "62e45933afdd964a8f6c36a848d4ab1e6570a10683ce88fd2216d7ae3b152e19",
+  "selection_rule": "First two reproducible cases in frozen hash order; retain every exclusion",
+  "source_queue_sha256": "7add5639f4dd01af87055dd579b519bc6b67cff41a1853ebc978042ee9fcea20",
+  "status": "v2_6_fastapi_multinode_preflight_frozen_before_provider"
+}

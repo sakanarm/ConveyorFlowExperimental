@@ -1,0 +1,14 @@
+{
+  "amendment": "Collect top-level tests/test_*.py only; exclude tutorial subtree requiring separate example import paths",
+  "created_at_utc": "2026-10-12T10:24:17.703747+00:00",
+  "failed_collection_sha256": "b8bc0f1203171f8e06702f88afdd72b57627f12feb6fa2f51799fc24299c97ec",
+  "first_candidate_build_sha256": "e54a0a707694dd7a4cba5107f80beef2b78a1abb7f5e2db19c0d1ec9e2eb2b93",
+  "first_verifier_build_sha256": "3489c35a2c00331f742390bfa39a8c4230508c8bdaf774cb5d41fdb48dfee1d3",
+  "paid_execution_allowed": false,
+  "prior_candidate_lock_sha256": "bc739b4e48845248faa904f5d616f88821152cfb18d42a938f85bf406a7f2246",
+  "provider_calls": 0,
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/fastapi_candidates_v1",
+  "runner_sha256": "9ab85fac37cdbf0888ca77425a12d6662c96691ad6a4a130e8f85c2c67856a93",
+  "selection_rule": "Collect the public top-level tests/test_*.py modules in the buggy verifier; exclude all visible nodes; hash-sort remaining node IDs by fixed domain/case/node; take first three before outcomes; require three common active passes on buggy and fixed, stop at first failing pair without replacement",
+  "status": "v2_6_fastapi_top_level_collection_frozen_before_regression_outcomes"
+}

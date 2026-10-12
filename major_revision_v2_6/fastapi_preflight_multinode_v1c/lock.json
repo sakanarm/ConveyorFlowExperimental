@@ -1,0 +1,15 @@
+{
+  "amendment": "Remove only editable install of buggy FastAPI; pytest already uses PYTHONPATH=/tmp/work",
+  "config_sha256": "6efde67df34188d3cc810494d335254b27004f11fe6e7de63df27fb1299157e7",
+  "created_at_utc": "2026-10-12T10:09:02.752269+00:00",
+  "paid_execution_allowed": false,
+  "prior_bom_lock_sha256": "ce3f9272253b6f846e4ec3a0710074bb2d82bceec9793200d8758f6843281761",
+  "prior_build_report_sha256": "a3790e5016007176cc0d06d2819720b507d784df6d863e4df1afd9962f574147",
+  "prior_record_sha256": "eff856fd12648db228261e9a859f4e015ebf22900bba9816e1d8b723a0f4497c",
+  "prior_runner_sha256": "ed73b5be87dd3314f0e9920455b7511b0a5b5b669870cb56a53641d62066ccbf",
+  "provider_calls": 0,
+  "queue_sha256": "fa3324784bc3846270868c98af5759910e0aafdcefc965a991351cd6f7a6e75d",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/fastapi_preflight_multinode_v1c",
+  "runner_sha256": "ad9e4262f04ee5e90910819be63442f7002c710249d54b14c3548b0e5ca1205c",
+  "status": "v2_6_fastapi_editable_install_amendment_before_test_outcomes"
+}

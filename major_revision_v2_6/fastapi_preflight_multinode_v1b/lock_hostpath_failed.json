@@ -1,0 +1,15 @@
+{
+  "amendment": "Decode public requirements by BOM (UTF-16LE or UTF-8 BOM), else UTF-8",
+  "config_sha256": "6efde67df34188d3cc810494d335254b27004f11fe6e7de63df27fb1299157e7",
+  "created_at_utc": "2026-10-12T09:58:06.108356+00:00",
+  "first_requirements_sha256": "56d999acf8b530869e31a89fe73b17c1dc5a1f1292e61f4f3faa5913b0f10fb3",
+  "paid_execution_allowed": false,
+  "prior_empty_attempt": "D:\\ConveyorFlowRuntime\\v2_6\\fastapi_preflight_multinode_v1\\00_fastapi_11",
+  "prior_lock_sha256": "06bd6baea9fee7920febe1fba9f0dd911abd6da045e05e2c1aea95355f8abe2a",
+  "prior_runner_sha256": "62e45933afdd964a8f6c36a848d4ab1e6570a10683ce88fd2216d7ae3b152e19",
+  "provider_calls": 0,
+  "queue_sha256": "fa3324784bc3846270868c98af5759910e0aafdcefc965a991351cd6f7a6e75d",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/fastapi_preflight_multinode_v1b",
+  "runner_sha256": "a133ec147ea576be72b39ffee210ed6506b0d676682e5ccb4ef5996f5f251f4c",
+  "status": "v2_6_fastapi_requirements_bom_amendment_before_build_or_test"
+}

@@ -1,0 +1,26 @@
+{
+  "buggy": {
+    "errors": 0,
+    "failures": 4,
+    "return_code": 1,
+    "skipped": 0,
+    "tests": 4
+  },
+  "case_id": "cookiecutter_3",
+  "environment_deviation": "Cookiecutter public metadata specifies Python 3.6.9 and tox. This preflight uses pinned official Python 3.6.15, directly runs the metadata's one-line pytest node under pytest 5.4.3, and omits the invalid pkg-resources==0.0.0 editable-requirement entry. It is not an exact historical tox environment. No LLM outcome informed this profile. Debian Buster uses archive mirrors. The public repository's test_requirements.txt declares pytest-cov, pytest-mock, pytest-catchlog, and freezegun; compatible versions and coverage are pinned.",
+  "fixed": {
+    "errors": 0,
+    "failures": 0,
+    "return_code": 0,
+    "skipped": 0,
+    "tests": 4
+  },
+  "image_id": "sha256:92ec95c26ed2686ddcc5e6fccee7760746aba974bbefc467ae3940b1f5957f0f",
+  "ledger_sha256": "2c394af4bc510f847c07016eb66a168db4442ce82f35dc90f2e7c14e5baeb2c8",
+  "lock_sha256": "d390e48e680e55f98c259529eaaf16b49d64d3dc11836e7e794eac3315a0c6c0",
+  "project_eligible_for_main": false,
+  "provider_calls": 0,
+  "raw_root": "D:\\ConveyorFlowRuntime\\v2_6\\cookiecutter_preflight_v1d",
+  "record_sha256": "a65895b1d55ea124c7747a85de2f687c617395929614ddf7044a8f4a91852efe",
+  "status": "public_contrast_audited_not_candidate_qualified"
+}

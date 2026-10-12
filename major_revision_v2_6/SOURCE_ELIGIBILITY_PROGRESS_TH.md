@@ -1,6 +1,6 @@
 # v2.6 — สถานะแหล่งข้อมูลก่อน Real-LLM main experiment
 
-สถานะ ณ 11 ตุลาคม 2026: **ยังไม่ freeze main cohort และยังไม่เรียก LLM สำหรับ v2.6**. งานในไฟล์นี้คือ source eligibility เท่านั้น ไม่ใช่ผล RQ1/RQ2 หรือหลักฐานว่า CF-Fit ชนะ baseline.
+สถานะ ณ 12 ตุลาคม 2026: **ยังไม่ freeze main cohort และยังไม่เรียก LLM สำหรับ v2.6**. งานในไฟล์นี้คือ source eligibility เท่านั้น ไม่ใช่ผล RQ1/RQ2 หรือหลักฐานว่า CF-Fit ชนะ baseline.
 
 ## 1. ป้องกันการใช้เคสเดิมเป็นเคสใหม่
 
@@ -46,3 +46,13 @@ Amendment `build_sanic3_regression_v1b.py` ตรึงก่อนดู outcom
 `preflight_sanic_recovery_v1d.py` ตรึงคิวเดิมที่เหลือ `sanic_2 → sanic_1 → sanic_4` หลัง case 5 ถูกตัดที่ candidate gate. ตรวจครบทุกเคสแล้ว: case 2 ผ่านทั้ง buggy/fixed จึงไม่มี bug contrast; cases 1 และ 4 เกิด test error ทั้ง buggy/fixed. Ledger SHA-256 `37286173bcd999f9ed626971047ed1a73765910dbae11f5e12d66380029a591f`, raw อยู่ `D:\ConveyorFlowRuntime\v2_6\sanic_preflight_v1d`, `provider_calls=0`.
 
 **ผล source selection:** Sanic มีเพียง `sanic_3` ที่ผ่าน candidate gate จากคิวที่เหลือทั้งหมด จึง **ไม่ผ่านเกณฑ์ 2 cases/project** สำหรับ v2.6 main และไม่ควรยิง MFEC กับ Sanic ใน cohort หลัก. PySnooper และ Sanic เป็นสอง project แรกที่ตรวจครบแล้วและยังไม่เข้า main; project ถัดไปตาม frozen order คือ Cookiecutter. จำนวน qualified projects จาก 17 ยังเป็นศูนย์ ไม่ใช่สอง.
+
+## 6. ต่อเนื่อง 12 ตุลาคม 2026: Cookiecutter public contrast และ storage stop
+
+Cookiecutter มีคิว frozen `cookiecutter_3 → cookiecutter_1 → cookiecutter_4 → cookiecutter_2`. `preflight_cookiecutter_v1.py` ตรึง Python 3.6.15 image และแปลงคำสั่ง `tox <node>` แบบหนึ่งบรรทัดเป็น direct pytest node โดยเปิดเผยว่าไม่ใช่ historical Python 3.6.9/tox environment ที่ตรงทุกอย่าง. การ build `cookiecutter_3` รอบ v1 ล้มก่อนทดสอบ เพราะ Debian Buster mirror เดิมตอบ 404. เก็บ Dockerfile/build report/ledger ไว้; ไม่มี LLM call.
+
+Amendment v1b เปลี่ยนเฉพาะ apt mirror เป็น Debian archive ก่อนรัน แต่ pytest หยุดเพราะ `setup.cfg` ระบุ `--cov=cookiecutter` โดยไม่มี pytest-cov. Amendment v1c ปิดเฉพาะ coverage addopts; ทั้ง buggy/fixed ยังเกิด test setup error เพราะขาด `mocker` fixture. จากนั้นตรวจ public `tox.ini` และ `test_requirements.txt` ซึ่งระบุ pytest-cov, pytest-mock, pytest-catchlog และ freezegun. Amendment v1d ตรึงเวอร์ชันของ test dependencies เหล่านี้ก่อนรันใหม่ และเก็บ v1–v1c เป็น excluded environment attempts แยกกัน ไม่ตีความเป็นผลบั๊ก.
+
+ผล v1d ของ `cookiecutter_3`: public node `tests/test_read_user_choice.py::test_click_invocation` มี 4 parameterized tests; buggy fail 4/4, fixed pass 4/4, ไม่มี test error/skipped (`preflight_record_sha256 = a65895b1d55ea124c7747a85de2f687c617395929614ddf7044a8f4a91852efe`). `preflight_cookiecutter_v1d.py --audit` ยืนยัน ledger/record และรายงาน `provider_calls=0`. นี่เป็นเพียง **public buggy/fixed contrast**; ยังต้องทำ gold-free candidate, non-visible public regressions, independent audit และหาเคสที่สองก่อนเรียก project นี้ว่า eligible. Image/record ระบุ Python patch-level และ harness deviations ไว้แล้ว.
+
+ก่อนเริ่ม `cookiecutter_1` ตรวจ C: เหลือ **14.68 GB** และ D: เหลือ **205.08 GB**. C: ต่ำกว่าเกณฑ์ 20 GB ใน protocol จึง **หยุด container preflight และ paid calls**. ลบเฉพาะ 9 image cache ที่ตรวจ tag/ID แล้วของ Sanic v2.6 ซึ่ง project ถูกตัดออกจาก main และไม่มี container ใช้งาน; สร้างใหม่ได้จาก script/lock และ raw evidence บน D: ไม่ถูกลบ. หลังลบและ `fstrim` C: ยังเหลือ **14.65 GB** เพราะ `ext4.vhdx` ของ Ubuntu WSL ไม่หดขณะใช้งาน. ไม่ prune images ของงานอื่นและยังไม่เปลี่ยนเกณฑ์หลังเห็นผล. ต้องจัด storage แบบตรวจ exact target และตรวจ gate ใหม่ก่อนรันต่อ. ปัจจุบันยังมี **0 project ที่ผ่านครบ 2 candidate cases** สำหรับ v2.6 main.

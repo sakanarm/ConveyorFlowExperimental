@@ -1,0 +1,50 @@
+[
+  {
+    "bug_id": "3",
+    "bug_info_sha256": "a2cbdb5f836e74e04d652cc3bb0fc351b486fc2944db08ee5f3d06bd73635498",
+    "buggy_commit_id": "5c282f020a8db7e5e7c4e7b51b010556ca31fb7f",
+    "fixed_commit_id_for_validator_only": "7129d474206761a6156925db78eee4b62a0e3944",
+    "preflight_status": "not_executed",
+    "project": "cookiecutter",
+    "python_version": "3.6.9",
+    "run_test_sha256": "e2d6b23928c772e858658ac76f40fdb0c374d469f56411bb1a5f5e039442fca4",
+    "selection_hash": "284fe5562e01f72a2add0b4e227caaf94dcbafa1fa61ff7984a91a13fcb8c017",
+    "test_file": "tests/test_read_user_choice.py"
+  },
+  {
+    "bug_id": "1",
+    "bug_info_sha256": "d2f49c7520a582158016615638637b6b84222fc7e6728fac9c08c1eeb75e06ae",
+    "buggy_commit_id": "c15633745df6abdb24e02746b82aadb20b8cdf8c",
+    "fixed_commit_id_for_validator_only": "7f6804c4953a18386809f11faf4d86898570debc",
+    "preflight_status": "not_executed",
+    "project": "cookiecutter",
+    "python_version": "3.6.9",
+    "run_test_sha256": "8fa48fdd88c886fbdf244124c952d919743b1c4ca407a0b4d50d091d9fab4b34",
+    "selection_hash": "8541ce93622134c32a418f40cffc3b301e32eff642b31b997720e15d6568cfb1",
+    "test_file": "tests/test_generate_context.py"
+  },
+  {
+    "bug_id": "4",
+    "bug_info_sha256": "f79d58f48853a8b23dada08097073d41cd198fc55e3179a4d3c40b86544218db",
+    "buggy_commit_id": "9568ab6ecd2d6836646006c59473c4a4ac0dee04",
+    "fixed_commit_id_for_validator_only": "457a1a4e862aab4102b644ff1d2b2e2b5a766b3c",
+    "preflight_status": "not_executed",
+    "project": "cookiecutter",
+    "python_version": "3.6.9",
+    "run_test_sha256": "b9237865af67323bdf738c16108241b4f88e448db1fab9dddb057ac78630c6b2",
+    "selection_hash": "bbaec96b55f068a29b7129a0112ac10ab0e5f7a92f5cec1379adab5171483785",
+    "test_file": "tests/test_hooks.py"
+  },
+  {
+    "bug_id": "2",
+    "bug_info_sha256": "c4d503aa84adddc10871d9845a57e461eb76e84a38e8cc34055cb20a20f148f4",
+    "buggy_commit_id": "d7e7b28811e474e14d1bed747115e47dcdd15ba3",
+    "fixed_commit_id_for_validator_only": "90434ff4ea4477941444f1e83313beb414838535",
+    "preflight_status": "not_executed",
+    "project": "cookiecutter",
+    "python_version": "3.6.9",
+    "run_test_sha256": "d23be5c94017702b1feaf82905f0f4f039c25490ae309e3327086d0b01fb854f",
+    "selection_hash": "e52a835284b766c0a88a7fac99ed88d62ef77f40288fc5ee87541337da4384df",
+    "test_file": "tests/test_hooks.py"
+  }
+]

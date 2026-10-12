@@ -1,0 +1,11 @@
+# ผลตรวจเพดาน output สำหรับ repository repair
+
+วันที่ 13 ตุลาคม 2026 — ใช้เคส `fastapi_8` ที่เคยเปิดเผยแล้วเพื่อตรวจเครื่องมือเท่านั้น ไม่ใช่เคสใหม่, first attempt, การเปรียบเทียบนโยบาย หรือข้อมูลของ main experiment
+
+ก่อนหน้านี้ exploratory pair ของ CF-Fit และ Central-Rule-Matched เลือก agent_1 เหมือนกัน แต่คำตอบทั้งสองจบด้วย `finish_reason=length` ที่เพดาน 4,096 output tokens และไม่มีเนื้อหา จึงได้ verified 0/1 ทั้งคู่ การตรวจครั้งนี้ตรึง prompt เดิม, model/version เดิม, temperature 0 และ verifier เดิม แล้วเพิ่มเพดาน output เป็น 32,768 tokens สำหรับ **หนึ่งคำขอ** โดยไม่ retry อัตโนมัติ การเลือกเพดานใหม่นี้เกิดหลังเห็นความล้มเหลวเดิม จึงห้ามนำผลไปปะปนกับ first-attempt cohort
+
+Lock SHA-256: `3c80f7f4a0154f9a969c89786880b6e21298b04e995d876babe074f78cfada0f`. คำขอ MFEC หนึ่งครั้งใช้ `tencent-hy3` exact version `4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3`; provider request ID `f7b1f1c3-a61b-4b4f-ae0a-0dc5faa2f5a0`. Provider รายงาน 9,595 input tokens, 17,896 output tokens, `finish_reason=stop`, เวลา 260.80 s. จำนวน output tokens เป็นตัวเลขที่ gateway รายงาน ไม่ควรอนุมานจากความยาวข้อความตอบกลับ. Gateway ส่ง response-cost 0.010715628 แต่หน่วย/สกุลเงินยังไม่ได้ตรวจสอบ จึงไม่ใช่ต้นทุน USD ที่นำไปเทียบ arm ได้
+
+คำตอบเป็น exact-edit JSON ที่แปลงเป็น patch ได้ ตรวจใน container แล้วผ่าน visible test 1/1, regression 3/3, replay visible 1/1 และ replay regression 3/3 โดยไม่มี test failure, error หรือ skipped. `audit_repair_output_budget_pilot_v1.py` ตรวจ lock/prompt/response/patch hashes, provider metadata, execution records และ XML อีกครั้งโดยไม่เรียก LLM; สถานะ `AUDITED_VERIFIED_EXPOSED_INSTRUMENT_PILOT`. Raw evidence อยู่ที่ `D:\ConveyorFlowRuntime\v2_6\repair_output_budget_pilot_v1`; runner, lock และ audit code อยู่ในโฟลเดอร์นี้บน C/Git
+
+ผลนี้แสดงว่าเมื่อให้ output budget เพียงพอ **เส้นทางหนึ่งของ provider → exact edits → container verifier ใช้งานได้** กับเคสที่เคยเห็นแล้ว ไม่ได้พิสูจน์ว่าเพดานนี้เหมาะกับทุก model, ไม่ได้เปลี่ยน Ability Rank, ไม่ได้พิสูจน์ความเหนือกว่าของ CF-Fit, และยังไม่ปิดข้อกังวลเรื่องจำนวน repository อิสระหรือ full ML workflow ขั้นถัดไปต้องตรึง generation settings เดียวกันก่อนรันเคสที่ยังไม่เปิดเผย และต้องผ่าน public buggy/fixed contrast ของ source ก่อนเรียก LLM

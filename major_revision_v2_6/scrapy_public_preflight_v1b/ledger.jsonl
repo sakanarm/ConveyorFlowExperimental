@@ -1,0 +1,2 @@
+{"case_id": "scrapy_39", "provider_calls": 0, "queue_index": 0, "reason": null, "record_sha256": "a9b2fee34d697a05cb9f64432b861a053038a0fc38d6da9d62cd205e24c9b621", "selection_hash": "006f4e3e9aac220d4482471f0dabf9b96dd84ca560576d2d3d6eba2883d64abe", "status": "reproducible"}
+{"case_id": "scrapy_34", "provider_calls": 0, "queue_index": 1, "reason": null, "record_sha256": "a281d39a6e332051041f7a79cd917217c617dc885875ac515f4d0b23e1ff0bc9", "selection_hash": "02bd5f2b849f05192c8b3dfef58c6eb8f190e7f1ea1f439a55199224cfecd9ff", "status": "reproducible"}

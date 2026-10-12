@@ -1,0 +1,36 @@
+{
+  "case": {
+    "allowed_files": [
+      "sanic/log.py"
+    ],
+    "bug_id": "5",
+    "bug_info_sha256": "38f8b21ea7dc3b5058f34c66f9c5acfbc7f9b4c5e5e07c8d251575979fcca410",
+    "buggy_commit_id": "e3a27c2cc485d57aa1ff87d9f69098e4ab12727e",
+    "case_id": "sanic_5",
+    "fixed_commit_id_for_validator_only": "b63c06c75a54752d7f3115d3c635580db44b8399",
+    "preflight_record_sha256": "e38cf1633ff26a90f8ed657df94f5072f1e1ace34b975fe3d9d3c33b99952019",
+    "preflight_status": "not_executed",
+    "project": "sanic",
+    "python_version": "3.8.3",
+    "run_test_sha256": "2ba0afb65377f8f57619233a83932dcaa718703c3fd039523ad49a05ea8c2e70",
+    "selection_hash": "2edb56b6e3d02ce3c7cebb0aa1dd04cf5b29cc4d0d32648358cff140cac0d09c",
+    "test_file": "tests/test_logging.py",
+    "validator_source_image": "sha256:3fc535e63dc7094d5e8cc46d300649457d0c234215f67aac8f08c96601159e99",
+    "visible_test": "tests/test_logging.py::test_logging_modified_root_logger_config"
+  },
+  "created_at_utc": "2026-10-12T03:34:37.006098+00:00",
+  "minimum_common_active_passes": 3,
+  "paid_execution_allowed": false,
+  "per_node_timeout_seconds": 120,
+  "prior_v2_5_failure_disclosed": "Prior Sanic_5 five-node batch public regressions timed out in v2.5; no outcome from that batch is reused or hidden",
+  "provider_calls": 0,
+  "public_regression_file": "tests/test_logging.py",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/sanic5_candidate_v1",
+  "regression_selection_domain": "cf-v26-sanic5-public-logging-regressions-20261012",
+  "regression_selection_rule": "Hash-sort non-visible public test_logging nodes and take first three before outcomes",
+  "runner_sha256": "f60311097aef24bd91e077109e4539706f048ad61bbbbae3407d812ea7eca6e5",
+  "status": "v2_6_sanic5_gold_free_candidate_frozen_before_provider",
+  "stop_rule": "Stop at first failed or timed-out node pair; retain prior results and do not select replacements",
+  "v2_6_preflight_ledger_sha256": "aa4766d2bc9969160f04a175fae2010a45d78a158f3e7a84f642abcbb68609e3",
+  "v2_6_preflight_lock_sha256": "b425cdb74d4973b798cab25d4d0802075e2339c7cbdf2fb0e92d026956df2f9e"
+}

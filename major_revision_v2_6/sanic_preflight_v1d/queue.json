@@ -1,0 +1,38 @@
+[
+  {
+    "bug_id": "2",
+    "bug_info_sha256": "809cccd68bf09525fe97b074d459325d8926addfc5db8dd3d9f4c5f07df1b610",
+    "buggy_commit_id": "ba9b432993019b0af0c4827a5ed42aaa091bd17d",
+    "fixed_commit_id_for_validator_only": "801595e24acdf8050b8d3ffa512d424147848d32",
+    "preflight_status": "not_executed",
+    "project": "sanic",
+    "python_version": "3.8.3",
+    "run_test_sha256": "5b05bd487cc5108f919a886a952e1374f5bd0a32dc5052d9c2aaf0fe1e0b8bb0",
+    "selection_hash": "67f3ea9538589c03150d87715f2c99bad8eedac925669979f1a4351c2b77d03f",
+    "test_file": "tests/test_app.py"
+  },
+  {
+    "bug_id": "1",
+    "bug_info_sha256": "6182c6eb995117aae62daa35fcbdc9a7d8bfbe1f968224ef2ca0c697fff50167",
+    "buggy_commit_id": "e7001b00747b659f7042b0534802b936ee8a53e0",
+    "fixed_commit_id_for_validator_only": "44973125c15304b4262c51c78b5a86bd1daafa86",
+    "preflight_status": "not_executed",
+    "project": "sanic",
+    "python_version": "3.8.3",
+    "run_test_sha256": "52aea225714646f8ddf3f59ebb82a536c0927d2d553b32fca2c1450638fd38a4",
+    "selection_hash": "8ac7ab76b3d3bb957c9f2edd7e51e6ba5d8db3c95294ff539d3535a209036ac8",
+    "test_file": "tests/test_blueprints.py"
+  },
+  {
+    "bug_id": "4",
+    "bug_info_sha256": "83c8a5e87e02bd1515a16e8b5c20b95fe52a1e1dc575a2f18462ee4f460219e5",
+    "buggy_commit_id": "e506c89304948bba593e8603ecace1c495b06fd5",
+    "fixed_commit_id_for_validator_only": "e81a8ce07329e95d3d0899b1d774f21759c28e0e",
+    "preflight_status": "not_executed",
+    "project": "sanic",
+    "python_version": "3.8.3",
+    "run_test_sha256": "c22fc917206caac8a19620121019b8914fd9f26d458387ebd2e9c74174b094b5",
+    "selection_hash": "d9e7d5288c61d692259b44f396a78540b98c5ba38cf55a557ee0c228835d512d",
+    "test_file": "tests/test_requests.py"
+  }
+]

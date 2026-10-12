@@ -25,7 +25,7 @@ Preflight ใช้ image Python 3.8.20 และ dependency ที่ตรึ�
 
 ## 3. ผลต่อแผนวิจัย
 
-- 17 project ใน manifest ไม่เท่ากับ 17 project ที่ใช้ main ได้. ขณะนี้ตรวจจริง 2 project: PySnooper ไม่ผ่าน; Sanic ผ่านเฉพาะ public-test contrast. ยังมี 15 project ที่ยังไม่ผ่าน preflight v2.6 และต้องคัดตามลำดับเดิม.
+- 17 project ใน manifest ไม่เท่ากับ 17 project ที่ใช้ main ได้. ย่อหน้านี้บันทึก checkpoint ระยะแรกที่ตรวจ PySnooper และ Sanic; สถานะที่ใหม่กว่าของ Cookiecutter และ FastAPI อยู่ในส่วนต่อท้ายเอกสาร. หลัง FastAPI ผ่าน candidate gate แล้วก็ยังต้องคัด repository อิสระอื่นตามคิวที่ตรึงไว้.
 - เป้าหมาย 12 distinct qualified projects ยัง **ไม่รับประกัน**. หากไม่ถึง ให้หยุดที่ eligibility outcome และจำกัดข้ออ้างเป็น bounded multi-source feasibility ตาม protocol; ห้ามเพิ่มเคสเพราะทิศทางผล CF-Fit ไม่ถูกใจ.
 - ก่อนยิง MFEC main ต้องทำ gold-free repair candidate/public regression, ML corpora เพิ่มและ full-DAG smoke, ability/difficulty/analysis lock, model-version/cost gate, matched decision-locus test และ freeze paired cohort. จากนั้นจึงรัน CF-Fit เทียบ Central-Rule-Matched กับ Static-Owners บน READY belt เดียวกัน และรายงาน throughput/time/utilization/cost เป็น trade-off.
 

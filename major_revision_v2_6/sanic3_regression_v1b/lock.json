@@ -1,0 +1,24 @@
+{
+  "candidate_image_id": "sha256:1227595806f0810c8f5a5f5d246828ff3f97c6d3c045f8c332650adfed1734a5",
+  "case_id": "sanic_3",
+  "created_at_utc": "2026-10-11T12:56:43.472586+00:00",
+  "maximum_nodes": 5,
+  "minimum_active_passes": 3,
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "public_test_files": [
+    "tests/test_named_routes.py",
+    "tests/test_routes.py",
+    "tests/test_url_building.py"
+  ],
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/sanic3_regression_v1b",
+  "reason_for_amendment": "V1 metadata test file has only the visible test; zero non-visible regression nodes",
+  "runner_sha256": "8659e8cf61fe081cf717844165e8d8794feaf9fc8b4cc4a5afba5aaf81979a89",
+  "selection_domain": "cf-v26-sanic3-public-route-regressions-20261011-v1b",
+  "selection_rule": "Hash-sort collected nodes in three declared public route/URL files and take first five",
+  "status": "v2_6_sanic3_regression_inventory_amended_before_outcomes",
+  "v1_candidate_audit_sha256": "c3c604ee93df447342b5d1da06bb0fde9bb7b38fdb5b8a2a3a0820d558480ffb",
+  "v1_lock_sha256": "5f2cc411326ed8419918e7291ce7be57e74123c12bdd781d836af09991ea9e32",
+  "v1_summary_sha256": "aa43c49100fd085239e3a21b8cd84f1733c6337ea904944453aabb87bef4581b",
+  "verifier_image_id": "sha256:5a0aa9e6511a094a40b8196e68065dddaafe5939780e6532651bc949f3cd6115"
+}

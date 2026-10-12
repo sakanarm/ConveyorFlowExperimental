@@ -1,0 +1,43 @@
+{
+  "case": {
+    "allowed_files": [
+      "sanic/app.py"
+    ],
+    "bug_id": "3",
+    "bug_info_sha256": "85171fe4eae544e3cd530c52fb66d1d255a6e8aad758aa7e4b16ce212839ed4e",
+    "buggy_commit_id": "91f6abaa81248189fbcbdf685e8bdcbb7846609f",
+    "case_id": "sanic_3",
+    "fixed_commit_id_for_validator_only": "861e87347a2d373d6ffa387965a6887c83af632c",
+    "preflight_record_sha256": "9022665deec0310072279485eee4c11625a59f62ebaa3bb27ee8ed5e0039c8b7",
+    "preflight_status": "not_executed",
+    "project": "sanic",
+    "python_version": "3.8.3",
+    "run_test_sha256": "4ae67771f8558183efe6a0f50243098c621752d8006c4242f42af82f893704f4",
+    "selection_hash": "33074a3792cb691435df61a455ca4deec931efb26afab55bde1af45db27935e0",
+    "test_file": "tests/test_url_for.py",
+    "validator_source_image": "sha256:0d2735ec57118005c6185d1a0c00158f20f2d3be2a1d40ad17fc6ed5349939c7",
+    "visible_test": "tests/test_url_for.py::test_routes_with_host"
+  },
+  "created_at_utc": "2026-10-11T12:54:44.720184+00:00",
+  "paid_execution_allowed": false,
+  "preflight_ledger_sha256": "aa4766d2bc9969160f04a175fae2010a45d78a158f3e7a84f642abcbb68609e3",
+  "preflight_lock_sha256": "b425cdb74d4973b798cab25d4d0802075e2339c7cbdf2fb0e92d026956df2f9e",
+  "provider_calls": 0,
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/sanic3_candidate_v1",
+  "runner_sha256": "d03844795575fd810fce2f7ab1f69eda6f91a849ff45b4a73c0e28d4aafac28e",
+  "selection_rule": "Hash-sort public non-visible test_url_for nodes; take first five before outcomes; require three common active passes",
+  "settings": {
+    "allowed_files": [
+      "sanic/app.py"
+    ],
+    "build_timeout_seconds": 600,
+    "maximum_public_regression_nodes": 5,
+    "minimum_active_public_regression_passes": 3,
+    "paid_execution_allowed": false,
+    "provider_calls": 0,
+    "public_regression_file": "tests/test_url_for.py",
+    "regression_selection_domain": "cf-v26-sanic3-regression-20261011",
+    "test_timeout_seconds": 240
+  },
+  "status": "v2_6_sanic3_gold_free_candidate_frozen_before_provider"
+}

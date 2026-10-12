@@ -1,0 +1,34 @@
+{
+  "build_timeout_seconds": 600,
+  "candidate_source": "buggy cookiecutter/ package only",
+  "cases": [
+    {
+      "case_id": "cookiecutter_3",
+      "preflight_record_sha256": "a65895b1d55ea124c7747a85de2f687c617395929614ddf7044a8f4a91852efe",
+      "public_test_file": "tests/test_read_user_choice.py",
+      "selection_hash": "284fe5562e01f72a2add0b4e227caaf94dcbafa1fa61ff7984a91a13fcb8c017",
+      "validator_source_image": "sha256:92ec95c26ed2686ddcc5e6fccee7760746aba974bbefc467ae3940b1f5957f0f",
+      "visible_test": "tests/test_read_user_choice.py::test_click_invocation"
+    },
+    {
+      "case_id": "cookiecutter_1",
+      "preflight_record_sha256": "5d3365262d1e75b314adf91c7bd6f9b6d41685f2a1900263e97285b839dfdb73",
+      "public_test_file": "tests/test_generate_context.py",
+      "selection_hash": "8541ce93622134c32a418f40cffc3b301e32eff642b31b997720e15d6568cfb1",
+      "validator_source_image": "sha256:cf13a93f601ff8474d89218e53a2cac857aa4d40605f56b7c5f3a98cf1149086",
+      "visible_test": "tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars"
+    }
+  ],
+  "created_at_utc": "2026-10-12T09:05:48.502511+00:00",
+  "node_timeout_seconds": 120,
+  "paid_execution_allowed": false,
+  "preflight_ledger_sha256": "e456bd2afe391f0cb91351ceab7d7497c70601fbcf0415cbff7e4e69be91a4da",
+  "preflight_lock_sha256": "d390e48e680e55f98c259529eaaf16b49d64d3dc11836e7e794eac3315a0c6c0",
+  "provider_calls": 0,
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/cookiecutter_candidates_v1",
+  "regression_rule": "Collect non-visible nodes from each case's public test file; hash-sort by fixed domain/case/node and take first three before outcomes; run individually and require three common active passes; stop at first failed pair without replacement",
+  "regressions_per_case": 3,
+  "runner_sha256": "ad31ee6692d5044ae8892f08e989edc85d5900d0e15f2e28daf51a9364690b5b",
+  "selection_domain": "cf-v26-cookiecutter-public-regressions-20261012",
+  "status": "v2_6_cookiecutter_gold_free_candidates_frozen_before_provider"
+}

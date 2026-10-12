@@ -1,0 +1,17 @@
+{
+  "amendment": "Build candidate and verifier with --no-cache; no test, source, or selection rule change",
+  "created_at_utc": "2026-10-12T09:29:08.303627+00:00",
+  "first_candidate_build_sha256": "39d2923d5e6df7f00a21c35536f6817e1f3277fd59b777e03aa0b2f802a12027",
+  "first_dockerfile_sha256": "5bd4b3d434fcb4cd0123ffb90a8da3b5e83faaf106ee38e1d4263988279822d2",
+  "first_verifier_build_sha256": "e1c0fa91020896ae502991da1ac4630267c3618ed2d3a0dde53cfc2b06a4b1b4",
+  "original_case_order": [
+    "cookiecutter_3",
+    "cookiecutter_1"
+  ],
+  "original_lock_sha256": "92aa214269087cdf14ffb6b842145694ab9eaefdd19142ec7732fc641e8ae347",
+  "original_runner_sha256": "ad31ee6692d5044ae8892f08e989edc85d5900d0e15f2e28daf51a9364690b5b",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "runner_sha256": "5fcfdaa91e18483895b7a31e1bcbc1c6034ab46c415ad565e09d7f44772cb7cc",
+  "status": "v2_6_cookiecutter_podman_cache_recovery_before_test_outcomes"
+}

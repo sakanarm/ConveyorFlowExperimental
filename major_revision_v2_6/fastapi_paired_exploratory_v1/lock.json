@@ -1,0 +1,127 @@
+{
+  "adaptive_previously_exposed_case": true,
+  "agents": [
+    {
+      "agent_id": "A1",
+      "declined_tasks": [],
+      "model_slot": "agent_1",
+      "ranks": {
+        "bugs2fix:repair": 2
+      }
+    },
+    {
+      "agent_id": "A2",
+      "declined_tasks": [],
+      "model_slot": "agent_2",
+      "ranks": {
+        "bugs2fix:repair": 1
+      }
+    },
+    {
+      "agent_id": "A3",
+      "declined_tasks": [],
+      "model_slot": "agent_3",
+      "ranks": {
+        "bugs2fix:repair": 1
+      }
+    }
+  ],
+  "arms_in_execution_order": [
+    "CENTRAL_RULE_MATCHED",
+    "CF_FIT"
+  ],
+  "case": {
+    "allowed_files": [
+      "fastapi/routing.py"
+    ],
+    "candidate_image": "sha256:dacb038431a062b4e25dc5d5c1bb00aff90764d2b0ef006587a9a2d2153e2393",
+    "candidate_summary_sha256": "a00833f9c01c0abc4db25ed87f87dabd0eb4f436a22a7b6375bc964167136f8f",
+    "case_id": "fastapi_8",
+    "first_visible_execution_sha256": "90de04adc282b26ebabe08537a32545d080f0c1ec66011a6d216a44e2e12fe14",
+    "prompt_sha256": "f513d0284338b75ffab456ea508dfcc43ea6920bdd976e3daa8ec7b53d41be98",
+    "regression_nodes": [
+      "tests/test_datastructures.py::test_upload_file_invalid",
+      "tests/test_starlette_exception.py::test_openapi_schema",
+      "tests/test_default_response_class.py::test_router_a_a_override"
+    ],
+    "source_selection_rule": "fastapi_11: package files appearing in public buggy tracebacks; fastapi_8: routing.py containing APIRoute named by the public failure",
+    "source_sha256": {
+      "fastapi/routing.py": "c41c910bc082a97ad9e89824806ee07ff890cc54da9b5857fd0c137876af443d"
+    },
+    "verifier_image": "sha256:ee39f38373ccbf36a7d4dcb019db6f95369172779ca49a720e2290a416690456",
+    "visible_nodes": [
+      "tests/test_custom_route_class.py::test_route_classes"
+    ]
+  },
+  "cost_rule": "Response cost units are not currency or billed cost",
+  "created_at_utc": "2026-10-12T17:12:59.494251+00:00",
+  "decision_locus_only_policy_difference": true,
+  "dependencies_sha256": {
+    "belt_contract": "25b6a0f2b705c11ec6234291c6f310ab5c210f037d1e404cdab291aa42e1d1d1",
+    "decision_worker": "82056f86dc91c8016c4934000b9e3303d8f45e6c760df4b738fd40c270df0d62",
+    "live_core": "a495594144c158193794b97a12dd4ab21df0e3506736a27aa2587176b2b22595",
+    "patch_contract": "984005c0fd8939256aef19e6edc651413bac5615e8f11d3512928a152a0f001f",
+    "prior_audit": "88b02ec78dc74045ce750dda7a3827b6cbb9dd4cde2635b91ec6fdbe8f72d7e7",
+    "prior_lock": "578d5ca20bb20e46a76439ec8b7433a0d78d5f9d3be28e98959fe530c2034fb4",
+    "profile": "9c0c75cf6061e78d9dce15c7a59f9fe58ddbad458cc69f3b762beceb158bf2ac",
+    "prompt": "6ace303dacdf8cd6a895a45af96cb98fb3c34239b721a4b9bcd8201d51b3e1ff",
+    "provider_adapter": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "runner": "07404c38b448c2e092caffb52c968e33ddd42d8a908bc2a90e5564d9db21dc37",
+    "verifier": "71936de4586967085e3ecc783424dc20460b57ecb2bf467eb2e58ce7ded315c4"
+  },
+  "generation": {
+    "max_output_tokens": 4096,
+    "temperature": 0,
+    "timeout_seconds": 600
+  },
+  "independent_repositories": 1,
+  "limits": {
+    "horizon": 1200,
+    "max_attempts": 1,
+    "no_volunteer_limit": 6,
+    "scan": 1,
+    "w1": 2,
+    "w2": 4
+  },
+  "max_provider_calls": 2,
+  "max_wall_seconds_per_arm": 2400,
+  "models": [
+    {
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "model_id": "tencent-hy3",
+      "slot": "agent_1"
+    },
+    {
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "model_id": "gpt-5-mini",
+      "slot": "agent_2"
+    },
+    {
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "model_id": "glm-5.3-flash",
+      "slot": "agent_3"
+    }
+  ],
+  "not_v2_6_main_mixed_cohort": true,
+  "one_call_per_arm_no_automatic_retry": true,
+  "owners": {
+    "fastapi_8:repair": "A1"
+  },
+  "research_results_before_audit": false,
+  "same_belt_fit_standdown_CAS_verifier": true,
+  "seed": 260813,
+  "status": "v2_6_exploratory_paired_repair_frozen",
+  "tasks": [
+    {
+      "arrival": 0,
+      "dependencies": [],
+      "job_id": "fastapi_8",
+      "required_rank": 2,
+      "stage": "repair",
+      "task_id": "fastapi_8:repair",
+      "workload": "bugs2fix"
+    }
+  ],
+  "tick_ns": 1000000000
+}

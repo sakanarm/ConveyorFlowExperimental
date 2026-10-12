@@ -1,0 +1,47 @@
+{
+  "interpretation_boundary": "One adaptive repair-only case compares implemented decision loci but cannot estimate cross-repository performance or close the planned mixed-workload Major Revision gap.",
+  "lock_sha256": "d369f5c5e8fe03023c01a3374f913f23ab33c9f9290a256e90739220bf349a7e",
+  "no_population_or_equivalence_inference": true,
+  "not_main_cohort": true,
+  "not_mixed_ML_repair_workload": true,
+  "paired_arms": [
+    {
+      "agent_id": "A1",
+      "arm": "CENTRAL_RULE_MATCHED",
+      "attempt_sha256": "038f48b8eb4458c011f275fa478547808a929bf8f89250958f258be65108de06",
+      "decision_actor": "coordinator",
+      "execution_seconds": 34.033002195,
+      "input_tokens": 9595,
+      "job_state": "DEAD_LETTER",
+      "ledger_sha256": "00577dd847cc466f405691a16d2e67922725a3dd99c4566ab78a45514360be77",
+      "model_slot": "agent_1",
+      "output_tokens": 4096,
+      "provider_request_id": "a9e98e1b-36b7-424c-87d8-b89c157a14d9",
+      "response_cost_units_currency_unverified": 0.0034292279999999994,
+      "status": "UNFINISHED_OR_EMPTY_OUTPUT",
+      "summary_sha256": "7917d7a2be7a47f44a5592f5450e98310bb5671034f11b9cb8c10e67a6ea6566",
+      "verified_jobs": 0
+    },
+    {
+      "agent_id": "A1",
+      "arm": "CF_FIT",
+      "attempt_sha256": "de495b79971dad45ef84d44c2c7ad4b8599461e69bd0ed96fdaaafd29e67caf3",
+      "decision_actor": "A1",
+      "execution_seconds": 36.454437873,
+      "input_tokens": 9595,
+      "job_state": "DEAD_LETTER",
+      "ledger_sha256": "d7f6ad97c7b22c7b9340e64ff273e10d2cad464f22e5ffac918c1c79ce042416",
+      "model_slot": "agent_1",
+      "output_tokens": 4096,
+      "provider_request_id": "ad256295-5293-453b-b67a-fbeba7d11d61",
+      "response_cost_units_currency_unverified": 0.0024915,
+      "status": "UNFINISHED_OR_EMPTY_OUTPUT",
+      "summary_sha256": "b4b17a0a2373b2ac149399a5ba363c398a8d89645ec91b2598d6374d53acb712",
+      "verified_jobs": 0
+    }
+  ],
+  "previously_exposed_repository_case": true,
+  "research_results": true,
+  "same_selected_model": true,
+  "status": "adaptive_single_case_paired_comparison_audited"
+}

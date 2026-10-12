@@ -1,0 +1,85 @@
+{
+  "allocation_comparison": false,
+  "attempts": [
+    {
+      "case_id": "fastapi_11",
+      "input_tokens": 17925,
+      "output_tokens": 16384,
+      "provider_request_id": "46260164-284c-4876-9f81-7664456f055f",
+      "reported_cost_units": 0.011016851999999999,
+      "request_marker_sha256": "05fa7b35fb73f01b5827a223e70c56b85f581ac8ae608b70773c20008ce01fda",
+      "slot": "agent_1",
+      "status": "UNFINISHED_OR_EMPTY_OUTPUT",
+      "summary_sha256": "a94937eecf5cd75f8822388e6406c6e114c67a08c3619e2202d665d83fa41292"
+    },
+    {
+      "case_id": "fastapi_11",
+      "input_tokens": 17062,
+      "output_tokens": 302,
+      "provider_request_id": "chatcmpl-EY8rXYmRc3RJBjEbcmilKSw1kK9VM",
+      "reported_cost_units": 0.014155500000000001,
+      "request_marker_sha256": "7eaf01abb8c5c869322dcdac92aafc069e83ef047d3385b38cb5b82b0c196e04",
+      "slot": "agent_2",
+      "status": "TEST_OR_REPLAY_FAILED",
+      "summary_sha256": "f8caaf2f0295449db3a85571db0c2a0a7c78425e6f7aa6e1c3b71dd77c32ef4b"
+    },
+    {
+      "case_id": "fastapi_11",
+      "input_tokens": 16879,
+      "output_tokens": 16384,
+      "provider_request_id": "8963c119-cbed-4c83-b4bc-61fa70aff2a7",
+      "reported_cost_units": 0.01072385,
+      "request_marker_sha256": "15cabd20b8bafc5c643357e3e499fbd5f9b5a402d0e910142fd0c5dc0d83400f",
+      "slot": "agent_3",
+      "status": "UNFINISHED_OR_EMPTY_OUTPUT",
+      "summary_sha256": "b9d2581d5eff15146442e5ecb696bbd9ed3cb801cead61c5f2ea0f78e397ae92"
+    },
+    {
+      "case_id": "fastapi_8",
+      "input_tokens": 8712,
+      "output_tokens": 16384,
+      "provider_request_id": "e9b57715-71d6-4b8a-9be1-a478327dafcb",
+      "reported_cost_units": 0.009800735999999999,
+      "request_marker_sha256": "06cf1a9411adb4b0676033debd219ab2c169469e66f413c9a30494c7bff6aef3",
+      "slot": "agent_1",
+      "status": "UNFINISHED_OR_EMPTY_OUTPUT",
+      "summary_sha256": "9e22b65e3a7d897d61b0b454c544c6b01e429c8097d4545e5a0d320cf28de416"
+    },
+    {
+      "case_id": "fastapi_8",
+      "input_tokens": 8330,
+      "output_tokens": 417,
+      "provider_request_id": "chatcmpl-EYBU1ggon7RYCgpYOTVMJZZEA0Ily",
+      "reported_cost_units": 0.008124000000000001,
+      "request_marker_sha256": "d7bb2629267783f7c1b7d452475ad1cb03af8313d64a6e9e6d9f9496435e2570",
+      "slot": "agent_2",
+      "status": "TEST_OR_REPLAY_FAILED",
+      "summary_sha256": "fa8bab32d35dc4a84ccfd2ddebd36a8f84494b2ca7509c5f52bd510c04671432"
+    },
+    {
+      "case_id": "fastapi_8",
+      "input_tokens": 8240,
+      "output_tokens": 16384,
+      "provider_request_id": "e3e8a71c-397a-41a5-8dec-ed36fe76eb23",
+      "reported_cost_units": 0.009427999999999999,
+      "request_marker_sha256": "9157db9bef529ee1759b0af62b9d5f758bae520232bf3533a234ee850eae1460",
+      "slot": "agent_3",
+      "status": "UNFINISHED_OR_EMPTY_OUTPUT",
+      "summary_sha256": "cedbd00a17b86617cba1229eca628433ec58bd012e3b15b66e7fa4a55b874859"
+    }
+  ],
+  "cases": 2,
+  "currency_known": false,
+  "ledger_sha256": "56104e41ff804ffd7959fe168fbd66a87507675273e4f4d54b3dbb1336304098",
+  "lock_sha256": "f89a254d5ef63a1d9a9f2a1f094d7e76b4b1a3380bf78e1cf9303a507afce1de",
+  "monetary_cost_claim_allowed": false,
+  "provider_attempts": 6,
+  "raw_root": "D:\\ConveyorFlowRuntime\\v2_6\\fastapi_llm_feasibility_v1",
+  "repository_projects": 1,
+  "status": "six_diagnostic_attempts_independently_audited",
+  "status_counts": {
+    "TEST_OR_REPLAY_FAILED": 2,
+    "UNFINISHED_OR_EMPTY_OUTPUT": 4
+  },
+  "verified_repairs": 0
+}

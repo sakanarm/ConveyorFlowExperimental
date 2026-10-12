@@ -1,0 +1,49 @@
+{
+  "amendment": "Include all declared public visible test files in the prompt and use a 4096-output-token cap",
+  "case_order": [
+    "fastapi_11",
+    "fastapi_8"
+  ],
+  "cases": [
+    {
+      "case_id": "fastapi_11",
+      "original_candidate_summary_sha256": "600fd0245507bc2543e636cf95e5ea785bce01b1000dac64dea65ee4eb322e5b",
+      "prompt_sha256": "37c11d8a25a86b0f8f0abc0711846e221c66921b0d7cece3185d3cfc822d82be",
+      "visible_test_source_sha256": {
+        "tests/test_union_body.py": "4906695c5d4090de31cea3ecf3c3579a848dd689bd0c3b582db7f9b488940555",
+        "tests/test_union_inherited_body.py": "29619198a9076c55c247b5351e49c51224436fda28a7aeab788743c64752289f"
+      }
+    },
+    {
+      "case_id": "fastapi_8",
+      "original_candidate_summary_sha256": "a00833f9c01c0abc4db25ed87f87dabd0eb4f436a22a7b6375bc964167136f8f",
+      "prompt_sha256": "6ace303dacdf8cd6a895a45af96cb98fb3c34239b721a4b9bcd8201d51b3e1ff",
+      "visible_test_source_sha256": {
+        "tests/test_custom_route_class.py": "236aec88071168239eaa1024519f6dcf58292cc7740a05bb9b2e8b7772ca105f"
+      }
+    }
+  ],
+  "created_at_utc": "2026-10-12T14:50:38.443072+00:00",
+  "exploratory_adaptive_follow_up": true,
+  "generation": {
+    "max_output_tokens": 4096,
+    "temperature": 0,
+    "timeout_seconds": 600
+  },
+  "model": {
+    "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+    "model_id": "gpt-5-mini",
+    "slot": "agent_2"
+  },
+  "not_allocation_comparison": true,
+  "not_independent_first_attempt": true,
+  "not_pool_with_six_prior_attempts": true,
+  "one_call_per_case_in_this_version": true,
+  "planned_provider_calls": 2,
+  "prior_audit_sha256": "c23286151f5b109da75a9aa45f117f8ef9aae30d10d2178459f881c5419575b5",
+  "prior_lock_sha256": "f89a254d5ef63a1d9a9f2a1f094d7e76b4b1a3380bf78e1cf9303a507afce1de",
+  "provider_calls_before_freeze": 0,
+  "provider_config_sha256": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+  "runner_sha256": "a16dbb28a8a2025a5246b682e710adeadab1e259fc9ec3cefc48a39cd7a814a0",
+  "status": "v2_6_fastapi_adaptive_prompt_amendment_frozen"
+}

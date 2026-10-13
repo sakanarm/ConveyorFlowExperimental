@@ -8,8 +8,10 @@ from pathlib import Path
 import zipfile
 
 from docx import Document
+from docx.oxml.ns import qn
 
-from build_manuscript_v27_drafts import CURRENT, FROZEN_URL, SOURCES, windows_safe
+from build_manuscript_v27_drafts import (CURRENT, FIGURE5, FROZEN_URL,
+                                         SOURCES, windows_safe)
 
 
 def sha(path):
@@ -20,6 +22,15 @@ def media(path):
     with zipfile.ZipFile(windows_safe(path)) as archive:
         return {name: hashlib.sha256(archive.read(name)).hexdigest()
                 for name in archive.namelist() if name.startswith("word/media/")}
+
+
+def inline_image_hashes(doc):
+    values = []
+    for paragraph in doc.paragraphs:
+        for blip in paragraph._p.xpath(".//a:blip"):
+            rid = blip.get(qn("r:embed"))
+            values.append(hashlib.sha256(doc.part.related_parts[rid].blob).hexdigest())
+    return values
 
 
 def audit():
@@ -37,8 +48,17 @@ def audit():
         missing = [item for item in required if item.lower() not in text.lower()]
         if missing:
             raise ValueError(f"{target_name}: missing claims {missing}")
-        if media(source) != media(target):
-            raise ValueError(f"{target_name}: embedded media drift")
+        old_images = inline_image_hashes(old)
+        new_images = inline_image_hashes(new)
+        changed = [i for i, (a, b) in enumerate(zip(old_images, new_images))
+                   if a != b]
+        if (len(old_images) != len(new_images) or len(changed) != 1 or
+                new_images[changed[0]] != sha(FIGURE5)):
+            raise ValueError(f"{target_name}: unexpected figure drift {changed}")
+        old_media, new_media = media(source), media(target)
+        if (any(new_media.get(key) != value for key, value in old_media.items()) or
+                len(new_media) != len(old_media) + 1):
+            raise ValueError(f"{target_name}: unexpected media-package drift")
         before = (len(old.inline_shapes), len(old.element.body.xpath('.//m:oMath')),
                   len(old.tables))
         after = (len(new.inline_shapes), len(new.element.body.xpath('.//m:oMath')),
@@ -65,7 +85,8 @@ def audit():
                     raise ValueError(f"Blind identifier leaked: {token!r}")
         rows.append({"file": target_name, "sha256": sha(target),
                      "figures": after[0], "equations": after[1],
-                     "tables": after[2], "media_preserved": True,
+                     "tables": after[2], "other_figures_preserved": True,
+                     "figure5_corrected": True,
                      "blind_identity_check": "passed" if blind else "not_applicable",
                      "structural_check": "passed"})
     return rows

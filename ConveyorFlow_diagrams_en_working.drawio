@@ -3021,9 +3021,6 @@
         <mxCell id="n41" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="BIDDING" vertex="1">
           <mxGeometry height="46.8" width="153" x="802" y="590.7" as="geometry" />
         </mxCell>
-        <mxCell id="t_csKau-SENMY2UGk-Rz-2" edge="1" parent="1" source="n42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="n41" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="n42" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#26313a;fontSize=10;fontColor=#26313a;strokeWidth=1;fontStyle=1;dashed=0;align=center;verticalAlign=middle;spacing=4;fontFamily=Helvetica" value="BUSY" vertex="1">
           <mxGeometry height="46.8" width="153" x="802" y="658.2" as="geometry" />
         </mxCell>

@@ -16,12 +16,13 @@ CURRENT = V2 / "CURRENT_MANUSCRIPTS"
 ANALYSIS = Path(__file__).resolve().parent / "scrapy_live_pair_v1/analysis_v1.json"
 SOURCES = (
     ("ConveyorFlow_IEEE_Manuscript_v2_6_1_Current.docx",
-     "ConveyorFlow_IEEE_Manuscript_v2_7_Exploratory_Draft_Rev5.docx", False, False),
+     "ConveyorFlow_IEEE_Manuscript_v2_7_Exploratory_Draft_Rev7.docx", False, False),
     ("ConveyorFlow_AJSTR_Blinded_v2_6_1_Current.docx",
-     "ConveyorFlow_AJSTR_Blinded_v2_7_Exploratory_Draft_Rev5.docx", True, True),
+     "ConveyorFlow_AJSTR_Blinded_v2_7_Exploratory_Draft_Rev7.docx", True, True),
     ("ConveyorFlow_AJSTR_Unblinded_v2_6_1_Current.docx",
-     "ConveyorFlow_AJSTR_Unblinded_v2_7_Exploratory_Draft_Rev5.docx", True, False),
+     "ConveyorFlow_AJSTR_Unblinded_v2_7_Exploratory_Draft_Rev7.docx", True, False),
 )
+FIGURE5 = Path(__file__).resolve().parent / "figures_rev6/Figure_5.png"
 
 FROZEN_URL = (
     "https://github.com/sakanarm/ConveyorFlowExperimental/tree/"
@@ -47,6 +48,49 @@ def find(doc, beginning):
     return found[0]
 
 
+def add_sentence(doc, beginning, sentence):
+    find(doc, beginning).add_run(" " + sentence)
+
+
+def replace_number_run(paragraph, old, new):
+    matches = [run for run in paragraph.runs if run.text == old]
+    if len(matches) != 1:
+        raise ValueError(f"Expected one run {old!r} in {paragraph.text[:60]!r}")
+    matches[0].text = new
+
+
+def put_references_in_citation_order(doc, ajstr):
+    kappa = find(doc, "We labeled 304 stage" if ajstr else
+                 "Difficulty was operationalized over 304")
+    statistics = find(doc, "A full run, not an individual task" if ajstr else
+                      "The experimental unit is a complete run")
+    replace_number_run(kappa, "20", "17")
+    replace_number_run(statistics, "17", "18")
+    replace_number_run(statistics, "19", "20")
+    refs = {number: find(doc, f"[{number}] ") for number in range(17, 21)}
+    refs[17]._element.addprevious(refs[20]._element)
+    for old, new in ((20, 17), (17, 18), (18, 19), (19, 20)):
+        replace_number_run(refs[old], str(old), str(new))
+
+
+def replace_figure5(doc, ajstr):
+    prefix = "Figure 5." if ajstr else "Fig. 5."
+    captions = [p for p in doc.paragraphs if p.text.strip().startswith(prefix)]
+    if len(captions) != 1:
+        raise ValueError("Expected one Figure 5 caption")
+    caption = captions[0]
+    image_xml = caption._p.getprevious()
+    image_paragraphs = [p for p in doc.paragraphs if p._p is image_xml]
+    if len(image_paragraphs) != 1 or len(image_xml.xpath(".//wp:inline")) != 1:
+        raise ValueError("Expected one image directly above Figure 5 caption")
+    paragraph = image_paragraphs[0]
+    old_inline = image_xml.xpath(".//wp:inline")[0]
+    width = int(old_inline.xpath("./wp:extent")[0].get("cx"))
+    paragraph.clear()
+    shape = paragraph.add_run().add_picture(str(FIGURE5), width=width)
+    shape._inline.docPr.set("descr", caption.text[:280])
+
+
 def insert_table_before(doc, anchor, values):
     table = doc.add_table(rows=0, cols=len(values[0]))
     table.style = "Table Grid"
@@ -59,24 +103,54 @@ def insert_table_before(doc, anchor, values):
 
 
 def build(doc, analysis, ajstr, blind):
+    abstract = find(doc, "Abstract")
+    abstract.text = abstract.text.replace(
+        "and a container-verified repository repair.",
+        "and a repository-repair attempt evaluated in a container.").replace(
+        "The earlier six-block executable study is reported separately; the cohorts are not pooled.",
+        "The earlier six-block study and a separate two-bug Scrapy follow-up "
+        "are not pooled with this cohort. Each arm verified one of the two "
+        "Scrapy repairs; no cross-project inference follows.")
+    if ajstr:
+        classical = find(doc, "Distributed task allocation has long")
+        llm_work = find(doc, "LLM-agent frameworks such as")
+    else:
+        classical = find(doc, "Classical distributed task allocation")
+        llm_work = find(doc, "LLM multi-agent systems such as")
+    classical._element.addprevious(llm_work._element)
+    put_references_in_citation_order(doc, ajstr)
+    replace_figure5(doc, ajstr)
     if not ajstr:
         revision = find(doc, "Research revision 2.6.1")
         revision._element.getparent().remove(revision._element)
         contributions = find(doc, "Sakan Punyanon: investigation")
         contributions.text = contributions.text.replace(
             " The authors should confirm the final contribution wording before submission.", "")
+        for heading in (
+            "I. Frozen Ecological Real-LLM Allocation Main",
+            "J. Supporting Executable ML Results",
+            "K. Supporting Repository Repair Results",
+            "L. Completed Repository Calibration",
+            "M. Paired Ecological Main Results",
+            "N. Post-Main Holdout Repository-Repair Feasibility",
+        ):
+            find(doc, heading).style = "Heading 2"
     if ajstr:
+        method_anchor = find(doc, "3. Results and Discussion")
+        insert_before(method_anchor, "2.6. Bounded Scrapy repository extension", "Heading 2")
         anchor = find(doc, "3.13. Interpretation")
         heading = "3.13. Bounded Scrapy repository extension"
         table_title = "Table 14. Bounded Scrapy repair extension"
         find(doc, "3.13. Interpretation").text = "3.14. Interpretation"
         find(doc, "3.14. Limitations").text = "3.15. Limitations"
     else:
+        method_anchor = find(doc, "VI. RESULTS")
+        insert_before(method_anchor, "K. Bounded Scrapy Repository Extension", "Heading 2")
         anchor = find(doc, "VII. DISCUSSION")
         heading = "P. Bounded Scrapy Repository Extension"
         table_title = "TABLE XV. BOUNDED SCRAPY REPAIR EXTENSION"
     insert_before(anchor, heading, "Heading 2")
-    insert_before(anchor,
+    insert_before(method_anchor,
                   "We conducted a separate repair-only extension on the first two "
                   "previously unattempted Scrapy bugs in a pre-frozen public-source "
                   "queue. The buggy checkout failed its public test and the fixed "
@@ -90,6 +164,13 @@ def build(doc, analysis, ajstr, blind):
                   "required visible, regression, and fresh replay checks in Podman. "
                   "The task rank of 2 was a fixed exploratory allocation setting, "
                   "not an expert difficulty label.")
+    insert_before(method_anchor,
+                  "Restricted completion time assigns the 1,800-s horizon to a "
+                  "repair not verified by the horizon; conditional completion "
+                  "time is not imputed for failures. Busy fraction uses three "
+                  "agents times the fixed horizon as its denominator. Gateway "
+                  "response-cost values are reported only as provisional units, "
+                  "not verified billed currency or monetary cost per verified job.")
     by_case = {case_id: {row["arm"]: row for row in analysis["rows"]
                          if row["case_id"] == case_id}
                for case_id in ("scrapy_39", "scrapy_34")}
@@ -99,7 +180,9 @@ def build(doc, analysis, ajstr, blind):
         f"{by_case[case_id]['CENTRAL_RULE_MATCHED']['verified']}/1, and "
         f"{by_case[case_id]['STATIC_OWNERS']['verified']}/1 repairs, respectively."
         for case_id in ("scrapy_39", "scrapy_34"))
-    insert_before(anchor, case_sentence)
+    case_paragraph = insert_before(anchor, case_sentence)
+    case_paragraph.add_run(" Table 14 summarizes these outcomes." if ajstr else
+                           " Table XV summarizes these outcomes.")
     caption = insert_before(anchor, table_title)
     caption.paragraph_format.page_break_before = True
     caption.paragraph_format.keep_with_next = True
@@ -128,12 +211,7 @@ def build(doc, analysis, ajstr, blind):
                   "currency, and invoice have not been reconciled. Thus, they "
                   "are not verified billed costs or a monetary efficiency ranking.")
     insert_before(anchor,
-                  "Restricted time assigns the 1,800-s horizon to a repair not "
-                  "verified by the horizon; conditional completion time is not "
-                  "imputed for failures. Busy fraction uses three agents times "
-                  "the fixed horizon as its denominator. Provider-reported cost "
-                  "units are not verified billed currency, so monetary cost per "
-                  "verified job is unavailable. The two bugs belong to one "
+                  "The two bugs belong to one "
                   "repository project and all arms used the selected A1 model; "
                   "provider calls are not independent project-level samples. "
                   "This extension does not add a full ML pipeline, establish "
@@ -161,6 +239,72 @@ def build(doc, analysis, ajstr, blind):
                   "gateway's dated tariff, usage records, and invoice must be "
                   "reconciled before reporting billed cost per verified job. "
                   "These are proposed tests, not results of the present study.")
+    if ajstr:
+        for number, sentence in (
+            (12, "Table 12 summarizes the separate 11-block executable cohort."),
+            (13, "Table 13 reports the matched decision-layer fault outcomes."),
+        ):
+            insert_before(find(doc, f"Table {number}."), sentence)
+        image_only_headings = [p for p in doc.paragraphs
+                               if p.style.name.startswith("Heading")
+                               and not p.text.strip()
+                               and p._p.xpath(".//w:drawing")]
+        if len(image_only_headings) != 1:
+            raise ValueError("Expected Figure 16 image-only heading")
+        image_only_headings[0].style = "Normal"
+        threat = find(doc, "Frozen simulation seeds, source hashes,")
+        threat.text = threat.text.replace(
+            "and component-failure tests remain open.",
+            "and production-scale component-failure tests remain open.")
+    else:
+        add_sentence(doc, "Static controls are fixed skill ownership",
+                     "Table I summarizes the prespecified controls and study cells.")
+        add_sentence(doc, "Against the static controls, CF-Fit increased",
+                     "Figure 6 shows the paired cost contrasts and uncertainty bands.")
+        add_sentence(doc, "The radar chart is a visualization aid only.",
+                     "Figure 7 shows this descriptive profile.")
+        add_sentence(doc, "The large P95 reduction also has a competing-risk explanation:",
+                     "Figure 8 displays the verified-throughput contrast.")
+        add_sentence(doc, "Assessment increased cost by 4.6",
+                     "Table IV and Figure 9 present the component contrasts.")
+        add_sentence(doc, "The fallback analysis combines mixed",
+                     "Table V defines the reported fallback comparisons.")
+        add_sentence(doc, "Relative to F0/F1, F2 spent longer",
+                     "Figure 10 shows the dead-letter contrasts.")
+        add_sentence(doc, "The cost-throughput Pareto frontier contains",
+                     "Figures 11 and 12 display the Pareto and competing-risk views, respectively.")
+        add_sentence(doc, "A separate pre-Main calibration called",
+                     "Figure 13 shows the descriptive pass-rate profile.")
+        add_sentence(doc, "The original Real-LLM microtask study used",
+                     "Figure 14 shows the descriptive policy profile.")
+        add_sentence(doc, "A separately frozen extension added",
+                     "Figure 15 shows the supplementary descriptive profiles.")
+        add_sentence(doc, "Full-minus-ablation effects identify",
+                     "Table IV reports full-minus-ablation results.")
+        insert_before(find(doc, "TABLE XII."),
+                      "Table XII summarizes the audited six-block ecological main.")
+        insert_before(find(doc, "TABLE XIII."),
+                      "Table XIII summarizes the separate 11-block executable cohort.")
+        insert_before(find(doc, "TABLE XIV."),
+                      "Table XIV reports the matched decision-layer fault outcomes.")
+        robustness = find(doc, "Resource-mapping effects were recomputed")
+        robustness.text = robustness.text.replace(
+            "was stable across all three mappings=True",
+            "was stable across all three mappings")
+        no_standdown = find(doc, "Removing stand-down changed completion")
+        no_standdown.text = no_standdown.text.replace(
+            "-0.00 percentage points", "0.00 percentage points").replace(
+            "After Holm correction, significant outcomes were: none of the reported outcomes.",
+            "No reported outcome remained significant after Holm correction.")
+        threat = find(doc, "Internal validity is strengthened by frozen seeds")
+        threat.text = threat.text.replace(
+            "and genuine component-failure tests remain future work.",
+            "and production-scale component-failure tests remain future work.")
+    conclusion = find(doc, "The independently audited executable cohort demonstrates")
+    conclusion.add_run(
+        " A separate two-bug Scrapy follow-up verified one repair per arm within "
+        "one repository; it is not evidence of a policy advantage or "
+        "cross-project reliability.")
     if blind:
         availability = (
             "The replication package contains experimental code, frozen "

@@ -1,0 +1,39 @@
+{
+  "documents": [
+    {
+      "blank_pages": [],
+      "complete_result_table_page": 22,
+      "future_work_page": 23,
+      "minimum_page_text_chars": 168,
+      "name": "IEEE",
+      "offpage_text_blocks": [],
+      "pages": 24,
+      "pdf_sha256": "d1a9929777075bf56fe741a6ff4828d4d4894b612629fea9970b619b264be8bf",
+      "visual_review": "result_and_future_pages_inspected_not_every_page"
+    },
+    {
+      "blank_pages": [],
+      "complete_result_table_page": 32,
+      "future_work_page": 34,
+      "minimum_page_text_chars": 208,
+      "name": "AJSTR_Blind",
+      "offpage_text_blocks": [],
+      "pages": 35,
+      "pdf_sha256": "6fac7d9f01a3981dff9792f8b98fd6f7a9c90e76e0f89e18211e27113b2fa1f8",
+      "visual_review": "result_and_future_pages_inspected_not_every_page"
+    },
+    {
+      "blank_pages": [],
+      "complete_result_table_page": 32,
+      "future_work_page": 34,
+      "minimum_page_text_chars": 208,
+      "name": "AJSTR_Unblind",
+      "offpage_text_blocks": [],
+      "pages": 35,
+      "pdf_sha256": "1599309176cb654df3d45b243857c70ff55cd4331360bb849891ebd9be6d93b6",
+      "visual_review": "result_and_future_pages_inspected_not_every_page"
+    }
+  ],
+  "libreoffice_used": false,
+  "renderer": "Microsoft Word ExportAsFixedFormat"
+}

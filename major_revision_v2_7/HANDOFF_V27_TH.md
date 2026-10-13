@@ -7,7 +7,7 @@ Real-LLM Scrapy extension จบ 6/6 arms; ไม่มี provider call ค้�
 ## ที่เก็บ
 
 - `C:` ภายใน workspace `v2/major_revision_v2_7`: source, frozen locks, audit capsule, analysis, protocol, results, future-work plan, reproducibility scripts และ Word structural/QA scripts. อย่าลบ capsule/locks หลังตีพิมพ์.
-- `C:` ภายใน `v2/CURRENT_MANUSCRIPTS`: Word draft ล่าสุดคือ IEEE และ AJSTR blind/unblind ชื่อ `*v2_7_Exploratory_Draft_Rev3.docx`. Folder นี้ถูก `.gitignore` โดยตั้งใจ; Rev1/Rev2 และ v2.6.1 ยังอยู่ ไม่ได้ทับ. `README_CURRENT_TH.md` ระบุว่าฉบับไหนล่าสุด.
+- `C:` ภายใน `v2/CURRENT_MANUSCRIPTS`: Word draft ล่าสุดคือ IEEE และ AJSTR blind/unblind ชื่อ `*v2_7_Exploratory_Draft_Rev4.docx`. Folder นี้ถูก `.gitignore` โดยตั้งใจ; Rev1–Rev3 และ v2.6.1 ยังอยู่ ไม่ได้ทับ. `README_CURRENT_TH.md` ระบุว่าฉบับไหนล่าสุด.
 - `D:\ConveyorFlowRuntime\v2_7\scrapy_live_pair_v1`: raw responses, patches, request markers, verifier reports, allocation ledgers. เป็นหลักฐานหนัก/อาจมีเนื้อหา provider จึงไม่ขึ้น public Git. ห้ามย้ายโดยไม่แก้ path/hashes ใน audit หรือถ่ายสำเนาแบบรักษา integrity.
 - `D:\ConveyorFlowRuntime\v2_7\word_qa`: สำเนาพาธสั้นสำหรับ Microsoft Word, PDF/PNG QA. ใช้พาธสั้นเพราะ Word COM ค้างกับ workspace path ยาว; LibreOffice ไม่ได้ใช้. รายงาน QA ขนาดเล็กอยู่ `v2/major_revision_v2_7/word_qa/qa_report_v1.json`.
 
@@ -27,4 +27,4 @@ python major_revision_v2_7/audit_manuscript_v27_drafts.py
 
 ## Word และความพร้อมส่ง
 
-Rev3 ทั้งสามฉบับ render ด้วย Microsoft Word ได้ (IEEE 24 หน้า, AJSTR 35 หน้าแต่ละฉบับ), ตรวจ table ใหม่/Future Work ที่เกี่ยวข้องด้วยภาพ และ machine scan ทุกหน้าพบไม่มีหน้าเปล่าหรือ text box หลุดขอบ. รูป/สมการเดิมครบและ blind identity scan ผ่าน. **ยังไม่ได้ตรวจภาพทุกหน้าที่ 100% หรือให้ผู้เขียน/อาจารย์อนุมัติเนื้อหา จึงยังเป็น draft ไม่ใช่ไฟล์ submit-ready**. ผล v2.7 ไม่ปิด Major Revision ทั้งหมด: project diversity, complete mixed cohort/ML replication, human labels, billed cost และ generalizable decision-locus effect ยังเปิดอยู่. แผนใน `FUTURE_WORK_PLAN_TH.md` ยังยึด scientific story ของที่ปรึกษา ไม่ขยายเป็นการเสนอ 13 policies.
+Rev4 ทั้งสามฉบับ render ด้วย Microsoft Word ได้; ตรวจ table ใหม่/Future Work ที่เกี่ยวข้องด้วยภาพ และ machine scan ทุกหน้าพบไม่มีหน้าเปล่าหรือ text box หลุดขอบ. IEEE Rev4 ลบบรรทัดสถานะ revision ภายในที่ไม่ควรอยู่ในต้นฉบับส่งวารสาร. รูป/สมการเดิมครบและ blind identity scan ผ่าน. **ยังไม่ได้ตรวจภาพทุกหน้าที่ 100% หรือให้ผู้เขียน/อาจารย์อนุมัติเนื้อหา จึงยังเป็น draft ไม่ใช่ไฟล์ submit-ready**. ผล v2.7 ไม่ปิด Major Revision ทั้งหมด: project diversity, complete mixed cohort/ML replication, human labels, billed cost และ generalizable decision-locus effect ยังเปิดอยู่. แผนใน `FUTURE_WORK_PLAN_TH.md` ยังยึด scientific story ของที่ปรึกษา ไม่ขยายเป็นการเสนอ 13 policies.

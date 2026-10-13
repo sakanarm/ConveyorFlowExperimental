@@ -16,11 +16,11 @@ CURRENT = V2 / "CURRENT_MANUSCRIPTS"
 ANALYSIS = Path(__file__).resolve().parent / "scrapy_live_pair_v1/analysis_v1.json"
 SOURCES = (
     ("ConveyorFlow_IEEE_Manuscript_v2_6_1_Current.docx",
-     "ConveyorFlow_IEEE_Manuscript_v2_7_Exploratory_Draft_Rev3.docx", False, False),
+     "ConveyorFlow_IEEE_Manuscript_v2_7_Exploratory_Draft_Rev4.docx", False, False),
     ("ConveyorFlow_AJSTR_Blinded_v2_6_1_Current.docx",
-     "ConveyorFlow_AJSTR_Blinded_v2_7_Exploratory_Draft_Rev3.docx", True, True),
+     "ConveyorFlow_AJSTR_Blinded_v2_7_Exploratory_Draft_Rev4.docx", True, True),
     ("ConveyorFlow_AJSTR_Unblinded_v2_6_1_Current.docx",
-     "ConveyorFlow_AJSTR_Unblinded_v2_7_Exploratory_Draft_Rev3.docx", True, False),
+     "ConveyorFlow_AJSTR_Unblinded_v2_7_Exploratory_Draft_Rev4.docx", True, False),
 )
 
 
@@ -54,6 +54,12 @@ def insert_table_before(doc, anchor, values):
 
 
 def build(doc, analysis, ajstr, blind):
+    if not ajstr:
+        revision = find(doc, "Research revision 2.6.1")
+        revision._element.getparent().remove(revision._element)
+        contributions = find(doc, "Sakan Punyanon: investigation")
+        contributions.text = contributions.text.replace(
+            " The authors should confirm the final contribution wording before submission.", "")
     if ajstr:
         anchor = find(doc, "3.13. Interpretation")
         heading = "3.13. Bounded Scrapy repository extension"

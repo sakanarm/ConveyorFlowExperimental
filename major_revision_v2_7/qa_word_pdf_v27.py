@@ -10,7 +10,7 @@ import fitz
 
 HERE = Path(__file__).resolve().parent
 PDF_DIR = Path("D:/ConveyorFlowRuntime/v2_7/word_qa")
-REPORT = HERE / "word_qa/qa_report_v1.json"
+REPORT = HERE / "word_qa/qa_report_v2.json"
 NAMES = ("IEEE", "AJSTR_Blind", "AJSTR_Unblind")
 
 
@@ -19,7 +19,7 @@ def sha(path):
 
 
 def inspect(name):
-    path = PDF_DIR / (name + "_v27_rev3.pdf")
+    path = PDF_DIR / (name + "_v27_rev4.pdf")
     doc = fitz.open(path)
     blank, offpage, text_lengths = [], [], []
     for index, page in enumerate(doc):

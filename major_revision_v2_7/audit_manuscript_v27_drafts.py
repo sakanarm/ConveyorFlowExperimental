@@ -9,7 +9,7 @@ import zipfile
 
 from docx import Document
 
-from build_manuscript_v27_drafts import CURRENT, SOURCES, windows_safe
+from build_manuscript_v27_drafts import CURRENT, FROZEN_URL, SOURCES, windows_safe
 
 
 def sha(path):
@@ -50,6 +50,11 @@ def audit():
                             "3.14. Interpretation", "3.15. Limitations"):
                 if text.count(heading) != 1:
                     raise ValueError(f"{target_name}: heading drift {heading}")
+        if blind:
+            if FROZEN_URL in text or "editorial office separately" not in text:
+                raise ValueError(f"{target_name}: blind availability drift")
+        elif text.count(FROZEN_URL) != 1:
+            raise ValueError(f"{target_name}: frozen repository link missing or duplicated")
         if blind:
             with zipfile.ZipFile(windows_safe(target)) as archive:
                 xml = b"\n".join(archive.read(name) for name in archive.namelist()

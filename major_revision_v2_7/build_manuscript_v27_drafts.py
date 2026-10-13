@@ -16,11 +16,16 @@ CURRENT = V2 / "CURRENT_MANUSCRIPTS"
 ANALYSIS = Path(__file__).resolve().parent / "scrapy_live_pair_v1/analysis_v1.json"
 SOURCES = (
     ("ConveyorFlow_IEEE_Manuscript_v2_6_1_Current.docx",
-     "ConveyorFlow_IEEE_Manuscript_v2_7_Exploratory_Draft_Rev4.docx", False, False),
+     "ConveyorFlow_IEEE_Manuscript_v2_7_Exploratory_Draft_Rev5.docx", False, False),
     ("ConveyorFlow_AJSTR_Blinded_v2_6_1_Current.docx",
-     "ConveyorFlow_AJSTR_Blinded_v2_7_Exploratory_Draft_Rev4.docx", True, True),
+     "ConveyorFlow_AJSTR_Blinded_v2_7_Exploratory_Draft_Rev5.docx", True, True),
     ("ConveyorFlow_AJSTR_Unblinded_v2_6_1_Current.docx",
-     "ConveyorFlow_AJSTR_Unblinded_v2_7_Exploratory_Draft_Rev4.docx", True, False),
+     "ConveyorFlow_AJSTR_Unblinded_v2_7_Exploratory_Draft_Rev5.docx", True, False),
+)
+
+FROZEN_URL = (
+    "https://github.com/sakanarm/ConveyorFlowExperimental/tree/"
+    "691bc9e1397b45f9948069d4b6b44b0e48d8e826"
 )
 
 
@@ -156,6 +161,41 @@ def build(doc, analysis, ajstr, blind):
                   "gateway's dated tariff, usage records, and invoice must be "
                   "reconciled before reporting billed cost per verified job. "
                   "These are proposed tests, not results of the present study.")
+    if blind:
+        availability = (
+            "The replication package contains experimental code, frozen "
+            "configurations, public-data manifests, analysis scripts, derived "
+            "results, and editable diagrams. Its author-identifying GitHub URL "
+            "is omitted from this blinded manuscript and will be supplied to "
+            "the editorial office separately. Public datasets and bug "
+            "benchmarks remain at their upstream sources under their licenses. "
+            "API credentials, raw provider responses, and heavy container "
+            "artifacts are not public. Repository hashes and audit capsules "
+            "therefore do not by themselves recreate historical provider calls; "
+            "a fresh run needs independent provider access and records new "
+            "dated outputs."
+        )
+    else:
+        availability = (
+            "Experimental code, frozen configurations, public-data manifests, "
+            "analysis scripts, derived aggregate results, and editable diagrams "
+            f"are available at {FROZEN_URL} (frozen commit 691bc9e). "
+            "The v2.7 extension is in major_revision_v2_7, with "
+            "REPRODUCE_V27.ps1 documenting the checks and optional fresh run. "
+            "Public datasets and bug benchmarks remain at their upstream "
+            "sources under their licenses. API credentials, raw provider "
+            "responses, heavy container artifacts, and working manuscripts are "
+            "not public. Repository hashes and audit capsules do not by "
+            "themselves recreate historical provider calls; a fresh run needs "
+            "independent provider access and records its own model identity, "
+            "timestamps, and outputs."
+        )
+    if ajstr:
+        find(doc, "Code, frozen configurations,").text = availability
+    else:
+        find(doc, "The public repository provides experimental source,").text = availability
+        duplicate = find(doc, "Code and editable diagrams are available at")
+        duplicate._element.getparent().remove(duplicate._element)
     doc.core_properties.subject = "Audited bounded Scrapy extension, separate from main cohorts"
     if blind:
         doc.core_properties.author = ""

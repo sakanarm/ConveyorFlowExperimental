@@ -1,0 +1,111 @@
+{
+  "active_regression_passes": 10,
+  "candidate_audit": {
+    "allowed_source_sha256": {
+      "black.py": "39028a4006e67238efea16ffee98c8d72084741bcddc79440ce3e3285d2fe22d"
+    },
+    "blocked_paths": [],
+    "missing_forbidden_roots": [],
+    "source_files": 75
+  },
+  "case_id": "black_3",
+  "images": {
+    "candidate": "sha256:9257637c634da518f211b7a735f2724ea8da3b8d5e12d428243cec34a4aa53ea",
+    "verifier": "sha256:5fd51a7a1db2ab87b402c270174fd59ed4c09ed4d912f4882a4c01d2b72d1b6d"
+  },
+  "provider_calls": 0,
+  "reason": null,
+  "reports": {
+    "buggy_regressions": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 10
+      },
+      "dispositions": {
+        "tests.test_black.BlackTestCase::test_assertFormatEqual": "passed",
+        "tests.test_black.BlackTestCase::test_black": "passed",
+        "tests.test_black.BlackTestCase::test_comments4": "passed",
+        "tests.test_black.BlackTestCase::test_conv": "passed",
+        "tests.test_black.BlackTestCase::test_fstring": "passed",
+        "tests.test_black.BlackTestCase::test_function2": "passed",
+        "tests.test_black.BlackTestCase::test_numeric_literals_py2": "passed",
+        "tests.test_black.BlackTestCase::test_preserves_line_endings_via_stdin": "passed",
+        "tests.test_black.BlackTestCase::test_report_quiet": "passed",
+        "tests.test_black.BlackTestCase::test_self": "passed"
+      },
+      "execution_sha256": "f9036b8c84a3a390cdf5ac5884d2dd1fab0ef921701d340eaa1f60fba79d477f",
+      "return_code": 0,
+      "timeout": false,
+      "xml_sha256": "3778b870a611c9ce5f86bcdbf7c075c472edebe2694e8120440ec99786b96dc1"
+    },
+    "fixed_regressions": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 10
+      },
+      "dispositions": {
+        "tests.test_black.BlackTestCase::test_assertFormatEqual": "passed",
+        "tests.test_black.BlackTestCase::test_black": "passed",
+        "tests.test_black.BlackTestCase::test_comments4": "passed",
+        "tests.test_black.BlackTestCase::test_conv": "passed",
+        "tests.test_black.BlackTestCase::test_fstring": "passed",
+        "tests.test_black.BlackTestCase::test_function2": "passed",
+        "tests.test_black.BlackTestCase::test_numeric_literals_py2": "passed",
+        "tests.test_black.BlackTestCase::test_preserves_line_endings_via_stdin": "passed",
+        "tests.test_black.BlackTestCase::test_report_quiet": "passed",
+        "tests.test_black.BlackTestCase::test_self": "passed"
+      },
+      "execution_sha256": "f449dc84cb5ac633361a6f650a3ba198d2ccca5c258b95b1d91c8af85f2d5a64",
+      "return_code": 0,
+      "timeout": false,
+      "xml_sha256": "59b2ffd13fef3920d8fb83a39a03a402df0c3ee753c3affa8b6ae78705a832b1"
+    },
+    "visible_buggy": {
+      "counts": {
+        "errors": 0,
+        "failures": 1,
+        "skipped": 0,
+        "tests": 1
+      },
+      "dispositions": {
+        "tests.test_black.BlackTestCase::test_invalid_config_return_code": "failed"
+      },
+      "execution_sha256": "6d332317f2f1c3889c40a2c5b821bdaada1743431fe9866093b49546b67f3908",
+      "return_code": 1,
+      "timeout": false,
+      "xml_sha256": "537417ac3724ee25094f29ecd31222a207a79a8c7bc070de5b2d3d00625e48be"
+    },
+    "visible_fixed": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "dispositions": {
+        "tests.test_black.BlackTestCase::test_invalid_config_return_code": "passed"
+      },
+      "execution_sha256": "0235e036b83b2cbf149b16bf6b5439d2fec739adfdf40eaa9ba0f47f05b44c2c",
+      "return_code": 0,
+      "timeout": false,
+      "xml_sha256": "5b595eaba6c41e767a51f6447000e38de515b669ed74438fd9734f8eac4a7292"
+    }
+  },
+  "selected_regression_nodes": [
+    "tests/test_black.py::BlackTestCase::test_conv",
+    "tests/test_black.py::BlackTestCase::test_self",
+    "tests/test_black.py::BlackTestCase::test_report_quiet",
+    "tests/test_black.py::BlackTestCase::test_black",
+    "tests/test_black.py::BlackTestCase::test_preserves_line_endings_via_stdin",
+    "tests/test_black.py::BlackTestCase::test_comments4",
+    "tests/test_black.py::BlackTestCase::test_numeric_literals_py2",
+    "tests/test_black.py::BlackTestCase::test_function2",
+    "tests/test_black.py::BlackTestCase::test_fstring",
+    "tests/test_black.py::BlackTestCase::test_assertFormatEqual"
+  ],
+  "status": "candidate_preflight_passed"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "frozen_before_next_ordered_preflight",
+  "source_ledger": "results/bugsinpy_environment_recovery_v3/combined_prefix_ledger.jsonl",
+  "expected_prefix_length": 6,
+  "candidate_index": 6,
+  "llm_calls": 0,
+  "preflight_config": {
+    "status": "frozen_before_python37_case_preflight",
+    "max_candidates": 1,
+    "build_timeout_seconds": 1800,
+    "test_timeout_seconds": 180,
+    "python_scope": "3.7",
+    "base_image": "docker.io/library/python:3.7.17-slim-bullseye@sha256:603879aeff06df23f0d392a19f7ce02aa85e14e6b4d25fd9647b116e0cb93467",
+    "compile_flags": "-O0 -g0",
+    "environment_deviation": "Continue the frozen candidate order at index 6 after the auditable v3 environment-recovery prefix. Use CPython 3.7.17 instead of the historical 3.7.0 patch release, not Python 3.8. Minimal pinned test/runtime dependencies are selected from the original requirements. Original buggy/fixed commits and relevant test hashes remain unchanged. This is not an exact historical machine reproduction. No LLM calls, patches or candidate code run on the host.",
+    "common_packages": ["pip==23.0.1", "setuptools==59.6.0", "wheel==0.38.4"],
+    "profiles": {
+      "thefuck": {
+        "url": "https://github.com/nvbn/thefuck",
+        "packages": ["pytest==3.10.1", "pytest-mock==3.1.0", "pytest-benchmark==3.2.3", "pytest-docker-pexpect==0.9", "mock==4.0.2", "colorama==0.4.3", "decorator==4.4.2", "psutil==5.7.0", "pyte==0.8.0", "six==1.15.0", "pexpect==4.8.0", "requests==2.23.0"],
+        "build": "true"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "answer": {
+    "maximum_pm25": 316.0,
+    "minimum_pm25": 16.0,
+    "records": 12,
+    "station_count": 1
+  },
+  "tolerance": 0.011,
+  "validator_type": "numeric_json"
+}

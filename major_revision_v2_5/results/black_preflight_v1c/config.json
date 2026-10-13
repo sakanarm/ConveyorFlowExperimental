@@ -1,0 +1,34 @@
+{
+  "base_image": "python:3.8.20-slim-bookworm@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+  "build_timeout_seconds": 1800,
+  "common_packages": [
+    "pip==23.0.1",
+    "setuptools==59.6.0",
+    "wheel==0.38.4"
+  ],
+  "compile_flags": "-O0 -g0",
+  "environment_deviation": "Black feasibility on CPython 3.8.20 with pinned minimal packages drawn from the public benchmark requirements. Historical unittest class/method is run as the corresponding pytest node. Not exact historical environment; both variants use identical test runner. V1b adds typing-extensions==3.7.4.1 from the public bug-3 requirements after identical missing-import collection errors in both variants. V1c adds project-declared setuptools-scm pinned to the 2020 Python-3.8 compatible 4.1.2 release and runs setup.py egg_info in both historical variants to generate _black_version.py. The previous common import failure is retained; case queue and visible tests are unchanged.",
+  "max_candidates": 8,
+  "profiles": {
+    "black": {
+      "build": "python setup.py egg_info",
+      "packages": [
+        "pytest==5.4.3",
+        "click==7.1.1",
+        "attrs==19.3.0",
+        "appdirs==1.4.3",
+        "toml==0.10.0",
+        "pathspec==0.7.0",
+        "regex==2020.4.4",
+        "typed-ast==1.4.1",
+        "mypy-extensions==0.4.3",
+        "typing-extensions==3.7.4.1",
+        "setuptools-scm==4.1.2"
+      ],
+      "url": "https://github.com/psf/black"
+    }
+  },
+  "python_scope": "3.8",
+  "status": "frozen_before_v2_ordered_preflight",
+  "test_timeout_seconds": 180
+}

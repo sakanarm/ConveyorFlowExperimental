@@ -1,0 +1,104 @@
+{
+  "adapter_sha256": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+  "allocation_comparison": false,
+  "cases": [
+    {
+      "allowed_files": [
+        "fastapi/openapi/utils.py",
+        "fastapi/routing.py",
+        "fastapi/applications.py"
+      ],
+      "candidate_image": "sha256:768786a12962e134273ce4ea89d9359651663c748ba5390ecf1b8643d3875172",
+      "candidate_summary_sha256": "600fd0245507bc2543e636cf95e5ea785bce01b1000dac64dea65ee4eb322e5b",
+      "case_id": "fastapi_11",
+      "first_visible_execution_sha256": "38e1fcd23e52cbad7245904693d7220689fe157ee5b1813c1e95f2bd023f516a",
+      "prompt_sha256": "347cda24102d35d587372577481dbc1b9531b3d1dad09b8be5f1ba418a92d92d",
+      "regression_nodes": [
+        "tests/test_jsonable_encoder.py::test_encode_unsupported",
+        "tests/test_additional_responses_router.py::test_openapi_schema",
+        "tests/test_query.py::test_get_path[/query/param-200-foo bar]"
+      ],
+      "source_selection_rule": "fastapi_11: package files appearing in public buggy tracebacks; fastapi_8: routing.py containing APIRoute named by the public failure",
+      "source_sha256": {
+        "fastapi/applications.py": "61172705a6421996ac332cdc28856f1cb9a13df327195797217ebc70bd2c4e21",
+        "fastapi/openapi/utils.py": "80d348ee41fe6a6c72fda01acc822b517ea3fc714ad6ca168924e9066e6fb508",
+        "fastapi/routing.py": "6c1a02ca5b73052051952351dff10aeec829e8cb21e24a23ec8530e2f39a8dc4"
+      },
+      "verifier_image": "sha256:8cd815314ddb2414e2b660a7d35d65ef56ffdb159a07c505bc3a7b75f9a7d150",
+      "visible_nodes": [
+        "tests/test_union_body.py::test_item_openapi_schema",
+        "tests/test_union_body.py::test_post_other_item",
+        "tests/test_union_body.py::test_post_item",
+        "tests/test_union_inherited_body.py::test_inherited_item_openapi_schema",
+        "tests/test_union_inherited_body.py::test_post_extended_item",
+        "tests/test_union_inherited_body.py::test_post_item"
+      ]
+    },
+    {
+      "allowed_files": [
+        "fastapi/routing.py"
+      ],
+      "candidate_image": "sha256:dacb038431a062b4e25dc5d5c1bb00aff90764d2b0ef006587a9a2d2153e2393",
+      "candidate_summary_sha256": "a00833f9c01c0abc4db25ed87f87dabd0eb4f436a22a7b6375bc964167136f8f",
+      "case_id": "fastapi_8",
+      "first_visible_execution_sha256": "90de04adc282b26ebabe08537a32545d080f0c1ec66011a6d216a44e2e12fe14",
+      "prompt_sha256": "f513d0284338b75ffab456ea508dfcc43ea6920bdd976e3daa8ec7b53d41be98",
+      "regression_nodes": [
+        "tests/test_datastructures.py::test_upload_file_invalid",
+        "tests/test_starlette_exception.py::test_openapi_schema",
+        "tests/test_default_response_class.py::test_router_a_a_override"
+      ],
+      "source_selection_rule": "fastapi_11: package files appearing in public buggy tracebacks; fastapi_8: routing.py containing APIRoute named by the public failure",
+      "source_sha256": {
+        "fastapi/routing.py": "c41c910bc082a97ad9e89824806ee07ff890cc54da9b5857fd0c137876af443d"
+      },
+      "verifier_image": "sha256:ee39f38373ccbf36a7d4dcb019db6f95369172779ca49a720e2290a416690456",
+      "visible_nodes": [
+        "tests/test_custom_route_class.py::test_route_classes"
+      ]
+    }
+  ],
+  "claim_scope": "First-attempt repository repair feasibility on two FastAPI bugs; descriptive only",
+  "cost_rule": "Monetary cost unknown unless every response has reconciled billed currency and amount",
+  "created_at_utc": "2026-10-12T11:45:23.228714+00:00",
+  "exact_edits_sha256": "984005c0fd8939256aef19e6edc651413bac5615e8f11d3512928a152a0f001f",
+  "generation": {
+    "max_output_tokens": 16384,
+    "temperature": 0,
+    "timeout_seconds": 600
+  },
+  "independent_repository_projects": 1,
+  "model_slots": [
+    "agent_1",
+    "agent_2",
+    "agent_3"
+  ],
+  "models": [
+    {
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "model_id": "tencent-hy3",
+      "slot": "agent_1"
+    },
+    {
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "model_id": "gpt-5-mini",
+      "slot": "agent_2"
+    },
+    {
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "model_id": "glm-5.3-flash",
+      "slot": "agent_3"
+    }
+  ],
+  "no_automatic_retry_after_request_marker": true,
+  "not_main_12_repository_cohort": true,
+  "one_call_per_case_model": true,
+  "patch_verifier_sha256": "71936de4586967085e3ecc783424dc20460b57ecb2bf467eb2e58ce7ded315c4",
+  "planned_provider_calls": 6,
+  "provider_config_sha256": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+  "research_results": false,
+  "runner_sha256": "a114b7d9369ef1fd5a740ca1a7cf05d4a49d54950ba3029d0f2648afc6bf1111",
+  "source_capsule_sha256": "34fd6d698bec7a4f4720d3667d938ba2b3c8fc4d91e40d949cf711b4cad70ed3",
+  "status": "v2_6_fastapi_bounded_repair_diagnostic_frozen",
+  "test_timeout_seconds": 240
+}

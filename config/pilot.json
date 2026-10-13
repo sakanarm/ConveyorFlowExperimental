@@ -1,0 +1,21 @@
+{
+  "seed_start": 20,
+  "seeds": 20,
+  "n_jobs": 200,
+  "k_scan": 8,
+  "max_attempts": 3,
+  "w1": 8,
+  "w2": 20,
+  "w3": 50,
+  "requeue_limit": 8,
+  "drain_ticks": 180,
+  "strategies": ["CF_FIT", "S1", "S2", "S3", "CENTRAL_FIT"],
+  "workloads": ["adult_ml", "beijing_ml", "bugs2fix"],
+  "loads": {"low": 0.4, "medium": 0.7, "high": 0.9},
+  "resource_regimes": ["R0", "R1"],
+  "teams": {
+    "H0": [2, 2, 2, 2],
+    "H1": [1, 2, 2, 3],
+    "H2": [1, 1, 3, 3]
+  }
+}

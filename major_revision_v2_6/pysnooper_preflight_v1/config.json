@@ -1,0 +1,28 @@
+{
+  "base_image": "python:3.8.20-slim-bookworm@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+  "build_timeout_seconds": 1800,
+  "common_packages": [
+    "pip==23.0.1",
+    "setuptools==59.6.0",
+    "wheel==0.38.4"
+  ],
+  "compile_flags": "-O0 -g0",
+  "environment_deviation": "CPython 3.8.20 and pinned minimal pytest; original public NODE is unchanged while -s capture flag is omitted by the trusted preflight. This is not an exact historical environment. V1c adds repository-declared python_toolbox>=0.9.3 pinned at 0.9.3 after v1b failed test collection on both buggy and fixed. V1d pins all three project-declared runtime requirements: decorator>=4.3.0, future>=0.17.1, six>=1.12.0. The reused generic engine emits an OCI tag with a v2.5 suffix; the v2.6 case/lock hashes and separate raw root identify this run.",
+  "max_candidates": 3,
+  "profiles": {
+    "PySnooper": {
+      "build": "true",
+      "packages": [
+        "pytest==5.4.3",
+        "python_toolbox==0.9.3",
+        "decorator==4.4.2",
+        "future==0.18.2",
+        "six==1.15.0"
+      ],
+      "url": "https://github.com/cool-RR/PySnooper"
+    }
+  },
+  "python_scope": "3.8",
+  "status": "v2_6_project_eligibility_preflight_only",
+  "test_timeout_seconds": 180
+}

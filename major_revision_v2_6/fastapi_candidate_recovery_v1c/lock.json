@@ -1,0 +1,13 @@
+{
+  "amendment": "Verify and reuse existing candidate/buggy hash maps; do not rerun same-named audit outputs",
+  "buggy_source_map_sha256": "463088579188f21aa988a5255f6c89a26a2bff383af5082c123231a89ce00b3e",
+  "candidate_audit_sha256": "7f2dc23e1e4b331a7b6f630f252749d27dcda9d388e05c1ae5e1d5982efa7a4e",
+  "candidate_source_map_sha256": "67fd3630f2627bc262aaf6649a3c2706b986021cf50865bd869c0539b3825f60",
+  "created_at_utc": "2026-10-12T10:26:29.954604+00:00",
+  "paid_execution_allowed": false,
+  "prior_collection_lock_sha256": "815d2aba59eaf76174fc3e687b05ca7e71f2dec3dcf3347b51b649975d2ed01a",
+  "prior_runner_sha256": "9ab85fac37cdbf0888ca77425a12d6662c96691ad6a4a130e8f85c2c67856a93",
+  "provider_calls": 0,
+  "runner_sha256": "3ac14a14da83163f71c6400d270a0864b7ad6a96d8156ec5f44941ae83d678a4",
+  "status": "v2_6_fastapi_reuse_passed_source_map_before_regression_selection"
+}

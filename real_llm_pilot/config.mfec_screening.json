@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "study_status": "HETEROGENEITY_SCREENING",
+  "team_design": "cross_family_candidate_screen",
+  "max_team_size": 3,
+  "base_url": "https://gpt.mfec.co.th/litellm",
+  "models": [
+    {
+      "slot": "screen_1",
+      "provider": "mfec_litellm",
+      "model_id": "glm-5.3-flash",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "api_key_env": "MFEC_LITELLM_API_KEY"
+    },
+    {
+      "slot": "screen_2",
+      "provider": "mfec_litellm",
+      "model_id": "gpt-5-mini",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "api_key_env": "MFEC_LITELLM_API_KEY"
+    },
+    {
+      "slot": "screen_3",
+      "provider": "mfec_litellm",
+      "model_id": "claude-sonnet-5",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "api_key_env": "MFEC_LITELLM_API_KEY"
+    }
+  ],
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 4096,
+    "timeout_seconds": 180,
+    "max_api_retries": 2,
+    "silent_model_fallback_allowed": false
+  },
+  "ability_gate": {
+    "confidence_level": 0.95,
+    "rank_rule": "workload_specific_wilson_lower_bound",
+    "price_is_not_ability": true
+  }
+}

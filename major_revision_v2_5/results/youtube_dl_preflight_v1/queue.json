@@ -1,0 +1,111 @@
+{
+  "candidates": [
+    {
+      "bug_id": "27",
+      "bug_info_sha256": "e1ebc0bf5e635c25023328606156a37f4748a03db021ad89a9ac81ceb3b9b073",
+      "buggy_commit_id": "d631d5f9f27f93767226192e4288990413fa9dbd",
+      "fixed_commit_id_for_validator_only": "db2fe38b5508cbd28b89893219d9cccd41406851",
+      "preflight_status": "not_executed",
+      "project": "youtube-dl",
+      "python_version": "3.7.4",
+      "run_test_sha256": "33f0a83372fcff1e04e54f2d553ddd10b13d6ebbf432c65841fca54e451342b1",
+      "selection_hash": "d49031462fa3924403d81e6352f81f969dd748d026aa14caeafbde6e4160df1f",
+      "test_file": "test/test_utils.py"
+    },
+    {
+      "bug_id": "12",
+      "bug_info_sha256": "f5a0347f1deebb3b82213d8a11e4b275981ae819c16abe909ee6f2ea6092ce7a",
+      "buggy_commit_id": "435e382423f860aca82a58d7c3db58cbfa242b40",
+      "fixed_commit_id_for_validator_only": "e118a8794ffe5a3a414afd489726f34d753b0b23",
+      "preflight_status": "not_executed",
+      "project": "youtube-dl",
+      "python_version": "3.7.4",
+      "run_test_sha256": "f1b85b9de1cf9bfb2d152d8d8cf7351163fc6d5c5dec8d2ef91f9d10ca6d188d",
+      "selection_hash": "809a38a6df7931c0686e78b87c2f12c5e18f724acb4265dd40538a3c6a53698e",
+      "test_file": "test/test_YoutubeDL.py"
+    },
+    {
+      "bug_id": "39",
+      "bug_info_sha256": "229646ecc4d4c06d90b0d81d11532bd93c1dad8424401e074ee44969f274499f",
+      "buggy_commit_id": "b04c8f735805ea2671429ac8d683c2887a6b4db8",
+      "fixed_commit_id_for_validator_only": "a020a0dc20ced6468ec46214c394f6f360735b1d",
+      "preflight_status": "not_executed",
+      "project": "youtube-dl",
+      "python_version": "3.7.4",
+      "run_test_sha256": "33a0a02b457f29c03d8e7cd86ad2f935cfcd0125f7515141fdedca6c36843f3d",
+      "selection_hash": "96d740ce5ce41da8ac7ba184a0f336d392f002483a4a7a1a9dccfd42407b0daa",
+      "test_file": "test/test_utils.py"
+    },
+    {
+      "bug_id": "31",
+      "bug_info_sha256": "588a42ae678baa7ef17206f2b557bd784647f510be5cbebedf17783d04ceee1b",
+      "buggy_commit_id": "ab07963b5cc79812c6fb7e4f9e363533d8123830",
+      "fixed_commit_id_for_validator_only": "e8df5cee12378acd708b6686130a73c5edc06f0e",
+      "preflight_status": "not_executed",
+      "project": "youtube-dl",
+      "python_version": "3.7.4",
+      "run_test_sha256": "f8631187bcdf11126a74a30419cc2cb3c015a37631b21fee128ca02c70ae176a",
+      "selection_hash": "16f21f8a7cae0a10ee4769edeedc40054f85d2d4028c5957bb8c0646714d6a6c",
+      "test_file": "test/test_utils.py"
+    },
+    {
+      "bug_id": "42",
+      "bug_info_sha256": "f2a9b77f580855646a9ba20f17735f76878f18d920f62fdbfe912c6aee747669",
+      "buggy_commit_id": "b853d2e1555dbb4a09fe3d7857c6d2bc044646f4",
+      "fixed_commit_id_for_validator_only": "5aafe895fce2a7be9595cb2e56b7bd73a748e6b6",
+      "preflight_status": "not_executed",
+      "project": "youtube-dl",
+      "python_version": "3.7.4",
+      "run_test_sha256": "83ba37d1a20ea9467e355fac2b42faceed15a8e5631701827b06243b088e4207",
+      "selection_hash": "2f35cc77c5d3bd4fb469e02c4a1a4cf9fc59b18a6c47af9052455bbab6be36f7",
+      "test_file": "test/test_utils.py"
+    },
+    {
+      "bug_id": "9",
+      "bug_info_sha256": "fdec545243579d271b8dc3770136cd1fb875a6c99cc832ca31171cd353557de0",
+      "buggy_commit_id": "0130afb76e5cb6f470f39f127c8d09eea3e82d0d",
+      "fixed_commit_id_for_validator_only": "cf2ac6df6896dac4d23918867bb86fac1e1088d9",
+      "preflight_status": "not_executed",
+      "project": "youtube-dl",
+      "python_version": "3.7.0",
+      "run_test_sha256": "0414c7cb6a77fb0ec7cf1c012284f3ef42d5e7ab68dd26855880d5ebc8740920",
+      "selection_hash": "23c4f867870487f858790d98dbb92e22b100d1b472163c8c2e242b2cc7c181e9",
+      "test_file": "test/test_YoutubeDL.py"
+    },
+    {
+      "bug_id": "1",
+      "bug_info_sha256": "4271822e7deda3e9a5ae0c00768d8f6d3ab91e33f6d1f5e777f68b2016fffab5",
+      "buggy_commit_id": "99036a1298089068dcf80c0985bfcc3f8c24f281",
+      "fixed_commit_id_for_validator_only": "1cc47c667419e0eadc0a6989256ab7b276852adf",
+      "preflight_status": "not_executed",
+      "project": "youtube-dl",
+      "python_version": "3.7.0",
+      "run_test_sha256": "68117fdb3d19a1510e4ccfae5ba15d2445fbb0995d9d557036a907d0109b25d5",
+      "selection_hash": "2532019a04507b963ebaba49135cd6a4041baec9532f9837a568cb681024ae9d",
+      "test_file": "test/test_utils.py"
+    },
+    {
+      "bug_id": "28",
+      "bug_info_sha256": "928d7deccba9f7020737a842ba248e8824a396fe612a311cd564e9461207be5c",
+      "buggy_commit_id": "bd1512d19649c280197729814766d590ea6c023b",
+      "fixed_commit_id_for_validator_only": "7aefc49c4013efb5056b2c1237e22c52cb5d3c49",
+      "preflight_status": "not_executed",
+      "project": "youtube-dl",
+      "python_version": "3.7.4",
+      "run_test_sha256": "b92f4d65b5d9db58fe6b0102c2ee2fad227ec6f5411adc5760bab6e83376130f",
+      "selection_hash": "ef122036d9415d4c1c5ca7a924090c8921f74cc0cd3a7dad4d46889223ad90c8",
+      "test_file": "test/test_utils.py"
+    }
+  ],
+  "metadata_exclusions": [
+    {
+      "bug_id": "15",
+      "reason": "unsupported multi-selector or non-unittest command"
+    }
+  ],
+  "project": "youtube-dl",
+  "provider_calls": 0,
+  "rule": "First buggy-fail/fixed-pass in first eight metadata-supported hash-ordered cases; retain every exclusion",
+  "selection_domain": "ConveyorFlow-v2.5-new-project-youtube-dl-20261011",
+  "status": "metadata_only_not_preflighted"
+}

@@ -1,0 +1,42 @@
+{
+  "build_timeout_seconds": 600,
+  "candidate_source": "buggy fastapi/ package only",
+  "cases": [
+    {
+      "case_id": "fastapi_11",
+      "preflight_record_sha256": "3adaaaf6c0ffff225626ea4329c22f811b902a5ecc30a2da29e1d642f1e1cdf8",
+      "selection_hash": "025a144ec5eb334a4fe72d16d0cf3dbab63056c21b86f08527ae67d0a31d45ee",
+      "validator_source_image": "sha256:97afbe2e556b46ed8cf0e0f2926c080d13c4cb3f33032a60c0958c13296ad31e",
+      "visible_tests": [
+        "tests/test_union_body.py::test_item_openapi_schema",
+        "tests/test_union_body.py::test_post_other_item",
+        "tests/test_union_body.py::test_post_item",
+        "tests/test_union_inherited_body.py::test_inherited_item_openapi_schema",
+        "tests/test_union_inherited_body.py::test_post_extended_item",
+        "tests/test_union_inherited_body.py::test_post_item"
+      ]
+    },
+    {
+      "case_id": "fastapi_8",
+      "preflight_record_sha256": "dd7b627e549050584c20fbd87c273b803c7cda5f7c7949883a214a3ddd288b99",
+      "selection_hash": "187885776d4856cac52b4e8f8cf9c555114b9ce9d0bae098f675c771ede5d560",
+      "validator_source_image": "sha256:8387ae95e007bdee5a3ba765ab71ad4e67aa2ad3dee80f4f664c0d4ae1cb0a51",
+      "visible_tests": [
+        "tests/test_custom_route_class.py::test_route_classes"
+      ]
+    }
+  ],
+  "collect_timeout_seconds": 600,
+  "created_at_utc": "2026-10-12T10:17:06.287253+00:00",
+  "paid_execution_allowed": false,
+  "preflight_ledger_sha256": "97e70a0ed6c2b42a96873320338b7b3ea7390c4ad0a145abfe80b1e64f4d786d",
+  "preflight_lock_sha256": "add9fdebad8a865e81791363b4b829662c31369a4b000c4eb1137bf97df13326",
+  "provider_calls": 0,
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/fastapi_candidates_v1",
+  "regression_rule": "Collect the public tests/ suite in the buggy verifier; exclude all visible nodes; hash-sort remaining node IDs by fixed domain/case/node; take first three before outcomes; require three common active passes on buggy and fixed, stop at first failing pair without replacement",
+  "regressions_per_case": 3,
+  "runner_sha256": "adf3c15df08a4933f9082f5ac4bd989e77651b2903b53a44c7c890d2602155bc",
+  "selection_domain": "cf-v26-fastapi-public-regressions-20261012",
+  "status": "v2_6_fastapi_gold_free_candidates_frozen_before_provider",
+  "test_timeout_seconds": 120
+}

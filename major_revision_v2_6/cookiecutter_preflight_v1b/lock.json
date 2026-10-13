@@ -1,0 +1,17 @@
+{
+  "amendment": "Debian Buster apt mirror/bootstrap only after v1 build 404",
+  "config_sha256": "23e6f77585ee54c5987f1a9e9c2559b3d1486b35345430e1b99f6d4f4f58dada",
+  "created_at_utc": "2026-10-12T03:54:25.471231+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "paid_execution_allowed": false,
+  "prior_build_sha256": "7661735f9c1d957805a67c155c34796127d9f46cd158bdf1d9011d0108dd1c1d",
+  "prior_lock_sha256": "8a4e5033802458e0a609cf59a82e7fdf0ef81dd9753e2d6f0c8b8dbaca0f2ab0",
+  "prior_record_sha256": "73c8ea49b63c91be9fb371dbc6cb374e572a9d8550e3383b82fe05457c76ca98",
+  "provider_calls": 0,
+  "queue_sha256": "d5eb4323630cbab32cb3ceb2ee2f3fbfe45796c574417d2590463cc148ff7060",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/cookiecutter_preflight_v1b",
+  "runner_sha256": "306eb1d34d3bd436337ec6cae3e1e031d2645ebc3b68b3cc59d63f064446cd40",
+  "selection_rule": "First two reproducible cases in frozen order; retain every exclusion",
+  "source_queue_sha256": "7add5639f4dd01af87055dd579b519bc6b67cff41a1853ebc978042ee9fcea20",
+  "status": "v2_6_cookiecutter_v1b_frozen_before_provider"
+}

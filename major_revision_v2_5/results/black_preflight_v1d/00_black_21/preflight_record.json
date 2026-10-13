@@ -1,0 +1,37 @@
+{
+  "bug_id": "21",
+  "buggy_test_report_sha256": "c415fb4557636aabd4d2f68991f7b471b7fbb97d6befb59da0f288a84f966894",
+  "build_report_sha256": "b92aafae39b58552b7c17316105f45f823e19db20a40b78e7a6e1d523df6b1c7",
+  "container_image_id": "sha256:16584b18cfbb4d06ce8d46737256e150411413d3155815bf18979cdb91581975",
+  "container_runtime": "podman",
+  "dockerfile_sha256": "cc1e30c9b567bea31c3450df58adfa944e53f109ae0fec086eb82df2bfa83806",
+  "environment_deviation": "Black feasibility on CPython 3.8.20 with pinned minimal packages drawn from the public benchmark requirements. Historical unittest class/method is run as the corresponding pytest node. Not exact historical environment; both variants use identical test runner. V1b adds typing-extensions==3.7.4.1 from the public bug-3 requirements after identical missing-import collection errors in both variants. V1c adds project-declared setuptools-scm pinned to the 2020 Python-3.8 compatible 4.1.2 release and runs setup.py egg_info in both historical variants to generate _black_version.py. The previous common import failure is retained; case queue and visible tests are unchanged. V1d adds the blackd optional extra dependencies declared in Black setup.py (aiohttp>=3.3.2 and aiohttp-cors), pinned to Python-3.8 compatible releases after a symmetric public-test collection failure. The original case order and test nodes are unchanged.",
+  "fixed_test_report_sha256": "f06ac6950bd70dbdc3685f7484813c086a9cbb73f6e53a00899e415e709b3409",
+  "normalized_public_test_node": "tests/test_black.py::BlackTestCase::test_expression_ff",
+  "original_requirements_sha256": "b7476a20a1ed680663a3227e09caa04b84e1f554a0b524f203f79b829af0a181",
+  "project": "black",
+  "provider_calls": 0,
+  "reason": "buggy/fixed test contrast not reproduced",
+  "recorded_at_utc": "2026-10-11T07:11:11.505225+00:00",
+  "runner_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "runtime_version": "3.4.4",
+  "selection_hash": "aa0b235b7bcd9dccb16adfc1b91a181fed079bdd0e39ecc90c0359b1a6695b39",
+  "status": "environment_excluded",
+  "test_outcomes": {
+    "buggy": {
+      "errors": 0,
+      "failures": 0,
+      "return_code": 0,
+      "skipped": 0,
+      "tests": 1
+    },
+    "fixed": {
+      "errors": 0,
+      "failures": 0,
+      "return_code": 0,
+      "skipped": 0,
+      "tests": 1
+    }
+  },
+  "validator_only_image": true
+}

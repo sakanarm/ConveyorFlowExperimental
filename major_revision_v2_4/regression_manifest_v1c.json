@@ -1,0 +1,204 @@
+{
+  "case_ids": [
+    "luigi_8",
+    "luigi_25",
+    "luigi_14",
+    "matplotlib_29",
+    "matplotlib_24",
+    "matplotlib_19",
+    "pandas_121",
+    "pandas_1",
+    "pandas_80",
+    "fastapi_10",
+    "fastapi_12",
+    "fastapi_9"
+  ],
+  "preselection_lock_sha256": "7ce08f8da9ee1529020c2c05932eca85ee26f38d70cb2a1bf150813b5c8db099",
+  "provider_calls": 0,
+  "selections": {
+    "fastapi_10": {
+      "buggy_verifier_image": "sha256:40e56b4025d8eaa8d816b10753edf9178f1940af6ff122cb6451a85c152655c2",
+      "nodeids": [
+        "tests/test_jsonable_encoder.py::test_encode_custom_json_encoders_model",
+        "tests/test_jsonable_encoder.py::test_encode_unsupported",
+        "tests/test_jsonable_encoder.py::test_encode_model_with_alias",
+        "tests/test_jsonable_encoder.py::test_encode_dictable",
+        "tests/test_jsonable_encoder.py::test_encode_model_with_alias_raises",
+        "tests/test_jsonable_encoder.py::test_encode_class",
+        "tests/test_jsonable_encoder.py::test_encode_model_with_config"
+      ],
+      "selection_sha256": "86e547369894f0a4a305c995dbf0debd2ff701ca7a53b6f2e70fcbf366ac06c2"
+    },
+    "fastapi_12": {
+      "buggy_verifier_image": "sha256:b75bb144e1154cbdbfea1c9d2618bd385be080d01549c5e2621485d1d3df24ef",
+      "nodeids": [
+        "tests/test_security_http_bearer_optional.py::test_security_http_bearer",
+        "tests/test_security_http_basic_optional.py::test_security_http_basic",
+        "tests/test_security_http_basic_optional.py::test_security_http_basic_no_credentials",
+        "tests/test_security_http_basic_optional.py::test_security_http_basic_invalid_credentials",
+        "tests/test_security_http_bearer.py::test_security_http_bearer_no_credentials",
+        "tests/test_security_http_bearer.py::test_security_http_bearer",
+        "tests/test_security_http_basic_optional.py::test_security_http_basic_non_basic_credentials",
+        "tests/test_security_http_bearer_optional.py::test_security_http_bearer_no_credentials",
+        "tests/test_security_http_bearer.py::test_security_http_bearer_incorrect_scheme_credentials"
+      ],
+      "selection_sha256": "ebc04c3d05a2fe116735fc473acbde051aafe0f0d8c685c9828bb63d7de6619c"
+    },
+    "fastapi_9": {
+      "buggy_verifier_image": "sha256:d30f22d1645624301ab482e7252e634b36acfb13cf9d5ab6d7715d70f9041317",
+      "nodeids": [
+        "tests/test_union_body.py::test_post_other_item",
+        "tests/test_union_body.py::test_item_openapi_schema",
+        "tests/test_multi_body_errors.py::test_openapi_schema",
+        "tests/test_union_body.py::test_post_item",
+        "tests/test_multi_body_errors.py::test_put_correct_body"
+      ],
+      "selection_sha256": "e3f6e6503c9e43dde7171e759f30944c2392d87ef7caae627904ad21f2b80251"
+    },
+    "luigi_14": {
+      "buggy_verifier_image": "sha256:a5536dd1902386c9c0472860a7f6b76c4bf49963ee13ea1e8205f60ec606918e",
+      "nodeids": [
+        "test/central_planner_test.py::CentralPlannerTest::test_scheduler_with_insufficient_resources",
+        "test/central_planner_test.py::CentralPlannerTest::test_priorities_and_dependencies",
+        "test/central_planner_test.py::CentralPlannerTest::test_lock_resources_when_one_of_multiple_workers_is_ready",
+        "test/central_planner_test.py::CentralPlannerTest::test_get_work_speed",
+        "test/central_planner_test.py::CentralPlannerTest::test_keep_failed_tasks_for_assistant",
+        "test/central_planner_test.py::CentralPlannerTest::test_prune_with_live_assistant",
+        "test/central_planner_test.py::CentralPlannerTest::test_multiple_resources_no_lock",
+        "test/central_planner_test.py::CentralPlannerTest::test_do_not_lock_resources_while_running_higher_priority",
+        "test/central_planner_test.py::CentralPlannerTest::test_automatic_re_enable_with_one_failure_allowed",
+        "test/central_planner_test.py::CentralPlannerTest::test_disable_worker_stays_disabled_on_new_deps"
+      ],
+      "selection_sha256": "f740c49493fdaf771b50e0c74c6026b71ce52f675f65005e7e89afad710ad6e3"
+    },
+    "luigi_25": {
+      "buggy_verifier_image": "sha256:c2b8529639f0cf7fc6fb151619986c48ca7b1feca9812f906a9ae46f86bd2413",
+      "nodeids": [
+        "test/parameter_test.py::OverrideEnvStuff::testOverrideSchedulerPort2",
+        "test/scheduler_test.py::SchedulerTest::test_load_old_state",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testTimeDelta8601NoTimeComponent",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testNoValue",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testTimeDelta8601Weeks",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testTimeDelta8601YearMonthNotSupported",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testDefaultList",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testDate",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testInt",
+        "test/parameter_test.py::TestNewStyleGlobalParameters::test_x_arg_y_arg_override_all"
+      ],
+      "selection_sha256": "47fe4083412a89816c5a0b9fa359a83300ff07bcfa15fd69f4b9068228925e7e"
+    },
+    "luigi_8": {
+      "buggy_verifier_image": "sha256:ead9fc3ecc09d9e6e4f5331f309a174cc7f33617eda648c5575b54544eb5312c",
+      "nodeids": [
+        "test/scheduler_test.py::SchedulerIoTest::test_get_empty_retry_policy",
+        "test/parameter_test.py::ParameterTest::test_parse_empty_list_raises_value_error",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testMonthParameter",
+        "test/scheduler_test.py::SchedulerIoTest::test_load_old_state",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testDateInterval",
+        "test/scheduler_test.py::SchedulerIoTest::test_scheduler_with_config",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testTimeDelta8601NoTimeComponent",
+        "test/parameter_test.py::TestParamWithDefaultFromConfig::testTupleWithNamespaceCli",
+        "test/parameter_test.py::LocalParameters1304Test::test_range_doesnt_propagate_args",
+        "test/parameter_test.py::TestTaskParameter::testSerialize"
+      ],
+      "selection_sha256": "e43988036cf6e77e28169e2d555e66b4089573927ede753374573e27dc627a61"
+    },
+    "matplotlib_19": {
+      "buggy_verifier_image": "sha256:45c42dc0f68a737df34a47e6d78783e09ceb6fdd0231c476953fd16723075f76",
+      "nodeids": [
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs40]",
+        "lib/matplotlib/tests/test_axes.py::test_eventplot_orientation[data1-vertical]",
+        "lib/matplotlib/tests/test_axes.py::test_inset",
+        "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_c[c_case25-None]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs76]",
+        "lib/matplotlib/tests/test_axes.py::test_aspect_nonlinear_adjustable_box",
+        "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_c[c_case10-None]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs14]",
+        "lib/matplotlib/tests/test_axes.py::test_indicate_inset_inverted[False-True]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs52]"
+      ],
+      "selection_sha256": "29174242f9264bf7351f15160dbd4047f7b9abcedee7c998eaa077ba5fb08487"
+    },
+    "matplotlib_24": {
+      "buggy_verifier_image": "sha256:fd35c3009f88eebf9c66f95ab13af9d00e85f31e22eb859df587a45272af922f",
+      "nodeids": [
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs33]",
+        "lib/matplotlib/tests/test_axes.py::test_stem_args",
+        "lib/matplotlib/tests/test_axes.py::test_pcolorargs",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs12]",
+        "lib/matplotlib/tests/test_axes.py::test_eventplot_colors[colors1]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs46]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs58]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs27]",
+        "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_c[c_case25-shape]",
+        "lib/matplotlib/tests/test_axes.py::test_fill_betweenx_input[2d_x2_input]"
+      ],
+      "selection_sha256": "dd356f1ac6f3a177b278b578ea2f07e62b099507ffa0aa4bf74ff402b051fe77"
+    },
+    "matplotlib_29": {
+      "buggy_verifier_image": "sha256:ded7950f324d9e01819b056dcec2aa0c547dd72573e664924c2070209f148779",
+      "nodeids": [
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs50]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs58]",
+        "lib/matplotlib/tests/test_axes.py::test_hist_range_and_density",
+        "lib/matplotlib/tests/test_axes.py::test_bar_timedelta",
+        "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_c[c_case15-None]",
+        "lib/matplotlib/tests/test_axes.py::test_minorticks_on[symlog-log]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs32]",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs39]",
+        "lib/matplotlib/tests/test_axes.py::test_twin_inherit_autoscale_setting",
+        "lib/matplotlib/tests/test_axes.py::test_errorbar_inputs_shotgun[kwargs19]"
+      ],
+      "selection_sha256": "614301644db6478f7798f64144a289aaa7d8b433b66d70123c37fe531cc3a982"
+    },
+    "pandas_1": {
+      "buggy_verifier_image": "sha256:d0190366b23e910bac6aa2c55ed779fd83f099bc49607b7a844597c19cff1331",
+      "nodeids": [
+        "pandas/tests/dtypes/test_dtypes.py::TestCategoricalDtypeParametrized::test_update_dtype[False-False-new_categories2]",
+        "pandas/tests/dtypes/test_dtypes.py::TestDatetimeTZDtype::test_is_dtype",
+        "pandas/tests/dtypes/test_dtypes.py::TestCategoricalDtypeParametrized::test_unordered_same[None]",
+        "pandas/tests/dtypes/test_dtypes.py::TestCategoricalDtypeParametrized::test_equal_but_different[True]",
+        "pandas/tests/dtypes/test_dtypes.py::test_is_dtype_no_warning[is_bool_dtype]",
+        "pandas/tests/dtypes/test_dtypes.py::TestCategoricalDtypeParametrized::test_categorical_equality[False-False]",
+        "pandas/tests/dtypes/test_dtypes.py::TestCategoricalDtypeParametrized::test_basic[None-categories0]",
+        "pandas/tests/dtypes/test_dtypes.py::TestDatetimeTZDtype::test_subclass",
+        "pandas/tests/dtypes/test_dtypes.py::TestCategoricalDtypeParametrized::test_categorical_equality_strings[False-category-None]",
+        "pandas/tests/dtypes/test_dtypes.py::test_registry_find[period[D]-expected4]"
+      ],
+      "selection_sha256": "faaceace24eb2e83a0e961c43b3fe9cebd26d0956978f90696c521cb0ae68607"
+    },
+    "pandas_121": {
+      "buggy_verifier_image": "sha256:b8c5118561c3ac53bab028b3b79d7e5d45819bb71fe365dd1916f50173cf80e2",
+      "nodeids": [
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_replace_regex_metachar[()]",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_replace_bool_with_string",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_replace_dtypes[frame3-False-True-expected3]",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_categorical_replace_with_dict[replace_dict1-final_data1]",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_replace",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_replace_dict_tuple_list_ordering_remains_the_same",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_replace_regex_metachar[\\\\s]",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_regex_replace_scalar_inplace",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_regex_replace_list_obj",
+        "pandas/tests/frame/test_replace.py::TestDataFrameReplace::test_replace_method[to_replace3-bfill-expected3]"
+      ],
+      "selection_sha256": "e3178de7628e08526d6aac6f97dcfb31d74f9a7aa30917ef8aef34cffed48435"
+    },
+    "pandas_80": {
+      "buggy_verifier_image": "sha256:ee24680dc15dfe8fe3e7b95d5e97616429bcbb3756183554bb8b46b54928b4e6",
+      "nodeids": [
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_mixed_array_float_int[block-False-rmul]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_float_scalar[block-True-rmod-0-1]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_float_scalar[integer-False-rmod-None-0]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_float_scalar[block-False-rmul-2-3]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_float_scalar[block-True-pow-2-3]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_float_scalar[integer-True-pow-0-1]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_float_same_index[block-False-rpow]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_bool_array_logical[block-False]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::TestSparseArrayArithmetics::test_float_scalar[block-True-rfloordiv-2-3]",
+        "pandas/tests/arrays/sparse/test_arithmetics.py::test_with_dataframe"
+      ],
+      "selection_sha256": "e6c2b047e87ce5edb6930ff34d3f3c172424f638f0573ab12a33b9398d66bcdb"
+    }
+  },
+  "status": "baseline_pass_public_regressions_sealed_before_provider"
+}

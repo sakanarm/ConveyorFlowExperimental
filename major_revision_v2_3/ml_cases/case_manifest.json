@@ -1,0 +1,163 @@
+{
+  "status": "pilot_inputs_prepared_not_executed",
+  "research_results": false,
+  "source_sha256": {
+    "adult": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+    "beijing": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4"
+  },
+  "split_rule": "Adult official test plus stratified 80/20 development split; Beijing chronological 70/15/15 unique-time split",
+  "corpora": {
+    "adult": {
+      "task": "binary_classification",
+      "metric": "roc_auc",
+      "rows": {
+        "train": 26049,
+        "validation": 6512,
+        "test": 16281
+      },
+      "features": [
+        "age",
+        "workclass",
+        "fnlwgt",
+        "education",
+        "education_num",
+        "marital_status",
+        "occupation",
+        "relationship",
+        "race",
+        "sex",
+        "capital_gain",
+        "capital_loss",
+        "hours_per_week",
+        "native_country"
+      ],
+      "paths": {
+        "train": "ml_cases\\data\\adult\\train.csv",
+        "validation": "ml_cases\\data\\adult\\validation.csv",
+        "test_features": "ml_cases\\data\\adult\\test_features.csv",
+        "test_labels": "ml_cases\\hidden\\adult\\test_labels.csv"
+      },
+      "sha256": {
+        "train": "e3918d98d1e5e35019903a2e46d8537209bb18f530de814cb60658b32470ba24",
+        "validation": "1870195d8a756be8a888a0d09c8e5090005cd7ef88733f0a8f0965e85e4f34b6",
+        "test_features": "c831fead6852c6716a4c446666ccd0b668bcca766c24210ddf1e62e850ed4297",
+        "test_labels": "903519157818c32138e6b2581bd0f519816c995151021fa3c9605a6950800c19"
+      }
+    },
+    "beijing": {
+      "task": "regression",
+      "metric": "mean_absolute_error",
+      "rows": {
+        "train": 288369,
+        "validation": 61823,
+        "test": 61837
+      },
+      "raw_rows": 420768,
+      "missing_target_rows_excluded": 8739,
+      "chronological_cutoffs": {
+        "validation_start": "2015-12-18 16:00:00",
+        "test_start": "2016-07-24 20:00:00"
+      },
+      "features": [
+        "year",
+        "month",
+        "day",
+        "hour",
+        "PM10",
+        "SO2",
+        "NO2",
+        "CO",
+        "O3",
+        "TEMP",
+        "PRES",
+        "DEWP",
+        "RAIN",
+        "wd",
+        "WSPM",
+        "station",
+        "timestamp"
+      ],
+      "paths": {
+        "train": "ml_cases\\data\\beijing\\train.csv",
+        "validation": "ml_cases\\data\\beijing\\validation.csv",
+        "test_features": "ml_cases\\data\\beijing\\test_features.csv",
+        "test_labels": "ml_cases\\hidden\\beijing\\test_labels.csv"
+      },
+      "sha256": {
+        "train": "d3bdd8a7ab9fdd9414a6fa11db242296ccb569898a4077aef22b8c16284f9802",
+        "validation": "f68364ecf7d55d881f973c13a85e7f6a3d779207c9aaea0c74c49b2b6b10b945",
+        "test_features": "dd1abbd9de628dea6812cdc0c405d40c1888934be385cc7ea4fda1bdf9e6a509",
+        "test_labels": "3a43b7ad922c00c7aca7d3b6099c25d924127a127e38782652bf275d1de8bd9f"
+      }
+    }
+  },
+  "variants": [
+    {
+      "case_id": "ADULT_P0",
+      "corpus": "adult",
+      "excluded_features": [],
+      "status": "pilot_only"
+    },
+    {
+      "case_id": "ADULT_P1",
+      "corpus": "adult",
+      "excluded_features": [
+        "fnlwgt"
+      ],
+      "status": "pilot_only"
+    },
+    {
+      "case_id": "ADULT_P2",
+      "corpus": "adult",
+      "excluded_features": [
+        "education_num"
+      ],
+      "status": "pilot_only"
+    },
+    {
+      "case_id": "ADULT_P3",
+      "corpus": "adult",
+      "excluded_features": [
+        "occupation",
+        "native_country"
+      ],
+      "status": "pilot_only"
+    },
+    {
+      "case_id": "BEIJING_P0",
+      "corpus": "beijing",
+      "excluded_features": [],
+      "status": "pilot_only"
+    },
+    {
+      "case_id": "BEIJING_P1",
+      "corpus": "beijing",
+      "excluded_features": [
+        "PM10"
+      ],
+      "status": "pilot_only"
+    },
+    {
+      "case_id": "BEIJING_P2",
+      "corpus": "beijing",
+      "excluded_features": [
+        "PM10",
+        "NO2"
+      ],
+      "status": "pilot_only"
+    },
+    {
+      "case_id": "BEIJING_P3",
+      "corpus": "beijing",
+      "excluded_features": [
+        "PM10",
+        "SO2",
+        "NO2",
+        "CO",
+        "O3"
+      ],
+      "status": "pilot_only"
+    }
+  ],
+  "candidate_container_mount": "only case-specific public inputs; never hidden labels or data/raw"
+}

@@ -1,0 +1,227 @@
+{
+  "created_at_utc": "2026-09-23T14:42:56.601734+00:00",
+  "analysis_type": "workload_specific_ability_profile_v2",
+  "source_runs": {
+    "ml_build": "20260923T120207Z",
+    "fix_bug": "20260923T125749Z"
+  },
+  "models": [
+    {
+      "model_id": "gemini-3-flash",
+      "ability_profile": {
+        "ml_build": 3,
+        "fix_bug": 3
+      },
+      "rank_labels": {
+        "ml_build": "L3",
+        "fix_bug": "L3"
+      },
+      "ml_build_cells": {
+        "D1": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.5,
+          "gate_passed": true
+        },
+        "D2": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.4,
+          "gate_passed": true
+        },
+        "D3": {
+          "successes": 4,
+          "total": 5,
+          "pass_rate": 0.8,
+          "wilson_lower_95": 0.37553462976252533,
+          "threshold": 0.25,
+          "gate_passed": true
+        }
+      },
+      "fix_bug_cells": {
+        "D1": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.5,
+          "gate_passed": true
+        },
+        "D2": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.4,
+          "gate_passed": true
+        },
+        "D3": {
+          "successes": 4,
+          "total": 5,
+          "pass_rate": 0.8,
+          "wilson_lower_95": 0.37553462976252533,
+          "threshold": 0.25,
+          "gate_passed": true
+        }
+      },
+      "ml_api_errors": 0,
+      "fix_bug_api_errors": 0
+    },
+    {
+      "model_id": "gemini-3.5-flash",
+      "ability_profile": {
+        "ml_build": 3,
+        "fix_bug": 3
+      },
+      "rank_labels": {
+        "ml_build": "L3",
+        "fix_bug": "L3"
+      },
+      "ml_build_cells": {
+        "D1": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.5,
+          "gate_passed": true
+        },
+        "D2": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.4,
+          "gate_passed": true
+        },
+        "D3": {
+          "successes": 4,
+          "total": 5,
+          "pass_rate": 0.8,
+          "wilson_lower_95": 0.37553462976252533,
+          "threshold": 0.25,
+          "gate_passed": true
+        }
+      },
+      "fix_bug_cells": {
+        "D1": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.5,
+          "gate_passed": true
+        },
+        "D2": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.4,
+          "gate_passed": true
+        },
+        "D3": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.25,
+          "gate_passed": true
+        }
+      },
+      "ml_api_errors": 0,
+      "fix_bug_api_errors": 0
+    },
+    {
+      "model_id": "gemini-3.8-flash",
+      "ability_profile": {
+        "ml_build": 3,
+        "fix_bug": 3
+      },
+      "rank_labels": {
+        "ml_build": "L3",
+        "fix_bug": "L3"
+      },
+      "ml_build_cells": {
+        "D1": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.5,
+          "gate_passed": true
+        },
+        "D2": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.4,
+          "gate_passed": true
+        },
+        "D3": {
+          "successes": 4,
+          "total": 5,
+          "pass_rate": 0.8,
+          "wilson_lower_95": 0.37553462976252533,
+          "threshold": 0.25,
+          "gate_passed": true
+        }
+      },
+      "fix_bug_cells": {
+        "D1": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.5,
+          "gate_passed": true
+        },
+        "D2": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.4,
+          "gate_passed": true
+        },
+        "D3": {
+          "successes": 5,
+          "total": 5,
+          "pass_rate": 1.0,
+          "wilson_lower_95": 0.5655175352168252,
+          "threshold": 0.25,
+          "gate_passed": true
+        }
+      },
+      "ml_api_errors": 0,
+      "fix_bug_api_errors": 0
+    }
+  ],
+  "team_heterogeneity": {
+    "ml_build": {
+      "ranks": [
+        3,
+        3,
+        3
+      ],
+      "distinct_rank_count": 1,
+      "heterogeneous": false
+    },
+    "fix_bug": {
+      "ranks": [
+        3,
+        3,
+        3
+      ],
+      "distinct_rank_count": 1,
+      "heterogeneous": false
+    }
+  },
+  "decision_rule": "Do not assign one pooled rank. ConveyorFlow must use A[i,w] for each workload. If every candidate has the same rank in a workload, this team cannot test rank-level capability heterogeneity for that workload without a predeclared replacement model.",
+  "claim_boundary": "ML results come from the first calibration run; Fix Bug results come from the disclosed executable-oracle correction. Neither phase contains allocation-policy comparisons."
+}

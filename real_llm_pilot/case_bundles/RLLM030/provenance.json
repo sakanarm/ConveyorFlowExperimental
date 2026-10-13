@@ -1,0 +1,24 @@
+{
+  "construction": "deterministic_public_row_microtask",
+  "dataset": "beijing",
+  "dataset_sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+  "source_indices": [
+    281489,
+    283999,
+    286273,
+    288562,
+    290873,
+    293167,
+    295535,
+    297876,
+    300186,
+    302484,
+    304798,
+    307100,
+    309514,
+    309515,
+    311916,
+    314234
+  ],
+  "stratum": "station_Shunyi"
+}

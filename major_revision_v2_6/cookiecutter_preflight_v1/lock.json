@@ -1,0 +1,14 @@
+{
+  "config_sha256": "d30f4dd3684f72d0081f11f23664eb05507bda14650e34fea4be61dbe87fd43d",
+  "created_at_utc": "2026-10-12T03:50:53.275700+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "manifest_sha256": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "queue_sha256": "d5eb4323630cbab32cb3ceb2ee2f3fbfe45796c574417d2590463cc148ff7060",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/cookiecutter_preflight_v1",
+  "runner_sha256": "c887b056bb0dfca29698f52fd786ba728b43659b9830a55a476eaf1e455e60b2",
+  "selection_rule": "First two reproducible cases in frozen order; retain every exclusion",
+  "source_queue_sha256": "7add5639f4dd01af87055dd579b519bc6b67cff41a1853ebc978042ee9fcea20",
+  "status": "v2_6_cookiecutter_preflight_frozen_before_provider"
+}

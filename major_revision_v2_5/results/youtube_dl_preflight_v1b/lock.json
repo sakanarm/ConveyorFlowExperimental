@@ -1,0 +1,15 @@
+{
+  "actual_container_python": "3.8.20",
+  "amended_runner_sha256": "89c480d52faa86f2fd05aebcb53424312143184703c209e93729ece2b5aaca1e",
+  "case_metadata_python_scope": "3.7",
+  "config_sha256": "56056859609fd3474ce53cae41747ee27feaeae85468ebc62b2f896f2959c8b2",
+  "created_at_utc": "2026-10-11T09:20:59.396002+00:00",
+  "original_lock_sha256": "1dc32fa56e618fbbe40aa8fe424e75fd0423ba51e294fc69e4e7b278e1e4876b",
+  "original_preflight_failure": "Python version outside frozen scope before any container build",
+  "original_runner_sha256": "368133f602f632ab2ca2a936f2255cb3d4e8c57572c23457be425d46effa663d",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "queue_sha256": "c641b5da196e0ffb8aa7a53024533c29a8d281e2696fa1e8a30c2e684e7071f7",
+  "queue_unchanged": true,
+  "status": "v2_5_youtube_dl_preflight_v1b_frozen_no_provider_calls"
+}

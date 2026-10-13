@@ -1,0 +1,288 @@
+{
+  "analysis_unit": "source-paired mixed block",
+  "blocks": [
+    {
+      "arms": {
+        "CENTRAL_RULE_MATCHED": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 2,
+          "known_provider_cost_units": 0.017095284,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.02836545620398148,
+            "cost_units_per_verified_job": null,
+            "dead_letter_jobs": 2,
+            "eventual_verified_jobs": 0,
+            "input_tokens": 6557,
+            "job_success_fraction": 0.0,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": null,
+            "output_tokens": 29183,
+            "p95_verified_job_completion_s": null,
+            "throughput_verified_jobs_per_hour": 0.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CENTRAL_RULE_MATCHED",
+          "provider_attempts": 4,
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 0,
+          "verified_ml_pipeline": false,
+          "verified_repository_repair": false
+        },
+        "CF_FIT": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 2,
+          "known_provider_cost_units": 0.020096832,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.029281249535185187,
+            "cost_units_per_verified_job": null,
+            "dead_letter_jobs": 2,
+            "eventual_verified_jobs": 0,
+            "input_tokens": 6268,
+            "job_success_fraction": 0.0,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": null,
+            "output_tokens": 34940,
+            "p95_verified_job_completion_s": null,
+            "throughput_verified_jobs_per_hour": 0.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CF_FIT",
+          "provider_attempts": 4,
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 0,
+          "verified_ml_pipeline": false,
+          "verified_repository_repair": false
+        },
+        "STATIC_OWNERS": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 2,
+          "known_provider_cost_units": 0.033889619999999995,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.04537436840037037,
+            "cost_units_per_verified_job": null,
+            "dead_letter_jobs": 2,
+            "eventual_verified_jobs": 0,
+            "input_tokens": 7404,
+            "job_success_fraction": 0.0,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": null,
+            "output_tokens": 55317,
+            "p95_verified_job_completion_s": null,
+            "throughput_verified_jobs_per_hour": 0.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "STATIC_OWNERS",
+          "provider_attempts": 4,
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 0,
+          "verified_ml_pipeline": false,
+          "verified_repository_repair": false
+        }
+      },
+      "block_id": "V25_RECOV_01",
+      "ml_case_id": "V25_BANK_01",
+      "repository_case_id": "black_3"
+    },
+    {
+      "arms": {
+        "CENTRAL_RULE_MATCHED": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 2,
+          "known_provider_cost_units": 0.01564275,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.015502866778055556,
+            "cost_units_per_verified_job": 0.01564275,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 1,
+            "input_tokens": 11614,
+            "job_success_fraction": 0.5,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 13.34103688,
+            "output_tokens": 13121,
+            "p95_verified_job_completion_s": 13.34103688,
+            "throughput_verified_jobs_per_hour": 1.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CENTRAL_RULE_MATCHED",
+          "provider_attempts": 3,
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 1,
+          "verified_ml_pipeline": false,
+          "verified_repository_repair": true
+        },
+        "CF_FIT": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 2,
+          "known_provider_cost_units": 0.01749756,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.02096695834101852,
+            "cost_units_per_verified_job": 0.01749756,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 1,
+            "input_tokens": 12356,
+            "job_success_fraction": 0.5,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 101.99293463,
+            "output_tokens": 20837,
+            "p95_verified_job_completion_s": 101.99293463,
+            "throughput_verified_jobs_per_hour": 1.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "CF_FIT",
+          "provider_attempts": 3,
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 1,
+          "verified_ml_pipeline": false,
+          "verified_repository_repair": true
+        },
+        "STATIC_OWNERS": {
+          "fixed_observation_seconds": 3600.0,
+          "jobs": 2,
+          "known_provider_cost_units": 0.024757002,
+          "metric_definitions": {
+            "busy_utilization_fraction": "agent executor occupation clipped to fixed horizon; includes provider wait and verification"
+          },
+          "metrics": {
+            "busy_utilization_fraction": 0.029082155030185186,
+            "cost_units_per_verified_job": 0.024757002,
+            "dead_letter_jobs": 1,
+            "eventual_verified_jobs": 1,
+            "input_tokens": 17251,
+            "job_success_fraction": 0.5,
+            "late_verified_tasks": 0,
+            "mean_verified_job_completion_s": 152.219059463,
+            "output_tokens": 30525,
+            "p95_verified_job_completion_s": 152.219059463,
+            "throughput_verified_jobs_per_hour": 1.0,
+            "unknown_cost_attempts": 0,
+            "unsettled_jobs": 0
+          },
+          "policy": "STATIC_OWNERS",
+          "provider_attempts": 4,
+          "provider_cost_currency_unverified": true,
+          "verified_jobs_within_horizon": 1,
+          "verified_ml_pipeline": false,
+          "verified_repository_repair": true
+        }
+      },
+      "block_id": "V25_RECOV_02",
+      "ml_case_id": "V25_COVERTYPE_01",
+      "repository_case_id": "PySnooper_3"
+    }
+  ],
+  "cost_per_verified_job_undefined_when_no_verified_job_or_unknown_cost": true,
+  "lock_sha256": "9c0c75cf6061e78d9dce15c7a59f9fe58ddbad458cc69f3b762beceb158bf2ac",
+  "no_population_confidence_interval_or_equivalence_claim": true,
+  "not_pooled_with_v2_4": true,
+  "original_instrument_invalid_block_excluded": "V25_PAIR_01",
+  "paired_differences": {
+    "CF_FIT_minus_CENTRAL_RULE_MATCHED": {
+      "busy_utilization_fraction": [
+        {
+          "block_id": "V25_RECOV_01",
+          "difference": 0.0009157933312037049
+        },
+        {
+          "block_id": "V25_RECOV_02",
+          "difference": 0.0054640915629629635
+        }
+      ],
+      "cost_units_per_verified_job": [
+        {
+          "block_id": "V25_RECOV_01",
+          "difference": null
+        },
+        {
+          "block_id": "V25_RECOV_02",
+          "difference": 0.0018548099999999984
+        }
+      ],
+      "mean_verified_job_completion_s": [
+        {
+          "block_id": "V25_RECOV_01",
+          "difference": null
+        },
+        {
+          "block_id": "V25_RECOV_02",
+          "difference": 88.65189774999999
+        }
+      ],
+      "throughput_verified_jobs_per_hour": [
+        {
+          "block_id": "V25_RECOV_01",
+          "difference": 0.0
+        },
+        {
+          "block_id": "V25_RECOV_02",
+          "difference": 0.0
+        }
+      ]
+    },
+    "CF_FIT_minus_STATIC_OWNERS": {
+      "busy_utilization_fraction": [
+        {
+          "block_id": "V25_RECOV_01",
+          "difference": -0.01609311886518518
+        },
+        {
+          "block_id": "V25_RECOV_02",
+          "difference": -0.008115196689166666
+        }
+      ],
+      "cost_units_per_verified_job": [
+        {
+          "block_id": "V25_RECOV_01",
+          "difference": null
+        },
+        {
+          "block_id": "V25_RECOV_02",
+          "difference": -0.007259442000000001
+        }
+      ],
+      "mean_verified_job_completion_s": [
+        {
+          "block_id": "V25_RECOV_01",
+          "difference": null
+        },
+        {
+          "block_id": "V25_RECOV_02",
+          "difference": -50.226124833000014
+        }
+      ],
+      "throughput_verified_jobs_per_hour": [
+        {
+          "block_id": "V25_RECOV_01",
+          "difference": 0.0
+        },
+        {
+          "block_id": "V25_RECOV_02",
+          "difference": 0.0
+        }
+      ]
+    }
+  },
+  "provider_attempts_are_not_independent_units": true,
+  "provider_cost_currency_unverified": true,
+  "research_results": true,
+  "status": "v2_5_exploratory_paired_vector_analysis"
+}

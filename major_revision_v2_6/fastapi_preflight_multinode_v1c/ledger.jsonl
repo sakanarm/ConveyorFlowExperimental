@@ -1,0 +1,2 @@
+{"case_id": "fastapi_11", "provider_calls": 0, "queue_index": 0, "reason": null, "record_sha256": "3adaaaf6c0ffff225626ea4329c22f811b902a5ecc30a2da29e1d642f1e1cdf8", "selection_hash": "025a144ec5eb334a4fe72d16d0cf3dbab63056c21b86f08527ae67d0a31d45ee", "status": "reproducible"}
+{"case_id": "fastapi_8", "provider_calls": 0, "queue_index": 1, "reason": null, "record_sha256": "dd7b627e549050584c20fbd87c273b803c7cda5f7c7949883a214a3ddd288b99", "selection_hash": "187885776d4856cac52b4e8f8cf9c555114b9ce9d0bae098f675c771ede5d560", "status": "reproducible"}

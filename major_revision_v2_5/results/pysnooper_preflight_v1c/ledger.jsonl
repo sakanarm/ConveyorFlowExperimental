@@ -1,0 +1,1 @@
+{"bug_id": "3", "provider_calls": 0, "queue_index": 0, "reason": "buggy/fixed test contrast not reproduced", "record_sha256": "9dc51098a3661a07811099457285535c3d61ef22151973f023710bd2c681cbfb", "selection_hash": "a2b5f2184d8a3ec7b5a91b8fc662f482b68f488a9383510d6007d5d9b1c7d8bc", "status": "environment_excluded"}

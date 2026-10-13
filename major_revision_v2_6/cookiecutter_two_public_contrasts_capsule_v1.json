@@ -1,0 +1,48 @@
+{
+  "cases": [
+    {
+      "buggy": {
+        "errors": 0,
+        "failures": 4,
+        "return_code": 1,
+        "skipped": 0,
+        "tests": 4
+      },
+      "case_id": "cookiecutter_3",
+      "fixed": {
+        "errors": 0,
+        "failures": 0,
+        "return_code": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "public_test_node": "tests/test_read_user_choice.py::test_click_invocation",
+      "record_sha256": "a65895b1d55ea124c7747a85de2f687c617395929614ddf7044a8f4a91852efe"
+    },
+    {
+      "buggy": {
+        "errors": 0,
+        "failures": 1,
+        "return_code": 1,
+        "skipped": 0,
+        "tests": 1
+      },
+      "case_id": "cookiecutter_1",
+      "fixed": {
+        "errors": 0,
+        "failures": 0,
+        "return_code": 0,
+        "skipped": 0,
+        "tests": 1
+      },
+      "public_test_node": "tests/test_generate_context.py::test_generate_context_decodes_non_ascii_chars",
+      "record_sha256": "5d3365262d1e75b314adf91c7bd6f9b6d41685f2a1900263e97285b839dfdb73"
+    }
+  ],
+  "ledger_sha256": "e456bd2afe391f0cb91351ceab7d7497c70601fbcf0415cbff7e4e69be91a4da",
+  "lock_sha256": "d390e48e680e55f98c259529eaaf16b49d64d3dc11836e7e794eac3315a0c6c0",
+  "project_eligible_for_main": false,
+  "provider_calls": 0,
+  "raw_root": "D:\\ConveyorFlowRuntime\\v2_6\\cookiecutter_preflight_v1d",
+  "status": "two_public_contrasts_audited_not_candidate_qualified"
+}

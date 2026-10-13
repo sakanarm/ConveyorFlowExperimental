@@ -1,0 +1,6 @@
+# Container layers, test reports, provider responses, and fixture ledgers stay
+# local. Publish source, frozen design/cohort, bounded audited summaries and
+# checksums separately; never commit credentials or raw model responses.
+results/
+__pycache__/
+*.pyc

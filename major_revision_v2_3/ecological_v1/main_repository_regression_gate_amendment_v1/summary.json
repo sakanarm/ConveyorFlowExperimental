@@ -1,0 +1,71 @@
+{
+  "cases": [
+    {
+      "active_passes": 10,
+      "amended_eligible": true,
+      "case_id": "luigi_3",
+      "common_skips": 0,
+      "minimum_active_required": 8,
+      "original_status": "candidate_preflight_passed",
+      "selected": 10,
+      "summary_sha256": "706a516c89fadae33df5916206d0aaac63589fe0fa405fcbd03e9b5bd5a737fd"
+    },
+    {
+      "active_passes": 10,
+      "amended_eligible": true,
+      "case_id": "luigi_9",
+      "common_skips": 0,
+      "minimum_active_required": 8,
+      "original_status": "candidate_preflight_passed",
+      "selected": 10,
+      "summary_sha256": "b2e53bdf04b0d41b71e85875e40a55e7ec80f5534bbdfb00f0e14dd844a36177"
+    },
+    {
+      "active_passes": 9,
+      "amended_eligible": true,
+      "case_id": "pandas_100",
+      "common_skips": 0,
+      "minimum_active_required": 8,
+      "original_status": "candidate_preflight_passed",
+      "selected": 9,
+      "summary_sha256": "f0ee8e4a3d81c6d464b037566acd319cfe17d20c5ba74e403477d5192bd4ada6"
+    },
+    {
+      "active_passes": 10,
+      "amended_eligible": true,
+      "case_id": "pandas_82",
+      "common_skips": 0,
+      "minimum_active_required": 8,
+      "original_status": "candidate_preflight_passed",
+      "selected": 10,
+      "summary_sha256": "5a17fabd2469983772481e396229be697cff3da82cd1ca76921065018e398b0d"
+    },
+    {
+      "active_passes": 2,
+      "amended_eligible": true,
+      "case_id": "matplotlib_1",
+      "common_skips": 0,
+      "minimum_active_required": 2,
+      "original_status": "candidate_preflight_passed",
+      "selected": 2,
+      "summary_sha256": "a6fb13107e46b96bf14d08103d8263f38948faf6231a8cfc9ae5a310f3e27f89"
+    },
+    {
+      "active_passes": 9,
+      "amended_eligible": true,
+      "case_id": "matplotlib_28",
+      "common_skips": 1,
+      "minimum_active_required": 8,
+      "original_status": "candidate_preflight_failed",
+      "selected": 10,
+      "summary_sha256": "e06bac8e1d5755f8f310ed50f00a51b68990d4c5ea3b5046134bf00ac2820334"
+    }
+  ],
+  "eligible_for_context_preparation": true,
+  "lock_sha256": "531c715ec81a023e05872c421a453407a19ac550bcd3d43b4ca602edf2cb29e2",
+  "no_provider_calls": true,
+  "original_failed_gate_not_relabelled": true,
+  "post_outcome_environment_amendment": true,
+  "research_results": false,
+  "status": "six_gold_free_repository_main_candidate_gates_qualified_with_disclosed_amendment"
+}

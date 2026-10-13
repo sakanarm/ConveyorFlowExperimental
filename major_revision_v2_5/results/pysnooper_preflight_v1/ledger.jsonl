@@ -1,0 +1,1 @@
+{"bug_id": "3", "engine_ledger_sha256": "dd7249f17339c99d69b5bed7dded89cfeac5d00268061baf45a1bb4050a68e84", "provider_calls": 0, "queue_index": 0, "reason": "container build failed or timed out; see preserved build_report.json", "selection_hash": "a2b5f2184d8a3ec7b5a91b8fc662f482b68f488a9383510d6007d5d9b1c7d8bc", "status": "environment_excluded"}

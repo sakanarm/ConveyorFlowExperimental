@@ -1,0 +1,28 @@
+{
+  "answer": {
+    "repair_action": "choose_x_if_nonzero_else_y"
+  },
+  "hidden_tests": [
+    {
+      "expected": -4,
+      "x": -4,
+      "y": 6
+    },
+    {
+      "expected": 10,
+      "x": 10,
+      "y": 4
+    },
+    {
+      "expected": -5,
+      "x": -5,
+      "y": 2
+    },
+    {
+      "expected": -1,
+      "x": -1,
+      "y": -4
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

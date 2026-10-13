@@ -1,0 +1,43 @@
+{
+  "container_cgroups": "disabled_rootless_wsl",
+  "container_network": "none",
+  "container_read_only": true,
+  "created_at_utc": "2026-10-11T03:52:43.707209+00:00",
+  "hidden_test_mounted": false,
+  "image_id": "c303e2440992fc0c745aa442cb2467cfbe80b36a9adaa25002d5960cc1da5c58",
+  "paid_execution_allowed": false,
+  "probe_sha256": "324e2871a72d2afb36b94af4a18fcf7516ac2cd48202520dcaa6a1d9de4ae1b9",
+  "provider_calls": 0,
+  "result": {
+    "class_domain": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "corpus": "covertype",
+    "dummy_macro_f1": 0.09361470182886568,
+    "dummy_majority_class": 2,
+    "hidden_test_opened": false,
+    "metric": "macro_f1",
+    "model": "ExtraTreesClassifier(n_estimators=48,max_depth=20,min_samples_leaf=2,n_jobs=2,random_state=20261011)",
+    "provider_calls": 0,
+    "status": "trusted_reference_validation_only",
+    "train_rows": 407058,
+    "validation_accuracy": 0.8071581812729244,
+    "validation_macro_f1": 0.6956891295708629,
+    "validation_rows": 86698
+  },
+  "return_code": 0,
+  "runner_sha256": "64896fc2e1a1ea93c61c32f1b82eb9914be5063fa78655556a1f2c8b3f5df6c3",
+  "source_manifest_sha256": "8af44db7965f2e981329bc42347cb4f7995bbe73b5938fe10b1d924c16c04ab3",
+  "split_manifest_sha256": "767398dd2d04436b5a3bb98443875fa844090d7134eb7d81f916622c4138b7c5",
+  "status": "container_reference_passed",
+  "stderr": "time=\"2026-10-11T10:52:30+07:00\" level=warning msg=\"The cgroupv2 manager is set to systemd but there is no systemd user session available\"\ntime=\"2026-10-11T10:52:30+07:00\" level=warning msg=\"For using systemd, you may need to login using an user session\"\ntime=\"2026-10-11T10:52:30+07:00\" level=warning msg=\"Alternatively, you can enable lingering with: `loginctl enable-linger 1000` (possibly as root)\"\ntime=\"2026-10-11T10:52:30+07:00\" level=warning msg=\"Falling back to --cgroup-manager=cgroupfs\"\n",
+  "stdout": "{\"class_domain\": [1, 2, 3, 4, 5, 6, 7], \"corpus\": \"covertype\", \"dummy_macro_f1\": 0.09361470182886568, \"dummy_majority_class\": 2, \"hidden_test_opened\": false, \"metric\": \"macro_f1\", \"model\": \"ExtraTreesClassifier(n_estimators=48,max_depth=20,min_samples_leaf=2,n_jobs=2,random_state=20261011)\", \"provider_calls\": 0, \"status\": \"trusted_reference_validation_only\", \"train_rows\": 407058, \"validation_accuracy\": 0.8071581812729244, \"validation_macro_f1\": 0.6956891295708629, \"validation_rows\": 86698}\n",
+  "train_sha256": "68b5f007257dec3fa6ddd845361c0f3813986c823d7253f2e6354c92b913b692",
+  "validation_sha256": "b09de9d82866c45ad89fbe3d16df16c55ce260822c795ae88e14b4c49989ff55"
+}

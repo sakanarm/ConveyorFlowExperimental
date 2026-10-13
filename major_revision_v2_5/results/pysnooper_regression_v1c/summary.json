@@ -1,0 +1,63 @@
+{
+  "active_public_regression_passes": 4,
+  "case_id": "PySnooper_3",
+  "lock_sha256": "8abe46f85bc43d54653b229cc4fd77b03608731baf572a72bfc87b61995a7638",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "public_regression_count": 4,
+  "public_tests_not_novel_hidden_tests": true,
+  "reports": {
+    "buggy_regression": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "dispositions": {
+        "tests.test_pysnooper::test_depth": "passed",
+        "tests.test_pysnooper::test_method_and_prefix": "passed",
+        "tests.test_pysnooper::test_string_io": "passed",
+        "tests.test_pysnooper::test_variables": "passed"
+      },
+      "execution_sha256": "9187e5b8398b636046a054f0d1fe9a77fa3952c4060415228c1158a22db40f8a",
+      "return_code": 0,
+      "timeout": false,
+      "xml_sha256": "f31d65ef00692a0c4053a0dd6b80c64b995b2bc4025fd839e9681376764c8fcf"
+    },
+    "fixed_regression": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 4
+      },
+      "dispositions": {
+        "tests.test_pysnooper::test_depth": "passed",
+        "tests.test_pysnooper::test_method_and_prefix": "passed",
+        "tests.test_pysnooper::test_string_io": "passed",
+        "tests.test_pysnooper::test_variables": "passed"
+      },
+      "execution_sha256": "0ebaa29d43bfc4305114935b8a562b2063a868d490c85843a8b8947572f525b0",
+      "return_code": 0,
+      "timeout": false,
+      "xml_sha256": "d4b0aab6f916e939763ca23ebf8a35154abcf2bf697f2c0b6bdee8570cdce6d6"
+    },
+    "visible": {
+      "counts": {
+        "errors": 0,
+        "failures": 1,
+        "skipped": 0,
+        "tests": 1
+      },
+      "dispositions": {
+        "tests.test_pysnooper::test_file_output": "failed"
+      },
+      "execution_sha256": "0f91610e87455fbedaff6588a1550a3cf0cd3d9505df3599573a00371af6b0c3",
+      "return_code": 1,
+      "timeout": false,
+      "xml_sha256": "4d44280fd9efcbafc93b2e9d041b8f60cc03a553c3378304bbf734f22f3811fc"
+    }
+  },
+  "status": "candidate_preflight_passed"
+}

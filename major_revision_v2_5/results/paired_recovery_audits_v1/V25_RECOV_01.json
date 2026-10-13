@@ -1,0 +1,182 @@
+{
+  "arms": {
+    "CENTRAL_RULE_MATCHED": {
+      "attempts": [
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "22ca779ea7785589f15676a2a73b43cf80d1852d8088a27d0486760dcd45336b",
+          "request_sha256": "0f49d262fcc10f673af6c2faa5a2fcd368fbefd0b1f18f42380ac52251b81228",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "c098082cbea0998727dd7d115d7fdee03792cecef82976e73ac8bae3eb69059b",
+          "task_id": "V25_BANK_01:ingest"
+        },
+        {
+          "agent_id": "A2",
+          "cost_unknown": false,
+          "model_slot": "agent_2",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "0c25cc61d20124840b7cd7da747b8f7b58bf1e70f128bff25896bc779ac48b99",
+          "request_sha256": "e1d74b8b19c5442a5a4ad45d5f68e0cd6a82ffa763c7755741e8ba0835b75f44",
+          "stage_status": "VISIBLE_TEST_FAILED",
+          "summary_sha256": "80d08bdac022731e233a9125a6e7052c7dc863eed5637e3569bdb7d4c608f10a",
+          "task_id": "black_3:repair"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "8df55d82c7afed5ebe904f166cd8953012ba47b640f011746f586fb7148f1e22",
+          "request_sha256": "189713aa1937cd01946d6a3bb63a310ef6fd221961b27c6e4eba32c6fe678042",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "1a9f9f5543f7456218f1c6f0963a5d727a602c3b938d659ac5cc36ab4a489a97",
+          "task_id": "V25_BANK_01:preprocess"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "d9efd79819b0eaae97ab53d2a8500f13961ae0c2347a292c2faec0622c5d4cbf",
+          "request_sha256": "c7eb8e5104c64d962cc71da18c7490f2a6e9cb7277c2ae7da637022ac6525799",
+          "stage_status": "STAGE_CONTRACT_FAILED",
+          "summary_sha256": "ac75493e3b93206066752bf1709f2a81a63a33b1dfd3116d722a819e811e9944",
+          "task_id": "V25_BANK_01:train"
+        }
+      ],
+      "claims_sha256": "84582c08e8ac64340ac302d6163ded184855a711894380332b43bc6f41c51245",
+      "cost_per_verified_job": "derive_from_ledger",
+      "jobs": {
+        "V25_BANK_01": "DEAD_LETTER",
+        "black_3": "DEAD_LETTER"
+      },
+      "ledger_sha256": "d8110d822dcb72829c54c49f2617638195d92033a02c2e954606994ab92bbd80",
+      "summary_sha256": "61e603e2763a9e72f9c67f1fa46b57b3626419c5b1b0bdfc05f018a956e6a78e"
+    },
+    "CF_FIT": {
+      "attempts": [
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "46714bf59c93d23cb858afc00d15ee98c5980531f1054d265a830dca757b007a",
+          "request_sha256": "951807dc03d99ebb442fa9f44e271d65ed447c66af712b3051633e31186645c9",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "289f354a18b858400f903e52332adcdac01a76f2919d317eeddbcab78232e7c1",
+          "task_id": "V25_BANK_01:ingest"
+        },
+        {
+          "agent_id": "A2",
+          "cost_unknown": false,
+          "model_slot": "agent_2",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "aeacd9289041b4853229b4f8748483f98739329ece08460d7e8966bacc740655",
+          "request_sha256": "1bf580a31f84891e6c85a6c18ad383a40df08f6473114f6a8fbcc08a1cc90a38",
+          "stage_status": "VISIBLE_TEST_FAILED",
+          "summary_sha256": "139e31728de4930de15340bb3047ee221ec64d4b364d72ffbfa90e20a1279e73",
+          "task_id": "black_3:repair"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "0d85c412c645621753fa1d1ee7c2a00ba868e4d6a21a36b4cd3c7b46a2958dbe",
+          "request_sha256": "a1181dbdfac8dad50976fc471d1bf4d9a36edb816c144be71f42d349c72c5b9a",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "f9e1a46f16e5192c1725d9d135f8550cf025800950f5b11483d6e58f6f83aa2f",
+          "task_id": "V25_BANK_01:preprocess"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "9c5f06db320cc0ba872d1d79f1a5eb5e008407f26f9fea14637658a6bc890160",
+          "request_sha256": "bbff4ece71521c7e623469c52e1efca0180ee9828007de449cf8a4ba38ec5454",
+          "stage_status": "STAGE_CONTRACT_FAILED",
+          "summary_sha256": "e752a8a67fc2fde258ba243801ed3758b4d9557fc7b5fb55b45b4ec762aaab45",
+          "task_id": "V25_BANK_01:train"
+        }
+      ],
+      "claims_sha256": "ddcb287f71eff4347d80c981096219836cf5f5e4803fdbbb0801bfbd8c552f76",
+      "cost_per_verified_job": "derive_from_ledger",
+      "jobs": {
+        "V25_BANK_01": "DEAD_LETTER",
+        "black_3": "DEAD_LETTER"
+      },
+      "ledger_sha256": "5aa745640db8d9b71dab51dd1b78f073db30d56fdc798493b1e74655c8bf72cd",
+      "summary_sha256": "d29a2d004540a63e5ec7ace0f9ecfc6a4319d0d4f975ce00dc34452b5c4e4aea"
+    },
+    "STATIC_OWNERS": {
+      "attempts": [
+        {
+          "agent_id": "A2",
+          "cost_unknown": false,
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "52f2525af828bb6b613d809f7d23091069bb33ba69e4bbcbf44101197f7cd0c0",
+          "request_sha256": "96cd01ba2dccc150b5f70be022c6d75a28af360940d4cdafcfea374de131043f",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "5f273febff6430bdc3aac7f927c25be9822c630744d0e9132ed7a59f64dc4e95",
+          "task_id": "V25_BANK_01:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "7d301160a80503dfa75e0a07cbba38114d1f8cc24b3af540122830a33d5e5285",
+          "request_sha256": "f1483d5e2194c1eae5f72cfd78ab26ab7306e9223061b4ca383e824381e48410",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "48c4ca0d2a1891026b85bd1253a829ca55d5abd3ca4d9abb38e81e98198b6c18",
+          "task_id": "V25_BANK_01:preprocess"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "b463a6329f2e323623c910bfea98ffb636a5f23d85bde838f7c64ad3dc20f530",
+          "request_sha256": "81b284a814910ba02c61371f7e3a3cdc2e9734f48fe1de10cf959f8528cb184b",
+          "stage_status": "UNFINISHED_OR_EMPTY_OUTPUT",
+          "summary_sha256": "5dbc64d7f4c650a261348cac92cecd76b24a9941289ed2e6b08c6dc6f009f291",
+          "task_id": "black_3:repair"
+        },
+        {
+          "agent_id": "A1",
+          "cost_unknown": false,
+          "model_slot": "agent_1",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "dfc336989d04d27910d6c827cfa91376d1c2c5ee3b4af58a8a729d61b9e7e93e",
+          "request_sha256": "4e3543be5ab463f92858faa0cb81710f6efb1916c12c9231c6d8ed4360a5409b",
+          "stage_status": "STAGE_CONTRACT_FAILED",
+          "summary_sha256": "a7d17f3d57647ba1577c90e40fda43a867c032d94e68e0b55c2e1f3e185f50c0",
+          "task_id": "V25_BANK_01:train"
+        }
+      ],
+      "claims_sha256": "5a9f71fd9ce68e3389dcb3f90bb040ef84a0900361a02f8a4410864052dc6122",
+      "cost_per_verified_job": "derive_from_ledger",
+      "jobs": {
+        "V25_BANK_01": "DEAD_LETTER",
+        "black_3": "DEAD_LETTER"
+      },
+      "ledger_sha256": "91d058065c21afe8191fb496b4e36677f878f9532626b257d2a968f227e3a22b",
+      "summary_sha256": "ebb301c384e8c1dfac020f7ef1f470ead465d14f5e11b8c0720236f3cfd27821"
+    }
+  },
+  "block_id": "V25_RECOV_01",
+  "insufficient_for_population_precision_or_equivalence": true,
+  "lock_sha256": "9c0c75cf6061e78d9dce15c7a59f9fe58ddbad458cc69f3b762beceb158bf2ac",
+  "new_ml_corpora_in_extension": 2,
+  "prior_instrument_invalid_calls_excluded": 2,
+  "provider_attempts": 12,
+  "raw_complete_sha256": "1ac87f8991db896395612b362fa0ab33ecca0f135ea85dd17f412617f007131c",
+  "research_results": true,
+  "source_repository_clusters_in_extension": 2,
+  "status": "v2_5_paired_recovery_block_independently_audited"
+}

@@ -1,0 +1,29 @@
+{
+  "created_at_utc": "2026-09-22T08:04:16.875304+00:00",
+  "annotation_method": "three blinded role-conditioned passes plus separate adjudication",
+  "underlying_model": "OpenAI Codex GPT-5-family session; exact deployment snapshot not exposed",
+  "independence_warning": "Same-model passes; do not describe as independent experts.",
+  "roles": [
+    "ML Methodologist",
+    "Software Reliability Reviewer",
+    "Workflow/Resource Reviewer",
+    "Senior Methods Adjudicator"
+  ],
+  "file_sha256": {
+    "docs/EXPERT_LABEL_PROTOCOL.md": "5f1e42c57e8d51b83d79029d5227a832f7e5fe53d5bc12862c15446d669c43be",
+    "docs/DIFFICULTY_RUBRIC.md": "5088885684e553173d96d656ec97529f98fa333798526adf3fb6b79e8c5936ea",
+    "docs/LLM_ANNOTATION_CLAIM.md": "0a86ba74b97327c5d0664414bda741a4fef2687d7ff9a15241e222ca5a70e163",
+    "docs/LLM_ANNOTATION_PROMPTS.md": "f372286d992ed687d6580b4ad554bf35709b80aa2072aabf6da8f7211a82ee7d",
+    "data/manifest.json": "e40c931a3da294a9c90cb4ccc11b8c679ab63c2e2280de23e21c415e2de6a11a",
+    "data/derived/annotation_variants.json": "6bc2a8615ad738f174de2867470a6b792f8c4ef85ecc53acca080ebddea8feca",
+    "expert_labels/rater1_blinded_packet.csv": "ae84d624ff9248b517f7a9ac8952fa2e3c53893fb10c9ea68f5f624670d7a91b",
+    "expert_labels/rater2_blinded_packet.csv": "12f9bf7f8568d979bd6d196ecf540d0df7717306bc21f4436c253759da91c562",
+    "expert_labels/rater3_blinded_packet.csv": "302ce032b1fcb00d0fd691b89e865e1f023669139f4074685a06242ca60a245a",
+    "expert_labels/expert_labels_merged.csv": "6675001961d8425f340fdf30cb3b47c2c1e82760c9c92f3c46ed62266de25d67",
+    "expert_labels/expert_label_agreement.json": "48e75145c4f9dad6eff7c9fa1297b928a383b95ef50c226d47360ee9cae904cd",
+    "expert_labels/llm_difficulty_labels_frozen.csv": "56207cd87a28ab221911c2bf07ee0cf6f8ec6547bab7880fc5ef268ad24b2add",
+    "expert_labels/llm_difficulty_labels_lower.csv": "92a15a89f5779213d97dfd472e399572eadbd703ea36450b5d5ec409c6f04e27",
+    "expert_labels/llm_difficulty_labels_upper.csv": "7519b662625614a8a87de4e05a9c4f6f6442443f82d0e37d9b9af997aeb02a86",
+    "expert_labels/llm_mapping_sensitivity.json": "bb973f154f43e9288f68ca2d6d3a591b32c52806cf79270847ef9a1f854887c0"
+  }
+}

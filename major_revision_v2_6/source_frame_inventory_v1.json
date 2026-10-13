@@ -1,0 +1,183 @@
+{
+  "all_candidate_exclusions_must_be_logged": true,
+  "cases_per_qualified_project": 2,
+  "max_possible_projects_in_this_frame": 17,
+  "no_llm_call_authorized_by_this_inventory": true,
+  "projects": [
+    {
+      "metadata_python_minor_counts": {
+        "3.8": 3
+      },
+      "previous_real_llm_project_exposure": true,
+      "project": "PySnooper",
+      "project_order_sha256": "3cbb4aa43f0e3c3c489e4dc12d53154b0fda4532092695ef64691cc1caf43b94",
+      "public_candidate_cases": 3,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.8": 5
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "sanic",
+      "project_order_sha256": "449ced7e9eeb9bc9052bde19a8643dad40c630d6b89f5161e20405094c9ccbc4",
+      "public_candidate_cases": 5,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.6": 4
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "cookiecutter",
+      "project_order_sha256": "4b8e0eb09bed504e028b67e84e9f8d446fd6c2b7277d44dbe036b528ad974bba",
+      "public_candidate_cases": 4,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.8": 16
+      },
+      "previous_real_llm_project_exposure": true,
+      "project": "fastapi",
+      "project_order_sha256": "5671848951f19e87e7b28243f12b900f14cd18afdd8dead24194c11862ee36ec",
+      "public_candidate_cases": 16,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.8": 40
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "scrapy",
+      "project_order_sha256": "62de0e5980caa0dd956f298028cefd3acc1270a685f24ef40325eadeb14c6aa4",
+      "public_candidate_cases": 40,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.8": 169
+      },
+      "previous_real_llm_project_exposure": true,
+      "project": "pandas",
+      "project_order_sha256": "76398ccb7c0da0a43632391d02f5d78db48d1978931ddd09e0e4ad60af7c3f80",
+      "public_candidate_cases": 169,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.7": 9,
+        "3.8": 1
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "spacy",
+      "project_order_sha256": "84f63e96fb898dae1060cd4a18f1e484fefafa459619b648368ca6c246fc432c",
+      "public_candidate_cases": 10,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.7": 32
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "thefuck",
+      "project_order_sha256": "8ad028e12e20c59a8b8186c8a3bb964298078aea64165d802987f3e391bec8ba",
+      "public_candidate_cases": 32,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.7": 45
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "keras",
+      "project_order_sha256": "a371a120019a3dbafcfda227e6b2e9cbbd38baa0946aef1a6154ccf0f14a89a1",
+      "public_candidate_cases": 45,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.8": 23
+      },
+      "previous_real_llm_project_exposure": true,
+      "project": "black",
+      "project_order_sha256": "b669c02a54b7371c34b0ef07573cd7b84979226120d77325c5f726c0f79da9b6",
+      "public_candidate_cases": 23,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.7": 5
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "httpie",
+      "project_order_sha256": "cbe08a67805df3fb1e3f006792ae971eb5ba0b32bb16bf591d0802ab03bd7c5d",
+      "public_candidate_cases": 5,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.6": 9
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "tqdm",
+      "project_order_sha256": "cc865b4d8ef84a0092081f36309a59918c1c851b22eae5f35f5cc45986e34c4e",
+      "public_candidate_cases": 9,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.6": 18
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "ansible",
+      "project_order_sha256": "dc42da989fea9590b77a95c3f320d15afc44f106437791391b6abe69bb5f1bf3",
+      "public_candidate_cases": 18,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.8": 30
+      },
+      "previous_real_llm_project_exposure": true,
+      "project": "matplotlib",
+      "project_order_sha256": "e7745008c735dae43dc68c97496bc9fb8ad7704c290ac45773674b9061d200dc",
+      "public_candidate_cases": 30,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.8": 33
+      },
+      "previous_real_llm_project_exposure": true,
+      "project": "luigi",
+      "project_order_sha256": "e8c03af547c139f8ef12eaf934d3fe5e7b0635e262ffcea28721e86345e1c406",
+      "public_candidate_cases": 33,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.7": 16
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "tornado",
+      "project_order_sha256": "ee875b4db0bd668f290a7ae0fd90f73ecada875f29355983f3c5117b1095a425",
+      "public_candidate_cases": 16,
+      "qualification_status": "not_assessed_by_v2_6"
+    },
+    {
+      "metadata_python_minor_counts": {
+        "3.7": 43
+      },
+      "previous_real_llm_project_exposure": false,
+      "project": "youtube-dl",
+      "project_order_sha256": "fa57a4bbea2a60753760cfc3087191e8eb0717dd4050a8b03718586dca1a243d",
+      "public_candidate_cases": 43,
+      "qualification_status": "not_assessed_by_v2_6"
+    }
+  ],
+  "selection_domain": "ConveyorFlow-v2.6-project-frame-20261011",
+  "source_manifest_canonical_sha256": "4fc983e834b5f25d348b8ec3989727fed0857901dfbcd6fcaeca45118cae72fc",
+  "status": "metadata_inventory_not_a_frozen_main_cohort",
+  "target_distinct_qualified_projects": 12
+}

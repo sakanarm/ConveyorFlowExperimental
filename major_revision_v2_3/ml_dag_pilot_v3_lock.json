@@ -1,0 +1,52 @@
+{
+  "status": "frozen_before_v3_provider_calls",
+  "created_at_utc": "2026-10-05T03:15:00.618256+00:00",
+  "input_sha256": {
+    "config": "54a26ff8022adad428fff5a7da2f691f5dd2047cccb5ea83ede03b7fa0835906",
+    "runner": "6b64ffbfeb93b9cfa831968d3f749762d25acc9dd6e117838d3b5da399f79645",
+    "prompt_builder": "1e43fb274caa400ddd0aa596e530d824eea189765b1c3b8d176d6d13382c2e3a",
+    "stage_runner": "8a16d7b20237327eb54e0b5e252e27b9e1c947fed95ef0535179a1bb3e9f8089",
+    "validator": "4efd1c40efaae42360e3b62d97d60532da56586c29149ff10bedf62d2689df57",
+    "quality_gates": "1598ae92b7f490b9d095dd9aaabba9278df51f4afa03f686cab9b7659ca137dc",
+    "case_manifest": "20cd2a67125a987aabd0b348c8b3b96002b33a0d57629bc5752f3232030a7875",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "provider_adapter": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "credential_bridge": "540f833c7719b7dbabde15ca31e94e82f8cefb974913365c60dcfba473581ff9",
+    "evaluator_lock": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b"
+  },
+  "settings": {
+    "study_kind": "exploratory_interface_feasibility_not_policy_comparison",
+    "prompt_revision": "v3_explicit_serialization_missing_values_20261005",
+    "case_ids": [
+      "ADULT_P0",
+      "BEIJING_P0"
+    ],
+    "model_slots": [
+      "agent_1",
+      "agent_2",
+      "agent_3"
+    ],
+    "max_jobs": 6,
+    "max_attempts_per_stage": 2,
+    "max_total_provider_calls": 48,
+    "generation": {
+      "temperature": 0,
+      "max_output_tokens": 16384,
+      "timeout_seconds": 360
+    },
+    "max_api_retries": 0,
+    "feedback": "Previous source and current-stage execution/schema error only; no hidden labels, hidden scores, or reference source.",
+    "stopping": "Stop a job after two candidate failures in one stage. Stop unresolved infrastructure/provider/version failures without automatic new API calls.",
+    "reason": "Earlier pilots failed on nullable missing values or exhausted completion budgets. Clarify a common artifact contract and give all models the same finite budget, rather than changing validators or repairing model code manually.",
+    "case_reuse": "P0 cases are reused for interface debugging. These are not new independent datasets and are not pooled with earlier prompt revisions.",
+    "ability_rank": "Single-model harness placeholder only; previous microtask ranks are not ecological calibration.",
+    "cost_units": "Provider-reported response-cost units; currency/pricing unconfirmed. Include failed attempts."
+  },
+  "container_preflight": {
+    "docker_server_version": "3.4.4",
+    "container_runtime": "podman",
+    "image_id": "sha256:d1dd86e9ef7bb249f3468e90214f3ceb3a9e8ff1ed84b0b7e1926458f423a37e",
+    "evaluator_lock_sha256": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b"
+  },
+  "interface_sha256": "0e716670771788b6089e79c494e4a5f24d0b59428fc5be03bd23db8dd393e042"
+}

@@ -1,0 +1,11 @@
+{
+  "amendment_lock_sha256": "140deccdfb17c8a688d20ea5c5495f6865515ae6df449cae730cad0f52abe72c",
+  "candidate_lock_sha256": "92aa214269087cdf14ffb6b842145694ab9eaefdd19142ec7732fc641e8ae347",
+  "case_id": "cookiecutter_3",
+  "ledger_sha256": "3fec258e198bc703e13ae35ce9fd361a993916208f56f12c543fb2e35c216909",
+  "project_eligible_for_main": false,
+  "provider_calls": 0,
+  "reason": "one_non_visible_same_file_node_below_three_required",
+  "status": "cookiecutter_excluded_under_frozen_candidate_gate",
+  "summary_sha256": "e7ae3b41e43837e114954f2850a9fbf294456a031d415e53c0849dd6b5c670c2"
+}

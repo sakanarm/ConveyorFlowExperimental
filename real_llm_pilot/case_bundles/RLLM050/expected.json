@@ -1,0 +1,23 @@
+{
+  "answer": {
+    "repair_action": "square_plus"
+  },
+  "hidden_tests": [
+    {
+      "expected": 13,
+      "x": -2,
+      "y": 9
+    },
+    {
+      "expected": 4,
+      "x": -2,
+      "y": 0
+    },
+    {
+      "expected": 14,
+      "x": 3,
+      "y": 5
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

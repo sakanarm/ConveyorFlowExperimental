@@ -1,0 +1,32 @@
+{
+  "class_domain": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "corpus": "covertype",
+  "created_at_utc": "2026-10-11T03:53:16.823969+00:00",
+  "direction": "higher_is_better",
+  "dummy_majority_macro_f1": 0.09361470182886568,
+  "expected_test_rows": 87256,
+  "hidden_test_opened": false,
+  "metric": "macro_f1",
+  "paid_execution_allowed": false,
+  "prediction_schema": "row_id,prediction where prediction is one canonical integer string 1..7",
+  "provider_calls": 0,
+  "quality_floor": 0.3946519156998643,
+  "reference_report_sha256": "3ebe4fb2a4acc547f512854cca5a74c1a498cdb4c9a18b733cf8e49cd74fde98",
+  "reference_validation_macro_f1": 0.6956891295708629,
+  "rule": "At least half the trusted validation reference macro-F1 improvement over majority-class dummy, analogous to the existing Adult gate",
+  "runner_sha256": "86df757755e4a5225b4fe79a4b0cce300466e90ef433a5e120f2fa612df2bed1",
+  "source_manifest_sha256": "8af44db7965f2e981329bc42347cb4f7995bbe73b5938fe10b1d924c16c04ab3",
+  "split_manifest_sha256": "767398dd2d04436b5a3bb98443875fa844090d7134eb7d81f916622c4138b7c5",
+  "status": "quality_gate_frozen_before_hidden_test_and_provider_calls",
+  "verifier_sha256": "c9e639023dc40c3f59977a2fdd25403c7d86b3c1417f31a576b35bcfcf276ef5",
+  "verifier_tests_sha256": "eea94afa81b444c862432dc818ab2ae9405875b8aedac8d8e94c7096e7b57e61",
+  "warning": "Provisional until trusted reference passes untouched hidden test; do not adjust floor using test results."
+}

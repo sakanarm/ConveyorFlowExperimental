@@ -1,0 +1,13 @@
+{
+  "amended_engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "created_at_utc": "2026-10-10T17:52:54.145042+00:00",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "rule": "Replay all frozen cases from the beginning after tag-only instrument fix; first reproducible case qualifies",
+  "runner_sha256": "0ae066692501181f50cd6b259981c4f34d8e17886514a95048f0cd2b7874c300",
+  "source_config_sha256": "1fffaa5a2b8d09426051cb269058a5844611d5feaac295731b679e3dd0b3d8d7",
+  "source_queue_sha256": "2cd1298333f20d4905d45b4b63a52696dfa86746f59adb317407de096006b692",
+  "status": "v2_5_pysnooper_lowercase_tag_amendment_frozen_before_provider",
+  "v1_failed_build_report_sha256": "df5f16ca0b03879790195c82e9f8a2d5dd2af713bf7c1b8cc0a6450a7404733b",
+  "v1_failed_ledger_sha256": "54ea3d055eface428167d52e9fb8375da7ff8f1cee3b3b22a72000ceb9820e5c"
+}

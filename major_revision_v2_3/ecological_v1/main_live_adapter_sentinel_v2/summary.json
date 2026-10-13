@@ -1,0 +1,22 @@
+{
+  "automatic_retry": false,
+  "completed_stage_records": [
+    {
+      "provider_calls": 1,
+      "stage": "ingest",
+      "status": "VERIFIED",
+      "summary_sha256": "88ff69860c24562d86e707133f20e6abe3eebce65373a539f5c1518afafc8614"
+    },
+    {
+      "provider_calls": 1,
+      "stage": "preprocess",
+      "status": "VERIFIED",
+      "summary_sha256": "314c25068c847f285d4655752b1fd08d7919ca5b457a86c65b333fe32eea62f6"
+    }
+  ],
+  "error_type": "FileExistsError",
+  "not_allocation_main": true,
+  "stage": "train",
+  "started_sha256": "880330c24261f6815fc33be8a0f3f1966ffd2368b5e0bdfa94eaf7b604254301",
+  "status": "sentinel_v2_instrument_unresolved"
+}

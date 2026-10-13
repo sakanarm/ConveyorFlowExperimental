@@ -1,0 +1,1354 @@
+{
+  "status": "prepared_outcome_blind_pools_not_execution_ready",
+  "created_at_utc": "2026-10-06T06:19:10.347075+00:00",
+  "models": [
+    {
+      "slot": "agent_1",
+      "model_id": "tencent-hy3",
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3"
+    },
+    {
+      "slot": "agent_2",
+      "model_id": "gpt-5-mini",
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6"
+    },
+    {
+      "slot": "agent_3",
+      "model_id": "glm-5.3-flash",
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15"
+    }
+  ],
+  "selection_domain": "ConveyorFlow-ecological-v1-20261006",
+  "dependencies": {
+    "prepare_design.py": "690147a30a1b7fd20323108fe380089c5923da8e5a5f6703b3843d3f140465cd",
+    "ml_source_manifest": "20cd2a67125a987aabd0b348c8b3b96002b33a0d57629bc5752f3232030a7875",
+    "bugs_source_manifest": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "protocol": "714e55283abe7316d32ba9a7290feb20f76e8fc8bd95238f861e0e000b584eb9"
+  },
+  "excluded_repository_cases": [
+    [
+      "luigi",
+      "12"
+    ],
+    [
+      "luigi",
+      "17"
+    ],
+    [
+      "luigi",
+      "19"
+    ],
+    [
+      "luigi",
+      "31"
+    ],
+    [
+      "luigi",
+      "7"
+    ],
+    [
+      "matplotlib",
+      "15"
+    ],
+    [
+      "matplotlib",
+      "18"
+    ],
+    [
+      "matplotlib",
+      "21"
+    ],
+    [
+      "matplotlib",
+      "3"
+    ],
+    [
+      "matplotlib",
+      "9"
+    ],
+    [
+      "pandas",
+      "116"
+    ],
+    [
+      "pandas",
+      "128"
+    ],
+    [
+      "pandas",
+      "147"
+    ],
+    [
+      "pandas",
+      "162"
+    ],
+    [
+      "pandas",
+      "166"
+    ],
+    [
+      "pandas",
+      "27"
+    ],
+    [
+      "pandas",
+      "76"
+    ],
+    [
+      "pandas",
+      "88"
+    ],
+    [
+      "thefuck",
+      "32"
+    ]
+  ],
+  "prior_population_evidence": [
+    {
+      "path": "major_revision_v2_3/results/bugsinpy_calibration_preflight_v1/manifest.json",
+      "sha256": "d971c16379e5a893940ed693c3bbf1a45735f84b2f60c11f066fe6a2300d47d8"
+    },
+    {
+      "path": "major_revision_v2_3/results/bugsinpy_serial_build_recovery_v6_protocol/combined_prefix_ledger.jsonl",
+      "sha256": "6b1bc2b72ef19826fa4b768711e0357c7645eed76e67632e462b87d0d1267f46"
+    },
+    {
+      "path": "major_revision_v2_3/repository_repair_pilot_v1_lock.json",
+      "sha256": "f6a23edb3bf8e3e058c1904e56c3cf2070de2f3c4721a0edbf87456faa6baf9a"
+    },
+    {
+      "path": "major_revision_v2_3/repository_first_attempt_v1_lock.json",
+      "sha256": "0ee455b30ea4db37878d0b7e235c2e128a265dcd406db56d70e7e0ae3bc9d144"
+    }
+  ],
+  "supported_repository_counts": {
+    "luigi": 21,
+    "matplotlib": 24,
+    "pandas": 126
+  },
+  "ml_specifications": [
+    {
+      "case_id": "CAL_ADULT_01",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "hours_per_week",
+        "relationship",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_02",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_gain",
+        "education",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_03",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "age",
+        "occupation",
+        "sex"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_04",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_gain",
+        "capital_loss",
+        "occupation"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_05",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_loss",
+        "education",
+        "occupation"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_06",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "age",
+        "sex",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_07",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "occupation",
+        "race",
+        "sex"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_08",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "age",
+        "fnlwgt",
+        "marital_status"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_09",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_gain",
+        "fnlwgt"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_10",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_loss",
+        "fnlwgt",
+        "marital_status"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_11",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "marital_status",
+        "sex",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_ADULT_12",
+      "split": "calibration",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "education_num",
+        "hours_per_week",
+        "native_country"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_ADULT_01",
+      "split": "main",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "education_num",
+        "fnlwgt",
+        "native_country"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_ADULT_02",
+      "split": "main",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_gain",
+        "sex",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_ADULT_03",
+      "split": "main",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "capital_gain",
+        "marital_status",
+        "workclass"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_ADULT_04",
+      "split": "main",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "age",
+        "native_country"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_ADULT_05",
+      "split": "main",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "age",
+        "hours_per_week"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_ADULT_06",
+      "split": "main",
+      "corpus": "adult",
+      "cluster_id": "adult",
+      "excluded_features": [
+        "fnlwgt",
+        "sex"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_01",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "DEWP",
+        "PRES",
+        "WSPM"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_02",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "SO2",
+        "day",
+        "year"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_03",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "TEMP",
+        "WSPM"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_04",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "CO",
+        "PRES",
+        "wd"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_05",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "CO",
+        "RAIN",
+        "station"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_06",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "O3",
+        "PRES"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_07",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "PRES",
+        "RAIN",
+        "WSPM"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_08",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "PM10",
+        "WSPM",
+        "day"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_09",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "PRES",
+        "RAIN",
+        "day"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_10",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "SO2",
+        "hour",
+        "year"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_11",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "PRES",
+        "day",
+        "hour"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "CAL_BEIJING_12",
+      "split": "calibration",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "DEWP",
+        "RAIN",
+        "wd"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_BEIJING_01",
+      "split": "main",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "CO",
+        "RAIN",
+        "month"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_BEIJING_02",
+      "split": "main",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "DEWP",
+        "NO2"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_BEIJING_03",
+      "split": "main",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "hour",
+        "month",
+        "year"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_BEIJING_04",
+      "split": "main",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "NO2",
+        "TEMP",
+        "day"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_BEIJING_05",
+      "split": "main",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "NO2",
+        "RAIN",
+        "station"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    },
+    {
+      "case_id": "MAIN_BEIJING_06",
+      "split": "main",
+      "corpus": "beijing",
+      "cluster_id": "beijing",
+      "excluded_features": [
+        "DEWP",
+        "O3",
+        "day"
+      ],
+      "stages": [
+        "ingest",
+        "preprocess",
+        "train",
+        "package"
+      ],
+      "minimum_train_rows": 20000,
+      "source_rows_reused": true,
+      "not_data_split_holdout": true,
+      "reference_preflight_status": "not_executed",
+      "difficulty_labels_status": "not_human_expert_labeled"
+    }
+  ],
+  "repository_preflight_pool": [
+    {
+      "project": "luigi",
+      "bug_id": "4",
+      "buggy_commit_id": "ffa51b50103a3adaf3c4d0569fdb037a7ba01e8e",
+      "fixed_commit_id_for_validator_only": "8501e5dbb8d3040453a89bb0d3562526086d51e5",
+      "test_file": "test/contrib/redshift_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "8036c8279a8a17a25832db436e3abee2a22c1fc5f4b2099fdf8c79ede3105511",
+      "run_test_sha256": "daf546a071a682e27d5f12ebe1ea15464f57be02bb7fb26e6b5104d0993b0e37",
+      "preflight_status": "not_executed",
+      "selection_hash": "d6a9252bd6872598f846f56a0259b8921d78c0b49d15b2b1911b77b7e3913210",
+      "split": "calibration",
+      "pool_order_within_repository": 0,
+      "case_id": "luigi_4",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "23",
+      "buggy_commit_id": "bb6a4af984778dbac55c8391ae29fa2b5b201361",
+      "fixed_commit_id_for_validator_only": "418a1adf597b4d7759dcd64b864bd64cc1b507f4",
+      "test_file": "lib/matplotlib/tests/test_axes.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "e754577efc6edfab7db2712ca967edfc1d786fce776afeddd6d4018fdbaf67ce",
+      "run_test_sha256": "c1dc65466945e711e41aa0d61f140cfdada4a09e3b8d2213acda867b7509c6cf",
+      "preflight_status": "not_executed",
+      "selection_hash": "58a074f69081c8036871e78cf6261c9e64a8126ee1811afa7a8a1576bb8985f1",
+      "split": "calibration",
+      "pool_order_within_repository": 0,
+      "case_id": "matplotlib_23",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "pandas",
+      "bug_id": "37",
+      "buggy_commit_id": "c69f7d8",
+      "fixed_commit_id_for_validator_only": "845c50c9e2ce611c773422ae9db7097fc3e5fba5",
+      "test_file": "pandas/tests/arrays/string_/test_string.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "35ede1bc665279b812b4410600201deaed69fd0e67cd8c1f3bf938b96782072a",
+      "run_test_sha256": "869b88da13d64d3884bb5ab1430c59c698b7d3b9c361f943f5156c4f026bef72",
+      "preflight_status": "not_executed",
+      "selection_hash": "6f08f2fd67c64cd8687854d7a8e10d8ca00696920d03cbd3799163f5e2b55134",
+      "split": "calibration",
+      "pool_order_within_repository": 0,
+      "case_id": "pandas_37",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "luigi",
+      "bug_id": "18",
+      "buggy_commit_id": "6cffbf438d023441f7f42c2019a51c62eecd9018",
+      "fixed_commit_id_for_validator_only": "c521d59c5eacf6c19ce3c17a62f73e042fa0556e",
+      "test_file": "test/central_planner_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "0652ba0a2c2691cb83063b0d6ae61b3a352f763ee65fdd6ffc8c74ecf9ad74c4",
+      "run_test_sha256": "43e3a6d764cee2ff42d3535acede88eb3175695b3c1b1f2b65e030a620ef2f8b",
+      "preflight_status": "not_executed",
+      "selection_hash": "7098b6b297b2c9a8c84b47cc5846385cc9558131a78fe7de3e3aeb1f9f9c0880",
+      "split": "calibration",
+      "pool_order_within_repository": 1,
+      "case_id": "luigi_18",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "30",
+      "buggy_commit_id": "3b26ee6f6b31bc0cca4be0407dbb40f44756030d",
+      "fixed_commit_id_for_validator_only": "d4de838fe7b38abb02f061540fd93962cc063fc4",
+      "test_file": "lib/matplotlib/tests/test_colors.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "deed0b3b528dd7d3468d69f74d2ed731cf02ed5bd94cd941604285266230f6c7",
+      "run_test_sha256": "0fc926d165cb8d40bd3a8ef78f6bfdf31452e38788b53d5160711690547c8599",
+      "preflight_status": "not_executed",
+      "selection_hash": "85bb81cdb6c130ed0a93ebd0577f50851ee622c302bfd9cc214154d312ee4ac3",
+      "split": "calibration",
+      "pool_order_within_repository": 1,
+      "case_id": "matplotlib_30",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "pandas",
+      "bug_id": "139",
+      "buggy_commit_id": "7705cd2",
+      "fixed_commit_id_for_validator_only": "0ffdbe36f0df732f2700cda4a84be758084ff901",
+      "test_file": "pandas/tests/groupby/test_categorical.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "85896db3611ef810007f9fef522b8044c7573282219b8fcde5e5fc01870791a6",
+      "run_test_sha256": "0194ba829daa0bfbf8775c4ed9a7858d0f154ceeba93450888ff3bba8aaba7b6",
+      "preflight_status": "not_executed",
+      "selection_hash": "76036da312caa62f34386e89f0d423aeaa4861f2d60639e02853e1f247c54944",
+      "split": "calibration",
+      "pool_order_within_repository": 1,
+      "case_id": "pandas_139",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "luigi",
+      "bug_id": "29",
+      "buggy_commit_id": "07efdd9136966ffe143ea57e15b1a57b5698fd5a",
+      "fixed_commit_id_for_validator_only": "2898a2d2d178499435892d7a69bb1dfc90c70b29",
+      "test_file": "test/task_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "316e301fdc7361906991f7ee50df5fd9708204ecf19842b22d4d3a23d3a88bdf",
+      "run_test_sha256": "41e8263aca10fcd489d1145792d850e095cbb6da6d15c8077a114f18d2e9f1e2",
+      "preflight_status": "not_executed",
+      "selection_hash": "43b71e305944d86e2bfd58304b548f2376ad7bc7d21f6fc5370662d0744c7332",
+      "split": "calibration",
+      "pool_order_within_repository": 2,
+      "case_id": "luigi_29",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "2",
+      "buggy_commit_id": "2a3707d9c3472b1a010492322b6946388d4989ae",
+      "fixed_commit_id_for_validator_only": "d86cc2bab8183fd3288ed474e4dfd33e0f018908",
+      "test_file": "lib/matplotlib/tests/test_axes.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "9b9f431ebf2c321552f528b0872debdad9febec2af3989f40f0bd86698a7e90c",
+      "run_test_sha256": "9e69202bbd9329635f002cfa4b8b8e7207a3692d323400c4d290044858b479a6",
+      "preflight_status": "not_executed",
+      "selection_hash": "e1f026085f0db1217782a531e826d017e370b4725f3df3b467b702ac907c7b2b",
+      "split": "calibration",
+      "pool_order_within_repository": 2,
+      "case_id": "matplotlib_2",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "pandas",
+      "bug_id": "65",
+      "buggy_commit_id": "2f70e41",
+      "fixed_commit_id_for_validator_only": "2f9a44635bd8d468cf008f2855ce2dcfb9e90586",
+      "test_file": "pandas/tests/io/parser/test_encoding.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "92ad6e707706207d6a18cba8c41fff36552c7eb0cc4de1f56ee02c3a07bdd4a2",
+      "run_test_sha256": "9ce48ca2c4e88800bfa31a85dca348526163ae25323cf6330774f7598bf2dbe5",
+      "preflight_status": "not_executed",
+      "selection_hash": "55b835ab91d27860599d1e0c10b02128b47a4773b9faab3c1a4c96f93abe0c37",
+      "split": "calibration",
+      "pool_order_within_repository": 2,
+      "case_id": "pandas_65",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "luigi",
+      "bug_id": "20",
+      "buggy_commit_id": "b958140c2ec838e590a5be02dbac7414d5d0bf17",
+      "fixed_commit_id_for_validator_only": "c3d685e2b03369aab6f4d86ed1c95169c1c2c217",
+      "test_file": "test/task_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "02e8d994944ac5fd88ecbfa3b23809a279dec1bf8162ef0fcf70a9be9f784b4e",
+      "run_test_sha256": "6e133c3f24a69cef564706bd1a62693c46fbeeeb77e4dce3d1bed92284dc8bb1",
+      "preflight_status": "not_executed",
+      "selection_hash": "50cde9ef583648d41479bcc33062e8fdb637f8af5a82732e490ed4a5c43b97f7",
+      "split": "calibration",
+      "pool_order_within_repository": 3,
+      "case_id": "luigi_20",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "10",
+      "buggy_commit_id": "b31d64ce3910e8d297d8300690e459587f77181f",
+      "fixed_commit_id_for_validator_only": "1986da3968ee76c6bce8f4c04aed80e23bd4ecfa",
+      "test_file": "lib/matplotlib/tests/test_axes.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "7fef80cb8fe928a19bb26bfcf5bb5d882b1de6ceaa210bf38fd8bd0e8e14685e",
+      "run_test_sha256": "5fdd864c04e3da853647130df3c02382f59631cd6117f94069b0b13538082402",
+      "preflight_status": "not_executed",
+      "selection_hash": "2ea32e3bc1652c7ab339326c15d3ccbaa214a58b1c80319caf48d51cfcbe538f",
+      "split": "calibration",
+      "pool_order_within_repository": 3,
+      "case_id": "matplotlib_10",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "pandas",
+      "bug_id": "115",
+      "buggy_commit_id": "ed20822",
+      "fixed_commit_id_for_validator_only": "386494d0dc851be9e86b1576f30fa8705df4d47b",
+      "test_file": "pandas/tests/series/test_missing.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "d987af391aae4bffffd93b4ba9cb7b3e05564c7f2c7e9885ef1ec7a28a11eaf0",
+      "run_test_sha256": "e10491a35f6bf7b5531cca0e6f05e9398a1d74b54a7ea35372345467dd281ed6",
+      "preflight_status": "not_executed",
+      "selection_hash": "f93d1838ac83e8c56ddfb83d4b4cec0635bef3846687a45b8b7d5089bb118bb1",
+      "split": "calibration",
+      "pool_order_within_repository": 3,
+      "case_id": "pandas_115",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "luigi",
+      "bug_id": "3",
+      "buggy_commit_id": "a0f1db01ddab5b4b2bda3fbe58bad09a6d94a7b4",
+      "fixed_commit_id_for_validator_only": "3a0bfbff69addfb3be1107adab3d4914bcae3e4b",
+      "test_file": "test/parameter_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "2627ca5dafb67a9662079ef34f9e22d641b7995097caae646c355ef62ed494be",
+      "run_test_sha256": "7e5dbfe7b197fa081012fcc3f00d9242b260072da791384147e886d03e89f082",
+      "preflight_status": "not_executed",
+      "selection_hash": "ca25df7addfa8d128a5714a9f5b95b0729f6cdb5777ee46fab6512d65adac0c8",
+      "split": "main",
+      "pool_order_within_repository": 0,
+      "case_id": "luigi_3",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "1",
+      "buggy_commit_id": "c404d1f716e8aaefd4d7371ff49673e9c1f7f07c",
+      "fixed_commit_id_for_validator_only": "5324adaec6a7fd3d78dea7b28451d5f6e95392a6",
+      "test_file": "lib/matplotlib/tests/test_bbox_tight.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "4e32cc5eb8c7cb4320718b21ecde516dbbf19019b9bb911e52669f8ebd26993b",
+      "run_test_sha256": "9fcb2305c4a4f800c79840665d29cea23c206adc2c9ba64447ecd890e31b571c",
+      "preflight_status": "not_executed",
+      "selection_hash": "46db2ad06854cc45d4efeab0a0bf6dc7b0cd3ea9b08a94b98e0aa93040467317",
+      "split": "main",
+      "pool_order_within_repository": 0,
+      "case_id": "matplotlib_1",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "pandas",
+      "bug_id": "100",
+      "buggy_commit_id": "8806ed7",
+      "fixed_commit_id_for_validator_only": "2b1b3da4c68fdaf9637d12706c5ba3de1a9b20de",
+      "test_file": "pandas/tests/frame/methods/test_pct_change.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "8ca77b512f50903179787728093de50f3f740cb9e798e30a0bc55f18fd616920",
+      "run_test_sha256": "5aab4e27271d14729fee4b46e5166c4eaa9b6c59327b2422876b38de9eacdf59",
+      "preflight_status": "not_executed",
+      "selection_hash": "305488db3f61a0fc1b93e48e39ac1c81e24449ec663ee4d482d81c73b5be44ee",
+      "split": "main",
+      "pool_order_within_repository": 0,
+      "case_id": "pandas_100",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "luigi",
+      "bug_id": "9",
+      "buggy_commit_id": "f7e0b7710fd8b12f27625b1efb62a8fde6e206c4",
+      "fixed_commit_id_for_validator_only": "b7115974c3deadf77113686248b39567cb67e38f",
+      "test_file": "test/execution_summary_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "46145edf721cf4ee5e3951da038b9241a31f517ec73ec36259c24444317583d6",
+      "run_test_sha256": "3a93791b186ec83c785cb307e451d70de3d16a5f7e1e7dca791b2e49b8f8e728",
+      "preflight_status": "not_executed",
+      "selection_hash": "808524088bc8f1fe0ef3f56fd8949d5cba13408c776d78f3580f0a614afa7b07",
+      "split": "main",
+      "pool_order_within_repository": 1,
+      "case_id": "luigi_9",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "28",
+      "buggy_commit_id": "896fb8140a600341ebb5eaa4191584f23df2d2a0",
+      "fixed_commit_id_for_validator_only": "94ac78a47cfaed9a09e5fd8295b88e8248b67f55",
+      "test_file": "lib/matplotlib/tests/test_axes.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "59ba19d44d812766bc9e9c9a9a934492c1105114f4ff8093b3b6ded86eaf1f7a",
+      "run_test_sha256": "3323756b42470943e90df1811a4a3fb270d76f1c642fe74d9e81722a821f1c4e",
+      "preflight_status": "not_executed",
+      "selection_hash": "582d17d9555c21965ee5911ef67f038f77c464f85c4e5e6da5aa11e623cc0cf0",
+      "split": "main",
+      "pool_order_within_repository": 1,
+      "case_id": "matplotlib_28",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "pandas",
+      "bug_id": "82",
+      "buggy_commit_id": "6f395ad",
+      "fixed_commit_id_for_validator_only": "e83a6bddac8c89b144dfe0783594dd332c5b3030",
+      "test_file": "pandas/tests/reshape/merge/test_merge.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "ad8ab8e63f69f7cd28e1fdcaa741d34322c9c9e9d3cbac5fba3a4bb426184cc5",
+      "run_test_sha256": "29a22c3982bb180e843bece76e8d8c1f1127800911a7e4224b037b03a86f234d",
+      "preflight_status": "not_executed",
+      "selection_hash": "06ea2bae1fdf81439e182611d0639d1a262307b77f65932d562766f2724a978d",
+      "split": "main",
+      "pool_order_within_repository": 1,
+      "case_id": "pandas_82",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "luigi",
+      "bug_id": "11",
+      "buggy_commit_id": "bf8b5cba573d5d6cd11f7f10a03b458aeaf955c1",
+      "fixed_commit_id_for_validator_only": "70d8734d60e168389f425082b41b1936d63c028e",
+      "test_file": "test/scheduler_api_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "c2503d1de6dded26568f67f17eb75ac56222aeef6b22d10eeb4f28eec738623b",
+      "run_test_sha256": "31c361d5da4c9f9d815245ddab1bb6735109fc67c1da2c7810470a1c9526f1c1",
+      "preflight_status": "not_executed",
+      "selection_hash": "a7e415f19cae871fa864de86ed8385ceaa5580ba93cc05230e1ca6eb978291a6",
+      "split": "main",
+      "pool_order_within_repository": 2,
+      "case_id": "luigi_11",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "6",
+      "buggy_commit_id": "fb9e72309aeefb51d1a56ecbdb1e7399d105ff06",
+      "fixed_commit_id_for_validator_only": "d84f4a7ac8d43d1288cb8ce11ab60ae557306b7e",
+      "test_file": "lib/matplotlib/tests/test_axes.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "5d667bbe39e45fd000863ecc47c3eaa3a50bde4e3f8ba26e0bcb4b90f822cae1",
+      "run_test_sha256": "aed8b61bce54e420d4e3328a9305b37ded6524a9e718313cd29717edfe74e070",
+      "preflight_status": "not_executed",
+      "selection_hash": "b0091b1c2c9b9d1eef0e4d7ec6bee729bab166a03f3deb192474df2490319e2b",
+      "split": "main",
+      "pool_order_within_repository": 2,
+      "case_id": "matplotlib_6",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "pandas",
+      "bug_id": "127",
+      "buggy_commit_id": "f7d6b58",
+      "fixed_commit_id_for_validator_only": "710d82c0d393c9031e469ec0371660d8187b7dc3",
+      "test_file": "pandas/tests/series/test_timeseries.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "05be1e969b07c50719ef2c4d7599c9ba2e4f126ef18df4d0eca8001f932a7ee7",
+      "run_test_sha256": "51a3affeaba0f0fae83b3cca778d6bc60bc55d56d02622c09253c980b238e371",
+      "preflight_status": "not_executed",
+      "selection_hash": "4a470855fbb6ec097f360345a9af03ca61c55531cd6c9284432904f1b6cfbe33",
+      "split": "main",
+      "pool_order_within_repository": 2,
+      "case_id": "pandas_127",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "luigi",
+      "bug_id": "16",
+      "buggy_commit_id": "e38392a1381dd8daee0f180f0ac7f651edb88e0c",
+      "fixed_commit_id_for_validator_only": "96f2b5a97c2cc5f63bea0f422c57f93dcec0ebac",
+      "test_file": "test/central_planner_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "b80aedf1026429f2d86fffd51be320a18673a9e8f390c7f8b84ae8760b5f1fcf",
+      "run_test_sha256": "6d0bc7729904d7b9b90f27e89f49c1d220274400a14fe6bdf4c31ea02b135c2f",
+      "preflight_status": "not_executed",
+      "selection_hash": "db754520f4438d76eb5672a5efe8414f76f52fec46ef61c695247db7b184d6b5",
+      "split": "main",
+      "pool_order_within_repository": 3,
+      "case_id": "luigi_16",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "26",
+      "buggy_commit_id": "04d9d28b820af0b4df230a3c67314ed5b0af8fdd",
+      "fixed_commit_id_for_validator_only": "557375ff91f64c1b827f6014da2d369513a69316",
+      "test_file": "lib/matplotlib/tests/test_axes.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "224e21904ec0d351e45e8dedf9b472ed29fe1f8587a847ed787be3dbc606ca15",
+      "run_test_sha256": "81fd9ba3be8470fe3273cf9a8abef97ead5ea9eb4f29af80568ef537b3599f1b",
+      "preflight_status": "not_executed",
+      "selection_hash": "80a54eeccb84a374e2306fbb6a70fc34a6603ee46d91e46d6ccf668b82d6a526",
+      "split": "main",
+      "pool_order_within_repository": 3,
+      "case_id": "matplotlib_26",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    },
+    {
+      "project": "pandas",
+      "bug_id": "74",
+      "buggy_commit_id": "9a211aa",
+      "fixed_commit_id_for_validator_only": "839e7f1416148caff518a5b75327a2480a2bbbb4",
+      "test_file": "pandas/tests/indexes/timedeltas/test_constructors.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "ad142bb0a7e61d3431501d08c0e4fca15aa3f9c66f66ea69318630f10206d130",
+      "run_test_sha256": "a957d8307a40470a1289178811b852395a183f1d1a5ce53604c69d00036705dc",
+      "preflight_status": "not_executed",
+      "selection_hash": "9f7a92e7dce2c5773b9d49d25f9a40d5d1ecd203c13e4bea561a6bbee03c347f",
+      "split": "main",
+      "pool_order_within_repository": 3,
+      "case_id": "pandas_74",
+      "reference_preflight_status": "not_executed",
+      "not_guaranteed_unseen_in_pretraining": true
+    }
+  ],
+  "repository_target_per_split_per_repository": 2,
+  "repository_max_preflights_per_split_per_repository": 4,
+  "calibration_if_full_pool_preflights_pass": {
+    "ml_specs": 24,
+    "ml_stage_probes": 96,
+    "bug_cases": 6,
+    "planned_generation_calls": 306,
+    "max_output_tokens_per_call": 32768,
+    "max_output_tokens_total": 10027008,
+    "status": "design_envelope_not_approved_spend"
+  },
+  "budget_status": "awaiting_user_limit_and_precision_freeze",
+  "main_sample_size_status": "not_frozen",
+  "paid_execution_allowed": false,
+  "no_provider_calls": true,
+  "not_human_expert_labels": true,
+  "source_corpora": 2,
+  "no_independence_claim_for_variants": true,
+  "execution_blockers": [
+    "budget_and_precision_not_frozen",
+    "new_reference_gates_not_executed",
+    "new_repository_environments_not_preflighted",
+    "no_ecological_ability_profiles",
+    "live_assessor_executor_verifier_integration_not_audited",
+    "actual_decision_process_and_claim_paths_not_validated",
+    "approval_quota_unresolved"
+  ]
+}

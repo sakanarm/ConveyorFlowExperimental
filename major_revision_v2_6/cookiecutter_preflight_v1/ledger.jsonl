@@ -1,0 +1,1 @@
+{"case_id": "cookiecutter_3", "provider_calls": 0, "queue_index": 0, "reason": "container build failed or timed out", "record_sha256": "73c8ea49b63c91be9fb371dbc6cb374e572a9d8550e3383b82fe05457c76ca98", "selection_hash": "284fe5562e01f72a2add0b4e227caaf94dcbafa1fa61ff7984a91a13fcb8c017", "status": "environment_excluded"}

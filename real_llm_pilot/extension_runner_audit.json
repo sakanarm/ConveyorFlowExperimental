@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "research_results": false,
+  "provider_calls": 0,
+  "purpose": "offline extension execution-path audit only",
+  "conditions": [
+    {
+      "policy": "CF_FIT",
+      "homogeneous": false,
+      "pass": true,
+      "tasks_verified": 3,
+      "mock_calls": 3,
+      "mock_peak_active": 3,
+      "ledger_peak_active": 3,
+      "stand_down_events": 3
+    },
+    {
+      "policy": "CF_FIT_NO_STANDDOWN",
+      "homogeneous": false,
+      "pass": true,
+      "tasks_verified": 3,
+      "mock_calls": 3,
+      "mock_peak_active": 3,
+      "ledger_peak_active": 3,
+      "stand_down_events": 0
+    },
+    {
+      "policy": "CF_FIT",
+      "homogeneous": true,
+      "pass": true,
+      "tasks_verified": 3,
+      "mock_calls": 3,
+      "mock_peak_active": 3,
+      "ledger_peak_active": 3,
+      "stand_down_events": 3
+    }
+  ]
+}

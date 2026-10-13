@@ -1,0 +1,21 @@
+{
+  "status": "candidate_isolation_and_regression_preflight_no_llm",
+  "selection_ledger": "results/bugsinpy_serial_build_recovery_v6_protocol/combined_prefix_ledger.jsonl",
+  "base_image": "python:3.8.20-slim-bookworm@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+  "build_timeout_seconds": 600,
+  "test_timeout_seconds": 180,
+  "regression_items_per_case": 10,
+  "regression_selection_seed": "cf-repository-local-regression-v1-20261005",
+  "regression_rule": "Collect all node IDs in the relevant test file, exclude the visible-test prefix, sort by SHA256(seed|case|nodeid), and take the first ten before viewing their pass/fail outcomes. No replacement of failing items. These are withheld public repository tests, not novel independent hidden tests.",
+  "allowed_files": {
+    "pandas_88": ["pandas/core/reshape/pivot.py"],
+    "matplotlib_15": ["lib/matplotlib/colors.py", "lib/matplotlib/scale.py"],
+    "pandas_76": ["pandas/io/json/_json.py"],
+    "pandas_128": ["pandas/io/json/_json.py", "pandas/io/common.py"],
+    "luigi_19": ["luigi/scheduler.py"],
+    "pandas_27": ["pandas/core/arrays/datetimes.py", "pandas/core/arrays/period.py"]
+  },
+  "allowed_files_basis": "Localized Python source repair. Paths are declared from buggy tracebacks and the corresponding public API modules before model calls, not inferred from gold patch paths. No tests, configuration, compiled extensions or arbitrary new files may be changed.",
+  "candidate_scope": "Only the buggy production package and its dependencies. No repository history, fixed source, gold patch or test tree in the candidate image. A separate verifier image adds protected public repository tests, never fixed production code. Multi-stage image construction prevents fixed/history build layers from entering the final images.",
+  "no_llm_calls": true
+}

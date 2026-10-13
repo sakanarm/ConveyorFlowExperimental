@@ -1,0 +1,564 @@
+{
+  "status": "offline_case_bundle_audit_passed",
+  "research_results": false,
+  "provider_calls": 0,
+  "case_count": 60,
+  "workload_difficulty_counts": {
+    "adult_ml_D1": 6,
+    "adult_ml_D2": 7,
+    "adult_ml_D3": 7,
+    "beijing_ml_D1": 6,
+    "beijing_ml_D2": 7,
+    "beijing_ml_D3": 7,
+    "bugs2fix_D1": 6,
+    "bugs2fix_D2": 7,
+    "bugs2fix_D3": 7
+  },
+  "checks": {
+    "all_oracle_candidates_pass": true,
+    "complete_oracle_answers_not_in_prompts": true,
+    "all_empty_negative_controls_rejected": true
+  },
+  "cases": [
+    {
+      "case_id": "RLLM001",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM002",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM003",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM004",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM005",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM006",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM007",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM008",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM009",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM010",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM011",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM012",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM013",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM014",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM015",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM016",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM017",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM018",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM019",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM020",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM021",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM022",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM023",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM024",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM025",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM026",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM027",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM028",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM029",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM030",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM031",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM032",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM033",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM034",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM035",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM036",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM037",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM038",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM039",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM040",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "validator_type": "numeric_json",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM041",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM042",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM043",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM044",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM045",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM046",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM047",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM048",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM049",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM050",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM051",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM052",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM053",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM054",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM055",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM056",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM057",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM058",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM059",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    },
+    {
+      "case_id": "RLLM060",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "validator_type": "behavioral_integer_repair",
+      "oracle_passed": true,
+      "complete_answer_not_leaked": true,
+      "empty_negative_control_rejected": true
+    }
+  ]
+}

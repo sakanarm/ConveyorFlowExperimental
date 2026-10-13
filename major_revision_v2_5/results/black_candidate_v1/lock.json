@@ -1,0 +1,46 @@
+{
+  "case": {
+    "allowed_files": [
+      "black.py"
+    ],
+    "bug_id": "3",
+    "bug_info_sha256": "e76c0dd095d507314b97830c90cb72226aa14e507a0fc90cb58b7c6c3f98f118",
+    "buggy_commit_id": "8126b4f6a9342290de4655e6a8a78cd288ce7daa",
+    "case_id": "black_3",
+    "fixed_commit_id_for_validator_only": "7a14a37981862ef418f3cdb4a7e2375856f97529",
+    "preflight_record_sha256": "1fec8bda7c5a2b0d4ff38301d1988ddf5263df441dc57041bae6eace4ee68f7e",
+    "preflight_status": "not_executed",
+    "project": "black",
+    "python_version": "3.8.3",
+    "run_test_sha256": "41745e9452aa678f675d1f6c66d963586276803f86ada6a9daffe7a8e5adae90",
+    "selection_hash": "14df1f4c640697a7e475516295ecfb7dd5b8d452b57d787678b1bb134036cbd1",
+    "test_file": "tests/test_black.py",
+    "validator_source_image": "sha256:291caba4e1782fd6138638de304153f3542b5b87a81343ee0a46084d2914fd11",
+    "visible_test": "tests/test_black.py::BlackTestCase::test_invalid_config_return_code"
+  },
+  "created_at_utc": "2026-10-11T07:12:55.564093+00:00",
+  "dependencies_sha256": {
+    "candidate_helper": "c6d58bb61ba53195666b3ba4bbad31760493b7eb283cb58b0613dcb5b91d67d8",
+    "cohort_queue": "902f9c00fa41384e5dd11ed3b5d65132861c98fa50631dfabdbfdb461a23188e",
+    "preflight_ledger": "2ae13788d0df7d1cf19071ed069eee10145fb0bad1c19bf233a55a5374566d4f",
+    "preflight_lock": "ec7906172909ad9e4b0b22be36d5cb4c6896b0556b1ad93c2f9244fcfd634c5e",
+    "runner": "8f68d8c2d5fa4034e89cfbefe36a3fce28bc05bd02fc47499b00c263126e886f"
+  },
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "selection_rule": "Collect BlackTestCase public nodes, remove visible bug node, hash-sort and take first ten before regression outcomes; require at least five active common passes and no failures",
+  "settings": {
+    "allowed_files": [
+      "black.py"
+    ],
+    "build_timeout_seconds": 900,
+    "maximum_public_regression_nodes": 10,
+    "minimum_active_public_regression_passes": 5,
+    "paid_execution_allowed": false,
+    "provider_calls": 0,
+    "regression_source": "tests/test_black.py::BlackTestCase::",
+    "selection_domain": "cf-v25-black3-public-regression-20261011",
+    "test_timeout_seconds": 240
+  },
+  "status": "v2_5_black3_gold_free_candidate_frozen_before_provider"
+}

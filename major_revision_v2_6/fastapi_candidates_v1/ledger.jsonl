@@ -1,0 +1,2 @@
+{"case_id": "fastapi_11", "provider_calls": 0, "queue_index": 0, "status": "candidate_preflight_passed", "summary_sha256": "600fd0245507bc2543e636cf95e5ea785bce01b1000dac64dea65ee4eb322e5b"}
+{"case_id": "fastapi_8", "provider_calls": 0, "queue_index": 1, "status": "candidate_preflight_passed", "summary_sha256": "a00833f9c01c0abc4db25ed87f87dabd0eb4f436a22a7b6375bc964167136f8f"}

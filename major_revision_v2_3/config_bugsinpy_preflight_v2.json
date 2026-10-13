@@ -1,0 +1,28 @@
+{
+  "status": "frozen_before_v2_ordered_preflight",
+  "max_candidates": 30,
+  "build_timeout_seconds": 1800,
+  "test_timeout_seconds": 180,
+  "python_scope": "3.8",
+  "base_image": "python:3.8.20-slim-bookworm@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+  "compile_flags": "-O0 -g0",
+  "environment_deviation": "Common feasibility revision for every candidate: compile with -O0 -g0 and a 1800-second build cap after v1 pandas#88 exhausted its 900-second cap during compilation. Restart the entire frozen candidate prefix in a separate v2 ledger, not just selected successes. Retain v1 exclusion. Use CPython 3.8.20 instead of historical 3.8.x patch releases; minimal repository dependencies instead of unrelated machine-wide requirement snapshots. Preserve original metadata/test hashes. This environment is not an exact historical reproduction.",
+  "common_packages": ["pip==23.0.1", "setuptools==59.6.0", "wheel==0.38.4"],
+  "profiles": {
+    "pandas": {
+      "url": "https://github.com/pandas-dev/pandas",
+      "packages": ["numpy==1.18.4", "Cython==0.29.19", "pytest==5.4.3", "hypothesis==5.16.0", "python-dateutil==2.8.1", "pytz==2020.1", "six==1.15.0"],
+      "build": "python setup.py build_ext --inplace -j 2"
+    },
+    "matplotlib": {
+      "url": "https://github.com/matplotlib/matplotlib",
+      "packages": ["numpy==1.18.4", "pytest==5.4.3", "cycler==0.10.0", "kiwisolver==1.2.0", "pyparsing==2.4.7", "python-dateutil==2.8.1", "Pillow==7.1.2", "six==1.15.0"],
+      "build": "python setup.py build_ext --inplace -j 2"
+    },
+    "luigi": {
+      "url": "https://github.com/spotify/luigi",
+      "packages": ["pytest==5.4.3", "tornado==5.0", "python-daemon==2.1.2", "lockfile==0.12.2", "python-dateutil==2.8.1", "mock==4.0.2", "requests==2.23.0", "six==1.15.0", "psutil==5.7.0"],
+      "build": "true"
+    }
+  }
+}

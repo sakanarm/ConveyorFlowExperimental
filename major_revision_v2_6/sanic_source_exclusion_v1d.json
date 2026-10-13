@@ -1,0 +1,21 @@
+{
+  "status": "project_ineligible_under_frozen_v2_6_gates",
+  "project": "sanic",
+  "provider_calls": 0,
+  "qualified_candidate_cases": ["sanic_3"],
+  "required_qualified_cases_per_project": 2,
+  "candidate_exclusions": {
+    "sanic_5": "Second selected public logging regression timed out on buggy and fixed; stop rule applied",
+    "sanic_2": "Public test passed on buggy and fixed; no bug contrast",
+    "sanic_1": "Public test error on buggy and fixed",
+    "sanic_4": "Public test error on buggy and fixed"
+  },
+  "v1d_lock_sha256": "80ccf3cf05846949b2f88217ec4c0ef2bd7864fcf95c1976d0886d0cdd115aa9",
+  "v1d_queue_sha256": "d98ce5da8e8ce6b4cf2862064a0d18d2c2ae7329e039a170b1c6a251885125a9",
+  "v1d_config_sha256": "3e474cb2fad7a986a5883a9db9bcaf6af28e06f0b950f8fb57682de38b26cfb1",
+  "v1d_ledger_sha256": "37286173bcd999f9ed626971047ed1a73765910dbae11f5e12d66380029a591f",
+  "sanic5_summary_sha256": "0ba601511777944fa8fb451310f904a9c4567becf0212be5cdbb6192549a0ece",
+  "sanic3_summary_sha256": "b65b4d878c63f6d061f079b50c13e2d446a256f7824c5c25cf60c8424b56c90c",
+  "raw_evidence_root": "D:/ConveyorFlowRuntime/v2_6",
+  "warning": "This is source eligibility, not a main Real-LLM outcome."
+}

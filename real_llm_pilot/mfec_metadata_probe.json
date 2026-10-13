@@ -1,0 +1,43 @@
+{
+  "retrieved_at_utc": "2026-09-27T11:21:22.264601+00:00",
+  "base_url": "https://gpt.mfec.co.th/litellm",
+  "targets": [
+    "glm-5.3-flash",
+    "gpt-5-mini",
+    "tencent-hy3"
+  ],
+  "contains_credentials": false,
+  "probes": [
+    {
+      "endpoint": "/model/info",
+      "status": "http_401"
+    },
+    {
+      "endpoint": "/v1/model/info",
+      "status": "http_401"
+    },
+    {
+      "endpoint": "/model_group/info",
+      "status": "http_401"
+    },
+    {
+      "endpoint": "/v1/models",
+      "status": "success",
+      "target_records": [
+        {
+          "id": "glm-5.3-flash"
+        },
+        {
+          "id": "tencent-hy3"
+        },
+        {
+          "mode": "chat",
+          "id": "gpt-5-mini"
+        }
+      ],
+      "target_record_count": 3
+    }
+  ],
+  "mapping_complete": false,
+  "pricing_complete": false
+}

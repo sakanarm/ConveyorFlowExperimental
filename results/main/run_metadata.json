@@ -1,0 +1,122 @@
+{
+  "kind": "MAIN_CONFIRMATORY",
+  "created_unix": 1790130212.672537,
+  "source_sha256": "c859dd80883c6ff6179e87d548e44bb622f28b99e26196039916d30300fb3514",
+  "settings": {
+    "status": "FROZEN_2026-09-22",
+    "seed_start": 1000,
+    "seeds": 50,
+    "n_jobs": 200,
+    "k_scan": 8,
+    "max_attempts": 3,
+    "w1": 8,
+    "w2": 20,
+    "w3": 50,
+    "requeue_limit": 8,
+    "drain_ticks": 180,
+    "workloads": [
+      "adult_ml",
+      "beijing_ml",
+      "bugs2fix"
+    ],
+    "loads": {
+      "low": 0.4,
+      "medium": 0.7,
+      "high": 0.9
+    },
+    "primary_resource_regimes": [
+      "R0",
+      "R1"
+    ],
+    "rq1_strategies": [
+      "CF_FIT",
+      "S1",
+      "S2",
+      "S3",
+      "CENTRAL_FIT"
+    ],
+    "rq2_teams": [
+      "H0",
+      "H1",
+      "H2"
+    ],
+    "rq3_teams": [
+      "H1",
+      "H2"
+    ],
+    "rq3_loads": [
+      "medium",
+      "high"
+    ],
+    "ablations": [
+      "FULL",
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "e4_teams": [
+      "L1X4",
+      "H1"
+    ],
+    "e4_loads": [
+      "medium",
+      "high"
+    ],
+    "difficulty_profiles": [
+      "mixed",
+      "D3_HEAVY"
+    ],
+    "fallbacks": [
+      "F0",
+      "F1",
+      "F2",
+      "F3"
+    ],
+    "resource_sensitivity_regimes": [
+      "R1_REVERSED",
+      "R1_PERMUTED"
+    ],
+    "annotation_sensitivity_sources": [
+      "frozen_llm_lower",
+      "frozen_llm_upper"
+    ],
+    "annotation_sensitivity_strategies": [
+      "CF_FIT",
+      "S2",
+      "CENTRAL_FIT"
+    ],
+    "expected_unique_runs": 22500
+  },
+  "main_lock": {
+    "status": "FROZEN",
+    "main_execution_authorized": true,
+    "execution_authorization": {
+      "recorded": true,
+      "source": "explicit user/project-owner instruction: ทำเลย",
+      "date": "2026-09-22",
+      "advisor_signoff_for_submission": false
+    },
+    "llm_annotations": {
+      "agreement_gate_passed": true,
+      "adjudication_complete": true,
+      "human_validated": false,
+      "frozen_file_sha256": "56207cd87a28ab221911c2bf07ee0cf6f8ec6547bab7880fc5ef268ad24b2add"
+    },
+    "margins": {
+      "approved": true,
+      "completion_noninferiority_absolute": 0.03,
+      "dead_letter_noninferiority_absolute": 0.03,
+      "unsettled_noninferiority_absolute": 0.03
+    },
+    "sample_size": {
+      "pilot_recommendation": 50,
+      "final_paired_seeds": 50,
+      "confirmatory_seed_start": 1000
+    },
+    "analysis_plan_frozen": true,
+    "advisor_approval_recorded": false
+  },
+  "main_lock_sha256": "5a504998803ebc9bfa78e953a7d0460c52ce20a5964bc521e813a5d7d0578f8b",
+  "expected_runs": 22500
+}

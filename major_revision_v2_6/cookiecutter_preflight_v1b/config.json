@@ -1,0 +1,34 @@
+{
+  "base_image": "docker.io/library/python:3.6.15-slim-buster@sha256:e10aa83604948c6d8d9f72a9a20193d84bb2dbe550b725eb5208387117fde065",
+  "build_timeout_seconds": 1800,
+  "common_packages": [
+    "pip==21.3.1",
+    "setuptools==59.6.0",
+    "wheel==0.37.1"
+  ],
+  "compile_flags": "-O0 -g0",
+  "environment_deviation": "Cookiecutter public metadata specifies Python 3.6.9 and tox. This preflight uses pinned official Python 3.6.15, directly runs the metadata's one-line pytest node under pytest 5.4.3, and omits the invalid pkg-resources==0.0.0 editable-requirement entry. It is not an exact historical tox environment. No LLM outcome informed this profile. The Debian Buster apt sources are redirected to archive.debian.org; package-list expiry checking is disabled for this archived OS.",
+  "max_candidates": 4,
+  "profiles": {
+    "cookiecutter": {
+      "build": "python setup.py develop",
+      "packages": [
+        "pytest==5.4.3",
+        "tox==3.15.2",
+        "arrow==0.15.6",
+        "binaryornot==0.4.4",
+        "click==7.1.2",
+        "Jinja2==2.11.2",
+        "jinja2-time==0.2.0",
+        "MarkupSafe==1.1.1",
+        "poyo==0.5.0",
+        "python-slugify==4.0.0",
+        "requests==2.23.0"
+      ],
+      "url": "https://github.com/cookiecutter/cookiecutter.git"
+    }
+  },
+  "python_scope": "3.6",
+  "status": "v2_6_cookiecutter_archive_mirror_amendment_preflight_only",
+  "test_timeout_seconds": 180
+}

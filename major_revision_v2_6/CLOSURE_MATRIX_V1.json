@@ -1,0 +1,45 @@
+{
+  "status": "design_draft_not_main_results",
+  "version": "v2.6",
+  "science_claim": "Decentralized self-selection plus capability heterogeneity and fit/stand-down on a READY task belt; report trade-offs, not universal superiority",
+  "gate_order": [
+    "source_eligibility",
+    "ml_gold_free_verifiers",
+    "ability_and_difficulty_lock",
+    "statistical_analysis_lock",
+    "provider_and_cost_accounting_lock",
+    "matched_decision_locus_experiment",
+    "real_llm_paired_main",
+    "independent_audit",
+    "manuscript_claim_review"
+  ],
+  "targets": {
+    "distinct_repository_projects": 12,
+    "cases_per_project": 2,
+    "paired_mixed_blocks": 24,
+    "distinct_ml_corpora": 6,
+    "models_per_team_maximum": 3,
+    "arm_ids": ["CF_FIT", "CENTRAL_RULE_MATCHED", "STATIC_OWNERS"],
+    "max_main_provider_attempts": 360,
+    "observation_horizon_seconds": 3600
+  },
+  "current_evidence_not_counted_as_v2_6_main": {
+    "v2_4_paired_blocks": 11,
+    "v2_4_distinct_repository_projects": 4,
+    "v2_4_distinct_ml_corpora": 2,
+    "v2_5_new_paired_blocks": 2,
+    "v2_5_verified_jobs_per_arm_out_of_four": 1,
+    "youtube_dl_new_project_gold_free_gate": "passed_no_llm_calls"
+  },
+  "closure_rules": {
+    "real_executable_work": "Full ML DAG and repository repair each independently container-verified; all unsuccessful work included",
+    "decision_locus": "Identical-input no-fault matched replay and coordinator-only/shared-store fault controls; live comparison reported as operational effect",
+    "statistical_unit": "repository project for repair; ML corpus clustering reported separately",
+    "uncertainty": "project-level paired intervals and source/corpus sensitivity; no equivalence or population claim merely from more API calls",
+    "monetary_cost": "claim only after complete billed currency/request reconciliation; otherwise null and use tokens/provider-reported units separately",
+    "stop": "all frozen eligible blocks run and audited or eligibility target fails; never extend based on effect sign",
+    "manuscript": "IEEE and AJSTR reflect audited results, negative outcomes, limitations, and advisor RQ1/RQ2 scope"
+  },
+  "provider_calls_authorized_by_this_file": 0,
+  "all_gates_passed": false
+}

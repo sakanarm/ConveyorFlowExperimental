@@ -1,0 +1,20 @@
+{
+  "config_sha256": "4158e959eda09c876565e3f072c96717674bc19a3610e3fc495259787f232f55",
+  "created_at_utc": "2026-10-10T17:56:30.574929+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "repository_declared_runtime_requirements": [
+    "decorator>=4.3.0",
+    "future>=0.17.1",
+    "six>=1.12.0"
+  ],
+  "rule": "Add all project-declared runtime requirements to both variants; replay frozen queue from index zero",
+  "runner_sha256": "ff1f6d801fff8ee1d2aaff6dd2c0a42d43c5e1bea217e9f0daaf91646dcd718b",
+  "source_queue_sha256": "2cd1298333f20d4905d45b4b63a52696dfa86746f59adb317407de096006b692",
+  "status": "v2_5_pysnooper_runtime_requirements_amendment_frozen_before_provider",
+  "v1c_config_sha256": "33939b4044f3c31d975296bc330acf499089a133eee02b8cc017e9f2233b37b2",
+  "v1c_failure_record_sha256": "9dc51098a3661a07811099457285535c3d61ef22151973f023710bd2c681cbfb",
+  "v1c_lock_sha256": "37b5827bbbed3bf9e8fa29d82226e03a43e731efeb78a8948353b0be71294513",
+  "v1c_validator_image_id": "sha256:7d2af3a75bcfbd1672281955d21d30e43bf1b6728c9ffdc809b390c565428f67"
+}

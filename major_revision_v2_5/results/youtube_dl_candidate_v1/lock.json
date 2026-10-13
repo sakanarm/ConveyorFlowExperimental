@@ -1,0 +1,45 @@
+{
+  "case": {
+    "allowed_files": [
+      "youtube_dl/utils.py"
+    ],
+    "bug_id": "27",
+    "bug_info_sha256": "e1ebc0bf5e635c25023328606156a37f4748a03db021ad89a9ac81ceb3b9b073",
+    "buggy_commit_id": "d631d5f9f27f93767226192e4288990413fa9dbd",
+    "case_id": "youtube-dl_27",
+    "fixed_commit_id_for_validator_only": "db2fe38b5508cbd28b89893219d9cccd41406851",
+    "preflight_record_sha256": "abcc89faa337762bbc5bf54d61d64f39fe65ee738a2dbea3be4ca2919ad6fbe1",
+    "preflight_status": "not_executed",
+    "project": "youtube-dl",
+    "python_version": "3.7.4",
+    "run_test_sha256": "33f0a83372fcff1e04e54f2d553ddd10b13d6ebbf432c65841fca54e451342b1",
+    "selection_hash": "d49031462fa3924403d81e6352f81f969dd748d026aa14caeafbde6e4160df1f",
+    "test_file": "test/test_utils.py",
+    "validator_source_image": "sha256:365c7c75b50fd8a6edfb3d439df2cfb6de3c0711b73202e4effe1c5e063ee7a1",
+    "visible_test": "test/test_utils.py::TestUtil::test_parse_dfxp_time_expr"
+  },
+  "created_at_utc": "2026-10-11T09:25:12.510854+00:00",
+  "dependencies_sha256": {
+    "candidate_helper": "c6d58bb61ba53195666b3ba4bbad31760493b7eb283cb58b0613dcb5b91d67d8",
+    "preflight_ledger": "c9ecd878832bf21c553c93758972f1b094b00e1ed2ec19c4c490c5fb934bb0a1",
+    "preflight_lock": "3a0f44c5f2b24605d41882c8c507507e265fcfab23758f974396f6757f6df19d",
+    "runner": "f780acdbf27813eafa36ef0de0156f75bd27427d6bca7bd13a5cd146342e0332"
+  },
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "selection_rule": "Collect public TestUtil nodes; remove visible; hash-sort before outcome; take first ten; require five active common passes and no failures",
+  "settings": {
+    "allowed_files": [
+      "youtube_dl/utils.py"
+    ],
+    "build_timeout_seconds": 900,
+    "maximum_public_regression_nodes": 10,
+    "minimum_active_public_regression_passes": 5,
+    "paid_execution_allowed": false,
+    "provider_calls": 0,
+    "regression_source": "test/test_utils.py::TestUtil::",
+    "selection_domain": "cf-v25-youtube-dl27-public-regression-20261011",
+    "test_timeout_seconds": 240
+  },
+  "status": "v2_5_youtube_dl27_gold_free_candidate_frozen_before_provider"
+}

@@ -1,0 +1,14 @@
+{
+  "config_sha256": "1fffaa5a2b8d09426051cb269058a5844611d5feaac295731b679e3dd0b3d8d7",
+  "created_at_utc": "2026-10-10T17:51:02.611369+00:00",
+  "dependencies_sha256": {
+    "base_config": "a1f47956e787109c5aada4a6a6568784a9435c4382f12262e930c0116a0be982",
+    "runner": "df3143ab441a570bb4b697492e828db038c9fc5f1a3a0f69f33db10ab841484a",
+    "source_manifest": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+    "trusted_engine": "00e2097830846694b53751cf45f0ff6dc9b6255cd689508ed09a133eb4ccdef0"
+  },
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "queue_sha256": "2cd1298333f20d4905d45b4b63a52696dfa86746f59adb317407de096006b692",
+  "status": "v2_5_pysnooper_preflight_frozen_no_provider_calls"
+}

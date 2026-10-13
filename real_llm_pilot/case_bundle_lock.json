@@ -1,0 +1,679 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_FOR_EXECUTION",
+  "research_results": false,
+  "case_count": 60,
+  "source_manifest": "case_manifest.csv",
+  "validator_template_sha256": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01",
+  "cases": [
+    {
+      "case_id": "RLLM001",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "43fac621fdc98fb65c13a1c307d290c2a1ec83fe01d5239e5ba5cc3c2054b88b",
+        "expected.json": "b0ed8015a397e1fbf7a93dfcd8679e3af38cc2953e1f38cf6bf42984a14bc276",
+        "provenance.json": "7644456dd35f29fb89e86f1de0fb40262d18e9240a1c1ad12d19bd0b9ac60a60",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM002",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "7b1993c35eba3e8060ace1fe3db699252ab1207694b64502f5e3130cf3fcc4a6",
+        "expected.json": "179dbd7116f3dec26743ea5ef49a999c8ce978d72b346a75e790f4a49609889c",
+        "provenance.json": "6d116dfc799a3d607174e28056c22a5645987815c8d08f56263e56e5c384bb1b",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM003",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "91be5bbc30115012a2c6d3488d61d27a55e2211f699694920b36ba3d797ed165",
+        "expected.json": "3f016e1a909f1aec809762e16c1bec96dc81ad5ef6d81d534d5c4acd65c777af",
+        "provenance.json": "9607747a5fad437056b0395f585accf56fd87679fb0d3bbac13871e80f904a8a",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM004",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "ae16644b38a17dee2cd0b6d30b1d4ac2771728b5e1b2ea3fb6367df6a087b89f",
+        "expected.json": "b5b7b5dc4d5c7ceddf4a4761ff8fb2a68caad1800cb9a755e632a96b94062d8f",
+        "provenance.json": "06a16f0889d0472f3350c566fe81bd7078912c9503bc1c6282e15d93f147a14f",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM005",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "cef9ffc80e0670c07a104325d3e2375c66c4aefe72f5fe4ffcc462cd5d87de25",
+        "expected.json": "3229d81eba485a7df1ee8f9f4d8da2c88f54881dac6ecfd63a3c09a81c17fe50",
+        "provenance.json": "f8be1fa1c53da568ddfef9c821c6eadbb4f4587be99a901cefdce13a6cf21463",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM006",
+      "workload": "adult_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "f58bccd1953cd4e41fcaaa696b5d92e8086157ba2e4f36c8818cdc0bb7580654",
+        "expected.json": "019a0cf5fc452acd4a39c2549652b84bdc6cd9a1836d4aee79538d09ffbf7cf7",
+        "provenance.json": "43dafe829d2330c81d892b1f305e99149b6e0da084b858c22e0c27154ad9c0b4",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM007",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "00293934a7ef3cdde7b5d41105f3ae52f4006be51f7c725dca99ca3f3d2a9bcd",
+        "expected.json": "1a24872701c85d7a940324c3e60f306168250630bca6a5e836a586b6d3bfed50",
+        "provenance.json": "4508e53b17703b1085d9ba93d4794de0e51c41e3170a27b769f81f2ecd245829",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM008",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "787778039a4ec5f5d2c7c55e539532ed4f104f551cbba92682e4245ee3086284",
+        "expected.json": "0b9ca0504ada44b181064681320b0081b809d8eff99a150035025468b9a3c50a",
+        "provenance.json": "5733fa53c774741187d8ad7ff97713c3575737a4d8176f0f1e4b79b8ebd208ad",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM009",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "f4451e65eb0d09c446d23ec2fa289434260d093e957f101c55771b1dc8293611",
+        "expected.json": "e3d1fb083defe5549c3e76cdd0c8bc9dc567af672bdaf02649afac17c9ff332b",
+        "provenance.json": "efa70117843ee4a2ff4fe46c7342c23a91f0206f5adbf5ac134146cf46e5e7b4",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM010",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "b68e595e457f1b86f9988f7dd9eab96c852ed73ae31d9905a3535cb428f47b3d",
+        "expected.json": "9e67ddaa2efeec575fa4e10c59d7b768d32d80264870553f368a776ba42068e5",
+        "provenance.json": "65787765ce786a64abcb55a686281b219857d2f6b7bd24308e839f55f11d25f7",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM011",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "4c5600446e4a8b872e313c8bb3b2c5887735b29c5eacab8f4ec1a058e4c2b4a1",
+        "expected.json": "47f1a09bfd7606f5b7a6eb29e1a5f4d3912b38da9f7df54b66f3a4fefa4ea6c5",
+        "provenance.json": "2ff1bf310b2a7827147c66e814b3727aebee342d56857e6200eb1cbb54ac8160",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM012",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "3e1c5218956388c717c27fef6629bdd5a6bab0776d8591b37bd32857b1577305",
+        "expected.json": "9e8321540fcc9d8325ec71afd563ad1391caebc08d47b2cec3e05b11d517922a",
+        "provenance.json": "ed01e559f6a54a36b2e28b77ef0eea0f71bcda938c2460268f02fb85f59c8bd1",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM013",
+      "workload": "adult_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "b70b81b937d6c14e3bbb107751d7f772e2b9cb1c97c208d69b40029ffdd8b56b",
+        "expected.json": "90e7b3936d57ef21a9ecef1c8d13f3ba2706f78fc13d0f0355f92d76b202d597",
+        "provenance.json": "542f62cb014d3f3bcdc56619940ae15ffa93b5d779ba4255766ad882e443c3b6",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM014",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "6b3a6e42e10e4938a3eedb7c89e4c954ec8e1304479f5e9a720cb9f5023c557c",
+        "expected.json": "032f83defd8bfd4691b685d17176c1eccf3f6143823982014fd85a3bb0fa9cb8",
+        "provenance.json": "99a8503248bf9312a6114060ce61b097895140ca03a72dbca639a81ef5c308dd",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM015",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "920e79f7e1c8e42bac8e39d5e0a251ca04ce16849ab7165bcb84c0974e8273eb",
+        "expected.json": "daaff46bd4f8199c3ed9c868f9d638473ee6cfec0a65ee68bace8ef73cecd767",
+        "provenance.json": "c897df917719103feaa4728ce31599b25d36bb681fa9b3563e2b4fac2c6acb11",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM016",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "4a4a25d6a39ef5908d87c6b6b342e59d05a37f65ad022d525248518042f9427c",
+        "expected.json": "ece569e58f9037ea622b74d4ac7d1f32bd0a1c66410cdda7d4108a9911228d24",
+        "provenance.json": "be04bb7456013dfaddfd79ec8452cc5dde75a089d1e676c8561bb8ec1ab61915",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM017",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "8d47f775caf87ead5323770e0476581de2188bebd24554c395ac06c95f24c4e0",
+        "expected.json": "367a59a2caa44e19021480f64ddd498df7df8204184e2ce0431b159d0d95540c",
+        "provenance.json": "219971c93b202248114fb587b517cc01ef91202b3da5fcd7ee33b900f44a090d",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM018",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "a95c672de96afa0e3c5e12a0f14793388786c79b98dd7762e0f5474ae0817995",
+        "expected.json": "631551bb3ef9f906bfccafaa0ceddd61524bf34030ca765dcaa3b92a23637019",
+        "provenance.json": "47fe4a247d1cf144556133888169f61070cde5b2c2145a112f4a0e0b8aa270d1",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM019",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "d13b3676d403a4e6b6a628d307645297d3b0d1e9b5bb6095f03c27f37bc350a8",
+        "expected.json": "ece1b75cd0336614f0ea206d8817dfae9f810c8d950dbda8a252e4d14ec21809",
+        "provenance.json": "cfe48e674312f72be498eb0960dc061f6e70862f1e9a7e04314d5622e161a480",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM020",
+      "workload": "adult_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "a593efff3daf5edc58117e63fad1661e1efec6bc54937781b85aa06847d28f07",
+        "expected.json": "4b6e434416562e465a519103f742c70572eb2c628cc28f29b0366957e65a0783",
+        "provenance.json": "0bf5acc1b52becb20e6462b3292b34f7a3cf44d6be5311d2b2f3b5a40ae255d2",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM021",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "2daa2d3cff4381118ec636c009d5e0fc8ccaf9a8a18c19e6b31705e517b6f703",
+        "expected.json": "2e6b063606e3c31843fdf1aa4028a956a7f83487d6a2404c9a4c21d3796f036b",
+        "provenance.json": "d051491ddce674acbd1d8b2b26d0efb2f0d466660597c4ccc69d39e46387af03",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM022",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "ba725b225539ecfd97e25a93b28ec68c993866923352393e88012a3769bb3981",
+        "expected.json": "8e9b759d4f02c36bb6f5aaf9fa5d158acea8fbc4f7b17553a6ee4eaa6feb4827",
+        "provenance.json": "c8a2ae8a77a69e057844b9a945ca78b30919971b64f769e843c8eabf6b68d711",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM023",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "08b969b62e67ca17c0fefb8b030f7cdf894b56bfa42a1e705295b7dc25bb6478",
+        "expected.json": "f2a51031c9c5e7ff6c00efae9c3a6487d4fd7fa3285c25ace0b930e6832a9ec5",
+        "provenance.json": "4464aba87fea2720bf17f94f1d7655cc0bf928d88054fa73887c40534afaa553",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM024",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "83bdd065fecffed293e3b46902aaaeb088810650365970db96822b595e1e2c1b",
+        "expected.json": "aed99467b941726442b6b80b417651d71f0b4dfc4c394bea9e539fc3a3274f44",
+        "provenance.json": "f48544305aebb2d461d7929629e050a014bb026beb578bb5cc625a345692d984",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM025",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "858343cb865ba524a19e4917e580eb4b75d9e4be3715fe04f4ff723fefa48d37",
+        "expected.json": "69d78419ea3dc8468ead7a920a5d5e3112d3c4e8d14d84ac55b895e07d4c8405",
+        "provenance.json": "efa68e276cbf97cf7ab31c797f99c3a00fbce9cb97db5e3eab46c8dc4a89427b",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM026",
+      "workload": "beijing_ml",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "74e7c21dc8e45c15007d96af084241f1de61ed1a96e37c1b9fe5befb53b27f3f",
+        "expected.json": "9fafe2432236cf4974c2ef261367633d14bada098a5b1834b4b6aa3e55ad2f08",
+        "provenance.json": "f39a8069fa8606758b248f9bcd3c05584964644c95346baf5836cdf6c14022bf",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM027",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "54a41c9f95f3bfacd6f3ad3eaba93e158199b0a94d54fc6cc732d0809f319284",
+        "expected.json": "eed94faebd7e5cedd918b2e8f4966e224c94f24716ac4fffeb1d231ca3041af5",
+        "provenance.json": "b7c249d49d35617621db38eb82f5be85650c9349bb5d79f3dd0c6ae7791f518b",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM028",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "6cb5850f45d88d8db5d179d01e3a3a1a9b1baf7f6de743a38b3526a5626928ed",
+        "expected.json": "96a02cc0d98b8073654917f69e77c189c47b09a551ddda78121344d04d2d2e8b",
+        "provenance.json": "f75a6b76080ad8b13f3837c6197bebddf2a7f5f14f4e7c3b6ba9e06ce5685680",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM029",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "b445f29e488efa12acd1d29fcf86922c472e91f85fa586a301c717a59c0caf15",
+        "expected.json": "74b6a4c3105ddc27c605b22ad1b93ed89f04b5e95b3d2dd18a86165ea0f80af4",
+        "provenance.json": "959633659d18e042c82f62a4e2aa204125fb266558a6f9315e6aa76e3fc04e1b",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM030",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "51ebd7440ef7e41e32aa4d102334e1d7f3400706c49534531d97daa77b18592a",
+        "expected.json": "8c56452097736e43999250a2e6ef90f26e307b785ed3b174f6846c13ba6aeee4",
+        "provenance.json": "e016f48e86468a96ffbc1c6fb4ba2d872ad59ba5b8534554caad0bdaa27f095d",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM031",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "614657e38a003f58c49569a8a4e441bf94df9786eb0b83e8756955c398efb5cc",
+        "expected.json": "f5edaf21c5c8682ad24adb29f9a82aad49da84690630c0ec364cf340f2268226",
+        "provenance.json": "c65d6f58e60f2b834b0f4f5ae09c8f930ffa0368c7e4db717517dbbe6116d717",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM032",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "f10e48f32b9a781df285bfa2a7d518d139ae1b39eee9ea5e7276a75766f1b161",
+        "expected.json": "2cbcb44b36ff6a5b5dd6b87a08afb0e5a198109ef3b2f75f6798bda3af127b3d",
+        "provenance.json": "9bf33e85b76a4d8c8b01ea35bf7d9e82ab93f02a9a5efeefdfd86b26eb56cd11",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM033",
+      "workload": "beijing_ml",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "6f5d8b5fffab3f2c9b259e12a3c6c1da65f770c6ea15988a661dd5a96baa2e66",
+        "expected.json": "4f2608a1d333dc5505d0af9d558ad2e3b392843ebc9cab1f7723f472bdfa28f5",
+        "provenance.json": "d961ba5c75a45d5668a5a97db02617445288f882c28d4ccdd780c43d6f69811b",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM034",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "a420b1dc8e21ae23b6491f89e119a6ee0c9223ffc3e9e307ce7c289918534f49",
+        "expected.json": "694acb3c1fc0e67418b0cb6ff6d30406077c10d7d56528efb0b19f95ea35ab42",
+        "provenance.json": "2a77a410507a55038f240d4968d164f38978cd3caa92b1c7d7a775857fb8082c",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM035",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "748a6fbcfa9954512104224d7cc798310b09d6725459c96aac028fb9f0675177",
+        "expected.json": "d77bb782ea43d6ae9a67e87c1546a486e898074d1d9b3ea6ab3dc7df66883cd9",
+        "provenance.json": "95637f9737b2d5a2fc734f8dcd0930aefe3e4dbf25660c6635b1f20e54763212",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM036",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "2e02ddb9aaccfa686960ab98517212dbd0fbf696e5f759796d003884293cbc58",
+        "expected.json": "0fbe9a618631376b8ed3aade8cdba1f5d12c4755c418de8b1983403ae45230b8",
+        "provenance.json": "a5b1795b90bd53ba755471f4bca6f5d238ddc0cf4b0cf3da373c96196cf4f0a5",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM037",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "b0ad696611709250696286af7a55083731fd49d77e6ff028e84df519e307879d",
+        "expected.json": "579ac2c561c0fe2f80943940cf1353804dc71e1f6faa5074288099bdf312a3af",
+        "provenance.json": "fc082209c7967f3cb92897d118aa7fa2b19351b3f3f38479443be59f012e50f7",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM038",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "dd27cee651b2ab99df23ad937667a1fa297e263f0c363beaf9ff1e37bd40831a",
+        "expected.json": "3d8cc1c767a2d7f176952897f6c5441c6fbbec5d9dd82a369483ea05d24c097a",
+        "provenance.json": "2aeb0d976970910e6d985896ed118b3f424f563b96a51346c1a308b08e53ea9b",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM039",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "938ef2fe5904ec30dccf27afde0964cca3f91c252b69970ede5e2352a23c69d7",
+        "expected.json": "ec23ec8c83c6b5c0f8be0c3c9a9f7739e1cfb375b1db6fd4728b0f7c88b5133e",
+        "provenance.json": "f59014b34a9a4004f4937c48e5f91a44162074509f98a790cf770d29bf8e8826",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM040",
+      "workload": "beijing_ml",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "7618036afed9e7fa8bb604c5a27519f8c7ae0c25d797c96782d9d37564c442e9",
+        "expected.json": "e8b78f27b3a6b16c5f8422344e1aeb0999ffbb05cf5f61f737e8b7a4c371454c",
+        "provenance.json": "daea62a08f1c6dc0d125093cb7d41ee5b75b56c3555e3881809885edffdaf8fc",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM041",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "18e92d85f90c38fc54946d28c26c0977247c2cc8d363c1e525732fbfe789b105",
+        "expected.json": "e465a40990897504ac8e9241c299b8a2f2918d56f87584eec69847f6edeaa29e",
+        "provenance.json": "2d7944490c17d6975f6d6b40df55a76d04b586cd2d5eab90194215ec026b07eb",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM042",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "0edae5583425a6fd4df79311ab2756c077ae00a7fcb56c32b9f74baba9bd96ea",
+        "expected.json": "4a5bdb9227446dfdb7241dfc871e438a70df75e813793c810e2941455358ee14",
+        "provenance.json": "34837548704fa93355e694b2248645f9f58430f4a8d9e3c7b8209fcb0f54c1a2",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM043",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "ef011526d3db92075b671d6e978afd0fff92ce889b7e89edc543f34c21e77669",
+        "expected.json": "61607ee13958b70a2ab0a3df85393222e601678cf3480bb07333c295998c5ada",
+        "provenance.json": "c21890d1969e5ab2af0f62b7ad5a586f5bd9687e40a66e6f1b07470245663b0b",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM044",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "f16c116e01cd21e06363011d5d4acdb508d89d89e915d25010679be1cb9a55d7",
+        "expected.json": "62107b2bd2387fdd0d7d1c2d3ae3bd0338132d1487e6f6e60b0fce081095932e",
+        "provenance.json": "62e52ff63c92264c57b93520590c5beafd8d3ee5b8b069072cd075d8d1897946",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM045",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "7821ac1865d2b3b9032a764ff83bccc420c81cdc1daa3f57777e22ae73461501",
+        "expected.json": "dabe9bd495b33786640145ed61fcd5edb9ac431189c16fb9f98d2689e0be20f3",
+        "provenance.json": "8c8d08743d96202c5021fe0f259f264b2291455b4008dbdf3ed5bc087163d61e",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM046",
+      "workload": "bugs2fix",
+      "difficulty": 1,
+      "files": {
+        "prompt.md": "6f68fb05324d2c5a6423402f78987f88cefa8252f60f1456542b0b1aefb076af",
+        "expected.json": "782679731dad32a7dfb90e8cc8afcf2833dcb66b7a8177ee997dfa737fadca56",
+        "provenance.json": "261ca4516ccea26a6a0af2fbe80b3480ceec43c207ee53e5112c2f1590b33c98",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM047",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "475156c1bac8e1dc5550cd61af476bdd965ea7294c91e66fafcc0b86665e5d59",
+        "expected.json": "f2d9960d6f7fe50cc5ea14d97055244e8f16fffe6aaa132250067d60fd2716b9",
+        "provenance.json": "0b5c5f32fb1bd61fd3c355ec43f1133514c244dc13fbf40085c02a963b50259b",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM048",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "538fcfb71e0ccb9354b93bbca5b133a4a4f4b1632709de02dc321ccb8b2618be",
+        "expected.json": "88f244b403a8b33ad6b8448a9dd6881843f4a87ddc6f4235e0b11ac7e65fef02",
+        "provenance.json": "c3a167e6f965026f873ab0a4b88c0286042edec59305635fb563acb18e9e4f59",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM049",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "3a0777b89821d246dbf0196455bfa1399cc46ee23959a62ac7e12e2570671856",
+        "expected.json": "ecd5668bfeafdfbc496c6318038ae6c49e65aa8010514393cfb4be2fb63c611e",
+        "provenance.json": "d80cbb51db01dc47676ef1d7b35c849a411a19da82ec24c4fa4179ae4ef5a93f",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM050",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "5ad125193adbdee16374d2550376cd9ad440c0d19164cf99707d765f92698f26",
+        "expected.json": "8a7831b08d626ee5984e8e623a21a8b5ab48da9b4f512da55960d1ba574fc20a",
+        "provenance.json": "8e6e108e85b88aa20a5d6276c2232427415bbf8e6c1c9a1714ba7052a5e5c406",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM051",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "826773b1b716bb9a3891898c1131945dcbf11f677752dd5d899ffea6fd65c89c",
+        "expected.json": "f40c5e3d8e8c237c920327d9363e77f3027db351684c2bfbd95d6eacab7c68e3",
+        "provenance.json": "5f423235b7b63359d838f19c52f4f4ab89835b4907935db05ddddd02d71939e5",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM052",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "11869360dc708a4040811f0ce28d784f50bf399385af04b249a3a7a7f40ddb7e",
+        "expected.json": "ef1995d1f6b1b45382ffd97b0ef451d1a53db236bf18d6430232b998612d7b22",
+        "provenance.json": "6a11f789e9aebcac6845f9b24a89c97e07dcb2086ad77fbe9d400a682ab879c0",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM053",
+      "workload": "bugs2fix",
+      "difficulty": 2,
+      "files": {
+        "prompt.md": "50ec599f6a695cb0a33d8adc5a481266e68aa15b6765961247180c49712f3401",
+        "expected.json": "f566a5a2131a7ba64a2b45a6b4311c3a2b5ec956ff0532833fe7288db30bd34d",
+        "provenance.json": "b3734bb344aad80113fe6a1bd52380249e4fcdcb06675af90d41cee6e1c66519",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM054",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "b9444c3f7ed20c2c81081ba24b191e86619a86f99c9beb9b4151b8ff274f3703",
+        "expected.json": "cb9d0c8d7a6cb721e928c236922363de509368679977f83d42f666dbcf462e0d",
+        "provenance.json": "b75868835d47c3d0a1712c61224b353975ff129bcc25dc474e9351fe1c22da6f",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM055",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "ae2b867af7c9e792b825d46f0304d7f3bdca6469ab0b0143fe9bc65a3b1cdcd9",
+        "expected.json": "263decdf0f4e23a5bbc3fb2a87039f7d286f625c91eb503261b2c270277fbc50",
+        "provenance.json": "d8ce6f678076df1f217b518f82561e1d0fdabfd20db99d0fd35710abb1743fe9",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM056",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "a7e8e9b52be22213374e7be48035880cbe0b73500ae6f5114685f7c2eae50834",
+        "expected.json": "1a1faf909cdfc7f08421bb52e847704e24e8f11915fc4a7e75e709ddd8c6bbee",
+        "provenance.json": "af7ec493010c7a9017180d4ae733ec96f20102f853f65251c62abdf4ac287ac1",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM057",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "e588b97ba5d7406820b9d40acafb2b133e958d03a9618bc00e8df81e49fc4885",
+        "expected.json": "f612790bfaa61794c71cfcda59f428dc67b55e449ba2b52399c363888c580c69",
+        "provenance.json": "139a0af9e4ac091ed70c02dadced1b96f7318678630ef5575597046b16be6296",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM058",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "93a506649e109cc72ffb6265443568729342b6ff5981b185c94f977b2695cf1e",
+        "expected.json": "453d40967a710fc63aa6f4b1485fff5c27553141f3bc049eff46868f374cd541",
+        "provenance.json": "06ca95a111a256785835d771c009f5b5b13455640655b57a5eb456d22d6b7cad",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM059",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "db313d7fc304ad67ce9d4a3dfbd2afec2944e1ea893ca66868a3650c4f3d8850",
+        "expected.json": "040f938d6471051a9352d1226472340be22e33c9a1438d53e7fd892b917df52c",
+        "provenance.json": "0f24a5bc82601b27f2ad8639d3a6c096cb3c330522cddce1e23beed5bdccd844",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    },
+    {
+      "case_id": "RLLM060",
+      "workload": "bugs2fix",
+      "difficulty": 3,
+      "files": {
+        "prompt.md": "3c48d79e0f381994edd25156fc9b539af14d17f05b9e5ad55a2c3678efcf3750",
+        "expected.json": "6bcfcaa255ba763eef645f620a8b1d103eb7155d9c1c508a0dd24fdca47627fe",
+        "provenance.json": "2adef423b4cd54cb9b9499ba1feb56e5f42acebacd496c09f7726ede128c3fde",
+        "validator.py": "8077df875bea8d015e40c02451395587549eac450f3acdda27f90be37da7ec01"
+      }
+    }
+  ],
+  "frozen_at_utc": "2026-09-23T19:03:23.505032+00:00",
+  "manifest_sha256": "2eea7b1397a878f967d2d2047611576147a71bb261b26fc7ead8f2febb155012",
+  "audit_sha256": "79536e52caf653c1130f271c9fe618d08a5407a1f06a0c384f98d1fd31b6d97b",
+  "case_files_merkle_sha256": "6a038b748341e6b330bb12996fc431e6b46859d52a6d17e496674c4b85ad331a",
+  "claim_boundary": {
+    "adult_ml": "deterministic public-data microtasks",
+    "beijing_ml": "deterministic public-data microtasks",
+    "bugs2fix": "executable behavioral surrogates; not repository-level Java repair"
+  }
+}

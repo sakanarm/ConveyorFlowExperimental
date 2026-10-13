@@ -1,0 +1,127 @@
+{
+  "arms": {
+    "CENTRAL_RULE_MATCHED": {
+      "billed_monetary_cost_per_verified_job": null,
+      "mean_busy_fraction_fixed_horizon": 0.0405328776287037,
+      "mean_restricted_completion_seconds": 985.309872862,
+      "total_input_tokens": 3255,
+      "total_output_tokens": 49730,
+      "verified_cases_of_two": 1,
+      "verified_throughput_jobs_per_hour_of_frozen_observation": 1.0
+    },
+    "CF_FIT": {
+      "billed_monetary_cost_per_verified_job": null,
+      "mean_busy_fraction_fixed_horizon": 0.036986780475092594,
+      "mean_restricted_completion_seconds": 973.7693936545,
+      "total_input_tokens": 3255,
+      "total_output_tokens": 46707,
+      "verified_cases_of_two": 1,
+      "verified_throughput_jobs_per_hour_of_frozen_observation": 1.0
+    },
+    "STATIC_OWNERS": {
+      "billed_monetary_cost_per_verified_job": null,
+      "mean_busy_fraction_fixed_horizon": 0.03629904061046296,
+      "mean_restricted_completion_seconds": 971.570271174,
+      "total_input_tokens": 3255,
+      "total_output_tokens": 45175,
+      "verified_cases_of_two": 1,
+      "verified_throughput_jobs_per_hour_of_frozen_observation": 1.0
+    }
+  },
+  "audit_capsule_sha256": "03b4987fb0a48200842ca44f224325f7716305a7af1f5f7f7d9bfef756151581",
+  "busy_denominator": "3 agents times the frozen 1800-s observation horizon per case-arm, including early idle remainder",
+  "cases": 2,
+  "independent_repository_projects": 1,
+  "lock_sha256": "cf25faa1f16a466e992b93b8ab6ba96a9e3de10b231c4961d492b373747a58b7",
+  "monetary_cost_rule": "Unknown until billed currency and all request identities reconcile; provider cost units are not money",
+  "no_inferential_CI_or_p_value": true,
+  "provider_calls_are_not_independent_samples": true,
+  "restricted_completion_rule": "Verified time from READY to verified completion, else 1800-s horizon; conditional time is null for failures",
+  "rows": [
+    {
+      "arm": "CF_FIT",
+      "busy_fraction_fixed_horizon": 0.02718888883611111,
+      "case_id": "scrapy_39",
+      "conditional_completion_seconds": 147.538787309,
+      "input_tokens": 1689,
+      "model_slot": "agent_1",
+      "output_tokens": 13939,
+      "productive_fraction_fixed_horizon": 0.02718888883611111,
+      "provider_cost_units_currency_unverified": 0.007582739999999999,
+      "restricted_completion_seconds": 147.538787309,
+      "terminal_state": "VERIFIED",
+      "verified": 1
+    },
+    {
+      "arm": "CENTRAL_RULE_MATCHED",
+      "busy_fraction_fixed_horizon": 0.03142462802944444,
+      "case_id": "scrapy_39",
+      "conditional_completion_seconds": 170.619745724,
+      "input_tokens": 1689,
+      "model_slot": "agent_1",
+      "output_tokens": 16962,
+      "productive_fraction_fixed_horizon": 0.03142462802944444,
+      "provider_cost_units_currency_unverified": 0.009020483999999999,
+      "restricted_completion_seconds": 170.619745724,
+      "terminal_state": "VERIFIED",
+      "verified": 1
+    },
+    {
+      "arm": "STATIC_OWNERS",
+      "busy_fraction_fixed_horizon": 0.026376935358888888,
+      "case_id": "scrapy_39",
+      "conditional_completion_seconds": 143.140542348,
+      "input_tokens": 1689,
+      "model_slot": "agent_1",
+      "output_tokens": 14534,
+      "productive_fraction_fixed_horizon": 0.026376935358888888,
+      "provider_cost_units_currency_unverified": 0.0077385,
+      "restricted_completion_seconds": 143.140542348,
+      "terminal_state": "VERIFIED",
+      "verified": 1
+    },
+    {
+      "arm": "CENTRAL_RULE_MATCHED",
+      "busy_fraction_fixed_horizon": 0.04964112722796296,
+      "case_id": "scrapy_34",
+      "conditional_completion_seconds": null,
+      "input_tokens": 1566,
+      "model_slot": "agent_1",
+      "output_tokens": 32768,
+      "productive_fraction_fixed_horizon": 0.0,
+      "provider_cost_units_currency_unverified": 0.017508216,
+      "restricted_completion_seconds": 1800,
+      "terminal_state": "DEAD_LETTER",
+      "verified": 0
+    },
+    {
+      "arm": "STATIC_OWNERS",
+      "busy_fraction_fixed_horizon": 0.04622114586203704,
+      "case_id": "scrapy_34",
+      "conditional_completion_seconds": null,
+      "input_tokens": 1566,
+      "model_slot": "agent_1",
+      "output_tokens": 30641,
+      "productive_fraction_fixed_horizon": 0.0,
+      "provider_cost_units_currency_unverified": 0.016239431999999998,
+      "restricted_completion_seconds": 1800,
+      "terminal_state": "DEAD_LETTER",
+      "verified": 0
+    },
+    {
+      "arm": "CF_FIT",
+      "busy_fraction_fixed_horizon": 0.046784672114074076,
+      "case_id": "scrapy_34",
+      "conditional_completion_seconds": null,
+      "input_tokens": 1566,
+      "model_slot": "agent_1",
+      "output_tokens": 32768,
+      "productive_fraction_fixed_horizon": 0.0,
+      "provider_cost_units_currency_unverified": 0.017362488,
+      "restricted_completion_seconds": 1800,
+      "terminal_state": "DEAD_LETTER",
+      "verified": 0
+    }
+  ],
+  "status": "BOUNDED_DESCRIPTIVE_ONE_REPOSITORY_NOT_MAIN"
+}

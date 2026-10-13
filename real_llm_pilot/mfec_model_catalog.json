@@ -1,0 +1,112 @@
+﻿{
+    "retrieved_at_utc":  "2026-09-23T11:17:13.7717333Z",
+    "endpoint":  "https://gpt.mfec.co.th/litellm/v1/models",
+    "model_count":  21,
+    "models":  [
+                   {
+                       "id":  "gpt-5-mini",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "mfec-coding",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "gemini-3.7-flash",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "gemini-3.5-flash",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "claude-sonnet-5",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "gpt-5",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "text-embedding-3-large",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "minimax-m2",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "perplexity",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "glm-5",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "gemini-3.8-flash",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "deepseek-v4-pro",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "mimo-v2.5-pro",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "glm-5.2",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "glm-5.3-flash",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "minimax-m3",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "tencent-hy3",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "gemini-3-flash",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "tencent-hy4",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "deepseek-v4-flash",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   },
+                   {
+                       "id":  "kimi-k2.7-code",
+                       "owned_by":  "openai",
+                       "created":  1677610602
+                   }
+               ]
+}

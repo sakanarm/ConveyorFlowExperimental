@@ -1,0 +1,18 @@
+{
+  "amendment": "Archive apt mirrors and suppress coverage-only pytest addopts",
+  "config_sha256": "c325b3a253f6ac371739cb3e761e28541d89b1c09a5f26713a6202c97ddd2815",
+  "created_at_utc": "2026-10-12T03:59:39.446855+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "paid_execution_allowed": false,
+  "prior_buggy_execution_sha256": "4f361a824f13e8b1bb2641e4486ef230052943a488de7ec70f37454022c6a590",
+  "prior_fixed_execution_sha256": "4e967a68a184bfc1e07782dee39f0f464e9fbd36a3bb6b61db7e51700e0f5d69",
+  "prior_lock_sha256": "a19c5c542bee5633410bec54df253f640be02abc63385e67ea34127b84153699",
+  "prior_record_sha256": "36fc5ad27460d43a9d760590bb4f1ce69f8c813c141cc3b75510235548c4fadc",
+  "provider_calls": 0,
+  "queue_sha256": "d5eb4323630cbab32cb3ceb2ee2f3fbfe45796c574417d2590463cc148ff7060",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/cookiecutter_preflight_v1c",
+  "runner_sha256": "afd67bcf5200bfa803adb0e09184a57228f002fcf550012edf91d268916d739a",
+  "selection_rule": "First two reproducible cases in frozen order; retain every exclusion",
+  "source_queue_sha256": "7add5639f4dd01af87055dd579b519bc6b67cff41a1853ebc978042ee9fcea20",
+  "status": "v2_6_cookiecutter_v1c_frozen_before_provider"
+}

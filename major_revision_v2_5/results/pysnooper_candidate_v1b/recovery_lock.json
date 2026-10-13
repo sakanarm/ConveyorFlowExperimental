@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-10-10T18:00:29.727674+00:00",
+  "original_candidate_builder_sha256": "8ed77fab535e09286a4d76269c5b1bd4d33ff5cbe7b8c35cb8cd7b19b333baf9",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "recovery_rule": "Rebuild both targets from identical frozen source and test selection with podman build --no-cache; preserve v1 failed artifacts",
+  "runner_sha256": "030b831432cbfc5561360aac2c08346360863e2684593bdc61177781dc0feb16",
+  "status": "v2_5_pysnooper_candidate_nocache_recovery_frozen_before_provider",
+  "v1_candidate_build_sha256": "bd78df7d76e9841e7d4fb6d2981ec8124dc572c457d3543cc0ce0b21207086e1",
+  "v1_candidate_lock_sha256": "6499d5ec9931c226b3ab9a40284a75b3f812c465d8099c171b2749144f2ebe92",
+  "v1_verifier_build_sha256": "2f561ba396446f18e9746819f24b1fcfddc09bf30e270c54fd6d387029eb83e9",
+  "v1b_candidate_lock_sha256": "dc03e957499adba9ab349bed797bbdae1c7f7639864ff80faee1ed73a81a0be6"
+}

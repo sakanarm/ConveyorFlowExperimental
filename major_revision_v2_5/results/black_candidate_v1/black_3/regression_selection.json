@@ -1,0 +1,17 @@
+{
+  "case_id": "black_3",
+  "frozen_before_regression_outcomes": true,
+  "nodeids": [
+    "tests/test_black.py::BlackTestCase::test_conv",
+    "tests/test_black.py::BlackTestCase::test_self",
+    "tests/test_black.py::BlackTestCase::test_report_quiet",
+    "tests/test_black.py::BlackTestCase::test_black",
+    "tests/test_black.py::BlackTestCase::test_preserves_line_endings_via_stdin",
+    "tests/test_black.py::BlackTestCase::test_comments4",
+    "tests/test_black.py::BlackTestCase::test_numeric_literals_py2",
+    "tests/test_black.py::BlackTestCase::test_function2",
+    "tests/test_black.py::BlackTestCase::test_fstring",
+    "tests/test_black.py::BlackTestCase::test_assertFormatEqual"
+  ],
+  "selection_rule": "Collect BlackTestCase public nodes, remove visible bug node, hash-sort and take first ten before regression outcomes; require at least five active common passes and no failures"
+}

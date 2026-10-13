@@ -1,0 +1,1 @@
+{"case_id": "fastapi_11", "provider_calls": 0, "queue_index": 0, "reason": "container build failed or timed out", "record_sha256": "eff856fd12648db228261e9a859f4e015ebf22900bba9816e1d8b723a0f4497c", "selection_hash": "025a144ec5eb334a4fe72d16d0cf3dbab63056c21b86f08527ae67d0a31d45ee", "status": "environment_excluded"}

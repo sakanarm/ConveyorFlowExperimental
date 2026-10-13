@@ -1,0 +1,12 @@
+{
+  "revision": "v2_expected_failure_accounting_before_any_repair_model_call",
+  "candidate_build_lock": "results/bugsinpy_candidate_v1/lock.json",
+  "case_count": 6,
+  "minimum_repositories": 3,
+  "regression_items_per_case": 10,
+  "minimum_active_passes_per_case": 1,
+  "rule": "Retain all ten frozen node IDs per case. All active tests must pass on both buggy and fixed baselines. Only identical pytest.xfail dispositions are allowed as non-active items; normal skips, collection errors, unexpected failures, zero active tests or divergent node IDs block the gate. Expected failures are never counted as passes. Do not replace selected tests or change benchmark source/marks.",
+  "reason": "Candidate gate v1 treated every JUnit skipped item as an environment fault. On pandas 88 the unchanged buggy and fixed baselines each had eight passes and two historical pytest.xfail items, with no actual regression failure. This explicit bookkeeping correction precedes all repair model outcomes. The original failed v1 summary is preserved.",
+  "not_novel_hidden_tests": true,
+  "no_llm_calls": true
+}

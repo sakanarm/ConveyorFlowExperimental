@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-10-11T03:00:32.888640+00:00",
+  "note": "Dataset URLs and source identities only; splits, validators, and case cohort are not frozen.",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "runner_sha256": "aaa1d6df0069f3b177df9138eda9ca6d7309d8c345e4fe3656b7a1757598edfe",
+  "sources": {
+    "bank": {
+      "archive": {
+        "member": "bank.zip",
+        "member_bytes": 579043,
+        "members": [
+          "bank.zip",
+          "bank-additional.zip"
+        ]
+      },
+      "archive_bytes": 1023843,
+      "doi": "10.24432/C5K306",
+      "expected_rows": 45211,
+      "id": "bank",
+      "license": "CC BY 4.0",
+      "sha256": "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4",
+      "task": "binary_classification",
+      "url": "https://archive.ics.uci.edu/static/public/222/bank%2Bmarketing.zip"
+    },
+    "covertype": {
+      "archive": {
+        "member": "covtype.data.gz",
+        "member_bytes": 11240707,
+        "members": [
+          "covtype.data.gz",
+          "covtype.info",
+          "old_covtype.info"
+        ]
+      },
+      "archive_bytes": 11251206,
+      "doi": "10.24432/C50K5N",
+      "expected_rows": 581012,
+      "id": "covertype",
+      "license": "CC BY 4.0",
+      "sha256": "89a975c2457cd48e824238ae43c5a3cb762e42c4b4078d9b44a4514055105f6d",
+      "task": "multiclass_classification",
+      "url": "https://archive.ics.uci.edu/static/public/31/covertype.zip"
+    }
+  },
+  "status": "sources_acquired_not_preflighted"
+}

@@ -1,0 +1,20 @@
+{
+  "construction": "deterministic_public_row_microtask",
+  "dataset": "beijing",
+  "dataset_sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+  "source_indices": [
+    140525,
+    143708,
+    146885,
+    150061,
+    150062,
+    153315,
+    156481,
+    159669,
+    162838,
+    165991,
+    169159,
+    172388
+  ],
+  "stratum": "station_Guanyuan"
+}

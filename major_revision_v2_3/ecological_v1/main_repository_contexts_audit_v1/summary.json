@@ -1,0 +1,97 @@
+{
+  "amendment_summary_sha256": "49530c762a42338216b8de4440e5526801a6689b6dc8590949a0d32344e002c9",
+  "cases": [
+    {
+      "active_regression_passes": 10,
+      "allowed_paths": [
+        "luigi/parameter.py"
+      ],
+      "case_id": "luigi_3",
+      "common_environment_skips": 0,
+      "context_summary_sha256": "242a90ae6b974ce41187b27c509f5ac9bf3ded5039e3901e0b13abdb40e12071",
+      "no_op_bug_reproduced": true,
+      "prompt_context_sha256": "3d1e6cce79437a241472d05ea9c6ff5857110db1befc5a2614ff560b626851f3",
+      "selected_regressions": 10,
+      "source_import_confirmed": true,
+      "status": "context_identity_passed"
+    },
+    {
+      "active_regression_passes": 10,
+      "allowed_paths": [
+        "luigi/execution_summary.py"
+      ],
+      "case_id": "luigi_9",
+      "common_environment_skips": 0,
+      "context_summary_sha256": "19825272b35601da867ea3403646ff77f705ee984dc536a56531ff4a684c527e",
+      "no_op_bug_reproduced": true,
+      "prompt_context_sha256": "ca3fa76bf66985557b8756c90dadb5fca4428004818acf1419e39255292e5e92",
+      "selected_regressions": 10,
+      "source_import_confirmed": true,
+      "status": "context_identity_passed"
+    },
+    {
+      "active_regression_passes": 9,
+      "allowed_paths": [
+        "pandas/core/generic.py"
+      ],
+      "case_id": "pandas_100",
+      "common_environment_skips": 0,
+      "context_summary_sha256": "6b42db47ff0f25559c5f9e3e597ba338406f84fffd6a9f48dfa2baa2c9925f18",
+      "no_op_bug_reproduced": true,
+      "prompt_context_sha256": "87ebaed95b5f71780b052f9bde9ce4ee42a68fe84b30c8abe2e20078b57255f0",
+      "selected_regressions": 9,
+      "source_import_confirmed": true,
+      "status": "context_identity_passed"
+    },
+    {
+      "active_regression_passes": 10,
+      "allowed_paths": [
+        "pandas/core/reshape/merge.py",
+        "pandas/core/internals/concat.py"
+      ],
+      "case_id": "pandas_82",
+      "common_environment_skips": 0,
+      "context_summary_sha256": "111d42833ff2bbae12f173932459af10ec789343f463fd3a66dd252c12645157",
+      "no_op_bug_reproduced": true,
+      "prompt_context_sha256": "8fd63108ebac5a7baf13092f7d1dca3a796e6f49f68600b57fe68f5b73d81573",
+      "selected_regressions": 10,
+      "source_import_confirmed": true,
+      "status": "context_identity_passed"
+    },
+    {
+      "active_regression_passes": 2,
+      "allowed_paths": [
+        "lib/matplotlib/figure.py",
+        "lib/matplotlib/backend_bases.py"
+      ],
+      "case_id": "matplotlib_1",
+      "common_environment_skips": 0,
+      "context_summary_sha256": "79ec0f5d7e83c488799e726b694f528f894a83860c6a67c7bde6d68372aa0ef5",
+      "no_op_bug_reproduced": true,
+      "prompt_context_sha256": "84ef66da0b0ee7a4e0de552ecdb385ae94bac0ab4afd4ecef1bd79024a2ad7af",
+      "selected_regressions": 2,
+      "source_import_confirmed": true,
+      "status": "context_identity_passed"
+    },
+    {
+      "active_regression_passes": 9,
+      "allowed_paths": [
+        "lib/matplotlib/axes/_base.py"
+      ],
+      "case_id": "matplotlib_28",
+      "common_environment_skips": 1,
+      "context_summary_sha256": "ba4974d47d41058baffa4aaee5f5a752de99fce2147a05b9d426935191058a52",
+      "no_op_bug_reproduced": true,
+      "prompt_context_sha256": "ea249097080b37641148b47ba74d0c62b62b87422239751b4bac53ec33f692df",
+      "selected_regressions": 10,
+      "source_import_confirmed": true,
+      "status": "context_identity_passed"
+    }
+  ],
+  "context_lock_sha256": "1cc1ef5c3512536c66882c7a25e8a1fcefb635e6bae0fa2e0062c0ec4cafcae9",
+  "eligible_for_repository_main_execution_lock": true,
+  "no_provider_calls_by_auditor": true,
+  "post_preflight_common_skip_amendment_disclosed": true,
+  "research_results": false,
+  "status": "six_gold_free_main_repository_contexts_audited"
+}

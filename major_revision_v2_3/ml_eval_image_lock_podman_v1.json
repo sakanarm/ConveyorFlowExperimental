@@ -1,0 +1,37 @@
+{
+  "status": "locked",
+  "research_results": false,
+  "dockerfile": "Dockerfile.ml_eval",
+  "dockerfile_sha256": "05f73aecca1d5a7e790dac1d340fa190385e9db0b6133d76e5d32bdc7f634bd3",
+  "requirements_lock": "requirements_ml_eval.lock.txt",
+  "requirements_lock_sha256": "01b186069f106339a050f73aeee16d2fe828b668162c570f751facc29932c3d7",
+  "base_image_digest": "sha256:2199a62885a12290dc9c5be3ca0681d367576ab7bf037da120e564723292a2f0",
+  "image_id": "sha256:d1dd86e9ef7bb249f3468e90214f3ceb3a9e8ff1ed84b0b7e1926458f423a37e",
+  "image_size_bytes": 484485117,
+  "packages": {
+    "python": "3.12.8",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.1",
+    "joblib": "1.5.1"
+  },
+  "note": "Immutable local image ID locked before candidate execution. This is a harness artifact, not a research result.",
+  "container_runtime": "podman",
+  "runtime_version": "podman version 3.4.4",
+  "runtime_backend": "Ubuntu WSL system cgroups; candidate UID 65534",
+  "original_docker_image_id": "sha256:ec70686bd239cc5d1a40d4015b450ed637bd7a0593dafd9bddf2533cc5c2ccc9",
+  "trusted_smoke_passed": true,
+  "build_report_sha256": "3b0d415508925705da0156086b6f69f7ffaa8d68c5fb27aa3c910bc511947996",
+  "trusted_case_report_sha256": {
+    "ADULT_P0": "3201b6dc001ac475906ee40332ac02e50acf97e1f0772e01ccc4d9e496f43c3a",
+    "ADULT_P1": "d857e5ad75c3467328428f8113d93e5bf16d6ff790490dfb1ba2fcbd4e267135",
+    "ADULT_P2": "466965a11761ea36a0e210e8b0330f645735daa0ac9f386b71c604af76309e79",
+    "ADULT_P3": "a3b167a5af4e44620a317d1b52c2c70bf48969c038f9b7bf3885ded7fcdba45b",
+    "BEIJING_P0": "8f091d0db106e7781ce8e6ff81365dadc379e5af343e152c2315b9c1a76c973d",
+    "BEIJING_P1": "4454ee34a6e719650aab1006d37d3f831c2c82a00f326476f0593cafb1e85f87",
+    "BEIJING_P2": "ebbfde42980b756fc4caa0ccb97914a85f15182a538dafe34c4bdf7888d4cf5a",
+    "BEIJING_P3": "9a157044934cd0145220cb3048ea73bd94db437d209535c78ed6563e58da4192"
+  },
+  "reference_attempt_label": "podmanr02",
+  "host_validator_sha256": "72777c99e13a93d214de486f99f3b9056c7556b7530196ea0a593de0013eda81"
+}

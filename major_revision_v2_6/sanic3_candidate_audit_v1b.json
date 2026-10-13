@@ -1,0 +1,13 @@
+{
+  "status": "independent_candidate_audit_passed",
+  "case_id": "sanic_3",
+  "provider_calls": 0,
+  "public_regression_nodes": 5,
+  "candidate_image_id": "sha256:1227595806f0810c8f5a5f5d246828ff3f97c6d3c045f8c332650adfed1734a5",
+  "verifier_image_id": "sha256:5a0aa9e6511a094a40b8196e68065dddaafe5939780e6532651bc949f3cd6115",
+  "preflight_record_sha256": "9022665deec0310072279485eee4c11625a59f62ebaa3bb27ee8ed5e0039c8b7",
+  "lock_sha256": "956f350292583a3f1461ff258b0ffb91d8b2ddad99b964388068df06b577da2c",
+  "summary_sha256": "b65b4d878c63f6d061f079b50c13e2d446a256f7824c5c25cf60c8424b56c90c",
+  "raw_evidence_root": "D:/ConveyorFlowRuntime/v2_6/sanic3_regression_v1b",
+  "warning": "Public regressions are not novel hidden tests; this is source eligibility, not a main Real-LLM outcome."
+}

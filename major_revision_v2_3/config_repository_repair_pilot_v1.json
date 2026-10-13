@@ -1,0 +1,14 @@
+{
+  "status": "bounded_exploratory_repository_repair_pilot",
+  "model_slots": ["agent_1", "agent_2", "agent_3"],
+  "case_ids": ["pandas_88", "matplotlib_15", "pandas_76", "pandas_128", "luigi_19", "pandas_27"],
+  "max_attempts_per_job": 2,
+  "max_provider_calls": 36,
+  "generation": {"temperature": 0, "max_output_tokens": 16384, "timeout_seconds": 360},
+  "execution_timeout_seconds": 180,
+  "prompt_source_character_cap": 240000,
+  "feedback_rule": "A second attempt may see only its own rejected patch and visible-test error, not withheld regression tests or gold source. A visible-pass/regression-fail job stops without model feedback. Provider error or mapping drift stops unresolved without automatic paid retries. Every attempt is retained; source is never manually repaired.",
+  "verification_rule": "Strict existing-source allowlist diff, exact patch context, source syntax, exact visible testcase identities and passes, no degradation of frozen public regression dispositions, then fresh-container replay of the accepted patch. Reports and test trees are never patchable. Expected failures are not counted as passes.",
+  "scope": "Localized patch generation on six public BugsInPy bugs with execution in historical-compatible containers. Not autonomous repository navigation, novel hidden tests, production repair, ability calibration or an allocation-policy comparison. Repeated corpus/repository cases are clustered, not six independent repositories.",
+  "cost_units": "provider_reported_units_currency_unconfirmed; unknown billable outcomes reported separately"
+}

@@ -1,0 +1,88 @@
+{
+  "items": 304,
+  "rater_type": "same-model_role-conditioned_LLM_passes",
+  "pairwise_agreement": {
+    "rater1_rater2": {
+      "exact_agreement": 0.8289473684210527,
+      "adjacent_agreement": 1.0,
+      "quadratic_weighted_kappa": 0.8226530245916353
+    },
+    "rater1_rater3": {
+      "exact_agreement": 0.7828947368421053,
+      "adjacent_agreement": 1.0,
+      "quadratic_weighted_kappa": 0.7993920972644377
+    },
+    "rater2_rater3": {
+      "exact_agreement": 0.7697368421052632,
+      "adjacent_agreement": 1.0,
+      "quadratic_weighted_kappa": 0.7928994082840237
+    }
+  },
+  "pairwise_agreement_by_workload": {
+    "adult_ml": {
+      "rater1_rater2": {
+        "exact_agreement": 0.7857142857142857,
+        "quadratic_weighted_kappa": 0.763046544428773
+      },
+      "rater1_rater3": {
+        "exact_agreement": 0.75,
+        "quadratic_weighted_kappa": 0.7307692307692307
+      },
+      "rater2_rater3": {
+        "exact_agreement": 0.8928571428571429,
+        "quadratic_weighted_kappa": 0.9032258064516129
+      }
+    },
+    "beijing_ml": {
+      "rater1_rater2": {
+        "exact_agreement": 0.8571428571428571,
+        "quadratic_weighted_kappa": 0.8
+      },
+      "rater1_rater3": {
+        "exact_agreement": 0.7857142857142857,
+        "quadratic_weighted_kappa": 0.8125
+      },
+      "rater2_rater3": {
+        "exact_agreement": 0.6428571428571429,
+        "quadratic_weighted_kappa": 0.6276595744680851
+      }
+    },
+    "bugs2fix": {
+      "rater1_rater2": {
+        "exact_agreement": 0.85,
+        "quadratic_weighted_kappa": 0.8514851485148515
+      },
+      "rater1_rater3": {
+        "exact_agreement": 0.825,
+        "quadratic_weighted_kappa": 0.779874213836478
+      },
+      "rater2_rater3": {
+        "exact_agreement": 0.775,
+        "quadratic_weighted_kappa": 0.7972972972972974
+      }
+    }
+  },
+  "rater_difficulty_distribution": {
+    "rater1": {
+      "1": 39,
+      "2": 132,
+      "3": 133
+    },
+    "rater2": {
+      "1": 40,
+      "2": 116,
+      "3": 148
+    },
+    "rater3": {
+      "1": 64,
+      "2": 100,
+      "3": 140
+    }
+  },
+  "minimum_pairwise_quadratic_weighted_kappa": 0.7928994082840237,
+  "agreement_gate": "PASS",
+  "items_requiring_adjudication": 94,
+  "adjudicated_items": 0,
+  "adjudicated_distribution": {},
+  "input_sha256": "6675001961d8425f340fdf30cb3b47c2c1e82760c9c92f3c46ed62266de25d67"
+}

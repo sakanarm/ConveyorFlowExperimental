@@ -1,0 +1,53 @@
+{
+  "case": {
+    "allowed_files": [
+      "sanic/log.py"
+    ],
+    "bug_id": "5",
+    "bug_info_sha256": "38f8b21ea7dc3b5058f34c66f9c5acfbc7f9b4c5e5e07c8d251575979fcca410",
+    "buggy_commit_id": "e3a27c2cc485d57aa1ff87d9f69098e4ab12727e",
+    "case_id": "sanic_5",
+    "fixed_commit_id_for_validator_only": "b63c06c75a54752d7f3115d3c635580db44b8399",
+    "preflight_artifact": "results/v25_sanic_5/000_sanic_5",
+    "preflight_engine_ledger_sha256": "d4281708205f643db939ca2dbe698220e3b9f8700585f31a8ae56d2cfb49b949",
+    "preflight_status": "not_executed",
+    "project": "sanic",
+    "python_version": "3.8.3",
+    "regression_files": [
+      "tests/test_logging.py"
+    ],
+    "run_test_sha256": "2ba0afb65377f8f57619233a83932dcaa718703c3fd039523ad49a05ea8c2e70",
+    "selection_hash": "4ceb4b9236cce3eacd1c1a8283d48901ba35b1a3de5e54306abd600bd4411477",
+    "test_file": "tests/test_logging.py",
+    "validator_source_image": "sha256:db62c9a66de2f35378bd4c04d040c962723a66d94c7f39ffec27fb9ca68c7815",
+    "visible_test": "tests/test_logging.py::test_logging_modified_root_logger_config"
+  },
+  "created_at_utc": "2026-10-10T17:45:40.521526+00:00",
+  "dependencies_sha256": {
+    "baseline_helper": "48e3075e5b77316af9c4d2d7c27327f945745c5407b4cf8e23654239e2ae11aa",
+    "candidate_helper": "c6d58bb61ba53195666b3ba4bbad31760493b7eb283cb58b0613dcb5b91d67d8",
+    "preflight_ledger": "98d9a622d2cc7914a2156dd676d247296f808b4235dbedc1a2bdadfce61bfb30",
+    "preflight_lock": "d560d2bbeccb3af976b2d194a980a7182abaf8cf4921253e64ddf12b80e9283f",
+    "preflight_queue": "d3fc77688031027e549cdbdcb4b1b54c2a2355e3f020baa405b15310ab819c5c",
+    "runner": "6ecaac8b887b893a28249d862ad9e82d766f89c042c882203f31edcd5f9b51a7"
+  },
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "settings": {
+    "allowed_files": [
+      "sanic/log.py"
+    ],
+    "build_timeout_seconds": 600,
+    "maximum_public_regression_nodes": 10,
+    "minimum_active_public_regression_passes": 3,
+    "paid_execution_allowed": false,
+    "provider_calls": 0,
+    "public_regression_files": [
+      "tests/test_logging.py"
+    ],
+    "regression_selection_domain": "cf-v25-sanic-public-regression-20261011",
+    "selection_rule": "Hash-sort all non-visible nodes in the declared public test file, take at most ten before outcomes; require at least three active passes on both buggy and fixed",
+    "test_timeout_seconds": 180
+  },
+  "status": "v2_5_sanic_gold_free_candidate_frozen_before_provider"
+}

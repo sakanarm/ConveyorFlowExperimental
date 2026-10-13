@@ -1,0 +1,24 @@
+{
+  "construction": "deterministic_public_row_microtask",
+  "dataset": "beijing",
+  "dataset_sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4",
+  "source_indices": [
+    351306,
+    353628,
+    355942,
+    358259,
+    360601,
+    362924,
+    365261,
+    367601,
+    369971,
+    372319,
+    374670,
+    376997,
+    379345,
+    379346,
+    381696,
+    384023
+  ],
+  "stratum": "station_Wanliu"
+}

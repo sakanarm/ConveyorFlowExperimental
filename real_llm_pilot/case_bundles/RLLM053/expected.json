@@ -1,0 +1,23 @@
+{
+  "answer": {
+    "repair_action": "minimum"
+  },
+  "hidden_tests": [
+    {
+      "expected": 3,
+      "x": 10,
+      "y": 3
+    },
+    {
+      "expected": 1,
+      "x": 7,
+      "y": 1
+    },
+    {
+      "expected": 0,
+      "x": 8,
+      "y": 0
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

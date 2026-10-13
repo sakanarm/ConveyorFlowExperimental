@@ -1,0 +1,10 @@
+{
+  "status": "frozen_before_measurement",
+  "seed": 20261004,
+  "concurrent_clients": [1, 2, 4, 8],
+  "repetitions_per_level": 3,
+  "warmup_requests_per_client": 20,
+  "measured_requests_per_client": 200,
+  "response_timeout_seconds": 15,
+  "interpretation": "single-host IPC load-sensitivity proxy only; not provider/network latency"
+}

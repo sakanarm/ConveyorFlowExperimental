@@ -1,0 +1,16 @@
+{
+  "case3_candidate_summary_sha256": "b65b4d878c63f6d061f079b50c13e2d446a256f7824c5c25cf60c8424b56c90c",
+  "case5_candidate_summary_sha256": "0ba601511777944fa8fb451310f904a9c4567becf0212be5cdbb6192549a0ece",
+  "config_sha256": "3e474cb2fad7a986a5883a9db9bcaf6af28e06f0b950f8fb57682de38b26cfb1",
+  "created_at_utc": "2026-10-12T03:43:16.433379+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "queue_sha256": "d98ce5da8e8ce6b4cf2862064a0d18d2c2ae7329e039a170b1c6a251885125a9",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/sanic_preflight_v1d",
+  "runner_sha256": "d717e39009264172b94d654fb340a1b50ed2ffe4b336272d7d25554fd95deba4",
+  "selection_rule": "Continue original unexposed Sanic case queue 2, 1, 4 after case 5 candidate exclusion",
+  "status": "v2_6_sanic_tail_queue_frozen_before_provider",
+  "v1c_ledger_sha256": "aa4766d2bc9969160f04a175fae2010a45d78a158f3e7a84f642abcbb68609e3",
+  "v1c_lock_sha256": "b425cdb74d4973b798cab25d4d0802075e2339c7cbdf2fb0e92d026956df2f9e"
+}

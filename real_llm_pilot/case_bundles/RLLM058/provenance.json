@@ -1,0 +1,9 @@
+{
+  "buggy_sha256": "dfb4366dedb73dd40f78c3af870ccb0a1aeff2d9ceb45585df26c99897740748",
+  "claim_boundary": "not_repository_level_program_repair",
+  "construction": "executable_behavioral_surrogate",
+  "dataset": "bugs2fix-small",
+  "fixed_sha256": "c98b1139265d33e787a9dd742a464e7eb5bd137ebb3fcb54f0416ee7672739f3",
+  "source_index": 28309,
+  "stratum": "source_length_q3_patch_delta_q4"
+}

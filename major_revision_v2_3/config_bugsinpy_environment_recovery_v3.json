@@ -1,0 +1,19 @@
+{
+  "status": "frozen_before_environment_recovery_calls",
+  "source_config": "config_bugsinpy_preflight_v2.json",
+  "source_ledger": "results/bugsinpy_preflight_v2_ledger.jsonl",
+  "recovery_indices": [1, 4],
+  "max_recovery_cases": 2,
+  "llm_calls": 0,
+  "policy": "Only recover the two environment-excluded records in the already tested consecutive six-case prefix. Preserve and audit every original record. Carry unchanged reproducible cases by provenance reference, not as fresh executions. Choose the lexicographically earliest six-case subset with at least three repositories only after all recoveries are recorded. If diversity remains insufficient, stop explicitly before LLM repair.",
+  "profile_overrides": {
+    "matplotlib": {
+      "compile_flags": "-O2 -g0",
+      "reason": "The v2 -O0 build imported neither buggy nor fixed code because _path had an unresolved MPL_matplotlib__contour_ARRAY_API symbol. Test the same frozen commits and tests with optimized compilation, without editing repository source. This is an environment hypothesis, not an established root cause or a model repair."
+    },
+    "luigi": {
+      "additional_packages": ["nose==1.3.7"],
+      "reason": "Both v2 test collections required nose, omitted from the minimal profile. The historical pinned requirements explicitly contain nose==1.3.7. Add this dependency only; do not change buggy/fixed source or relevant tests."
+    }
+  }
+}

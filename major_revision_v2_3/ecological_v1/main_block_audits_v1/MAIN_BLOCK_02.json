@@ -1,0 +1,323 @@
+{
+  "arms": {
+    "CENTRAL_RULE_MATCHED": {
+      "attempts": [
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "fd0767526250dc2e20d26d080791adb67cba1aec8fc34279eb8f0e91131d38dc",
+          "request_sha256": "f12083c5ed9e3030fd2eb69523572d7cacb62288c4981cb50f5af61512962c62",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "f7695ee144ff97c98a3d5b0063ee58e5bb8ef749f7f4b81ef2f37639b184ea43",
+          "task_id": "MAIN_ADULT_02:ingest"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "ab83236440834a73ac79c4d89cd833e42e1a2f112ac4efb5f7272fcd443ddc57",
+          "request_sha256": "698931d5bedafed898a6e0c5564856ceb19a8463e19e57cc0c50e9ac521bf099",
+          "stage_status": "PATCH_FORMAT_FAILED",
+          "summary_sha256": "f8f18a3f0d0a0169953a0580ece09702eeac7af5834c21cd967a7e259ab14096",
+          "task_id": "pandas_100:repair"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "b8ee064a0851f39d093ffb5c28d8fe52c5d2f9994e7a4cc0ce05f7c05baa5064",
+          "request_sha256": "57e0db5d8c2b36704e75007c04ed8217bc27b1b5c2562e58a0cf1183ce7669e4",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "294bae8b754950511df6259ab2199fe6693bc78c2a2bac2b90809b7dca1aaaed",
+          "task_id": "MAIN_BEIJING_02:ingest"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "dcbdd79fae406d6920b8b34d03e10ce98c04840259bcbf362ad09dfd9dec412f",
+          "request_sha256": "038df33069d49013da0685cec4f7b18a9aad78ca71b2d0f3041f59465d8093ee",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "4ec01a125acddeede7cf79bf088581cf2f339f823397e0fabd045791e701957e",
+          "task_id": "MAIN_BEIJING_02:preprocess"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "02a89cef0f503caa93202a00eb873a0a7a1d61c0927510adbdecdbbde00ec505",
+          "request_sha256": "5abeb7f2aaa753411eb8022346cace5a89e7f6c8bd2f68da75fea066bdd3f538",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "cefd6579da38581d4340d695d5329c4abf2ce38838019ab9cc73277dac98c294",
+          "task_id": "MAIN_BEIJING_02:train"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "8f53fbde71cd57a667586ec46ff7af2eb2bc517f7d33915b7585de546868936c",
+          "request_sha256": "ecddd8e0d1fe69114248ff4195f9825d73c80e8ab831a3bf277c4e294b3aa239",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "af0a6d68282aa25f932b726ca914559b28dacb99c522cdb57b897e27c316be0c",
+          "task_id": "MAIN_BEIJING_02:package"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "4c70ad3a2fa212e4b341b034a290f9159dfe4c8773adb1c419d12bcd48a1d666",
+          "request_sha256": "a31293a63b3bd717b34e3dd0642906c65b4861bb5e8c1ea12c0e65d8cea9ff9e",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "c0d5c85965e8a5f3c1f17e618f5ecc4747cec3297adbb6ed8d59820f7d8d9ecc",
+          "task_id": "MAIN_ADULT_02:preprocess"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "b8e8f8e18f49412c6e8aca1b935d62214a6b5120aec6c3cdbe247f0d9a83c91d",
+          "request_sha256": "f969a93038e89c7b3334d809a673698a8aaaa52cfb9902f270a55823d85813cd",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "0920d131e61a99500dd167761bc8d881f2698947633de55a67b18b87fb113fee",
+          "task_id": "MAIN_ADULT_02:train"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "48740963b2cde5368b56500c0c15c64c3af0dcbaf9f49e84189397ce1e4989fc",
+          "request_sha256": "fb2269106dd8a1f5026349bfe743d72d10eb15220b8c62e3a372ae98f3b5b9b8",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "d6eb0d7c58163a10cfa2d5fb7f16538dd0a9f1c578255a251ad6ce337e8b4d4e",
+          "task_id": "MAIN_ADULT_02:package"
+        }
+      ],
+      "claims_sha256": "8c1425e35b51a5b67b9fa0153ec75e1db4c5dd3a82b88dbbb4499f4370c726f6",
+      "jobs": {
+        "MAIN_ADULT_02": "VERIFIED",
+        "MAIN_BEIJING_02": "VERIFIED",
+        "pandas_100": "DEAD_LETTER"
+      },
+      "ledger_sha256": "aa519fe45a7c05f5c8149fe80477f1d81e90d5cc3e0cefe3b46aaf2746aa2399",
+      "summary_sha256": "265baf430564e62e211e0de72cf234e01f1344d6303ee8d1a4e5ef0890aedb8d"
+    },
+    "CF_FIT": {
+      "attempts": [
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "d8d530426dfc092cfe5de0195c0b5b0bc993eb87cba735e29a53cd643d85282d",
+          "request_sha256": "3e055fca9766820ad3e62a1c4fdf7d91899b4a57ec95d200e3f29b87792313de",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "9d8ccc70a10bdb3ed354546a231d10a3f9d1af37e9e06a4c8efb725ddd0f66ab",
+          "task_id": "MAIN_ADULT_02:ingest"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "f542d47f9812aa09ba415f8be082ffeb18f93c50e8f9c1f97315c37354e46bbc",
+          "request_sha256": "f8c9aa4b019b3748e7124c2a5f77727d864ae847550d5cab6db2b5d9d7c4d9b8",
+          "stage_status": "PATCH_FORMAT_FAILED",
+          "summary_sha256": "7b920260b9d16fb9b8e7dd2a1cc98426cae719a617756f30b39d0d7a91565709",
+          "task_id": "pandas_100:repair"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "dadcc53e000ee47275b1fcc43c736314d1c569cb405f4b69cc8c4a7d2aafd44e",
+          "request_sha256": "c477706177378a15538d3ee89e4415a47f5b31b69e546ecc17d9477cb72a865e",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "46733451d314d930521f3a62a975668bffcab29bdaf4ab3d2d70822fcefa64d8",
+          "task_id": "MAIN_BEIJING_02:ingest"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "66dd189af32d208cd92a7ba8c6e0b798b8dd2841f0ca050227bd3f885cca6202",
+          "request_sha256": "6c4a8adc41a8f2ee55741f02eb643f9bfb12a62644cf4e3e8eb3975baa19fa8f",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "e9c8ab02ffe07d29def1ad1cce0f962627337d82186d079b1f3cfd2aecc13493",
+          "task_id": "MAIN_BEIJING_02:preprocess"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "f29aa1e511f742686270d2335d9b8c29afc33c791d1cf9bc9df5b3e623dfae03",
+          "request_sha256": "742bb2da3a30c42b453e94bb0ec447c96322b47745c59be822ef17b4898b2a61",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "e79b4dd3a405bf94046ecade1629677d78ede59d5b2182d8a8b062b433389aae",
+          "task_id": "MAIN_BEIJING_02:train"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "1dd25c8a29499bbca3629c8c6fb85182b28d482598ad3bd5e16bc5dc2029509b",
+          "request_sha256": "908a63954597f45bd3e2c534d28204bf582e4f0976c9bb9b4673f6dfc5a862d9",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "1b5fa34c193a420a09c2ea71aa416addc8f30c3f795d3020dfc17654a016706d",
+          "task_id": "MAIN_ADULT_02:preprocess"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "436c62926e8d4769fcfb5eeeea957f89436446afe5cd38a71f28abfef576b9bc",
+          "request_sha256": "7407f10b7cd239b694955eedd6885ef54b127730f9440c369f24026e0d993e4c",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "1ff4128d5c1bac770931cf0e4bf38bfd9d18c9c7242c85136a9150f03fe77785",
+          "task_id": "MAIN_BEIJING_02:package"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "a6539c08eeeb86b78a2cb32ec5587336a9006b0d7479472272c9e8edb872fc6b",
+          "request_sha256": "b469e98aa42a6f757a83983afc6376a93287d889a2222d8d5259fb12146fced2",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "06ddbc7b2c42632e724fb8057ca6207d740d3ef55b56e120f85930389413d90f",
+          "task_id": "MAIN_ADULT_02:train"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "bdcbc4c8b0d48879bd91f19c1641ba9b4eef338ca81101c0d1453f0fe3c83745",
+          "request_sha256": "795c70840b241d4c658f24d838bfb1004353238fd4c31cd0dfa3ccff832cf1ec",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "3a1d04218398fc397f4f26f18e7ad63af4cc49e9014072172c81ec3936067dec",
+          "task_id": "MAIN_ADULT_02:package"
+        }
+      ],
+      "claims_sha256": "42aaffbdfb447f10ed9097cc59cfead60d691b6e5a67ea0a335b8ee5120af3d6",
+      "jobs": {
+        "MAIN_ADULT_02": "VERIFIED",
+        "MAIN_BEIJING_02": "VERIFIED",
+        "pandas_100": "DEAD_LETTER"
+      },
+      "ledger_sha256": "18ff2874a0532723be625d984ed6565ee05873af8811ce14628d7623c819230f",
+      "summary_sha256": "d71ca00e21c242fa77f1a28a6b63ecf11ac21143fcaa9495be14dc33439b8517"
+    },
+    "STATIC_OWNERS": {
+      "attempts": [
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "b71708ed02a4cfbaff2d1bd44998a865af35eeab65585d9092ca6f22d9741844",
+          "request_sha256": "3007bc4a01f7251835b9be04314e28681e10fa03e94de98f19e98ac87a025dd0",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "54f0ee9fec84c71b7cde0606b8f4a59470c020d95ab3d301d4a637424da98411",
+          "task_id": "MAIN_ADULT_02:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "2324bc615074a58a1e43f0c700cbf58590bac974ca8850b149f505af95f1aa30",
+          "request_sha256": "65f4b38ca5fa15417299b3791e44d1c8ff72a038955933a18ff581f4ab440949",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "784299c60a95773b75b996504389ebde29777fa365815e346deaa6b1f0d8e6cf",
+          "task_id": "MAIN_ADULT_02:preprocess"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "9440ba5ee66230e902e32af66154d18121dee8004618d0144f6772218f437d5c",
+          "request_sha256": "8e06b35c5fc20e3adaf211d3426d6d3968ab72847d2a54244afa35dc672b0f9b",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "866ff83a1cf5427992772f697ed8dfea14b5a39bc7480d29dd77a5893972ea82",
+          "task_id": "MAIN_BEIJING_02:ingest"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "MODEL_FAILED",
+          "provider_sha256": "fc523a4389319f4bca55aafe6c518b73167535f61fde592a3a1294bf34f99447",
+          "request_sha256": "b470f94a3610d55d7ade1df69c77b7ece6090f32da15a88f7810e3b727100994",
+          "stage_status": "WITHHELD_REGRESSION_FAILED",
+          "summary_sha256": "14c47fab1582e3cf2c517627ce1893ad51c1bcdf86d26416788d7a25dacd5564",
+          "task_id": "pandas_100:repair"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "e64a1085d60c6dc7e5db5436a40e6982014da7939f3a8bd9c5fd53729c20d444",
+          "request_sha256": "339311b8c06c0c4bfb2aa849011f766275ee66fe39f9902102c743d30b581a73",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "e3ef263d2e8e0b46757031ec17994cce846d523af54be6b670c8927fa3583f19",
+          "task_id": "MAIN_ADULT_02:train"
+        },
+        {
+          "agent_id": "A1",
+          "model_slot": "agent_1",
+          "outcome": "VERIFIED",
+          "provider_sha256": "23ab9ea58292a15dc24c7f8c340ec53da7b4fc3c2a1b774d2cbd89f29570e860",
+          "request_sha256": "cf3e17a731ecd00d8e646e037e8be3fbd9d7b7c94d40333162c948f6f0ba11aa",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "6a993b6e0feef91a81148f724eacda4012eb8f80417aa9e5ab8951c6d0d9f53f",
+          "task_id": "MAIN_BEIJING_02:preprocess"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "fcf186aa3b3c77b62d1021c0d0c2e1c4f655465c64ae66023c33e4c80aa52e9d",
+          "request_sha256": "25fd57bd92321cea455798e447af8d590e41f7329edd95fad3155ebf3bd76d16",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "abc99bfe476b59ebec814b5822dc65700abfc03da235a078b60cd65ce13b8f04",
+          "task_id": "MAIN_ADULT_02:package"
+        },
+        {
+          "agent_id": "A2",
+          "model_slot": "agent_2",
+          "outcome": "VERIFIED",
+          "provider_sha256": "a2c68643d8722288b88cafe314290d6138084206ebb053f0fff1616d448005c1",
+          "request_sha256": "22568135c35a740899f22af6cc5febc82885d89f0424fd4b74b3201a3155803a",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "af4cb0100c249dc8ea810568752c07f47e6e39c771c4aa272dca5a9e07dc7ac7",
+          "task_id": "MAIN_BEIJING_02:train"
+        },
+        {
+          "agent_id": "A3",
+          "model_slot": "agent_3",
+          "outcome": "VERIFIED",
+          "provider_sha256": "3ee12053c9179a0107510947bc8bba9f977078be6de8e4bdb2da67680ca9e4a0",
+          "request_sha256": "fb54ca56de27a98f9d3cdb3405e49a906fbf1d2ebca3306a6aac8c5c5b01f2c0",
+          "stage_status": "VERIFIED",
+          "summary_sha256": "b65b6822226e995b57cf32d34cce768eeb44d308b863a33cd4637038c794cc41",
+          "task_id": "MAIN_BEIJING_02:package"
+        }
+      ],
+      "claims_sha256": "88d30028a723967d48e19fb8100cab56da2b5678d8b20d0b330e666887f5cef4",
+      "jobs": {
+        "MAIN_ADULT_02": "VERIFIED",
+        "MAIN_BEIJING_02": "VERIFIED",
+        "pandas_100": "DEAD_LETTER"
+      },
+      "ledger_sha256": "2dcf01278087590b98a47afeb823df04e6943677ad93e2f4930c6754b7ffe3a7",
+      "summary_sha256": "e2a875a195b4b26f96048df0354a4c70073fcf188936409a4749db5a2b95421e"
+    }
+  },
+  "block_id": "MAIN_BLOCK_02",
+  "lock_sha256": "2206d6dde060cf467b920745ef3912d3da4269b8ceda4d3a9c45f3f82386efe2",
+  "no_provider_calls_by_auditor": true,
+  "paper_caveats": [
+    "Two reused ML corpora, not 12 independent datasets",
+    "Three repositories, clustered cases",
+    "Matplotlib common-environment skip amendment applies",
+    "No failure-tolerance or equivalence proof"
+  ],
+  "provider_attempts": 27,
+  "raw_complete_sha256": "274bf7603f6231c556dcf22d732aaba660c4541976e2505639d77a08eb6bbbb4",
+  "research_results": true,
+  "status": "main_block_independently_audited"
+}

@@ -1,0 +1,12 @@
+{
+  "container_preflight": {
+    "container_runtime": "podman",
+    "docker_server_version": "3.4.4",
+    "evaluator_lock_sha256": "5f592a1d33f8a791940b67f31bbb4bad50f7bd8ddb013dbcd74f6572e5f4027b",
+    "image_id": "sha256:d1dd86e9ef7bb249f3468e90214f3ceb3a9e8ff1ed84b0b7e1926458f423a37e"
+  },
+  "created_at_utc": "2026-10-07T07:21:30.119125+00:00",
+  "lock_sha256": "2efbcf872eb3cffe4c83945c8b2dea2b965df6242d22bf785ba84d354b5b611a",
+  "max_provider_calls": 4,
+  "not_allocation_main": true
+}

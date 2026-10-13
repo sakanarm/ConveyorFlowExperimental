@@ -1,0 +1,51 @@
+{
+  "retrieved_at_utc": "2026-09-27T06:20:22.483866+00:00",
+  "base_url": "https://gpt.mfec.co.th/litellm",
+  "contains_credentials": false,
+  "billable_calibration_calls": 3,
+  "ready_for_freeze": true,
+  "models": [
+    {
+      "slot": "agent_1",
+      "model_id": "tencent-hy3",
+      "session_id": "conveyorflow-v2-main-agent_1",
+      "deployment_id": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "payload_model": "tencent-hy3",
+      "proxy_version": "1.96.2",
+      "response_cost_header_present": true,
+      "calibration_response_cost": 6.468e-06,
+      "input_tokens": 17,
+      "output_tokens": 8,
+      "provider_request_id": "ad98ec78-e9af-4bf3-88ed-3b5c9e786a21",
+      "latency_seconds": 1.9404302000002644
+    },
+    {
+      "slot": "agent_2",
+      "model_id": "gpt-5-mini",
+      "session_id": "conveyorflow-v2-main-agent_2",
+      "deployment_id": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "payload_model": "gpt-5-mini",
+      "proxy_version": "1.96.2",
+      "response_cost_header_present": true,
+      "calibration_response_cost": 2.625e-05,
+      "input_tokens": 11,
+      "output_tokens": 4,
+      "provider_request_id": "chatcmpl-EScXDokq8K2dvehcWTpWHSqj1u1Sh",
+      "latency_seconds": 2.04994219999935
+    },
+    {
+      "slot": "agent_3",
+      "model_id": "glm-5.3-flash",
+      "session_id": "conveyorflow-v2-main-agent_3",
+      "deployment_id": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "payload_model": "glm-5.3-flash",
+      "proxy_version": "1.96.2",
+      "response_cost_header_present": true,
+      "calibration_response_cost": 6.55e-06,
+      "input_tokens": 17,
+      "output_tokens": 8,
+      "provider_request_id": "43b80081-808d-4c7c-8d09-5b34b10415e1",
+      "latency_seconds": 1.5703931999996712
+    }
+  ]
+}

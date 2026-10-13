@@ -1,0 +1,37 @@
+{
+  "lock_sha256": "c375053ee16389628ea29bdb0903693149ee41863a9390d4d0700efe3a8a058a",
+  "not_allocation_main": true,
+  "provider_call_ceiling": 6,
+  "records": [
+    {
+      "arm": "CF_FIT",
+      "raw_ledger_sha256": "5b09cc21eeb6775947b3ea5a61ee582e14d7d770d967cc8ab1c25e33c0e72f6b",
+      "raw_summary_sha256": "637464d5da4bf203ac3871e85c083f3b02b17e9957e13e093de81585d6ede527",
+      "task_states": {
+        "CAL_ADULT_01:ingest": "VERIFIED",
+        "CAL_BEIJING_01:ingest": "VERIFIED"
+      }
+    },
+    {
+      "arm": "CENTRAL_RULE_MATCHED",
+      "raw_ledger_sha256": "049a31bc410877c052ff7b6b448694f8f77f256d4e2c22ff98477271f2fabf45",
+      "raw_summary_sha256": "01fe6bb81e502ca4bc523c1bac7d56e9ce7950ac59454e1a50c56affb131e650",
+      "task_states": {
+        "CAL_ADULT_01:ingest": "VERIFIED",
+        "CAL_BEIJING_01:ingest": "VERIFIED"
+      }
+    },
+    {
+      "arm": "STATIC_OWNERS",
+      "raw_ledger_sha256": "4c1e40eb10787b30d619a6573f24a428a2fd9a7a751152994bee9be5e373ac17",
+      "raw_summary_sha256": "7805e5d69dbc694e51e0100eb262de267307687fd35163a4b4446193bc937d42",
+      "task_states": {
+        "CAL_ADULT_01:ingest": "VERIFIED",
+        "CAL_BEIJING_01:ingest": "VERIFIED"
+      }
+    }
+  ],
+  "research_results": false,
+  "started_sha256": "30491c2224cfaf0ac91014b5a20e51c20fd1d048d4240f78b66c667bab5b6ad5",
+  "status": "allocator_sentinel_completed_requires_audit"
+}

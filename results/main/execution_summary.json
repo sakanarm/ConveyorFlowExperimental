@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "kind": "MAIN_CONFIRMATORY",
+  "run_count": 22500,
+  "unique_run_ids": 22500,
+  "source_sha256": "c859dd80883c6ff6179e87d548e44bb622f28b99e26196039916d30300fb3514",
+  "elapsed_seconds_this_invocation": 5078.256651878357
+}

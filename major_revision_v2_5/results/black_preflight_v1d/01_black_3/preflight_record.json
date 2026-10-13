@@ -1,0 +1,37 @@
+{
+  "bug_id": "3",
+  "buggy_test_report_sha256": "a2dba2bf790e3496488792730dc4ac5fc9c0965e9e4bfbed5c21336fda132824",
+  "build_report_sha256": "2cea563ef18dbbd2a4e2a6b98423c7e0ff3024dea830d135bfe807de6a96cf70",
+  "container_image_id": "sha256:291caba4e1782fd6138638de304153f3542b5b87a81343ee0a46084d2914fd11",
+  "container_runtime": "podman",
+  "dockerfile_sha256": "720a10387779e9da7148d857261cbac8d804cfb00669ecd59b09662b98869f79",
+  "environment_deviation": "Black feasibility on CPython 3.8.20 with pinned minimal packages drawn from the public benchmark requirements. Historical unittest class/method is run as the corresponding pytest node. Not exact historical environment; both variants use identical test runner. V1b adds typing-extensions==3.7.4.1 from the public bug-3 requirements after identical missing-import collection errors in both variants. V1c adds project-declared setuptools-scm pinned to the 2020 Python-3.8 compatible 4.1.2 release and runs setup.py egg_info in both historical variants to generate _black_version.py. The previous common import failure is retained; case queue and visible tests are unchanged. V1d adds the blackd optional extra dependencies declared in Black setup.py (aiohttp>=3.3.2 and aiohttp-cors), pinned to Python-3.8 compatible releases after a symmetric public-test collection failure. The original case order and test nodes are unchanged.",
+  "fixed_test_report_sha256": "02d4e7e6468003c4c20c113d621778aca1e38a18e97d506628a355653ac1a8a1",
+  "normalized_public_test_node": "tests/test_black.py::BlackTestCase::test_invalid_config_return_code",
+  "original_requirements_sha256": "884f3f07aa0060f4650fd197f63c27c7d8c0e530afdee5d93e34f533f6e5a8bb",
+  "project": "black",
+  "provider_calls": 0,
+  "reason": null,
+  "recorded_at_utc": "2026-10-11T07:11:36.128050+00:00",
+  "runner_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "runtime_version": "3.4.4",
+  "selection_hash": "14df1f4c640697a7e475516295ecfb7dd5b8d452b57d787678b1bb134036cbd1",
+  "status": "reproducible",
+  "test_outcomes": {
+    "buggy": {
+      "errors": 0,
+      "failures": 1,
+      "return_code": 1,
+      "skipped": 0,
+      "tests": 1
+    },
+    "fixed": {
+      "errors": 0,
+      "failures": 0,
+      "return_code": 0,
+      "skipped": 0,
+      "tests": 1
+    }
+  },
+  "validator_only_image": true
+}

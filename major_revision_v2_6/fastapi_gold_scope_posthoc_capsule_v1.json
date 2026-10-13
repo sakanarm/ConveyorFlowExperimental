@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "case_id": "fastapi_11",
+      "prompt_allowed_files": [
+        "fastapi/applications.py",
+        "fastapi/openapi/utils.py",
+        "fastapi/routing.py"
+      ],
+      "reference_changed_production_files": [
+        "fastapi/dependencies/utils.py"
+      ],
+      "reference_fix_location_covered": false,
+      "source_record_sha256": "3adaaaf6c0ffff225626ea4329c22f811b902a5ecc30a2da29e1d642f1e1cdf8"
+    },
+    {
+      "case_id": "fastapi_8",
+      "prompt_allowed_files": [
+        "fastapi/routing.py"
+      ],
+      "reference_changed_production_files": [
+        "fastapi/routing.py"
+      ],
+      "reference_fix_location_covered": true,
+      "source_record_sha256": "dd7b627e549050584c20fbd87c273b803c7cda5f7c7949883a214a3ddd288b99"
+    }
+  ],
+  "first_attempt_audit_sha256": "c23286151f5b109da75a9aa45f117f8ef9aae30d10d2178459f881c5419575b5",
+  "first_attempt_lock_sha256": "f89a254d5ef63a1d9a9f2a1f094d7e76b4b1a3380bf78e1cf9303a507afce1de",
+  "not_a_model_ability_estimate": true,
+  "not_used_to_select_or_retry_model_requests": true,
+  "status": "post_outcome_names_only_scope_audit"
+}

@@ -1,0 +1,13 @@
+{
+  "answer": {
+    "maximum_pm25": 155.0,
+    "maximum_wind_speed": 4.8,
+    "mean_pm25": 53.75,
+    "median_temperature": 21.15,
+    "minimum_pm25": 3.0,
+    "records": 16,
+    "station_count": 12
+  },
+  "tolerance": 0.011,
+  "validator_type": "numeric_json"
+}

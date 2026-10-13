@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "frozen_at_utc": "2026-09-27T17:25:00Z",
+  "research_scope": "supplementary_real_llm_extension",
+  "planned_policy_runs": 30,
+  "conditions": [
+    "HET_NO_STANDDOWN",
+    "HOM_GLM_GENERALIST",
+    "HOM_GPT_PROFILE"
+  ],
+  "paired_seeds": [3000, 3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009],
+  "files": {
+    "REAL_LLM_EXTENSION_PREREGISTRATION_TH.md": "bb9eef06a7a10b4e452b33d9f93b50dda5bb5a35933830765d32ccbfeb1bb8c8",
+    "allocation_engine_extension.py": "69fe4e2c3a99e27631c01bb02f4f006e5942858225ee45766c66d9fd1145f9f8",
+    "run_extension.py": "9e00a4376fc792cc59fe35e49697d03572a03712742d12460558087babcdb685",
+    "config.extension.no_standdown.json": "8d4e03b9f3deb54257d664e2cd66c110e56b2ee96dba67c9f3ef27f4a7d5ba0b",
+    "config.extension.h_glm.json": "bc8ea66fa359a2dbdaf3a84ecfdef68e50379525a9fa4b065baa633d4f509a82",
+    "config.extension.h_gpt.json": "836c4bb46f11b83b7f0ea513291037583562106fa29a59b47d017da8d1b3163d",
+    "mfec_adapter.py": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "case_manifest.csv": "2eea7b1397a878f967d2d2047611576147a71bb261b26fc7ead8f2febb155012",
+    "case_bundle_lock.json": "82b25fa5ba9e97848d8a1476f247c897030f0b15c83cd413c3c266c33097dfa0",
+    "extension_runner_audit.json": "434fe1621fef33967314c274385f9d2efdb533b5576e3fb0661fe8d4de35ab26",
+    "aggregate_extension_results.py": "ca36d75247dac02ae1e234302382927ecd3c1e1d5fb2f5c95295eb9719cda600",
+    "analyze_extension_results.py": "ced1efc4f6b0405bad1fd09f318b505161407d3b4c4703f963e8527d3271845e",
+    "run_mfec_extension_secure.ps1": "aa72e5295417982ee939c456cd83e8ec909944f72bc6b5111953fae1f18cad79"
+  },
+  "preflight": {
+    "all_conditions_ready": true,
+    "blockers": 0,
+    "focused_regression_tests": "42 passed",
+    "offline_execution_audit": "pass",
+    "offline_provider_calls": 0,
+    "analysis_code_locked_before_provider_execution": true
+  },
+  "interpretation_guardrails": {
+    "rq2_controls": "boundary/ecological sensitivity evidence; not causal mean-matched controls",
+    "cross_window_timing": "exploratory",
+    "null_results_reported": true,
+    "simulation_remains_confirmatory": true
+  }
+}

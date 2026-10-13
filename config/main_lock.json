@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN",
+  "main_execution_authorized": true,
+  "execution_authorization": {
+    "recorded": true,
+    "source": "explicit user/project-owner instruction: ทำเลย",
+    "date": "2026-09-22",
+    "advisor_signoff_for_submission": false
+  },
+  "llm_annotations": {
+    "agreement_gate_passed": true,
+    "adjudication_complete": true,
+    "human_validated": false,
+    "frozen_file_sha256": "56207cd87a28ab221911c2bf07ee0cf6f8ec6547bab7880fc5ef268ad24b2add"
+  },
+  "margins": {
+    "approved": true,
+    "completion_noninferiority_absolute": 0.03,
+    "dead_letter_noninferiority_absolute": 0.03,
+    "unsettled_noninferiority_absolute": 0.03
+  },
+  "sample_size": {
+    "pilot_recommendation": 50,
+    "final_paired_seeds": 50,
+    "confirmatory_seed_start": 1000
+  },
+  "analysis_plan_frozen": true,
+  "advisor_approval_recorded": false
+}

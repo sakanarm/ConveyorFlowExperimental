@@ -1,0 +1,33 @@
+{
+  "arms": [
+    {
+      "arm": "CENTRAL_RULE_MATCHED",
+      "case_id": "pandas_100",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "f8f18a3f0d0a0169953a0580ece09702eeac7af5834c21cd967a7e259ab14096"
+    },
+    {
+      "arm": "STATIC_OWNERS",
+      "case_id": "pandas_100",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "WITHHELD_REGRESSION_FAILED",
+      "raw_summary_sha256": "14c47fab1582e3cf2c517627ce1893ad51c1bcdf86d26416788d7a25dacd5564"
+    },
+    {
+      "arm": "CF_FIT",
+      "case_id": "pandas_100",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "7b920260b9d16fb9b8e7dd2a1cc98426cae719a617756f30b39d0d7a91565709"
+    }
+  ],
+  "block_id": "MAIN_BLOCK_02",
+  "independent_audit_sha256": "5a22f09c8f09629393b39814cafe07bdc70b4e89e6fa9bc45d99a3384d788360",
+  "lock_sha256": "2206d6dde060cf467b920745ef3912d3da4269b8ceda4d3a9c45f3f82386efe2",
+  "post_block_1_rule_frozen_before_subsequent_blocks": true,
+  "primary_metrics_unchanged": true,
+  "provider_call_count_unchanged": true,
+  "raw_ledger_and_summary_unchanged": true,
+  "status": "supplemental_guard_diagnosis_not_raw_rewrite"
+}

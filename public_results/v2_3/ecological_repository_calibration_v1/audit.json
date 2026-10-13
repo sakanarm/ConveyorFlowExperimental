@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-10-06T08:59:58.878283+00:00",
+  "status": "ecological_repository_complete_audit",
+  "planned_pairs": 18,
+  "completed_pairs": 18,
+  "in_progress_pairs": 0,
+  "not_started_pairs": 0,
+  "active_pairs": [],
+  "summary_before_ledger_append_count": 0,
+  "outcomes": {
+    "VERIFIED": 8,
+    "VISIBLE_TEST_FAILED": 5,
+    "PROVIDER_UNRESOLVED": 2,
+    "UNFINISHED_OR_EMPTY_OUTPUT": 3
+  },
+  "models": [
+    {
+      "slot": "agent_1",
+      "alias": "tencent-hy3",
+      "completed": 6,
+      "outcomes": {
+        "VERIFIED": 4,
+        "VISIBLE_TEST_FAILED": 1,
+        "UNFINISHED_OR_EMPTY_OUTPUT": 1
+      }
+    },
+    {
+      "slot": "agent_2",
+      "alias": "gpt-5-mini",
+      "completed": 6,
+      "outcomes": {
+        "VERIFIED": 2,
+        "VISIBLE_TEST_FAILED": 4
+      }
+    },
+    {
+      "slot": "agent_3",
+      "alias": "glm-5.3-flash",
+      "completed": 6,
+      "outcomes": {
+        "VERIFIED": 2,
+        "PROVIDER_UNRESOLVED": 2,
+        "UNFINISHED_OR_EMPTY_OUTPUT": 2
+      }
+    }
+  ],
+  "returned_responses": 16,
+  "observed_input_tokens": 164113,
+  "observed_output_tokens": 183522,
+  "observed_provider_cost_units": 0.159635836,
+  "returned_responses_without_cost": 0,
+  "provider_unresolved_billable_outcomes": 2,
+  "cost_currency_confirmed": false,
+  "not_total_billed_cost": true,
+  "repository_clusters": 3,
+  "investigator_localized": true,
+  "not_allocation_main": true,
+  "not_D1_D3_probability_fit": true,
+  "no_calls_by_auditor": true,
+  "lock_sha256": "24c9e82cc93f3f177e2e8cff6f580e5212be52c99ceb7ba407f98cefef438d1a"
+}

@@ -1,0 +1,15 @@
+{
+  "config_sha256": "e83e67faa03da44602c2ec7208d33dbaf9c54a6ddd49793a1dd9c11135662c50",
+  "created_at_utc": "2026-10-11T11:34:53.536242+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "manifest_sha256": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+  "paid_execution_allowed": false,
+  "profile_source_sha256": "ff70d6254bec388a8597fac6aa02fe72b45fc892a3fb08a03a9a882d598554a0",
+  "provider_calls": 0,
+  "queue_sha256": "04322a1bc6f16d86a686f99424fbb19962e87bf6332938be86312567836f669a",
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/sanic_preflight_v1b",
+  "runner_sha256": "1a6b0a90a6394f8e8936caf2ec03dccdf972e3f3986fd2be9d54f175e0139009",
+  "selection_rule": "First two reproducible in frozen case order; all exclusions logged",
+  "source_queue_sha256": "7add5639f4dd01af87055dd579b519bc6b67cff41a1853ebc978042ee9fcea20",
+  "status": "frozen_before_v2_6_sanic_container_preflight"
+}

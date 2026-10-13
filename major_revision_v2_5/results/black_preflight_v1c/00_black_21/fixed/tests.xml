@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="e11d1f0fde40" name="pytest" skipped="0" tests="1" time="0.476" timestamp="2026-10-11T07:07:46.787490"><testcase classname="tests.test_black.BlackTestCase" file="tests/test_black.py" line="147" name="test_expression_ff" time="0.281"></testcase></testsuite></testsuites>

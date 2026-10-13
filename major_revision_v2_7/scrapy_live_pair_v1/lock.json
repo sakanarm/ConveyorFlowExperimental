@@ -1,0 +1,195 @@
+{
+  "agents": [
+    {
+      "agent_id": "A1",
+      "declined_tasks": [],
+      "model_slot": "agent_1",
+      "ranks": {
+        "bugs2fix:repair": 2
+      }
+    },
+    {
+      "agent_id": "A2",
+      "declined_tasks": [],
+      "model_slot": "agent_2",
+      "ranks": {
+        "bugs2fix:repair": 1
+      }
+    },
+    {
+      "agent_id": "A3",
+      "declined_tasks": [],
+      "model_slot": "agent_3",
+      "ranks": {
+        "bugs2fix:repair": 1
+      }
+    }
+  ],
+  "cases": [
+    {
+      "allowed_files": [
+        "scrapy/spiders/__init__.py"
+      ],
+      "case_id": "scrapy_39",
+      "preflight_record_sha256": "a9b2fee34d697a05cb9f64432b861a053038a0fc38d6da9d62cd205e24c9b621",
+      "prompt_sha256": "f2c7b1f439344ee3b2bd1c87a433adaf35bb689bce249ab8db2c4de2f1675be1",
+      "public_failure_execution_sha256": [
+        "b9299593a03a387bc7c8d84d17f4433974f9f2a750442213ab2952038ebf9e80"
+      ],
+      "regression_checks_sha256": "260d967ea52c75486883b98d79cd04a20c17452c87591c4ea9665fc370db7e7f",
+      "regression_nodes": [
+        "tests.test_spider.SpiderTest.test_update_settings",
+        "tests.test_spider.XMLFeedSpiderTest.test_from_crawler_crawler_and_settings_population",
+        "tests.test_spider.XMLFeedSpiderTest.test_register_namespace",
+        "tests.test_spider.CrawlSpiderTest.test_closed_signal_call",
+        "tests.test_spider.SitemapSpiderTest.test_get_sitemap_urls_from_robotstxt"
+      ],
+      "source_sha256": {
+        "scrapy/spiders/__init__.py": "57b32b3f758387fa197dfd9a8956da909673e613b68a99504b3cc63c76ccb679"
+      },
+      "validator_image": "sha256:e4f048c235e69f378f79d888395f7b600ce3d755a3ba808cc0564c8f0aef58a0",
+      "visible_nodes": [
+        "tests.test_spider.DeprecationTest.test_make_requests_from_url_deprecated"
+      ]
+    },
+    {
+      "allowed_files": [
+        "scrapy/item.py"
+      ],
+      "case_id": "scrapy_34",
+      "preflight_record_sha256": "a281d39a6e332051041f7a79cd917217c617dc885875ac515f4d0b23e1ff0bc9",
+      "prompt_sha256": "843cd69ef21d201a3277eb23595d9f79afa081c86754ca427c21bace03247235",
+      "public_failure_execution_sha256": [
+        "3e2a1ee21724464eb29a87f65bd9f6942e501e570726f6773d8a1a2af4b951ad",
+        "4db0c4fda3d7fbb25d1499df93689cc07516820c698f0ea5688f3b561076db2e",
+        "2fad7da90e20208b81e2502cd43c34873ebbd2b4f39daa758d29c3707097884e"
+      ],
+      "regression_checks_sha256": "b9d718533d8c2e2ee315c73dfb0460c1ae8951974515781cf31bf9a9fd6b9745",
+      "regression_nodes": [
+        "tests.test_item.ItemTest.test_metaclass",
+        "tests.test_item.ItemTest.test_invalid_field",
+        "tests.test_item.ItemTest.test_to_dict",
+        "tests.test_item.ItemTest.test_private_attr",
+        "tests.test_item.ItemTest.test_init"
+      ],
+      "source_sha256": {
+        "scrapy/item.py": "b1ec6d60d66c643a4e386c70f4749562fc4775ef95656b4804cb241f6336d316"
+      },
+      "validator_image": "sha256:31223b10a3d92c3e1604b7e9283954b63c15bee308252d741c07862204373fa4",
+      "visible_nodes": [
+        "tests.test_item.ItemTest.test_metaclass_with_fields_attribute",
+        "tests.test_item.ItemTest.test_metaclass_multiple_inheritance_simple",
+        "tests.test_item.ItemTest.test_metaclass_multiple_inheritance_diamond"
+      ]
+    }
+  ],
+  "cost_rule": "Provider response_cost units are not verified currency/billed cost",
+  "created_at_utc": "2026-10-12T19:00:19.876972+00:00",
+  "decision_locus_only_for_CF_vs_CENTRAL": true,
+  "dependency_sha256": {
+    "belt_contract": "25b6a0f2b705c11ec6234291c6f310ab5c210f037d1e404cdab291aa42e1d1d1",
+    "candidate_lock": "1b3737a9d8045d7ade3047fb986c9ca0a5cd675b8ff6fdd0419073f2633c887d",
+    "candidate_runner": "00076c97a18b6088343f0455119a2530740b16ca3bb919117d24a7aac322618d",
+    "decision_worker": "82056f86dc91c8016c4934000b9e3303d8f45e6c760df4b738fd40c270df0d62",
+    "live_core": "a495594144c158193794b97a12dd4ab21df0e3506736a27aa2587176b2b22595",
+    "patch_contract": "984005c0fd8939256aef19e6edc651413bac5615e8f11d3512928a152a0f001f",
+    "profile": "9c0c75cf6061e78d9dce15c7a59f9fe58ddbad458cc69f3b762beceb158bf2ac",
+    "provider_adapter": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "runner": "f3e0b602b7041aa00b597079e3e17e62f8f6e735c4b23fced8f82d615819c526"
+  },
+  "execution_order": [
+    [
+      "scrapy_39",
+      "CF_FIT"
+    ],
+    [
+      "scrapy_39",
+      "CENTRAL_RULE_MATCHED"
+    ],
+    [
+      "scrapy_39",
+      "STATIC_OWNERS"
+    ],
+    [
+      "scrapy_34",
+      "CENTRAL_RULE_MATCHED"
+    ],
+    [
+      "scrapy_34",
+      "STATIC_OWNERS"
+    ],
+    [
+      "scrapy_34",
+      "CF_FIT"
+    ]
+  ],
+  "generation": {
+    "max_output_tokens": 32768,
+    "temperature": 0,
+    "timeout_seconds": 720
+  },
+  "independent_repository_projects": 1,
+  "limits": {
+    "horizon": 1800,
+    "max_attempts": 1,
+    "no_volunteer_limit": 6,
+    "scan": 1,
+    "w1": 2,
+    "w2": 4
+  },
+  "max_wall_seconds_per_arm": 2600,
+  "models": [
+    {
+      "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+      "model_id": "tencent-hy3",
+      "slot": "agent_1"
+    },
+    {
+      "exact_version": "e308d2b89d14d32b9835004d2342b7d16e18ad1c4f8fcbaf469b03a0c7d559c6",
+      "model_id": "gpt-5-mini",
+      "slot": "agent_2"
+    },
+    {
+      "exact_version": "85f33acf177816624cbd924dba9e42ac6b9797684100acfac5e210ce0cb6ef15",
+      "model_id": "glm-5.3-flash",
+      "slot": "agent_3"
+    }
+  ],
+  "not_main_mixed_cohort": true,
+  "one_provider_request_per_arm_no_automatic_retry": true,
+  "owners": {
+    "scrapy_34:repair": "A1",
+    "scrapy_39:repair": "A1"
+  },
+  "planned_max_provider_calls": 6,
+  "repair_only": true,
+  "research_results_before_audit": false,
+  "same_ready_belt_fit_standdown_CAS_verifier": true,
+  "seeds": {
+    "scrapy_34": 270034,
+    "scrapy_39": 270039
+  },
+  "status": "v2_7_bounded_scrapy_live_pair_frozen",
+  "tasks": [
+    {
+      "arrival": 0,
+      "dependencies": [],
+      "job_id": "scrapy_39",
+      "required_rank": 2,
+      "stage": "repair",
+      "task_id": "scrapy_39:repair",
+      "workload": "bugs2fix"
+    },
+    {
+      "arrival": 0,
+      "dependencies": [],
+      "job_id": "scrapy_34",
+      "required_rank": 2,
+      "stage": "repair",
+      "task_id": "scrapy_34:repair",
+      "workload": "bugs2fix"
+    }
+  ],
+  "tick_ns": 1000000000
+}

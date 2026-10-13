@@ -1,0 +1,33 @@
+{
+  "arms": [
+    {
+      "arm": "CF_FIT",
+      "case_id": "luigi_9",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "e8638fb724106060f91bc6b41075ca814f096c53c532072b4082ab45242f34ac"
+    },
+    {
+      "arm": "STATIC_OWNERS",
+      "case_id": "luigi_9",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "70d40d192d7fc6f511e11a536545a6d31dc08a63b473a83b92a15d3cd4ebbc4d"
+    },
+    {
+      "arm": "CENTRAL_RULE_MATCHED",
+      "case_id": "luigi_9",
+      "diagnostic_status": "NO_SUPPLEMENTAL_RECLASSIFICATION",
+      "raw_status_unchanged": "PATCH_FORMAT_FAILED",
+      "raw_summary_sha256": "997b3e13c2bc04a771e3683bca45e28996f3f00612713a4776a4f75904eb9316"
+    }
+  ],
+  "block_id": "MAIN_BLOCK_04",
+  "independent_audit_sha256": "dc8aee22cc13b951bc5939ab284e853a17b5ca525ac641ed2bb0a3e5bda5f59a",
+  "lock_sha256": "2206d6dde060cf467b920745ef3912d3da4269b8ceda4d3a9c45f3f82386efe2",
+  "post_block_1_rule_frozen_before_subsequent_blocks": true,
+  "primary_metrics_unchanged": true,
+  "provider_call_count_unchanged": true,
+  "raw_ledger_and_summary_unchanged": true,
+  "status": "supplemental_guard_diagnosis_not_raw_rewrite"
+}

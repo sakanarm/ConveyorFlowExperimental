@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "candidate_source_files": 26,
+      "case_id": "fastapi_11",
+      "common_public_regressions": 3,
+      "summary_sha256": "600fd0245507bc2543e636cf95e5ea785bce01b1000dac64dea65ee4eb322e5b",
+      "visible_failing_tests": 6
+    },
+    {
+      "candidate_source_files": 26,
+      "case_id": "fastapi_8",
+      "common_public_regressions": 3,
+      "summary_sha256": "a00833f9c01c0abc4db25ed87f87dabd0eb4f436a22a7b6375bc964167136f8f",
+      "visible_failing_tests": 1
+    }
+  ],
+  "ledger_sha256": "7539b16b68d7fdec8866e87576c5aedecf76a81d7831c5851c43363912671065",
+  "lock_sha256": "bc739b4e48845248faa904f5d616f88821152cfb18d42a938f85bf406a7f2246",
+  "project_eligible_for_source_pool": true,
+  "provider_calls": 0,
+  "raw_root": "D:\\ConveyorFlowRuntime\\v2_6\\fastapi_candidates_v1",
+  "real_llm_results": false,
+  "status": "two_candidate_gates_audited_source_eligible_only"
+}

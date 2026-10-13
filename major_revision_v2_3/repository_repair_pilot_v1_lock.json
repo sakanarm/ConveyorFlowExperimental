@@ -1,0 +1,343 @@
+{
+  "status": "frozen_before_repair_provider_calls",
+  "created_at_utc": "2026-10-05T05:09:32.365813+00:00",
+  "settings": {
+    "status": "bounded_exploratory_repository_repair_pilot",
+    "model_slots": [
+      "agent_1",
+      "agent_2",
+      "agent_3"
+    ],
+    "case_ids": [
+      "pandas_88",
+      "matplotlib_15",
+      "pandas_76",
+      "pandas_128",
+      "luigi_19",
+      "pandas_27"
+    ],
+    "max_attempts_per_job": 2,
+    "max_provider_calls": 36,
+    "generation": {
+      "temperature": 0,
+      "max_output_tokens": 16384,
+      "timeout_seconds": 360
+    },
+    "execution_timeout_seconds": 180,
+    "prompt_source_character_cap": 240000,
+    "feedback_rule": "A second attempt may see only its own rejected patch and visible-test error, not withheld regression tests or gold source. A visible-pass/regression-fail job stops without model feedback. Provider error or mapping drift stops unresolved without automatic paid retries. Every attempt is retained; source is never manually repaired.",
+    "verification_rule": "Strict existing-source allowlist diff, exact patch context, source syntax, exact visible testcase identities and passes, no degradation of frozen public regression dispositions, then fresh-container replay of the accepted patch. Reports and test trees are never patchable. Expected failures are not counted as passes.",
+    "scope": "Localized patch generation on six public BugsInPy bugs with execution in historical-compatible containers. Not autonomous repository navigation, novel hidden tests, production repair, ability calibration or an allocation-policy comparison. Repeated corpus/repository cases are clustered, not six independent repositories.",
+    "cost_units": "provider_reported_units_currency_unconfirmed; unknown billable outcomes reported separately"
+  },
+  "inputs": {
+    "config": "bbf4167cd6131e07524407cba87096777cacd40e83847ece3d5c26e42b9cd09c",
+    "runner": "71936de4586967085e3ecc783424dc20460b57ecb2bf467eb2e58ce7ded315c4",
+    "baseline_audit": "4e7b947d637647ae452cb368769fb20aad767374ef7422213abda0b81ce1db21",
+    "build_lock": "8716da9c82299fa6431cd029ffd2314e623905a5cc6e55a0db2d1c49aa5e6920",
+    "container_helpers": "c6d58bb61ba53195666b3ba4bbad31760493b7eb283cb58b0613dcb5b91d67d8",
+    "patch_guard": "e7e7a4fe367f64952c1600815c16288cbfeadcb1c55526b43705c7a5881d4720",
+    "baseline_disposition_parser": "48e3075e5b77316af9c4d2d7c27327f945745c5407b4cf8e23654239e2ae11aa",
+    "provider_config": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+    "provider_adapter": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+    "credential_bridge": "0fb40e6eab029a41bff95dd8a3f3dc60885a682c9437785a5535866365130ba6"
+  },
+  "baseline_audit": {
+    "status": "baseline_gate_passed",
+    "research_results": false,
+    "no_llm_calls": true,
+    "cases": [
+      {
+        "case_id": "pandas_88",
+        "project": "pandas",
+        "passed": true,
+        "active_regression_passes": 8,
+        "historical_expected_failures_not_passes": 2,
+        "dispositions": {
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_pivot_with_interval_index_margins": "passed",
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_pivot_with_list_like_values_nans[True-values1]": "passed",
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_categorical_margins[True]": "expected_failure",
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_pivot_table_categorical_observed_equal[False]": "passed",
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_pivot_with_categorical[True-False]": "passed",
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_pivot_with_multiindex[True]": "expected_failure",
+          "pandas.tests.reshape.test_pivot.TestCrosstab::test_crosstab_single": "passed",
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_pivot_table_multiple": "passed",
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_pivot_periods[True]": "passed",
+          "pandas.tests.reshape.test_pivot.TestPivotTable::test_pivot_string_as_func": "passed"
+        },
+        "images": {
+          "candidate": "sha256:f42d257e47c5169b8582bd411305d6450566aa6b74d3810c2b4a4541053139f4",
+          "verifier": "sha256:44f45772b76f8bccb593c625285703c49146e3fff177bcd348396f9dc4120aa0"
+        },
+        "summary_sha256": "4327d562369c5b71a30aee90d94a22a3d69133d51c70cb273b2419c5d7753028",
+        "selection_sha256": "400b9c41f4f211ecc8489d88ba2b063ceefbaa3d8c42cd86944066b4b6d99c89",
+        "buggy_xml_sha256": "5090742cd9b85f90f69f83d316f33e7b0e3c7fd79c7d003db7448ff55354a108",
+        "fixed_xml_sha256": "efab181a4d1d402986812969f503964e85e248a70d2e34af5df342eb7e077ba9"
+      },
+      {
+        "case_id": "matplotlib_15",
+        "project": "matplotlib",
+        "passed": true,
+        "active_regression_passes": 10,
+        "historical_expected_failures_not_passes": 0,
+        "dispositions": {
+          "lib.matplotlib.tests.test_colors::test_color_names": "passed",
+          "lib.matplotlib.tests.test_colors::test_TwoSlopeNorm_scaleout_center_max": "passed",
+          "lib.matplotlib.tests.test_colors::test_PowerNorm": "passed",
+          "lib.matplotlib.tests.test_colors::test_to_rgba_array_single_str": "passed",
+          "lib.matplotlib.tests.test_colors::test_colormap_reversing[PuOr_r]": "passed",
+          "lib.matplotlib.tests.test_colors::test_colormap_reversing[cool_r]": "passed",
+          "lib.matplotlib.tests.test_colors::test_colormap_reversing[autumn_r]": "passed",
+          "lib.matplotlib.tests.test_colors::test_colormap_reversing[jet_r]": "passed",
+          "lib.matplotlib.tests.test_colors::test_colormap_reversing[brg_r]": "passed",
+          "lib.matplotlib.tests.test_colors::test_colormap_reversing[tab20c]": "passed"
+        },
+        "images": {
+          "candidate": "sha256:998ad8411614ec7dc4718e94e8fd98e4be3351d0fd95da605feecc9e455d5b84",
+          "verifier": "sha256:632c2ce8f8fac7c560b99ab9b690acae9003905a4a4c2d352457efc47ee9f1ad"
+        },
+        "summary_sha256": "f2aee64ca5f9f903d0f64f6ba4fc992774f9799eb973a147dc660125d1d12c2e",
+        "selection_sha256": "ec88acc0c47f3454eec3f3074fae2135268bee96190be3974bdfd48ee047087b",
+        "buggy_xml_sha256": "fc0c546a7e858d403a14f903e460c5af42e6e710551150d8ae81dca2f0a4ed18",
+        "fixed_xml_sha256": "74e217fa36eb9bb245b8a2033d978f1a84c835b740c55929b313ac17cdd9c178"
+      },
+      {
+        "case_id": "pandas_76",
+        "project": "pandas",
+        "passed": true,
+        "active_regression_passes": 10,
+        "historical_expected_failures_not_passes": 0,
+        "dispositions": {
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_roundtrip_mixed[values-False-True]": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_roundtrip_empty[split-False-False]": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_roundtrip_timestamp[records-True-True]": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_index_false_error_to_json[columns]": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_from_json_to_json_table_index_and_columns[columns0-index4]": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_series_roundtrip_object[split-True-False]": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_json_indent_all_orients[split-{\\n    \"columns\":[\\n        \"a\",\\n        \"b\"\\n    ],\\n    \"index\":[\\n        0,\\n        1\\n    ],\\n    \"data\":[\\n        [\\n            \"foo\",\\n            \"bar\"\\n        ],\\n        [\\n            \"baz\",\\n            \"qux\"\\n        ]\\n    ]\\n}]": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_to_jsonl": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_roundtrip_intframe[columns-True-True-int64]": "passed",
+          "pandas.tests.io.json.test_pandas.TestPandasContainer::test_series_roundtrip_simple[split-True]": "passed"
+        },
+        "images": {
+          "candidate": "sha256:e19ffa428a86dc14b59440c6e73b7f546a5b6f95b599af6c9b8ba714916fc03d",
+          "verifier": "sha256:aacc41cff19cf99e2528456a5fc8521a56f2ec5dacf52b3c09e99d9565074f9d"
+        },
+        "summary_sha256": "1fe8445f9eb8a82a54a2453c9c485d0f57bc312287978fcb5a54e5d3aceb7fd9",
+        "selection_sha256": "80c73e34b200909274996d707fd331c24ed6a2c2b4384b33a21cd47895c5c52d",
+        "buggy_xml_sha256": "67b01123bdf0224f3cfd44db5633559643ed3eb787ce8fad8fba945f4fded534",
+        "fixed_xml_sha256": "b8aff8b86f84427ba2c7e208b7d047fcec6191e198d2fd000067f6c329b53278"
+      },
+      {
+        "case_id": "pandas_128",
+        "project": "pandas",
+        "passed": true,
+        "active_regression_passes": 10,
+        "historical_expected_failures_not_passes": 0,
+        "dispositions": {
+          "pandas.tests.io.json.test_readlines::test_readjson_each_chunk": "passed",
+          "pandas.tests.io.json.test_readlines::test_readjson_chunks_series": "passed",
+          "pandas.tests.io.json.test_readlines::test_readjson_chunks_closes[1]": "passed",
+          "pandas.tests.io.json.test_readlines::test_to_jsonl": "passed",
+          "pandas.tests.io.json.test_readlines::test_readjson_invalid_chunksize[0]": "passed",
+          "pandas.tests.io.json.test_readlines::test_readjson_invalid_chunksize[-1]": "passed",
+          "pandas.tests.io.json.test_readlines::test_readjson_invalid_chunksize[foo]": "passed",
+          "pandas.tests.io.json.test_readlines::test_readjson_chunks_multiple_empty_lines[2]": "passed",
+          "pandas.tests.io.json.test_readlines::test_readjson_chunks_multiple_empty_lines[None]": "passed",
+          "pandas.tests.io.json.test_readlines::test_read_jsonl_unicode_chars": "passed"
+        },
+        "images": {
+          "candidate": "sha256:866b9586c175d83b082da6f30103255233616a54d00e272b48e857e54fd63476",
+          "verifier": "sha256:1d37509552ad723e2dcf67aec042fdb4e3893547ed715270b28e50aec561b5db"
+        },
+        "summary_sha256": "b4a01b99c1a4372b47e8e5ac53244fde9de8b05793897fd2855499aaa1f2d67f",
+        "selection_sha256": "4af93fac9de9abc5fc9279c89c564086f5d2d942d8de3db8c51d6ffe38489766",
+        "buggy_xml_sha256": "d5bc83afe6cfdacd59bde2bbebc1c916a75dc1f3008a334536447df280e27f38",
+        "fixed_xml_sha256": "1c093746318c7a9de8a6230484932809c25535b229f89e585e8deb87a36a9956"
+      },
+      {
+        "case_id": "luigi_19",
+        "project": "luigi",
+        "passed": true,
+        "active_regression_passes": 10,
+        "historical_expected_failures_not_passes": 0,
+        "dispositions": {
+          "test.central_planner_test.CentralPlannerTest::test_disable": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_disable_and_reenable_and_disable_again": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_prune_with_live_assistant": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_scheduler_resources_none_disallow_two": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_automatic_re_enable": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_lock_resources_while_running_lower_priority": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_dep": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_reset_tracking_url_on_new_run": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_stop_locking_resource_for_uninterested_worker": "passed",
+          "test.central_planner_test.CentralPlannerTest::test_scheduler_overprovisioned_on_other_resource": "passed"
+        },
+        "images": {
+          "candidate": "sha256:38fafea917a803663e1acfaa98557817330a0e4630f088def58e33902ebb2aa2",
+          "verifier": "sha256:ddbb3300ee2358862f8a953461cfa76933eb61d023f5c2adc1ba0c9cd010fd45"
+        },
+        "summary_sha256": "a6896bb1842b90185da2fea3e0ff25c03d939368a1e55072f9607d479c7833ac",
+        "selection_sha256": "11fb2852ccf7f203f1051e80790ee46c85f21b79bb8c8509325728a391b68a85",
+        "buggy_xml_sha256": "a109f96cfa3d4421baec6c2ea576040b0ed3455dd4775733d1a16b3dd3551ab4",
+        "fixed_xml_sha256": "8741fde485ad721c2a233cbcf8fc651b567b32871f6568e649a800456f662686"
+      },
+      {
+        "case_id": "pandas_27",
+        "project": "pandas",
+        "passed": true,
+        "active_regression_passes": 10,
+        "historical_expected_failures_not_passes": 0,
+        "dispositions": {
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_annualish[BA]": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_quarterly[APR]": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_tz[dateutil/US/Eastern]": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_quarterly[JAN]": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_quarterly[MAY]": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_quarterly[DEC]": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_millisecond": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_monthish": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_nofreq": "passed",
+          "pandas.tests.indexes.datetimes.test_to_period.TestToPeriod::test_to_period_quarterly[FEB]": "passed"
+        },
+        "images": {
+          "candidate": "sha256:e48de3ec125456de1ad18890a14d7c2010e1b86b80d4b0c4cecad94f99432250",
+          "verifier": "sha256:809bd47865965da239143c12c0c4c00272cf61d58205165f4da510bef24c41b1"
+        },
+        "summary_sha256": "0425d5c0e456f491be2772bde364ce4725c4a74f1dd8de7df46fed63bdad76b4",
+        "selection_sha256": "3f9ab6fab7f3e41ff8bd028333b9d1c170b67e14aa639ce8aaeaf6a6c5a33215",
+        "buggy_xml_sha256": "27480509f398591187e7577dafd1195518e6d2f640894989480c9f2977d7680c",
+        "fixed_xml_sha256": "535654d5718e08d81655296363ccc1dfb909b8039ce27221e8cd137b0bda53a1"
+      }
+    ],
+    "missing": [],
+    "lock_sha256": "ca7cd52e62bb25ac8e65e44bc0c9394d38b15854097f7e88cd64b2bb82ed98c3",
+    "withheld_public_tests_not_novel_hidden_tests": true
+  },
+  "cases": [
+    {
+      "project": "pandas",
+      "bug_id": "88",
+      "buggy_commit_id": "698920f",
+      "fixed_commit_id_for_validator_only": "586bcb16023ae870b0ad7769f6d9077903705486",
+      "test_file": "pandas/tests/reshape/test_pivot.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "45676b613f98fda1fd2175004e1bee4e650bba966381689700d8b597e807920e",
+      "run_test_sha256": "ab6fe69e348fc82a0d9a298cbecc404b1df289dd7bbf9a1e9a4060526adb8e27",
+      "preflight_status": "not_executed",
+      "selection_hash": "0177d72cab53ed5caa48e257ba46a2e0f14496316babe203de6280daba5a2f1c",
+      "case_id": "pandas_88",
+      "validator_source_image": "sha256:3e7dd6b23b814231226d6fa114dbbcf718708cc07dbcec16f6a03cf07ff2a70b",
+      "visible_test": "pandas/tests/reshape/test_pivot.py::TestPivotTable::test_pivot_table_multiindex_only",
+      "allowed_files": [
+        "pandas/core/reshape/pivot.py"
+      ],
+      "preflight_artifact": "results/bugsinpy_preflight_v2/000_pandas_88",
+      "environment_deviation": "Common feasibility revision for every candidate: compile with -O0 -g0 and a 1800-second build cap after v1 pandas#88 exhausted its 900-second cap during compilation. Restart the entire frozen candidate prefix in a separate v2 ledger, not just selected successes. Retain v1 exclusion. Use CPython 3.8.20 instead of historical 3.8.x patch releases; minimal repository dependencies instead of unrelated machine-wide requirement snapshots. Preserve original metadata/test hashes. This environment is not an exact historical reproduction."
+    },
+    {
+      "project": "matplotlib",
+      "bug_id": "15",
+      "buggy_commit_id": "6a8e39f4eba28e99d7b1dd454b001b987dd0bbca",
+      "fixed_commit_id_for_validator_only": "c7df5d2770030fe4588a0fc1ab4449a689554dfc",
+      "test_file": "lib/matplotlib/tests/test_colors.py",
+      "python_version": "3.8.1",
+      "bug_info_sha256": "83611a4297b4e9ebd27d263347c5af80875264fcb6c820a40d2e6b6f1d10b0ee",
+      "run_test_sha256": "1aa236a2370caa08097df6546fe8684d343f7dcda14f2ae6323f4ade377493df",
+      "preflight_status": "not_executed",
+      "selection_hash": "01b4fd3e31ca4637beb5dde6308d302c2da01987b2a62906e35fc4252c5fd2fb",
+      "case_id": "matplotlib_15",
+      "validator_source_image": "sha256:e048d18089f757593ff3a6e5f57dfe42cd977ebe97ff8b1475abe251681b3a4c",
+      "visible_test": "lib/matplotlib/tests/test_colors.py::test_SymLogNorm",
+      "allowed_files": [
+        "lib/matplotlib/colors.py",
+        "lib/matplotlib/scale.py"
+      ],
+      "preflight_artifact": "results/bugsinpy_serial_build_recovery_v6/000_matplotlib_15",
+      "environment_deviation": "Common feasibility revision for every candidate: compile with -O0 -g0 and a 1800-second build cap after v1 pandas#88 exhausted its 900-second cap during compilation. Restart the entire frozen candidate prefix in a separate v2 ledger, not just selected successes. Retain v1 exclusion. Use CPython 3.8.20 instead of historical 3.8.x patch releases; minimal repository dependencies instead of unrelated machine-wide requirement snapshots. Preserve original metadata/test hashes. This environment is not an exact historical reproduction. Recovery: Both optimized and unoptimized parallel builds failed to import _path due to a contour-specific ARRAY_API symbol. Extension builds share object-file paths, so test serial rather than parallel compilation as a build-race hypothesis. Relative to the original v2 profile, only -j 2 becomes -j 1. Do not change repository source, commits, relevant tests or gold patches. Preserve all previous failed profiles and the Python 3.7 mirror exclusion. This environment-only recovery does not count as an LLM repair or a new independent bug case."
+    },
+    {
+      "project": "pandas",
+      "bug_id": "76",
+      "buggy_commit_id": "4da554f",
+      "fixed_commit_id_for_validator_only": "47922d3b00edfc264f73b1484589734bbd077c11",
+      "test_file": "pandas/tests/io/json/test_pandas.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "ca7a8a93756ff231e99ed8cc3c6c6da8c9068df85602974e0ed150965d4e28f8",
+      "run_test_sha256": "00b97789284ff8f6761819036a14ae52a6cc83af9a1f04681e9514f7472886db",
+      "preflight_status": "not_executed",
+      "selection_hash": "01cd48f11cd8c3f361926075849e50652940f27275daff6cddd05ddeeb92860c",
+      "case_id": "pandas_76",
+      "validator_source_image": "sha256:cff2111df1cadeb72a5b8c87f78ee8a66df06bf71172c5c45dbe78cf255ac05d",
+      "visible_test": "pandas/tests/io/json/test_pandas.py::TestPandasContainer::test_frame_int_overflow",
+      "allowed_files": [
+        "pandas/io/json/_json.py"
+      ],
+      "preflight_artifact": "results/bugsinpy_preflight_v2/002_pandas_76",
+      "environment_deviation": "Common feasibility revision for every candidate: compile with -O0 -g0 and a 1800-second build cap after v1 pandas#88 exhausted its 900-second cap during compilation. Restart the entire frozen candidate prefix in a separate v2 ledger, not just selected successes. Retain v1 exclusion. Use CPython 3.8.20 instead of historical 3.8.x patch releases; minimal repository dependencies instead of unrelated machine-wide requirement snapshots. Preserve original metadata/test hashes. This environment is not an exact historical reproduction."
+    },
+    {
+      "project": "pandas",
+      "bug_id": "128",
+      "buggy_commit_id": "794a1c2",
+      "fixed_commit_id_for_validator_only": "112e6b8d054f9adc1303138533ed6506975f94db",
+      "test_file": "pandas/tests/io/json/test_readlines.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "b303da4b27d75995a53adbb26519f0a1291cdbe97a0d663ed6814c163c2e3848",
+      "run_test_sha256": "aa4d83ea185020e1e5aa0263ac8f51ea6c6de8967008d53263fbd606cdc90d16",
+      "preflight_status": "not_executed",
+      "selection_hash": "02d83023dacc06fee5ad085f370c7e7b59d9ee2abb85ece3c0a0291141c19627",
+      "case_id": "pandas_128",
+      "validator_source_image": "sha256:297a0c5f07e25a86830e2115c09933caf6de4c1f2e04b71667bbb505e6ecb6f4",
+      "visible_test": "pandas/tests/io/json/test_readlines.py::test_readjson_unicode",
+      "allowed_files": [
+        "pandas/io/json/_json.py",
+        "pandas/io/common.py"
+      ],
+      "preflight_artifact": "results/bugsinpy_preflight_v2/003_pandas_128",
+      "environment_deviation": "Common feasibility revision for every candidate: compile with -O0 -g0 and a 1800-second build cap after v1 pandas#88 exhausted its 900-second cap during compilation. Restart the entire frozen candidate prefix in a separate v2 ledger, not just selected successes. Retain v1 exclusion. Use CPython 3.8.20 instead of historical 3.8.x patch releases; minimal repository dependencies instead of unrelated machine-wide requirement snapshots. Preserve original metadata/test hashes. This environment is not an exact historical reproduction."
+    },
+    {
+      "project": "luigi",
+      "bug_id": "19",
+      "buggy_commit_id": "3d2f75224c7649402927a5ef57558d8c3717cd94",
+      "fixed_commit_id_for_validator_only": "6cffbf438d023441f7f42c2019a51c62eecd9018",
+      "test_file": "test/central_planner_test.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "795084a417013ae620c963cf0084bc5e4cc73a76cfa3b3921fd03560a5b3ab97",
+      "run_test_sha256": "853d1220e58da965f4fc08134b27261c7eb2ae9c8bfa1e68f0f99dddc41bf3cc",
+      "preflight_status": "not_executed",
+      "selection_hash": "02f158c1b27db333331400ef3393d4ac78c2dfbbe54c3f23aaa7c04d6d9e2855",
+      "case_id": "luigi_19",
+      "validator_source_image": "sha256:b600d26a3e39c06b9394e10b6ffb5bca9e9d8facfd8fe3a9e6a44655945a9afc",
+      "visible_test": "test/central_planner_test.py::CentralPlannerTest::test_automatic_re_enable_with_one_failure_allowed",
+      "allowed_files": [
+        "luigi/scheduler.py"
+      ],
+      "preflight_artifact": "results/bugsinpy_environment_recovery_v3_004/000_luigi_19",
+      "environment_deviation": "Common feasibility revision for every candidate: compile with -O0 -g0 and a 1800-second build cap after v1 pandas#88 exhausted its 900-second cap during compilation. Restart the entire frozen candidate prefix in a separate v2 ledger, not just selected successes. Retain v1 exclusion. Use CPython 3.8.20 instead of historical 3.8.x patch releases; minimal repository dependencies instead of unrelated machine-wide requirement snapshots. Preserve original metadata/test hashes. This environment is not an exact historical reproduction. Recovery v3: Both v2 test collections required nose, omitted from the minimal profile. The historical pinned requirements explicitly contain nose==1.3.7. Add this dependency only; do not change buggy/fixed source or relevant tests."
+    },
+    {
+      "project": "pandas",
+      "bug_id": "27",
+      "buggy_commit_id": "6658d89",
+      "fixed_commit_id_for_validator_only": "13dc13f12c0fca943979cde065b7484bb0e40d66",
+      "test_file": "pandas/tests/indexes/datetimes/test_to_period.py",
+      "python_version": "3.8.3",
+      "bug_info_sha256": "bef8783f6a7ae72276e840f037ad72aad3beeeba8247f19cbcd7e857d84f4e83",
+      "run_test_sha256": "a82edbb053121e82e2800eb6c7be99e88661ebf29a46efeafb94f3f1a621dbeb",
+      "preflight_status": "not_executed",
+      "selection_hash": "034d9cb74e67791eb6fb37e6e8f06c53b83222efdd622fa2f55434d064951b3a",
+      "case_id": "pandas_27",
+      "validator_source_image": "sha256:a7c95f9a055c852e1ffa32d0d758e277cf7f8e601966d2ac23983aab8d8d588a",
+      "visible_test": "pandas/tests/indexes/datetimes/test_to_period.py::TestToPeriod::test_to_period_infer",
+      "allowed_files": [
+        "pandas/core/arrays/datetimes.py",
+        "pandas/core/arrays/period.py"
+      ],
+      "preflight_artifact": "results/bugsinpy_preflight_v2/005_pandas_27",
+      "environment_deviation": "Common feasibility revision for every candidate: compile with -O0 -g0 and a 1800-second build cap after v1 pandas#88 exhausted its 900-second cap during compilation. Restart the entire frozen candidate prefix in a separate v2 ledger, not just selected successes. Retain v1 exclusion. Use CPython 3.8.20 instead of historical 3.8.x patch releases; minimal repository dependencies instead of unrelated machine-wide requirement snapshots. Preserve original metadata/test hashes. This environment is not an exact historical reproduction."
+    }
+  ],
+  "research_results": false
+}

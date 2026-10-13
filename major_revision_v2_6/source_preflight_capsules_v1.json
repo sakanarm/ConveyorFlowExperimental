@@ -1,0 +1,312 @@
+{
+  "phases": [
+    {
+      "attempted_cases": 0,
+      "cases": [],
+      "config_sha256": "5d74ab54f5537e12b852c99116c7b6332e79f9c257d2b3094f2e111d918f8317",
+      "ledger_sha256": null,
+      "lock_sha256": "0e288185c9a7ec7589c2704bb99d57b8f3abec8abcf1d634352e4820405d05ef",
+      "phase": "pysnooper_preflight_v1",
+      "project": "PySnooper",
+      "qualified_public_test_contrasts": 0,
+      "queue_sha256": "a76f8ff4fce77ec4c0911a1e28542a85e5d5b93ef8ad21587c1b70b13452573b"
+    },
+    {
+      "attempted_cases": 2,
+      "cases": [
+        {
+          "build_report_sha256": "92f201202bbe5a94a3486b9aba98fe874f314390ba735a0a61b8f0e4fafaa991",
+          "case_id": "PySnooper_2",
+          "container_image_id": "sha256:19d747924e12728346b23031d9a061afb7e58f74522e41395fb5f6625418c9c1",
+          "environment_deviation": "CPython 3.8.20 and pinned minimal pytest; original public NODE is unchanged while -s capture flag is omitted by the trusted preflight. This is not an exact historical environment. V1c adds repository-declared python_toolbox>=0.9.3 pinned at 0.9.3 after v1b failed test collection on both buggy and fixed. V1d pins all three project-declared runtime requirements: decorator>=4.3.0, future>=0.17.1, six>=1.12.0. The reused generic engine emits an OCI tag with a v2.5 suffix; the v2.6 case/lock hashes and separate raw root identify this run.",
+          "queue_index": 0,
+          "reason": "buggy/fixed test contrast not reproduced",
+          "record_sha256": "c7e04bb38c231864a1130fc9335119be638660cda7c653ebb81b549790fd6259",
+          "status": "environment_excluded",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 4,
+              "skipped": 0,
+              "tests": 1
+            },
+            "fixed": {
+              "errors": 0,
+              "failures": 0,
+              "return_code": 0,
+              "skipped": 0,
+              "tests": 1
+            }
+          }
+        },
+        {
+          "build_report_sha256": "b4bbba216d7904894a298d4858c93cdfe73cff8348e87fa23b5d574724fe39d6",
+          "case_id": "PySnooper_1",
+          "container_image_id": "sha256:0079107b9aa4844275b4e34b52c68dcafdfee614441582cb6390f2dccd0d990d",
+          "environment_deviation": "CPython 3.8.20 and pinned minimal pytest; original public NODE is unchanged while -s capture flag is omitted by the trusted preflight. This is not an exact historical environment. V1c adds repository-declared python_toolbox>=0.9.3 pinned at 0.9.3 after v1b failed test collection on both buggy and fixed. V1d pins all three project-declared runtime requirements: decorator>=4.3.0, future>=0.17.1, six>=1.12.0. The reused generic engine emits an OCI tag with a v2.5 suffix; the v2.6 case/lock hashes and separate raw root identify this run.",
+          "queue_index": 1,
+          "reason": "buggy/fixed test contrast not reproduced",
+          "record_sha256": "e7bf0e04839ff8286a630ea6d431369303d9656f8088662bc8d598a5c72c808d",
+          "status": "environment_excluded",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 0,
+              "failures": 0,
+              "return_code": 0,
+              "skipped": 0,
+              "tests": 1
+            },
+            "fixed": {
+              "errors": 0,
+              "failures": 0,
+              "return_code": 0,
+              "skipped": 0,
+              "tests": 1
+            }
+          }
+        }
+      ],
+      "config_sha256": "5d74ab54f5537e12b852c99116c7b6332e79f9c257d2b3094f2e111d918f8317",
+      "ledger_sha256": "311de9c32d4ec45096c50a59741ab0d981bccab715b146497a4e8d30870f333d",
+      "lock_sha256": "a6fd68b40d7228535218faee767643f7944eb102b16e56b1db34e6afd481edcb",
+      "phase": "pysnooper_preflight_v1b",
+      "project": "PySnooper",
+      "qualified_public_test_contrasts": 0,
+      "queue_sha256": "a76f8ff4fce77ec4c0911a1e28542a85e5d5b93ef8ad21587c1b70b13452573b"
+    },
+    {
+      "attempted_cases": 5,
+      "cases": [
+        {
+          "build_report_sha256": "8968a25897bdcf15d70b2ab6411010c91ae9d5f6a88ceacca5125e79917de434",
+          "case_id": "sanic_5",
+          "container_image_id": "sha256:db62c9a66de2f35378bd4c04d040c962723a66d94c7f39ffec27fb9ca68c7815",
+          "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight.",
+          "queue_index": 0,
+          "reason": null,
+          "record_sha256": "7acc70a1a0c96d7875830d55f50f1f491e3d659a80069606c400fcdcbda8ce8c",
+          "status": "reproducible",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 0,
+              "failures": 1,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 1
+            },
+            "fixed": {
+              "errors": 0,
+              "failures": 0,
+              "return_code": 0,
+              "skipped": 0,
+              "tests": 1
+            }
+          }
+        },
+        {
+          "build_report_sha256": "f482536b5fd02636a4a4eddcc0ff12bce8e8c475971849db3fa23d0a6146a12a",
+          "case_id": "sanic_3",
+          "container_image_id": "sha256:b90371f6c698d19acdf329db68775eccea66c5a3afcf87f8d4c4edb58b5efcfa",
+          "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight.",
+          "queue_index": 1,
+          "reason": "buggy/fixed test contrast not reproduced",
+          "record_sha256": "9fd607e983c5332e7149273d81b5f24a913542df79680411752ef98b576ca490",
+          "status": "environment_excluded",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 0
+            },
+            "fixed": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 0
+            }
+          }
+        },
+        {
+          "build_report_sha256": "d5d3be52ca2bd9e8451dcb6904f31fffca1b710d9f7ffb98a159941628aed897",
+          "case_id": "sanic_2",
+          "container_image_id": "sha256:217f9ad17b98c3f1a82834efebf0e15309a2c4f261a23e4f7070f355311685be",
+          "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight.",
+          "queue_index": 2,
+          "reason": "buggy/fixed test contrast not reproduced",
+          "record_sha256": "4c41a819eea9b338f9273963e70272e7c734a1149968729541aeb7a5b66f45ad",
+          "status": "environment_excluded",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 0
+            },
+            "fixed": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 0
+            }
+          }
+        },
+        {
+          "build_report_sha256": "eee821f688711edc5054b0bc1e8aa13d5af9ecf7a5e08c6532c8a39b4742bbf4",
+          "case_id": "sanic_1",
+          "container_image_id": "sha256:d2f642f62fee07800ab483d568d832a7fd0db0e73565d34cc54d7befd89c03cd",
+          "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight.",
+          "queue_index": 3,
+          "reason": "buggy/fixed test contrast not reproduced",
+          "record_sha256": "501c47c7db41a2314fe12da673f09eac83d3ffeeab3986e30b9ca4aa2ec3dadb",
+          "status": "environment_excluded",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 0
+            },
+            "fixed": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 0
+            }
+          }
+        },
+        {
+          "build_report_sha256": "9dc3399bc1c3c2906fc83b403ed9c6020a28e4972e5c40f8a5f4d2cf7f21cdf5",
+          "case_id": "sanic_4",
+          "container_image_id": "sha256:806b90d8f56dd96132fb168a0a9c2f197f9d0ecb5495bd66204b71cfb0c31ee2",
+          "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight.",
+          "queue_index": 4,
+          "reason": "buggy/fixed test contrast not reproduced",
+          "record_sha256": "5dffa5802d749fff45dafee90374db0b77ecff313ffa3738894836d603fa6c78",
+          "status": "environment_excluded",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 0
+            },
+            "fixed": {
+              "errors": 1,
+              "failures": 0,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 0
+            }
+          }
+        }
+      ],
+      "config_sha256": "9f903c840442d3d47358b1a8d0b8aa90f7144f215c85fa357cb97b986d7f1cbd",
+      "ledger_sha256": "5b36ae6f2238fac9f78c6ffc2417860d9833f9429d0e851fe26e6a7dfe4833ba",
+      "lock_sha256": "be9dfd354aeab838b93a605f0662371a35857c762035eb1ffb14f4288a67bfa9",
+      "phase": "sanic_preflight_v1",
+      "project": "sanic",
+      "qualified_public_test_contrasts": 1,
+      "queue_sha256": "04322a1bc6f16d86a686f99424fbb19962e87bf6332938be86312567836f669a"
+    },
+    {
+      "attempted_cases": 1,
+      "cases": [
+        {
+          "build_report_sha256": "5aa2b53b72e9664ae2143c2c68bf4dd88d463a00a1116ad1ecf1bb32f0c5b480",
+          "case_id": "sanic_5",
+          "container_image_id": null,
+          "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight. V1b replays all five frozen cases after common pre-LLM import failures. Pin httpx==0.9.3 and requests-async==0.5.0 from public BugsInPy requirements; Sanic_1 metadata lists httpx==0.11.1, so its 0.9.3 environment remains a disclosed deviation. This is not a change selected from any LLM outcome.",
+          "queue_index": 0,
+          "reason": "container build failed or timed out",
+          "record_sha256": "33da98e4e10c34ffb0a70592e494c44f3e1a684bab36539123a95fb1b6517287",
+          "status": "environment_excluded",
+          "test_outcomes": null
+        }
+      ],
+      "config_sha256": "e83e67faa03da44602c2ec7208d33dbaf9c54a6ddd49793a1dd9c11135662c50",
+      "ledger_sha256": "8fc829d35d5441225d937d7ddc449483938af2a06588b5020de09c85af727c89",
+      "lock_sha256": "d00b7938765a12e1e52b7c4ef44db56a709bf13f6872880cba71305a45056641",
+      "phase": "sanic_preflight_v1b",
+      "project": "sanic",
+      "qualified_public_test_contrasts": 0,
+      "queue_sha256": "04322a1bc6f16d86a686f99424fbb19962e87bf6332938be86312567836f669a"
+    },
+    {
+      "attempted_cases": 2,
+      "cases": [
+        {
+          "build_report_sha256": "f7e402df736d94c690c09ac4a85e0830dd74f0808b3fbcf58b2bf6d5bdd35bbf",
+          "case_id": "sanic_5",
+          "container_image_id": "sha256:3fc535e63dc7094d5e8cc46d300649457d0c234215f67aac8f08c96601159e99",
+          "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight. V1c replays all five frozen cases with httpx==0.9.3, which is listed by four of five public case requirements. Sanic_1 lists httpx==0.11.1 and remains a disclosed mismatch. Public metadata also lists requests-async==0.5.0 for some cases, but that exact release was unavailable from the package index (v1b build error); it is not silently substituted. No LLM outcomes informed this change.",
+          "queue_index": 0,
+          "reason": null,
+          "record_sha256": "e38cf1633ff26a90f8ed657df94f5072f1e1ace34b975fe3d9d3c33b99952019",
+          "status": "reproducible",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 0,
+              "failures": 1,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 1
+            },
+            "fixed": {
+              "errors": 0,
+              "failures": 0,
+              "return_code": 0,
+              "skipped": 0,
+              "tests": 1
+            }
+          }
+        },
+        {
+          "build_report_sha256": "938ec39d6d84f4034f1cdb411affea81b732522a0dfe55d59a00788006608436",
+          "case_id": "sanic_3",
+          "container_image_id": "sha256:0d2735ec57118005c6185d1a0c00158f20f2d3be2a1d40ad17fc6ed5349939c7",
+          "environment_deviation": "Pre-outcome-blind Sanic feasibility profile using CPython 3.8.20, pinned minimal dependencies, public BugsInPy buggy/fixed commits and same test in both states. Not an exact historical environment. Reused generic engine OCI tag ends with v2.5; v2.6 case hashes, lock and raw directory identify this separate preflight. V1c replays all five frozen cases with httpx==0.9.3, which is listed by four of five public case requirements. Sanic_1 lists httpx==0.11.1 and remains a disclosed mismatch. Public metadata also lists requests-async==0.5.0 for some cases, but that exact release was unavailable from the package index (v1b build error); it is not silently substituted. No LLM outcomes informed this change.",
+          "queue_index": 1,
+          "reason": null,
+          "record_sha256": "9022665deec0310072279485eee4c11625a59f62ebaa3bb27ee8ed5e0039c8b7",
+          "status": "reproducible",
+          "test_outcomes": {
+            "buggy": {
+              "errors": 0,
+              "failures": 1,
+              "return_code": 1,
+              "skipped": 0,
+              "tests": 1
+            },
+            "fixed": {
+              "errors": 0,
+              "failures": 0,
+              "return_code": 0,
+              "skipped": 0,
+              "tests": 1
+            }
+          }
+        }
+      ],
+      "config_sha256": "e4996d03f19d88abd807cf85700b5ae752871ff4f5a0db490381eee8fe471a37",
+      "ledger_sha256": "aa4766d2bc9969160f04a175fae2010a45d78a158f3e7a84f642abcbb68609e3",
+      "lock_sha256": "b425cdb74d4973b798cab25d4d0802075e2339c7cbdf2fb0e92d026956df2f9e",
+      "phase": "sanic_preflight_v1c",
+      "project": "sanic",
+      "qualified_public_test_contrasts": 2,
+      "queue_sha256": "04322a1bc6f16d86a686f99424fbb19962e87bf6332938be86312567836f669a"
+    }
+  ],
+  "provider_calls": 0,
+  "raw_artifacts_location": "D:/ConveyorFlowRuntime/v2_6",
+  "raw_artifacts_required_for_full_independent_audit": true,
+  "status": "pre_llm_source_preflight_capsules_not_main_results"
+}

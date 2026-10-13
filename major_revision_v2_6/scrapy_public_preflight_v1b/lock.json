@@ -1,0 +1,11 @@
+{
+  "config_sha256": "6e54b01fd1e4722217ba9fcc81f96766ced0c6842132215437ccaf483f96d748",
+  "created_at_utc": "2026-10-12T18:10:11.252011+00:00",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "raw_root": "/mnt/d/ConveyorFlowRuntime/v2_6/scrapy_public_preflight_v1b",
+  "runner_sha256": "98135a8a7da60e510941728a3faf0387ead77ebf0d2fa6823eea4eb3b95a1020",
+  "source_lock_sha256": "733bbf21ccc210baff8a789a4d6519c119011d830cfd03117de9fd32e2ebaef9",
+  "source_queue_sha256": "c9ad14930cd84be65773ebc892cd5ff7033259ce4778323e0d0c0e0717cfe419",
+  "status": "scrapy_public_preflight_frozen_before_provider"
+}

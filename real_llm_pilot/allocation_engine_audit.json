@@ -1,0 +1,110 @@
+{
+  "created_at_utc": "2026-09-27T06:10:07.137833+00:00",
+  "status": "offline_engine_audit_passed",
+  "research_results": false,
+  "provider_calls": 0,
+  "note": "Mock-pass control-flow audit only; not empirical LLM evidence.",
+  "engine_sha256": "9da7973ce609fa01b6e4a31af14bafa533d13cdab05d02d555e6a9b5ef8b59c3",
+  "config_sha256": "8539ae67b7169b9b46e87e62f258691fd0e24015936eabd7c8f50d2524c6728c",
+  "cases_sha256": "2eea7b1397a878f967d2d2047611576147a71bb261b26fc7ead8f2febb155012",
+  "policies": [
+    {
+      "policy": "CF_FIT",
+      "seed": 3000,
+      "rounds": 29,
+      "event_hash": "06c6c19cbe2be53bea67951977e74c358359e8362d29121ed2fb7df517b73413",
+      "event_counts": {
+        "assessment": 660,
+        "claim_attempt": 77,
+        "claim_collision": 17,
+        "claim_win": 60,
+        "eligible": 660,
+        "execute": 60,
+        "requeue": 160,
+        "scan": 660,
+        "stand_down": 196,
+        "task_ready": 60,
+        "verify": 60,
+        "volunteer": 77
+      },
+      "claimants": {
+        "agent_1": 23,
+        "agent_2": 25,
+        "agent_3": 12
+      },
+      "invariant_checks": {
+        "all_60_tasks_claimed_once": true,
+        "all_60_tasks_executed_once": true,
+        "all_60_tasks_verified": true,
+        "one_execute_per_claim_win": true,
+        "no_provider_call": true,
+        "static_has_no_assessment": true,
+        "cf_has_local_volunteers": true,
+        "central_uses_global_matcher": true
+      }
+    },
+    {
+      "policy": "S3",
+      "seed": 3000,
+      "rounds": 20,
+      "event_hash": "58bec1e7a0b91c14a567dcb3ab82bf05dfcb4afec8dfaaa16ffc4c90139bb7f6",
+      "event_counts": {
+        "claim_attempt": 60,
+        "claim_win": 60,
+        "execute": 60,
+        "requeue": 93,
+        "task_ready": 60,
+        "verify": 60,
+        "volunteer": 60
+      },
+      "claimants": {
+        "agent_1": 20,
+        "agent_2": 20,
+        "agent_3": 20
+      },
+      "invariant_checks": {
+        "all_60_tasks_claimed_once": true,
+        "all_60_tasks_executed_once": true,
+        "all_60_tasks_verified": true,
+        "one_execute_per_claim_win": true,
+        "no_provider_call": true,
+        "static_has_no_assessment": true,
+        "cf_has_local_volunteers": true,
+        "central_uses_global_matcher": true
+      }
+    },
+    {
+      "policy": "CENTRAL_FIT",
+      "seed": 3000,
+      "rounds": 20,
+      "event_hash": "0f1b5a19c42fcf768c6d5bc9c77efa12e754b429a39ed33b857dffce27ba5d36",
+      "event_counts": {
+        "assessment": 459,
+        "claim_attempt": 60,
+        "claim_win": 60,
+        "eligible": 459,
+        "execute": 60,
+        "requeue": 93,
+        "scan": 459,
+        "task_ready": 60,
+        "verify": 60,
+        "volunteer": 60
+      },
+      "claimants": {
+        "agent_1": 20,
+        "agent_2": 20,
+        "agent_3": 20
+      },
+      "invariant_checks": {
+        "all_60_tasks_claimed_once": true,
+        "all_60_tasks_executed_once": true,
+        "all_60_tasks_verified": true,
+        "one_execute_per_claim_win": true,
+        "no_provider_call": true,
+        "static_has_no_assessment": true,
+        "cf_has_local_volunteers": true,
+        "central_uses_global_matcher": true
+      }
+    }
+  ]
+}

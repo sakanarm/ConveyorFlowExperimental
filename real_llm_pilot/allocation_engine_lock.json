@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_FOR_EXECUTION",
+  "frozen_at_utc": "2026-09-23T18:15:00Z",
+  "module": "allocation_engine.py",
+  "sha256": "9da7973ce609fa01b6e4a31af14bafa533d13cdab05d02d555e6a9b5ef8b59c3",
+  "policies": [
+    "CF_FIT",
+    "S3",
+    "CENTRAL_FIT"
+  ],
+  "parameters": {
+    "k_scan": 8,
+    "w1": 2,
+    "w2": 4,
+    "max_no_volunteer_rounds": 6,
+    "max_attempts": 3
+  },
+  "decision_boundary": "claimant selected before provider invocation",
+  "execution_scope": "selected_atomic_claim_winner_only",
+  "audit": {
+    "file": "allocation_engine_audit.json",
+    "status": "offline_engine_audit_passed",
+    "research_results": false,
+    "provider_calls": 0
+  },
+  "verification": {
+    "command": "python -m pytest v2/tests -q",
+    "tests_passed_at_freeze": 49
+  }
+}

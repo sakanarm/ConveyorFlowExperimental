@@ -1,0 +1,28 @@
+{
+  "answer": {
+    "repair_action": "floor_divide_safe"
+  },
+  "hidden_tests": [
+    {
+      "expected": 3,
+      "x": 6,
+      "y": 2
+    },
+    {
+      "expected": -6,
+      "x": 11,
+      "y": -2
+    },
+    {
+      "expected": -1,
+      "x": -1,
+      "y": 9
+    },
+    {
+      "expected": 0,
+      "x": 8,
+      "y": 0
+    }
+  ],
+  "validator_type": "behavioral_integer_repair"
+}

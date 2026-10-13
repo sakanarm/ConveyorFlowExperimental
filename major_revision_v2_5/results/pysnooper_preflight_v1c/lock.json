@@ -1,0 +1,16 @@
+{
+  "config_sha256": "33939b4044f3c31d975296bc330acf499089a133eee02b8cc017e9f2233b37b2",
+  "created_at_utc": "2026-10-10T17:54:44.460818+00:00",
+  "engine_sha256": "e4748da0de81c6ef48f78bf8b72d06a9a4b0d5dcb9fcdca4dd04c6442a36b26a",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "repository_declared_test_requirement": "python_toolbox>=0.9.3 in /buggy/test_requirements.txt of the v1b validator image",
+  "rule": "Add only the repository-declared missing test extra; replay all candidates from frozen queue start",
+  "runner_sha256": "1c7342cc6e1c12ae6e40bb21f72b955dce01ef6645cdde7b54c413f9557a7c10",
+  "source_config_sha256": "1fffaa5a2b8d09426051cb269058a5844611d5feaac295731b679e3dd0b3d8d7",
+  "source_queue_sha256": "2cd1298333f20d4905d45b4b63a52696dfa86746f59adb317407de096006b692",
+  "status": "v2_5_pysnooper_test_dependency_amendment_frozen_before_provider",
+  "v1b_failure_record_sha256": "345f9318296162a63a94839ea3fe7edea28a85e923c4381425eb0ca53775642d",
+  "v1b_lock_sha256": "09bb9bb1fc754f229a8eed4999f1436bdba5b53313b20e3736c6ac0a4e294335",
+  "v1b_validator_image_id": "sha256:3f95530d746436e23bd6814bfa7a2af71fa83afe1269b91916e677f29ed113d4"
+}

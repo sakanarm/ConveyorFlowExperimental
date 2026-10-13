@@ -1,0 +1,13 @@
+{
+  "cases": 40,
+  "created_at_utc": "2026-10-12T11:08:53.626082+00:00",
+  "manifest_sha256": "c1f0a298b23a1b800472f58933ea31dced480caa8d1f490d65d3539f57f50755",
+  "paid_execution_allowed": false,
+  "provider_calls": 0,
+  "public_test_rule": "Execute every declared unittest command on both buggy and fixed validators",
+  "queue_sha256": "c9ad14930cd84be65773ebc892cd5ff7033259ce4778323e0d0c0e0717cfe419",
+  "runner_sha256": "95af857b194efe43a663ce57e67b6ba587233cd2f51e0210ae578de529f05b42",
+  "selection_rule": "Frozen project/case hash order; retain all exclusions; first two fully qualified cases only",
+  "source_queue_sha256": "7add5639f4dd01af87055dd579b519bc6b67cff41a1853ebc978042ee9fcea20",
+  "status": "scrapy_metadata_frozen_not_preflighted"
+}

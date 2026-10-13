@@ -1,0 +1,1042 @@
+[
+  {
+    "bug_id": "39",
+    "bug_info_sha256": "d2f7a3386a7956e42f6327dfbcc0a37e126dce08b73536ae5d180be240813652",
+    "buggy_commit_id": "692975acb40c6394424dfb728b1ffa46b3b3c55d",
+    "case_id": "scrapy_39",
+    "fixed_commit_id_validator_only": "a1e8a8525d2312842c7e1cca8ba6e4e1a83084b7",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_spider.DeprecationTest.test_make_requests_from_url_deprecated"
+      ]
+    ],
+    "queue_index": 0,
+    "requirements_sha256": "b610956eb2dc94fd98ceb1255e5689c133a431cbf1ec27338ac694e3b0b5b335",
+    "run_test_sha256": "5aa02bc667f4d12a79392002915351ca61eee7d8478bf5eb8802e189960f34e3",
+    "selection_hash": "006f4e3e9aac220d4482471f0dabf9b96dd84ca560576d2d3d6eba2883d64abe",
+    "test_files": [
+      "tests/test_spider.py"
+    ]
+  },
+  {
+    "bug_id": "34",
+    "bug_info_sha256": "b60cfedbd69a7c8a0efa8e584fcf056bac03650233e0335558ac87268903ca0c",
+    "buggy_commit_id": "e521740b3951bacc80d3c9c1db8652ed5e914b89",
+    "case_id": "scrapy_34",
+    "fixed_commit_id_validator_only": "773ea5a5ef76426dd91a8669542d2602082a5746",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_item.ItemTest.test_metaclass_with_fields_attribute"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_item.ItemTest.test_metaclass_multiple_inheritance_simple"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_item.ItemTest.test_metaclass_multiple_inheritance_diamond"
+      ]
+    ],
+    "queue_index": 1,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "53678daee49fbb2c690826a5a3111d792b843b1b3e50dac88ddda4c94403a831",
+    "selection_hash": "02bd5f2b849f05192c8b3dfef58c6eb8f190e7f1ea1f439a55199224cfecd9ff",
+    "test_files": [
+      "tests/test_item.py"
+    ]
+  },
+  {
+    "bug_id": "6",
+    "bug_info_sha256": "baab81bf1b3efe8214ff8ce2de56f87c9a57394b7e31825123fbf432814f504b",
+    "buggy_commit_id": "8aa2e4f9976d31bbe3a0014b4f1f96ace1b87043",
+    "case_id": "scrapy_6",
+    "fixed_commit_id_validator_only": "25f609e2a3c27ca7d7d98dbfddb2c049735935bb",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_pipeline_images.ImagesPipelineTestCase.test_convert_image"
+      ]
+    ],
+    "queue_index": 2,
+    "requirements_sha256": "d8aaad7afd6460a1b932e6292a786d14dbc719abb585c765ac05e21c97517e82",
+    "run_test_sha256": "424fd1169a9e0d9925d05dde62cd5d9f769f9ebd85731aadeeface387fbc9d59",
+    "selection_hash": "0dd2c5392d1c1b34f0ecf91e31ea7555b0ae3d523ce2b309b4e7afdceeba7f6f",
+    "test_files": [
+      "tests/test_pipeline_images.py"
+    ]
+  },
+  {
+    "bug_id": "36",
+    "bug_info_sha256": "a7fdcf34153cb5f36e4d32951c11d5dc6a6e97d4f0077e16c7663b5b110f9cd2",
+    "buggy_commit_id": "cb8140a42a27ede87b0880372024f2f1804618b8",
+    "case_id": "scrapy_36",
+    "fixed_commit_id_validator_only": "cf9be5344a89dd8e14f8241ec69de9c984ec1e05",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_misc.__init__.UtilsMiscTestCase.test_create_instance"
+      ]
+    ],
+    "queue_index": 3,
+    "requirements_sha256": "b610956eb2dc94fd98ceb1255e5689c133a431cbf1ec27338ac694e3b0b5b335",
+    "run_test_sha256": "90bc0832f7178727bc630b15add697d3d3c9b733eb27281c64f6c90026a17443",
+    "selection_hash": "199de4e508b0738da182b2b63c188a56735b03f4f7de5a04df579c45eb4c89a2",
+    "test_files": [
+      "tests/test_utils_misc/__init__.py"
+    ]
+  },
+  {
+    "bug_id": "8",
+    "bug_info_sha256": "7f724c511d794aa4feedc0e70200b1ce4195a7f4cf25ef5b57a7e40c21a301d9",
+    "buggy_commit_id": "f2f9350c47db73bdfb60773601b59b0633e1595a",
+    "case_id": "scrapy_8",
+    "fixed_commit_id_validator_only": "4e765acaed7a914630ee5320fa6f6523890a2b9d",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_item.ItemMetaTest.test_new_method_propagates_classcell"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_item.ItemMetaClassCellRegression.test_item_meta_classcell_regression"
+      ]
+    ],
+    "queue_index": 4,
+    "requirements_sha256": "d8aaad7afd6460a1b932e6292a786d14dbc719abb585c765ac05e21c97517e82",
+    "run_test_sha256": "8366e17ae9b1f32b8a4ba9a507dc26caa87903cd3e3ad4277dc61c7e8ec4d091",
+    "selection_hash": "21945e9c689e41d8d35a4bdb5fa6d14e74b1b12223e4ef3890dd0cc3e3a1c07c",
+    "test_files": [
+      "tests/test_item.py"
+    ]
+  },
+  {
+    "bug_id": "4",
+    "bug_info_sha256": "7df3898441568db4617e22f4bc2e391894d114afd4625e2184356289404fd87a",
+    "buggy_commit_id": "c8f3d07e86dd41074971b5423fb932c2eda6db1e",
+    "case_id": "scrapy_4",
+    "fixed_commit_id_validator_only": "16dad81715d3970149c0cf7a318e73a0d84be1ff",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_contracts.ContractsManagerTest.test_errback"
+      ]
+    ],
+    "queue_index": 5,
+    "requirements_sha256": "d0c59c2ffe0ade81c4fb3d5d64a132d346e206b1891de0e57895aa146b0de6e0",
+    "run_test_sha256": "9d41b9ee41cbd34068e11119d3af72319fb8769ef0418c6a14a7da86c5d2fc46",
+    "selection_hash": "3d4c410c3274e491bd8271eb89b5f27b10a564eecabe49f66e9bee0e6a1ba2e8",
+    "test_files": [
+      "tests/test_contracts.py"
+    ]
+  },
+  {
+    "bug_id": "27",
+    "bug_info_sha256": "0f8f68c9d167154dc975c7bd6d18109a194106a6749705db8c0e7dbe49ab3689",
+    "buggy_commit_id": "280eab241680c93a763a3ef3a9ccd0c257259ca0",
+    "case_id": "scrapy_27",
+    "fixed_commit_id_validator_only": "d164398a27736f75286cc435eca69b06ff7c1c06",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloadermiddleware_redirect.RedirectMiddlewareTest.test_request_meta_handling"
+      ]
+    ],
+    "queue_index": 6,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "3f664cd63d55aa7584c464b8f364f325524fca1092d8f80b6d06d6820f79a443",
+    "selection_hash": "41136cdb3bcef777a72cbef748622f7cb674488c55b768babc3f36f5799ab6cb",
+    "test_files": [
+      "tests/test_downloadermiddleware_redirect.py"
+    ]
+  },
+  {
+    "bug_id": "19",
+    "bug_info_sha256": "72890e8830b049526d95d617c41e82407f034d2943d6b82219f19f08da20844b",
+    "buggy_commit_id": "e328a9b9dfa4fbc79c59ed4f45f757e998301c31",
+    "case_id": "scrapy_19",
+    "fixed_commit_id_validator_only": "1f743996ff00a7b728d59b93d0967e1eb50072f0",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_cookies.WrappedRequestTest.test_get_full_url"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_cookies.WrappedRequestTest.test_get_host"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_cookies.WrappedRequestTest.test_get_type"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_cookies.WrappedRequestTest.test_get_origin_req_host"
+      ]
+    ],
+    "queue_index": 7,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "2faa6439526d3984f59596d745ee19c81d76661e87c8458665ea61aad8c4117d",
+    "selection_hash": "416525254b04e579d6056a22c186a86d669467c6d29b0962e4c2b598ef2bcbbb",
+    "test_files": [
+      "tests/test_http_cookies.py"
+    ]
+  },
+  {
+    "bug_id": "35",
+    "bug_info_sha256": "2b400d9e2711dee1a5db8f0b6fcd749062dad11dcc2c3eca732ddc8919456ce0",
+    "buggy_commit_id": "0a5bbbaed3e182d2151b6b34357667901ece353f",
+    "case_id": "scrapy_35",
+    "fixed_commit_id_validator_only": "c3d3a9491412d2a91b0927a05908593dcd329e4a",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_crawler.CrawlerRunnerTestCase.test_spidermanager_deprecation"
+      ]
+    ],
+    "queue_index": 8,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "3aa935acbc5ddcf641139a82ded20584dcf3a5553d5de79d63688956dead9256",
+    "selection_hash": "44cb1540b7520097e99ed1e8b410c6e531435c06c010d6f45ab081e93e324444",
+    "test_files": [
+      "tests/test_crawler.py"
+    ]
+  },
+  {
+    "bug_id": "33",
+    "bug_info_sha256": "0847fb6299e095a598cd77b1cda6c8ad5148f497aa83e84cd95b7567a203efa9",
+    "buggy_commit_id": "2d216771976cd7aedfb88ae97418c2d4dcc84917",
+    "case_id": "scrapy_33",
+    "fixed_commit_id_validator_only": "6dccb3a9b320a8d0808764ac8e6e88e663e2d52c",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_pipeline_media.BaseMediaPipelineTestCase.test_default_item_completed"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_log.FailureToExcInfoTest.test_failure"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_log.FailureToExcInfoTest.test_non_failure"
+      ]
+    ],
+    "queue_index": 9,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "1753b781d9a083861957e94664ca89b7af72c2bd40cc29799dd2f093cad5fbe9",
+    "selection_hash": "4ae6016994542929e41e8ed7bcd510fa46cb08cf04f2f7fac4feef64cf2cec15",
+    "test_files": [
+      "tests/test_pipeline_media.py",
+      "tests/test_utils_log.py"
+    ]
+  },
+  {
+    "bug_id": "20",
+    "bug_info_sha256": "891d570e193b21a788a15774d056f9ba9a6becf2eb46bcea298a8e0f8be3c7a2",
+    "buggy_commit_id": "e328a9b9dfa4fbc79c59ed4f45f757e998301c31",
+    "case_id": "scrapy_20",
+    "fixed_commit_id_validator_only": "25c56159b86288311630cc0cf6db9d755aeeff1e",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_spider.SitemapSpiderTest.test_get_sitemap_urls_from_robotstxt"
+      ]
+    ],
+    "queue_index": 10,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "be2b777971737a43157cf93c8f6d714e113c1cc8f8f44a43e3e34b43dee536eb",
+    "selection_hash": "548a7c30c664e3a39ed2d0bab9eee28d95fcc8b9a3f2d10f352a1ff450ee922f",
+    "test_files": [
+      "tests/test_spider.py"
+    ]
+  },
+  {
+    "bug_id": "9",
+    "bug_info_sha256": "542816d1f58043b12e5a94d22e1987f1c6099b3bffac022538383500ef9d486e",
+    "buggy_commit_id": "a9c69458ff1667cc4d20ba25bb6a0dd9a5a08ce6",
+    "case_id": "scrapy_9",
+    "fixed_commit_id_validator_only": "ff3aec661355a82a6f77355a95e1f391fa586c2b",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_mail.MailSenderTest.test_send_single_values_to_and_cc"
+      ]
+    ],
+    "queue_index": 11,
+    "requirements_sha256": "d8aaad7afd6460a1b932e6292a786d14dbc719abb585c765ac05e21c97517e82",
+    "run_test_sha256": "b52a5e2ecd20d40b60627fd3bfa9772b7484852938d59749ed9c83bbe1f39ea9",
+    "selection_hash": "615fbdbcd90179ebe60b5c598c09a105f563ae9009fb0679ca2bc45f979ec6f4",
+    "test_files": [
+      "tests/test_mail.py"
+    ]
+  },
+  {
+    "bug_id": "18",
+    "bug_info_sha256": "07f019257ebb92699074c5c47c2bf964bd60cf7aaab20c8dfa336f6d86464b5f",
+    "buggy_commit_id": "41588397c04356f2b0c393b61ed68271a08d6ccd",
+    "case_id": "scrapy_18",
+    "fixed_commit_id_validator_only": "cabed6f183cfb2ab778c57be8c75802fec5e54d4",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_responsetypes.ResponseTypesTest.test_from_content_disposition"
+      ]
+    ],
+    "queue_index": 12,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "ad80a843578e8e202a1fbadd54e2ac0019cff36865681e1bcf9c41a2acf4538e",
+    "selection_hash": "666a11f083ec2dd581ef336a082c45acfe68f023c647604e54ee570870e03da6",
+    "test_files": [
+      "tests/test_responsetypes.py"
+    ]
+  },
+  {
+    "bug_id": "7",
+    "bug_info_sha256": "050644068964456363fbc6a744a1e229e61c17e826a61c4f89de8d8dff524b3a",
+    "buggy_commit_id": "e1ceaf3b5fa29326f032c4ed3f50943384b9e63d",
+    "case_id": "scrapy_7",
+    "fixed_commit_id_validator_only": "074caf434e255bc96f106e57e3e288028f372485",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_request.FormRequestTest.test_spaces_in_action"
+      ]
+    ],
+    "queue_index": 13,
+    "requirements_sha256": "d8aaad7afd6460a1b932e6292a786d14dbc719abb585c765ac05e21c97517e82",
+    "run_test_sha256": "5fdfcdfaf99c8a98c668b744da4988af41d2a1675ef983d98b2c7df94c9f3efe",
+    "selection_hash": "6fa29945c02eb80752e83e556ca27743eaea9eea038094a513842a03c6673970",
+    "test_files": [
+      "tests/test_http_request.py"
+    ]
+  },
+  {
+    "bug_id": "3",
+    "bug_info_sha256": "6fd714c4bcf063dee6a9c4a03f37ffa30907ca03abc4e6c30f5b9aeefe7fec2d",
+    "buggy_commit_id": "be2e910dd06ba4904e7b10eb5a7e3251e8dab099",
+    "case_id": "scrapy_3",
+    "fixed_commit_id_validator_only": "66cbceeb0a9104fc0fa238898e38d0d9ce9cbcf6",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloadermiddleware_redirect.RedirectMiddlewareTest.test_redirect_302_relative"
+      ]
+    ],
+    "queue_index": 14,
+    "requirements_sha256": "d0c59c2ffe0ade81c4fb3d5d64a132d346e206b1891de0e57895aa146b0de6e0",
+    "run_test_sha256": "db2fed84b030e903703e29f2d18d4cb3e9c994ab654194a417f68297574b3df7",
+    "selection_hash": "7113230e8b687bfb1988b14cdf8f5c8d1645473a403b8c000b042d8a1fc0fcb6",
+    "test_files": [
+      "tests/test_downloadermiddleware_redirect.py"
+    ]
+  },
+  {
+    "bug_id": "21",
+    "bug_info_sha256": "0f436f7a98fa8d6372eb58058db5277c3f6b57465a706205723ac934fbebdb67",
+    "buggy_commit_id": "43a53aca1207a82b663fe7a90c375546ce340a8e",
+    "case_id": "scrapy_21",
+    "fixed_commit_id_validator_only": "a8a6f050e71fbb7881076a8d6e2867e868d26016",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloadermiddleware_robotstxt.RobotsTxtMiddlewareTest.test_robotstxt_immediate_error"
+      ]
+    ],
+    "queue_index": 15,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "88d34a199455832f63db856c1d16566b863c61c20c0f297767fd0d276bba3934",
+    "selection_hash": "7714ad048e55842f5834b131da952b0e0a28d21a24f4b17154d79d90729270ec",
+    "test_files": [
+      "tests/test_downloadermiddleware_robotstxt.py"
+    ]
+  },
+  {
+    "bug_id": "29",
+    "bug_info_sha256": "d083abdcec867af8cc7ea20f843d37c9b7869c3b5999cb50ad3bfd2f3b17f3a0",
+    "buggy_commit_id": "5c4666a3d489bd3efa2e188de58721a125a5bfad",
+    "case_id": "scrapy_29",
+    "fixed_commit_id_validator_only": "8d45b3c4810cb5304ba1193b45697a0df1157326",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_request.UtilsRequestTest.test_request_httprepr_for_non_http_request"
+      ]
+    ],
+    "queue_index": 16,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "9edf571d378ea0e6585424167857fc13470e14c0de1afb1f6baac62c32d247e8",
+    "selection_hash": "787dea77d15a9a27edf5d85edc8dec8c652334b8866fad7f0eb23d3c25f7460b",
+    "test_files": [
+      "tests/test_utils_request.py"
+    ]
+  },
+  {
+    "bug_id": "16",
+    "bug_info_sha256": "a8a7d60849052a10139a60a0ed1e0836fafe87f70d9048f1c3f236dd38a0d4ec",
+    "buggy_commit_id": "73a5571c6044d5aea47b4f973e325c2f3d4e25dc",
+    "case_id": "scrapy_16",
+    "fixed_commit_id_validator_only": "68dedf54cb27847f6d035099b61aa06226549fad",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_url.CanonicalizeUrlTest.test_canonicalize_url_unicode_query_string"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_url.CanonicalizeUrlTest.test_normalize_percent_encoding_in_paths"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_url.CanonicalizeUrlTest.test_normalize_percent_encoding_in_query_arguments"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_url.CanonicalizeUrlTest.test_canonicalize_idns"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_url.CanonicalizeUrlTest.test_canonicalize_urlparsed"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_url.CanonicalizeUrlTest.test_canonicalize_parse_url"
+      ]
+    ],
+    "queue_index": 17,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "b79857d3b43e8cc5a725aa4dba3e0a2436fe07767bf6bda91132ebe104c8e337",
+    "selection_hash": "79d95fbce3538d544ec58e103ca13350c52251c401393124280fbd96084c1c3d",
+    "test_files": [
+      "tests/test_utils_url.py"
+    ]
+  },
+  {
+    "bug_id": "37",
+    "bug_info_sha256": "696f1b654fe6362926ad171a2245403dfe690a0213354a31e44eadb0f17ba9c1",
+    "buggy_commit_id": "1d5c270ce8caf954ce83c8db262e2a35707e0c5e",
+    "case_id": "scrapy_37",
+    "fixed_commit_id_validator_only": "f701f5b0db10faef08e4ed9a21b98fd72f9cfc9a",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_request.RequestTest.test_url_no_scheme"
+      ]
+    ],
+    "queue_index": 18,
+    "requirements_sha256": "b610956eb2dc94fd98ceb1255e5689c133a431cbf1ec27338ac694e3b0b5b335",
+    "run_test_sha256": "a5b7f41502d65573986be2ccbb550d77caf548f7334b66c8c3e61f0d7c508881",
+    "selection_hash": "7d8b79f4b65bf819462ff3e30607e4afd33e521f1d6b782d2666974bf9f6732c",
+    "test_files": [
+      "tests/test_http_request.py"
+    ]
+  },
+  {
+    "bug_id": "23",
+    "bug_info_sha256": "56ed4510ab1051f117768e4deda8c708bd3c54c9c79517ee4145105e90488f61",
+    "buggy_commit_id": "c9e046d11dc63fbdc40effce4e6d15bcecd44593",
+    "case_id": "scrapy_23",
+    "fixed_commit_id_validator_only": "f042ad0f39594d59a1a2032e6294ff1890638138",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloadermiddleware_httpproxy.TestDefaultHeadersMiddleware.test_proxy_auth"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloadermiddleware_httpproxy.TestDefaultHeadersMiddleware.test_proxy_auth_empty_passwd"
+      ]
+    ],
+    "queue_index": 19,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "274786da8117ddb7cdf27c53d9240468bc9a675c16ee0067764fcd7709135b8b",
+    "selection_hash": "7fa3fc0c6494cccbe8a7bfd3e6c668767a474014163e1deac41d821f84d94fb0",
+    "test_files": [
+      "tests/test_downloadermiddleware_httpproxy.py"
+    ]
+  },
+  {
+    "bug_id": "15",
+    "bug_info_sha256": "9c3389ac8b2703e757bd146438dec7c103d25c1aa4c1938dd22c0eccb322d11a",
+    "buggy_commit_id": "b7925e42202d79d2ba9d00b6aded3a451c92fe81",
+    "case_id": "scrapy_15",
+    "fixed_commit_id_validator_only": "1aec5200bc81493623f2a4e077b4e80e104e47d5",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_url.CanonicalizeUrlTest.test_canonicalize_url_idna_exceptions"
+      ]
+    ],
+    "queue_index": 20,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "47f62d5b6c1740fda268a777030095898b2a895a5b4fdfb51001b909bea4e636",
+    "selection_hash": "8031b13ce792ac8012be8455da6afd3f4880a2bce7de33e40ffccac914c85f38",
+    "test_files": [
+      "tests/test_utils_url.py"
+    ]
+  },
+  {
+    "bug_id": "32",
+    "bug_info_sha256": "4747d4cab281b4492d847f719278a635682e4a9486faad570a7763e85aef5a3b",
+    "buggy_commit_id": "342cb622f1ea93268477da557099010bbd72529a",
+    "case_id": "scrapy_32",
+    "fixed_commit_id_validator_only": "aa6a72707daabfb6217f52e4774f2ff038f83dcc",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_crawler.CrawlerProcessTest.test_crawler_process_accepts_dict"
+      ]
+    ],
+    "queue_index": 21,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "bab57ff8dcca7a7f582b88613a58465264413d846b2fb8f3d0a3f919473f2512",
+    "selection_hash": "82d758e0d658e9baad9fa622ed548d6bdffa5cb64210ec92dd4e2e17fbf8143a",
+    "test_files": [
+      "tests/test_crawler.py"
+    ]
+  },
+  {
+    "bug_id": "31",
+    "bug_info_sha256": "14444d2b7d11ea01badb46c08989d117bbdd9983b66a0a9a910d3b608f9df533",
+    "buggy_commit_id": "5f02ef82e8560242eb34b336f385addfdef3211d",
+    "case_id": "scrapy_31",
+    "fixed_commit_id_validator_only": "dba7e39f61cbe2c22d3c9064f32f6e36d74f14b2",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloadermiddleware_cookies.CookiesMiddlewareTest.test_do_not_break_on_non_utf8_header"
+      ]
+    ],
+    "queue_index": 22,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "692d61dcf449693dcb0b888eec1156ef580f71d9412ca5921c6a7e26a3a767ac",
+    "selection_hash": "8695b554b16c010261e88132fd9e3526cbafe4c08b591fb2904309180114a9ab",
+    "test_files": [
+      "tests/test_downloadermiddleware_cookies.py"
+    ]
+  },
+  {
+    "bug_id": "25",
+    "bug_info_sha256": "2c2b2274b50360b2e068262d67109b36cbf44cdbcae29a6538dbc5f60360224d",
+    "buggy_commit_id": "57f87b95d4d705f8afdd8fb9f7551033a7d88ee2",
+    "case_id": "scrapy_25",
+    "fixed_commit_id_validator_only": "9548691fdd47077a53f85daace091ef4af599cb9",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_request.FormRequestTest.test_html_base_form_action"
+      ]
+    ],
+    "queue_index": 23,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "4f6e643c491d7202908ac4c5d3a2adc1d9bf011e46c1fe7a1e7ba7e81f2bc563",
+    "selection_hash": "96f304a1b92bc30430e4642d7d7f880d667bf9e522f1139990dc834207b30bd8",
+    "test_files": [
+      "tests/test_http_request.py"
+    ]
+  },
+  {
+    "bug_id": "14",
+    "bug_info_sha256": "92265ecdba8f247f03a2038f6ca91c6a3b00d3e14eacb062daa1aa6afe4019be",
+    "buggy_commit_id": "b7553d921afe356ec858bb1d2e5b1702df05ea24",
+    "case_id": "scrapy_14",
+    "fixed_commit_id_validator_only": "d43a35735a062a4260b002cfbcd3236c77ef9399",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_gz.GunzipTest.test_is_gzipped_case_insensitive"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_gz.GunzipTest.test_is_gzipped_with_charset"
+      ]
+    ],
+    "queue_index": 24,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "3890f6d7e0189a59d8e2762a4b9d4e71232ca81b5cff9f6841b6e3f05dda52e0",
+    "selection_hash": "a4198687ef2d11ba385eedce512e1fb022d9de339555c250be33eb43dda52442",
+    "test_files": [
+      "tests/test_utils_gz.py"
+    ]
+  },
+  {
+    "bug_id": "12",
+    "bug_info_sha256": "8b4aa12fc02881bd86bc94fc151ab105c6b04affa7a9968ee10701dd8f94cc67",
+    "buggy_commit_id": "34e7dadf38ba1796094c0c76e92ea8d9837681cc",
+    "case_id": "scrapy_12",
+    "fixed_commit_id_validator_only": "2c9a38d1f54a12c33d7c9a19e021c840c4a32dee",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_selector.SelectorTestCase.test_selector_bad_args"
+      ]
+    ],
+    "queue_index": 25,
+    "requirements_sha256": "34e933f71d36cd1be6d0802a0c9f3e78d335c7d6ae921235192ae9fda5b10250",
+    "run_test_sha256": "c69012ab121b9e6f393c61fd744ce62dcb7ff332f8eaa1eca36a0198f495b26e",
+    "selection_hash": "aa3f9735fdf6441a3f1dfd24dede17529049f30efee8b0db92467ecc974c110d",
+    "test_files": [
+      "tests/test_selector.py"
+    ]
+  },
+  {
+    "bug_id": "11",
+    "bug_info_sha256": "161ff4f71b2ec2445cb5e12b0d5ce5aa8df9acb617dc7ef4c1cf082d22985139",
+    "buggy_commit_id": "241bd00e76df142a24699819f8496bdec8f5c83a",
+    "case_id": "scrapy_11",
+    "fixed_commit_id_validator_only": "9de6f1ca757b7f200d15e94840c9d431cf202276",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_gz.GunzipTest.test_gunzip_illegal_eof"
+      ]
+    ],
+    "queue_index": 26,
+    "requirements_sha256": "34e933f71d36cd1be6d0802a0c9f3e78d335c7d6ae921235192ae9fda5b10250",
+    "run_test_sha256": "071e7343e2dbec921cdbd59d9843a0c7d2fcff4247bb13a4a09d59574572d386",
+    "selection_hash": "ae1a65f0fe6b02bdb75e8c3d3b3147f0955d3f1523512627ee385dcdf569aadf",
+    "test_files": [
+      "tests/test_utils_gz.py"
+    ]
+  },
+  {
+    "bug_id": "40",
+    "bug_info_sha256": "81d99af7fc7ccf74346430e839f44107d16f641549f9384c69adb986e9307fe5",
+    "buggy_commit_id": "7d24df37380cd5a5b7394cd2534e240bd2eff0ca",
+    "case_id": "scrapy_40",
+    "fixed_commit_id_validator_only": "f1d971a5c0cdfe0f4fe5619146cd6818324fc98e",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_exporters.PythonItemExporterTest.test_other_python_types_item"
+      ]
+    ],
+    "queue_index": 27,
+    "requirements_sha256": "b610956eb2dc94fd98ceb1255e5689c133a431cbf1ec27338ac694e3b0b5b335",
+    "run_test_sha256": "2931e02e8dcdde03b9c702dee6b47cd2b5fa69ecc50d5a387e8756648ff6cfac",
+    "selection_hash": "b03bf5856d8ba7eabfe054218f572e2fc6545f85a92673a8666c413e7ba6d80f",
+    "test_files": [
+      "tests/test_exporters.py"
+    ]
+  },
+  {
+    "bug_id": "24",
+    "bug_info_sha256": "edcd75af01c6168e3ee2ca6383bbcb109f0c302454f3391eb33c7ac76d6202c5",
+    "buggy_commit_id": "98c060d0b2cc76934e16abc03a033f21850fd565",
+    "case_id": "scrapy_24",
+    "fixed_commit_id_validator_only": "0f527849f2e8eddaf5d756b061699f2eca522a18",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloader_handlers.HttpProxyTestCase.test_download_with_proxy_https_timeout"
+      ]
+    ],
+    "queue_index": 28,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "5cdb5d903dfb0f31f37eff75707469b3423c0a1d8648cfd5cf3fcd91629c9e75",
+    "selection_hash": "b7ba485080743e3c48e10f13352d5983af47eca3f2fc43e74b62f7b19535d43c",
+    "test_files": [
+      "tests/test_downloader_handlers.py"
+    ]
+  },
+  {
+    "bug_id": "30",
+    "bug_info_sha256": "eba75f32928db37399c878117864012f4d3198e779b3c4c7f76d446948b03102",
+    "buggy_commit_id": "4d41cc0dc4821da07d467b368528c61ce48a0df2",
+    "case_id": "scrapy_30",
+    "fixed_commit_id_validator_only": "3e6d6c43ac0763adf2cd92efdb4a1dc2ba165440",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_command_version.VersionTest.test_output"
+      ]
+    ],
+    "queue_index": 29,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "273b87dbc53fae344d03bb3c88e72d6f56679d32068222515bb57ca8b6f130a7",
+    "selection_hash": "c24de97b1daf14208c7bf8b562ad0f96f121a048e176c08d2d7936588390b732",
+    "test_files": [
+      "tests/test_command_version.py"
+    ]
+  },
+  {
+    "bug_id": "2",
+    "bug_info_sha256": "66fbf33437caa08a9383764030a987615f6ebe3a55e6a8c131bb8afa06c3ca96",
+    "buggy_commit_id": "f02c3d1dcf3e4880388d19e961e7911be5dc54ff",
+    "case_id": "scrapy_2",
+    "fixed_commit_id_validator_only": "439a3e59b8e858441f8d97dbc32f398db392330d",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_datatypes.LocalCacheTest.test_cache_without_limit"
+      ]
+    ],
+    "queue_index": 30,
+    "requirements_sha256": "d0c59c2ffe0ade81c4fb3d5d64a132d346e206b1891de0e57895aa146b0de6e0",
+    "run_test_sha256": "5293652f90a2be032b64f23939e820819cf457ad1a80396add1f8e27ccf97593",
+    "selection_hash": "c7219e36577f1123175b3aa538e90b5ed6f8eb21ebe31c176f1f24c14db38cdc",
+    "test_files": [
+      "tests/test_utils_datatypes.py"
+    ]
+  },
+  {
+    "bug_id": "5",
+    "bug_info_sha256": "b9433fcecaf876b7452d3520c92af8e006f509b028a69a4edbbb448fd7f22b36",
+    "buggy_commit_id": "426da0ed07637e7efbcfb0fe49546e187d5d7f67",
+    "case_id": "scrapy_5",
+    "fixed_commit_id_validator_only": "acd2b8d43b5ebec7ffd364b6f335427041a0b98d",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_response.BaseResponseTest.test_follow_None_url"
+      ]
+    ],
+    "queue_index": 31,
+    "requirements_sha256": "d0c59c2ffe0ade81c4fb3d5d64a132d346e206b1891de0e57895aa146b0de6e0",
+    "run_test_sha256": "59926f004b96bb1c4a686e2795aca7ddda44e7e5e9ab09f178bef98548607bc0",
+    "selection_hash": "dce4ec7e13200cc88136d85690a673fdddd318a263c0d50963192754e08b5325",
+    "test_files": [
+      "tests/test_http_response.py"
+    ]
+  },
+  {
+    "bug_id": "28",
+    "bug_info_sha256": "1ef592f9dcfa6d61e888f4d82533d7b6ce7d71ff5d5f8ec43d0798975fc2d7e2",
+    "buggy_commit_id": "e2f31f3018c0037f65982209c22f93b80a5d6e7b",
+    "case_id": "scrapy_28",
+    "fixed_commit_id_validator_only": "457b97c13ccf9a84f3dc7800c180cf059822c09a",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_dupefilters.RFPDupeFilterTest.test_dupefilter_path"
+      ]
+    ],
+    "queue_index": 32,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "62b21661add1d3e575914dbd13b50bf551b90f86447b90bab3670d65059a1f7e",
+    "selection_hash": "dff03b8ae8c1ae886fec4d25f4699fefd28ef1420d22c8081b469d496cba57a8",
+    "test_files": [
+      "tests/test_dupefilters.py"
+    ]
+  },
+  {
+    "bug_id": "17",
+    "bug_info_sha256": "1d76544cefa6724fc16fe7af492dafcb83cc80a2d383a2c2d6b6aa83893176f3",
+    "buggy_commit_id": "ebef6d7c6dd8922210db8a4a44f48fe27ee0cd16",
+    "case_id": "scrapy_17",
+    "fixed_commit_id_validator_only": "65c7c05060fd2d1fc161d4904243d5e0b31e202b",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_utils_response.ResponseUtilsTest.test_response_status_message"
+      ]
+    ],
+    "queue_index": 33,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "faf3484ebe1b3951914703f11ed657427bb0e47a178f49b6d0a31a34e51312f3",
+    "selection_hash": "e20dd9b45719d5b9fe9bcdae1b374a8471957f02882c7e1b7b12c4ba19c62a8e",
+    "test_files": [
+      "tests/test_utils_response.py"
+    ]
+  },
+  {
+    "bug_id": "22",
+    "bug_info_sha256": "ec15d3ee4b6e0e127a5dc7777c7bca52fea3164ac45cf3edf3594cb0547866d4",
+    "buggy_commit_id": "a35aec71e96b0c0288c370afa425e8e700dca8b3",
+    "case_id": "scrapy_22",
+    "fixed_commit_id_validator_only": "bb2cf7c0d7199fffe0aa100e5c8a51c6b4b82fc2",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_exporters.XmlItemExporterTest.test_nonstring_types_item"
+      ]
+    ],
+    "queue_index": 34,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "15da3a3df6d0ca062865e6d51b72eccdef4467e6a702cdc763d2752fa95e7165",
+    "selection_hash": "e52610f7296c41f973cee683dd0e679b22c154c7ddafb4ffbf197235687a114a",
+    "test_files": [
+      "tests/test_exporters.py"
+    ]
+  },
+  {
+    "bug_id": "13",
+    "bug_info_sha256": "a0f4c4e98098c44ee3ad092e9ec1562e73d2ca1b3e9fd0f28c24f1820f45dbcb",
+    "buggy_commit_id": "fa78849e335994a1617ed63221a70940c21cca20",
+    "case_id": "scrapy_13",
+    "fixed_commit_id_validator_only": "414857a593ad5b82fa21d6344928f43f93dc9f14",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_pipeline_images.ImagesPipelineTestCaseCustomSettings"
+      ]
+    ],
+    "queue_index": 35,
+    "requirements_sha256": "34e933f71d36cd1be6d0802a0c9f3e78d335c7d6ae921235192ae9fda5b10250",
+    "run_test_sha256": "0d1a46a8839d87674ee6d7f1aa0027b3c89bf011ee35eff9eabd0d5e9eda4d8c",
+    "selection_hash": "e8c1cef2b42a900fc93e9ae486eb83033a6be55dc398b5894786787b95247fba",
+    "test_files": [
+      "tests/test_pipeline_images.py"
+    ]
+  },
+  {
+    "bug_id": "10",
+    "bug_info_sha256": "6d97ca086b4c4cf67d9636a4409e446b35bb12dc3703747fa5289b959c397cc5",
+    "buggy_commit_id": "6cc83c041eac36e7688dbd9c4c55487a43b622e0",
+    "case_id": "scrapy_10",
+    "fixed_commit_id_validator_only": "db408528928b2d15043593032913fe40d6eb6783",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloadermiddleware_redirect.RedirectMiddlewareTest.test_latin1_location"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_downloadermiddleware_redirect.RedirectMiddlewareTest.test_utf8_location"
+      ]
+    ],
+    "queue_index": 36,
+    "requirements_sha256": "d8aaad7afd6460a1b932e6292a786d14dbc719abb585c765ac05e21c97517e82",
+    "run_test_sha256": "24fe24be06f46c13ec437829f3d1b0c8a73d620095488fc7c25ee7b6a8ccf197",
+    "selection_hash": "ec092ad403bf9709b2ada56faeeb47f696e5798c1a9be850e53eb6e32765602f",
+    "test_files": [
+      "tests/test_downloadermiddleware_redirect.py"
+    ]
+  },
+  {
+    "bug_id": "26",
+    "bug_info_sha256": "fbd59c81734a211bdd6118f9212658172d5ca4ce6050bc585ba78e5628e87d6c",
+    "buggy_commit_id": "f249b309ab779b5ab518f54f309d7a4ac6661ec7",
+    "case_id": "scrapy_26",
+    "fixed_commit_id_validator_only": "03f1720afb4a437314659a306286f440df664a0b",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_settings.__init__.BaseSettingsTest.test_getcomposite"
+      ]
+    ],
+    "queue_index": 37,
+    "requirements_sha256": "82a99ce0849dc6c4505aa1ddede486df40e9ba4c8b8a09fe3ae02574d5276590",
+    "run_test_sha256": "092022a9782fb39574add1adf7143e5dff7dca82f90168b6b1f37f4edf73b903",
+    "selection_hash": "efe677e4f274c8bb88078a9bd4b4458cda3fc08d3aaf00e5b05818a5d8ee0e67",
+    "test_files": [
+      "tests/test_settings/__init__.py"
+    ]
+  },
+  {
+    "bug_id": "1",
+    "bug_info_sha256": "72beb532f7835d481dc85a4feb29e2c9376d1b7ef32dadc5a59c1d741241fdbe",
+    "buggy_commit_id": "c57512fa669e6f6b1b766a7639206a380f0d10ce",
+    "case_id": "scrapy_1",
+    "fixed_commit_id_validator_only": "9d9dea0d69709ef0f7aef67ddba1bd7bda25d273",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_spidermiddleware_offsite.TestOffsiteMiddleware4._get_spiderargs"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_spidermiddleware_offsite.TestOffsiteMiddleware4.test_process_spider_output"
+      ]
+    ],
+    "queue_index": 38,
+    "requirements_sha256": "d0c59c2ffe0ade81c4fb3d5d64a132d346e206b1891de0e57895aa146b0de6e0",
+    "run_test_sha256": "e90c2e9d2f557cc54765f5d44c5cfdc14d0db6e9a17c69e981c5d37c628575f4",
+    "selection_hash": "f5bc073acce1b563e7c958826d6fa8cf6b2da20b66bda4ee6b66f520b5d9dada",
+    "test_files": [
+      "tests/test_spidermiddleware_offsite.py"
+    ]
+  },
+  {
+    "bug_id": "38",
+    "bug_info_sha256": "467d2530b05a84a6cb9f5537632a5602aa315eeca839e5f6aede53a8f209251b",
+    "buggy_commit_id": "6cc6bbb5fc5c102271829a554772effb0444023c",
+    "case_id": "scrapy_38",
+    "fixed_commit_id_validator_only": "6c3970e6722191b642fd99c6c1bfed0d93010cab",
+    "public_commands": [
+      [
+        "python",
+        "-m",
+        "unittest",
+        "-q",
+        "tests.test_http_request.FormRequestTest.test_from_response_clickdata_does_not_ignore_image"
+      ]
+    ],
+    "queue_index": 39,
+    "requirements_sha256": "b610956eb2dc94fd98ceb1255e5689c133a431cbf1ec27338ac694e3b0b5b335",
+    "run_test_sha256": "b994fd5c11996467c2a83dc649079fb25104bf2886e9e68930318b28e6b42110",
+    "selection_hash": "fdd9e387a66aa5494aab6894ac34127aad22c2ea2efd016c7980418e4a58395e",
+    "test_files": [
+      "tests/test_http_request.py"
+    ]
+  }
+]

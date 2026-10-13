@@ -1,0 +1,6 @@
+{
+  "return_code": 0,
+  "stdout": ".                                                                        [100%]\n=============================== warnings summary ===============================\n/usr/local/lib/python3.8/site-packages/_pytest/junitxml.py:417\n  /usr/local/lib/python3.8/site-packages/_pytest/junitxml.py:417: PytestDeprecationWarning: The 'junit_family' default value will change to 'xunit2' in pytest 6.0.\n  Add 'junit_family=xunit1' to your pytest.ini file to keep the current format in future versions of pytest and silence this warning.\n    _issue_warning_captured(deprecated.JUNIT_XML_DEFAULT_FAMILY, config.hook, 2)\n\n-- Docs: https://docs.pytest.org/en/latest/warnings.html\n-------------------- generated xml file: /reports/tests.xml --------------------\n1 passed, 1 warning in 0.54s\n",
+  "stderr": "",
+  "elapsed_seconds": 1.721394649001013
+}

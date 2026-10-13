@@ -1,0 +1,28 @@
+{
+  "adapter_sha256": "68500d929372b610ff3973ba2e7de6b52bd32d0d9dd3773405959dc7fd864885",
+  "case_id": "fastapi_8",
+  "case_lock_sha256": "f89a254d5ef63a1d9a9f2a1f094d7e76b4b1a3380bf78e1cf9303a507afce1de",
+  "created_at_utc": "2026-10-12T17:50:41.534591+00:00",
+  "generation": {
+    "max_output_tokens": 32768,
+    "temperature": 0,
+    "timeout_seconds": 720
+  },
+  "model": {
+    "exact_version": "4919f00ff35908da4831357ad87497a4a9c2b86f69960c7a074fc5aec4975cf3",
+    "model_id": "tencent-hy3",
+    "slot": "agent_1"
+  },
+  "never_pool_with_main_or_prior_attempts": true,
+  "no_automatic_retry": true,
+  "not_allocation_comparison": true,
+  "not_first_attempt": true,
+  "not_main": true,
+  "planned_provider_calls": 1,
+  "prior_exposure_sha256": "578d5ca20bb20e46a76439ec8b7433a0d78d5f9d3be28e98959fe530c2034fb4",
+  "prompt_sha256": "6ace303dacdf8cd6a895a45af96cb98fb3c34239b721a4b9bcd8201d51b3e1ff",
+  "provider_config_sha256": "855c558e13d5ab9affda4a0c458c0811aa735b79ba66b4907fcc0ad6c4a84e79",
+  "runner_sha256": "fed5ac05e1f510c2cf48eb798eb71623a4b4d4778226e3c6916c760c4cfbb6c4",
+  "status": "one_call_exposed_case_output_budget_instrument_pilot_frozen",
+  "verifier_sha256": "71936de4586967085e3ecc783424dc20460b57ecb2bf467eb2e58ce7ded315c4"
+}

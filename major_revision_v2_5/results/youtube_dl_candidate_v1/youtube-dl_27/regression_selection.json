@@ -1,0 +1,17 @@
+{
+  "case_id": "youtube-dl_27",
+  "frozen_before_regression_outcomes": true,
+  "nodeids": [
+    "test/test_utils.py::TestUtil::test_render_table",
+    "test/test_utils.py::TestUtil::test_version_tuple",
+    "test/test_utils.py::TestUtil::test_match_str",
+    "test/test_utils.py::TestUtil::test_determine_ext",
+    "test/test_utils.py::TestUtil::test_find_xpath_attr",
+    "test/test_utils.py::TestUtil::test_daterange",
+    "test/test_utils.py::TestUtil::test_xpath_element",
+    "test/test_utils.py::TestUtil::test_sanitize_ids",
+    "test/test_utils.py::TestUtil::test_cli_valueless_option",
+    "test/test_utils.py::TestUtil::test_sanitize_path"
+  ],
+  "selection_rule": "Collect public TestUtil nodes; remove visible; hash-sort before outcome; take first ten; require five active common passes and no failures"
+}

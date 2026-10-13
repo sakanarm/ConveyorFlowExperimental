@@ -1,0 +1,1 @@
+{"case_id": "scrapy_39", "provider_calls": 0, "queue_index": 0, "reason": "all-command buggy/fixed contrast not reproduced", "record_sha256": "9764f7eeebebd28e146af0057eac138f0359b01b6beced2ba10afb5081f125a5", "selection_hash": "006f4e3e9aac220d4482471f0dabf9b96dd84ca560576d2d3d6eba2883d64abe", "status": "environment_excluded"}

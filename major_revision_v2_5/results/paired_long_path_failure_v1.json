@@ -1,0 +1,38 @@
+{
+  "calls": [
+    {
+      "input_tokens": 1595,
+      "model_slot": "agent_1",
+      "output_tokens": 10493,
+      "provider_request_id": "d6cfc92f-68f9-4c1c-8366-02828cfba76f",
+      "provider_sha256": "34fd3e6f74d779eb304d89cc3642b14e74925b4b205597b5d120f8ff35a7e79a",
+      "reported_cost_units": 0.005750844,
+      "request_marker_sha256": "dab5d254f61a11d4ad458e7d76e84358febc706397fbdc84811d897c84fc977e",
+      "research_disposition": "instrument_invalid_not_model_failure",
+      "task": "V25_BANK_01:ingest"
+    },
+    {
+      "billable_outcome_unknown": true,
+      "model_slot": "agent_3",
+      "provider_outcome": "interrupted_in_flight_unknown",
+      "request_marker_sha256": "00030725cc6d5f6a6b817aced2e6b5e65961cb5e7bac55cdf729f39cfe5f4243",
+      "research_disposition": "unresolved_not_model_failure",
+      "task": "black_3:repair"
+    }
+  ],
+  "created_at_utc": "2026-10-11T07:45:57.732184+00:00",
+  "exclude_from_all_paired_estimands": true,
+  "first_gate_sha256": "89a63b663d5d963899b7196ea68ed337836adcbfecd4246ddfda08a5a355f4e8",
+  "new_run_id_required": true,
+  "no_automatic_retry_of_old_attempt_ids": true,
+  "old_arm": "CF_FIT",
+  "old_block": "V25_PAIR_01",
+  "old_lock_sha256": "1cb6e4dad4417f4c72b86ef287ada78a3120990b20740b231e105c47e1a9e359",
+  "old_runtime_root": "<LOCAL_ROOT>/major_revision_v2_5/results/v25_paired_extension_v1/runtime",
+  "planned_recovery_runtime_root": "/mnt/d/ConveyorFlowRuntime/v2_5/paired_recovery_v1",
+  "reason": "Podman could not open generated source at 292-character Windows-backed path; Errno 5 Input/output error is an instrument failure, not a model test failure",
+  "research_results": false,
+  "started_provider_calls": 2,
+  "started_sha256": "2010cf6233cd2a9a5fb8cbc551910fad281ff2b477f2b349a2f49e77e0946fe7",
+  "status": "v2_5_long_path_instrument_failure_sealed"
+}

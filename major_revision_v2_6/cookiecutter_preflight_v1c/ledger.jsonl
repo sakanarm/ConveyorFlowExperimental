@@ -1,0 +1,1 @@
+{"case_id": "cookiecutter_3", "provider_calls": 0, "queue_index": 0, "reason": "buggy/fixed test contrast not reproduced", "record_sha256": "72cc8d242e18e4b401964cd3e99e14c448adf841395e17015e08538566d838dd", "selection_hash": "284fe5562e01f72a2add0b4e227caaf94dcbafa1fa61ff7984a91a13fcb8c017", "status": "environment_excluded"}

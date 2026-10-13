@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "study_status": "CANDIDATE_NOT_FROZEN",
+  "team_design": "within_mfec_visible_family",
+  "max_team_size": 3,
+  "base_url": "https://gpt.mfec.co.th/litellm",
+  "models": [
+    {
+      "slot": "candidate_1",
+      "provider": "mfec_litellm",
+      "model_id": "gemini-3-flash",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "api_key_env": "MFEC_LITELLM_API_KEY",
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null
+    },
+    {
+      "slot": "candidate_2",
+      "provider": "mfec_litellm",
+      "model_id": "gemini-3.5-flash",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "api_key_env": "MFEC_LITELLM_API_KEY",
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null
+    },
+    {
+      "slot": "candidate_3",
+      "provider": "mfec_litellm",
+      "model_id": "gemini-3.8-flash",
+      "exact_version": "UNVERIFIED_DEPLOYMENT_ALIAS",
+      "api_key_env": "MFEC_LITELLM_API_KEY",
+      "input_price_per_million_tokens": null,
+      "output_price_per_million_tokens": null
+    }
+  ],
+  "policies": ["CF_FIT", "S3", "CENTRAL_FIT"],
+  "generation": {
+    "temperature": 0,
+    "max_output_tokens": 4096,
+    "timeout_seconds": 120,
+    "max_api_retries": 2,
+    "silent_model_fallback_allowed": false
+  },
+  "ability_gate": {
+    "confidence_level": 0.95,
+    "rank_rule": "held_out_executable_probe_lower_bound",
+    "price_is_not_ability": true,
+    "rank_assignment_status": "NOT_RUN"
+  },
+  "blocking_fields": [
+    "exact_version_or_alias_mapping",
+    "input_price_per_million_tokens",
+    "output_price_per_million_tokens",
+    "held_out_ability_probe_results"
+  ]
+}
